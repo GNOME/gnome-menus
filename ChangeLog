@@ -1,5 +1,10 @@
 2004-11-09  Mark McLoughlin  <mark@skynet.ie>
 
+	* autogen.sh: we don't want to use the docs build
+	stuff.
+
+2004-11-09  Mark McLoughlin  <mark@skynet.ie>
+
 	* desktop-directories/Makefile.am: distcheck fix.
 
 2004-11-09  Mark McLoughlin  <mark@skynet.ie>
