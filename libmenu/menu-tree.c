@@ -1133,6 +1133,8 @@ menu_tree_header_new (MenuTreeDirectory *parent,
 
   retval->directory = menu_tree_item_ref (directory);
 
+  menu_tree_item_set_parent (MENU_TREE_ITEM (retval->directory), NULL);
+
   return retval;
 }
 
@@ -1161,6 +1163,9 @@ menu_tree_alias_new (MenuTreeDirectory *parent,
 
   retval->directory    = menu_tree_item_ref (directory);
   retval->aliased_item = menu_tree_item_ref (item);
+
+  menu_tree_item_set_parent (MENU_TREE_ITEM (retval->directory), NULL);
+  menu_tree_item_set_parent (retval->aliased_item, NULL);
 
   return retval;
 }

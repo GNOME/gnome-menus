@@ -1,3 +1,10 @@
+2005-04-06  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(menu_tree_header_new),
+	(menu_tree_alias_new): unset the parent on aliased
+	items.
+
 2005-04-05  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix memory leaks on reload - bug #172472. Basically,
