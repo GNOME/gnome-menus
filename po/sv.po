@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-07 10:43+0100\n"
-"PO-Revision-Date: 2004-12-07 10:43+0100\n"
+"POT-Creation-Date: 2004-12-07 13:57+0100\n"
+"PO-Revision-Date: 2004-12-07 13:57+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -45,10 +45,9 @@ msgstr "Programmering"
 msgid "Tools for software development"
 msgstr "Verktyg för programutveckling"
 
-# Osäker
 #: desktop-directories/Edutainment.directory.in.h:1
 msgid "Edutainment"
-msgstr "Lärorik underhållning"
+msgstr "Lek och lär"
 
 #: desktop-directories/Games.directory.in.h:1
 msgid "Games"
