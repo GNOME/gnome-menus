@@ -1,0 +1,148 @@
+# Swedish messages for gnome-menus.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# Christian Rose <menthos@menthos.com>, 2004.
+#
+# $Id$
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-12-07 10:43+0100\n"
+"PO-Revision-Date: 2004-12-07 10:43+0100\n"
+"Last-Translator: Christian Rose <menthos@menthos.com>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Tillgänglighet"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Tillgänglighetsinställningar"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Tillbehör"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Skrivbordstillbehör"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Program"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Programmering"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Verktyg för programutveckling"
+
+# Osäker
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Lärorik underhållning"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Spel"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Spel och underhållning"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Grafik"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Grafikprogram"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Program för Internetåtkomst som till exempel webben och e-post"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Multimediameny"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Ljud och video"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Kontor"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Kontorsprogram"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Program som inte passade in i någon annan kategori"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Annat"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Tillgänglighetsrelaterade inställningar"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Personliga inställningar"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Inställningar"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Change systemwide settings (affects all users)"
+msgstr "Ändra globala systeminställningar (påverkar alla användare)"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "System Settings"
+msgstr "Systeminställningar"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Systemverktyg"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Systemkonfiguration och systemövervakning"
+
+#~ msgid "Desktop Accessories"
+#~ msgstr "Skrivbordstillbehör"
+
+#~ msgid "Software development"
+#~ msgstr "Programutveckling"
+
+#~ msgid "Software Development"
+#~ msgstr "Programutveckling"
+
+#~ msgid "Games and Amusements"
+#~ msgstr "Spel och underhållning"
+
+#~ msgid "Graphics Applications"
+#~ msgstr "Grafikprogram"
+
+#~ msgid "Multimedia"
+#~ msgstr "Multimedia"
+
+#~ msgid "Office applications"
+#~ msgstr "Kontorsprogram"
