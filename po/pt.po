@@ -1,0 +1,125 @@
+# gnome-menus' Portuguese translation.
+# Copyright © 2004 gnome-menus
+# This file is distributed under the same license as the gnome-menus package.
+# Duarte Loreto <happyguy_pt@hotmail.com>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-12-09 22:44+0100\n"
+"PO-Revision-Date: 2004-12-09 22:55+0000\n"
+"Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Acessibilidade"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Definições de Acessibilidade"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Acessórios"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Acessórios de área de trabalho"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Aplicações"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Programação"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Ferramentas para o desenvolvimento de aplicações"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Edutenimento"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Jogos"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Jogos e passatempos"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Gráficos"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Aplicações gráficas"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Aplicações para o acesso à Internet tais como web e email"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Menu de multimédia"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Som & Vídeo"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Produtividade"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Aplicações de Produtividade"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Aplicações que não se adequavam às outras categorias"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Outras"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Preferências relacionadas com a acessibilidade"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Preferências e definições pessoais"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Preferências"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Change systemwide settings (affects all users)"
+msgstr "Alterar definições de sistema (afecta todos os utilizadores)"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "System Settings"
+msgstr "Definições de Sistema"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Ferramentas de Sistema"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Configuração de sistema e monitorização"
