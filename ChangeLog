@@ -1,5 +1,17 @@
 2005-02-18  Mark McLoughlin  <mark@skynet.ie>
 
+	Fix bug with the <Not> directive - bug #167758.
+	Thanks to Chris Lahey for the test case.
+
+	* libmenu/entry-directories.c: (get_inverse_func): lookup
+	the entry using its file id rather than relative path.
+	
+	* libmenu/menu-tree.c:
+	(process_include_rules), (process_layout): add some more
+	debugging.
+
+2005-02-18  Mark McLoughlin  <mark@skynet.ie>
+
 	Make us pass most of the spec tests again.
 
 	* util/test-menu-spec.c:

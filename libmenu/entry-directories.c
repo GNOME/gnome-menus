@@ -1332,7 +1332,7 @@ get_inverse_func (EntryDirectory  *ed,
 
   /* if not in the original set, add to inverse set */
 
-  if (desktop_entry_set_lookup (set, relative_path) != NULL)
+  if (desktop_entry_set_lookup (set, file_id ? file_id : relative_path) != NULL)
     return TRUE;
 
   if (ed->is_legacy && !desktop_entry_has_categories (entry))

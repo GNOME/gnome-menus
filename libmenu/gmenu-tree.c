@@ -2108,6 +2108,8 @@ process_include_rules (MenuLayoutNode     *layout,
       {
         MenuLayoutNode *child;
 
+	menu_verbose ("Processing <And>\n");
+
         child = menu_layout_node_get_children (layout);
         while (child != NULL)
           {
@@ -2133,12 +2135,15 @@ process_include_rules (MenuLayoutNode     *layout,
 
             child = menu_layout_node_get_next (child);
           }
+	menu_verbose ("Processed <And>\n");
       }
       break;
 
     case MENU_LAYOUT_NODE_OR:
       {
         MenuLayoutNode *child;
+
+	menu_verbose ("Processing <Or>\n");
 
         child = menu_layout_node_get_children (layout);
         while (child != NULL)
@@ -2159,6 +2164,7 @@ process_include_rules (MenuLayoutNode     *layout,
 
             child = menu_layout_node_get_next (child);
           }
+	menu_verbose ("Processed <Or>\n");
       }
       break;
 
@@ -2166,6 +2172,8 @@ process_include_rules (MenuLayoutNode     *layout,
       {
         /* First get the OR of all the rules */
         MenuLayoutNode *child;
+
+	menu_verbose ("Processing <Not>\n");
 
         child = menu_layout_node_get_children (layout);
         while (child != NULL)
@@ -2192,17 +2200,23 @@ process_include_rules (MenuLayoutNode     *layout,
             /* Now invert the result */
             entry_directory_list_invert_set (list, set);
           }
+	menu_verbose ("Processed <Not>\n");
       }
       break;
 
     case MENU_LAYOUT_NODE_ALL:
+      menu_verbose ("Processing <All>\n");
       set = desktop_entry_set_new ();
       entry_directory_list_get_all_desktops (list, set);
+      menu_verbose ("Processed <All>\n");
       break;
 
     case MENU_LAYOUT_NODE_FILENAME:
       {
         DesktopEntry *entry;
+
+	menu_verbose ("Processing <Filename>%s</Filename>\n",
+		      menu_layout_node_get_content (layout));
 
         entry = entry_directory_list_get_desktop (list,
                                                   menu_layout_node_get_content (layout));
@@ -2214,14 +2228,20 @@ process_include_rules (MenuLayoutNode     *layout,
                                          menu_layout_node_get_content (layout));
             desktop_entry_unref (entry);
           }
+	menu_verbose ("Processed <Filename>%s</Filename>\n",
+		      menu_layout_node_get_content (layout));
       }
       break;
 
     case MENU_LAYOUT_NODE_CATEGORY:
+      menu_verbose ("Processing <Category>%s</Category>\n",
+		    menu_layout_node_get_content (layout));
       set = desktop_entry_set_new ();
       entry_directory_list_get_by_category (list,
                                             menu_layout_node_get_content (layout),
                                             set);
+      menu_verbose ("Processed <Category>%s</Category>\n",
+		    menu_layout_node_get_content (layout));
       break;
 
     default:
@@ -2230,6 +2250,8 @@ process_include_rules (MenuLayoutNode     *layout,
 
   if (set == NULL)
     set = desktop_entry_set_new (); /* create an empty set */
+
+  menu_verbose ("Matched %d entries\n", desktop_entry_set_get_count (set));
 
   return set;
 }
@@ -2301,6 +2323,8 @@ process_layout (MenuTree          *tree,
           {
             MenuTreeDirectory *child_dir;
 
+	    menu_verbose ("Processing <Menu>\n");
+
             child_dir = process_layout (tree,
                                         directory,
                                         layout_iter,
@@ -2308,6 +2332,8 @@ process_layout (MenuTree          *tree,
             if (child_dir)
               directory->subdirs = g_slist_prepend (directory->subdirs,
                                                     child_dir);
+
+	    menu_verbose ("Processed <Menu>\n");
           }
           break;
 
@@ -2318,6 +2344,9 @@ process_layout (MenuTree          *tree,
              * itself
              */
             MenuLayoutNode *rule;
+
+	    menu_verbose ("Processing <Include> (%d entries)\n",
+			  desktop_entry_set_get_count (entries));
 
             rule = menu_layout_node_get_children (layout_iter);
             while (rule != NULL)
@@ -2334,6 +2363,9 @@ process_layout (MenuTree          *tree,
 
                 rule = menu_layout_node_get_next (rule);
               }
+
+	    menu_verbose ("Processed <Include> (%d entries)\n",
+			  desktop_entry_set_get_count (entries));
           }
           break;
 
@@ -2344,6 +2376,9 @@ process_layout (MenuTree          *tree,
              * itself
              */
             MenuLayoutNode *rule;
+
+	    menu_verbose ("Processing <Exclude> (%d entries)\n",
+			  desktop_entry_set_get_count (entries));
 
             rule = menu_layout_node_get_children (layout_iter);
             while (rule != NULL)
@@ -2359,6 +2394,9 @@ process_layout (MenuTree          *tree,
 
                 rule = menu_layout_node_get_next (rule);
               }
+
+	    menu_verbose ("Processed <Exclude> (%d entries)\n",
+			  desktop_entry_set_get_count (entries));
           }
           break;
 
@@ -2366,7 +2404,10 @@ process_layout (MenuTree          *tree,
           {
             DesktopEntry *entry;
 
-            /*
+	    menu_verbose ("Processed <Directory>%s</Directory>\n",
+			  menu_layout_node_get_content (layout_iter));
+
+	    /*
              * The last <Directory> to exist wins, so we always try overwriting
              */
             entry = entry_directory_list_get_directory (dir_dirs,
@@ -2392,18 +2433,22 @@ process_layout (MenuTree          *tree,
           break;
 
         case MENU_LAYOUT_NODE_DELETED:
+	  menu_verbose ("Processed <Deleted/>\n");
           deleted = TRUE;
           break;
 
         case MENU_LAYOUT_NODE_NOT_DELETED:
+	  menu_verbose ("Processed <NotDeleted/>\n");
           deleted = FALSE;
           break;
 
         case MENU_LAYOUT_NODE_ONLY_UNALLOCATED:
+	  menu_verbose ("Processed <OnlyUnallocated/>\n");
           only_unallocated = TRUE;
           break;
 
         case MENU_LAYOUT_NODE_NOT_ONLY_UNALLOCATED:
+	  menu_verbose ("Processed <NotOnlyUnallocated/>\n");
           only_unallocated = FALSE;
           break;
 
