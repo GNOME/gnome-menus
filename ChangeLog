@@ -1,3 +1,21 @@
+2005-03-16  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix problem where if you installed an app which created
+	$XDG_DATA_DIRS/menus/applications-merged for the first
+	time and dumped its .menu file there, we wouldn't notice
+	and re-load the menu.
+
+	* libmenu/menu-tree.c:
+	(handle_menu_file_changed): always re-canonicalize so
+	that monitors get removed and re-added.
+	(handle_menu_file_directory_changed): callback for
+	<MergeDir> monitors.
+	(menu_tree_add_menu_file_monitor): handle adding <MergeDir>
+	monitors.
+	(load_merge_file): add a monitor if the <MergeFile> doesn't
+	exist.
+	(load_merge_dir): always monitor the <MergeDir>
+
 2005-03-09  Mark McLoughlin  <mark@skynet.ie>
 
 	* libmenu/menu-tree.c:
