@@ -80,7 +80,7 @@ get_flags_from_key_file (DesktopEntry *entry,
 
   error = NULL;
   no_display = g_key_file_get_boolean (key_file,
-                                       DESKTOP_ENTRY_GROUP,
+                                       desktop_entry_group,
                                        "NoDisplay",
                                        &error);
   if (error)
@@ -91,7 +91,7 @@ get_flags_from_key_file (DesktopEntry *entry,
 
   error = NULL;
   hidden = g_key_file_get_boolean (key_file,
-                                   DESKTOP_ENTRY_GROUP,
+                                   desktop_entry_group,
                                    "Hidden",
                                    &error);
   if (error)
@@ -102,7 +102,7 @@ get_flags_from_key_file (DesktopEntry *entry,
 
   show_in_gnome = TRUE;
   strv = g_key_file_get_string_list (key_file,
-                                     DESKTOP_ENTRY_GROUP,
+                                     desktop_entry_group,
                                      "OnlyShowIn",
                                      NULL,
                                      NULL);
@@ -121,7 +121,7 @@ get_flags_from_key_file (DesktopEntry *entry,
   else
     {
       strv = g_key_file_get_string_list (key_file,
-                                         DESKTOP_ENTRY_GROUP,
+                                         desktop_entry_group,
                                          "NotShowIn",
                                          NULL,
                                          NULL);
@@ -141,7 +141,7 @@ get_flags_from_key_file (DesktopEntry *entry,
 
   tryexec_failed = FALSE;
   tryexec = g_key_file_get_string (key_file,
-                                   DESKTOP_ENTRY_GROUP,
+                                   desktop_entry_group,
                                    "TryExec",
                                    NULL);
   if (tryexec)
@@ -180,7 +180,7 @@ get_categories_from_key_file (DesktopEntry *entry,
   int      i;
 
   strv = g_key_file_get_string_list (key_file,
-                                     DESKTOP_ENTRY_GROUP,
+                                     desktop_entry_group,
                                      "Categories",
                                      &len,
                                      NULL);
