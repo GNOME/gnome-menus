@@ -1,14 +1,14 @@
 # Finnish messages for gnome-menus
-# Copyright (C) 2004 Free Software Foundation, Inc.
+# Copyright (C) 2004-2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gail package.
-# Tommi Vainikainen <Tommi.Vainikainen@iki.fi>, 2004.
+# Tommi Vainikainen <Tommi.Vainikainen@iki.fi>, 2004-2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-07 09:18+0200\n"
-"PO-Revision-Date: 2004-12-07 09:31+0200\n"
+"POT-Creation-Date: 2005-01-12 13:16+0200\n"
+"PO-Revision-Date: 2005-01-12 13:16+0200\n"
 "Last-Translator: Tommi Vainikainen <thv@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -110,12 +110,12 @@ msgid "Preferences"
 msgstr "Asetukset"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Muuta järjestelmänlaajuisia asetuksia (vaikuttaa joka käyttäjään)"
+msgid "Administration"
+msgstr "Hallinta"
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Järjestelmän asetukset"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Muuta järjestelmänlaajuisia asetuksia (vaikuttaa joka käyttäjään)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -124,3 +124,6 @@ msgstr "Järjestelmätyökalut"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Järjestelmäasetukset ja -seuranta"
+
+#~ msgid "System Settings"
+#~ msgstr "Järjestelmän asetukset"
