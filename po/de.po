@@ -9,13 +9,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-30 07:33+0000\n"
-"PO-Revision-Date: 2004-11-15 23:04+0100\n"
-"Last-Translator: Hendrik Brandt <eru@gmx.li>\n"
+"POT-Creation-Date: 2004-12-01 20:10+0100\n"
+"PO-Revision-Date: 2004-12-01 20:13+0100\n"
+"Last-Translator: Hendrik Brandt <heb@gnome-de.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: desktop-directories/Accessibility.directory.in.h:1
 #: desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -48,7 +48,7 @@ msgstr "Werkzeuge zur Software-Entwicklung"
 
 #: desktop-directories/Edutainment.directory.in.h:1
 msgid "Edutainment"
-msgstr ""
+msgstr "Bildung"
 
 #: desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -80,7 +80,7 @@ msgstr "Multimedia-Menü"
 
 #: desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Audio & Video"
+msgstr "Unterhaltungsmedien"
 
 #: desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -125,3 +125,4 @@ msgstr "Systemwerkzeuge"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Systemkonfiguration und -überwachung"
+
