@@ -1,0 +1,128 @@
+# translation of Gnome-menus.
+# Copyright (C) 2004 THE Gnome-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Gnome-menus package.
+# <>, 2004.
+# , fuzzy
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Gnome-menus Head\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-12-28 21:46+0000\n"
+"PO-Revision-Date: 2004-12-07 23:30+0200\n"
+"Last-Translator: RIDVAN CAN <ridvan@geleceklinux.org>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Erişilebilirlik"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Erişilebilirlik Ayarları"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Donatılar"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Masaüstü donatıları"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Uygulamalar"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Programlama"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Yazılım geliştirme araçları"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Eğitim-eğlence"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Oyunlar"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Oyun ve eğlencelikler"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Grafik"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Grafik uygulamaları"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "İnternet"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Web ve email gibi internete erişim amaçlı programlar"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Çokluortam menusu"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Ses ve Video"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Ofis"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Ofis Uygulamaları"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Diğer kategorilere girmeyen uygulamalar"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Diğer"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Erişilebilirlikle ilgili tercihler"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Kişisel tercih ve ayarlar"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Tercihler"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Change systemwide settings (affects all users)"
+msgstr "Ayarları sistem çapında değiştir (tüm kullanıcıları etkiler)"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "System Settings"
+msgstr "Sistem Ayarları"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Sistem Araçları"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Sistem yapılandırma ve izleme"
+
