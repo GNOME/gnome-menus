@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
+"POT-Creation-Date: 2005-01-10 17:49+0000\n"
 "PO-Revision-Date: 2004-12-08 00:38+0100\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
@@ -113,12 +113,12 @@ msgid "Preferences"
 msgstr "Hobespenak"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Aldatu sistema osoko ezarpenak (erabiltzaile guztiengan du eragina)"
+msgid "Administration"
+msgstr ""
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Sistemaren ezarpenak"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Aldatu sistema osoko ezarpenak (erabiltzaile guztiengan du eragina)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -127,3 +127,6 @@ msgstr "Sistemaren tresnak"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Sistemaren konfigurazioa eta monitorizazioa"
+
+#~ msgid "System Settings"
+#~ msgstr "Sistemaren ezarpenak"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menu HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
+"POT-Creation-Date: 2005-01-10 17:49+0000\n"
 "PO-Revision-Date: 2004-08-09 21:51+0730\n"
 "Last-Translator: Hasbullah Bin Pit <sebol@my-penguin.org>\n"
 "Language-Team: ms <sebol@ikhlas.com>\n"
@@ -108,12 +108,13 @@ msgid "Preferences"
 msgstr "Keutamaan"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Tukar tetapan seluruh sistem (melibatkan semua pengguna)"
+#, fuzzy
+msgid "Administration"
+msgstr "Orientasi"
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Tetapan Sistem"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Tukar tetapan seluruh sistem (melibatkan semua pengguna)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -122,6 +123,9 @@ msgstr "Alatan Sistem"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Konfigurasi dan monitor sistem"
+
+#~ msgid "System Settings"
+#~ msgstr "Tetapan Sistem"
 
 #~ msgid "Ad_just Date & Time"
 #~ msgstr "_Betulkan Tarikh & Masa"
@@ -497,9 +501,6 @@ msgstr "Konfigurasi dan monitor sistem"
 
 #~ msgid "Notification Area Factory"
 #~ msgstr "Kilang Kawasan Pemakluman"
-
-#~ msgid "Orientation"
-#~ msgstr "Orientasi"
 
 #~ msgid "The orientation of the tray."
 #~ msgstr "Orientasi bagi dulang."

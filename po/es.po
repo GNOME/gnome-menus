@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
+"POT-Creation-Date: 2005-01-10 17:49+0000\n"
 "PO-Revision-Date: 2004-11-22 22:36+0100\n"
 "Last-Translator: \n"
 "Language-Team:  <es@li.org>\n"
@@ -110,13 +110,13 @@ msgid "Preferences"
 msgstr "Preferencias"
 
 #: desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr ""
+
+#: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
 msgstr ""
 "Cambia las preferencias globales del sistema (afecta a todos los usuarios)"
-
-#: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Configuración del sistema"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -125,3 +125,6 @@ msgstr "Herramientas del sistema"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Configuración y monitorización del sistema"
+
+#~ msgid "System Settings"
+#~ msgstr "Configuración del sistema"

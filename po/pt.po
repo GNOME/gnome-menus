@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
+"POT-Creation-Date: 2005-01-10 17:49+0000\n"
 "PO-Revision-Date: 2004-12-09 22:55+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
@@ -109,12 +109,12 @@ msgid "Preferences"
 msgstr "Preferências"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Alterar definições de sistema (afecta todos os utilizadores)"
+msgid "Administration"
+msgstr ""
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Definições de Sistema"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Alterar definições de sistema (afecta todos os utilizadores)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -123,3 +123,6 @@ msgstr "Ferramentas de Sistema"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Configuração de sistema e monitorização"
+
+#~ msgid "System Settings"
+#~ msgstr "Definições de Sistema"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
+"POT-Creation-Date: 2005-01-10 17:49+0000\n"
 "PO-Revision-Date: 2004-12-05 12:46+0000\n"
 "Last-Translator: Simos Xenitellis <simos@gnome.org>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -111,12 +111,12 @@ msgid "Preferences"
 msgstr "Προτιμήσεις"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Τροποποίηση ρυθμίσεων συστήματος (επηρεάζει όλους τους χρήστες)"
+msgid "Administration"
+msgstr ""
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Ρυθμίσεις Συστήματος"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Τροποποίηση ρυθμίσεων συστήματος (επηρεάζει όλους τους χρήστες)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -125,3 +125,6 @@ msgstr "Εργαλεία Συστήματος"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr ""
+
+#~ msgid "System Settings"
+#~ msgstr "Ρυθμίσεις Συστήματος"

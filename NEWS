@@ -1,4 +1,21 @@
 =============
+Version 2.9.4
+=============
+
+  Fixes
+
+	* New menus layout (Vincent Untz)
+	* Reload menus correctly when they are deleted/updated (Frederic Crozat)
+	* Ref the return value from menu_tree_entry_get_parent() (Mark)
+
+  Translators
+
+	* Hendrik Brandt (de)
+	* Adam Weinberger (en_CA)
+	* Baptiste Mille-Mathias (fr)
+	* Arangel Angov (mk)
+
+=============
 Version 2.9.3
 =============
 

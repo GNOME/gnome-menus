@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
+"POT-Creation-Date: 2005-01-10 17:49+0000\n"
 "PO-Revision-Date: 2004-11-25 03:08+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norsk bokmal <i18n-nb@lister.ping.uio.no>\n"
@@ -109,12 +109,12 @@ msgid "Preferences"
 msgstr "Brukervalg"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Endre systeminnstillinger (påvirker alle brukere)"
+msgid "Administration"
+msgstr ""
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Systeminnstillinger"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Endre systeminnstillinger (påvirker alle brukere)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -123,3 +123,6 @@ msgstr "Systemverktøy"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Systemkonfigurasjon og overvåking"
+
+#~ msgid "System Settings"
+#~ msgstr "Systeminnstillinger"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
+"POT-Creation-Date: 2005-01-10 17:49+0000\n"
 "PO-Revision-Date: 2004-12-04 12:16+0100\n"
 "Last-Translator: Данило Шеган <danilo@prevod.org>\n"
 "Language-Team: Serbian (sr) <gnu@prevod.org>\n"
@@ -111,12 +111,12 @@ msgid "Preferences"
 msgstr "Поставк"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Промените системска подешавања (утиче на све кориснике)"
+msgid "Administration"
+msgstr ""
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Системска подешавања"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Промените системска подешавања (утиче на све кориснике)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -125,3 +125,6 @@ msgstr "Системски алати"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Подешавање и праћење система"
+
+#~ msgid "System Settings"
+#~ msgstr "Системска подешавања"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
+"POT-Creation-Date: 2005-01-10 17:49+0000\n"
 "PO-Revision-Date: 2004-11-24 16:53+0530\n"
 "Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
@@ -111,12 +111,12 @@ msgid "Preferences"
 msgstr "ਮੇਰੀ ਪਸੰਦ"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "ਤਬਦੀਲੀਆਂ ਸਿਸਟਮ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰਨਗੀਆਂ (ਸਭ ਉਪਭੋਗਤਾਵਾਂ ਨੂੰ)"
+msgid "Administration"
+msgstr ""
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "ਸਿਸਟਮ ਵਿਵਸਥਾ"
+msgid "Change systemwide settings (affects all users)"
+msgstr "ਤਬਦੀਲੀਆਂ ਸਿਸਟਮ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰਨਗੀਆਂ (ਸਭ ਉਪਭੋਗਤਾਵਾਂ ਨੂੰ)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -125,3 +125,6 @@ msgstr "ਸਿਸਟਮ ਸੰਦ"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "ਸਿਸਟਮ ਸੰਰਚਨਾ ਤੇ ਜਾਂਚ"
+
+#~ msgid "System Settings"
+#~ msgstr "ਸਿਸਟਮ ਵਿਵਸਥਾ"

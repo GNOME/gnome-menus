@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
+"POT-Creation-Date: 2005-01-10 17:49+0000\n"
 "PO-Revision-Date: 2004-12-05 07:03+0200\n"
 "Last-Translator: Žygimantas Beručka <uid0@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -110,12 +110,12 @@ msgid "Preferences"
 msgstr "Nustatymai"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Keisti sisteminio masto nustatymus (poveikis visiems naudotojams)"
+msgid "Administration"
+msgstr ""
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Sistemos nustatymai"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Keisti sisteminio masto nustatymus (poveikis visiems naudotojams)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -124,3 +124,6 @@ msgstr "Sistemos įrankiai"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Sistemos konfigūravimas ir stebėjimas"
+
+#~ msgid "System Settings"
+#~ msgstr "Sistemos nustatymai"
