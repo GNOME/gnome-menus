@@ -1,5 +1,22 @@
 2005-03-15  Mark McLoughlin  <mark@skynet.ie>
 
+	Add python bindings. Mostly complete, but still need
+	to finish wraping:
+	  - menu_tree_directory_make_path ()
+	  - menu_tree_add_monitor ()
+	  - menu_tree_remove_monitor ()
+
+	* configure.in, acinclude.m4: add python checks, copied
+	from dbus.
+	
+	* Makefile.am: build the python subdir.
+	
+	* python/Makefile.am: again copied from dbus.
+	
+	* python/gmenu.pyx: Pyrex wrapping of the API.
+
+2005-03-15  Mark McLoughlin  <mark@skynet.ie>
+
 	* libmenu/menu-tree.h:
 	(menu_tree_entry_get_parent): remove.
 
