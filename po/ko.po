@@ -1,0 +1,123 @@
+# gnome-menus ko.po
+# Sang-Gju Kim <sangu@hellocity.net>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus 2.9.90\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-01-26 11:26+0900\n"
+"PO-Revision-Date: 2005-02-12 19:28+0900\n"
+"Last-Translator: Sang-Gju Kim <sangu@hellocity.net>\n"
+"Language-Team: GNOME Korea <gnome-kr-hackers@lists.kldp.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "접근성"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "접근성 설정"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "보조 프로그램"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "데스크탑 보조프로그램"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "프로그램"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "개발"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "소프트웨어 개발을 위한 도구"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "교육용 놀이"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "놀이"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "놀이와 재미"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "그림"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "그림 응용프로그램"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "인터넷"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "웹과 이메일 같은 인터넷 접근을 위한 프로그램"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "멀티미디어"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "멀티미디어"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "오피스"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "사무용 프로그램"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "어떤 범주에도 해당되지 않는 프로그램"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "기타"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "접근성 설정"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "개인 설정 및 환경"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "기본 설정"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "시스템 관리"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr "전체 시스템 설정 바꾸기 (모든 사용자에게 영향)"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "시스템"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "시스템 설정과 감시"
