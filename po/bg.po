@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome menus - proposed for gnome 2.10 gnome 2.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-10 17:49+0000\n"
-"PO-Revision-Date: 2004-12-10 18:22+0200\n"
+"POT-Creation-Date: 2005-01-17 15:14+0200\n"
+"PO-Revision-Date: 2005-01-16 09:40+0200\n"
 "Last-Translator: Vladimir \"Kaladan\" Petkov <vpetkov@i-space.org>\n"
 "Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
 "MIME-Version: 1.0\n"
@@ -106,11 +106,11 @@ msgstr "Лични настройки и предпочитания"
 
 #: desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Интернет"
+msgstr "Настройки"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr ""
+msgstr "Администрация на системата"
 
 #: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
@@ -124,7 +124,7 @@ msgstr "Системни инструменти"
 
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Следене и конфигуриране на системата"
+msgstr "Следене и настройване на системата"
 
 #~ msgid "System Settings"
 #~ msgstr "Настройки на системата"
