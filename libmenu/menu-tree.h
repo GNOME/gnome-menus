@@ -29,11 +29,32 @@
 G_BEGIN_DECLS
 
 typedef struct MenuTree          MenuTree;
-typedef struct MenuTreeEntry     MenuTreeEntry;
+typedef struct MenuTreeItem      MenuTreeItem;
 typedef struct MenuTreeDirectory MenuTreeDirectory;
+typedef struct MenuTreeEntry     MenuTreeEntry;
+typedef struct MenuTreeSeparator MenuTreeSeparator;
+typedef struct MenuTreeHeader    MenuTreeHeader;
+typedef struct MenuTreeAlias     MenuTreeAlias;
 
 typedef void (*MenuTreeChangedFunc) (MenuTree *tree,
                                      gpointer  user_data);
+
+typedef enum
+{
+  MENU_TREE_ITEM_INVALID = 0,
+  MENU_TREE_ITEM_DIRECTORY,
+  MENU_TREE_ITEM_ENTRY,
+  MENU_TREE_ITEM_SEPARATOR,
+  MENU_TREE_ITEM_HEADER,
+  MENU_TREE_ITEM_ALIAS
+} MenuTreeItemType;
+
+#define MENU_TREE_ITEM(i)      ((MenuTreeItem *)(i))
+#define MENU_TREE_DIRECTORY(i) ((MenuTreeDirectory *)(i))
+#define MENU_TREE_ENTRY(i)     ((MenuTreeEntry *)(i))
+#define MENU_TREE_SEPARATOR(i) ((MenuTreeSeparator *)(i))
+#define MENU_TREE_HEADER(i)    ((MenuTreeHeader *)(i))
+#define MENU_TREE_ALIAS(i)     ((MenuTreeAlias *)(i))
 
 MenuTree *menu_tree_lookup (const char *menu_file);
 
@@ -44,14 +65,15 @@ MenuTreeDirectory *menu_tree_get_root_directory (MenuTree *tree);
 MenuTreeDirectory *menu_tree_get_directory_from_path (MenuTree   *tree,
 						      const char *path);
 
-GSList *menu_tree_directory_get_entries (MenuTreeDirectory *directory);
-GSList *menu_tree_directory_get_subdirs (MenuTreeDirectory *directory);
 
-MenuTreeDirectory *menu_tree_directory_ref   (MenuTreeDirectory *directory);
-void               menu_tree_directory_unref (MenuTreeDirectory *directory);
+gpointer menu_tree_item_ref   (gpointer item);
+void     menu_tree_item_unref (gpointer item);
 
-MenuTreeDirectory *menu_tree_directory_get_parent (MenuTreeDirectory *directory);
+MenuTreeItemType   menu_tree_item_get_type   (MenuTreeItem *item);
+MenuTreeDirectory *menu_tree_item_get_parent (MenuTreeItem *item);
 
+
+GSList     *menu_tree_directory_get_contents (MenuTreeDirectory *directory);
 const char *menu_tree_directory_get_name     (MenuTreeDirectory *directory);
 const char *menu_tree_directory_get_comment  (MenuTreeDirectory *directory);
 const char *menu_tree_directory_get_icon     (MenuTreeDirectory *directory);
@@ -59,9 +81,6 @@ const char *menu_tree_directory_get_icon     (MenuTreeDirectory *directory);
 char *menu_tree_directory_make_path (MenuTreeDirectory *directory,
 				     MenuTreeEntry     *entry);
 
-
-MenuTreeEntry *menu_tree_entry_ref   (MenuTreeEntry *entry);
-void           menu_tree_entry_unref (MenuTreeEntry *entry);
 
 MenuTreeDirectory *menu_tree_entry_get_parent (MenuTreeEntry *entry);
 
@@ -72,6 +91,11 @@ const char *menu_tree_entry_get_exec    (MenuTreeEntry *entry);
 
 const char *menu_tree_entry_get_desktop_file_path (MenuTreeEntry *entry);
 const char *menu_tree_entry_get_desktop_file_id   (MenuTreeEntry *entry);
+
+MenuTreeDirectory *menu_tree_header_get_directory (MenuTreeHeader *header);
+
+MenuTreeDirectory *menu_tree_alias_get_directory (MenuTreeAlias *alias);
+MenuTreeItem      *menu_tree_alias_get_item      (MenuTreeAlias *alias);
 
 void menu_tree_add_monitor    (MenuTree            *tree,
                                MenuTreeChangedFunc  callback,

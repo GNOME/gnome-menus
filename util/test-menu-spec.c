@@ -37,7 +37,7 @@ append_directory_path (MenuTreeDirectory *directory,
 {
   MenuTreeDirectory *parent;
 
-  parent = menu_tree_directory_get_parent (directory);
+  parent = menu_tree_item_get_parent (MENU_TREE_ITEM (directory));
 
   if (!parent)
     {
@@ -50,7 +50,7 @@ append_directory_path (MenuTreeDirectory *directory,
   g_string_append (path, menu_tree_directory_get_name (directory));
   g_string_append_c (path, '/');
 
-  menu_tree_directory_unref (parent);
+  menu_tree_item_unref (parent);
 }
 
 static char *
@@ -68,10 +68,19 @@ make_path (MenuTreeDirectory *directory)
 }
 
 static void
+print_entry (MenuTreeEntry *entry,
+	     const char    *path)
+{
+  g_print ("%s\t%s\t%s\n",
+	   path,
+	   menu_tree_entry_get_desktop_file_id (entry),
+	   menu_tree_entry_get_desktop_file_path (entry));
+}
+
+static void
 print_directory (MenuTreeDirectory *directory)
 {
-  GSList     *entries;
-  GSList     *subdirs;
+  GSList     *items;
   GSList     *tmp;
   const char *path;
   char       *freeme;
@@ -82,39 +91,48 @@ print_directory (MenuTreeDirectory *directory)
   else
     path = freeme + 1;
 
-  entries = menu_tree_directory_get_entries (directory);
-  subdirs = menu_tree_directory_get_subdirs (directory);
+  items = menu_tree_directory_get_contents (directory);
 
-  tmp = entries;
+  tmp = items;
   while (tmp != NULL)
     {
-      MenuTreeEntry *entry = tmp->data;
+      MenuTreeItem *item = tmp->data;
 
-      g_print ("%s\t%s\t%s\n",
-               path,
-               menu_tree_entry_get_desktop_file_id (entry),
-               menu_tree_entry_get_desktop_file_path (entry));
+      switch (menu_tree_item_get_type (item))
+	{
+	case MENU_TREE_ITEM_ENTRY:
+	  print_entry (MENU_TREE_ENTRY (item), path);
+	  break;
 
-      menu_tree_entry_unref (entry);
+	case MENU_TREE_ITEM_DIRECTORY:
+	  print_directory (MENU_TREE_DIRECTORY (item));
+	  break;
+
+	case MENU_TREE_ITEM_HEADER:
+	case MENU_TREE_ITEM_SEPARATOR:
+	  break;
+
+	case MENU_TREE_ITEM_ALIAS:
+	  {
+	    MenuTreeItem *aliased_item;
+
+	    aliased_item = menu_tree_alias_get_item (MENU_TREE_ALIAS (item));
+	    if (menu_tree_item_get_type (aliased_item) == MENU_TREE_ITEM_ENTRY)
+	      print_entry (MENU_TREE_ENTRY (aliased_item), path);
+	  }
+	  break;
+
+	default:
+	  g_assert_not_reached ();
+	  break;
+	}
+
+      menu_tree_item_unref (tmp->data);
 
       tmp = tmp->next;
     }
 
-  g_slist_free (entries);
-
-  tmp = subdirs;
-  while (tmp != NULL)
-    {
-      MenuTreeDirectory *subdir = tmp->data;
-
-      print_directory (subdir);
-
-      menu_tree_directory_unref (subdir);
-
-      tmp = tmp->next;
-    }
-
-  g_slist_free (subdirs);
+  g_slist_free (items);
 
   g_free (freeme);
 }
@@ -134,7 +152,7 @@ handle_tree_changed (MenuTree *tree)
     }
 
   print_directory (root);
-  menu_tree_directory_unref (root);
+  menu_tree_item_unref (root);
 }
 
 int
@@ -162,7 +180,7 @@ main (int argc, char **argv)
   if (root != NULL)
     {
       print_directory (root);
-      menu_tree_directory_unref (root);
+      menu_tree_item_unref (root);
     }
   else
     {

@@ -67,9 +67,18 @@ typedef struct
   gpointer            user_data;
 } MenuTreeMonitor;
 
+struct MenuTreeItem
+{
+  MenuTreeItemType type;
+
+  MenuTreeDirectory *parent;
+  
+  guint refcount;
+};
+
 struct MenuTreeDirectory
 {
-  MenuTreeDirectory *parent;
+  MenuTreeItem item;
 
   DesktopEntry *directory_entry;
   char         *name;
@@ -77,18 +86,39 @@ struct MenuTreeDirectory
   GSList *entries;
   GSList *subdirs;
 
-  guint refcount : 24;
+  MenuLayoutValues  default_layout_values;
+  GSList           *layout_info;
+  GSList           *contents;
+
   guint only_unallocated : 1;
 };
 
 struct MenuTreeEntry
 {
-  MenuTreeDirectory *parent;
+  MenuTreeItem item;
 
   DesktopEntry *desktop_entry;
   char         *desktop_file_id;
+};
 
-  guint refcount : 24;
+struct MenuTreeSeparator
+{
+  MenuTreeItem item;
+};
+
+struct MenuTreeHeader
+{
+  MenuTreeItem item;
+
+  MenuTreeDirectory *directory;
+};
+
+struct MenuTreeAlias
+{
+  MenuTreeItem item;
+
+  MenuTreeDirectory *directory;
+  MenuTreeItem      *aliased_item;
 };
 
 static MenuTree *menu_tree_new                  (MenuTreeType    type,
@@ -548,7 +578,7 @@ menu_tree_get_root_directory (MenuTree *tree)
         return NULL;
     }
 
-  return menu_tree_directory_ref (tree->root);
+  return menu_tree_item_ref (tree->root);
 }
 
 static MenuTreeDirectory *
@@ -578,19 +608,22 @@ find_path (MenuTreeDirectory *directory,
       path = NULL;
     }
 
-  tmp = directory->subdirs;
+  tmp = directory->contents;
   while (tmp != NULL)
     {
-      MenuTreeDirectory *subdir = tmp->data;
+      MenuTreeItem *item = tmp->data;
 
-      if (!strcmp (name, subdir->name))
+      if (menu_tree_item_get_type (item) != MENU_TREE_ITEM_DIRECTORY)
+	continue;
+
+      if (!strcmp (name, MENU_TREE_DIRECTORY (item)->name))
 	{
 	  g_free (freeme);
 
 	  if (path)
-	    return find_path (subdir, path);
+	    return find_path (MENU_TREE_DIRECTORY (item), path);
 	  else
-	    return subdir;
+	    return MENU_TREE_DIRECTORY (item);
 	}
 
       tmp = tmp->next;
@@ -619,9 +652,9 @@ menu_tree_get_directory_from_path (MenuTree   *tree,
 
   directory = find_path (root, path);
 
-  menu_tree_directory_unref (root);
+  menu_tree_item_unref (root);
 
-  return directory ? menu_tree_directory_ref (directory) : NULL;
+  return directory ? menu_tree_item_ref (directory) : NULL;
 }
 
 void
@@ -702,56 +735,42 @@ menu_tree_invoke_monitors (MenuTree *tree)
     }
 }
 
-GSList *
-menu_tree_directory_get_entries (MenuTreeDirectory *directory)
+MenuTreeItemType
+menu_tree_item_get_type (MenuTreeItem *item)
 {
-  GSList *retval;
-  GSList *tmp;
+  g_return_val_if_fail (item != NULL, 0);
 
-  g_return_val_if_fail (directory != NULL, NULL);
-
-  retval = NULL;
-
-  tmp = directory->entries;
-  while (tmp != NULL)
-    {
-      retval = g_slist_prepend (retval,
-                                menu_tree_entry_ref (tmp->data));
-
-      tmp = tmp->next;
-    }
-
-  return g_slist_reverse (retval);
-}
-
-GSList *
-menu_tree_directory_get_subdirs (MenuTreeDirectory *directory)
-{
-  GSList *retval;
-  GSList *tmp;
-
-  g_return_val_if_fail (directory != NULL, NULL);
-
-  retval = NULL;
-
-  tmp = directory->subdirs;
-  while (tmp != NULL)
-    {
-      retval = g_slist_prepend (retval,
-                                menu_tree_directory_ref (tmp->data));
-
-      tmp = tmp->next;
-    }
-
-  return g_slist_reverse (retval);
+  return item->type;
 }
 
 MenuTreeDirectory *
-menu_tree_directory_get_parent (MenuTreeDirectory *directory)
+menu_tree_item_get_parent (MenuTreeItem *item)
 {
+  g_return_val_if_fail (item != NULL, NULL);
+
+  return item->parent ? menu_tree_item_ref (item->parent) : NULL;
+}
+
+GSList *
+menu_tree_directory_get_contents (MenuTreeDirectory *directory)
+{
+  GSList *retval;
+  GSList *tmp;
+
   g_return_val_if_fail (directory != NULL, NULL);
 
-  return directory->parent ? menu_tree_directory_ref (directory->parent) : NULL;
+  retval = NULL;
+
+  tmp = directory->contents;
+  while (tmp != NULL)
+    {
+      retval = g_slist_prepend (retval,
+                                menu_tree_item_ref (tmp->data));
+
+      tmp = tmp->next;
+    }
+
+  return g_slist_reverse (retval);
 }
 
 const char *
@@ -792,13 +811,13 @@ append_directory_path (MenuTreeDirectory *directory,
 		       GString           *path)
 {
 
-  if (!directory->parent)
+  if (!directory->item.parent)
     {
       g_string_append_c (path, '/');
       return;
     }
 
-  append_directory_path (directory->parent, path);
+  append_directory_path (directory->item.parent, path);
 
   g_string_append (path, directory->name);
   g_string_append_c (path, '/');
@@ -821,14 +840,6 @@ menu_tree_directory_make_path (MenuTreeDirectory *directory,
 		     desktop_entry_get_basename (entry->desktop_entry));
 
   return g_string_free (path, FALSE);
-}
-
-MenuTreeDirectory *
-menu_tree_entry_get_parent (MenuTreeEntry *entry)
-{
-  g_return_val_if_fail (entry != NULL, NULL);
-
-  return entry->parent ? menu_tree_directory_ref (entry->parent) : NULL;
 }
 
 const char *
@@ -879,6 +890,30 @@ menu_tree_entry_get_desktop_file_id (MenuTreeEntry *entry)
   return entry->desktop_file_id;
 }
 
+MenuTreeDirectory *
+menu_tree_header_get_directory (MenuTreeHeader *header)
+{
+  g_return_val_if_fail (header != NULL, NULL);
+
+  return menu_tree_item_ref (header->directory);
+}
+
+MenuTreeDirectory *
+menu_tree_alias_get_directory (MenuTreeAlias *alias)
+{
+  g_return_val_if_fail (alias != NULL, NULL);
+
+  return menu_tree_item_ref (alias->directory);
+}
+
+MenuTreeItem *
+menu_tree_alias_get_item (MenuTreeAlias *alias)
+{
+  g_return_val_if_fail (alias != NULL, NULL);
+
+  return menu_tree_item_ref (alias->aliased_item);
+}
+
 static MenuTreeDirectory *
 menu_tree_directory_new (MenuTreeDirectory *parent,
                          const char        *name)
@@ -887,59 +922,70 @@ menu_tree_directory_new (MenuTreeDirectory *parent,
 
   retval = g_new0 (MenuTreeDirectory, 1);
 
-  retval->parent           = parent;
+  retval->item.type     = MENU_TREE_ITEM_DIRECTORY;
+  retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
+  retval->item.refcount = 1;
+
   retval->name             = g_strdup (name);
   retval->directory_entry  = NULL;
   retval->entries          = NULL;
   retval->subdirs          = NULL;
+  retval->layout_info      = NULL;
+  retval->contents         = NULL;
   retval->only_unallocated = FALSE;
-  retval->refcount         = 1;
+
+  if (parent != NULL)
+    {
+      retval->default_layout_values = parent->default_layout_values;
+    }
+  else
+    {
+      retval->default_layout_values.mask          = MENU_LAYOUT_VALUES_NONE;
+      retval->default_layout_values.show_empty    = FALSE;
+      retval->default_layout_values.inline_menus  = FALSE;
+      retval->default_layout_values.inline_limit  = 4;
+      retval->default_layout_values.inline_header = FALSE;
+      retval->default_layout_values.inline_alias  = FALSE;
+    }
 
   return retval;
 }
 
-MenuTreeDirectory *
-menu_tree_directory_ref (MenuTreeDirectory *directory)
+static void
+menu_tree_directory_finalize (MenuTreeDirectory *directory)
 {
-  g_return_val_if_fail (directory != NULL, NULL);
-  g_return_val_if_fail (directory->refcount > 0, NULL);
+  g_assert (directory->item.refcount == 0);
 
-  directory->refcount++;
+  g_slist_foreach (directory->contents,
+		   (GFunc) menu_tree_item_unref,
+		   NULL);
+  g_slist_free (directory->contents);
+  directory->contents = NULL;
+  
+  g_slist_foreach (directory->layout_info,
+		   (GFunc) menu_layout_node_unref,
+		   NULL);
+  g_slist_free (directory->layout_info);
+  directory->layout_info = NULL;
 
-  return directory;
-}
+  g_slist_foreach (directory->subdirs,
+		   (GFunc) menu_tree_item_unref,
+		   NULL);
+  g_slist_free (directory->subdirs);
+  directory->subdirs = NULL;
 
-void
-menu_tree_directory_unref (MenuTreeDirectory *directory)
-{
-  g_return_if_fail (directory != NULL);
-  g_return_if_fail (directory->refcount > 0);
+  g_slist_foreach (directory->entries,
+		   (GFunc) menu_tree_item_unref,
+		   NULL);
+  g_slist_free (directory->entries);
+  directory->entries = NULL;
 
-  if (--directory->refcount == 0)
-    {
-      g_slist_foreach (directory->subdirs,
-                       (GFunc) menu_tree_directory_unref,
-                       NULL);
-      g_slist_free (directory->subdirs);
-      directory->subdirs = NULL;
+  if (directory->directory_entry)
+    desktop_entry_unref (directory->directory_entry);
+  directory->directory_entry = NULL;
 
-      g_slist_foreach (directory->entries,
-                       (GFunc) menu_tree_entry_unref,
-                       NULL);
-      g_slist_free (directory->entries);
-      directory->entries = NULL;
-
-      if (directory->directory_entry)
-        desktop_entry_unref (directory->directory_entry);
-      directory->directory_entry = NULL;
-
-      g_free (directory->name);
-      directory->name = NULL;
-
-      directory->parent = NULL;
-
-      g_free (directory);
-    }
+  g_free (directory->name);
+  directory->name = NULL;
 }
 
 static int
@@ -962,6 +1008,80 @@ menu_tree_directory_compare (MenuTreeDirectory *a,
   return g_utf8_collate (name_a, name_b);
 }
 
+static MenuTreeSeparator *
+menu_tree_separator_new (MenuTreeDirectory *parent)
+{
+  MenuTreeSeparator *retval;
+
+  retval = g_new0 (MenuTreeSeparator, 1);
+
+  retval->item.type     = MENU_TREE_ITEM_SEPARATOR;
+  retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
+  retval->item.refcount = 1;
+
+  return retval;
+}
+
+static MenuTreeHeader *
+menu_tree_header_new (MenuTreeDirectory *parent,
+		      MenuTreeDirectory *directory)
+{
+  MenuTreeHeader *retval;
+
+  retval = g_new0 (MenuTreeHeader, 1);
+
+  retval->item.type     = MENU_TREE_ITEM_HEADER;
+  retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
+  retval->item.refcount = 1;
+
+  retval->directory = menu_tree_item_ref (directory);
+
+  return retval;
+}
+
+static void
+menu_tree_header_finalize (MenuTreeHeader *header)
+{
+  g_assert (header->item.refcount == 0);
+
+  if (header->directory != NULL)
+    menu_tree_item_unref (header->directory);
+  header->directory = NULL;
+}
+
+static MenuTreeAlias *
+menu_tree_alias_new (MenuTreeDirectory *parent,
+		     MenuTreeDirectory *directory,
+		     MenuTreeItem      *item)
+{
+  MenuTreeAlias *retval;
+
+  retval = g_new0 (MenuTreeAlias, 1);
+
+  retval->item.type     = MENU_TREE_ITEM_ALIAS;
+  retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
+  retval->item.refcount = 1;
+
+  retval->directory    = menu_tree_item_ref (directory);
+  retval->aliased_item = menu_tree_item_ref (item);
+
+  return retval;
+}
+
+static void
+menu_tree_alias_finalize (MenuTreeAlias *alias)
+{
+  g_assert (alias->item.refcount == 0);
+
+  if (alias->directory != NULL)
+    menu_tree_item_unref (alias->directory);
+  alias->directory = NULL;
+
+  if (alias->aliased_item != NULL)
+    menu_tree_item_unref (alias->aliased_item);
+  alias->aliased_item = NULL;
+}
+
 static MenuTreeEntry *
 menu_tree_entry_new (MenuTreeDirectory *parent,
 		     DesktopEntry      *desktop_entry,
@@ -971,46 +1091,27 @@ menu_tree_entry_new (MenuTreeDirectory *parent,
 
   retval = g_new0 (MenuTreeEntry, 1);
 
-  retval->parent          = menu_tree_directory_ref (parent);
+  retval->item.type     = MENU_TREE_ITEM_ENTRY;
+  retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
+  retval->item.refcount = 1;
+
   retval->desktop_entry   = desktop_entry_ref (desktop_entry);
   retval->desktop_file_id = g_strdup (desktop_file_id);
-  retval->refcount        = 1;
 
   return retval;
 }
 
-MenuTreeEntry *
-menu_tree_entry_ref (MenuTreeEntry *entry)
+static void
+menu_tree_entry_finalize (MenuTreeEntry *entry)
 {
-  g_return_val_if_fail (entry != NULL, NULL);
-  g_return_val_if_fail (entry->refcount > 0, NULL);
+  g_assert (entry->item.refcount == 0);
 
-  entry->refcount++;
+  g_free (entry->desktop_file_id);
+  entry->desktop_file_id = NULL;
 
-  return entry;
-}
-
-void
-menu_tree_entry_unref (MenuTreeEntry *entry)
-{
-  g_return_if_fail (entry != NULL);
-  g_return_if_fail (entry->refcount > 0);
-
-  if (--entry->refcount == 0)
-    {
-      g_free (entry->desktop_file_id);
-      entry->desktop_file_id = NULL;
-
-      if (entry->desktop_entry)
-        desktop_entry_unref (entry->desktop_entry);
-      entry->desktop_entry = NULL;
-
-      if (entry->parent)
-	menu_tree_directory_unref (entry->parent);
-      entry->parent = NULL;
-
-      g_free (entry);
-    }
+  if (entry->desktop_entry)
+    desktop_entry_unref (entry->desktop_entry);
+  entry->desktop_entry = NULL;
 }
 
 static int
@@ -1019,6 +1120,119 @@ menu_tree_entry_compare (MenuTreeEntry *a,
 {
   return g_utf8_collate (desktop_entry_get_name (a->desktop_entry),
                          desktop_entry_get_name (b->desktop_entry));
+}
+
+gpointer
+menu_tree_item_ref (gpointer itemp)
+{
+  MenuTreeItem *item;
+  
+  item = (MenuTreeItem *) itemp;
+
+  g_return_val_if_fail (item != NULL, NULL);
+  g_return_val_if_fail (item->refcount > 0, NULL);
+
+  item->refcount++;
+
+  return item;
+}
+
+void
+menu_tree_item_unref (gpointer itemp)
+{
+  MenuTreeItem *item;
+
+  item = (MenuTreeItem *) itemp;
+
+  g_return_if_fail (item != NULL);
+  g_return_if_fail (item->refcount > 0);
+
+  if (--item->refcount == 0)
+    {
+      switch (item->type)
+	{
+	case MENU_TREE_ITEM_DIRECTORY:
+	  menu_tree_directory_finalize (MENU_TREE_DIRECTORY (item));
+	  break;
+
+	case MENU_TREE_ITEM_ENTRY:
+	  menu_tree_entry_finalize (MENU_TREE_ENTRY (item));
+	  break;
+
+	case MENU_TREE_ITEM_SEPARATOR:
+	  break;
+
+	case MENU_TREE_ITEM_HEADER:
+	  menu_tree_header_finalize (MENU_TREE_HEADER (item));
+	  break;
+
+	case MENU_TREE_ITEM_ALIAS:
+	  menu_tree_alias_finalize (MENU_TREE_ALIAS (item));
+	  break;
+
+	default:
+	  g_assert_not_reached ();
+	  break;
+	}
+
+      if (item->parent != NULL)
+	menu_tree_item_unref (item->parent);
+      item->parent = NULL;
+
+      g_free (item);
+    }
+}
+
+static int
+menu_tree_item_compare (MenuTreeItem *a,
+			MenuTreeItem *b)
+{
+  const char *name_a;
+  const char *name_b;
+
+  switch (a->type)
+    {
+    case MENU_TREE_ITEM_DIRECTORY:
+      if (MENU_TREE_DIRECTORY (a)->directory_entry)
+	name_a = desktop_entry_get_name (MENU_TREE_DIRECTORY (a)->directory_entry);
+      else
+	name_a = MENU_TREE_DIRECTORY (a)->name;
+      break;
+
+    case MENU_TREE_ITEM_ENTRY:
+      name_a = desktop_entry_get_name (MENU_TREE_ENTRY (a)->desktop_entry);
+      break;
+
+    case MENU_TREE_ITEM_SEPARATOR:
+    case MENU_TREE_ITEM_HEADER:
+    case MENU_TREE_ITEM_ALIAS:
+    default:
+      g_assert_not_reached ();
+      break;
+    }
+
+  switch (b->type)
+    {
+    case MENU_TREE_ITEM_DIRECTORY:
+      if (MENU_TREE_DIRECTORY (b)->directory_entry)
+	name_b = desktop_entry_get_name (MENU_TREE_DIRECTORY (b)->directory_entry);
+      else
+	name_b = MENU_TREE_DIRECTORY (b)->name;
+      break;
+
+    case MENU_TREE_ITEM_ENTRY:
+      name_b = desktop_entry_get_name (MENU_TREE_ENTRY (b)->desktop_entry);
+      break;
+
+    case MENU_TREE_ITEM_SEPARATOR:
+    case MENU_TREE_ITEM_HEADER:
+    case MENU_TREE_ITEM_ALIAS:
+    default:
+      g_assert_not_reached ();
+      break;
+    }
+
+  return g_utf8_collate (name_a, name_b);
 }
 
 static MenuLayoutNode *
@@ -1619,8 +1833,6 @@ menu_tree_resolve_files (MenuTree       *tree,
       break;
 
     case MENU_LAYOUT_NODE_PASSTHROUGH:
-    case MENU_LAYOUT_NODE_LAYOUT:
-    case MENU_LAYOUT_NODE_DEFAULT_LAYOUT:
       /* Just get rid of these, we don't need the memory usage */
       menu_layout_node_unlink (layout);
       break;
@@ -2309,6 +2521,41 @@ process_include_rules (MenuLayoutNode     *layout,
 }
 
 static void
+collect_layout_info (MenuLayoutNode    *layout,
+		     MenuTreeDirectory *directory)
+{
+  MenuLayoutNode  *iter;
+
+  g_slist_foreach (directory->layout_info,
+		   (GFunc) menu_layout_node_unref,
+		   NULL);
+  g_slist_free (directory->layout_info);
+  directory->layout_info = NULL;
+
+  iter = menu_layout_node_get_children (layout);
+  while (iter != NULL)
+    {
+      switch (menu_layout_node_get_type (iter))
+	{
+	case MENU_LAYOUT_NODE_MENUNAME: 
+	case MENU_LAYOUT_NODE_FILENAME: 
+	case MENU_LAYOUT_NODE_SEPARATOR: 
+	case MENU_LAYOUT_NODE_MERGE: 
+	  directory->layout_info = g_slist_prepend (directory->layout_info,
+						    menu_layout_node_ref (iter));
+	  break;
+
+	default:
+	  break;
+	}
+
+      iter = menu_layout_node_get_next (iter);
+    }
+
+  directory->layout_info = g_slist_reverse (directory->layout_info);
+}
+
+static void
 entries_listify_foreach (const char        *desktop_file_id,
                          DesktopEntry      *desktop_entry,
                          MenuTreeDirectory *directory)
@@ -2494,6 +2741,17 @@ process_layout (MenuTree          *tree,
           only_unallocated = FALSE;
           break;
 
+	case MENU_LAYOUT_NODE_DEFAULT_LAYOUT:
+	  menu_layout_node_default_layout_get_values (layout_iter,
+						      &directory->default_layout_values);
+	  menu_verbose ("Processed <DefaultLayout/>\n");
+	  break;
+
+	case MENU_LAYOUT_NODE_LAYOUT:
+	  collect_layout_info (layout_iter, directory);
+	  menu_verbose ("Processed <Layout/>\n");
+	  break;
+
         default:
           break;
         }
@@ -2528,7 +2786,7 @@ process_layout (MenuTree          *tree,
   if (deleted)
     {
       desktop_entry_set_unref (entries);
-      menu_tree_directory_unref (directory);
+      menu_tree_item_unref (directory);
       return NULL;
     }
 
@@ -2577,7 +2835,7 @@ process_layout (MenuTree          *tree,
         {
           directory->entries = g_slist_delete_link (directory->entries,
                                                    tmp);
-          menu_tree_entry_unref (entry);
+          menu_tree_item_unref (entry);
         }
 
       tmp = next;
@@ -2610,15 +2868,89 @@ process_only_unallocated (MenuTreeDirectory *directory,
             {
               directory->entries = g_slist_delete_link (directory->entries,
                                                         tmp);
-              menu_tree_entry_unref (entry);
+              menu_tree_item_unref (entry);
             }
 
           tmp = next;
         }
     }
 
-  directory->entries = g_slist_sort (directory->entries,
-                                     (GCompareFunc) menu_tree_entry_compare);
+  tmp = directory->subdirs;
+  while (tmp != NULL)
+    {
+      MenuTreeDirectory *subdir = tmp->data;
+
+      process_only_unallocated (subdir, allocated);
+
+     tmp = tmp->next;
+   }
+}
+
+static void process_layout_info (MenuTreeDirectory *directory);
+
+static void
+merge_subdir (MenuTreeDirectory *directory,
+	      MenuTreeDirectory *subdir,
+	      MenuLayoutValues  *layout_values)
+{
+  gboolean removed;
+
+  process_layout_info (subdir);
+
+  removed = FALSE;
+
+  if (subdir->contents == NULL)
+    {
+      if (!layout_values->show_empty)
+	removed = TRUE;
+    }
+  else if (layout_values->inline_menus)
+    {
+      if (layout_values->inline_alias && g_slist_length (subdir->contents) == 1)
+	{
+	  MenuTreeAlias *alias;
+
+	  alias = menu_tree_alias_new (directory, subdir, subdir->contents->data);
+
+	  g_slist_foreach (subdir->contents,
+			   (GFunc) menu_tree_item_unref,
+			   NULL);
+	  g_slist_free (subdir->contents);
+	  subdir->contents = NULL;
+
+	  directory->contents = g_slist_append (directory->contents, alias); 
+
+	  removed = TRUE;
+	}
+      else if (layout_values->inline_limit == 0 ||
+	       layout_values->inline_limit >= g_slist_length (subdir->contents))
+	{
+	  if (layout_values->inline_header)
+	    {
+	      MenuTreeHeader *header;
+
+	      header = menu_tree_header_new (directory, subdir);
+	      directory->contents = g_slist_append (directory->contents, header); 
+	    }
+
+	  directory->contents = g_slist_concat (directory->contents, subdir->contents);
+	  subdir->contents = NULL;
+
+	  removed = TRUE;
+	}
+    }
+
+  if (!removed)
+    directory->contents = g_slist_append (directory->contents,
+					  menu_tree_item_ref (subdir));
+}
+
+static void
+merge_subdir_by_name (MenuTreeDirectory *directory,
+		      const char        *subdir_name,
+		      MenuLayoutValues  *values)
+{
+  GSList *tmp;
 
   tmp = directory->subdirs;
   while (tmp != NULL)
@@ -2626,20 +2958,248 @@ process_only_unallocated (MenuTreeDirectory *directory,
       MenuTreeDirectory *subdir = tmp->data;
       GSList            *next = tmp->next;
 
-      process_only_unallocated (subdir, allocated);
-
-      if (subdir->subdirs == NULL && subdir->entries == NULL)
-        {
-          directory->subdirs = g_slist_delete_link (directory->subdirs,
-                                                    tmp);
-          menu_tree_directory_unref (subdir);
-        }
-
+      if (!strcmp (subdir->name, subdir_name))
+	{
+	  directory->subdirs = g_slist_delete_link (directory->subdirs, tmp);
+	  merge_subdir (directory, subdir, values);
+	  menu_tree_item_unref (subdir);
+	}
+      
       tmp = next;
     }
+}
+
+static void
+merge_entry (MenuTreeDirectory *directory,
+	     MenuTreeEntry     *entry)
+{
+  directory->contents = g_slist_append (directory->contents,
+					menu_tree_item_ref (entry));
+}
+
+static void
+merge_entry_by_id (MenuTreeDirectory *directory,
+		   const char        *file_id)
+{
+  GSList *tmp;
+
+  tmp = directory->entries;
+  while (tmp != NULL)
+    {
+      MenuTreeEntry *entry = tmp->data;
+      GSList        *next = tmp->next;
+
+      if (!strcmp (entry->desktop_file_id, file_id))
+	{
+	  directory->entries = g_slist_delete_link (directory->entries, tmp);
+	  merge_entry (directory, entry);
+	  menu_tree_item_unref (entry);
+	}
+      
+      tmp = next;
+    }
+}
+
+static void
+merge_subdirs (MenuTreeDirectory *directory)
+{
+  GSList *tmp;
 
   directory->subdirs = g_slist_sort (directory->subdirs,
-                                     (GCompareFunc) menu_tree_directory_compare);
+				     (GCompareFunc) menu_tree_directory_compare);
+
+  tmp = directory->subdirs;
+  while (tmp != NULL)
+    {
+      MenuTreeDirectory *subdir = tmp->data;
+
+      merge_subdir (directory, subdir, &directory->default_layout_values);
+      menu_tree_item_unref (subdir);
+
+      tmp = tmp->next;
+    }
+
+  g_slist_free (directory->subdirs);
+  directory->subdirs = NULL;
+}
+
+static void
+merge_entries (MenuTreeDirectory *directory)
+{
+  GSList *tmp;
+
+  directory->entries = g_slist_sort (directory->entries,
+				     (GCompareFunc) menu_tree_entry_compare);
+
+  tmp = directory->entries;
+  while (tmp != NULL)
+    {
+      MenuTreeEntry *entry = tmp->data;
+
+      merge_entry (directory, entry);
+      menu_tree_item_unref (entry);
+
+      tmp = tmp->next;
+    }
+
+  g_slist_free (directory->entries);
+  directory->entries = NULL;
+}
+
+static void
+merge_subdirs_and_entries (MenuTreeDirectory *directory)
+{
+  GSList *items;
+  GSList *tmp;
+
+  items = g_slist_concat (directory->subdirs, directory->entries);
+  items = g_slist_sort (items,
+			(GCompareFunc) menu_tree_item_compare);
+
+  tmp = items;
+  while (tmp != NULL)
+    {
+      MenuTreeItem *item = tmp->data;
+
+      if (menu_tree_item_get_type (item) == MENU_TREE_ITEM_DIRECTORY)
+	{
+	  merge_subdir (directory,
+			MENU_TREE_DIRECTORY (item),
+			&directory->default_layout_values);
+	}
+      else
+	{
+	  merge_entry (directory, MENU_TREE_ENTRY (item));
+	}
+
+      menu_tree_item_unref (item);
+
+      tmp = tmp->next;
+    }
+
+  g_slist_free (directory->entries);
+  directory->entries = NULL;
+
+  g_slist_free (directory->subdirs);
+  directory->entries = NULL;
+}
+
+static void
+get_values_with_defaults (MenuLayoutNode   *node,
+			  MenuLayoutValues *layout_values,
+			  MenuLayoutValues *default_layout_values)
+{
+  menu_layout_node_menuname_get_values (node, layout_values);
+
+  if (!(layout_values->mask & MENU_LAYOUT_VALUES_SHOW_EMPTY))
+    layout_values->show_empty = default_layout_values->show_empty;
+
+  if (!(layout_values->mask & MENU_LAYOUT_VALUES_INLINE_MENUS))
+    layout_values->inline_menus = default_layout_values->inline_menus;
+
+  if (!(layout_values->mask & MENU_LAYOUT_VALUES_INLINE_LIMIT))
+    layout_values->inline_limit = default_layout_values->inline_limit;
+
+  if (!(layout_values->mask & MENU_LAYOUT_VALUES_INLINE_HEADER))
+    layout_values->inline_header = default_layout_values->inline_header;
+
+  if (!(layout_values->mask & MENU_LAYOUT_VALUES_INLINE_ALIAS))
+    layout_values->inline_alias = default_layout_values->inline_alias;
+}
+
+static void
+process_layout_info (MenuTreeDirectory *directory)
+{
+  GSList *tmp;
+
+  g_slist_foreach (directory->contents,
+		   (GFunc) menu_tree_item_unref,
+		   NULL);
+  g_slist_free (directory->contents);
+  directory->contents = NULL;
+
+  if (directory->layout_info == NULL)
+    {
+      merge_subdirs (directory);
+      merge_entries (directory);
+      return;
+    }
+
+  tmp = directory->layout_info;
+  while (tmp != NULL)
+    {
+      MenuLayoutNode *node = tmp->data;
+
+      switch (menu_layout_node_get_type (node))
+	{
+	case MENU_LAYOUT_NODE_MENUNAME:
+	  {
+	    MenuLayoutValues layout_values;
+
+	    get_values_with_defaults (node,
+				      &layout_values,
+				      &directory->default_layout_values);
+
+	    merge_subdir_by_name (directory,
+				  menu_layout_node_get_content (node),
+				  &layout_values);
+	  }
+	  break;
+
+	case MENU_LAYOUT_NODE_FILENAME: 
+	  merge_entry_by_id (directory,
+			     menu_layout_node_get_content (node));
+	  break;
+
+	case MENU_LAYOUT_NODE_SEPARATOR:
+	  directory->contents = g_slist_append (directory->contents,
+						menu_tree_separator_new (directory));
+	  break;
+
+	case MENU_LAYOUT_NODE_MERGE:
+	  switch (menu_layout_node_merge_get_type (node))
+	    {
+	    case MENU_LAYOUT_MERGE_NONE:
+	      break;
+
+	    case MENU_LAYOUT_MERGE_MENUS:
+	      merge_subdirs (directory);
+	      break;
+
+	    case MENU_LAYOUT_MERGE_FILES:
+	      merge_entries (directory);
+	      break;
+
+	    case MENU_LAYOUT_MERGE_ALL:
+	      merge_subdirs_and_entries (directory);
+	      break;
+	    }
+	  break;
+
+	default:
+	  g_assert_not_reached ();
+	  break;
+	}
+
+      menu_layout_node_unref (node);
+
+      tmp = tmp->next;
+    }
+
+  g_slist_foreach (directory->subdirs,
+		   (GFunc) menu_tree_item_unref,
+		   NULL);
+  g_slist_free (directory->subdirs);
+  directory->subdirs = NULL;
+
+  g_slist_foreach (directory->entries,
+		   (GFunc) menu_tree_item_unref,
+		   NULL);
+  g_slist_free (directory->entries);
+  directory->entries = NULL;
+
+  g_slist_free (directory->layout_info);
+  directory->layout_info = NULL;
 }
 
 static void
@@ -2677,6 +3237,8 @@ menu_tree_build_from_layout (MenuTree *tree)
     {
       process_only_unallocated (tree->root, allocated);
 
+      process_layout_info (tree->root);
+
       menu_layout_node_root_add_entries_monitor (tree->layout,
                                                  (MenuLayoutNodeEntriesChangedFunc) handle_entries_changed,
                                                  tree);
@@ -2690,7 +3252,7 @@ menu_tree_force_rebuild (MenuTree *tree)
 {
   if (tree->root)
     {
-      menu_tree_directory_unref (tree->root);
+      menu_tree_item_unref (tree->root);
       tree->root = NULL;
 
       g_assert (tree->layout != NULL);
