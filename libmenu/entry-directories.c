@@ -875,6 +875,11 @@ entry_directory_get_desktop (EntryDirectory *ed,
         return NULL;
 
       unprefixed_id = file_id + strlen (ed->legacy_prefix);
+
+      if (unprefixed_id[0] != '-')
+	return NULL;
+
+      unprefixed_id++;
     }
 
   entry = cached_dir_find_file_id (ed->dir,

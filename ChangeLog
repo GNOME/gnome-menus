@@ -1,3 +1,11 @@
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #168444 - LegacyDirs with a prefix don't work.
+
+	* libmenu/entry-directories.c: (entry_directory_get_desktop):
+	Remove the hyphen from the desktop file ID as well as
+	the prefix when looking up the desktop file.
+
 2005-03-07  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.10.1.
