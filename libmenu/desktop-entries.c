@@ -46,6 +46,7 @@ struct DesktopEntry
   char *name;
   char *comment;
   char *icon;
+  char *exec;
 
   guint type : 2;
   guint flags : 4;
@@ -257,6 +258,13 @@ desktop_entry_load (DesktopEntry *entry)
       goto out;
     }
 
+  if (entry->type == DESKTOP_ENTRY_DESKTOP &&
+      !g_key_file_has_key (key_file, desktop_entry_group, "Exec", NULL))
+    {
+      menu_verbose ("\%s\" does not contain an \"Exec\" key\n", entry->path);
+      goto out;
+    }
+
   g_free (type_str);
 
   retval = entry;
@@ -269,6 +277,9 @@ desktop_entry_load (DesktopEntry *entry)
   retval->flags      = get_flags_from_key_file (retval, key_file, desktop_entry_group);
   retval->categories = get_categories_from_key_file (retval, key_file, desktop_entry_group);
 
+  if (entry->type == DESKTOP_ENTRY_DESKTOP)
+    retval->exec = g_key_file_get_string (key_file, desktop_entry_group, "Exec", NULL);
+  
 #undef GET_LOCALE_STRING
 
   menu_verbose ("Desktop entry \"%s\" (%s, %s, %s) flags: NoDisplay=%s, Hidden=%s, ShowInGNOME=%s, TryExecFailed=%s\n",
@@ -340,6 +351,9 @@ desktop_entry_reload (DesktopEntry *entry)
   g_free (entry->icon);
   entry->icon = NULL;
 
+  g_free (entry->exec);
+  entry->exec = NULL;
+
   entry->flags = 0;
 
   return desktop_entry_load (entry);
@@ -374,6 +388,7 @@ desktop_entry_copy (DesktopEntry *entry)
   retval->name     = g_strdup (entry->name);
   retval->comment  = g_strdup (entry->comment);
   retval->icon     = g_strdup (entry->icon);
+  retval->exec     = g_strdup (entry->exec);
   retval->flags    = entry->flags;
 
   i = 0;
@@ -414,6 +429,9 @@ desktop_entry_unref (DesktopEntry *entry)
 
       g_free (entry->icon);
       entry->icon = NULL;
+
+      g_free (entry->exec);
+      entry->exec = NULL;
 
       g_free (entry->basename);
       entry->basename = NULL;
@@ -459,6 +477,12 @@ const char *
 desktop_entry_get_icon (DesktopEntry *entry)
 {
   return entry->icon;
+}
+
+const char *
+desktop_entry_get_exec (DesktopEntry *entry)
+{
+  return entry->exec;
 }
 
 gboolean

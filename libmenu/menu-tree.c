@@ -856,6 +856,14 @@ menu_tree_entry_get_icon (MenuTreeEntry *entry)
 }
 
 const char *
+menu_tree_entry_get_exec (MenuTreeEntry *entry)
+{
+  g_return_val_if_fail (entry != NULL, NULL);
+
+  return desktop_entry_get_exec (entry->desktop_entry);
+}
+
+const char *
 menu_tree_entry_get_desktop_file_path (MenuTreeEntry *entry)
 {
   g_return_val_if_fail (entry != NULL, NULL);

@@ -1,3 +1,21 @@
+2005-01-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/desktop-entries.c: (desktop_entry_load):
+	require that .desktop files contain an Exec key.
+	
+2005-01-11  Mark McLoughlin  <mark@skynet.ie>
+
+	Patch from Richard Hult <richard@imendio.com>
+
+	* libmenu/desktop-entries.c: (desktop_entry_load),
+	(desktop_entry_reload), (desktop_entry_copy),
+	(desktop_entry_unref), (desktop_entry_get_icon),
+	(desktop_entry_get_exec):
+	* libmenu/desktop-entries.h:
+	* libmenu/menu-tree.c: (menu_tree_entry_get_exec):
+	* libmenu/menu-tree.h: Parse Exec field and add an accessor for
+	it.
+
 2005-01-10  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.9.5.
