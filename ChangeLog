@@ -1,3 +1,7 @@
+2004-12-07  Marcel Telka  <marcel@telka.sk>
+
+	* configure.in (ALL_LINGUAS): Added sk.
+
 2004-12-07  Christian Rose  <menthos@menthos.com>
 
 	* configure.in: Added "sv" to ALL_LINGUAS.
