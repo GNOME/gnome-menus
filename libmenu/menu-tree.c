@@ -140,6 +140,8 @@ static void      menu_tree_resolve_files        (MenuTree       *tree,
 static void      menu_tree_force_recanonicalize (MenuTree       *tree);
 static void      menu_tree_invoke_monitors      (MenuTree       *tree);
      
+static void menu_tree_item_unref_and_unset_parent (gpointer itemp);
+
 /*
  * The idea is that we cache the menu tree for either a given
  * menu basename or an absolute menu path.
@@ -830,6 +832,15 @@ menu_tree_item_get_parent (MenuTreeItem *item)
   return item->parent ? menu_tree_item_ref (item->parent) : NULL;
 }
 
+static void
+menu_tree_item_set_parent (MenuTreeItem      *item,
+			   MenuTreeDirectory *parent)
+{
+  g_return_if_fail (item != NULL);
+
+  item->parent = parent;
+}
+
 GSList *
 menu_tree_directory_get_contents (MenuTreeDirectory *directory)
 {
@@ -1002,7 +1013,7 @@ menu_tree_directory_new (MenuTreeDirectory *parent,
   retval = g_new0 (MenuTreeDirectory, 1);
 
   retval->item.type     = MENU_TREE_ITEM_DIRECTORY;
-  retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
+  retval->item.parent   = parent;
   retval->item.refcount = 1;
 
   retval->name                = g_strdup (name);
@@ -1037,7 +1048,7 @@ menu_tree_directory_finalize (MenuTreeDirectory *directory)
   g_assert (directory->item.refcount == 0);
 
   g_slist_foreach (directory->contents,
-		   (GFunc) menu_tree_item_unref,
+		   (GFunc) menu_tree_item_unref_and_unset_parent,
 		   NULL);
   g_slist_free (directory->contents);
   directory->contents = NULL;
@@ -1055,13 +1066,13 @@ menu_tree_directory_finalize (MenuTreeDirectory *directory)
   directory->layout_info = NULL;
 
   g_slist_foreach (directory->subdirs,
-		   (GFunc) menu_tree_item_unref,
+		   (GFunc) menu_tree_item_unref_and_unset_parent,
 		   NULL);
   g_slist_free (directory->subdirs);
   directory->subdirs = NULL;
 
   g_slist_foreach (directory->entries,
-		   (GFunc) menu_tree_item_unref,
+		   (GFunc) menu_tree_item_unref_and_unset_parent,
 		   NULL);
   g_slist_free (directory->entries);
   directory->entries = NULL;
@@ -1102,7 +1113,7 @@ menu_tree_separator_new (MenuTreeDirectory *parent)
   retval = g_new0 (MenuTreeSeparator, 1);
 
   retval->item.type     = MENU_TREE_ITEM_SEPARATOR;
-  retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
+  retval->item.parent   = parent;
   retval->item.refcount = 1;
 
   return retval;
@@ -1117,7 +1128,7 @@ menu_tree_header_new (MenuTreeDirectory *parent,
   retval = g_new0 (MenuTreeHeader, 1);
 
   retval->item.type     = MENU_TREE_ITEM_HEADER;
-  retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
+  retval->item.parent   = parent;
   retval->item.refcount = 1;
 
   retval->directory = menu_tree_item_ref (directory);
@@ -1145,7 +1156,7 @@ menu_tree_alias_new (MenuTreeDirectory *parent,
   retval = g_new0 (MenuTreeAlias, 1);
 
   retval->item.type     = MENU_TREE_ITEM_ALIAS;
-  retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
+  retval->item.parent   = parent;
   retval->item.refcount = 1;
 
   retval->directory    = menu_tree_item_ref (directory);
@@ -1178,7 +1189,7 @@ menu_tree_entry_new (MenuTreeDirectory *parent,
   retval = g_new0 (MenuTreeEntry, 1);
 
   retval->item.type     = MENU_TREE_ITEM_ENTRY;
-  retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
+  retval->item.parent   = parent;
   retval->item.refcount = 1;
 
   retval->desktop_entry   = desktop_entry_ref (desktop_entry);
@@ -1272,6 +1283,19 @@ menu_tree_item_unref (gpointer itemp)
 
       g_free (item);
     }
+}
+
+static void
+menu_tree_item_unref_and_unset_parent (gpointer itemp)
+{
+  MenuTreeItem *item;
+
+  item = (MenuTreeItem *) itemp;
+
+  g_return_if_fail (item != NULL);
+
+  menu_tree_item_set_parent (item, NULL);
+  menu_tree_item_unref (item);
 }
 
 void
@@ -3050,7 +3074,6 @@ process_layout (MenuTree          *tree,
       return NULL;
     }
 
-  directory->entries = NULL;
   desktop_entry_set_foreach (entries,
                              (DesktopEntrySetForeachFunc) entries_listify_foreach,
                              directory);
@@ -3095,7 +3118,7 @@ process_layout (MenuTree          *tree,
         {
           directory->entries = g_slist_delete_link (directory->entries,
                                                    tmp);
-          menu_tree_item_unref (entry);
+          menu_tree_item_unref_and_unset_parent (entry);
         }
 
       tmp = next;
@@ -3128,7 +3151,7 @@ process_only_unallocated (MenuTreeDirectory *directory,
             {
               directory->entries = g_slist_delete_link (directory->entries,
                                                         tmp);
-              menu_tree_item_unref (entry);
+              menu_tree_item_unref_and_unset_parent (entry);
             }
 
           tmp = next;
@@ -3142,7 +3165,7 @@ process_only_unallocated (MenuTreeDirectory *directory,
 
       process_only_unallocated (subdir, allocated);
 
-     tmp = tmp->next;
+      tmp = tmp->next;
    }
 }
 
@@ -3188,7 +3211,7 @@ merge_subdir (MenuTreeDirectory *directory,
 	  alias = menu_tree_alias_new (directory, subdir, item);
 
 	  g_slist_foreach (subdir->contents,
-			   (GFunc) menu_tree_item_unref,
+			   (GFunc) menu_tree_item_unref_and_unset_parent,
 			   NULL);
 	  g_slist_free (subdir->contents);
 	  subdir->contents = NULL;
@@ -3213,6 +3236,9 @@ merge_subdir (MenuTreeDirectory *directory,
 	  menu_verbose ("Inlining directory contents of '%s' to '%s'\n",
 			subdir->name, directory->name);
 
+	  g_slist_foreach (subdir->contents,
+			   (GFunc) menu_tree_item_set_parent,
+			   directory);
 	  directory->contents = g_slist_concat (directory->contents, subdir->contents);
 	  subdir->contents = NULL;
 
@@ -3220,9 +3246,15 @@ merge_subdir (MenuTreeDirectory *directory,
 	}
     }
 
-  if (!removed)
-    directory->contents = g_slist_append (directory->contents,
-					  menu_tree_item_ref (subdir));
+  if (removed)
+    {
+      menu_tree_item_set_parent (MENU_TREE_ITEM (subdir), NULL);
+    }
+  else
+    {
+      directory->contents = g_slist_append (directory->contents,
+					    menu_tree_item_ref (subdir));
+    }
 }
 
 static void
@@ -3435,7 +3467,7 @@ process_layout_info (MenuTreeDirectory *directory)
   menu_verbose ("Processing menu layout hints for %s\n", directory->name);
 
   g_slist_foreach (directory->contents,
-		   (GFunc) menu_tree_item_unref,
+		   (GFunc) menu_tree_item_unref_and_unset_parent,
 		   NULL);
   g_slist_free (directory->contents);
   directory->contents = NULL;

@@ -347,7 +347,6 @@ cached_dir_update_entry (CachedDir  *dir,
         {
           if (!desktop_entry_reload (tmp->data))
 	    {
-	      desktop_entry_unref (tmp->data);
 	      dir->entries = g_slist_delete_link (dir->entries, tmp);
 	    }
 
