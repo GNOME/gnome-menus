@@ -1,3 +1,24 @@
+2005-04-05  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix memory leaks on reload - bug #172472. Basically,
+	because of a cyclic reference we were leaking the entire
+	tree every time we reloaded.
+
+	* libmenu/menu-tree.c:
+	(menu_tree_directory_unref_and_unset_parent),
+	(menu_tree_entry_unref_and_unset_parent): helper functions.
+	(menu_tree_directory_unref): unset the parent reference
+	on entries and subdirs before unreffing them.
+	(menu_tree_entry_new): don't take a ref on the parent.
+	(process_layout), (process_only_unallocated): unset the
+	parent reference when deleting entries and subdirs.
+
+	* libmenu/desktop-entries.c: (desktop_entry_reload): add debug.
+
+	* libmenu/entry-directories.c: (cached_dir_update_entry): don't
+	unref the entry if reloading fails - desktop_entry_reload ()
+	does that.
+
 2005-04-01  Adi Attar  <aattar@cvs.gnome.org>
 
 	* configure.in: Added "xh" to ALL_LINGUAS.

@@ -339,6 +339,8 @@ desktop_entry_reload (DesktopEntry *entry)
 {
   g_return_val_if_fail (entry != NULL, NULL);
 
+  menu_verbose ("Re-loading desktop entry \"%s\"\n", entry->path);
+
   g_free (entry->categories);
   entry->categories = NULL;
 

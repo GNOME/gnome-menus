@@ -102,6 +102,9 @@ static void      menu_tree_resolve_files        (MenuTree       *tree,
 						 MenuLayoutNode *layout);
 static void      menu_tree_force_recanonicalize (MenuTree       *tree);
 static void      menu_tree_invoke_monitors      (MenuTree       *tree);
+
+static void menu_tree_entry_unref_and_unset_parent     (MenuTreeEntry     *entry);
+static void menu_tree_directory_unref_and_unset_parent (MenuTreeDirectory *directory);
      
 /*
  * The idea is that we cache the menu tree for either a given
@@ -963,13 +966,13 @@ menu_tree_directory_unref (MenuTreeDirectory *directory)
   if (--directory->refcount == 0)
     {
       g_slist_foreach (directory->subdirs,
-                       (GFunc) menu_tree_directory_unref,
+                       (GFunc) menu_tree_directory_unref_and_unset_parent,
                        NULL);
       g_slist_free (directory->subdirs);
       directory->subdirs = NULL;
 
       g_slist_foreach (directory->entries,
-                       (GFunc) menu_tree_entry_unref,
+                       (GFunc) menu_tree_entry_unref_and_unset_parent,
                        NULL);
       g_slist_free (directory->entries);
       directory->entries = NULL;
@@ -985,6 +988,16 @@ menu_tree_directory_unref (MenuTreeDirectory *directory)
 
       g_free (directory);
     }
+}
+
+static void
+menu_tree_directory_unref_and_unset_parent (MenuTreeDirectory *directory)
+{
+  g_return_if_fail (directory != NULL);
+
+  directory->parent = NULL;
+
+  menu_tree_directory_unref (directory);
 }
 
 static int
@@ -1016,7 +1029,7 @@ menu_tree_entry_new (MenuTreeDirectory *parent,
 
   retval = g_new0 (MenuTreeEntry, 1);
 
-  retval->parent          = menu_tree_directory_ref (parent);
+  retval->parent          = parent;
   retval->desktop_entry   = desktop_entry_ref (desktop_entry);
   retval->desktop_file_id = g_strdup (desktop_file_id);
   retval->refcount        = 1;
@@ -1056,6 +1069,16 @@ menu_tree_entry_unref (MenuTreeEntry *entry)
 
       g_free (entry);
     }
+}
+
+static void
+menu_tree_entry_unref_and_unset_parent (MenuTreeEntry *entry)
+{
+  g_return_if_fail (entry != NULL);
+
+  entry->parent = NULL;
+
+  menu_tree_entry_unref (entry);
 }
 
 static int
@@ -2723,7 +2746,6 @@ process_layout (MenuTree          *tree,
       return NULL;
     }
 
-  directory->entries = NULL;
   desktop_entry_set_foreach (entries,
                              (DesktopEntrySetForeachFunc) entries_listify_foreach,
                              directory);
@@ -2768,7 +2790,7 @@ process_layout (MenuTree          *tree,
         {
           directory->entries = g_slist_delete_link (directory->entries,
                                                    tmp);
-          menu_tree_entry_unref (entry);
+          menu_tree_entry_unref_and_unset_parent (entry);
         }
 
       tmp = next;
@@ -2801,7 +2823,7 @@ process_only_unallocated (MenuTreeDirectory *directory,
             {
               directory->entries = g_slist_delete_link (directory->entries,
                                                         tmp);
-              menu_tree_entry_unref (entry);
+              menu_tree_entry_unref_and_unset_parent (entry);
             }
 
           tmp = next;
@@ -2823,7 +2845,7 @@ process_only_unallocated (MenuTreeDirectory *directory,
         {
           directory->subdirs = g_slist_delete_link (directory->subdirs,
                                                     tmp);
-          menu_tree_directory_unref (subdir);
+          menu_tree_directory_unref_and_unset_parent (subdir);
         }
 
       tmp = next;
