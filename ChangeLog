@@ -1,3 +1,7 @@
+2005-02-24  Ankit Patel <ankit644@yahoo.com>
+
+	* configure.in: Added gu "Gujarati" in ALL_LINGUAS.
+
 2005-02-22  Arafat Medini  <kinryu@silverpen.de>
 
 	* configure.in: Added Arabic locale to ALL_LINGUAS.
