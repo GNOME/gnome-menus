@@ -82,8 +82,6 @@ char *menu_tree_directory_make_path (MenuTreeDirectory *directory,
 				     MenuTreeEntry     *entry);
 
 
-MenuTreeDirectory *menu_tree_entry_get_parent (MenuTreeEntry *entry);
-
 const char *menu_tree_entry_get_name    (MenuTreeEntry *entry);
 const char *menu_tree_entry_get_comment (MenuTreeEntry *entry);
 const char *menu_tree_entry_get_icon    (MenuTreeEntry *entry);
