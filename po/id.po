@@ -1,0 +1,127 @@
+# Indonesian translation of gnome-menus.
+# Copyright (C) 2005 THE gnome-menus's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-menus package.
+# ahmad riza h nst <ari@160c.afraid.org>, 2005.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-02-25 07:11+0100\n"
+"PO-Revision-Date: 2005-02-27 20:58+0700\n"
+"Last-Translator: ahmad riza h nst <ari@160c.afraid.org>\n"
+"Language-Team: Indonesian <sukarelawan@gnome.linux.or.id>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Aksesibilitas"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Setingan Aksesibilitas"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Asesoris"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Asesoris desktop"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Aplikasi"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Programming"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Alat untuk pengembangan perangkat lunak"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Edutainment"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Permainan"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Permainan dan Kegembiraan"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Grafis"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Aplikasi Grafis"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Program untuk mengakses internet seperti web dan email"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Menu Multimedia"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Suara & Video"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Kantor"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Aplikasi Kantor"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Aplikasi yang tidak masuk dalam kategori lain"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Lain"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Setingan yang berhubungan dengan Aksesibilitas"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Kesukaan Pribadi dan Setingan"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Kesukaan"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "Administrasi"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr "Rubah setingan secara luas (merubah seluruh pengguna)"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Alat Sistem"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Konfigurasi sistem dan pengawasan"
+
