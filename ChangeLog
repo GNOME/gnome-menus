@@ -1,3 +1,7 @@
+2004-12-04  Danilo Šegan  <dsegan@gmx.net>
+
+	* configure.in: Added "sr" and "sr@Latn" to ALL_LINGUAS.
+
 2004-12-01  Frederic Crozat  <fcrozat@mandrakesoft.com>
 
 	* libmenu/desktop-entries.c: (desktop_entry_copy):
