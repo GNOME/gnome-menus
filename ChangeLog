@@ -1,3 +1,8 @@
+2004-12-01  Frederic Crozat  <fcrozat@mandrakesoft.com>
+
+	* libmenu/desktop-entries.c: (desktop_entry_copy):
+	Copy the right string for icon field.
+
 2004-11-30  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.9.3.

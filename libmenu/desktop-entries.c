@@ -373,7 +373,7 @@ desktop_entry_copy (DesktopEntry *entry)
   retval->path     = g_strdup (entry->path);
   retval->name     = g_strdup (entry->name);
   retval->comment  = g_strdup (entry->comment);
-  retval->icon     = g_strdup (entry->comment);
+  retval->icon     = g_strdup (entry->icon);
   retval->flags    = entry->flags;
 
   i = 0;
