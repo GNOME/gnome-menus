@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-28 04:28+0100\n"
+"POT-Creation-Date: 2005-03-10 15:35+0100\n"
 "PO-Revision-Date: 2005-01-28 10:45+0100\n"
 "Last-Translator: Daniel van Eeden <daniel_e@dds.nl>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 #: desktop-directories/Accessibility.directory.in.h:1
 #: desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
-msgstr "Toegangkelijkheid"
+msgstr "Toegankelijkheid"
 
 #: desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Toegangkelijkheid instellingen"
+msgstr "Toegankelijkheid instellingen"
 
 #: desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
