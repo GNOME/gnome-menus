@@ -1,4 +1,21 @@
 ==============
+Version 2.10.0
+==============
+
+  Fixes
+
+	* Fix 64-bit crasher (Jeremy Katz)
+
+  Translators
+
+	* Dafydd Harries (cy)
+	* Farzaneh Sarafraz (fa)
+	* Rajesh Ranjan (hi)
+	* Žygimantas Beručka (lt)
+	* Данило Шеган (sr)
+	* Woodman Tuen (zh_TW)
+
+==============
 Version 2.9.92
 ==============
 
