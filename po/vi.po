@@ -1,0 +1,125 @@
+# Vietnamese Translation for gnome-menus.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Trinh Minh Thanh <tmthanh@yahoo.com>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gnome-menus.vi\n"
+"POT-Creation-Date: 2004-12-13 12:24+0100\n"
+"PO-Revision-Date: 2004-12-18 23:58+0700\n"
+"Last-Translator: Trinh Minh Thanh <tmthanh@yahoo.com>\n"
+"Language-Team: Vietnamese <gnomevi-list@lists.sf.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Chương trình hỗ trợ"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Thiếp lập hỗ trợ"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Chương trình bổ sung"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Chương trình bổ sung cho desktop"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Ứng dụng"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Lập trình"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Công cụ phát triển phần mềm"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Trò chơi mang tính giáo dục"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Trò chơi"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Trò chơi và giải trí"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Đồ họa"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Ứng dụng đồ họa"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Chương trình truy cập internet như web và email"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Menu đa phương tiện"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Âm thanh & Video"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Văn phòng"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Ứng dụng văn phòng"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Chương trình chưa phân loại"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Chương trình khác"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Tùy chọn liên quan tiếp cận"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Thiết lập và tùy chọn cá nhân"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Tùy thích"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Change systemwide settings (affects all users)"
+msgstr "Thay đổi thiết lập cho toàn hệ thống (cho mọi người dùng)"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "System Settings"
+msgstr "Thiết lập hệ thống"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Công cụ hệ thống"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Cấu hình và theo dõi hệ thống"
+
