@@ -1,0 +1,126 @@
+# translation of gnome-menus.HEAD.po to 
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER, 2005.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-02-04 05:48+0100\n"
+"PO-Revision-Date: 2005-02-04 21:36+0100\n"
+"Last-Translator:  <kinryu@silverpen.de>\n"
+"Language-Team:  <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "الإعانة"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "تعيينات الإعانة"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr ""
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "ملحقات سطح المكتب"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "تطبيقات"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "برمجة"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "أدوات لتطوير البرامج"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "تسلية تعليميّة"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "ألعاب"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "ألعاب و تسلية"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "رسوم"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "تطبيقات الرّسوم"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "إنترنت"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "برامج للنّفاذ إلى الإنترنت مثل الواب و البريد الإلكتروني"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "قائمة الوسائط المتعدّدة"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "صوت و فيديو"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "مكتب"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "تطبيقات مكتبيّة"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "تطبيقات لم تناسب أصنافا أخرى"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "أخرى"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "تفضيلات مرتبطة بالإعانة"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "تفضيلات و تعيينات شخصيّة"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "تفضيلات"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "إدارة"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr "تغيير تعيينات النّظام (يؤثّر على جميع المستخدمين)"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "أدوات النّظام"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "إعداد و مراقبة النّظام"
+
