@@ -1,0 +1,127 @@
+# Persian translation of gnome-menus.
+# Copyright (C) 2005 Sharif FarsiWeb, Inc.
+# This file is distributed under the same license as the gnome-menus package.
+# Farzaneh Sarafraz <farzaneh@bamdad.org>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-02-28 07:09+0330\n"
+"PO-Revision-Date: 2005-03-02 14:18+0330\n"
+"Last-Translator: Farzaneh Sarafraz <farzaneh@bamdad.org>\n"
+"Language-Team: Persian <farsi@lists.sharif.edu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "دسترسی‌پذیری"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "تنظیمات دسترسی‌پذیری"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "لوازم"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "لوازم رومیزی"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "برنامه‌ها"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "برنامه‌سازی"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "ابزارهای تولید نرم‌افزار"
+
+#. Means the the union between education and entertainment.
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "آموزش و تفریح"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "بازی‌ها"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "بازی و سرگرمی"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "گرافیک"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "برنامه‌های گرافیکی"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "اینترنت"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "برنامه‌هایی برای دست‌یابی به اینترنت مثل وب و پست الکترونیکی"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "منوی چندرسانه‌ای"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "صدا و تصویر"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "اداری"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "برنامه‌های اداری"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "برنامه‌هایی که در مقولات دیگر جا نمی‌گیرند"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "غیره"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "ترجیحات مربوط به دسترسی‌پذیری"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "تنظیمات و ترجیحات شخصی"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "ترجیحات"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "مدیریت"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr "تغییر تنظیمات کل سیستم (همه‌ی کاربران متأثر می‌شوند)‏"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "ابزارهای سیستم"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "پیکربندی و پایشگری سیستم"
