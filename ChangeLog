@@ -1,5 +1,16 @@
 2005-02-18  Mark McLoughlin  <mark@skynet.ie>
 
+	* libmenu/entry-directories.c:
+	(cached_dir_invoke_monitors): split out from
+	handle_cached_dir_changed() and invoke monitors on
+	ancestors too. Fixes bug #167759.
+	(handle_cached_dir_changed): upd.
+
+	* util/test-menu-spec.c: add a --monitor option
+	to test monitoring.
+
+2005-02-18  Mark McLoughlin  <mark@skynet.ie>
+
 	Fix bug with the <Not> directive - bug #167758.
 	Thanks to Chris Lahey for the test case.
 

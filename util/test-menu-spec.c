@@ -24,6 +24,13 @@
 #include <string.h>
 #include <libgnomevfs/gnome-vfs.h>
 
+static gboolean monitor = FALSE;
+
+static GOptionEntry options[] = {
+  { "monitor", 'm', 0, G_OPTION_ARG_NONE, &monitor, "Monitor for menu changes", NULL },
+  { NULL }
+};
+
 static void
 append_directory_path (MenuTreeDirectory *directory,
 		       GString           *path)
@@ -112,13 +119,36 @@ print_directory (MenuTreeDirectory *directory)
   g_free (freeme);
 }
 
+static void
+handle_tree_changed (MenuTree *tree)
+{
+  MenuTreeDirectory *root;
+
+  g_print ("\n\n\n==== Menu changed, reloading ====\n\n\n");
+
+  root = menu_tree_get_root_directory (tree);
+  if (root == NULL)
+    {
+      g_warning ("Menu tree is empty");
+      return;
+    }
+
+  print_directory (root);
+  menu_tree_directory_unref (root);
+}
+
 int
 main (int argc, char **argv)
 {
-  MenuTreeDirectory *root;
+  GOptionContext    *options_context;
   MenuTree          *tree;
+  MenuTreeDirectory *root;
 
   gnome_vfs_init ();
+
+  options_context = g_option_context_new ("- test GNOME's implementation of the Desktop Menu Specification");
+  g_option_context_add_main_entries (options_context, options, GETTEXT_PACKAGE);
+  g_option_context_parse (options_context, &argc, &argv, NULL);
 
   tree = menu_tree_lookup ("applications.menu");
   if (tree == NULL)
@@ -129,17 +159,34 @@ main (int argc, char **argv)
     }
 
   root = menu_tree_get_root_directory (tree);
-  if (root == NULL)
+  if (root != NULL)
+    {
+      print_directory (root);
+      menu_tree_directory_unref (root);
+    }
+  else
     {
       g_warning ("Menu tree is empty");
-      menu_tree_unref (tree);
-      gnome_vfs_shutdown ();
-      return 0;
     }
 
-  print_directory (root);
+  if (monitor)
+    {
+      GMainLoop *main_loop;
 
-  menu_tree_directory_unref (root);
+      menu_tree_add_monitor (tree,
+			     (MenuTreeChangedFunc) handle_tree_changed,
+			     NULL);
+
+      main_loop = g_main_loop_new (NULL, FALSE);
+      g_main_loop_run (main_loop);
+      g_main_loop_unref (main_loop);
+
+      menu_tree_remove_monitor (tree,
+				(MenuTreeChangedFunc) handle_tree_changed,
+				NULL);
+
+    }
+
   menu_tree_unref (tree);
 
   gnome_vfs_shutdown ();

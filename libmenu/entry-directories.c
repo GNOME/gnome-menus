@@ -430,6 +430,28 @@ cached_dir_remove_subdir (CachedDir  *dir,
 }
 
 static void
+cached_dir_invoke_monitors (CachedDir *dir)
+{
+  GSList *tmp;
+
+  tmp = dir->monitors;
+  while (tmp != NULL)
+    {
+      CachedDirMonitor *monitor = tmp->data;
+      GSList           *next    = tmp->next;
+
+      monitor->callback (monitor->ed, monitor->user_data);
+
+      tmp = next;
+    }
+
+  if (dir->parent)
+    {
+      cached_dir_invoke_monitors (dir->parent);
+    }
+}
+
+static void
 handle_cached_dir_changed (GnomeVFSMonitorHandle    *handle,
                            const char               *monitor_uri,
                            const char               *info_uri,
@@ -504,18 +526,7 @@ handle_cached_dir_changed (GnomeVFSMonitorHandle    *handle,
 
   if (handled)
     {
-      GSList *tmp;
-
-      tmp = dir->monitors;
-      while (tmp != NULL)
-        {
-          CachedDirMonitor *monitor = tmp->data;
-	  GSList           *next    = tmp->next;
-
-          monitor->callback (monitor->ed, monitor->user_data);
-
-          tmp = next;
-        }
+      cached_dir_invoke_monitors (dir);
     }
 }
 
