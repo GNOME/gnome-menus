@@ -1,0 +1,128 @@
+# Italian translation of gnome-menus.
+# Copyright (C) 2005 THE gnome-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-menus package.
+# Francesco Marletta <francesco.marletta @ tiscali.it>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-02-27 18:09+0100\n"
+"PO-Revision-Date: 2005-02-05 13:47+0100\n"
+"Last-Translator: Francesco Marletta <francesco.marletta@tiscali.it>\n"
+"Language-Team: Italian <tp@lists.linux.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Accessibilità"
+
+#: ../desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Impostazioni di accessibilità"
+
+#: ../desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Accessori"
+
+#: ../desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Accessori del desktop"
+
+#: ../desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Applicazioni"
+
+#: ../desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Programmazione"
+
+#: ../desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Strumenti per lo sviluppo software"
+
+# [NdT] ho preferito separare il significato di edutainment (= education + entertainment)
+# [NdT] Su Suggerimento di Luca sono passato da "Istruzione & Intrattenimento" a questo
+#: ../desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Istruzione divertente"
+
+#: ../desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Giochi"
+
+#: ../desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Giochi e passatempi"
+
+#: ../desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Grafica"
+
+#: ../desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Applicazioni grafiche"
+
+#: ../desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
+
+#: ../desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Programmi per l'accesso ad internet come web ed email"
+
+#: ../desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Menù multimedia"
+
+#: ../desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Audio & Video"
+
+#: ../desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Ufficio"
+
+#: ../desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Applicazioni da ufficio"
+
+#: ../desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Applicationi che non rientrano in altre categorie"
+
+#: ../desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Altro"
+
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Preferenze legate all'accessibilità"
+
+#: ../desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Preferenze e impostazioni personali"
+
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Preferenze"
+
+#: ../desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "Amministrazione"
+
+#: ../desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr ""
+"Modifca impostazioni a livello di sistema (influenzano tutti gli utenti)"
+
+#: ../desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Strumenti di sistema"
+
+#: ../desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Configurazione e monitoraggio di sistema"
