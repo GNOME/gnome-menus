@@ -1,5 +1,5 @@
 # Serbian translation of gnome-menus
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2004.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2004, 2005.
 #
 # This file is distributed under the same license as the gnome-menus package.
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-10 17:49+0000\n"
-"PO-Revision-Date: 2004-12-04 12:16+0100\n"
+"POT-Creation-Date: 2005-03-02 15:05+0100\n"
+"PO-Revision-Date: 2005-03-02 15:06+0100\n"
 "Last-Translator: Danilo Šegan <danilo@prevod.org>\n"
 "Language-Team: Serbian (sr) <gnu@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +112,7 @@ msgstr "Postavk"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr ""
+msgstr "Administracija"
 
 #: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
