@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-05 12:21+0000\n"
+"POT-Creation-Date: 2004-12-21 18:35+0100\n"
 "PO-Revision-Date: 2004-12-05 12:46+0000\n"
 "Last-Translator: Simos Xenitellis <simos@gnome.org>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -71,7 +71,8 @@ msgstr "Διαδίκτυο"
 
 #: desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
+msgstr ""
+"Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
 
 #: desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -124,4 +125,3 @@ msgstr "Εργαλεία Συστήματος"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr ""
-

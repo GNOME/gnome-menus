@@ -1,4 +1,35 @@
 =============
+Version 2.9.3
+=============
+
+  Fixes
+
+	* Find the right icon path in desktop files (Frederic Crozat)
+	* Handle root path correctly (Mark)
+	* Always remove file monitors (Mark)
+	* Plug leak (Vincent Untz)
+	* Implement behaviour defined in version 0.9 of the spec: entries that
+	  match an <Include> rule and an <Exclude> rule are marked as
+	  "allocated" (Mark)
+
+  Translators
+
+	* Vladimir "Kaladan" Petkov (bg)
+	* David Nielsen (da)
+	* Hendrik Brandt (de)
+	* Simos Xenitellis (el)
+	* Iñaki Larrañaga (eu)
+	* Tommi Vainikainen (fi)
+	* Gabor Kelemen (hu)
+	* Žygimantas Beručka (lt)
+	* Duarte Loreto (pt)
+	* Dmitry G. Mastrukov (ru)
+	* Marcel Telka (sk)
+	* Данило Шеган (sr)
+	* Christian Rose (sv)
+	* Theppitak Karoonboonyanan (th)
+
+=============
 Version 2.9.2
 =============
 

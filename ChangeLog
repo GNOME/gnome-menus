@@ -1,3 +1,8 @@
+2004-12-21  Vincent Untz  <vincent@vuntz.net>
+
+	* NEWS:
+	* README: Version 2.9.3.
+
 2004-12-13  Iñaki Larrañaga  <dooteo@euskalgnu.org>
 
 	* configure.in: Added "eu" (Basque) to ALL_LINGUAS.

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-08 14:11+0300\n"
+"POT-Creation-Date: 2004-12-21 18:35+0100\n"
 "PO-Revision-Date: 2004-12-08 14:20+0300\n"
 "Last-Translator: Dmitry G. Mastrukov <dmitry@taurussoft.org>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
@@ -123,4 +123,3 @@ msgstr "Системные"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Средства конфигурации и мониторинга системы"
-
