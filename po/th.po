@@ -1,8 +1,7 @@
 # Thai translation of gnome-menus.
-# Copyright (C) 2004 THE gnome-menus'S COPYRIGHT HOLDER
+# Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Theppitak Karoonboonyanan <thep@linux.thai.net>, 2004.
-# , fuzzy
 # 
 # 
 msgid ""
