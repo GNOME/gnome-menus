@@ -1,0 +1,127 @@
+# Translation of gnome-menus to Greek
+# This file is distributed under the same license as the gnome-menus package.
+# Copyright (C) Free Software Foundation.
+# Simos Xenitellis <simos@gnome.org>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus 2.9.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-12-05 12:21+0000\n"
+"PO-Revision-Date: 2004-12-05 12:46+0000\n"
+"Last-Translator: Simos Xenitellis <simos@gnome.org>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Προσβασιμότητα"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Ρυθμίσεις Προσβασιμότητας"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Βοηθήματα"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Βοηθήματα επιφάνειας εργασίας"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Εφαρμογές"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Προγραμματισμός"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Εργαλεία για ανάπτυξη λογισμικού"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Εκπαίδευση"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Παιχνίδια"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Παιχνίδια και διασκέδαση"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Γραφικά"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Εφαρμογές γραφικών"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Διαδίκτυο"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Μενού πολυμέσων"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Ήχος & Βίντεο"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Γραφείο"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Εφαρμογές Γραφείου"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Εφαρμογές που δεν ταιριάζουν στις άλλες κατηγορίες"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Άλλα"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Προτιμήσεις σχετικά με προσβασιμότητα"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Προσωπικές προτιμήσεις και ρυθμίσεις"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Προτιμήσεις"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Change systemwide settings (affects all users)"
+msgstr "Τροποποίηση ρυθμίσεων συστήματος (επηρεάζει όλους τους χρήστες)"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "System Settings"
+msgstr "Ρυθμίσεις Συστήματος"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Εργαλεία Συστήματος"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr ""
+
