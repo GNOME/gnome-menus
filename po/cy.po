@@ -1,0 +1,125 @@
+# GNOME Menus in Welsh.
+#
+# This file is distributed under the same license as the gnome-menus package.
+# Dafydd Harries <daf@muse.19inch.net>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-03-06 22:23+0000\n"
+"PO-Revision-Date: 2005-03-06 22:58+0000\n"
+"Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
+"Language-Team: Welsh <cy@pengwyn.linux.org.uk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Hygyrchedd"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Gosodiadau Hygyrchedd"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Ategolion"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Ategolion penbwrdd"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Rhaglenni"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Rhaglennu"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Offer ar gyfer datblygu meddalwedd"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Adddysg ac Adloniant"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Gêmau"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Gêmau a diddorion"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Graffeg"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Rhaglennu graffeg"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Rhyngrwyd"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Rhaglenni ar gyfer mynediad Rhyngrwyd megis y we ac ebost"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Dewislen amlgyfrwng"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Sain a Fideo"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Swyddfa"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Rhaglennu Swyddfa"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Rhaglenni nad ydynt yn ffitio yng nghategorïau eraill"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Eraill"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Hoffterau yn gysylltiedig a hygyrchedd"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Hoftterau a gosodiadau personol"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Hoffterau"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "Gweinyddiaeth"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr "Newid gosodiadau system-eang (sy'n effeithio a phob defnyddiwr)"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Offer System"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Cyflunio a monitro system"
