@@ -1243,8 +1243,6 @@ resolve_default_app_dirs (MenuTree       *tree,
   const char * const *system_data_dirs;
   int                i;
 
-  add_app_dir (tree, layout, g_get_user_data_dir ());
-
   system_data_dirs = g_get_system_data_dirs ();
 
   i = 0;
@@ -1254,6 +1252,8 @@ resolve_default_app_dirs (MenuTree       *tree,
 
       ++i;
     }
+
+  add_app_dir (tree, layout, g_get_user_data_dir ());
 
   /* remove the now-replaced node */
   menu_layout_node_unlink (layout);
@@ -1286,8 +1286,6 @@ resolve_default_directory_dirs (MenuTree       *tree,
   const char * const *system_data_dirs;
   int          i;
 
-  add_directory_dir (tree, layout, g_get_user_data_dir ());
-
   system_data_dirs = g_get_system_data_dirs ();
 
   i = 0;
@@ -1297,6 +1295,8 @@ resolve_default_directory_dirs (MenuTree       *tree,
 
       ++i;
     }
+
+  add_directory_dir (tree, layout, g_get_user_data_dir ());
 
   /* remove the now-replaced node */
   menu_layout_node_unlink (layout);
@@ -1536,8 +1536,6 @@ resolve_kde_legacy_dirs (MenuTree       *tree,
   const char * const *system_data_dirs;
   int                 i;
 
-  add_legacy_dir (tree, layout, g_get_user_data_dir ());
-
   system_data_dirs = g_get_system_data_dirs ();
 
   i = 0;
@@ -1547,6 +1545,8 @@ resolve_kde_legacy_dirs (MenuTree       *tree,
 
       ++i;
     }
+
+  add_legacy_dir (tree, layout, g_get_user_data_dir ());
 
   /* remove the now-replaced node */
   menu_layout_node_unlink (layout);

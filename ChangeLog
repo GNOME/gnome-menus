@@ -1,5 +1,16 @@
 2005-03-08  Mark McLoughlin  <mark@skynet.ie>
 
+	Fix for bug #164309 - .directory files in
+	~/.local/share/desktop-directories not overriding the
+	system versions.
+
+	* libmenu/menu-tree.c:
+	(resolve_default_app_dirs), (resolve_default_directory_dirs),
+	(resolve_kde_legacy_dirs): append the user dir after the
+	system dirs since it has higher priority.
+
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
 	Fix for bug #169031 - .directory files in subdirs of
 	<LegacyDir> not getting pulled in.
 
