@@ -1,3 +1,7 @@
 Makefile
 Makefile.in
-gmenu.c
+.deps
+.libs
+*.la
+*.lo
+

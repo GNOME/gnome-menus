@@ -58,6 +58,9 @@ struct MenuTree
 
   GSList *monitors;
 
+  gpointer       user_data;
+  GDestroyNotify dnotify;
+
   guint canonical : 1;
 };
 
@@ -73,6 +76,9 @@ struct MenuTreeItem
 
   MenuTreeDirectory *parent;
   
+  gpointer       user_data;
+  GDestroyNotify dnotify;
+
   guint refcount;
 };
 
@@ -592,6 +598,11 @@ menu_tree_unref (MenuTree *tree)
   if (--tree->refcount > 0)
     return;
 
+  if (tree->dnotify)
+    tree->dnotify (tree->user_data);
+  tree->user_data = NULL;
+  tree->dnotify   = NULL;
+
   menu_tree_remove_from_cache (tree);
 
   menu_tree_force_recanonicalize (tree);
@@ -609,6 +620,28 @@ menu_tree_unref (MenuTree *tree)
   tree->monitors = NULL;
 
   g_free (tree);
+}
+
+void
+menu_tree_set_user_data (MenuTree       *tree,
+			 gpointer        user_data,
+			 GDestroyNotify  dnotify)
+{
+  g_return_if_fail (tree != NULL);
+
+  if (tree->dnotify != NULL)
+    tree->dnotify (tree->user_data);
+
+  tree->dnotify   = dnotify;
+  tree->user_data = user_data;
+}
+
+gpointer
+menu_tree_get_user_data (MenuTree *tree)
+{
+  g_return_val_if_fail (tree != NULL, NULL);
+
+  return tree->user_data;
 }
 
 MenuTreeDirectory *
@@ -1228,12 +1261,39 @@ menu_tree_item_unref (gpointer itemp)
 	  break;
 	}
 
+      if (item->dnotify)
+	item->dnotify (item->user_data);
+      item->user_data = NULL;
+      item->dnotify   = NULL;
+
       if (item->parent != NULL)
 	menu_tree_item_unref (item->parent);
       item->parent = NULL;
 
       g_free (item);
     }
+}
+
+void
+menu_tree_item_set_user_data (MenuTreeItem   *item,
+			      gpointer        user_data,
+			      GDestroyNotify  dnotify)
+{
+  g_return_if_fail (item != NULL);
+
+  if (item->dnotify != NULL)
+    item->dnotify (item->user_data);
+
+  item->dnotify   = dnotify;
+  item->user_data = user_data;
+}
+
+gpointer
+menu_tree_item_get_user_data (MenuTreeItem *item)
+{
+  g_return_val_if_fail (item != NULL, NULL);
+
+  return item->user_data;
 }
 
 static int

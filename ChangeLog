@@ -1,3 +1,23 @@
+2005-04-05  Mark McLoughlin  <mark@skynet.ie>
+
+	Implement the python bindings with plain C rather
+	than pyrex.
+
+	* configure.in: don't require pyrex and pass -fno-strict-aliasing
+	to the compiler if it supports it.
+	
+	* libmenu/menu-tree.[ch]:
+	(menu_tree_set_user_data), (menu_tree_get_user_data),
+	(menu_tree_item_set_user_data),	(menu_tree_item_get_user_data):
+	Add chessy language bindings API.
+	
+	* python/Makefile.am: don't build with pyrex, use -fno-string-aliasing
+	if available.
+	
+	* python/gmenu.c: re-implement bindings.
+
+	* python/gmenu.pyx: remove pyrex bindings.
+
 2005-04-04  Mark McLoughlin  <mark@skynet.ie>
 
 	Implement support for <Merge>, <Separator> etc. in

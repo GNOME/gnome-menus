@@ -61,6 +61,11 @@ MenuTree *menu_tree_lookup (const char *menu_file);
 MenuTree *menu_tree_ref   (MenuTree *tree);
 void      menu_tree_unref (MenuTree *tree);
 
+void     menu_tree_set_user_data (MenuTree       *tree,
+				  gpointer        user_data,
+				  GDestroyNotify  dnotify);
+gpointer menu_tree_get_user_data (MenuTree       *tree);
+
 MenuTreeDirectory *menu_tree_get_root_directory (MenuTree *tree);
 MenuTreeDirectory *menu_tree_get_directory_from_path (MenuTree   *tree,
 						      const char *path);
@@ -68,6 +73,11 @@ MenuTreeDirectory *menu_tree_get_directory_from_path (MenuTree   *tree,
 
 gpointer menu_tree_item_ref   (gpointer item);
 void     menu_tree_item_unref (gpointer item);
+
+void     menu_tree_item_set_user_data (MenuTreeItem   *item,
+				       gpointer        user_data,
+				       GDestroyNotify  dnotify);
+gpointer menu_tree_item_get_user_data (MenuTreeItem   *item);
 
 MenuTreeItemType   menu_tree_item_get_type   (MenuTreeItem *item);
 MenuTreeDirectory *menu_tree_item_get_parent (MenuTreeItem *item);
