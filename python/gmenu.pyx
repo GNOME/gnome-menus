@@ -6,6 +6,9 @@ cdef extern from "glib/gslist.h":
         GSList *next
 
     void g_slist_free (GSList *list)
+
+cdef extern from "glib/gmem.h":
+    void g_free (void *mem)
     
 cdef extern from "libgnomevfs/gnome-vfs-init.h":
     int gnome_vfs_init        ()
@@ -206,9 +209,15 @@ cdef class Directory (Item):
         else:
             return icon
 
-    def make_path (self):
-        # FIXME: implement
-        pass
+    def make_path (self, Item entry):
+        cdef char *path
+
+        path = menu_tree_directory_make_path (<MenuTreeDirectory *> self.item,
+                                              <MenuTreeEntry *> entry.item)
+        retval = path
+        g_free (path)
+
+        return retval
     
     def __getattr__ (self, name):
         if name == "type":
@@ -377,11 +386,41 @@ cdef class Alias (Item):
         else:
             raise AttributeError, name
 
+cdef class Tree
+
+cdef class MonitorCallback:
+    cdef Tree   tree
+    cdef object pycallback
+    cdef object user_data
+    
+    def __init__ (self, tree, pycallback, user_data):
+        self.tree = tree
+        self.pycallback = pycallback
+        self.user_data = user_data
+
+    def invoke (self):
+        if self.user_data:
+            self.pycallback (self.tree, self.user_data)
+        else:
+            self.pycallback (self.tree)
+
+    def matches (self, pycallback, user_data):
+        if self.pycallback is pycallback and \
+           self.user_data is user_data:
+            return True
+        else:
+            return False
+
+cdef void _monitor_callback (MenuTree *tree, MonitorCallback callback):
+    callback.invoke ()
+
 cdef class Tree:
     cdef MenuTree *tree
+    cdef object    callbacks
 
     def __new__ (self):
         self.tree = NULL
+        self.callbacks = []
         
     def __dealloc__ (self):
         if self.tree != NULL:
@@ -421,13 +460,24 @@ cdef class Tree:
 
         return retval
 
-    def add_monitor (self, callback, user_data = None):
-        # FIXME: implement
-        pass
+    def add_monitor (self, pycallback, user_data = None):
+        cdef MonitorCallback callback
 
-    def remove_monitor (self, callback, user_data = None):
-        # FIXME: implement
-        pass
+        callback = MonitorCallback (self, pycallback, user_data)
+        self.callbacks.append (callback)
+        
+        menu_tree_add_monitor (self.tree,
+                               <MenuTreeChangedFunc> _monitor_callback,
+                               <void *> callback)
+
+    def remove_monitor (self, pycallback, user_data = None):
+        for callback in self.callbacks:
+            if callback.matches (pycallback, user_data):
+                menu_tree_remove_monitor (self.tree,
+                                          <MenuTreeChangedFunc> _monitor_callback,
+                                          <void *> callback)
+                self.callbacks.remove (callback)
+                return
 
 def lookup_tree (menu_file):
     cdef MenuTree *tree

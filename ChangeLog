@@ -1,5 +1,16 @@
 2005-03-15  Mark McLoughlin  <mark@skynet.ie>
 
+	Implement the last bits of the python binding.
+
+	* python/gmenu.pyx:
+	Include definition for g_free()
+	Implement Directory.make_path ()
+	Add MonitorCallback class to encapsulate a python
+	callback, user data and menu tree
+	Implement Tree.add_monitor() and Tree.remove_montor()
+
+2005-03-15  Mark McLoughlin  <mark@skynet.ie>
+
 	Add python bindings. Mostly complete, but still need
 	to finish wraping:
 	  - menu_tree_directory_make_path ()
