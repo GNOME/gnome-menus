@@ -1,26 +1,28 @@
+# translation of gnome-menus.HEAD.po to Punjabi
 # translation of pa.po to Punjabi
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004.
+# Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pa\n"
+"Project-Id-Version: gnome-menus.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-10 17:49+0000\n"
-"PO-Revision-Date: 2004-11-24 16:53+0530\n"
-"Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
+"POT-Creation-Date: 2005-03-01 23:08+0100\n"
+"PO-Revision-Date: 2005-03-02 07:08+0530\n"
+"Last-Translator: Amanpreet Singh Alam <amanpreetalam@yahoo.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9\n"
+"X-Generator: KBabel 1.9.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: desktop-directories/Accessibility.directory.in.h:1
 #: desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
-msgstr "ਸਹੂਲਤਾਂ"
+msgstr "ਸਹੂਲਤ"
 
 #: desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
@@ -56,7 +58,7 @@ msgstr "ਖੇਡਾਂ"
 
 #: desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
-msgstr "ਖੇਡਾਂ ਤੇ ਮੰਨੋਰਜਨ"
+msgstr "ਖੇਡਾਂ ਤੇ ਮਨੋਰੰਜਨ"
 
 #: desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -80,7 +82,7 @@ msgstr "ਬਹੁਰੰਗ ਮੇਨੂ"
 
 #: desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "ਆਵਾਜ਼ ਤੇ ਵੀਡਿਓ"
+msgstr "ਅਵਾਜ਼ ਤੇ ਵੀਡਿਓ"
 
 #: desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -100,7 +102,7 @@ msgstr "ਹੋਰ"
 
 #: desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
-msgstr "ਸਹੂਲਤਾਂ ਸੰਬੰਧੀ ਪਸੰਦ"
+msgstr "ਸਹੂਲਤਾਂ ਸਬੰਧੀ ਪਸੰਦ"
 
 #: desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
@@ -112,11 +114,12 @@ msgstr "ਮੇਰੀ ਪਸੰਦ"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr ""
+msgstr "ਪ੍ਰਬੰਧਨ"
 
 #: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
 msgstr "ਤਬਦੀਲੀਆਂ ਸਿਸਟਮ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰਨਗੀਆਂ (ਸਭ ਉਪਭੋਗਤਾਵਾਂ ਨੂੰ)"
+
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
