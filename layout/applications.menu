@@ -18,29 +18,6 @@
   <!-- Read in overrides and child menus from applications-merged/ -->
   <DefaultMergeDirs/>
 
-  <!-- Merge in these other files as submenus -->
-  <Menu>
-    <Name>Preferences</Name>
-    <MergeFile>preferences.menu</MergeFile>
-  </Menu>
-
-  <Menu>
-    <Name>System Settings</Name>
-    <MergeFile>system-settings.menu</MergeFile>
-  </Menu>
-
-  <!-- Menu items to include in the toplevel -->
-  <Include>
-    <And>
-      <Category>Core</Category>
-    </And>
-  </Include>
-
-  <!-- Menu items to exclude from the toplevel -->
-  <Exclude>
-    <Filename>gnome-search-tool.desktop</Filename>
-  </Exclude>
-
   <!-- Accessories submenu -->
   <Menu>
     <Name>Accessories</Name>
@@ -146,18 +123,6 @@
       </And>
     </Include>
   </Menu> <!-- End Office -->
-
-  <!-- System Settings -->
-  <Menu>
-    <Name>System Settings</Name>
-    <Directory>System-Settings.directory</Directory>
-    <Include>
-      <And>
-        <Category>Settings</Category>
-        <Category>System</Category>
-      </And>
-    </Include>
-  </Menu>     <!-- End System Settings -->
 
   <!-- System Tools-->
   <Menu>

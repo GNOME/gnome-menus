@@ -1,3 +1,12 @@
+2004-01-09  Vincent Untz  <vincent@vuntz.net>
+
+	* desktop-directories/System-Settings.directory.in: new Name
+	* layout/Makefile.am: add settings.menu
+	* layout/applications.menu: do not include Core items, Preferences
+	menu and System Settings menu
+	* layout/settings.menu: new file with Preferences menu and
+	Administration menu
+
 2004-01-07  Christophe Merlet <redfox@redfoxcenter.org>
 
 	* configure.in: Added "fr" (French) to ALL_LINGUAS.
