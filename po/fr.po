@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-menu 2.9.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-01-10 17:49+0000\n"
-"PO-Revision-Date: 2005-01-07 16:24+0100\n"
+"PO-Revision-Date: 2005-01-21 23:24+0100\n"
 "Last-Translator: Baptiste Mille-Mathias <bmm80@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgstr "Jeux et amusements"
 
 #: desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "Graphismes"
+msgstr "Graphisme"
 
 #: desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
@@ -111,7 +111,7 @@ msgstr "Préférences"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr ""
+msgstr "Administration"
 
 #: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
