@@ -1,0 +1,126 @@
+# Finnish messages for gnome-menus
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gail package.
+# Tommi Vainikainen <Tommi.Vainikainen@iki.fi>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-12-07 09:18+0200\n"
+"PO-Revision-Date: 2004-12-07 09:31+0200\n"
+"Last-Translator: Tommi Vainikainen <thv@iki.fi>\n"
+"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Esteettömyys"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Esteettömyysasetukset"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Apuohjelmat"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Työpöydän apuohjelmat"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Sovellukset"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Ohjelmointi"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Työkaluja sovellusten tekemiseen"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Opetusviihde"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Pelit"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Pelit ja viihde"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Grafiikka"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Grafiikkasovellukset"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Internet-sovellukset kuten selain ja sähköposti"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Multimediavalikko"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Ääni & video"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Toimisto"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Toimistosovellukset"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Muihin luokkiin sopimattomat sovellukset"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Muut"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Esteettömyyteen liittyvät asetukset"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Henkilökohtaiset asetukset"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Asetukset"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Change systemwide settings (affects all users)"
+msgstr "Muuta järjestelmänlaajuisia asetuksia (vaikuttaa joka käyttäjään)"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "System Settings"
+msgstr "Järjestelmän asetukset"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Järjestelmätyökalut"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Järjestelmäasetukset ja -seuranta"
