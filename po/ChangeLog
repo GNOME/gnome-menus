@@ -1,3 +1,8 @@
+2005-01-13  Žygimantas Beručka  <uid0@akl.lt>
+
+	* lt.po: Updated Lithuanian translation.
+	* ChangeLog: Converted back to UTF-8. Please leave it that way.
+
 2005-01-12  Maxim Dziumanenko <mvd@mylinux.com.ua>
 
 	* uk.po: Added Ukrainian translation.
@@ -33,7 +38,7 @@
 
 ==================== 2.9.3 ====================
 
-2004-12-13  I�aki Larra�aga  <dooteo@euskalgnu.org>
+2004-12-13  Iñaki Larrañaga  <dooteo@euskalgnu.org>
 
 	* eu.po: Added Basque translation.
 	
@@ -87,11 +92,11 @@
 
 	* hu.po: Hungarian translation added by Gabor Kelemen.
 
-2004-12-05  Žygimantas Beručka  <uid0@akl.lt>
+2004-12-05  Åœygimantas BeruÄka  <uid0@akl.lt>
 
 	* lt.po: Added Lithuanian translation.
 
-2004-12-04  Danilo Šegan  <dsegan@gmx.net>
+2004-12-04  Danilo Å egan  <dsegan@gmx.net>
 
 	* sr.po, sr@Latn.po: Added Serbian translation.
 
