@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-10 17:49+0000\n"
+"POT-Creation-Date: 2005-02-07 22:54+0100\n"
 "PO-Revision-Date: 2004-11-29 20:13+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -110,7 +110,7 @@ msgstr "首选项"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr ""
+msgstr "系统管理"
 
 #: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
@@ -124,5 +124,3 @@ msgstr "系统工具"
 msgid "System configuration and monitoring"
 msgstr "系统配置和监视"
 
-#~ msgid "System Settings"
-#~ msgstr "系统设置"
