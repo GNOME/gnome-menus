@@ -1,3 +1,7 @@
 2004-11-09  Mark McLoughlin  <mark@skynet.ie>
 
+	* desktop-directories/Makefile.am: distcheck fix.
+
+2004-11-09  Mark McLoughlin  <mark@skynet.ie>
+
 	* Initial import.
