@@ -1,5 +1,19 @@
 2005-03-08  Mark McLoughlin  <mark@skynet.ie>
 
+	Fix for bug #168445 - menu items in LegacyDirs don't
+	get marked as allocated.
+
+	* libmenu/menu-tree.c:
+	(mark_allocated_foreach): kill.
+	(process_layout), (process_only_unallocated),
+	(menu_tree_build_from_layout): store the list of allocated
+	entires in a DesktopEntrySet so we can look up an entry
+	using its file ID rather than with a straight pointer
+	comparison. Entries in LegacyDirs are copies of the original
+	enties, so the pointer comparison doesn't work.
+
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
 	Fix for bug #168444 - LegacyDirs with a prefix don't work.
 
 	* libmenu/entry-directories.c: (entry_directory_get_desktop):

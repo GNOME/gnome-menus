@@ -2257,16 +2257,6 @@ process_include_rules (MenuLayoutNode     *layout,
 }
 
 static void
-mark_allocated_foreach (const char   *desktop_file_id,
-			DesktopEntry *desktop_entry,
-			GHashTable   *allocated)
-{
-  g_hash_table_insert (allocated,
-		       desktop_entry,
-		       desktop_entry_ref (desktop_entry));
-}
-
-static void
 entries_listify_foreach (const char        *desktop_file_id,
                          DesktopEntry      *desktop_entry,
                          MenuTreeDirectory *directory)
@@ -2283,15 +2273,15 @@ static MenuTreeDirectory *
 process_layout (MenuTree          *tree,
                 MenuTreeDirectory *parent,
                 MenuLayoutNode    *layout,
-                GHashTable        *allocated)
+                DesktopEntrySet   *allocated)
 {
   EntryDirectoryList *app_dirs;
   EntryDirectoryList *dir_dirs;
   MenuLayoutNode     *layout_iter;
   MenuTreeDirectory  *directory;
   DesktopEntrySet    *entries;
-  DesktopEntrySet    *allocated_set;
   gboolean            deleted;
+  DesktopEntrySet    *allocated_set;
   gboolean            only_unallocated;
   GSList             *tmp;
 
@@ -2462,9 +2452,7 @@ process_layout (MenuTree          *tree,
   directory->only_unallocated = only_unallocated;
 
   if (!directory->only_unallocated)
-    desktop_entry_set_foreach (allocated_set,
-			       (DesktopEntrySetForeachFunc) mark_allocated_foreach,
-			       allocated);
+    desktop_entry_set_union (allocated, allocated_set);
 
   desktop_entry_set_unref (allocated_set);
 
@@ -2550,7 +2538,7 @@ process_layout (MenuTree          *tree,
 
 static void
 process_only_unallocated (MenuTreeDirectory *directory,
-                          GHashTable        *allocated)
+			  DesktopEntrySet   *allocated)
 {
   GSList *tmp;
 
@@ -2566,7 +2554,7 @@ process_only_unallocated (MenuTreeDirectory *directory,
           MenuTreeEntry *entry = tmp->data;
           GSList        *next  = tmp->next;
 
-          if (g_hash_table_lookup (allocated, entry->desktop_entry) != NULL)
+          if (desktop_entry_set_lookup (allocated, entry->desktop_file_id))
             {
               directory->entries = g_slist_delete_link (directory->entries,
                                                         tmp);
@@ -2616,7 +2604,7 @@ handle_entries_changed (MenuLayoutNode *layout,
 static void
 menu_tree_build_from_layout (MenuTree *tree)
 {
-  GHashTable *allocated;
+  DesktopEntrySet *allocated;
 
   if (tree->root)
     return;
@@ -2627,8 +2615,7 @@ menu_tree_build_from_layout (MenuTree *tree)
 
   menu_verbose ("Building menu tree from layout\n");
 
-  allocated = g_hash_table_new_full (NULL, NULL, NULL,
-				     (GDestroyNotify) desktop_entry_unref);
+  allocated = desktop_entry_set_new ();
 
   tree->root = process_layout (tree,
                                NULL,
@@ -2643,7 +2630,7 @@ menu_tree_build_from_layout (MenuTree *tree)
                                                  tree);
     }
 
-  g_hash_table_destroy (allocated);
+  desktop_entry_set_unref (allocated);
 }
 
 static void
