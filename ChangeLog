@@ -1,3 +1,7 @@
+2005-01-15  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* configure.in: Adding «no» as well.
+
 2004-01-14  Vincent Untz  <vincent@vuntz.net>
 
 	* layout/applications.menu: do not include the Core category in the
