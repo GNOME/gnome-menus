@@ -1,3 +1,16 @@
+2005-02-18  Mark McLoughlin  <mark@skynet.ie>
+
+	Make us pass most of the spec tests again.
+
+	* util/test-menu-spec.c:
+	(append_directory_path), (make_path): add a variant
+	of menu_tree_directory_make_path() - difference is
+	we use the directory name from the directory entry
+	if available. We don't want to do that in
+	menu_tree_directory_make_path() because that would
+	make the path locale dependant.
+	(print_directory): use it here.
+
 2005-02-14  Pawan Chitrakar  <pawan@nplinux.org>
 
 	* configure.in: Added ne "Nepali" in ALL_LINGUAS

@@ -25,6 +25,42 @@
 #include <libgnomevfs/gnome-vfs.h>
 
 static void
+append_directory_path (MenuTreeDirectory *directory,
+		       GString           *path)
+{
+  MenuTreeDirectory *parent;
+
+  parent = menu_tree_directory_get_parent (directory);
+
+  if (!parent)
+    {
+      g_string_append_c (path, '/');
+      return;
+    }
+
+  append_directory_path (parent, path);
+
+  g_string_append (path, menu_tree_directory_get_name (directory));
+  g_string_append_c (path, '/');
+
+  menu_tree_directory_unref (parent);
+}
+
+static char *
+make_path (MenuTreeDirectory *directory)
+{
+  GString *path;
+
+  g_return_val_if_fail (directory != NULL, NULL);
+
+  path = g_string_new (NULL);
+
+  append_directory_path (directory, path);
+
+  return g_string_free (path, FALSE);
+}
+
+static void
 print_directory (MenuTreeDirectory *directory)
 {
   GSList     *entries;
@@ -33,7 +69,7 @@ print_directory (MenuTreeDirectory *directory)
   const char *path;
   char       *freeme;
 
-  freeme = menu_tree_directory_make_path (directory, NULL);
+  freeme = make_path (directory);
   if (!strcmp (freeme, "/"))
     path = freeme;
   else
