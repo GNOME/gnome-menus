@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-03-02 15:05+0100\n"
-"PO-Revision-Date: 2005-03-02 15:06+0100\n"
+"PO-Revision-Date: 2005-03-02 23:58+0100\n"
 "Last-Translator: Danilo Šegan <danilo@prevod.org>\n"
 "Language-Team: Serbian (sr) <gnu@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr "Lične postavke i podešavanja"
 
 #: desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Postavk"
+msgstr "Postavke"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
