@@ -1,5 +1,16 @@
 2005-03-08  Mark McLoughlin  <mark@skynet.ie>
 
+	Should fix bug #167934 even though the reporter
+	says it doesn't :-)
+
+	Well, this at least fixes a problem with <LegacyDir>
+	if the toplevel directory doesn't contain any entries.
+
+	* libmenu/menu-tree.c: (add_menu_for_legacy_dir):
+	Add a <Menu> for the <LegacyDir> if it has any subdirs.
+
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
 	Fix for bug #168445 - menu items in LegacyDirs don't
 	get marked as allocated.
 

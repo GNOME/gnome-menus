@@ -1382,10 +1382,9 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
   entry_directory_unref (ed);
 
   menu_added = FALSE;
-  if (desktop_entry_set_get_count (desktop_entries) > 0)
+  if (desktop_entry_set_get_count (desktop_entries) > 0 || subdirs)
     {
       MenuLayoutNode *menu;
-      MenuLayoutNode *include;
       MenuLayoutNode *node;
       GString        *subdir_path;
       GSList         *tmp;
@@ -1408,12 +1407,19 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
       menu_layout_node_append_child (menu, node);
       menu_layout_node_unref (node);
 
-      include = menu_layout_node_new (MENU_LAYOUT_NODE_INCLUDE);
-      menu_layout_node_append_child (menu, include);
+      if (desktop_entry_set_get_count (desktop_entries) > 0)
+	{
+	  MenuLayoutNode *include;
 
-      desktop_entry_set_foreach (desktop_entries,
-                                 (DesktopEntrySetForeachFunc) add_filename_include,
-                                 include);
+	  include = menu_layout_node_new (MENU_LAYOUT_NODE_INCLUDE);
+	  menu_layout_node_append_child (menu, include);
+
+	  desktop_entry_set_foreach (desktop_entries,
+				     (DesktopEntrySetForeachFunc) add_filename_include,
+				     include);
+
+	  menu_layout_node_unref (include);
+	}
 
       subdir_path = g_string_new (legacy_dir);
       legacy_dir_len = strlen (legacy_dir);
@@ -1438,7 +1444,6 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
 
       g_string_free (subdir_path, TRUE);
 
-      menu_layout_node_unref (include);
       menu_layout_node_unref (menu);
     }
 
