@@ -2,20 +2,19 @@
 # Copyright (C) 2004 THE Gnome-menus'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the Gnome-menus package.
 # <>, 2004.
-# , fuzzy
 # 
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-menus Head\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-28 21:46+0000\n"
+"POT-Creation-Date: 2005-03-08 21:35+0200\n"
 "PO-Revision-Date: 2004-12-07 23:30+0200\n"
 "Last-Translator: RIDVAN CAN <ridvan@geleceklinux.org>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: desktop-directories/Accessibility.directory.in.h:1
 #: desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -111,12 +110,12 @@ msgid "Preferences"
 msgstr "Tercihler"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Ayarları sistem çapında değiştir (tüm kullanıcıları etkiler)"
+msgid "Administration"
+msgstr "Yönetim"
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Sistem Ayarları"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Ayarları sistem çapında değiştir (tüm kullanıcıları etkiler)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -126,3 +125,5 @@ msgstr "Sistem Araçları"
 msgid "System configuration and monitoring"
 msgstr "Sistem yapılandırma ve izleme"
 
+#~ msgid "System Settings"
+#~ msgstr "Sistem Ayarları"
