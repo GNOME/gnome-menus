@@ -1,0 +1,129 @@
+# Nepali Translation Project.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus.HEAD.ne.po\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-12-11 04:22+0100\n"
+"PO-Revision-Date: 2005-02-14 13:29+0545\n"
+"Last-Translator: Rajeev Shrestha <rstha@ecomail.com.np>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Nepali\n"
+"X-Poedit-Country: NEPAL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "उपलब्धता"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "उपलब्धता सेटिङ्गहरू"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "सहायक उपकरणहरू"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "डेस्कटप सहायक उपकरणहरू"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "अनुप्रयोगहरू"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "प्रोग्रामिङ्ग"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "सफ्टवेर विकासको निम्ति उपकरणहरू"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "अध्ययन र मनोरञ्जन"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "खेलहरू"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "खेलहरू र मनोरञ्जनहरू"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "ग्राफिक्स"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "ग्राफिक्स अनुप्रयोगहरू"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "इन्टरनेट"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "वेब र इमेल जस्तो इन्टरनेट पहुँचको निम्ति कार्यक्रमहरू"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "मल्टिमिडिया मिनू"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "ध्वनि र भिडियो"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "कार्यालाय"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "कार्यालय अनुप्रयोगहरू "
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "अनुप्रयोगहरू जून अन्य कोटिकाहरूमा ठिक्क मिल्दैनन्"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "अन्य"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "पहुँचसँग सम्बन्धित प्राथमिक्ताहरू"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "व्यक्तिगत प्राथमिक्ताहरू र सेटिङ्गहरू"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "प्राथमिकताहरू"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Change systemwide settings (affects all users)"
+msgstr "सम्पुर्ण प्रणाली सेटिङ्गहरू परिवर्तन गर ( सबै प्रयोगकर्ताहरूलाई प्रभाव पार्छ)"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "System Settings"
+msgstr "प्रणाली सेटिङ्गहरू"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "प्रणाली उपकरणहरू"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "प्रणाली समायोजना र निरिक्षण कार्य"
+
