@@ -1,0 +1,126 @@
+# Danish translation of gnome-menus.
+# Copyright (C) 2004 Mark McLoughlin
+# This file is distributed under the same license as the gnome-menus package.
+# David Nielsen <dnielsen@breakmygentoo.net>, 2004.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-12-09 12:27+0100\n"
+"PO-Revision-Date: 2004-12-07 22:45+0100\n"
+"Last-Translator: David Nielsen <dnielsen@breakmygentoo.net>\n"
+"Language-Team: Danish <dansk@klid.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Tilgængelighed"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Tilgængelighedsindstillinger"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Tilbehør"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Skrivebordstilbehør"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Programmer"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Programmering"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Værktøj til programudvikling"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Læringsprogrammer"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Spil"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Spil og underholdning"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Grafik"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Grafikprogrammer"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Programmer til internetadgang, såsom web og e-post"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Multimedie-menu"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Lyd og video"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Kontor"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Kontorprogrammer"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Programmer som ikke passer i andre katagorier"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Andre"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Tilgængeligheds-relaterede indstillinger"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Personlige indstillinger"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Indstillinger"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Change systemwide settings (affects all users)"
+msgstr "Ændr system indstillinger (påvirker alle brugere)"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "System Settings"
+msgstr "Systemindstillinger"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Systemværktøjer"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Systemkonfiguration og -overvågning"
