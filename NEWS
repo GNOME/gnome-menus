@@ -1,3 +1,16 @@
+===============
+Version 2.9.4.1
+===============
+
+  Features
+
+	* Add menu_tree_entry_get_exec() (Richard Hult)
+
+  Translators
+
+	* Miloslav Trmac (cs)
+	* Kjartan Maraas (nb)
+
 =============
 Version 2.9.4
 =============
