@@ -1,7 +1,7 @@
 # Slovak translations for gnome-menus package.
-# Copyright (C) 2004 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
-# Marcel Telka <marcel@telka.sk>, 2004.
+# Marcel Telka <marcel@telka.sk>, 2004, 2005.
 #
 # $Id$
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-10 17:49+0000\n"
-"PO-Revision-Date: 2004-12-07 22:31+0100\n"
+"POT-Creation-Date: 2005-01-13 00:49+0100\n"
+"PO-Revision-Date: 2005-01-13 00:50+0100\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +112,7 @@ msgstr "Predvoľby"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr ""
+msgstr "Správa"
 
 #: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
@@ -125,6 +125,3 @@ msgstr "Systémové nástroje"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Systémová konfigurácia a monitorovanie"
-
-#~ msgid "System Settings"
-#~ msgstr "Systémové nastavenia"
