@@ -115,10 +115,11 @@ handle_entry_directory_changed (EntryDirectory *dir,
   while (tmp != NULL)
     {
       MenuLayoutNodeEntriesMonitor *monitor = tmp->data;
+      GSList                       *next    = tmp->next;
 
       monitor->callback ((MenuLayoutNode *) nr, monitor->user_data);
 
-      tmp = tmp->next;
+      tmp = next;
     }
 }
 

@@ -505,10 +505,11 @@ handle_cached_dir_changed (GnomeVFSMonitorHandle    *handle,
       while (tmp != NULL)
         {
           CachedDirMonitor *monitor = tmp->data;
+	  GSList           *next    = tmp->next;
 
           monitor->callback (monitor->ed, monitor->user_data);
 
-          tmp = tmp->next;
+          tmp = next;
         }
     }
 }

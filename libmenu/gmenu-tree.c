@@ -635,10 +635,11 @@ menu_tree_invoke_monitors (MenuTree *tree)
   while (tmp != NULL)
     {
       MenuTreeMonitor *monitor = tmp->data;
+      GSList          *next    = tmp->next;
 
       monitor->callback (tree, monitor->user_data);
 
-      tmp = tmp->next;
+      tmp = next;
     }
 }
 

@@ -1,3 +1,10 @@
+2004-11-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/entry-directories.c: (handle_cached_dir_changed):
+	  libmenu/menu-layout.c: (handle_entry_directory_changed):
+	  libmenu/menu-tree.c: (menu_tree_invoke_monitors): safeguard
+	against someone removing monitors from monitor handlers.
+
 2004-11-09  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: oops, we're not gnome-panel.
