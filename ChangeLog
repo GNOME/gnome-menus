@@ -1,5 +1,9 @@
 2004-11-09  Mark McLoughlin  <mark@skynet.ie>
 
+	* configure.in: oops, we're not gnome-panel.
+
+2004-11-09  Mark McLoughlin  <mark@skynet.ie>
+
 	* autogen.sh: we don't want to use the docs build
 	stuff.
 
