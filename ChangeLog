@@ -1,5 +1,27 @@
 2004-11-11  Mark McLoughlin  <mark@skynet.ie>
 
+	Fixes a bug where we get an infinite loop if
+	$XDG_CONFIG_DIRS is set incorrectly. Bug #157931.
+
+	* libmenu/menu-tree.c:
+	(handle_nonexistent_menu_file_changed): handle events on
+	non-existent files differently.
+	(handle_menu_file_changed): handle deleted events differently
+	from created/changed events.
+	(menu_tree_force_recanonicalize): impl. re-canonicalization
+	better.
+
+2004-11-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(resolve_default_app_dirs),
+	(resolve_default_directory_dirs),
+	(resolve_default_merge_dirs),
+	(resolve_kde_legacy_dirs): put the user config/data dirs
+	before the system dirs.
+
+2004-11-11  Mark McLoughlin  <mark@skynet.ie>
+
 	* libmenu/entry-directories.c: (handle_cached_dir_changed):
 	  libmenu/menu-layout.c: (handle_entry_directory_changed):
 	  libmenu/menu-tree.c: (menu_tree_invoke_monitors): safeguard

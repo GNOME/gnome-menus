@@ -47,8 +47,9 @@ struct MenuTree
   MenuTreeType type;
   guint        refcount;
 
-  char *canonical_path;
   char *basename;
+  char *absolute_path;
+  char *canonical_path;
 
   GSList *menu_file_monitors;
 
@@ -90,19 +91,21 @@ struct MenuTreeEntry
   guint refcount : 24;
 };
 
-static MenuTree *menu_tree_new                       (MenuTreeType    type,
-						      const char     *menu_file,
-						      gboolean        canonical);
-static void      menu_tree_load_layout               (MenuTree       *tree);
-static void      menu_tree_force_reload              (MenuTree       *tree);
-static void      menu_tree_build_from_layout         (MenuTree       *tree);
-static void      menu_tree_force_rebuild             (MenuTree       *tree);
-static void      menu_tree_resolve_files             (MenuTree       *tree,
-						      MenuLayoutNode *layout);
-static void      menu_tree_invoke_monitors           (MenuTree       *tree);
-
+static MenuTree *menu_tree_new                  (MenuTreeType    type,
+						 const char     *menu_file,
+						 gboolean        canonical);
+static void      menu_tree_load_layout          (MenuTree       *tree);
+static void      menu_tree_force_reload         (MenuTree       *tree);
+static void      menu_tree_build_from_layout    (MenuTree       *tree);
+static void      menu_tree_force_rebuild        (MenuTree       *tree);
+static void      menu_tree_resolve_files        (MenuTree       *tree,
+						 MenuLayoutNode *layout);
+static void      menu_tree_force_recanonicalize (MenuTree       *tree);
+static void      menu_tree_invoke_monitors      (MenuTree       *tree);
+     
 static void menu_tree_add_menu_file_monitor     (MenuTree   *tree,
-						 const char *path);
+						 const char *path,
+						 gboolean    existent);
 static void menu_tree_remove_menu_file_monitors (MenuTree   *tree);
 
 
@@ -126,7 +129,7 @@ get_cache_key (MenuTree *tree)
   switch (tree->type)
     {
     case MENU_TREE_ABSOLUTE:
-      return tree->canonical_path;
+      return tree->canonical ? tree->canonical_path : tree->absolute_path;
 
     case MENU_TREE_BASENAME:
       return tree->basename;
@@ -172,49 +175,83 @@ menu_tree_remove_from_cache (MenuTree *tree)
 }
 
 static void
+handle_nonexistent_menu_file_changed (GnomeVFSMonitorHandle    *handle,
+				      const char               *monitor_uri,
+				      const char               *info_uri,
+				      GnomeVFSMonitorEventType  event,
+				      MenuTree                 *tree)
+{
+  if (event == GNOME_VFS_MONITOR_EVENT_CHANGED ||
+      event == GNOME_VFS_MONITOR_EVENT_CREATED)
+    {
+      menu_verbose ("File \"%s\" %s, marking tree for recanonicalization\n",
+                    info_uri,
+                    event == GNOME_VFS_MONITOR_EVENT_CREATED ? ("created") : ("changed"));
+
+      menu_tree_force_recanonicalize (tree);
+      menu_tree_invoke_monitors (tree);
+    }
+}
+
+static void
 handle_menu_file_changed (GnomeVFSMonitorHandle    *handle,
                           const char               *monitor_uri,
                           const char               *info_uri,
                           GnomeVFSMonitorEventType  event,
                           MenuTree                 *tree)
 {
-  if (event == GNOME_VFS_MONITOR_EVENT_CHANGED ||
-      event == GNOME_VFS_MONITOR_EVENT_CREATED ||
-      event == GNOME_VFS_MONITOR_EVENT_DELETED)
+  if (event == GNOME_VFS_MONITOR_EVENT_DELETED)
+    {
+      menu_verbose ("File \"%s\" deleted, marking tree for recanicalization\n",
+                    info_uri);
+
+      menu_tree_force_recanonicalize (tree);
+      menu_tree_invoke_monitors (tree);
+    }
+  else if (event == GNOME_VFS_MONITOR_EVENT_CHANGED ||
+	   event == GNOME_VFS_MONITOR_EVENT_CREATED)
     {
       menu_verbose ("File \"%s\" %s, marking layout for reload\n",
                     monitor_uri,
-                    event == GNOME_VFS_MONITOR_EVENT_CREATED ? ("created") :
-                    event == GNOME_VFS_MONITOR_EVENT_DELETED ? ("deleted") : ("changed"));
+                    event == GNOME_VFS_MONITOR_EVENT_CREATED ? ("created") : ("changed"));
 
       menu_tree_force_reload (tree);
-
-      menu_tree_remove_menu_file_monitors (tree);
-      if (tree->canonical)
-	menu_tree_add_menu_file_monitor (tree, tree->canonical_path);
-
       menu_tree_invoke_monitors (tree);
     }
 }
 
 static void
 menu_tree_add_menu_file_monitor (MenuTree   *tree,
-                                 const char *path)
+                                 const char *path,
+				 gboolean    existent)
 {
   GnomeVFSMonitorHandle *handle;
   GnomeVFSResult         result;
   char                  *uri;
 
-  menu_verbose ("Adding a menu file monitor for \"%s\"\n", path);
+  menu_verbose ("Adding a menu file monitor for %sexistent \"%s\"\n",
+		existent ? "" : "non", path);
 
   uri = gnome_vfs_get_uri_from_local_path (path);
 
   handle = NULL;
-  result = gnome_vfs_monitor_add (&handle,
-                                  uri,
-                                  GNOME_VFS_MONITOR_FILE,
-                                  (GnomeVFSMonitorCallback) handle_menu_file_changed,
-                                  tree);
+  if (existent)
+    {
+      result = gnome_vfs_monitor_add (&handle,
+				      uri,
+				      GNOME_VFS_MONITOR_FILE,
+				      (GnomeVFSMonitorCallback) handle_menu_file_changed,
+				      tree);
+    }
+  else
+    {
+      result = gnome_vfs_monitor_add (&handle,
+				      uri,
+				      GNOME_VFS_MONITOR_FILE,
+				      (GnomeVFSMonitorCallback) handle_nonexistent_menu_file_changed,
+				      tree);
+    }
+
   if (result == GNOME_VFS_OK)
     {
       tree->menu_file_monitors = g_slist_prepend (tree->menu_file_monitors, handle);
@@ -294,22 +331,22 @@ canonicalize_basename_with_config_dir (MenuTree   *tree,
                                        const char *basename,
                                        const char *config_dir)
 {
-  char *absolute;
+  char *path;
 
-  absolute = g_build_filename (config_dir, "menus",  basename,  NULL);
+  path = g_build_filename (config_dir, "menus",  basename,  NULL);
 
-  tree->canonical_path = menu_canonicalize_file_name (absolute, FALSE);
+  tree->canonical_path = menu_canonicalize_file_name (path, FALSE);
   if (tree->canonical_path)
     {
-      menu_tree_add_menu_file_monitor (tree, tree->canonical_path);
       tree->canonical = TRUE;
+      menu_tree_add_menu_file_monitor (tree, tree->canonical_path, TRUE);
     }
   else
     {
-      menu_tree_add_menu_file_monitor (tree, absolute);
+      menu_tree_add_menu_file_monitor (tree, path, FALSE);
     }
 
-  g_free (absolute);
+  g_free (path);
 
   return tree->canonical;
 }
@@ -320,74 +357,87 @@ menu_tree_canonicalize_path (MenuTree *tree)
   if (tree->canonical)
     return TRUE;
 
+  g_assert (tree->canonical_path == NULL);
+
   if (tree->type == MENU_TREE_BASENAME)
     {
-      const char * const *system_config_dirs;
-      int                 i;
-
       menu_tree_remove_menu_file_monitors (tree);
 
-      if (tree->canonical_path)
-        g_free (tree->canonical_path);
-      tree->canonical_path = NULL;
+      if (!canonicalize_basename_with_config_dir (tree,
+						  tree->basename,
+						  g_get_user_config_dir ()))
+	{
+	  const char * const *system_config_dirs;
+	  int                 i;
 
-      system_config_dirs = g_get_system_config_dirs ();
+	  system_config_dirs = g_get_system_config_dirs ();
 
-      i = 0;
-      while (system_config_dirs[i] != NULL)
-        {
-          if (canonicalize_basename_with_config_dir (tree,
-                                                     tree->basename,
-                                                     system_config_dirs[i]))
-            break;
+	  i = 0;
+	  while (system_config_dirs[i] != NULL)
+	    {
+	      if (canonicalize_basename_with_config_dir (tree,
+							 tree->basename,
+							 system_config_dirs[i]))
+		break;
 
-          ++i;
-        }
-
-      if (!tree->canonical)
-        canonicalize_basename_with_config_dir (tree,
-                                               tree->basename,
-                                               g_get_user_config_dir ());
+	      ++i;
+	    }
+	}
 
       if (tree->canonical)
         menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
                       tree->basename, tree->canonical_path);
       else
-        menu_verbose ("Failed to look up menu_file for \"%s\"n",
+        menu_verbose ("Failed to look up menu_file for \"%s\"\n",
                       tree->basename);
     }
   else /* if (tree->type == MENU_TREE_ABSOLUTE) */
     {
-      char *canonical_path;
-
-      canonical_path =
-        menu_canonicalize_file_name (tree->canonical_path, FALSE);
-      if (canonical_path != NULL)
+      tree->canonical_path =
+        menu_canonicalize_file_name (tree->absolute_path, FALSE);
+      if (tree->canonical_path != NULL)
         {
           menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
-                        tree->canonical_path, canonical_path);
+                        tree->absolute_path, tree->canonical_path);
 
+	  /*
+	   * Replace the cache entry with the canonicalized version
+	   */
           menu_tree_remove_from_cache (tree);
-
-          g_free (tree->canonical_path);
-          tree->canonical_path = g_strdup (canonical_path);
 
           menu_tree_remove_menu_file_monitors (tree);
           menu_tree_add_menu_file_monitor (tree,
-                                           tree->canonical_path);
-
-          menu_tree_add_to_cache (tree);
+                                           tree->canonical_path,
+					   TRUE);
 
           tree->canonical = TRUE;
+
+          menu_tree_add_to_cache (tree);
         }
       else
         {
-          menu_verbose ("Failed to look up menu_file for \"%s\"n",
-                        tree->canonical_path);
+          menu_verbose ("Failed to look up menu_file for \"%s\"\n",
+                        tree->absolute_path);
         }
     }
 
   return tree->canonical;
+}
+
+static void
+menu_tree_force_recanonicalize (MenuTree *tree)
+{
+  if (tree->canonical)
+    {
+      menu_tree_force_reload (tree);
+
+      menu_tree_remove_menu_file_monitors (tree);
+
+      g_free (tree->canonical_path);
+      tree->canonical_path = NULL;
+
+      tree->canonical = FALSE;
+    }
 }
 
 MenuTree *
@@ -416,18 +466,28 @@ menu_tree_new (MenuTreeType  type,
 
   tree = g_new0 (MenuTree, 1);
 
-  tree->type         = type;
-  tree->refcount     = 1;
-  tree->canonical    = canonical != FALSE;
+  tree->type     = type;
+  tree->refcount = 1;
 
   if (tree->type == MENU_TREE_BASENAME)
     {
+      g_assert (canonical == FALSE);
       tree->basename = g_strdup (menu_file);
     }
   else
     {
-      tree->canonical_path = g_strdup (menu_file);
-      menu_tree_add_menu_file_monitor (tree, tree->canonical_path);
+      tree->canonical     = canonical != FALSE;
+      tree->absolute_path = g_strdup (menu_file);
+
+      if (tree->canonical)
+	{
+	  tree->canonical_path = g_strdup (menu_file);
+	  menu_tree_add_menu_file_monitor (tree, tree->canonical_path, TRUE);
+	}
+      else
+	{
+	  menu_tree_add_menu_file_monitor (tree, tree->absolute_path, FALSE);
+	}
     }
 
   menu_tree_add_to_cache (tree);
@@ -457,17 +517,15 @@ menu_tree_unref (MenuTree *tree)
 
   menu_tree_remove_from_cache (tree);
 
-  if (tree->canonical_path != NULL)
-    g_free (tree->canonical_path);
-  tree->canonical_path = NULL;
+  menu_tree_force_recanonicalize (tree);
 
   if (tree->basename != NULL)
     g_free (tree->basename);
   tree->basename = NULL;
 
-  menu_tree_remove_menu_file_monitors (tree);
-
-  menu_tree_force_reload (tree);
+  if (tree->absolute_path != NULL)
+    g_free (tree->absolute_path);
+  tree->absolute_path = NULL;
 
   g_slist_foreach (tree->monitors, (GFunc) g_free, NULL);
   g_slist_free (tree->monitors);
@@ -1053,7 +1111,7 @@ load_merge_file (MenuTree       *tree,
       return;
     }
 
-  menu_tree_add_menu_file_monitor (tree, canonical);
+  menu_tree_add_menu_file_monitor (tree, canonical, TRUE);
 
   merge_resolved_children (tree, where, to_merge);
 
@@ -1176,6 +1234,8 @@ resolve_default_app_dirs (MenuTree       *tree,
   const char * const *system_data_dirs;
   int                i;
 
+  add_app_dir (tree, layout, g_get_user_data_dir ());
+
   system_data_dirs = g_get_system_data_dirs ();
 
   i = 0;
@@ -1185,8 +1245,6 @@ resolve_default_app_dirs (MenuTree       *tree,
 
       ++i;
     }
-
-  add_app_dir (tree, layout, g_get_user_data_dir ());
 
   /* remove the now-replaced node */
   menu_layout_node_unlink (layout);
@@ -1219,6 +1277,8 @@ resolve_default_directory_dirs (MenuTree       *tree,
   const char * const *system_data_dirs;
   int          i;
 
+  add_directory_dir (tree, layout, g_get_user_data_dir ());
+
   system_data_dirs = g_get_system_data_dirs ();
 
   i = 0;
@@ -1228,8 +1288,6 @@ resolve_default_directory_dirs (MenuTree       *tree,
 
       ++i;
     }
-
-  add_directory_dir (tree, layout, g_get_user_data_dir ());
 
   /* remove the now-replaced node */
   menu_layout_node_unlink (layout);
@@ -1250,6 +1308,11 @@ resolve_default_merge_dirs (MenuTree       *tree,
 
   merge_name = g_strconcat (menu_name, "-merged", NULL);
 
+  load_merge_dir_with_config_dir (tree,
+                                  g_get_user_config_dir (),
+                                  merge_name,
+                                  layout);
+
   system_config_dirs = g_get_system_config_dirs ();
 
   i = 0;
@@ -1262,11 +1325,6 @@ resolve_default_merge_dirs (MenuTree       *tree,
 
       ++i;
     }
-
-  load_merge_dir_with_config_dir (tree,
-                                  g_get_user_config_dir (),
-                                  merge_name,
-                                  layout);
 
   g_free (merge_name);
 
@@ -1438,6 +1496,8 @@ resolve_kde_legacy_dirs (MenuTree       *tree,
   const char * const *system_data_dirs;
   int                 i;
 
+  add_legacy_dir (tree, layout, g_get_user_data_dir ());
+
   system_data_dirs = g_get_system_data_dirs ();
 
   i = 0;
@@ -1447,8 +1507,6 @@ resolve_kde_legacy_dirs (MenuTree       *tree,
 
       ++i;
     }
-
-  add_legacy_dir (tree, layout, g_get_user_data_dir ());
 
   /* remove the now-replaced node */
   menu_layout_node_unlink (layout);
