@@ -1,6 +1,6 @@
 AC_INIT(libmenu/menu-tree.h)
 
-AM_INIT_AUTOMAKE(gnome-menus, 2.9.91)
+AM_INIT_AUTOMAKE(gnome-menus, 2.9.92)
 AM_CONFIG_HEADER(config.h)
 
 # Before making a release, the LT_VERSION string should be modified.

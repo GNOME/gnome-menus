@@ -1,4 +1,35 @@
 ==============
+Version 2.9.92
+==============
+
+  Fixes
+
+	* Fix issue with file monitoring and subdirs of <AppDir> (Mark)
+	* Fix bug with the <Not> directive (Mark)
+	* Make gnome-menu-spec-test work with menu-spec test framework again (Mark)
+
+  Translators
+
+	* Arafat Medini (ar)
+	* Jordi Mallach (ca)
+	* Martin Willemoes Hansen (da)
+	* Nikos Charonitakis (el)
+	* David Lodge (en_GB)
+	* Ankit Patel (gu)
+	* Laszlo Dvornik (hu)
+	* ahmad riza h nst (id)
+	* Francesco Marletta (it)
+	* Takeshi AIHANA (ja)
+	* Sang-Gju Kim (ko)
+	* Rajeev Shrestha (ne)
+	* Daniel van Eeden (nl)
+	* GNOME PL Team (pl)
+	* Duarte Loreto (pt)
+	* Dan Damian (ro)
+	* Leonid Kanter (ru)
+	* Elian Myftiu (sq)
+
+==============
 Version 2.9.90
 ==============
 
