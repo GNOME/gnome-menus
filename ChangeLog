@@ -1,3 +1,11 @@
+2004-12-10  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(process_layout): mark all entries that match an <Include>
+	rule as "allocated", whether or not they later matched
+	an <Exclude>. New behaviour defined in version 0.9 of
+	the spec.
+
 2004-12-10  Alexander Shopov  <ash@contact.bg>
 
 	* configure.in (ALL_LINGUAS): Added "bg" (Bulgarian)
