@@ -51,6 +51,8 @@ struct MenuTree
   char *absolute_path;
   char *canonical_path;
 
+  MenuTreeFlags flags;
+
   GSList *menu_file_monitors;
 
   MenuLayoutNode *layout;
@@ -106,6 +108,8 @@ struct MenuTreeEntry
 
   DesktopEntry *desktop_entry;
   char         *desktop_file_id;
+
+  guint is_excluded : 1;
 };
 
 struct MenuTreeSeparator
@@ -130,7 +134,8 @@ struct MenuTreeAlias
 
 static MenuTree *menu_tree_new                  (MenuTreeType    type,
 						 const char     *menu_file,
-						 gboolean        canonical);
+						 gboolean        canonical,
+						 MenuTreeFlags   flags);
 static void      menu_tree_load_layout          (MenuTree       *tree);
 static void      menu_tree_force_reload         (MenuTree       *tree);
 static void      menu_tree_build_from_layout    (MenuTree       *tree);
@@ -156,32 +161,42 @@ static void menu_tree_item_unref_and_unset_parent (gpointer itemp);
 static GHashTable *menu_tree_cache = NULL;
 
 static inline char *
-get_cache_key (MenuTree *tree)
+get_cache_key (MenuTree      *tree,
+	       MenuTreeFlags  flags)
 {
+  const char *tree_name;
+
   switch (tree->type)
     {
     case MENU_TREE_ABSOLUTE:
-      return tree->canonical ? tree->canonical_path : tree->absolute_path;
+      tree_name = tree->canonical ? tree->canonical_path : tree->absolute_path;
+      break;
 
     case MENU_TREE_BASENAME:
-      return tree->basename;
+      tree_name = tree->basename;
+      break;
+
+    default:
+      g_assert_not_reached ();
+      break;
     }
 
-  return NULL;
+  return g_strdup_printf ("%s:0x%x", tree_name, flags);
 }
 
 static void
-menu_tree_add_to_cache (MenuTree *tree)
+menu_tree_add_to_cache (MenuTree      *tree,
+			MenuTreeFlags  flags)
 {
   char *cache_key;
 
   if (menu_tree_cache == NULL)
     {
       menu_tree_cache =
-        g_hash_table_new_full (g_str_hash, g_str_equal, NULL, NULL);
+        g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
     }
 
-  cache_key = get_cache_key (tree);
+  cache_key = get_cache_key (tree, flags);
 
   menu_verbose ("Adding menu tree to cache: %s\n", cache_key);
 
@@ -189,21 +204,45 @@ menu_tree_add_to_cache (MenuTree *tree)
 }
 
 static void
-menu_tree_remove_from_cache (MenuTree *tree)
+menu_tree_remove_from_cache (MenuTree      *tree,
+			     MenuTreeFlags  flags)
 {
   char *cache_key;
 
-  cache_key = get_cache_key (tree);
+  cache_key = get_cache_key (tree, flags);
 
   menu_verbose ("Removing menu tree from cache: %s\n", cache_key);
 
   g_hash_table_remove (menu_tree_cache, cache_key);
+
+  g_free (cache_key);
 
   if (g_hash_table_size (menu_tree_cache) == 0)
     {
       g_hash_table_destroy (menu_tree_cache);
       menu_tree_cache = NULL;
     }
+}
+
+static MenuTree *
+menu_tree_lookup_from_cache (const char    *tree_name,
+			     MenuTreeFlags  flags)
+{
+  MenuTree *retval;
+  char     *cache_key;
+
+  if (menu_tree_cache == NULL)
+    return NULL;
+
+  cache_key = g_strdup_printf ("%s:0x%x", tree_name, flags);
+
+  menu_verbose ("Looking up '%s' from menu cache\n", cache_key);
+
+  retval = g_hash_table_lookup (menu_tree_cache, cache_key);
+
+  g_free (cache_key);
+
+  return retval ? menu_tree_ref (retval) : NULL;
 }
 
 typedef enum
@@ -355,7 +394,8 @@ menu_tree_remove_menu_file_monitors (MenuTree *tree)
 }
 
 static MenuTree *
-menu_tree_lookup_absolute (const char *absolute)
+menu_tree_lookup_absolute (const char    *absolute,
+			   MenuTreeFlags  flags)
 {
   MenuTree   *tree;
   gboolean    canonical;
@@ -364,9 +404,8 @@ menu_tree_lookup_absolute (const char *absolute)
 
   menu_verbose ("Looking up absolute path in tree cache: \"%s\"\n", absolute);
 
-  if (menu_tree_cache != NULL &&
-      (tree = g_hash_table_lookup (menu_tree_cache, absolute)) != NULL)
-    return menu_tree_ref (tree);
+  if ((tree = menu_tree_lookup_from_cache (absolute, flags)) != NULL)
+    return tree;
 
   canonical = TRUE;
   canonical_path = freeme = menu_canonicalize_file_name (absolute, FALSE);
@@ -378,11 +417,10 @@ menu_tree_lookup_absolute (const char *absolute)
       canonical_path = absolute;
     }
 
-  if (menu_tree_cache &&
-      (tree = g_hash_table_lookup (menu_tree_cache, canonical_path)) != NULL)
-    return menu_tree_ref (tree);
+  if ((tree = menu_tree_lookup_from_cache (canonical_path, flags)) != NULL)
+    return tree;
 
-  tree = menu_tree_new (MENU_TREE_ABSOLUTE, canonical_path, canonical);
+  tree = menu_tree_new (MENU_TREE_ABSOLUTE, canonical_path, canonical, flags);
 
   g_free (freeme);
 
@@ -390,17 +428,17 @@ menu_tree_lookup_absolute (const char *absolute)
 }
 
 static MenuTree *
-menu_tree_lookup_basename (const char *basename)
+menu_tree_lookup_basename (const char    *basename,
+			   MenuTreeFlags  flags)
 {
   MenuTree *tree;
 
   menu_verbose ("Looking up menu file in tree cache: \"%s\"\n", basename);
 
-  if (menu_tree_cache &&
-      (tree = g_hash_table_lookup (menu_tree_cache, basename)) != NULL)
-    return menu_tree_ref (tree);
+  if ((tree = menu_tree_lookup_from_cache (basename, flags)) != NULL)
+    return tree;
 
-  return menu_tree_new (MENU_TREE_BASENAME, basename, FALSE);
+  return menu_tree_new (MENU_TREE_BASENAME, basename, FALSE, flags);
 }
 
 static gboolean
@@ -484,7 +522,7 @@ menu_tree_canonicalize_path (MenuTree *tree)
 	  /*
 	   * Replace the cache entry with the canonicalized version
 	   */
-          menu_tree_remove_from_cache (tree);
+          menu_tree_remove_from_cache (tree, tree->flags);
 
           menu_tree_remove_menu_file_monitors (tree);
           menu_tree_add_menu_file_monitor (tree,
@@ -493,7 +531,7 @@ menu_tree_canonicalize_path (MenuTree *tree)
 
           tree->canonical = TRUE;
 
-          menu_tree_add_to_cache (tree);
+          menu_tree_add_to_cache (tree, tree->flags);
         }
       else
         {
@@ -522,16 +560,19 @@ menu_tree_force_recanonicalize (MenuTree *tree)
 }
 
 MenuTree *
-menu_tree_lookup (const char *menu_file)
+menu_tree_lookup (const char    *menu_file,
+		  MenuTreeFlags  flags)
 {
   MenuTree *retval;
 
   g_return_val_if_fail (menu_file != NULL, NULL);
 
+  flags &= MENU_TREE_FLAGS_MASK;
+
   if (g_path_is_absolute (menu_file))
-    retval = menu_tree_lookup_absolute (menu_file);
+    retval = menu_tree_lookup_absolute (menu_file, flags);
   else
-    retval = menu_tree_lookup_basename (menu_file);
+    retval = menu_tree_lookup_basename (menu_file, flags);
 
   g_assert (retval != NULL);
 
@@ -539,15 +580,17 @@ menu_tree_lookup (const char *menu_file)
 }
 
 static MenuTree *
-menu_tree_new (MenuTreeType  type,
-               const char   *menu_file,
-               gboolean      canonical)
+menu_tree_new (MenuTreeType   type,
+               const char    *menu_file,
+               gboolean       canonical,
+	       MenuTreeFlags  flags)
 {
   MenuTree *tree;
 
   tree = g_new0 (MenuTree, 1);
 
   tree->type     = type;
+  tree->flags    = flags;
   tree->refcount = 1;
 
   if (tree->type == MENU_TREE_BASENAME)
@@ -575,7 +618,7 @@ menu_tree_new (MenuTreeType  type,
 	}
     }
 
-  menu_tree_add_to_cache (tree);
+  menu_tree_add_to_cache (tree, tree->flags);
 
   return tree;
 }
@@ -605,7 +648,7 @@ menu_tree_unref (MenuTree *tree)
   tree->user_data = NULL;
   tree->dnotify   = NULL;
 
-  menu_tree_remove_from_cache (tree);
+  menu_tree_remove_from_cache (tree, tree->flags);
 
   menu_tree_force_recanonicalize (tree);
 
@@ -980,6 +1023,14 @@ menu_tree_entry_get_desktop_file_id (MenuTreeEntry *entry)
   return entry->desktop_file_id;
 }
 
+gboolean
+menu_tree_entry_get_is_excluded (MenuTreeEntry *entry)
+{
+  g_return_val_if_fail (entry != NULL, FALSE);
+
+  return entry->is_excluded;
+}
+
 MenuTreeDirectory *
 menu_tree_header_get_directory (MenuTreeHeader *header)
 {
@@ -1187,7 +1238,8 @@ menu_tree_alias_finalize (MenuTreeAlias *alias)
 static MenuTreeEntry *
 menu_tree_entry_new (MenuTreeDirectory *parent,
 		     DesktopEntry      *desktop_entry,
-                     const char        *desktop_file_id)
+                     const char        *desktop_file_id,
+		     gboolean           is_excluded)
 {
   MenuTreeEntry *retval;
 
@@ -1199,6 +1251,7 @@ menu_tree_entry_new (MenuTreeDirectory *parent,
 
   retval->desktop_entry   = desktop_entry_ref (desktop_entry);
   retval->desktop_file_id = g_strdup (desktop_file_id);
+  retval->is_excluded     = is_excluded != FALSE;
 
   return retval;
 }
@@ -2848,12 +2901,25 @@ entries_listify_foreach (const char        *desktop_file_id,
                          DesktopEntry      *desktop_entry,
                          MenuTreeDirectory *directory)
 {
-  MenuTreeEntry *entry;
+  directory->entries =
+    g_slist_prepend (directory->entries,
+		     menu_tree_entry_new (directory,
+					  desktop_entry,
+					  desktop_file_id,
+					  FALSE));
+}
 
-  entry = menu_tree_entry_new (directory, desktop_entry, desktop_file_id);
-
-  directory->entries = g_slist_prepend (directory->entries,
-                                        entry);
+static void
+excluded_entries_listify_foreach (const char        *desktop_file_id,
+				  DesktopEntry      *desktop_entry,
+				  MenuTreeDirectory *directory)
+{
+  directory->entries =
+    g_slist_prepend (directory->entries,
+		     menu_tree_entry_new (directory,
+					  desktop_entry,
+					  desktop_file_id,
+					  TRUE));
 }
 
 static MenuTreeDirectory *
@@ -2867,8 +2933,9 @@ process_layout (MenuTree          *tree,
   MenuLayoutNode     *layout_iter;
   MenuTreeDirectory  *directory;
   DesktopEntrySet    *entries;
-  gboolean            deleted;
   DesktopEntrySet    *allocated_set;
+  DesktopEntrySet    *excluded_set;
+  gboolean            deleted;
   gboolean            only_unallocated;
   GSList             *tmp;
 
@@ -2889,6 +2956,11 @@ process_layout (MenuTree          *tree,
 
   entries = desktop_entry_set_new ();
   allocated_set = desktop_entry_set_new ();
+
+  if (tree->flags & MENU_TREE_FLAGS_INCLUDE_EXCLUDED)
+    excluded_set = desktop_entry_set_new ();
+  else
+    excluded_set = NULL;
 
   layout_iter = menu_layout_node_get_children (layout);
   while (layout_iter != NULL)
@@ -2965,8 +3037,10 @@ process_layout (MenuTree          *tree,
                 rule_set = process_include_rules (rule, app_dirs);
                 if (rule_set != NULL)
                   {
-                    desktop_entry_set_subtract (entries, rule_set);
-                    desktop_entry_set_unref (rule_set);
+		    if (excluded_set != NULL)
+		      desktop_entry_set_union (excluded_set, rule_set);
+		    desktop_entry_set_subtract (entries, rule_set);
+		    desktop_entry_set_unref (rule_set);
                   }
 
                 rule = menu_layout_node_get_next (rule);
@@ -3074,6 +3148,8 @@ process_layout (MenuTree          *tree,
 
   if (deleted)
     {
+      if (excluded_set != NULL)
+	desktop_entry_set_unref (excluded_set);
       desktop_entry_set_unref (entries);
       menu_tree_item_unref (directory);
       return NULL;
@@ -3083,6 +3159,14 @@ process_layout (MenuTree          *tree,
                              (DesktopEntrySetForeachFunc) entries_listify_foreach,
                              directory);
   desktop_entry_set_unref (entries);
+
+  if (excluded_set != NULL)
+    {
+      desktop_entry_set_foreach (excluded_set,
+				 (DesktopEntrySetForeachFunc) excluded_entries_listify_foreach,
+				 directory);
+      desktop_entry_set_unref (excluded_set);
+    }
 
   tmp = directory->entries;
   while (tmp != NULL)
@@ -3135,7 +3219,8 @@ process_layout (MenuTree          *tree,
 }
 
 static void
-process_only_unallocated (MenuTreeDirectory *directory,
+process_only_unallocated (MenuTree          *tree,
+			  MenuTreeDirectory *directory,
 			  DesktopEntrySet   *allocated)
 {
   GSList *tmp;
@@ -3168,16 +3253,18 @@ process_only_unallocated (MenuTreeDirectory *directory,
     {
       MenuTreeDirectory *subdir = tmp->data;
 
-      process_only_unallocated (subdir, allocated);
+      process_only_unallocated (tree, subdir, allocated);
 
       tmp = tmp->next;
    }
 }
 
-static void process_layout_info (MenuTreeDirectory *directory);
+static void process_layout_info (MenuTree          *tree,
+				 MenuTreeDirectory *directory);
 
 static void
-merge_subdir (MenuTreeDirectory *directory,
+merge_subdir (MenuTree          *tree,
+	      MenuTreeDirectory *directory,
 	      MenuTreeDirectory *subdir,
 	      MenuLayoutValues  *layout_values)
 {
@@ -3186,13 +3273,13 @@ merge_subdir (MenuTreeDirectory *directory,
   menu_verbose ("Merging subdir '%s' in directory '%s'\n",
 		subdir->name, directory->name);
 
-  process_layout_info (subdir);
+  process_layout_info (tree, subdir);
 
   removed = FALSE;
 
   if (subdir->contents == NULL)
     {
-      if (!layout_values->show_empty)
+      if (!(tree->flags & MENU_TREE_FLAGS_SHOW_EMPTY) && !layout_values->show_empty)
 	{
 	  menu_verbose ("Not showing empty menu '%s'\n", subdir->name);
 	  removed = TRUE;
@@ -3211,7 +3298,7 @@ merge_subdir (MenuTreeDirectory *directory,
 			subdir->name,
 			item->type == MENU_TREE_ITEM_ENTRY ?
 			menu_tree_entry_get_name (MENU_TREE_ENTRY (item)) :
-			MENU_TREE_DIRECTORY (item)->name);
+			MENU_TREE_DIRECTORY (directory)->name);
 
 	  alias = menu_tree_alias_new (directory, subdir, item);
 
@@ -3263,7 +3350,8 @@ merge_subdir (MenuTreeDirectory *directory,
 }
 
 static void
-merge_subdir_by_name (MenuTreeDirectory *directory,
+merge_subdir_by_name (MenuTree          *tree,
+		      MenuTreeDirectory *directory,
 		      const char        *subdir_name,
 		      MenuLayoutValues  *values)
 {
@@ -3281,7 +3369,7 @@ merge_subdir_by_name (MenuTreeDirectory *directory,
       if (!strcmp (subdir->name, subdir_name))
 	{
 	  directory->subdirs = g_slist_delete_link (directory->subdirs, tmp);
-	  merge_subdir (directory, subdir, values);
+	  merge_subdir (tree, directory, subdir, values);
 	  menu_tree_item_unref (subdir);
 	}
       
@@ -3290,7 +3378,8 @@ merge_subdir_by_name (MenuTreeDirectory *directory,
 }
 
 static void
-merge_entry (MenuTreeDirectory *directory,
+merge_entry (MenuTree          *tree,
+	     MenuTreeDirectory *directory,
 	     MenuTreeEntry     *entry)
 {
   menu_verbose ("Merging entry '%s' in directory '%s'\n",
@@ -3301,7 +3390,8 @@ merge_entry (MenuTreeDirectory *directory,
 }
 
 static void
-merge_entry_by_id (MenuTreeDirectory *directory,
+merge_entry_by_id (MenuTree          *tree,
+		   MenuTreeDirectory *directory,
 		   const char        *file_id)
 {
   GSList *tmp;
@@ -3318,7 +3408,7 @@ merge_entry_by_id (MenuTreeDirectory *directory,
       if (!strcmp (entry->desktop_file_id, file_id))
 	{
 	  directory->entries = g_slist_delete_link (directory->entries, tmp);
-	  merge_entry (directory, entry);
+	  merge_entry (tree, directory, entry);
 	  menu_tree_item_unref (entry);
 	}
       
@@ -3327,7 +3417,8 @@ merge_entry_by_id (MenuTreeDirectory *directory,
 }
 
 static void
-merge_subdirs (MenuTreeDirectory *directory)
+merge_subdirs (MenuTree          *tree,
+	       MenuTreeDirectory *directory)
 {
   GSList *tmp;
 
@@ -3341,7 +3432,7 @@ merge_subdirs (MenuTreeDirectory *directory)
     {
       MenuTreeDirectory *subdir = tmp->data;
 
-      merge_subdir (directory, subdir, &directory->default_layout_values);
+      merge_subdir (tree, directory, subdir, &directory->default_layout_values);
       menu_tree_item_unref (subdir);
 
       tmp = tmp->next;
@@ -3352,7 +3443,8 @@ merge_subdirs (MenuTreeDirectory *directory)
 }
 
 static void
-merge_entries (MenuTreeDirectory *directory)
+merge_entries (MenuTree          *tree,
+	       MenuTreeDirectory *directory)
 {
   GSList *tmp;
 
@@ -3366,7 +3458,7 @@ merge_entries (MenuTreeDirectory *directory)
     {
       MenuTreeEntry *entry = tmp->data;
 
-      merge_entry (directory, entry);
+      merge_entry (tree, directory, entry);
       menu_tree_item_unref (entry);
 
       tmp = tmp->next;
@@ -3377,7 +3469,8 @@ merge_entries (MenuTreeDirectory *directory)
 }
 
 static void
-merge_subdirs_and_entries (MenuTreeDirectory *directory)
+merge_subdirs_and_entries (MenuTree          *tree,
+			   MenuTreeDirectory *directory)
 {
   GSList *items;
   GSList *tmp;
@@ -3400,13 +3493,14 @@ merge_subdirs_and_entries (MenuTreeDirectory *directory)
 
       if (menu_tree_item_get_type (item) == MENU_TREE_ITEM_DIRECTORY)
 	{
-	  merge_subdir (directory,
+	  merge_subdir (tree,
+			directory,
 			MENU_TREE_DIRECTORY (item),
 			&directory->default_layout_values);
 	}
       else
 	{
-	  merge_entry (directory, MENU_TREE_ENTRY (item));
+	  merge_entry (tree, directory, MENU_TREE_ENTRY (item));
 	}
 
       menu_tree_item_unref (item);
@@ -3465,7 +3559,8 @@ get_layout_info (MenuTreeDirectory *directory)
 }
 
 static void
-process_layout_info (MenuTreeDirectory *directory)
+process_layout_info (MenuTree          *tree,
+		     MenuTreeDirectory *directory)
 {
   GSList *layout_info;
 
@@ -3479,8 +3574,8 @@ process_layout_info (MenuTreeDirectory *directory)
 
   if ((layout_info = get_layout_info (directory)) == NULL)
     {
-      merge_subdirs (directory);
-      merge_entries (directory);
+      merge_subdirs (tree, directory);
+      merge_entries (tree, directory);
     }
   else
     {
@@ -3501,14 +3596,16 @@ process_layout_info (MenuTreeDirectory *directory)
 					  &layout_values,
 					  &directory->default_layout_values);
 
-		merge_subdir_by_name (directory,
+		merge_subdir_by_name (tree,
+				      directory,
 				      menu_layout_node_get_content (node),
 				      &layout_values);
 	      }
 	      break;
 
 	    case MENU_LAYOUT_NODE_FILENAME: 
-	      merge_entry_by_id (directory,
+	      merge_entry_by_id (tree,
+				 directory,
 				 menu_layout_node_get_content (node));
 	      break;
 
@@ -3525,15 +3622,15 @@ process_layout_info (MenuTreeDirectory *directory)
 		  break;
 
 		case MENU_LAYOUT_MERGE_MENUS:
-		  merge_subdirs (directory);
+		  merge_subdirs (tree, directory);
 		  break;
 
 		case MENU_LAYOUT_MERGE_FILES:
-		  merge_entries (directory);
+		  merge_entries (tree, directory);
 		  break;
 
 		case MENU_LAYOUT_MERGE_ALL:
-		  merge_subdirs_and_entries (directory);
+		  merge_subdirs_and_entries (tree, directory);
 		  break;
 
 		default:
@@ -3609,9 +3706,9 @@ menu_tree_build_from_layout (MenuTree *tree)
                                allocated);
   if (tree->root)
     {
-      process_only_unallocated (tree->root, allocated);
+      process_only_unallocated (tree, tree->root, allocated);
 
-      process_layout_info (tree->root);
+      process_layout_info (tree, tree->root);
 
       menu_layout_node_root_add_entries_monitor (tree->layout,
                                                  (MenuLayoutNodeEntriesChangedFunc) handle_entries_changed,

@@ -63,6 +63,10 @@ static PyObject *pygmenu_tree_item_type_separator = NULL;
 static PyObject *pygmenu_tree_item_type_header    = NULL;
 static PyObject *pygmenu_tree_item_type_alias     = NULL;
 
+static PyObject *pygmenu_tree_flags_none             = NULL;
+static PyObject *pygmenu_tree_flags_include_excluded = NULL;
+static PyObject *pygmenu_tree_flags_show_empty       = NULL;
+
 static void
 pygmenu_tree_item_dealloc (PyGMenuTreeItem *self)
 {
@@ -652,6 +656,27 @@ pygmenu_tree_entry_get_desktop_file_id (PyObject *self,
 }
 
 static PyObject *
+pygmenu_tree_entry_get_is_excluded (PyObject *self,
+				    PyObject *args)
+{
+  PyGMenuTreeEntry *entry;
+  PyObject         *retval;
+
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Entry.get_is_excluded"))
+	return NULL;
+    }
+
+  entry = (PyGMenuTreeEntry *) self;
+
+  retval = menu_tree_entry_get_is_excluded (MENU_TREE_ENTRY (entry->item)) ? Py_True : Py_False;
+  Py_INCREF (retval);
+
+  return retval;
+}
+
+static PyObject *
 pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 			     PyObject         *py_attr)
 {
@@ -663,7 +688,7 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 
       if (!strcmp (attr, "__members__"))
 	{
-	  return Py_BuildValue("[ssssssss]",
+	  return Py_BuildValue("[sssssssss]",
 			       "type",
 			       "parent",
 			       "name",
@@ -671,7 +696,8 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 			       "icon",
 			       "exec_info",
 			       "desktop_file_path",
-			       "desktop_file_id");
+			       "desktop_file_id",
+			       "is_excluded");
 	}
       else if (!strcmp (attr, "type"))
 	{
@@ -705,6 +731,10 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 	{
 	  return pygmenu_tree_entry_get_desktop_file_id ((PyObject *) self, NULL);
 	}
+      else if (!strcmp (attr, "is_excluded"))
+	{
+	  return pygmenu_tree_entry_get_is_excluded ((PyObject *) self, NULL);
+	}
     }
 
   return PyObject_GenericGetAttr ((PyObject *) self, py_attr);
@@ -718,6 +748,7 @@ static struct PyMethodDef pygmenu_tree_entry_methods[] =
   { "get_exec",              pygmenu_tree_entry_get_exec,              METH_VARARGS },
   { "get_desktop_file_path", pygmenu_tree_entry_get_desktop_file_path, METH_VARARGS },
   { "get_desktop_file_id",   pygmenu_tree_entry_get_desktop_file_id,   METH_VARARGS },
+  { "get_is_excluded",       pygmenu_tree_entry_get_is_excluded,       METH_VARARGS },
   { NULL,                    NULL,                                     0            }
 };
 
@@ -1462,14 +1493,17 @@ pygmenu_lookup_tree (PyObject *self,
   char        *menu_file;
   MenuTree    *tree;
   PyGMenuTree *retval;
+  int          flags;
 
-  if (!PyArg_ParseTuple (args, "s:gmenu.lookup_tree", &menu_file))
+  flags = MENU_TREE_FLAGS_NONE;
+
+  if (!PyArg_ParseTuple (args, "s|i:gmenu.lookup_tree", &menu_file, &flags))
     return NULL;
 
   if (!gnome_vfs_initialized ())
     gnome_vfs_init ();
 
-  if (!(tree = menu_tree_lookup (menu_file)))
+  if (!(tree = menu_tree_lookup (menu_file, flags)))
     {
       Py_INCREF (Py_None);
       return Py_None;
@@ -1528,4 +1562,8 @@ initgmenu (void)
   REGISTER_ENUM_CONSTANT (pygmenu_tree_item_type_separator, MENU_TREE_ITEM_SEPARATOR, "TYPE_SEPARATOR")
   REGISTER_ENUM_CONSTANT (pygmenu_tree_item_type_header,    MENU_TREE_ITEM_HEADER,    "TYPE_HEADER")
   REGISTER_ENUM_CONSTANT (pygmenu_tree_item_type_alias,     MENU_TREE_ITEM_ALIAS,     "TYPE_ALIAS")
+
+  REGISTER_ENUM_CONSTANT (pygmenu_tree_flags_none,             MENU_TREE_FLAGS_NONE,             "FLAGS_NONE")
+  REGISTER_ENUM_CONSTANT (pygmenu_tree_flags_include_excluded, MENU_TREE_FLAGS_INCLUDE_EXCLUDED, "FLAGS_INCLUDE_EXCLUDED")
+  REGISTER_ENUM_CONSTANT (pygmenu_tree_flags_show_empty,       MENU_TREE_FLAGS_SHOW_EMPTY,       "FLAGS_SHOW_EMPTY")
 }

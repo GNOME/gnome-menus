@@ -28,9 +28,10 @@ libgnome_menu_la_SOURCES =		\
 libgnome_menu_la_LIBADD = 		\
 	$(LIBMENU_LIBS)			\
 	$(NULL)
-libgnome_menu_la_LDFLAGS =		\
-	-info $(LIB_MENU_LT_VERSION)	\
-	-no-undefined			\
+libgnome_menu_la_LDFLAGS =			\
+	-version-info $(LIB_MENU_LT_VERSION)	\
+	-no-undefined				\
+	-export-symbols-regex menu_tree		\
 	$(NULL)
 
 libgnome_menu_includedir = $(includedir)/gnome-menus

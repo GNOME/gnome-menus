@@ -1,5 +1,34 @@
 2005-04-06  Mark McLoughlin  <mark@skynet.ie>
 
+	Add a flags argument to menu_tree_lookup () to allow specifying
+	that the tree should include excluded items or empty submenus
+
+	Also add menu_tree_entry_get_is_excluded ()
+
+	Partially based on a patch from Christian Neumair <chris@gnome-de.org>
+	in bug #168526
+
+	* libmenu/Makefile.am: correctly pass the version info to libtool
+	and also specify an export-symbols regex.
+	
+	* libmenu/menu-tree.[ch]:
+	(get_cache_key), (menu_tree_add_to_cache),
+	(menu_tree_remove_from_cache), (menu_tree_lookup_from_cache),
+	(menu_tree_lookup_absolute), (menu_tree_lookup_basename): include
+	the flags in the menu tree cache key.
+	(menu_tree_lookup): add a "flags" argument.
+	(menu_tree_entry_get_is_excluded): new function.
+	(process_layout): include excluded entries in the entries list
+	if the "include excluded" flag is set.
+	(merge_subdir): include empty submenus if the "show empty" flag
+	is set.
+
+	* python/gmenu.c: add support for the new API.
+	
+	* util/test-menu-spec.c: add a --include-excluded option.
+
+2005-04-06  Mark McLoughlin  <mark@skynet.ie>
+
 	* python/gmenu.c:
 	(pygmenu_tree_directory_wrap), (pygmenu_tree_entry_wrap),
 	(pygmenu_tree_separator_wrap), (pygmenu_tree_header_wrap),

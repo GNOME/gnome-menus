@@ -56,7 +56,16 @@ typedef enum
 #define MENU_TREE_HEADER(i)    ((MenuTreeHeader *)(i))
 #define MENU_TREE_ALIAS(i)     ((MenuTreeAlias *)(i))
 
-MenuTree *menu_tree_lookup (const char *menu_file);
+typedef enum
+{
+  MENU_TREE_FLAGS_NONE             = 0,
+  MENU_TREE_FLAGS_INCLUDE_EXCLUDED = 1 << 0,
+  MENU_TREE_FLAGS_SHOW_EMPTY       = 1 << 2,
+  MENU_TREE_FLAGS_MASK             = 0x03
+} MenuTreeFlags;
+
+MenuTree *menu_tree_lookup (const char    *menu_file,
+			    MenuTreeFlags  flags);
 
 MenuTree *menu_tree_ref   (MenuTree *tree);
 void      menu_tree_unref (MenuTree *tree);
@@ -99,6 +108,8 @@ const char *menu_tree_entry_get_exec    (MenuTreeEntry *entry);
 
 const char *menu_tree_entry_get_desktop_file_path (MenuTreeEntry *entry);
 const char *menu_tree_entry_get_desktop_file_id   (MenuTreeEntry *entry);
+
+gboolean menu_tree_entry_get_is_excluded (MenuTreeEntry *entry);
 
 MenuTreeDirectory *menu_tree_header_get_directory (MenuTreeHeader *header);
 
