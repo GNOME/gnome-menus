@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
-"PO-Revision-Date: 2004-11-14 01:44-0400\n"
+"POT-Creation-Date: 2005-01-10 01:40-0500\n"
+"PO-Revision-Date: 2005-01-10 01:44-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@FreeBSD.org>\n"
 "MIME-Version: 1.0\n"
@@ -110,12 +110,12 @@ msgid "Preferences"
 msgstr "Preferences"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Change system-wide settings (affects all users)"
+msgid "Administration"
+msgstr "Administration"
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "System Settings"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Change system-wide settings (affects all users)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
