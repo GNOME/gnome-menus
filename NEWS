@@ -1,4 +1,24 @@
 ==============
+Version 2.10.1
+==============
+
+  Fixes
+
+	* Add support for new "type" argument to <MergeFile> (Mark)
+	* Monitor <MergeDir>s for changes (Mark)
+	* Make user desktop entries override system ones (Mark)
+	* Make .directory files in <LegacyDir>s be pulled in (Mark)
+	* Fix weirdess with [KDE Desktop Entry] files (Mark)
+	* Fix <LegacyDir>s which don't contain any entries in the toplevel (Mark)
+	* Make sure items in <LegacyDir>s as allocated (Mark)
+	* Make <LegacyDir>s with a prefix work correctly (Mark)
+
+  Translators
+
+	* Adam Weinberger (en_CA)
+	* Daniel van Eeden (nl)
+
+==============
 Version 2.10.0
 ==============
 
