@@ -1,3 +1,10 @@
+2004-01-14  Vincent Untz  <vincent@vuntz.net>
+
+	* layout/applications.menu: do not include the Core category in the
+	Other menu. We wanted .desktop files from the Core category to be
+	hidden.
+	Fix bug #164000
+
 2005-01-12  Maxim Dziumanenko <mvd@mylinux.com.ua>
 
 	* configure.in: Added "uk" (Ukrainian) to ALL_LINGUAS.
