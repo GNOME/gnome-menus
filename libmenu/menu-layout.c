@@ -35,6 +35,7 @@
 typedef struct MenuLayoutNodeMenu      MenuLayoutNodeMenu;
 typedef struct MenuLayoutNodeRoot      MenuLayoutNodeRoot;
 typedef struct MenuLayoutNodeLegacyDir MenuLayoutNodeLegacyDir;
+typedef struct MenuLayoutNodeMergeFile MenuLayoutNodeMergeFile;
 
 struct MenuLayoutNode
 {
@@ -77,6 +78,13 @@ struct MenuLayoutNodeLegacyDir
   MenuLayoutNode node;
 
   char *prefix;
+};
+
+struct MenuLayoutNodeMergeFile
+{
+  MenuLayoutNode node;
+
+  MenuMergeFileType type;
 };
 
 typedef struct
@@ -219,6 +227,10 @@ menu_layout_node_new (MenuLayoutNodeType type)
       node = (MenuLayoutNode*) g_new0 (MenuLayoutNodeRoot, 1);
       break;
 
+    case MENU_LAYOUT_NODE_MERGE_FILE:
+      node = (MenuLayoutNode *) g_new0 (MenuLayoutNodeMergeFile, 1);
+      break;
+
     default:
       node = g_new0 (MenuLayoutNode, 1);
       break;
@@ -263,6 +275,15 @@ menu_layout_node_copy (MenuLayoutNode *node)
         MenuLayoutNodeLegacyDir *copy_legacy = (MenuLayoutNodeLegacyDir *) copy;
 
         copy_legacy->prefix = g_strdup (legacy->prefix);
+      }
+      break;
+
+    case MENU_LAYOUT_NODE_MERGE_FILE:
+      {
+        MenuLayoutNodeMergeFile *merge_file      = (MenuLayoutNodeMergeFile *) node;
+        MenuLayoutNodeMergeFile *copy_merge_file = (MenuLayoutNodeMergeFile *) copy;
+
+        copy_merge_file->type = merge_file->type;
       }
       break;
 
@@ -580,6 +601,18 @@ menu_layout_node_root_get_name (MenuLayoutNode *node)
 }
 
 const char *
+menu_layout_node_root_get_basedir (MenuLayoutNode *node)
+{
+  MenuLayoutNodeRoot *nr;
+
+  g_return_val_if_fail (node->type == MENU_LAYOUT_NODE_ROOT, NULL);
+
+  nr = (MenuLayoutNodeRoot*) node;
+
+  return nr->basedir;
+}
+
+const char *
 menu_layout_node_menu_get_name (MenuLayoutNode *node)
 {
   MenuLayoutNodeMenu *nm;
@@ -837,6 +870,31 @@ menu_layout_node_legacy_dir_set_prefix (MenuLayoutNode *node,
 
   g_free (legacy->prefix);
   legacy->prefix = g_strdup (prefix);
+}
+
+MenuMergeFileType
+menu_layout_node_merge_file_get_type (MenuLayoutNode *node)
+{
+  MenuLayoutNodeMergeFile *merge_file;
+
+  g_return_val_if_fail (node->type == MENU_LAYOUT_NODE_MERGE_FILE, FALSE);
+
+  merge_file = (MenuLayoutNodeMergeFile *) node;
+
+  return merge_file->type;
+}
+
+void
+menu_layout_node_merge_file_set_type (MenuLayoutNode    *node,
+				      MenuMergeFileType  type)
+{
+  MenuLayoutNodeMergeFile *merge_file;
+
+  g_return_if_fail (node->type == MENU_LAYOUT_NODE_MERGE_FILE);
+
+  merge_file = (MenuLayoutNodeMergeFile *) node;
+
+  merge_file->type = type;
 }
 
 void
@@ -1203,6 +1261,25 @@ start_menu_child_element (MenuParser           *parser,
 
       menu_layout_node_legacy_dir_set_prefix (parser->stack_top, prefix);
     }
+  else if (ELEMENT_IS ("MergeFile"))
+    {
+      const char *type;
+
+      push_node (parser, MENU_LAYOUT_NODE_MERGE_FILE);
+
+      if (!locate_attributes (context, element_name,
+                              attribute_names, attribute_values,
+                              error,
+                              "type", &type,
+                              NULL))
+        return;
+
+      if (type != NULL && strcmp (type, "parent") == 0)
+	{
+	  menu_layout_node_merge_file_set_type (parser->stack_top,
+						MENU_MERGE_FILE_TYPE_PARENT);
+	}
+    }
   else if (ELEMENT_IS ("DefaultLayout"))
     {
       const char *show_empty;
@@ -1281,10 +1358,6 @@ start_menu_child_element (MenuParser           *parser,
       else if (ELEMENT_IS ("Exclude"))
         {
           push_node (parser, MENU_LAYOUT_NODE_EXCLUDE);
-        }
-      else if (ELEMENT_IS ("MergeFile"))
-        {
-          push_node (parser, MENU_LAYOUT_NODE_MERGE_FILE);
         }
       else if (ELEMENT_IS ("MergeDir"))
         {
@@ -1700,7 +1773,6 @@ end_element_handler (GMarkupParseContext  *context,
     case MENU_LAYOUT_NODE_DIRECTORY:
     case MENU_LAYOUT_NODE_FILENAME:
     case MENU_LAYOUT_NODE_CATEGORY:
-    case MENU_LAYOUT_NODE_MERGE_FILE:
     case MENU_LAYOUT_NODE_MERGE_DIR:
     case MENU_LAYOUT_NODE_LEGACY_DIR:
     case MENU_LAYOUT_NODE_OLD:
@@ -1746,6 +1818,7 @@ end_element_handler (GMarkupParseContext  *context,
     case MENU_LAYOUT_NODE_DEFAULT_LAYOUT:
     case MENU_LAYOUT_NODE_SEPARATOR:
     case MENU_LAYOUT_NODE_MERGE:
+    case MENU_LAYOUT_NODE_MERGE_FILE:
       break;
 
     case MENU_LAYOUT_NODE_MOVE:

@@ -68,6 +68,13 @@ typedef enum
   MENU_LAYOUT_NODE_MERGE
 } MenuLayoutNodeType;
 
+typedef enum
+{
+  MENU_MERGE_FILE_TYPE_PATH = 0,
+  MENU_MERGE_FILE_TYPE_PARENT
+} MenuMergeFileType;
+
+
 MenuLayoutNode *menu_layout_load (const char  *filename,
                                   GError     **error);
 
@@ -101,7 +108,8 @@ void        menu_layout_node_set_content (MenuLayoutNode *node,
 
 char *menu_layout_node_get_content_as_path (MenuLayoutNode *node);
 
-const char *menu_layout_node_root_get_name (MenuLayoutNode *node);
+const char *menu_layout_node_root_get_name    (MenuLayoutNode *node);
+const char *menu_layout_node_root_get_basedir (MenuLayoutNode *node);
 
 const char         *menu_layout_node_menu_get_name           (MenuLayoutNode *node);
 EntryDirectoryList *menu_layout_node_menu_get_app_dirs       (MenuLayoutNode *node);
@@ -113,6 +121,10 @@ const char *menu_layout_node_move_get_new (MenuLayoutNode *node);
 const char *menu_layout_node_legacy_dir_get_prefix (MenuLayoutNode *node);
 void        menu_layout_node_legacy_dir_set_prefix (MenuLayoutNode *node,
                                                     const char     *prefix);
+
+MenuMergeFileType menu_layout_node_merge_file_get_type (MenuLayoutNode    *node);
+void              menu_layout_node_merge_file_set_type (MenuLayoutNode    *node,
+							MenuMergeFileType  type);
 
 typedef void (* MenuLayoutNodeEntriesChangedFunc) (MenuLayoutNode *node,
                                                    gpointer        user_data);
