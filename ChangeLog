@@ -1,3 +1,13 @@
+2005-03-24  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix issue where you could end up with more than one
+	menu with the same name - bug #171366
+
+	* libmenu/menu-tree.c: (menu_tree_strip_duplicate_children):
+	When deleting an item from the list, make sure our prev pointer
+	doesn't point to the deleted one so that we catch any further
+	duplicates.
+
 2005-03-23  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: bump library soname.

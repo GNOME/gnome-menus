@@ -2209,6 +2209,8 @@ menu_tree_strip_duplicate_children (MenuTree       *tree,
   tmp = simple_nodes;
   while (tmp != NULL)
     {
+      GSList *next = tmp->next;
+
       if (prev)
         {
           MenuLayoutNode *p = prev->data;
@@ -2218,11 +2220,13 @@ menu_tree_strip_duplicate_children (MenuTree       *tree,
             {
               /* nuke it! */
               menu_layout_node_unlink (n);
+	      simple_nodes = g_slist_delete_link (simple_nodes, tmp);
+	      tmp = prev;
             }
         }
 
       prev = tmp;
-      tmp = tmp->next;
+      tmp = next;
     }
 
   g_slist_free (simple_nodes);
@@ -2233,12 +2237,14 @@ menu_tree_strip_duplicate_children (MenuTree       *tree,
    * the list is backward.
    */
   menu_layout_nodes = g_slist_sort (menu_layout_nodes,
-                             node_menu_compare_func);
+				    node_menu_compare_func);
 
   prev = NULL;
   tmp = menu_layout_nodes;
   while (tmp != NULL)
     {
+      GSList *next = tmp->next;
+
       if (prev)
         {
           MenuLayoutNode *p = prev->data;
@@ -2251,11 +2257,13 @@ menu_tree_strip_duplicate_children (MenuTree       *tree,
                */
               move_children (n, p);
               menu_layout_node_unlink (n);
+	      menu_layout_nodes = g_slist_delete_link (menu_layout_nodes, tmp);
+	      tmp = prev;
             }
         }
 
       prev = tmp;
-      tmp = tmp->next;
+      tmp = next;
     }
 
   g_slist_free (menu_layout_nodes);
@@ -2275,6 +2283,8 @@ menu_tree_strip_duplicate_children (MenuTree       *tree,
       tmp = move_nodes;
       while (tmp != NULL)
         {
+	  GSList *next = tmp->next;
+
           if (prev)
             {
               MenuLayoutNode *p = prev->data;
@@ -2289,11 +2299,13 @@ menu_tree_strip_duplicate_children (MenuTree       *tree,
                                 menu_layout_node_move_get_old (p),
                                 menu_layout_node_move_get_new (p));
                   menu_layout_node_unlink (n);
+		  move_nodes = g_slist_delete_link (move_nodes, tmp);
+		  tmp = prev;
                 }
             }
 
           prev = tmp;
-          tmp = tmp->next;
+          tmp = next;
         }
 
       g_slist_free (move_nodes);
