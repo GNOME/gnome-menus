@@ -1,0 +1,17 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+desktop-directories/Accessibility.directory.in
+desktop-directories/Accessories.directory.in
+desktop-directories/Applications.directory.in
+desktop-directories/Development.directory.in
+desktop-directories/Edutainment.directory.in
+desktop-directories/Games.directory.in
+desktop-directories/Graphics.directory.in
+desktop-directories/Internet.directory.in
+desktop-directories/Multimedia.directory.in
+desktop-directories/Office.directory.in
+desktop-directories/Other.directory.in
+desktop-directories/Settings-Accessibility.directory.in
+desktop-directories/Settings.directory.in
+desktop-directories/System-Settings.directory.in
+desktop-directories/System-Tools.directory.in

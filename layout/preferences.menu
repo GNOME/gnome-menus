@@ -1,0 +1,45 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+  <Name>Preferences</Name>
+  <Directory>Settings.directory</Directory>
+
+  <!-- Read standard .directory and .desktop file locations -->
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+
+  <!-- Read in overrides and child menus from preferences-merged/ -->
+  <DefaultMergeDirs/>
+
+  <!-- Stuff in the toplevel -->
+  <Include>
+    <And>
+      <Category>Settings</Category>
+      <Not>
+        <Or>
+          <Category>System</Category>
+	  <Category>Accessibility</Category>
+        </Or>
+      </Not>
+    </And>
+  </Include>
+
+  <!-- Menu items to exclude from the toplevel -->
+  <Exclude>
+    <Filename>gnomecc.desktop</Filename>
+  </Exclude>
+
+  <!-- Accessibility -->
+  <Menu>
+    <Name>Accessibility</Name>
+    <Directory>Settings-Accessibility.directory</Directory>
+    <Include>
+      <And>
+        <Category>Settings</Category>
+        <Category>Accessibility</Category>
+      </And>
+    </Include>
+  </Menu>
+
+</Menu>     <!-- End Prefs -->

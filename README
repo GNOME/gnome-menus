@@ -1,0 +1,42 @@
+gnome-menus-2.9.1
+=================
+
+	This package is free software and is part of the
+GNOME project.
+
+	The package contains an implementation of the draft "Desktop
+Menu Specification" from freedesktop.org:
+
+  http://www.freedesktop.org/Standards/menu-spec
+
+	Also contained here are the GNOME menu layout configuration
+files, .directory files and assorted menu related utility programs.
+  
+You may download updates to the package from:
+   ftp://ftp.gnome.org/pub/GNOME/sources/gnome-menus
+
+desktop-devel-list@gnome.org is the relevant mailing list:
+   http://mail.gnome.org/mailman/listinfo/desktop-devel-list
+
+To subscribe:
+	Send a mail to desktop-devel-list-request@gnome.org
+with the subject "subscribe".
+
+Installation
+============
+
+See the file 'INSTALL'
+
+How to report bugs
+==================
+
+Bugs should be reported to the GNOME bug tracking system. 
+(http://bugzilla.gnome.org, product gnome-menus) You will
+need to create an account for yourself.
+
+Please read the following page on how to prepare a useful
+bug report
+   http://bugzilla.gnome.org/bug-HOWTO.html
+
+Please read the HACKING file for information on where to
+send changes or bugfixes for this package.
