@@ -1117,6 +1117,9 @@ load_merge_file (MenuTree       *tree,
   merge_resolved_children (tree, where, to_merge);
 
   menu_layout_node_unref (to_merge);
+
+  if (freeme)
+    g_free (freeme);
 }
 
 static void

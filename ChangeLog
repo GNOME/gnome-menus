@@ -1,5 +1,11 @@
 2004-12-06  Mark McLoughlin  <mark@skynet.ie>
 
+	Leak pointed out by Vincent Untz <vincent@vuntz.net>
+
+	* libmenu/menu-tree.c: (load_merge_file): free freeme.
+
+2004-12-06  Mark McLoughlin  <mark@skynet.ie>
+
 	* libmenu/menu-tree.c:
 	(menu_tree_add_menu_file_monitor): add anal
 	assertion.
