@@ -1,21 +1,20 @@
 # German translation of gnome-menus.
 # Copyright (C) 2004 THE gnome-menus'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-menus package.
-# Hendrik Brandt <eru@gmx.li>, 2004.
-# , fuzzy
+# Hendrik Brandt <heb@gnome-de.org>, 2004-2005.
 # 
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-12-21 18:35+0100\n"
-"PO-Revision-Date: 2004-12-01 20:13+0100\n"
+"POT-Creation-Date: 2005-01-10 14:32+0100\n"
+"PO-Revision-Date: 2005-01-10 14:33+0100\n"
 "Last-Translator: Hendrik Brandt <heb@gnome-de.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: desktop-directories/Accessibility.directory.in.h:1
 #: desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -111,12 +110,12 @@ msgid "Preferences"
 msgstr "Einstellungen"
 
 #: desktop-directories/System-Settings.directory.in.h:1
-msgid "Change systemwide settings (affects all users)"
-msgstr "Systemweite Einstellungen ändern (dies betrifft alle Benutzer)"
+msgid "Administration"
+msgstr "Systemverwaltung"
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "System Settings"
-msgstr "Systemeinstellungen"
+msgid "Change systemwide settings (affects all users)"
+msgstr "Systemweite Einstellungen ändern (dies betrifft alle Benutzer)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -125,3 +124,4 @@ msgstr "Systemwerkzeuge"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Systemkonfiguration und -überwachung"
+
