@@ -1,14 +1,14 @@
 # gnome-menus' Portuguese translation.
-# Copyright © 2004 gnome-menus
+# Copyright © 2004, 2005 gnome-menus
 # This file is distributed under the same license as the gnome-menus package.
-# Duarte Loreto <happyguy_pt@hotmail.com>, 2004.
+# Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-10 17:49+0000\n"
-"PO-Revision-Date: 2004-12-09 22:55+0000\n"
+"POT-Creation-Date: 2005-02-18 01:13+0000\n"
+"PO-Revision-Date: 2005-02-18 01:15+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -110,7 +110,7 @@ msgstr "Preferências"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr ""
+msgstr "Administração"
 
 #: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
