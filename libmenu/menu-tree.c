@@ -3074,6 +3074,9 @@ merge_subdir (MenuTreeDirectory *directory,
 {
   gboolean removed;
 
+  menu_verbose ("Merging subdir '%s' in directory '%s'\n",
+		subdir->name, directory->name);
+
   process_layout_info (subdir);
 
   removed = FALSE;
@@ -3081,15 +3084,27 @@ merge_subdir (MenuTreeDirectory *directory,
   if (subdir->contents == NULL)
     {
       if (!layout_values->show_empty)
-	removed = TRUE;
+	{
+	  menu_verbose ("Not showing empty menu '%s'\n", subdir->name);
+	  removed = TRUE;
+	}
     }
   else if (layout_values->inline_menus)
     {
       if (layout_values->inline_alias && g_slist_length (subdir->contents) == 1)
 	{
 	  MenuTreeAlias *alias;
+	  MenuTreeItem  *item;
 
-	  alias = menu_tree_alias_new (directory, subdir, subdir->contents->data);
+	  item = MENU_TREE_ITEM (subdir->contents->data);
+
+	  menu_verbose ("Inline aliasing '%s' to '%s'\n",
+			subdir->name,
+			item->type == MENU_TREE_ITEM_ENTRY ?
+			menu_tree_entry_get_name (MENU_TREE_ENTRY (item)) :
+			MENU_TREE_DIRECTORY (item)->name);
+
+	  alias = menu_tree_alias_new (directory, subdir, item);
 
 	  g_slist_foreach (subdir->contents,
 			   (GFunc) menu_tree_item_unref,
@@ -3108,9 +3123,14 @@ merge_subdir (MenuTreeDirectory *directory,
 	    {
 	      MenuTreeHeader *header;
 
+	      menu_verbose ("Creating inline header with name '%s'\n", subdir->name);
+
 	      header = menu_tree_header_new (directory, subdir);
 	      directory->contents = g_slist_append (directory->contents, header); 
 	    }
+
+	  menu_verbose ("Inlining directory contents of '%s' to '%s'\n",
+			subdir->name, directory->name);
 
 	  directory->contents = g_slist_concat (directory->contents, subdir->contents);
 	  subdir->contents = NULL;
@@ -3130,6 +3150,9 @@ merge_subdir_by_name (MenuTreeDirectory *directory,
 		      MenuLayoutValues  *values)
 {
   GSList *tmp;
+
+  menu_verbose ("Attempting to merge subdir '%s' in directory '%s'\n",
+		subdir_name, directory->name);
 
   tmp = directory->subdirs;
   while (tmp != NULL)
@@ -3152,6 +3175,9 @@ static void
 merge_entry (MenuTreeDirectory *directory,
 	     MenuTreeEntry     *entry)
 {
+  menu_verbose ("Merging entry '%s' in directory '%s'\n",
+		entry->desktop_file_id, directory->name);
+
   directory->contents = g_slist_append (directory->contents,
 					menu_tree_item_ref (entry));
 }
@@ -3161,6 +3187,9 @@ merge_entry_by_id (MenuTreeDirectory *directory,
 		   const char        *file_id)
 {
   GSList *tmp;
+
+  menu_verbose ("Attempting to merge entry '%s' in directory '%s'\n",
+		file_id, directory->name);
 
   tmp = directory->entries;
   while (tmp != NULL)
@@ -3183,6 +3212,8 @@ static void
 merge_subdirs (MenuTreeDirectory *directory)
 {
   GSList *tmp;
+
+  menu_verbose ("Merging subdirs in directory '%s'\n", directory->name);
 
   directory->subdirs = g_slist_sort (directory->subdirs,
 				     (GCompareFunc) menu_tree_directory_compare);
@@ -3207,6 +3238,8 @@ merge_entries (MenuTreeDirectory *directory)
 {
   GSList *tmp;
 
+  menu_verbose ("Merging entries in directory '%s'\n", directory->name);
+
   directory->entries = g_slist_sort (directory->entries,
 				     (GCompareFunc) menu_tree_entry_compare);
 
@@ -3230,6 +3263,9 @@ merge_subdirs_and_entries (MenuTreeDirectory *directory)
 {
   GSList *items;
   GSList *tmp;
+
+  menu_verbose ("Merging subdirs and entries together in directory %s\n",
+		directory->name);
 
   items = g_slist_concat (directory->subdirs, directory->entries);
   items = g_slist_sort (items,
@@ -3260,7 +3296,7 @@ merge_subdirs_and_entries (MenuTreeDirectory *directory)
   directory->entries = NULL;
 
   g_slist_free (directory->subdirs);
-  directory->entries = NULL;
+  directory->subdirs = NULL;
 }
 
 static void
@@ -3290,6 +3326,8 @@ static void
 process_layout_info (MenuTreeDirectory *directory)
 {
   GSList *tmp;
+
+  menu_verbose ("Processing menu layout hints for %s\n", directory->name);
 
   g_slist_foreach (directory->contents,
 		   (GFunc) menu_tree_item_unref,
@@ -3331,6 +3369,7 @@ process_layout_info (MenuTreeDirectory *directory)
 	  break;
 
 	case MENU_LAYOUT_NODE_SEPARATOR:
+	  menu_verbose ("Adding a separator in '%s'\n", directory->name);
 	  directory->contents = g_slist_append (directory->contents,
 						menu_tree_separator_new (directory));
 	  break;

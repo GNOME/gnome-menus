@@ -1,3 +1,16 @@
+2005-03-23  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-layout.c: (menu_layout_values_set): fix silly
+	crasher.
+	
+	* libmenu/menu-tree.c:
+	(merge_subdir), (merge_subdir_by_name),
+	(merge_entry), (merge_entry_by_id), (merge_subdirs),
+	(merge_entries), (process_layout_info): adding debugging
+	verbosity.
+	(merge_subdirs_and_entries): ditto and fix thinko causing
+	warnings.
+
 2005-03-22  Mark McLoughlin  <mark@skynet.ie>
 
 	Implement support for new "type" argument to <MergeFile>

@@ -961,7 +961,7 @@ menu_layout_values_set (MenuLayoutValues *values,
 
   if (inline_menus != NULL)
     {
-      values->inline_menus = strcmp (show_empty, "true") == 0;
+      values->inline_menus = strcmp (inline_menus, "true") == 0;
       values->mask |= MENU_LAYOUT_VALUES_INLINE_MENUS;
     }
   
@@ -980,13 +980,13 @@ menu_layout_values_set (MenuLayoutValues *values,
 
   if (inline_header != NULL)
     {
-      values->inline_header = strcmp (show_empty, "true") == 0;
+      values->inline_header = strcmp (inline_header, "true") == 0;
       values->mask |= MENU_LAYOUT_VALUES_INLINE_HEADER;
     }
 
-  if (inline_alias)
+  if (inline_alias != NULL)
     {
-      values->inline_alias = strcmp (show_empty, "true") == 0;
+      values->inline_alias = strcmp (inline_alias, "true") == 0;
       values->mask |= MENU_LAYOUT_VALUES_INLINE_ALIAS;
     }
 }
