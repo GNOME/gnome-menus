@@ -485,7 +485,10 @@ pygmenu_tree_directory_wrap (MenuTreeDirectory *directory)
   PyGMenuTreeDirectory *retval;
 
   if ((retval = menu_tree_item_get_user_data (MENU_TREE_ITEM (directory))) != NULL)
-    return retval;
+    {
+      Py_INCREF (retval);
+      return retval;
+    }
 
   if (!(retval = (PyGMenuTreeDirectory *) PyObject_NEW (PyGMenuTreeDirectory,
 							&PyGMenuTreeDirectory_Type)))
@@ -770,7 +773,10 @@ pygmenu_tree_entry_wrap (MenuTreeEntry *entry)
   PyGMenuTreeEntry *retval;
 
   if ((retval = menu_tree_item_get_user_data (MENU_TREE_ITEM (entry))) != NULL)
-    return retval;
+    {
+      Py_INCREF (retval);
+      return retval;
+    }
 
   if (!(retval = (PyGMenuTreeEntry *) PyObject_NEW (PyGMenuTreeEntry,
 						    &PyGMenuTreeEntry_Type)))
@@ -835,7 +841,10 @@ pygmenu_tree_separator_wrap (MenuTreeSeparator *separator)
   PyGMenuTreeSeparator *retval;
 
   if ((retval = menu_tree_item_get_user_data (MENU_TREE_ITEM (separator))) != NULL)
-    return retval;
+    {
+      Py_INCREF (retval);
+      return retval;
+    }
 
   if (!(retval = (PyGMenuTreeSeparator *) PyObject_NEW (PyGMenuTreeSeparator,
 							&PyGMenuTreeSeparator_Type)))
@@ -970,7 +979,10 @@ pygmenu_tree_header_wrap (MenuTreeHeader *header)
   PyGMenuTreeHeader *retval;
 
   if ((retval = menu_tree_item_get_user_data (MENU_TREE_ITEM (header))) != NULL)
-    return retval;
+    {
+      Py_INCREF (retval);
+      return retval;
+    }
 
   if (!(retval = (PyGMenuTreeHeader *) PyObject_NEW (PyGMenuTreeHeader,
 						     &PyGMenuTreeHeader_Type)))
@@ -1154,7 +1166,10 @@ pygmenu_tree_alias_wrap (MenuTreeAlias *alias)
   PyGMenuTreeAlias *retval;
 
   if ((retval = menu_tree_item_get_user_data (MENU_TREE_ITEM (alias))) != NULL)
-    return retval;
+    {
+      Py_INCREF (retval);
+      return retval;
+    }
 
   if (!(retval = (PyGMenuTreeAlias *) PyObject_NEW (PyGMenuTreeAlias,
 						    &PyGMenuTreeAlias_Type)))
@@ -1425,7 +1440,10 @@ pygmenu_tree_wrap (MenuTree *tree)
   PyGMenuTree *retval;
 
   if ((retval = menu_tree_get_user_data (tree)) != NULL)
-    return retval;
+    {
+      Py_INCREF (retval);
+      return retval;
+    }
 
   if (!(retval = (PyGMenuTree *) PyObject_NEW (PyGMenuTree, &PyGMenuTree_Type)))
     return NULL;

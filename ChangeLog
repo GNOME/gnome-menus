@@ -1,5 +1,14 @@
 2005-04-06  Mark McLoughlin  <mark@skynet.ie>
 
+	* python/gmenu.c:
+	(pygmenu_tree_directory_wrap), (pygmenu_tree_entry_wrap),
+	(pygmenu_tree_separator_wrap), (pygmenu_tree_header_wrap),
+	(pygmenu_tree_alias_wrap), (pygmenu_tree_wrap): ref the
+	python objects before returning them if they already
+	exist.
+
+2005-04-06  Mark McLoughlin  <mark@skynet.ie>
+
 	* libmenu/menu-tree.c:
 	(menu_tree_header_new),
 	(menu_tree_alias_new): unset the parent on aliased
