@@ -1216,9 +1216,9 @@ resolve_merge_dir (MenuTree       *tree,
   menu_layout_node_unlink (layout);
 }
 
-static void
+static MenuLayoutNode *
 add_app_dir (MenuTree       *tree,
-             MenuLayoutNode *layout,
+             MenuLayoutNode *before,
              const char     *data_dir)
 {
   MenuLayoutNode *tmp;
@@ -1227,41 +1227,48 @@ add_app_dir (MenuTree       *tree,
   tmp = menu_layout_node_new (MENU_LAYOUT_NODE_APP_DIR);
   dirname = g_build_filename (data_dir, "applications", NULL);
   menu_layout_node_set_content (tmp, dirname);
-  menu_layout_node_insert_before (layout, tmp);
-  menu_layout_node_unref (tmp);
+  menu_layout_node_insert_before (before, tmp);
+  menu_layout_node_unref (before);
 
   menu_verbose ("Adding <AppDir>%s</AppDir> in <DefaultAppDirs/>\n",
                 dirname);
 
   g_free (dirname);
+
+  return tmp;
 }
 
 static void
 resolve_default_app_dirs (MenuTree       *tree,
                           MenuLayoutNode *layout)
 {
+  MenuLayoutNode     *before;
   const char * const *system_data_dirs;
-  int                i;
+  int                 i;
 
   system_data_dirs = g_get_system_data_dirs ();
+
+  before = add_app_dir (tree,
+			menu_layout_node_ref (layout),
+			g_get_user_data_dir ());
 
   i = 0;
   while (system_data_dirs[i] != NULL)
     {
-      add_app_dir (tree, layout, system_data_dirs[i]);
+      before = add_app_dir (tree, before, system_data_dirs[i]);
 
       ++i;
     }
 
-  add_app_dir (tree, layout, g_get_user_data_dir ());
+  menu_layout_node_unref (before);
 
   /* remove the now-replaced node */
   menu_layout_node_unlink (layout);
 }
 
-static void
+static MenuLayoutNode *
 add_directory_dir (MenuTree       *tree,
-                   MenuLayoutNode *layout,
+                   MenuLayoutNode *before,
                    const char     *data_dir)
 {
   MenuLayoutNode *tmp;
@@ -1270,33 +1277,40 @@ add_directory_dir (MenuTree       *tree,
   tmp = menu_layout_node_new (MENU_LAYOUT_NODE_DIRECTORY_DIR);
   dirname = g_build_filename (data_dir, "desktop-directories", NULL);
   menu_layout_node_set_content (tmp, dirname);
-  menu_layout_node_insert_before (layout, tmp);
-  menu_layout_node_unref (tmp);
+  menu_layout_node_insert_before (before, tmp);
+  menu_layout_node_unref (before);
 
   menu_verbose ("Adding <DirectoryDir>%s</DirectoryDir> in <DefaultDirectoryDirs/>\n",
                 dirname);
 
   g_free (dirname);
+
+  return tmp;
 }
 
 static void
 resolve_default_directory_dirs (MenuTree       *tree,
                                 MenuLayoutNode *layout)
 {
+  MenuLayoutNode     *before;
   const char * const *system_data_dirs;
-  int          i;
+  int                 i;
 
   system_data_dirs = g_get_system_data_dirs ();
+
+  before = add_directory_dir (tree,
+			      menu_layout_node_ref (layout),
+			      g_get_user_data_dir ());
 
   i = 0;
   while (system_data_dirs[i] != NULL)
     {
-      add_directory_dir (tree, layout, system_data_dirs[i]);
+      before = add_directory_dir (tree, before, system_data_dirs[i]);
 
       ++i;
     }
 
-  add_directory_dir (tree, layout, g_get_user_data_dir ());
+  menu_layout_node_unref (before);
 
   /* remove the now-replaced node */
   menu_layout_node_unlink (layout);
@@ -1317,23 +1331,24 @@ resolve_default_merge_dirs (MenuTree       *tree,
 
   merge_name = g_strconcat (menu_name, "-merged", NULL);
 
-  load_merge_dir_with_config_dir (tree,
-                                  g_get_user_config_dir (),
-                                  merge_name,
-                                  layout);
-
   system_config_dirs = g_get_system_config_dirs ();
 
+  /* Merge in reverse order */
   i = 0;
-  while (system_config_dirs[i] != NULL)
+  while (system_config_dirs[i] != NULL) i++;
+  while (i > 0)
     {
+      i--;
       load_merge_dir_with_config_dir (tree,
                                       system_config_dirs[i],
                                       merge_name,
                                       layout);
-
-      ++i;
     }
+
+  load_merge_dir_with_config_dir (tree,
+                                  g_get_user_config_dir (),
+                                  merge_name,
+                                  layout);
 
   g_free (merge_name);
 
@@ -1504,9 +1519,9 @@ resolve_legacy_dir (MenuTree       *tree,
   menu_layout_node_unref (to_merge);
 }
 
-static void
+static MenuLayoutNode *
 add_legacy_dir (MenuTree       *tree,
-                MenuLayoutNode *layout,
+                MenuLayoutNode *before,
                 const char     *data_dir)
 {
   MenuLayoutNode *legacy;
@@ -1517,36 +1532,42 @@ add_legacy_dir (MenuTree       *tree,
   legacy = menu_layout_node_new (MENU_LAYOUT_NODE_LEGACY_DIR);
   menu_layout_node_set_content (legacy, dirname);
   menu_layout_node_legacy_dir_set_prefix (legacy, "kde");
-  menu_layout_node_insert_before (layout, legacy);
+  menu_layout_node_insert_before (before, legacy);
+  menu_layout_node_unref (before);
 
   menu_verbose ("Adding <LegacyDir>%s</LegacyDir> in <KDELegacyDirs/>\n",
                 dirname);
 
   resolve_legacy_dir (tree, legacy);
 
-  menu_layout_node_unref (legacy);
-
   g_free (dirname);
+
+  return legacy;
 }
 
 static void
 resolve_kde_legacy_dirs (MenuTree       *tree,
                          MenuLayoutNode *layout)
 {
+  MenuLayoutNode     *before;
   const char * const *system_data_dirs;
   int                 i;
 
   system_data_dirs = g_get_system_data_dirs ();
 
+  before = add_legacy_dir (tree,
+			   menu_layout_node_ref (layout),
+			   g_get_user_data_dir ());
+
   i = 0;
   while (system_data_dirs[i] != NULL)
     {
-      add_legacy_dir (tree, layout, system_data_dirs[i]);
+      before = add_legacy_dir (tree, before, system_data_dirs[i]);
 
       ++i;
     }
 
-  add_legacy_dir (tree, layout, g_get_user_data_dir ());
+  menu_layout_node_unref (before);
 
   /* remove the now-replaced node */
   menu_layout_node_unlink (layout);

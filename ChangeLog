@@ -1,3 +1,13 @@
+2005-03-09  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(add_app_dir), (resolve_default_app_dirs),
+	(add_directory_dir), (resolve_default_directory_dirs),
+	(add_legacy_dir),(resolve_kde_legacy_dirs): Better fix
+	for bug #164309 - get the dirs in the right order.
+	(resolve_default_merge_dirs): add the <MergeDir>s in
+	reverse order.
+
 2005-03-08  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix for bug #164309 - .directory files in
