@@ -1,5 +1,15 @@
 2005-03-08  Mark McLoughlin  <mark@skynet.ie>
 
+	Fix for bug #169031 - .directory files in subdirs of
+	<LegacyDir> not getting pulled in.
+
+	* libmenu/menu-tree.c:
+	(add_menu_for_legacy_dir): put the relative path
+	from the <LegacyDir> into the generated <Directory>
+	rather than just ".directory"
+
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
 	Fix bug #168336 - weirdness with .desktop files which
 	use [KDE Desktop Entry] as the main group.
 

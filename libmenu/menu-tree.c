@@ -1361,6 +1361,7 @@ add_filename_include (const char     *desktop_file_id,
 static gboolean
 add_menu_for_legacy_dir (MenuLayoutNode *parent,
                          const char     *legacy_dir,
+                	 const char     *relative_path,
                          const char     *legacy_prefix,
                          const char     *menu_name)
 {
@@ -1387,8 +1388,10 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
       MenuLayoutNode *menu;
       MenuLayoutNode *node;
       GString        *subdir_path;
+      GString        *subdir_relative;
       GSList         *tmp;
       int             legacy_dir_len;
+      int             relative_path_len;
 
       menu = menu_layout_node_new (MENU_LAYOUT_NODE_MENU);
       menu_layout_node_append_child (parent, menu);
@@ -1403,7 +1406,18 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
       menu_layout_node_unref (node);
 
       node = menu_layout_node_new (MENU_LAYOUT_NODE_DIRECTORY);
-      menu_layout_node_set_content (node, ".directory");
+      if (relative_path != NULL)
+        {
+          char *directory_entry_path;
+
+          directory_entry_path = g_strdup_printf ("%s/.directory", relative_path);
+          menu_layout_node_set_content (node, directory_entry_path);
+          g_free (directory_entry_path);
+        }
+      else
+        {
+          menu_layout_node_set_content (node, ".directory");
+        }
       menu_layout_node_append_child (menu, node);
       menu_layout_node_unref (node);
 
@@ -1424,6 +1438,9 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
       subdir_path = g_string_new (legacy_dir);
       legacy_dir_len = strlen (legacy_dir);
 
+      subdir_relative = g_string_new (relative_path);
+      relative_path_len = relative_path ? strlen (relative_path) : 0;
+
       tmp = subdirs;
       while (tmp != NULL)
         {
@@ -1432,11 +1449,19 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
           g_string_append_c (subdir_path, '/');
           g_string_append (subdir_path, subdir);
 
+	  if (relative_path_len)
+	    {
+	      g_string_append_c (subdir_relative, '/');
+	    }
+          g_string_append (subdir_relative, subdir);
+
           add_menu_for_legacy_dir (menu,
                                    subdir_path->str,
+				   subdir_relative->str,
                                    legacy_prefix,
                                    subdir);
 
+          g_string_truncate (subdir_relative, relative_path_len);
           g_string_truncate (subdir_path, legacy_dir_len);
 
           tmp = tmp->next;
@@ -1469,6 +1494,7 @@ resolve_legacy_dir (MenuTree       *tree,
 
   if (add_menu_for_legacy_dir (to_merge,
                                menu_layout_node_get_content (legacy),
+			       NULL,
                                menu_layout_node_legacy_dir_get_prefix (legacy),
                                menu_layout_node_menu_get_name (menu)))
     {
@@ -2399,7 +2425,7 @@ process_layout (MenuTree          *tree,
           {
             DesktopEntry *entry;
 
-	    menu_verbose ("Processed <Directory>%s</Directory>\n",
+	    menu_verbose ("Processing <Directory>%s</Directory>\n",
 			  menu_layout_node_get_content (layout_iter));
 
 	    /*
