@@ -1,3 +1,13 @@
+2004-12-06  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(menu_tree_add_menu_file_monitor): add anal
+	assertion.
+	(menu_tree_force_recanonicalize): remove the
+	menu file monitors whether the we've previously
+	found a menu file or not.
+	(find_path): handle the root path correctly.
+
 2004-12-05  Simos Xenitellis  <user@kl.asia.com>
 
 	* configure.in: Added "el" to ALL_LINGUAS.

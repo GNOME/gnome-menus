@@ -258,6 +258,7 @@ menu_tree_add_menu_file_monitor (MenuTree   *tree,
     }
   else
     {
+      g_assert (handle == NULL);
       menu_verbose ("Failed to add file monitor to for %s: %s\n",
                     path, gnome_vfs_result_to_string (result));
     }
@@ -427,11 +428,11 @@ menu_tree_canonicalize_path (MenuTree *tree)
 static void
 menu_tree_force_recanonicalize (MenuTree *tree)
 {
+  menu_tree_remove_menu_file_monitors (tree);
+
   if (tree->canonical)
     {
       menu_tree_force_reload (tree);
-
-      menu_tree_remove_menu_file_monitors (tree);
 
       g_free (tree->canonical_path);
       tree->canonical_path = NULL;
@@ -559,10 +560,10 @@ find_path (MenuTreeDirectory *directory,
   char       *freeme;
   GSList     *tmp;
 
+  while (path[0] == '/') path++;
+
   if (path[0] == '\0')
     return directory;
-
-  while (path[0] == '/') path++;
 
   freeme = NULL;
   slash = strchr (path, '/');
