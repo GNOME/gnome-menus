@@ -357,7 +357,7 @@ cached_dir_update_entry (CachedDir  *dir,
       tmp = tmp->next;
     }
 
-  return FALSE;
+  return cached_dir_add_entry (dir, basename, path);
 }
 
 static gboolean
@@ -411,7 +411,7 @@ cached_dir_remove_subdir (CachedDir  *dir,
 {
   GSList *tmp;
 
-  tmp = dir->entries;
+  tmp = dir->subdirs;
   while (tmp != NULL)
     {
       CachedDir *subdir = tmp->data;
