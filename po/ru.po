@@ -1,0 +1,126 @@
+# Copyright (C) 1998-2003 Free Software Foundation, Inc.
+# Dmitry G. Mastrukov <dmitry@taurussoft.org>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-12-08 14:11+0300\n"
+"PO-Revision-Date: 2004-12-08 14:20+0300\n"
+"Last-Translator: Dmitry G. Mastrukov <dmitry@taurussoft.org>\n"
+"Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Специальные возможности"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Настройки специальных возможностей"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Стандартные"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Стандартные приложения"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Приложения"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Программирование"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Средства для разработки программ"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Обучение"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Игры"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Игры и развлечения"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Графика"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Графические приложения"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Интернет"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Программы для работы с Интернетом (почта, браузер и т.п.)"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Мультимедия"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Аудио и видео"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Офис"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Офисные приложения"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Приложения, не подпадающие ни под какие категории"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Прочие"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Настройки, связанные со Специальными возможностями"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Персональные настройки и установки"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Настройки"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Change systemwide settings (affects all users)"
+msgstr "Изменение системных установок (влияют на всех пользователей)"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "System Settings"
+msgstr "Системные установки"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Системные"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Средства конфигурации и мониторинга системы"
+
