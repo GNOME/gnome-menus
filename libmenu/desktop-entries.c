@@ -176,7 +176,7 @@ get_categories_from_key_file (DesktopEntry *entry,
 {
   GQuark  *retval;
   char   **strv;
-  int      len;
+  gsize    len;
   int      i;
 
   strv = g_key_file_get_string_list (key_file,

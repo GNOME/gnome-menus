@@ -1,3 +1,10 @@
+2005-03-04  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix from Jeremy Katz <katzj@redhat.com> for bug #169200
+
+	* libmenu/desktop-entries.c (get_categories_from_key_file):
+	sizeof(int) != sizeof(gsize).
+
 2005-03-06  Dafydd Harries  <daf@muse.19inch.net>
 
 	* configure.in: Added "cy" to ALL_LINGUAS.
