@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-01-13 01:04+0200\n"
-"PO-Revision-Date: 2005-01-13 01:05+0200\n"
+"PO-Revision-Date: 2005-03-04 14:04+0200\n"
 "Last-Translator: Žygimantas Beručka <uid0@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -71,7 +71,7 @@ msgstr "Internetas"
 
 #: desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programos Interneto prieigai, pvz. www ir el. paštas"
+msgstr "Programos Interneto prieigai (žiniatinklis, el. paštas)"
 
 #: desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -115,7 +115,7 @@ msgstr "Administravimas"
 
 #: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Keisti sisteminio masto nustatymus (poveikis visiems naudotojams)"
+msgstr "Keisti sisteminio masto nustatymus (paveikia visus naudotojus)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -124,6 +124,3 @@ msgstr "Sistemos įrankiai"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Sistemos konfigūravimas ir stebėjimas"
-
-#~ msgid "System Settings"
-#~ msgstr "Sistemos nustatymai"
