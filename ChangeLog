@@ -1,3 +1,9 @@
+2004-11-12  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/desktop-entries.c: (get_categories_from_key_file):
+	zero terminate the list of quarks. Most likely the cause
+	of entries randomly appearing in the wrong menus. Bug #157804.
+
 2004-11-11  Mark McLoughlin  <mark@skynet.ie>
 
 	Fixes a bug where we get an infinite loop if

@@ -186,7 +186,7 @@ get_categories_from_key_file (DesktopEntry *entry,
   if (!strv)
     return NULL;
 
-  retval = g_new (GQuark, len + 1);
+  retval = g_new0 (GQuark, len + 1);
 
   for (i = 0; strv[i]; i++)
     retval[i] = g_quark_from_string (strv[i]);
