@@ -1,0 +1,128 @@
+# Thai translation of gnome-menus.
+# Copyright (C) 2004 THE gnome-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-menus package.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2004.
+# , fuzzy
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus 2.9.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-28 21:37+0700\n"
+"PO-Revision-Date: 2004-12-11 13:22+0700\n"
+"Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
+"Language-Team: Thai <l10n@opentle.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "ระบบอำนวยการใช้งาน"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "ตั้งค่าระบบอำนวยการใช้งาน"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "อำนวยความสะดวก"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "โปรแกรมอำนวยความสะดวกบนเดสก์ทอป"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "โปรแกรม"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "เขียนโปรแกรม"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "เครื่องมือพัฒนาซอฟต์แวร์"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "เกมการศึกษา"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "เกม"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "เกมและความบันเทิง"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "รูปภาพ"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "โปรแกรมสำหรับรูปภาพ"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "อินเทอร์เน็ต"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "โปรแกรมสำหรับเข้าอินเทอร์เน็ต เช่น เว็บและเมล"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "เมนูมัลติมีเดีย"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "เสียงและวีดิทัศน์"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "สำนักงาน"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "โปรแกรมสำหรับสำนักงาน"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "โปรแกรมที่ไม่อยู่ในหมวดอื่นๆ"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "อื่นๆ"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "การปรับแต่งเกี่ยวกับระบบอำนวยการใช้งาน"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "ปรับแต่งและตั้งค่าพื้นโต๊ะส่วนตัว"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "ปรับแต่งพื้นโต๊ะ"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Change systemwide settings (affects all users)"
+msgstr "การตั้งค่าที่มีผลทั้งระบบ (มีผลต่อผู้ใช้ทุกคน)"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "System Settings"
+msgstr "ตั้งค่าระบบ"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "ดูแลระบบ"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "ตั้งค่าและเฝ้าดูระบบ"
+
