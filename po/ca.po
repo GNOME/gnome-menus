@@ -1,0 +1,125 @@
+# Catalan translation of GNOME Menus.
+# Copyright © 2004, 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-menus package.
+# Jordi Mallach <jordi@sindominio.net>, 2004, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus 2.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-01-28 22:04+0100\n"
+"PO-Revision-Date: 2005-01-28 22:04+0100\n"
+"Last-Translator: Jordi Mallach <jordi@sindominio.net>\n"
+"Language-Team: Catalan <tradgnome@softcatala.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Accessibilitat"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Paràmetres d'accessibilitat"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Accessoris"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Accessoris de l'escriptori"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Aplicacions"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Programació"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Eines per a desenvolupar programari"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Educació i entreteniment"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Jocs"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Jocs i distraccions"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Gràfics"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Aplicacions de gràfics"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Programes per a accedir a Internet, com la web i el correu"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Menú multimèdia"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "So i vídeo"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Oficina"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Aplicacions ofimàtiques"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Aplicacions que no encaixaven en altres categories"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Altres"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Preferències relacionades amb l'accessibilitat"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Preferències i paràmetres personals"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Preferències"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "Administració"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr "Canvia els paràmetres del sistema (afecta a tots els usuaris)"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Eines del sistema"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Configuració i monitorització del sistema"
