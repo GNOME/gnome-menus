@@ -1,3 +1,24 @@
+2004-11-29  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/entry-directories.c:
+	(cached_dir_update_entry),
+	(cached_dir_remove_subdir): fix another couple of leaks.
+	
+	* COPYING, COPYING.LIB: add the LGPL since autofoo
+	seems determined that COPYING should be the GPL.
+	
+2004-11-29  Mark McLoughlin  <mark@skynet.ie>
+	
+	Patch from Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* libmenu/desktop-entries.c: (desktop_entry_unref): don't leak
+	the path.
+	
+	* libmenu/entry-directories.c:
+	(cached_dir_clear_entries): iterate over the entries list, not
+	the subdirs list.
+	(cached_dir_remove_entry): don't leak the entry.
+
 2004-11-27  Hasbullah Bin Pit<sebol@my-penguin.org>
 
         * configure.in: Added 'ms' (Malay) to ALL_LINGUAS.

@@ -97,7 +97,7 @@ cached_dir_new (const char *name)
 static void
 cached_dir_clear_entries (CachedDir *dir)
 {
-  g_slist_foreach (dir->subdirs,
+  g_slist_foreach (dir->entries,
                    (GFunc) desktop_entry_unref,
                    NULL);
   g_slist_free (dir->entries);
@@ -346,7 +346,10 @@ cached_dir_update_entry (CachedDir  *dir,
       if (strcmp (desktop_entry_get_basename (tmp->data), basename) == 0)
         {
           if (!desktop_entry_reload (tmp->data))
-            dir->entries = g_slist_delete_link (dir->entries, tmp);
+	    {
+	      desktop_entry_unref (tmp->data);
+	      dir->entries = g_slist_delete_link (dir->entries, tmp);
+	    }
 
           return TRUE;
         }
@@ -368,6 +371,7 @@ cached_dir_remove_entry (CachedDir  *dir,
     {
       if (strcmp (desktop_entry_get_basename (tmp->data), basename) == 0)
         {
+          desktop_entry_unref (tmp->data);
           dir->entries = g_slist_delete_link (dir->entries, tmp);
           return TRUE;
         }
@@ -414,6 +418,7 @@ cached_dir_remove_subdir (CachedDir  *dir,
 
       if (strcmp (subdir->name, basename) == 0)
         {
+	  cached_dir_free (tmp->data);
           dir->subdirs = g_slist_delete_link (dir->subdirs, tmp);
           return TRUE;
         }

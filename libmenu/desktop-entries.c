@@ -418,6 +418,9 @@ desktop_entry_unref (DesktopEntry *entry)
       g_free (entry->basename);
       entry->basename = NULL;
 
+      g_free (entry->path);
+      entry->path = NULL;
+
       g_free (entry);
     }
 }
