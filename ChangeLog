@@ -1,5 +1,9 @@
 2005-03-23  Mark McLoughlin  <mark@skynet.ie>
 
+	* configure.in: bump library soname.
+
+2005-03-23  Mark McLoughlin  <mark@skynet.ie>
+
 	* python/Makefile.am: don't build with $(WARN_CFLAGS)
 
 2005-03-23  Mark McLoughlin  <mark@skynet.ie>
