@@ -87,6 +87,7 @@ struct MenuTreeDirectory
   GSList *subdirs;
 
   MenuLayoutValues  default_layout_values;
+  GSList           *default_layout_info;
   GSList           *layout_info;
   GSList           *contents;
 
@@ -971,13 +972,14 @@ menu_tree_directory_new (MenuTreeDirectory *parent,
   retval->item.parent   = parent ? menu_tree_item_ref (parent) : NULL;
   retval->item.refcount = 1;
 
-  retval->name             = g_strdup (name);
-  retval->directory_entry  = NULL;
-  retval->entries          = NULL;
-  retval->subdirs          = NULL;
-  retval->layout_info      = NULL;
-  retval->contents         = NULL;
-  retval->only_unallocated = FALSE;
+  retval->name                = g_strdup (name);
+  retval->directory_entry     = NULL;
+  retval->entries             = NULL;
+  retval->subdirs             = NULL;
+  retval->default_layout_info = NULL;
+  retval->layout_info         = NULL;
+  retval->contents            = NULL;
+  retval->only_unallocated    = FALSE;
 
   if (parent != NULL)
     {
@@ -1007,6 +1009,12 @@ menu_tree_directory_finalize (MenuTreeDirectory *directory)
   g_slist_free (directory->contents);
   directory->contents = NULL;
   
+  g_slist_foreach (directory->default_layout_info,
+		   (GFunc) menu_layout_node_unref,
+		   NULL);
+  g_slist_free (directory->default_layout_info);
+  directory->default_layout_info = NULL;
+
   g_slist_foreach (directory->layout_info,
 		   (GFunc) menu_layout_node_unref,
 		   NULL);
@@ -2712,16 +2720,16 @@ process_include_rules (MenuLayoutNode     *layout,
 }
 
 static void
-collect_layout_info (MenuLayoutNode    *layout,
-		     MenuTreeDirectory *directory)
+collect_layout_info (MenuLayoutNode  *layout,
+		     GSList         **layout_info)
 {
-  MenuLayoutNode  *iter;
+  MenuLayoutNode *iter;
 
-  g_slist_foreach (directory->layout_info,
+  g_slist_foreach (*layout_info,
 		   (GFunc) menu_layout_node_unref,
 		   NULL);
-  g_slist_free (directory->layout_info);
-  directory->layout_info = NULL;
+  g_slist_free (*layout_info);
+  *layout_info = NULL;
 
   iter = menu_layout_node_get_children (layout);
   while (iter != NULL)
@@ -2732,8 +2740,8 @@ collect_layout_info (MenuLayoutNode    *layout,
 	case MENU_LAYOUT_NODE_FILENAME: 
 	case MENU_LAYOUT_NODE_SEPARATOR: 
 	case MENU_LAYOUT_NODE_MERGE: 
-	  directory->layout_info = g_slist_prepend (directory->layout_info,
-						    menu_layout_node_ref (iter));
+	  *layout_info = g_slist_prepend (*layout_info,
+					  menu_layout_node_ref (iter));
 	  break;
 
 	default:
@@ -2743,7 +2751,7 @@ collect_layout_info (MenuLayoutNode    *layout,
       iter = menu_layout_node_get_next (iter);
     }
 
-  directory->layout_info = g_slist_reverse (directory->layout_info);
+  *layout_info = g_slist_reverse (*layout_info);
 }
 
 static void
@@ -2935,11 +2943,12 @@ process_layout (MenuTree          *tree,
 	case MENU_LAYOUT_NODE_DEFAULT_LAYOUT:
 	  menu_layout_node_default_layout_get_values (layout_iter,
 						      &directory->default_layout_values);
+	  collect_layout_info (layout_iter, &directory->default_layout_info);
 	  menu_verbose ("Processed <DefaultLayout/>\n");
 	  break;
 
 	case MENU_LAYOUT_NODE_LAYOUT:
-	  collect_layout_info (layout_iter, directory);
+	  collect_layout_info (layout_iter, &directory->layout_info);
 	  menu_verbose ("Processed <Layout/>\n");
 	  break;
 
@@ -3280,6 +3289,10 @@ merge_subdirs_and_entries (MenuTreeDirectory *directory)
 		directory->name);
 
   items = g_slist_concat (directory->subdirs, directory->entries);
+
+  directory->subdirs = NULL;
+  directory->entries = NULL;
+
   items = g_slist_sort (items,
 			(GCompareFunc) menu_tree_item_compare);
 
@@ -3304,11 +3317,7 @@ merge_subdirs_and_entries (MenuTreeDirectory *directory)
       tmp = tmp->next;
     }
 
-  g_slist_free (directory->entries);
-  directory->entries = NULL;
-
-  g_slist_free (directory->subdirs);
-  directory->subdirs = NULL;
+  g_slist_free (items);
 }
 
 static void
@@ -3334,10 +3343,34 @@ get_values_with_defaults (MenuLayoutNode   *node,
     layout_values->inline_alias = default_layout_values->inline_alias;
 }
 
+static GSList *
+get_layout_info (MenuTreeDirectory *directory)
+{
+  MenuTreeDirectory *iter;
+
+  if (directory->layout_info != NULL)
+    {
+      return directory->layout_info;
+    }
+
+  iter = directory;
+  while (iter != NULL)
+    {
+      if (iter->default_layout_info != NULL)
+	{
+	  return iter->default_layout_info;
+	}
+
+      iter = MENU_TREE_ITEM (iter)->parent;
+    }
+
+  return NULL;
+}
+
 static void
 process_layout_info (MenuTreeDirectory *directory)
 {
-  GSList *tmp;
+  GSList *layout_info;
 
   menu_verbose ("Processing menu layout hints for %s\n", directory->name);
 
@@ -3347,73 +3380,78 @@ process_layout_info (MenuTreeDirectory *directory)
   g_slist_free (directory->contents);
   directory->contents = NULL;
 
-  if (directory->layout_info == NULL)
+  if ((layout_info = get_layout_info (directory)) == NULL)
     {
       merge_subdirs (directory);
       merge_entries (directory);
-      return;
     }
-
-  tmp = directory->layout_info;
-  while (tmp != NULL)
+  else
     {
-      MenuLayoutNode *node = tmp->data;
+      GSList *tmp;
 
-      switch (menu_layout_node_get_type (node))
+      tmp = layout_info;
+      while (tmp != NULL)
 	{
-	case MENU_LAYOUT_NODE_MENUNAME:
-	  {
-	    MenuLayoutValues layout_values;
+	  MenuLayoutNode *node = tmp->data;
 
-	    get_values_with_defaults (node,
-				      &layout_values,
-				      &directory->default_layout_values);
-
-	    merge_subdir_by_name (directory,
-				  menu_layout_node_get_content (node),
-				  &layout_values);
-	  }
-	  break;
-
-	case MENU_LAYOUT_NODE_FILENAME: 
-	  merge_entry_by_id (directory,
-			     menu_layout_node_get_content (node));
-	  break;
-
-	case MENU_LAYOUT_NODE_SEPARATOR:
-	  menu_verbose ("Adding a separator in '%s'\n", directory->name);
-	  directory->contents = g_slist_append (directory->contents,
-						menu_tree_separator_new (directory));
-	  break;
-
-	case MENU_LAYOUT_NODE_MERGE:
-	  switch (menu_layout_node_merge_get_type (node))
+	  switch (menu_layout_node_get_type (node))
 	    {
-	    case MENU_LAYOUT_MERGE_NONE:
+	    case MENU_LAYOUT_NODE_MENUNAME:
+	      {
+		MenuLayoutValues layout_values;
+
+		get_values_with_defaults (node,
+					  &layout_values,
+					  &directory->default_layout_values);
+
+		merge_subdir_by_name (directory,
+				      menu_layout_node_get_content (node),
+				      &layout_values);
+	      }
 	      break;
 
-	    case MENU_LAYOUT_MERGE_MENUS:
-	      merge_subdirs (directory);
+	    case MENU_LAYOUT_NODE_FILENAME: 
+	      merge_entry_by_id (directory,
+				 menu_layout_node_get_content (node));
 	      break;
 
-	    case MENU_LAYOUT_MERGE_FILES:
-	      merge_entries (directory);
+	    case MENU_LAYOUT_NODE_SEPARATOR:
+	      menu_verbose ("Adding a separator in '%s'\n", directory->name);
+	      directory->contents = g_slist_append (directory->contents,
+						    menu_tree_separator_new (directory));
 	      break;
 
-	    case MENU_LAYOUT_MERGE_ALL:
-	      merge_subdirs_and_entries (directory);
+	    case MENU_LAYOUT_NODE_MERGE:
+	      switch (menu_layout_node_merge_get_type (node))
+		{
+		case MENU_LAYOUT_MERGE_NONE:
+		  break;
+
+		case MENU_LAYOUT_MERGE_MENUS:
+		  merge_subdirs (directory);
+		  break;
+
+		case MENU_LAYOUT_MERGE_FILES:
+		  merge_entries (directory);
+		  break;
+
+		case MENU_LAYOUT_MERGE_ALL:
+		  merge_subdirs_and_entries (directory);
+		  break;
+
+		default:
+		  g_assert_not_reached ();
+		  break;
+		}
+	      break;
+
+	    default:
+	      g_assert_not_reached ();
 	      break;
 	    }
-	  break;
 
-	default:
-	  g_assert_not_reached ();
-	  break;
+	  tmp = tmp->next;
 	}
-
-      menu_layout_node_unref (node);
-
-      tmp = tmp->next;
     }
 
   g_slist_foreach (directory->subdirs,
@@ -3428,6 +3466,15 @@ process_layout_info (MenuTreeDirectory *directory)
   g_slist_free (directory->entries);
   directory->entries = NULL;
 
+  g_slist_foreach (directory->default_layout_info,
+		   (GFunc) menu_layout_node_unref,
+		   NULL);
+  g_slist_free (directory->default_layout_info);
+  directory->default_layout_info = NULL;
+
+  g_slist_foreach (directory->layout_info,
+		   (GFunc) menu_layout_node_unref,
+		   NULL);
   g_slist_free (directory->layout_info);
   directory->layout_info = NULL;
 }

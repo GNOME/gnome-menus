@@ -1,3 +1,20 @@
+2005-04-04  Mark McLoughlin  <mark@skynet.ie>
+
+	Implement support for <Merge>, <Separator> etc. in
+	<DefaultLayout> and fix nasty infinite recursion bug
+	with <Merge type="all"/>
+
+	* libmenu/menu-tree.c:
+	(collect_layout_info), (process_layout): keep track
+	of the default layout info nodes too.
+	(merge_subdirs_and_entries): nullify subdirs and entries
+	list pointers after concatenating them.
+	(get_layout_info): use the default layout from the
+	nearest ancestor which has it set if we have no explicit
+	layout info.
+	(process_layout_info): free the layout and default layout
+	info lists once processed.
+
 2005-04-01  Adi Attar  <aattar@cvs.gnome.org>
 
 	* configure.in: Added "xh" to ALL_LINGUAS.
