@@ -1,6 +1,6 @@
 AC_INIT(libmenu/menu-tree.h)
 
-AM_INIT_AUTOMAKE(gnome-menus, 2.9.5)
+AM_INIT_AUTOMAKE(gnome-menus, 2.9.90)
 AM_CONFIG_HEADER(config.h)
 
 # Before making a release, the LT_VERSION string should be modified.
@@ -11,7 +11,7 @@ AM_CONFIG_HEADER(config.h)
 #   change to C+1:0:0
 # - If the interface is the same as the previous version, change to C:R+1:A
 
-LIB_MENU_LT_VERSION=0:0:0
+LIB_MENU_LT_VERSION=1:0:1
 AC_SUBST(LIB_MENU_LT_VERSION)
 
 AM_MAINTAINER_MODE

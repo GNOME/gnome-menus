@@ -1,3 +1,7 @@
+2004-01-25  Vincent Untz  <vincent@vuntz.net>
+
+	* README, NEWS, configure.in: version 2.9.90
+
 2005-01-15  Kjartan Maraas  <kmaraas@gnome.org>
 
 	* configure.in: Adding «no» as well.

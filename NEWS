@@ -1,3 +1,27 @@
+==============
+Version 2.9.90
+==============
+
+  Fixes
+
+	* Do not include the Core category in the Other menu (Vincent Untz)
+
+  Translators
+
+	* Vladimir "Kaladan" Petkov (bg)
+	* Francisco Javier F. Serrador (es)
+	* Priit Laes (et)
+	* Tommi Vainikainen (fi)
+	* Baptiste Mille-Mathias (fr)
+	* Žygimantas Beručka (lt)
+	* Kjartan Maraas (nb)
+	* Kjartan Maraas (nn)
+	* Raphael Higino (pt_BR)
+	* Marcel Telka (sk)
+	* Christian Rose (sv)
+	* Theppitak Karoonboonyanan (th)
+	* Maxim Dziumanenko (uk)
+
 ===============
 Version 2.9.4.1
 ===============
