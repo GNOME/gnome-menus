@@ -751,10 +751,7 @@ menu_tree_directory_get_parent (MenuTreeDirectory *directory)
 {
   g_return_val_if_fail (directory != NULL, NULL);
 
-  if (!directory->parent)
-    return NULL;
-
-  return menu_tree_directory_ref (directory->parent);
+  return directory->parent ? menu_tree_directory_ref (directory->parent) : NULL;
 }
 
 const char *
@@ -831,7 +828,7 @@ menu_tree_entry_get_parent (MenuTreeEntry *entry)
 {
   g_return_val_if_fail (entry != NULL, NULL);
 
-  return entry->parent;
+  return entry->parent ? menu_tree_directory_ref (entry->parent) : NULL;
 }
 
 const char *

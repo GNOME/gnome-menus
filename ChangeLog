@@ -1,4 +1,11 @@
+2005-01-07  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(menu_tree_entry_get_parent): ref the return value
+	just like all the other accessors.
+
 2005-01-07  Frederic Crozat <fcrozat@mandrakesoft.com>
+	
 	* libmenu/entry-directories.c: (cached_dir_update_entry),
 	(cached_dir_remove_subdir):
 	Reload menus correctly when they are deleted/updated.
