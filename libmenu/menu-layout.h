@@ -74,12 +74,41 @@ typedef enum
   MENU_MERGE_FILE_TYPE_PARENT
 } MenuMergeFileType;
 
+typedef enum
+{
+  MENU_LAYOUT_MERGE_NONE,
+  MENU_LAYOUT_MERGE_MENUS,
+  MENU_LAYOUT_MERGE_FILES,
+  MENU_LAYOUT_MERGE_ALL
+} MenuLayoutMergeType;
+
+typedef enum
+{
+  MENU_LAYOUT_VALUES_NONE          = 0,
+  MENU_LAYOUT_VALUES_SHOW_EMPTY    = 1 << 0,
+  MENU_LAYOUT_VALUES_INLINE_MENUS  = 1 << 1,
+  MENU_LAYOUT_VALUES_INLINE_LIMIT  = 1 << 2,
+  MENU_LAYOUT_VALUES_INLINE_HEADER = 1 << 3,
+  MENU_LAYOUT_VALUES_INLINE_ALIAS  = 1 << 4
+} MenuLayoutValuesMask;
+
+typedef struct
+{
+  MenuLayoutValuesMask mask;
+
+  guint show_empty : 1;
+  guint inline_menus : 1;
+  guint inline_header : 1;
+  guint inline_alias : 1;
+
+  guint inline_limit;
+} MenuLayoutValues;
+
 
 MenuLayoutNode *menu_layout_load (const char  *filename,
                                   GError     **error);
 
 MenuLayoutNode *menu_layout_node_new   (MenuLayoutNodeType  type);
-MenuLayoutNode *menu_layout_node_copy  (MenuLayoutNode     *node);
 MenuLayoutNode *menu_layout_node_ref   (MenuLayoutNode     *node);
 void            menu_layout_node_unref (MenuLayoutNode     *node);
 
@@ -125,6 +154,13 @@ void        menu_layout_node_legacy_dir_set_prefix (MenuLayoutNode *node,
 MenuMergeFileType menu_layout_node_merge_file_get_type (MenuLayoutNode    *node);
 void              menu_layout_node_merge_file_set_type (MenuLayoutNode    *node,
 							MenuMergeFileType  type);
+
+MenuLayoutMergeType menu_layout_node_merge_get_type (MenuLayoutNode *node);
+
+void menu_layout_node_default_layout_get_values (MenuLayoutNode   *node,
+						 MenuLayoutValues *values);
+void menu_layout_node_menuname_get_values       (MenuLayoutNode   *node,
+						 MenuLayoutValues *values);
 
 typedef void (* MenuLayoutNodeEntriesChangedFunc) (MenuLayoutNode *node,
                                                    gpointer        user_data);

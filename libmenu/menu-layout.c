@@ -25,6 +25,7 @@
 
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
 
@@ -32,10 +33,13 @@
 #include "entry-directories.h"
 #include "menu-util.h"
 
-typedef struct MenuLayoutNodeMenu      MenuLayoutNodeMenu;
-typedef struct MenuLayoutNodeRoot      MenuLayoutNodeRoot;
-typedef struct MenuLayoutNodeLegacyDir MenuLayoutNodeLegacyDir;
-typedef struct MenuLayoutNodeMergeFile MenuLayoutNodeMergeFile;
+typedef struct MenuLayoutNodeMenu          MenuLayoutNodeMenu;
+typedef struct MenuLayoutNodeRoot          MenuLayoutNodeRoot;
+typedef struct MenuLayoutNodeLegacyDir     MenuLayoutNodeLegacyDir;
+typedef struct MenuLayoutNodeMergeFile     MenuLayoutNodeMergeFile;
+typedef struct MenuLayoutNodeDefaultLayout MenuLayoutNodeDefaultLayout;
+typedef struct MenuLayoutNodeMenuname      MenuLayoutNodeMenuname;
+typedef struct MenuLayoutNodeMerge         MenuLayoutNodeMerge;
 
 struct MenuLayoutNode
 {
@@ -85,6 +89,27 @@ struct MenuLayoutNodeMergeFile
   MenuLayoutNode node;
 
   MenuMergeFileType type;
+};
+
+struct MenuLayoutNodeDefaultLayout
+{
+  MenuLayoutNode node;
+
+  MenuLayoutValues layout_values;
+};
+
+struct MenuLayoutNodeMenuname
+{
+  MenuLayoutNode node;
+
+  MenuLayoutValues layout_values;
+};
+
+struct MenuLayoutNodeMerge
+{
+  MenuLayoutNode node;
+
+  MenuLayoutMergeType merge_type;
 };
 
 typedef struct
@@ -231,6 +256,18 @@ menu_layout_node_new (MenuLayoutNodeType type)
       node = (MenuLayoutNode *) g_new0 (MenuLayoutNodeMergeFile, 1);
       break;
 
+    case MENU_LAYOUT_NODE_DEFAULT_LAYOUT:
+      node = (MenuLayoutNode *) g_new0 (MenuLayoutNodeDefaultLayout, 1);
+      break;
+
+    case MENU_LAYOUT_NODE_MENUNAME:
+      node = (MenuLayoutNode *) g_new0 (MenuLayoutNodeMenuname, 1);
+      break;
+
+    case MENU_LAYOUT_NODE_MERGE:
+      node = (MenuLayoutNode *) g_new0 (MenuLayoutNodeMerge, 1);
+      break;
+
     default:
       node = g_new0 (MenuLayoutNode, 1);
       break;
@@ -245,65 +282,6 @@ menu_layout_node_new (MenuLayoutNodeType type)
   node->prev = node;
 
   return node;
-}
-
-MenuLayoutNode *
-menu_layout_node_copy (MenuLayoutNode *node)
-{
-  MenuLayoutNode *copy;
-  MenuLayoutNode *iter;
-
-  copy = menu_layout_node_new (node->type);
-
-  copy->content = g_strdup (node->content);
-
-  switch (node->type)
-    {
-    case MENU_LAYOUT_NODE_ROOT:
-      {
-        MenuLayoutNodeRoot *nr      = (MenuLayoutNodeRoot *) node;
-        MenuLayoutNodeRoot *copy_nr = (MenuLayoutNodeRoot *) copy;
-
-        copy_nr->basedir = g_strdup (nr->basedir);
-        copy_nr->name    = g_strdup (nr->name);
-      }
-      break;
-
-    case MENU_LAYOUT_NODE_LEGACY_DIR:
-      {
-        MenuLayoutNodeLegacyDir *legacy      = (MenuLayoutNodeLegacyDir *) node;
-        MenuLayoutNodeLegacyDir *copy_legacy = (MenuLayoutNodeLegacyDir *) copy;
-
-        copy_legacy->prefix = g_strdup (legacy->prefix);
-      }
-      break;
-
-    case MENU_LAYOUT_NODE_MERGE_FILE:
-      {
-        MenuLayoutNodeMergeFile *merge_file      = (MenuLayoutNodeMergeFile *) node;
-        MenuLayoutNodeMergeFile *copy_merge_file = (MenuLayoutNodeMergeFile *) copy;
-
-        copy_merge_file->type = merge_file->type;
-      }
-      break;
-
-    default:
-      break;
-    }
-
-  iter = node->children;
-  while (iter != NULL)
-    {
-      MenuLayoutNode *child;
-
-      child = menu_layout_node_copy (iter);
-      menu_layout_node_append_child (copy, child);
-      menu_layout_node_unref (child);
-
-      iter = node_next (iter);
-    }
-
-  return copy;
 }
 
 MenuLayoutNode *
@@ -865,9 +843,6 @@ menu_layout_node_legacy_dir_set_prefix (MenuLayoutNode *node,
 
   legacy = (MenuLayoutNodeLegacyDir *) node;
 
-  if (legacy->prefix == prefix)
-    return;
-
   g_free (legacy->prefix);
   legacy->prefix = g_strdup (prefix);
 }
@@ -895,6 +870,169 @@ menu_layout_node_merge_file_set_type (MenuLayoutNode    *node,
   merge_file = (MenuLayoutNodeMergeFile *) node;
 
   merge_file->type = type;
+}
+
+MenuLayoutMergeType
+menu_layout_node_merge_get_type (MenuLayoutNode *node)
+{
+  MenuLayoutNodeMerge *merge;
+
+  g_return_val_if_fail (node->type == MENU_LAYOUT_NODE_MERGE, 0);
+
+  merge = (MenuLayoutNodeMerge *) node;
+
+  return merge->merge_type;
+}
+
+static void
+menu_layout_node_merge_set_type (MenuLayoutNode *node,
+                                 const char     *merge_type)
+{
+  MenuLayoutNodeMerge *merge;
+
+  g_return_if_fail (node->type == MENU_LAYOUT_NODE_MERGE);
+
+  merge = (MenuLayoutNodeMerge *) node;
+
+  merge->merge_type = MENU_LAYOUT_MERGE_NONE;
+
+  if (strcmp (merge_type, "menus") == 0)
+    {
+      merge->merge_type = MENU_LAYOUT_MERGE_MENUS;
+    }
+  else if (strcmp (merge_type, "files") == 0)
+    {
+      merge->merge_type = MENU_LAYOUT_MERGE_FILES;
+    }
+  else if (strcmp (merge_type, "all") == 0)
+    {
+      merge->merge_type = MENU_LAYOUT_MERGE_ALL;
+    }
+}
+
+void
+menu_layout_node_default_layout_get_values (MenuLayoutNode   *node,
+					    MenuLayoutValues *values)
+{
+  MenuLayoutNodeDefaultLayout *default_layout;
+
+  g_return_if_fail (node->type == MENU_LAYOUT_NODE_DEFAULT_LAYOUT);
+  g_return_if_fail (values != NULL);
+
+  default_layout = (MenuLayoutNodeDefaultLayout *) node;
+
+  *values = default_layout->layout_values;
+}
+
+void
+menu_layout_node_menuname_get_values (MenuLayoutNode   *node,
+				      MenuLayoutValues *values)
+{
+  MenuLayoutNodeMenuname *menuname;
+
+  g_return_if_fail (node->type == MENU_LAYOUT_NODE_MENUNAME);
+  g_return_if_fail (values != NULL);
+
+  menuname = (MenuLayoutNodeMenuname *) node;
+
+  *values = menuname->layout_values;
+}
+
+static void
+menu_layout_values_set (MenuLayoutValues *values,
+			const char       *show_empty,
+			const char       *inline_menus,
+			const char       *inline_limit,
+			const char       *inline_header,
+			const char       *inline_alias)
+{
+  values->mask          = MENU_LAYOUT_VALUES_NONE;
+  values->show_empty    = FALSE;
+  values->inline_menus  = FALSE;
+  values->inline_limit  = 4;
+  values->inline_header = FALSE;
+  values->inline_alias  = FALSE;
+
+  if (show_empty != NULL)
+    {
+      values->show_empty = strcmp (show_empty, "true") == 0;
+      values->mask |= MENU_LAYOUT_VALUES_SHOW_EMPTY;
+    }
+
+  if (inline_menus != NULL)
+    {
+      values->inline_menus = strcmp (inline_menus, "true") == 0;
+      values->mask |= MENU_LAYOUT_VALUES_INLINE_MENUS;
+    }
+  
+  if (inline_limit != NULL)
+    {
+      char *end;
+      int   limit;
+
+      limit = strtol (inline_limit, &end, 10);
+      if (*end == '\0')
+	{
+	  values->inline_limit = limit;
+	  values->mask |= MENU_LAYOUT_VALUES_INLINE_LIMIT;
+	}
+    }
+
+  if (inline_header != NULL)
+    {
+      values->inline_header = strcmp (inline_header, "true") == 0;
+      values->mask |= MENU_LAYOUT_VALUES_INLINE_HEADER;
+    }
+
+  if (inline_alias != NULL)
+    {
+      values->inline_alias = strcmp (inline_alias, "true") == 0;
+      values->mask |= MENU_LAYOUT_VALUES_INLINE_ALIAS;
+    }
+}
+
+static void
+menu_layout_node_default_layout_set_values (MenuLayoutNode *node,
+					    const char     *show_empty,
+					    const char     *inline_menus,
+					    const char     *inline_limit,
+					    const char     *inline_header,
+					    const char     *inline_alias)
+{
+  MenuLayoutNodeDefaultLayout *default_layout;
+
+  g_return_if_fail (node->type == MENU_LAYOUT_NODE_DEFAULT_LAYOUT);
+
+  default_layout = (MenuLayoutNodeDefaultLayout *) node;
+
+  menu_layout_values_set (&default_layout->layout_values,
+			  show_empty,
+			  inline_menus,
+			  inline_limit,
+			  inline_header,
+			  inline_alias);
+}
+
+static void
+menu_layout_node_menuname_set_values (MenuLayoutNode *node,
+				      const char     *show_empty,
+				      const char     *inline_menus,
+				      const char     *inline_limit,
+				      const char     *inline_header,
+				      const char     *inline_alias)
+{
+  MenuLayoutNodeMenuname *menuname;
+
+  g_return_if_fail (node->type == MENU_LAYOUT_NODE_MENUNAME);
+
+  menuname = (MenuLayoutNodeMenuname *) node;
+
+  menu_layout_values_set (&menuname->layout_values,
+			  show_empty,
+			  inline_menus,
+			  inline_limit,
+			  inline_header,
+			  inline_alias);
 }
 
 void
@@ -1283,7 +1421,7 @@ start_menu_child_element (MenuParser           *parser,
   else if (ELEMENT_IS ("DefaultLayout"))
     {
       const char *show_empty;
-      const char *inline_flag;
+      const char *inline_menus;
       const char *inline_limit;
       const char *inline_header;
       const char *inline_alias;
@@ -1294,11 +1432,18 @@ start_menu_child_element (MenuParser           *parser,
                          attribute_names, attribute_values,
                          error,
                          "show_empty",    &show_empty,
-                         "inline",        &inline_flag,
+                         "inline",        &inline_menus,
                          "inline_limit",  &inline_limit,
                          "inline_header", &inline_header,
                          "inline_alias",  &inline_alias,
                          NULL);
+
+      menu_layout_node_default_layout_set_values (parser->stack_top,
+						  show_empty,
+						  inline_menus,
+						  inline_limit,
+						  inline_header,
+						  inline_alias);
     }
   else
     {
@@ -1482,7 +1627,7 @@ start_layout_child_element (MenuParser           *parser,
   if (ELEMENT_IS ("Menuname"))
     {
       const char *show_empty;
-      const char *inline_flag;
+      const char *inline_menus;
       const char *inline_limit;
       const char *inline_header;
       const char *inline_alias;
@@ -1493,11 +1638,18 @@ start_layout_child_element (MenuParser           *parser,
                          attribute_names, attribute_values,
                          error,
                          "show_empty",    &show_empty,
-                         "inline",        &inline_flag,
+                         "inline",        &inline_menus,
                          "inline_limit",  &inline_limit,
                          "inline_header", &inline_header,
                          "inline_alias",  &inline_alias,
                          NULL);
+
+       menu_layout_node_menuname_set_values (parser->stack_top,
+					     show_empty,
+					     inline_menus,
+					     inline_limit,
+					     inline_header,
+					     inline_alias);
     }
   else if (ELEMENT_IS ("Merge"))
     {
@@ -1511,6 +1663,7 @@ start_layout_child_element (MenuParser           *parser,
                            "type", &type,
                            NULL);
 
+	menu_layout_node_merge_set_type (parser->stack_top, type);
     }
   else
     {

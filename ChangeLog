@@ -1,5 +1,118 @@
 2005-03-23  Mark McLoughlin  <mark@skynet.ie>
 
+	* python/Makefile.am: don't build with $(WARN_CFLAGS)
+
+2005-03-23  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-layout.c: (menu_layout_values_set): fix silly
+	crasher.
+	
+	* libmenu/menu-tree.c:
+	(merge_subdir), (merge_subdir_by_name),
+	(merge_entry), (merge_entry_by_id), (merge_subdirs),
+	(merge_entries), (process_layout_info): adding debugging
+	verbosity.
+	(merge_subdirs_and_entries): ditto and fix thinko causing
+	warnings.
+
+2005-03-15  Mark McLoughlin  <mark@skynet.ie>
+
+	Implement the last bits of the python binding.
+
+	* python/gmenu.pyx:
+	Include definition for g_free()
+	Implement Directory.make_path ()
+	Add MonitorCallback class to encapsulate a python
+	callback, user data and menu tree
+	Implement Tree.add_monitor() and Tree.remove_montor()
+
+2005-03-15  Mark McLoughlin  <mark@skynet.ie>
+
+	Add python bindings. Mostly complete, but still need
+	to finish wraping:
+	  - menu_tree_directory_make_path ()
+	  - menu_tree_add_monitor ()
+	  - menu_tree_remove_monitor ()
+
+	* configure.in, acinclude.m4: add python checks, copied
+	from dbus.
+	
+	* Makefile.am: build the python subdir.
+	
+	* python/Makefile.am: again copied from dbus.
+	
+	* python/gmenu.pyx: Pyrex wrapping of the API.
+
+2005-03-15  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.h:
+	(menu_tree_entry_get_parent): remove.
+
+2005-03-14  Mark McLoughlin  <mark@skynet.ie>
+
+	Implement support for <Layout> and <DefaultLayout>.
+	
+	Based on a patch from Frederic Crozat <fcrozat@mandrakesoft.com>
+	in bug #164310.
+
+	* libmenu/menu-tree.h: API changes:
+	  - Add MenuTreeItem type as base class of other items
+	  - Make MenuTreeEntry and MenuTreeDirectory its sub-classes
+	  - Add MenuTreeSeparator, MenuTreeAlias and MenuTreeHeader
+	  - menu_tree_entry_ref/unref() becomes menu_tree_item_ref/unref()
+	  - ditto for menu_tree_directory_ref/unref()
+	  - Instead of having menu_tree_directory_get_entries() and
+	    menu_tree_directory_get_subdirs, we now have
+	    menu_tree_directory_get_contents()
+	  - menu_tree_directory/entry_get_parent() becomes
+	    menu_tree_item_get_parent()
+	  - Add menu_tree_header_get_directory (), menu_tree_alias_get_directory()
+	    and menu_tree_alias_get_item ()
+	
+	* libmenu/menu-tree.c:
+	(find_path): look up the path from the laid out contents.
+	(menu_tree_item_compare): add compare function for sorting
+	directories and entries as peers.
+	(collect_layout_info): retain the contents of the last <Layout>
+	node we come across for each <Menu>
+	(process_layout): retain the attributes of the last <DefaultLayout>
+	node we come across for each <Menu>.
+	(process_only_unallocated): don't prune empty subdirs here.
+	(merge_subdir), (merge_subdir_by_name),
+	(merge_entry), (merge_entry_by_id), (merge_subdirs),
+	(merge_entries), (merge_subdirs_and_entries): various helpers
+	to implement <Merge type="all|files|menus"> and merging by
+	<Filename>/<Menuname>
+	(get_values_with_defaults): get the <Layout> attributes from
+	a node, using the values from the <DefaultLayout> for any unset
+	attribute.
+	(process_layout_info): implement the final post-processing of
+	the menu where the list of entries and subdirs gets laid out
+	and merged according to <Layout> and <DefaultLayout>
+	
+	* libmenu/menu-layout.[ch]:
+	(menu_layout_node_new): allocate DefaultLayout, Layout and
+	Menuname structures.
+	(menu_layout_node_copy): remove, unused.
+	(menu_layout_node_legacy_dir_set_prefix): remove string compare
+	by pointer.
+	(menu_layout_node_merge_get_type),
+	(menu_layout_node_merge_set_type),
+	(menu_layout_node_default_layout_get_values),
+	(menu_layout_node_menuname_get_values),
+	(menu_layout_values_set),
+	(menu_layout_node_default_layout_set_values):
+	(menu_layout_node_menuname_set_values):  support setting/getting
+	the various attributes on <DefaultLayout>, <Layout> and <Menuname>
+	(start_menu_child_element),
+	(start_layout_child_element): set the attributes.
+	
+	* util/test-menu-spec.c:
+	(append_directory_path), (print_entry),	(print_directory),
+	(handle_tree_changed), (main): adapt to API changes.
+
+2005-03-23  Mark McLoughlin  <mark@skynet.ie>
+
 	* configure.in: bump version to 2.11.1 post branching.
 
 2005-03-23  Mark McLoughlin  <mark@skynet.ie>

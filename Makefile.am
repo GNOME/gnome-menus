@@ -1,12 +1,19 @@
-NULL = 
+NULL =
 
-SUBDIRS =			\
+if HAVE_PYTHON
+PYTHON_SUBDIR=python
+endif
+
+ALL_SUBDIRS = 			\
 	po 			\
 	libmenu			\
 	layout			\
 	desktop-directories	\
 	util			\
 	$(NULL)
+
+SUBDIRS = $(ALL_SUBDIRS) $(PYTHON_SUBDIR)
+DIST_SUBDIRS = $(ALL_SUBDIRS) python
 
 EXTRA_DIST = 			\
 	HACKING			\
