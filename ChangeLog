@@ -1,3 +1,45 @@
+2005-03-22  Mark McLoughlin  <mark@skynet.ie>
+
+	Implement support for new "type" argument to <MergeFile>
+	
+	* libmenu/menu-layout.[ch]:
+	(menu_layout_node_root_get_basedir): add basedir accessor.
+	(menu_layout_node_merge_file_get_type),
+	(menu_layout_node_merge_file_set_type): add type accessors.
+	(start_menu_child_element): read the attribute.
+	
+	* libmenu/menu-tree.c:
+	(load_merge_file): return a boolean indicating whether the
+	file was successfully loaded.
+	(load_merge_file_with_config_dir): load a merge file from a
+	config dir.
+	(compare_basedir_to_config_dir): check to see if a basedir
+	matches a given config dir.
+	(load_parent_merge_file): try to find the parent of the
+	current menu file and load it if found.
+	(resolve_merge_file): load the parent menu file if requested.
+	
+	* libmenu/menu-util.c: (append_to_string): output the "type"
+	attribute on <MergeFile>
+
+2005-03-16  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix problem where if you installed an app which created
+	$XDG_DATA_DIRS/menus/applications-merged for the first
+	time and dumped its .menu file there, we wouldn't notice
+	and re-load the menu.
+
+	* libmenu/menu-tree.c:
+	(handle_menu_file_changed): always re-canonicalize so
+	that monitors get removed and re-added.
+	(handle_menu_file_directory_changed): callback for
+	<MergeDir> monitors.
+	(menu_tree_add_menu_file_monitor): handle adding <MergeDir>
+	monitors.
+	(load_merge_file): add a monitor if the <MergeFile> doesn't
+	exist.
+	(load_merge_dir): always monitor the <MergeDir>
+
 2005-03-15  Mark McLoughlin  <mark@skynet.ie>
 
 	Implement the last bits of the python binding.

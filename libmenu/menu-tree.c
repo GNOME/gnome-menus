@@ -133,13 +133,6 @@ static void      menu_tree_resolve_files        (MenuTree       *tree,
 static void      menu_tree_force_recanonicalize (MenuTree       *tree);
 static void      menu_tree_invoke_monitors      (MenuTree       *tree);
      
-static void menu_tree_add_menu_file_monitor     (MenuTree   *tree,
-						 const char *path,
-						 gboolean    existent);
-static void menu_tree_remove_menu_file_monitors (MenuTree   *tree);
-
-
-
 /*
  * The idea is that we cache the menu tree for either a given
  * menu basename or an absolute menu path.
@@ -204,6 +197,14 @@ menu_tree_remove_from_cache (MenuTree *tree)
     }
 }
 
+typedef enum
+{
+  MENU_FILE_MONITOR_INVALID = 0,
+  MENU_FILE_MONITOR_FILE,
+  MENU_FILE_MONITOR_NONEXISTENT_FILE,
+  MENU_FILE_MONITOR_DIRECTORY
+} MenuFileMonitorType;
+
 static void
 handle_nonexistent_menu_file_changed (GnomeVFSMonitorHandle    *handle,
 				      const char               *monitor_uri,
@@ -214,9 +215,9 @@ handle_nonexistent_menu_file_changed (GnomeVFSMonitorHandle    *handle,
   if (event == GNOME_VFS_MONITOR_EVENT_CHANGED ||
       event == GNOME_VFS_MONITOR_EVENT_CREATED)
     {
-      menu_verbose ("File \"%s\" %s, marking tree for recanonicalization\n",
+      menu_verbose ("\"%s\" %s, marking tree for recanonicalization\n",
                     info_uri,
-                    event == GNOME_VFS_MONITOR_EVENT_CREATED ? ("created") : ("changed"));
+                    event == GNOME_VFS_MONITOR_EVENT_CREATED ? "created" : "changed");
 
       menu_tree_force_recanonicalize (tree);
       menu_tree_invoke_monitors (tree);
@@ -230,56 +231,92 @@ handle_menu_file_changed (GnomeVFSMonitorHandle    *handle,
                           GnomeVFSMonitorEventType  event,
                           MenuTree                 *tree)
 {
-  if (event == GNOME_VFS_MONITOR_EVENT_DELETED)
-    {
-      menu_verbose ("File \"%s\" deleted, marking tree for recanicalization\n",
-                    info_uri);
+  if (event != GNOME_VFS_MONITOR_EVENT_DELETED &&
+      event != GNOME_VFS_MONITOR_EVENT_CHANGED &&
+      event != GNOME_VFS_MONITOR_EVENT_CREATED)
+    return;
 
-      menu_tree_force_recanonicalize (tree);
-      menu_tree_invoke_monitors (tree);
-    }
-  else if (event == GNOME_VFS_MONITOR_EVENT_CHANGED ||
-	   event == GNOME_VFS_MONITOR_EVENT_CREATED)
-    {
-      menu_verbose ("File \"%s\" %s, marking layout for reload\n",
-                    monitor_uri,
-                    event == GNOME_VFS_MONITOR_EVENT_CREATED ? ("created") : ("changed"));
+  menu_verbose ("\"%s\" %s, marking tree for recanicalization\n",
+		info_uri,
+		event == GNOME_VFS_MONITOR_EVENT_CREATED ? "created" :
+		event == GNOME_VFS_MONITOR_EVENT_CHANGED ? "changed" : "deleted");
 
-      menu_tree_force_reload (tree);
-      menu_tree_invoke_monitors (tree);
-    }
+  menu_tree_force_recanonicalize (tree);
+  menu_tree_invoke_monitors (tree);
 }
 
 static void
-menu_tree_add_menu_file_monitor (MenuTree   *tree,
-                                 const char *path,
-				 gboolean    existent)
+handle_menu_file_directory_changed (GnomeVFSMonitorHandle    *handle,
+				    const char               *monitor_uri,
+				    const char               *info_uri,
+				    GnomeVFSMonitorEventType  event,
+				    MenuTree                 *tree)
+{
+  if (event != GNOME_VFS_MONITOR_EVENT_DELETED &&
+      event != GNOME_VFS_MONITOR_EVENT_CHANGED &&
+      event != GNOME_VFS_MONITOR_EVENT_CREATED)
+    return;
+
+  if (!g_str_has_suffix (info_uri, ".menu"))
+    return;
+
+  menu_verbose ("\"%s\" %s, marking tree for recanicalization\n",
+		info_uri,
+		event == GNOME_VFS_MONITOR_EVENT_CREATED ? "created" :
+		event == GNOME_VFS_MONITOR_EVENT_CHANGED ? "changed" : "deleted");
+
+  menu_tree_force_recanonicalize (tree);
+  menu_tree_invoke_monitors (tree);
+}
+
+static void
+menu_tree_add_menu_file_monitor (MenuTree            *tree,
+                                 const char          *path,
+				 MenuFileMonitorType  type)
 {
   GnomeVFSMonitorHandle *handle;
   GnomeVFSResult         result;
   char                  *uri;
 
-  menu_verbose ("Adding a menu file monitor for %sexistent \"%s\"\n",
-		existent ? "" : "non", path);
-
   uri = gnome_vfs_get_uri_from_local_path (path);
 
   handle = NULL;
-  if (existent)
+
+  switch (type)
     {
+    case MENU_FILE_MONITOR_FILE:
+      menu_verbose ("Adding a menu file monitor for \"%s\"\n", path);
+
       result = gnome_vfs_monitor_add (&handle,
 				      uri,
 				      GNOME_VFS_MONITOR_FILE,
 				      (GnomeVFSMonitorCallback) handle_menu_file_changed,
 				      tree);
-    }
-  else
-    {
+      break;
+
+    case MENU_FILE_MONITOR_NONEXISTENT_FILE:
+      menu_verbose ("Adding a menu file monitor for non-existent \"%s\"\n", path);
+
       result = gnome_vfs_monitor_add (&handle,
 				      uri,
 				      GNOME_VFS_MONITOR_FILE,
 				      (GnomeVFSMonitorCallback) handle_nonexistent_menu_file_changed,
 				      tree);
+      break;
+
+    case MENU_FILE_MONITOR_DIRECTORY:
+      menu_verbose ("Adding a menu directory monitor for \"%s\"\n", path);
+
+      result = gnome_vfs_monitor_add (&handle,
+				      uri,
+				      GNOME_VFS_MONITOR_DIRECTORY,
+				      (GnomeVFSMonitorCallback) handle_menu_file_directory_changed,
+				      tree);
+      break;
+
+    default:
+      g_assert_not_reached ();
+      break;
     }
 
   if (result == GNOME_VFS_OK)
@@ -289,7 +326,7 @@ menu_tree_add_menu_file_monitor (MenuTree   *tree,
   else
     {
       g_assert (handle == NULL);
-      menu_verbose ("Failed to add file monitor to for %s: %s\n",
+      menu_verbose ("Failed to add monitor for %s: %s\n",
                     path, gnome_vfs_result_to_string (result));
     }
 
@@ -370,11 +407,15 @@ canonicalize_basename_with_config_dir (MenuTree   *tree,
   if (tree->canonical_path)
     {
       tree->canonical = TRUE;
-      menu_tree_add_menu_file_monitor (tree, tree->canonical_path, TRUE);
+      menu_tree_add_menu_file_monitor (tree,
+				       tree->canonical_path,
+				       MENU_FILE_MONITOR_FILE);
     }
   else
     {
-      menu_tree_add_menu_file_monitor (tree, path, FALSE);
+      menu_tree_add_menu_file_monitor (tree,
+				       path,
+				       MENU_FILE_MONITOR_NONEXISTENT_FILE);
     }
 
   g_free (path);
@@ -439,7 +480,7 @@ menu_tree_canonicalize_path (MenuTree *tree)
           menu_tree_remove_menu_file_monitors (tree);
           menu_tree_add_menu_file_monitor (tree,
                                            tree->canonical_path,
-					   TRUE);
+					   MENU_FILE_MONITOR_FILE);
 
           tree->canonical = TRUE;
 
@@ -513,11 +554,15 @@ menu_tree_new (MenuTreeType  type,
       if (tree->canonical)
 	{
 	  tree->canonical_path = g_strdup (menu_file);
-	  menu_tree_add_menu_file_monitor (tree, tree->canonical_path, TRUE);
+	  menu_tree_add_menu_file_monitor (tree,
+					   tree->canonical_path,
+					   MENU_FILE_MONITOR_FILE);
 	}
       else
 	{
-	  menu_tree_add_menu_file_monitor (tree, tree->absolute_path, FALSE);
+	  menu_tree_add_menu_file_monitor (tree,
+					   tree->absolute_path,
+					   MENU_FILE_MONITOR_NONEXISTENT_FILE);
 	}
     }
 
@@ -1296,10 +1341,11 @@ merge_resolved_children (MenuTree       *tree,
     }
 }
 
-static void
+static gboolean
 load_merge_file (MenuTree       *tree,
                  const char     *filename,
                  gboolean        is_canonical,
+		 gboolean        add_monitor,
                  MenuLayoutNode *where)
 {
   MenuLayoutNode *to_merge;
@@ -1311,9 +1357,14 @@ load_merge_file (MenuTree       *tree,
       canonical = freeme = menu_canonicalize_file_name (filename, FALSE);
       if (canonical == NULL)
         {
+	  if (add_monitor)
+	    menu_tree_add_menu_file_monitor (tree,
+					     filename,
+					     MENU_FILE_MONITOR_NONEXISTENT_FILE);
+
           menu_verbose ("Failed to canonicalize merge file path \"%s\": %s\n",
                         filename, g_strerror (errno));
-          return;
+          return FALSE;
         }
     }
   else
@@ -1328,10 +1379,13 @@ load_merge_file (MenuTree       *tree,
     {
       menu_verbose ("No menu for file \"%s\" found when merging\n",
                     canonical);
-      return;
+      return FALSE;
     }
 
-  menu_tree_add_menu_file_monitor (tree, canonical, TRUE);
+  if (add_monitor)
+    menu_tree_add_menu_file_monitor (tree,
+				     canonical,
+				     MENU_FILE_MONITOR_FILE);
 
   merge_resolved_children (tree, where, to_merge);
 
@@ -1339,6 +1393,121 @@ load_merge_file (MenuTree       *tree,
 
   if (freeme)
     g_free (freeme);
+
+  return TRUE;
+}
+
+static gboolean
+load_merge_file_with_config_dir (MenuTree       *tree,
+				 const char     *menu_file,
+				 const char     *config_dir,
+				 MenuLayoutNode *where)
+{
+  char     *merge_file;
+  gboolean  loaded;
+
+  loaded = FALSE;
+
+  merge_file = g_build_filename (config_dir, "menus", menu_file, NULL);
+
+  if (load_merge_file (tree, merge_file, FALSE, TRUE, where))
+    loaded = TRUE;
+
+  g_free (merge_file);
+
+  return loaded;
+}
+
+static gboolean
+compare_basedir_to_config_dir (const char *canonical_basedir,
+			       const char *config_dir)
+{
+  char     *dirname;
+  char     *canonical_menus_dir;
+  gboolean  retval;
+
+  menu_verbose ("Checking to see if basedir '%s' is in '%s'\n",
+		canonical_basedir, config_dir);
+
+  dirname = g_build_filename (config_dir, "menus", NULL);
+
+  retval = FALSE;
+
+  canonical_menus_dir = menu_canonicalize_file_name (dirname, FALSE);
+  if (canonical_menus_dir != NULL &&
+      strcmp (canonical_basedir, canonical_menus_dir) == 0)
+    {
+      retval = TRUE;
+    }
+
+  g_free (canonical_menus_dir);
+  g_free (dirname);
+
+  return retval;
+}
+
+static gboolean
+load_parent_merge_file (MenuTree       *tree,
+			MenuLayoutNode *layout)
+{
+  MenuLayoutNode     *root;
+  const char         *basedir;
+  const char         *menu_name;
+  char               *canonical_basedir;
+  char               *menu_file;
+  gboolean            found_basedir;
+  const char * const *system_config_dirs;
+  int                 i;
+
+  root = menu_layout_node_get_root (layout);
+
+  basedir   = menu_layout_node_root_get_basedir (root);
+  menu_name = menu_layout_node_root_get_name (root);
+
+  canonical_basedir = menu_canonicalize_file_name (basedir, FALSE);
+  if (canonical_basedir == NULL)
+    {
+      menu_verbose ("Menu basedir '%s' no longer exists, not merging parent\n",
+		    basedir);
+      return FALSE;
+    }
+
+  menu_file = g_strconcat (menu_name, ".menu", NULL);
+
+  found_basedir = compare_basedir_to_config_dir (canonical_basedir,
+						 g_get_user_config_dir ());
+
+  system_config_dirs = g_get_system_config_dirs ();
+
+  i = 0;
+  while (system_config_dirs[i] != NULL)
+    {
+      if (!found_basedir)
+	{
+	  found_basedir = compare_basedir_to_config_dir (canonical_basedir,
+							 system_config_dirs[i]);
+	}
+      else
+	{
+	  menu_verbose ("Looking for parent menu file '%s' in '%s'\n",
+			menu_file, system_config_dirs[i]);
+
+	  if (load_merge_file_with_config_dir (tree,
+					       menu_file,
+					       system_config_dirs[i],
+					       layout))
+	    {
+	      break;
+	    }
+	}
+
+      ++i;
+    }
+
+  g_free (menu_file);
+  g_free (canonical_basedir);
+
+  return found_basedir;
 }
 
 static void
@@ -1351,6 +1520,10 @@ load_merge_dir (MenuTree       *tree,
 
   menu_verbose ("Loading merge dir \"%s\"\n", dirname);
 
+  menu_tree_add_menu_file_monitor (tree,
+				   dirname,
+				   MENU_FILE_MONITOR_DIRECTORY);
+
   if ((dir = g_dir_open (dirname, 0, NULL)) == NULL)
     return;
 
@@ -1362,7 +1535,7 @@ load_merge_dir (MenuTree       *tree,
 
           full_path = g_build_filename (dirname, menu_file, NULL);
 
-          load_merge_file (tree, full_path, TRUE, where);
+          load_merge_file (tree, full_path, TRUE, FALSE, where);
 
           g_free (full_path);
         }
@@ -1392,6 +1565,12 @@ resolve_merge_file (MenuTree         *tree,
 {
   char *filename;
 
+  if (menu_layout_node_merge_file_get_type (layout) == MENU_MERGE_FILE_TYPE_PARENT)
+    {
+      if (load_parent_merge_file (tree, layout))
+        return;
+    }
+
   filename = menu_layout_node_get_content_as_path (layout);
   if (filename == NULL)
     {
@@ -1399,7 +1578,7 @@ resolve_merge_file (MenuTree         *tree,
     }
   else
     {
-      load_merge_file (tree, filename, FALSE, layout);
+      load_merge_file (tree, filename, FALSE, TRUE, layout);
 
       g_free (filename);
     }

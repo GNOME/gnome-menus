@@ -314,8 +314,16 @@ append_to_string (MenuLayoutNode *node,
       break;
 
     case MENU_LAYOUT_NODE_MERGE_FILE:
-      append_simple (node, depth, "MergeFile", str);
-      break;
+      {
+	MenuMergeFileType type;
+
+	type = menu_layout_node_merge_file_get_type (node);
+
+	append_simple_with_attr (node, depth, "MergeFile",
+				 "type", type == MENU_MERGE_FILE_TYPE_PARENT ? "parent" : "path",
+				 str);
+	break;
+      }
 
     case MENU_LAYOUT_NODE_MERGE_DIR:
       append_simple (node, depth, "MergeDir", str);
