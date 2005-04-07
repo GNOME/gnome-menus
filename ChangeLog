@@ -1,3 +1,12 @@
+2005-04-07  Mark McLoughlin  <mark@skynet.ie>
+
+	Probably doesn't cause any problems in practice, just
+	a correctness fix.
+
+	* libmenu/menu-tree.c: (menu_tree_entry_unref): don't
+	unref the parent because we don't hold a ref on it
+	anymore.
+
 2005-04-05  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix memory leaks on reload - bug #172472. Basically,

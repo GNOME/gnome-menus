@@ -1063,8 +1063,6 @@ menu_tree_entry_unref (MenuTreeEntry *entry)
         desktop_entry_unref (entry->desktop_entry);
       entry->desktop_entry = NULL;
 
-      if (entry->parent)
-	menu_tree_directory_unref (entry->parent);
       entry->parent = NULL;
 
       g_free (entry);
