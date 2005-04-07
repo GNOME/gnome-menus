@@ -1335,8 +1335,6 @@ menu_tree_item_unref (gpointer itemp)
       item->user_data = NULL;
       item->dnotify   = NULL;
 
-      if (item->parent != NULL)
-	menu_tree_item_unref (item->parent);
       item->parent = NULL;
 
       g_free (item);

@@ -1,3 +1,10 @@
+2005-04-07  Mark McLoughlin  <mark@skynet.ie>
+
+	Hopefully fixes crash in bug #172792.
+
+	* libmenu/menu-tree.c: (menu_tree_item_unref): don't unref the
+	parent because we don't hold a ref on it anymore.
+
 2005-04-06  Mark McLoughlin  <mark@skynet.ie>
 
 	Add a flags argument to menu_tree_lookup () to allow specifying
