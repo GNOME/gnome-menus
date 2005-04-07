@@ -60,7 +60,7 @@ typedef enum
 {
   MENU_TREE_FLAGS_NONE             = 0,
   MENU_TREE_FLAGS_INCLUDE_EXCLUDED = 1 << 0,
-  MENU_TREE_FLAGS_SHOW_EMPTY       = 1 << 2,
+  MENU_TREE_FLAGS_SHOW_EMPTY       = 1 << 1,
   MENU_TREE_FLAGS_MASK             = 0x03
 } MenuTreeFlags;
 

@@ -1,5 +1,18 @@
 2005-04-07  Mark McLoughlin  <mark@skynet.ie>
 
+	* libmenu/menu-tree.h: fixup flags definition.
+	
+	* python/gmenu.c:
+	(lookup_item_type_str): implement looking up
+	a constant from the module dict.
+	(pygmenu_tree_item_get_type): use it here.
+	(initgmenu): register integer constants with
+	PyModule_AddIntConstant() instead of manually
+	doing it and use PyModule_AddObject() to register
+	types.
+
+2005-04-07  Mark McLoughlin  <mark@skynet.ie>
+
 	Hopefully fixes crash in bug #172792.
 
 	* libmenu/menu-tree.c: (menu_tree_item_unref): don't unref the

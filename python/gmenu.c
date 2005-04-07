@@ -56,16 +56,15 @@ static PyGMenuTreeSeparator *pygmenu_tree_separator_wrap (MenuTreeSeparator *sep
 static PyGMenuTreeHeader    *pygmenu_tree_header_wrap    (MenuTreeHeader    *header);
 static PyGMenuTreeAlias     *pygmenu_tree_alias_wrap     (MenuTreeAlias     *alias);
 
-static PyObject *pygmenu_tree_item_type_invalid   = NULL;
-static PyObject *pygmenu_tree_item_type_directory = NULL;
-static PyObject *pygmenu_tree_item_type_entry     = NULL;
-static PyObject *pygmenu_tree_item_type_separator = NULL;
-static PyObject *pygmenu_tree_item_type_header    = NULL;
-static PyObject *pygmenu_tree_item_type_alias     = NULL;
+static inline PyObject *
+lookup_item_type_str (const char *item_type_str)
+{
+  PyObject *module;
 
-static PyObject *pygmenu_tree_flags_none             = NULL;
-static PyObject *pygmenu_tree_flags_include_excluded = NULL;
-static PyObject *pygmenu_tree_flags_show_empty       = NULL;
+  module = PyDict_GetItemString (PyImport_GetModuleDict (), "gmenu");
+
+  return PyDict_GetItemString (PyModule_GetDict (module), item_type_str);
+}
 
 static void
 pygmenu_tree_item_dealloc (PyGMenuTreeItem *self)
@@ -98,23 +97,23 @@ pygmenu_tree_item_get_type (PyObject *self,
   switch (menu_tree_item_get_type (item->item))
     {
     case MENU_TREE_ITEM_DIRECTORY:
-      retval = pygmenu_tree_item_type_directory;
+      retval = lookup_item_type_str ("TYPE_DIRECTORY");
       break;
 
     case MENU_TREE_ITEM_ENTRY:
-      retval = pygmenu_tree_item_type_entry;
+      retval = lookup_item_type_str ("TYPE_ENTRY");
       break;
 
     case MENU_TREE_ITEM_SEPARATOR:
-      retval = pygmenu_tree_item_type_separator;
+      retval = lookup_item_type_str ("TYPE_SEPARATOR");
       break;
 
     case MENU_TREE_ITEM_HEADER:
-      retval = pygmenu_tree_item_type_header;
+      retval = lookup_item_type_str ("TYPE_HEADER");
       break;
 
     case MENU_TREE_ITEM_ALIAS:
-      retval = pygmenu_tree_item_type_alias;
+      retval = lookup_item_type_str ("TYPE_ALIAS");
       break;
 
     default:
@@ -1531,39 +1530,38 @@ initgmenu (void)
 
   mod = Py_InitModule4 ("gmenu", pygmenu_methods, 0, 0, PYTHON_API_VERSION);
 
+#define REGISTER_TYPE(t, n)  G_STMT_START                \
+    {                                                    \
+      t.ob_type = &PyType_Type;                          \
+      PyType_Ready (&t);                                 \
+      PyModule_AddObject (mod, n, (PyObject *) &t);  \
+    } G_STMT_END
 
-#define REGISTER_TYPE(t, n)                          \
-  t.ob_type = &PyType_Type;                          \
-  PyType_Ready (&t);                                 \
-  PyObject_SetAttrString (mod, n, (PyObject *) &t);
+  REGISTER_TYPE (PyGMenuTree_Type,     "Tree");
+  REGISTER_TYPE (PyGMenuTreeItem_Type, "Item");
 
-  REGISTER_TYPE (PyGMenuTree_Type,     "Tree")
-  REGISTER_TYPE (PyGMenuTreeItem_Type, "Item")
+#define REGISTER_ITEM_TYPE(t, n) G_STMT_START            \
+    {                                                    \
+      t.ob_type = &PyType_Type;                          \
+      t.tp_base = &PyGMenuTreeItem_Type;                 \
+      PyType_Ready (&t);                                 \
+      PyModule_AddObject (mod, n, (PyObject *) &t);  \
+    } G_STMT_END
 
-#define REGISTER_ITEM_TYPE(t, n)                     \
-  t.ob_type = &PyType_Type;                          \
-  t.tp_base = &PyGMenuTreeItem_Type;                 \
-  PyType_Ready (&t);                                 \
-  PyObject_SetAttrString (mod, n, (PyObject *) &t);
+  REGISTER_ITEM_TYPE (PyGMenuTreeDirectory_Type, "Directory");
+  REGISTER_ITEM_TYPE (PyGMenuTreeEntry_Type,     "Entry");
+  REGISTER_ITEM_TYPE (PyGMenuTreeSeparator_Type, "Separator");
+  REGISTER_ITEM_TYPE (PyGMenuTreeHeader_Type,    "Header");
+  REGISTER_ITEM_TYPE (PyGMenuTreeAlias_Type,     "Alias");
 
-  REGISTER_ITEM_TYPE (PyGMenuTreeDirectory_Type, "Directory")
-  REGISTER_ITEM_TYPE (PyGMenuTreeEntry_Type,     "Entry")
-  REGISTER_ITEM_TYPE (PyGMenuTreeSeparator_Type, "Separator")
-  REGISTER_ITEM_TYPE (PyGMenuTreeHeader_Type,    "Header")
-  REGISTER_ITEM_TYPE (PyGMenuTreeAlias_Type,     "Alias")
+  PyModule_AddIntConstant (mod, "TYPE_INVALID",   MENU_TREE_ITEM_INVALID);
+  PyModule_AddIntConstant (mod, "TYPE_DIRECTORY", MENU_TREE_ITEM_DIRECTORY);
+  PyModule_AddIntConstant (mod, "TYPE_ENTRY",     MENU_TREE_ITEM_ENTRY);
+  PyModule_AddIntConstant (mod, "TYPE_SEPARATOR", MENU_TREE_ITEM_SEPARATOR);
+  PyModule_AddIntConstant (mod, "TYPE_HEADER",    MENU_TREE_ITEM_HEADER);
+  PyModule_AddIntConstant (mod, "TYPE_ALIAS",     MENU_TREE_ITEM_ALIAS);
 
-#define REGISTER_ENUM_CONSTANT(p, v, s)              \
-  p = PyInt_FromLong (v);                            \
-  PyObject_SetAttrString (mod, s, p);
-
-  REGISTER_ENUM_CONSTANT (pygmenu_tree_item_type_invalid,   MENU_TREE_ITEM_INVALID,   "TYPE_INVALID")
-  REGISTER_ENUM_CONSTANT (pygmenu_tree_item_type_directory, MENU_TREE_ITEM_DIRECTORY, "TYPE_DIRECTORY")
-  REGISTER_ENUM_CONSTANT (pygmenu_tree_item_type_entry,     MENU_TREE_ITEM_ENTRY,     "TYPE_ENTRY")
-  REGISTER_ENUM_CONSTANT (pygmenu_tree_item_type_separator, MENU_TREE_ITEM_SEPARATOR, "TYPE_SEPARATOR")
-  REGISTER_ENUM_CONSTANT (pygmenu_tree_item_type_header,    MENU_TREE_ITEM_HEADER,    "TYPE_HEADER")
-  REGISTER_ENUM_CONSTANT (pygmenu_tree_item_type_alias,     MENU_TREE_ITEM_ALIAS,     "TYPE_ALIAS")
-
-  REGISTER_ENUM_CONSTANT (pygmenu_tree_flags_none,             MENU_TREE_FLAGS_NONE,             "FLAGS_NONE")
-  REGISTER_ENUM_CONSTANT (pygmenu_tree_flags_include_excluded, MENU_TREE_FLAGS_INCLUDE_EXCLUDED, "FLAGS_INCLUDE_EXCLUDED")
-  REGISTER_ENUM_CONSTANT (pygmenu_tree_flags_show_empty,       MENU_TREE_FLAGS_SHOW_EMPTY,       "FLAGS_SHOW_EMPTY")
+  PyModule_AddIntConstant (mod, "FLAGS_NONE",             MENU_TREE_FLAGS_NONE);
+  PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_EXCLUDED", MENU_TREE_FLAGS_INCLUDE_EXCLUDED);
+  PyModule_AddIntConstant (mod, "FLAGS_SHOW_EMPTY",       MENU_TREE_FLAGS_SHOW_EMPTY);
 }
