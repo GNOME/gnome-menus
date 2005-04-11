@@ -11,7 +11,7 @@ INCLUDES =				\
 	$(DEBUG_CFLAGS)			\
 	$(NULL)
 
-gmenudir = $(pythondir)
+gmenudir = $(pyexecdir)
 gmenu_LTLIBRARIES = gmenu.la
 
 gmenu_la_LDFLAGS = -module -avoid-version -fPIC -export-symbols-regex initgmenu

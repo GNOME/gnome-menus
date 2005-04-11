@@ -24,12 +24,14 @@
 #include <string.h>
 #include <libgnomevfs/gnome-vfs.h>
 
-static gboolean monitor = FALSE;
-static gboolean include_excluded = FALSE;
+static char     *menu_file = NULL;
+static gboolean  monitor = FALSE;
+static gboolean  include_excluded = FALSE;
 
 static GOptionEntry options[] = {
-  { "monitor",          'm', 0, G_OPTION_ARG_NONE, &monitor,          "Monitor for menu changes",   NULL },
-  { "include-excluded", 'i', 0, G_OPTION_ARG_NONE, &include_excluded, "Include <Exclude>d entries", NULL },
+  { "file",             'f', 0, G_OPTION_ARG_STRING, &menu_file,        "Menu file",                  "MENU_FILE" },
+  { "monitor",          'm', 0, G_OPTION_ARG_NONE,   &monitor,          "Monitor for menu changes",   NULL },
+  { "include-excluded", 'i', 0, G_OPTION_ARG_NONE,   &include_excluded, "Include <Exclude>d entries", NULL },
   { NULL }
 };
 
@@ -171,14 +173,9 @@ main (int argc, char **argv)
   g_option_context_add_main_entries (options_context, options, GETTEXT_PACKAGE);
   g_option_context_parse (options_context, &argc, &argv, NULL);
 
-  tree = menu_tree_lookup ("applications.menu",
+  tree = menu_tree_lookup (menu_file ? menu_file : "applications.menu",
 			   include_excluded ? MENU_TREE_FLAGS_INCLUDE_EXCLUDED : MENU_TREE_FLAGS_NONE);
-  if (tree == NULL)
-    {
-      g_warning ("Failed to look up applications.menu");
-      gnome_vfs_shutdown ();
-      return 0;
-    }
+  g_assert (tree != NULL);
 
   root = menu_tree_get_root_directory (tree);
   if (root != NULL)

@@ -218,19 +218,17 @@ pygmenu_tree_directory_get_contents (PyObject *self,
   GSList               *contents;
   GSList               *tmp;
 
-  if (!PyArg_ParseTuple (args, ":gmenu.Directory.get_contents"))
-    return NULL;
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Directory.get_contents"))
+	return NULL;
+    }
 
   directory = (PyGMenuTreeDirectory *) self;
 
-  contents = menu_tree_directory_get_contents (MENU_TREE_DIRECTORY (directory->item));
-  if (contents == NULL)
-    {
-      Py_INCREF (Py_None);
-      return Py_None;
-    }
-
   retval = PyList_New (0);
+
+  contents = menu_tree_directory_get_contents (MENU_TREE_DIRECTORY (directory->item));
 
   tmp = contents;
   while (tmp != NULL)
@@ -354,6 +352,31 @@ pygmenu_tree_directory_get_icon (PyObject *self,
 }
 
 static PyObject *
+pygmenu_tree_directory_get_menu_id (PyObject *self,
+				    PyObject *args)
+{
+  PyGMenuTreeDirectory *directory;
+  const char           *menu_id;
+
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Directory.get_menu_id"))
+	return NULL;
+    }
+
+  directory = (PyGMenuTreeDirectory *) self;
+
+  menu_id = menu_tree_directory_get_menu_id (MENU_TREE_DIRECTORY (directory->item));
+  if (menu_id == NULL)
+    {
+      Py_INCREF (Py_None);
+      return Py_None;
+    }
+
+  return PyString_FromString (menu_id);
+}
+
+static PyObject *
 pygmenu_tree_directory_make_path (PyObject *self,
 				  PyObject *args)
 {
@@ -394,12 +417,14 @@ pygmenu_tree_directory_getattro (PyGMenuTreeDirectory *self,
 
       if (!strcmp (attr, "__members__"))
 	{
-	  return Py_BuildValue("[sssss]",
-			       "type",
-			       "parent",
-			       "name",
-			       "comment",
-			       "icon");
+	  return Py_BuildValue ("[sssss]",
+				"type",
+				"parent",
+				"contents",
+				"name",
+				"comment",
+				"icon",
+				"menu_id");
 	}
       else if (!strcmp (attr, "type"))
 	{
@@ -408,6 +433,10 @@ pygmenu_tree_directory_getattro (PyGMenuTreeDirectory *self,
       else if (!strcmp (attr, "parent"))
 	{
 	  return pygmenu_tree_item_get_parent ((PyObject *) self, NULL);
+	}
+      else if (!strcmp (attr, "contents"))
+	{
+	  return pygmenu_tree_directory_get_contents ((PyObject *) self, NULL);
 	}
       else if (!strcmp (attr, "name"))
 	{
@@ -420,6 +449,10 @@ pygmenu_tree_directory_getattro (PyGMenuTreeDirectory *self,
       else if (!strcmp (attr, "icon"))
 	{
 	  return pygmenu_tree_directory_get_icon ((PyObject *) self, NULL);
+	}
+      else if (!strcmp (attr, "menu_id"))
+	{
+	  return pygmenu_tree_directory_get_menu_id ((PyObject *) self, NULL);
 	}
     }
 
@@ -687,16 +720,16 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 
       if (!strcmp (attr, "__members__"))
 	{
-	  return Py_BuildValue("[sssssssss]",
-			       "type",
-			       "parent",
-			       "name",
-			       "comment",
-			       "icon",
-			       "exec_info",
-			       "desktop_file_path",
-			       "desktop_file_id",
-			       "is_excluded");
+	  return Py_BuildValue ("[sssssssss]",
+				"type",
+				"parent",
+				"name",
+				"comment",
+				"icon",
+				"exec_info",
+				"desktop_file_path",
+				"desktop_file_id",
+				"is_excluded");
 	}
       else if (!strcmp (attr, "type"))
 	{
@@ -929,10 +962,10 @@ pygmenu_tree_header_getattro (PyGMenuTreeHeader *self,
 
       if (!strcmp (attr, "__members__"))
 	{
-	  return Py_BuildValue("[sss]",
-			       "type",
-			       "parent",
-			       "directory");
+	  return Py_BuildValue ("[sss]",
+				"type",
+				"parent",
+				"directory");
 	}
       else if (!strcmp (attr, "type"))
 	{
@@ -1110,11 +1143,11 @@ pygmenu_tree_alias_getattro (PyGMenuTreeAlias *self,
 
       if (!strcmp (attr, "__members__"))
 	{
-	  return Py_BuildValue("[ssss]",
-			       "type",
-			       "parent",
-			       "directory",
-			       "item");
+	  return Py_BuildValue ("[ssss]",
+				"type",
+				"parent",
+				"directory",
+				"item");
 	}
       else if (!strcmp (attr, "type"))
 	{
@@ -1220,8 +1253,11 @@ pygmenu_tree_get_root_directory (PyObject *self,
   MenuTreeDirectory    *directory;
   PyGMenuTreeDirectory *retval;
 
-  if (!PyArg_ParseTuple (args, ":gmenu.Tree.get_root_directory"))
-    return NULL;
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Tree.get_root_directory"))
+	return NULL;
+    }
 
   tree = (PyGMenuTree *) self;
 
@@ -1409,6 +1445,29 @@ pygmenu_tree_dealloc (PyGMenuTree *self)
   PyObject_DEL (self);
 }
 
+static PyObject *
+pygmenu_tree_getattro (PyGMenuTreeDirectory *self,
+		       PyObject             *py_attr)
+{
+  if (PyString_Check (py_attr))
+    {
+      char *attr;
+  
+      attr = PyString_AsString (py_attr);
+
+      if (!strcmp (attr, "__members__"))
+	{
+	  return Py_BuildValue ("[s]", "root");
+	}
+      else if (!strcmp (attr, "root"))
+	{
+	  return pygmenu_tree_get_root_directory ((PyObject *) self, NULL);
+	}
+    }
+
+  return PyObject_GenericGetAttr ((PyObject *) self, py_attr);
+}
+
 static struct PyMethodDef pygmenu_tree_methods[] =
 {
   { "get_root_directory",      pygmenu_tree_get_root_directory,      METH_VARARGS },
@@ -1421,47 +1480,47 @@ static struct PyMethodDef pygmenu_tree_methods[] =
 static PyTypeObject PyGMenuTree_Type = 
 {
   PyObject_HEAD_INIT(NULL)
-  0,                                  /* ob_size */
-  "gmenu.Tree",                       /* tp_name */
-  sizeof (PyGMenuTree),               /* tp_basicsize */
-  0,                                  /* tp_itemsize */
-  (destructor) pygmenu_tree_dealloc,  /* tp_dealloc */
-  (printfunc)0,                       /* tp_print */
-  (getattrfunc)0,                     /* tp_getattr */
-  (setattrfunc)0,                     /* tp_setattr */
-  (cmpfunc)0,                         /* tp_compare */
-  (reprfunc)0,                        /* tp_repr */
-  0,                                  /* tp_as_number */
-  0,                                  /* tp_as_sequence */
-  0,                                  /* tp_as_mapping */
-  (hashfunc)0,                        /* tp_hash */
-  (ternaryfunc)0,                     /* tp_call */
-  (reprfunc)0,                        /* tp_str */
-  (getattrofunc)0,                    /* tp_getattro */
-  (setattrofunc)0,                    /* tp_setattro */
-  0,                                  /* tp_as_buffer */
-  Py_TPFLAGS_DEFAULT,                 /* tp_flags */
-  NULL,                               /* Documentation string */
-  (traverseproc)0,                    /* tp_traverse */
-  (inquiry)0,                         /* tp_clear */
-  (richcmpfunc)0,                     /* tp_richcompare */
-  0,                                  /* tp_weaklistoffset */
-  (getiterfunc)0,                     /* tp_iter */
-  (iternextfunc)0,                    /* tp_iternext */
-  pygmenu_tree_methods,               /* tp_methods */
-  0,                                  /* tp_members */
-  0,                                  /* tp_getset */
-  (PyTypeObject *)0,                  /* tp_base */
-  (PyObject *)0,                      /* tp_dict */
-  0,                                  /* tp_descr_get */
-  0,                                  /* tp_descr_set */
-  0,                                  /* tp_dictoffset */
-  (initproc)0,                        /* tp_init */
-  0,                                  /* tp_alloc */
-  0,                                  /* tp_new */
-  0,                                  /* tp_free */
-  (inquiry)0,                         /* tp_is_gc */
-  (PyObject *)0,                      /* tp_bases */
+  0,                                   /* ob_size */
+  "gmenu.Tree",                        /* tp_name */
+  sizeof (PyGMenuTree),                /* tp_basicsize */
+  0,                                   /* tp_itemsize */
+  (destructor) pygmenu_tree_dealloc,   /* tp_dealloc */
+  (printfunc)0,                        /* tp_print */
+  (getattrfunc)0,                      /* tp_getattr */
+  (setattrfunc)0,                      /* tp_setattr */
+  (cmpfunc)0,                          /* tp_compare */
+  (reprfunc)0,                         /* tp_repr */
+  0,                                   /* tp_as_number */
+  0,                                   /* tp_as_sequence */
+  0,                                   /* tp_as_mapping */
+  (hashfunc)0,                         /* tp_hash */
+  (ternaryfunc)0,                      /* tp_call */
+  (reprfunc)0,                         /* tp_str */
+  (getattrofunc)pygmenu_tree_getattro, /* tp_getattro */
+  (setattrofunc)0,                     /* tp_setattro */
+  0,                                   /* tp_as_buffer */
+  Py_TPFLAGS_DEFAULT,                  /* tp_flags */
+  NULL,                                /* Documentation string */
+  (traverseproc)0,                     /* tp_traverse */
+  (inquiry)0,                          /* tp_clear */
+  (richcmpfunc)0,                      /* tp_richcompare */
+  0,                                   /* tp_weaklistoffset */
+  (getiterfunc)0,                      /* tp_iter */
+  (iternextfunc)0,                     /* tp_iternext */
+  pygmenu_tree_methods,                /* tp_methods */
+  0,                                   /* tp_members */
+  0,                                   /* tp_getset */
+  (PyTypeObject *)0,                   /* tp_base */
+  (PyObject *)0,                       /* tp_dict */
+  0,                                   /* tp_descr_get */
+  0,                                   /* tp_descr_set */
+  0,                                   /* tp_dictoffset */
+  (initproc)0,                         /* tp_init */
+  0,                                   /* tp_alloc */
+  0,                                   /* tp_new */
+  0,                                   /* tp_free */
+  (inquiry)0,                          /* tp_is_gc */
+  (PyObject *)0,                       /* tp_bases */
 };
 
 static PyGMenuTree *
@@ -1478,7 +1537,8 @@ pygmenu_tree_wrap (MenuTree *tree)
   if (!(retval = (PyGMenuTree *) PyObject_NEW (PyGMenuTree, &PyGMenuTree_Type)))
     return NULL;
 
-  retval->tree = menu_tree_ref (tree);
+  retval->tree      = menu_tree_ref (tree);
+  retval->callbacks = NULL;
 
   menu_tree_set_user_data (tree, retval, NULL);
 

@@ -939,6 +939,14 @@ menu_tree_directory_get_icon (MenuTreeDirectory *directory)
   return desktop_entry_get_icon (directory->directory_entry);
 }
 
+const char *
+menu_tree_directory_get_menu_id (MenuTreeDirectory *directory)
+{
+  g_return_val_if_fail (directory != NULL, NULL);
+
+  return directory->name;
+}
+
 static void
 append_directory_path (MenuTreeDirectory *directory,
 		       GString           *path)
@@ -1468,7 +1476,10 @@ merge_resolved_children (MenuTree       *tree,
 
       next = menu_layout_node_get_next (from_child);
 
-      menu_verbose ("Merging %p after %p\n", from_child, insert_after);
+      menu_verbose ("Merging ");
+      menu_debug_print_layout (from_child, FALSE);
+      menu_verbose (" after ");
+      menu_debug_print_layout (insert_after, FALSE);
 
       switch (menu_layout_node_get_type (from_child))
         {
@@ -2205,13 +2216,10 @@ move_children (MenuLayoutNode *from,
         {
           menu_layout_node_insert_before (insert_before, from_child);
           g_assert (menu_layout_node_get_next (from_child) == insert_before);
-          insert_before = from_child;
         }
       else
         {
-          menu_layout_node_prepend_child (to, from_child);
-          g_assert (menu_layout_node_get_children (to) == from_child);
-          insert_before = from_child;
+          menu_layout_node_append_child (to, from_child);
         }
 
       menu_layout_node_unref (from_child);

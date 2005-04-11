@@ -1,7 +1,11 @@
-AC_INIT(libmenu/menu-tree.h)
+AC_INIT([gnome-menus], [2.11.1],
+        [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus])
+AC_CONFIG_SRCDIR(libmenu/menu-tree.h)
 
-AM_INIT_AUTOMAKE(gnome-menus, 2.11.1)
+AM_INIT_AUTOMAKE
 AM_CONFIG_HEADER(config.h)
+
+AM_MAINTAINER_MODE
 
 # Before making a release, the LT_VERSION string should be modified.
 # The string is of the form C:R:A.
@@ -13,8 +17,6 @@ AM_CONFIG_HEADER(config.h)
 
 LIB_MENU_LT_VERSION=2:0:0
 AC_SUBST(LIB_MENU_LT_VERSION)
-
-AM_MAINTAINER_MODE
 
 GETTEXT_PACKAGE=gnome-menus
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Name of default gettext domain])
@@ -133,5 +135,7 @@ layout/Makefile
 desktop-directories/Makefile
 util/Makefile
 python/Makefile
+simple-editor/Makefile
+simple-editor/GMenuSimpleEditor/Makefile
 po/Makefile.in
 ])

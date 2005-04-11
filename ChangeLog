@@ -1,3 +1,39 @@
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: use new form of AC_INIT - I think it cause
+	PACKAGE_NAME and PACKAGE_VALUE to be defined. Add simple-editor
+	dirs.
+	
+	* Makefile.am: build the simple-editor subdir if we're
+	building the python bindings.
+	
+	* simple-editor/*: add gmenu-simple-editor
+	
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+	
+	* libmenu/menu-tree.[ch]:
+	(menu_tree_directory_get_menu_id): new function to get the
+	menu's <Name> rather than the name from the .directory file.
+	(merge_resolved_children): improve debugging.
+	(move_children): don't reverse the order of nodes when merging
+	duplicate <Menu>s
+	
+	* python/Makefile.am: install in $(pyexecdir) instead of
+	$(pythondir)
+	
+	* python/gmenu.c:
+	(pygmenu_tree_directory_get_contents): return an empty list
+	instead of None when the directory is empty.
+	(pygmenu_tree_directory_get_menu_id): wrap new funcion.
+	(pygmenu_tree_directory_getattro): add "menu_id" and "contents"
+	attributes.
+	(pygmenu_tree_entry_getattro): add "is_excluded" attribute.
+	(pygmenu_tree_getattro): add "root" attribute.
+	(pygmenu_tree_wrap): set ->callbacks to NULL.
+	
+	* util/test-menu-spec.c: (main): add --file option to allow
+	looking at menus other than applications.menu
+
 2005-04-07  Mark McLoughlin  <mark@skynet.ie>
 
 	* libmenu/menu-tree.h: fixup flags definition.

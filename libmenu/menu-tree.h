@@ -96,6 +96,7 @@ GSList     *menu_tree_directory_get_contents (MenuTreeDirectory *directory);
 const char *menu_tree_directory_get_name     (MenuTreeDirectory *directory);
 const char *menu_tree_directory_get_comment  (MenuTreeDirectory *directory);
 const char *menu_tree_directory_get_icon     (MenuTreeDirectory *directory);
+const char *menu_tree_directory_get_menu_id  (MenuTreeDirectory *directory);
 
 char *menu_tree_directory_make_path (MenuTreeDirectory *directory,
 				     MenuTreeEntry     *entry);

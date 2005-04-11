@@ -1,7 +1,7 @@
 NULL =
 
 if HAVE_PYTHON
-PYTHON_SUBDIR=python
+PYTHON_SUBDIRS = python simple-editor
 endif
 
 ALL_SUBDIRS = 			\
@@ -12,8 +12,8 @@ ALL_SUBDIRS = 			\
 	util			\
 	$(NULL)
 
-SUBDIRS = $(ALL_SUBDIRS) $(PYTHON_SUBDIR)
-DIST_SUBDIRS = $(ALL_SUBDIRS) python
+SUBDIRS = $(ALL_SUBDIRS) $(PYTHON_SUBDIRS)
+DIST_SUBDIRS = $(ALL_SUBDIRS) python simple-editor
 
 EXTRA_DIST = 			\
 	HACKING			\
