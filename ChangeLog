@@ -1,5 +1,10 @@
 2005-04-11  Mark McLoughlin  <mark@skynet.ie>
 
+	* simple-editor/Makefile.am: add gmenu-simple-editor.glade
+	to $(EXTRA_DIST)
+
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
 	* simple-editor/gmenu-simple-editor.glade: mark the "Defaults"
 	button as translatable.
 
