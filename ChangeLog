@@ -1,5 +1,27 @@
 2005-04-11  Mark McLoughlin  <mark@skynet.ie>
 
+	"Namespace" the API
+	  + menu-tree.h -> gmenu-tree.h
+	  + menu_tree_* -> gmenu_tree_*
+	  + MenuTree* -> GMenuTree*
+	  + MENU_TREE_* -> GMENU_TREE_*
+	  + MENU_I_KNOW_THIS_IS_UNSTABLE -> GMENU_I_KNOW_THIS_IS_UNSTABLE
+
+	* configure.in: upd for menu-tree.h rename.
+	
+	* libmenu/Makefile.am: upd for renamed files.
+	
+	* libmenu/gmenu-tree.[ch]: rename from menu-tree.[ch] and rename
+	the APIs.
+	
+	* python/Makefile.am,
+	  python/gmenu.c: update.
+	
+	* util/Makefile.am,
+	  util/test-menu-spec.c: update.
+
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
 	* simple-editor/Makefile.am: add gmenu-simple-editor.glade
 	to $(EXTRA_DIST)
 

@@ -19,7 +19,7 @@
 
 #include <config.h>
 
-#include "menu-tree.h"
+#include "gmenu-tree.h"
 
 #include <string.h>
 #include <libgnomevfs/gnome-vfs.h>
@@ -36,12 +36,12 @@ static GOptionEntry options[] = {
 };
 
 static void
-append_directory_path (MenuTreeDirectory *directory,
-		       GString           *path)
+append_directory_path (GMenuTreeDirectory *directory,
+		       GString            *path)
 {
-  MenuTreeDirectory *parent;
+  GMenuTreeDirectory *parent;
 
-  parent = menu_tree_item_get_parent (MENU_TREE_ITEM (directory));
+  parent = gmenu_tree_item_get_parent (GMENU_TREE_ITEM (directory));
 
   if (!parent)
     {
@@ -51,14 +51,14 @@ append_directory_path (MenuTreeDirectory *directory,
 
   append_directory_path (parent, path);
 
-  g_string_append (path, menu_tree_directory_get_name (directory));
+  g_string_append (path, gmenu_tree_directory_get_name (directory));
   g_string_append_c (path, '/');
 
-  menu_tree_item_unref (parent);
+  gmenu_tree_item_unref (parent);
 }
 
 static char *
-make_path (MenuTreeDirectory *directory)
+make_path (GMenuTreeDirectory *directory)
 {
   GString *path;
 
@@ -72,18 +72,18 @@ make_path (MenuTreeDirectory *directory)
 }
 
 static void
-print_entry (MenuTreeEntry *entry,
-	     const char    *path)
+print_entry (GMenuTreeEntry *entry,
+	     const char     *path)
 {
   g_print ("%s\t%s\t%s %s\n",
 	   path,
-	   menu_tree_entry_get_desktop_file_id (entry),
-	   menu_tree_entry_get_desktop_file_path (entry),
-	   menu_tree_entry_get_is_excluded (entry) ? "<excluded>" : "");
+	   gmenu_tree_entry_get_desktop_file_id (entry),
+	   gmenu_tree_entry_get_desktop_file_path (entry),
+	   gmenu_tree_entry_get_is_excluded (entry) ? "<excluded>" : "");
 }
 
 static void
-print_directory (MenuTreeDirectory *directory)
+print_directory (GMenuTreeDirectory *directory)
 {
   GSList     *items;
   GSList     *tmp;
@@ -96,34 +96,34 @@ print_directory (MenuTreeDirectory *directory)
   else
     path = freeme + 1;
 
-  items = menu_tree_directory_get_contents (directory);
+  items = gmenu_tree_directory_get_contents (directory);
 
   tmp = items;
   while (tmp != NULL)
     {
-      MenuTreeItem *item = tmp->data;
+      GMenuTreeItem *item = tmp->data;
 
-      switch (menu_tree_item_get_type (item))
+      switch (gmenu_tree_item_get_type (item))
 	{
-	case MENU_TREE_ITEM_ENTRY:
-	  print_entry (MENU_TREE_ENTRY (item), path);
+	case GMENU_TREE_ITEM_ENTRY:
+	  print_entry (GMENU_TREE_ENTRY (item), path);
 	  break;
 
-	case MENU_TREE_ITEM_DIRECTORY:
-	  print_directory (MENU_TREE_DIRECTORY (item));
+	case GMENU_TREE_ITEM_DIRECTORY:
+	  print_directory (GMENU_TREE_DIRECTORY (item));
 	  break;
 
-	case MENU_TREE_ITEM_HEADER:
-	case MENU_TREE_ITEM_SEPARATOR:
+	case GMENU_TREE_ITEM_HEADER:
+	case GMENU_TREE_ITEM_SEPARATOR:
 	  break;
 
-	case MENU_TREE_ITEM_ALIAS:
+	case GMENU_TREE_ITEM_ALIAS:
 	  {
-	    MenuTreeItem *aliased_item;
+	    GMenuTreeItem *aliased_item;
 
-	    aliased_item = menu_tree_alias_get_item (MENU_TREE_ALIAS (item));
-	    if (menu_tree_item_get_type (aliased_item) == MENU_TREE_ITEM_ENTRY)
-	      print_entry (MENU_TREE_ENTRY (aliased_item), path);
+	    aliased_item = gmenu_tree_alias_get_item (GMENU_TREE_ALIAS (item));
+	    if (gmenu_tree_item_get_type (aliased_item) == GMENU_TREE_ITEM_ENTRY)
+	      print_entry (GMENU_TREE_ENTRY (aliased_item), path);
 	  }
 	  break;
 
@@ -132,7 +132,7 @@ print_directory (MenuTreeDirectory *directory)
 	  break;
 	}
 
-      menu_tree_item_unref (tmp->data);
+      gmenu_tree_item_unref (tmp->data);
 
       tmp = tmp->next;
     }
@@ -143,13 +143,13 @@ print_directory (MenuTreeDirectory *directory)
 }
 
 static void
-handle_tree_changed (MenuTree *tree)
+handle_tree_changed (GMenuTree *tree)
 {
-  MenuTreeDirectory *root;
+  GMenuTreeDirectory *root;
 
   g_print ("\n\n\n==== Menu changed, reloading ====\n\n\n");
 
-  root = menu_tree_get_root_directory (tree);
+  root = gmenu_tree_get_root_directory (tree);
   if (root == NULL)
     {
       g_warning ("Menu tree is empty");
@@ -157,15 +157,15 @@ handle_tree_changed (MenuTree *tree)
     }
 
   print_directory (root);
-  menu_tree_item_unref (root);
+  gmenu_tree_item_unref (root);
 }
 
 int
 main (int argc, char **argv)
 {
   GOptionContext    *options_context;
-  MenuTree          *tree;
-  MenuTreeDirectory *root;
+  GMenuTree          *tree;
+  GMenuTreeDirectory *root;
 
   gnome_vfs_init ();
 
@@ -173,15 +173,15 @@ main (int argc, char **argv)
   g_option_context_add_main_entries (options_context, options, GETTEXT_PACKAGE);
   g_option_context_parse (options_context, &argc, &argv, NULL);
 
-  tree = menu_tree_lookup (menu_file ? menu_file : "applications.menu",
-			   include_excluded ? MENU_TREE_FLAGS_INCLUDE_EXCLUDED : MENU_TREE_FLAGS_NONE);
+  tree = gmenu_tree_lookup (menu_file ? menu_file : "applications.menu",
+			    include_excluded ? GMENU_TREE_FLAGS_INCLUDE_EXCLUDED : GMENU_TREE_FLAGS_NONE);
   g_assert (tree != NULL);
 
-  root = menu_tree_get_root_directory (tree);
+  root = gmenu_tree_get_root_directory (tree);
   if (root != NULL)
     {
       print_directory (root);
-      menu_tree_item_unref (root);
+      gmenu_tree_item_unref (root);
     }
   else
     {
@@ -192,21 +192,21 @@ main (int argc, char **argv)
     {
       GMainLoop *main_loop;
 
-      menu_tree_add_monitor (tree,
-			     (MenuTreeChangedFunc) handle_tree_changed,
-			     NULL);
+      gmenu_tree_add_monitor (tree,
+			      (GMenuTreeChangedFunc) handle_tree_changed,
+			      NULL);
 
       main_loop = g_main_loop_new (NULL, FALSE);
       g_main_loop_run (main_loop);
       g_main_loop_unref (main_loop);
 
-      menu_tree_remove_monitor (tree,
-				(MenuTreeChangedFunc) handle_tree_changed,
-				NULL);
+      gmenu_tree_remove_monitor (tree,
+				 (GMenuTreeChangedFunc) handle_tree_changed,
+				 NULL);
 
     }
 
-  menu_tree_unref (tree);
+  gmenu_tree_unref (tree);
 
   gnome_vfs_shutdown ();
 

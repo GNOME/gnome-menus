@@ -1,7 +1,7 @@
 NULL = 
 
 INCLUDES =				\
-	-DMENU_I_KNOW_THIS_IS_UNSTABLE	\
+	-DGMENU_I_KNOW_THIS_IS_UNSTABLE	\
 	$(LIBMENU_CFLAGS)		\
 	$(DISABLE_DEPRECATED_CFLAGS)	\
 	$(DEBUG_CFLAGS)			\
@@ -17,10 +17,10 @@ libgnome_menu_la_SOURCES =		\
 	desktop-entries.h		\
 	entry-directories.c		\
 	entry-directories.h		\
+	gmenu-tree.c			\
+	gmenu-tree.h			\
 	menu-layout.c			\
 	menu-layout.h			\
-	menu-tree.c			\
-	menu-tree.h			\
 	menu-util.c			\
 	menu-util.h			\
 	$(NULL)
@@ -31,13 +31,13 @@ libgnome_menu_la_LIBADD = 		\
 libgnome_menu_la_LDFLAGS =			\
 	-version-info $(LIB_MENU_LT_VERSION)	\
 	-no-undefined				\
-	-export-symbols-regex menu_tree		\
+	-export-symbols-regex gmenu_tree	\
 	$(NULL)
 
 libgnome_menu_includedir = $(includedir)/gnome-menus
 
 libgnome_menu_include_HEADERS =		\
-	menu-tree.h			\
+	gmenu-tree.h			\
 	$(NULL)
 
 EXTRA_DIST =				\

@@ -20,14 +20,14 @@
 #include <config.h>
 
 #include <Python.h>
-#include <menu-tree.h>
+#include <gmenu-tree.h>
 #include <libgnomevfs/gnome-vfs-init.h>
 
 typedef struct
 {
   PyObject_HEAD
-  MenuTree *tree;
-  GSList   *callbacks;
+  GMenuTree *tree;
+  GSList    *callbacks;
 } PyGMenuTree;
 
 typedef struct
@@ -40,7 +40,7 @@ typedef struct
 typedef struct
 {
   PyObject_HEAD
-  MenuTreeItem *item;
+  GMenuTreeItem *item;
 } PyGMenuTreeItem;
 
 typedef PyGMenuTreeItem PyGMenuTreeDirectory;
@@ -49,12 +49,12 @@ typedef PyGMenuTreeItem PyGMenuTreeSeparator;
 typedef PyGMenuTreeItem PyGMenuTreeHeader;
 typedef PyGMenuTreeItem PyGMenuTreeAlias;
 
-static PyGMenuTree          *pygmenu_tree_wrap           (MenuTree          *tree);
-static PyGMenuTreeDirectory *pygmenu_tree_directory_wrap (MenuTreeDirectory *directory);
-static PyGMenuTreeEntry     *pygmenu_tree_entry_wrap     (MenuTreeEntry     *entry);
-static PyGMenuTreeSeparator *pygmenu_tree_separator_wrap (MenuTreeSeparator *separator);
-static PyGMenuTreeHeader    *pygmenu_tree_header_wrap    (MenuTreeHeader    *header);
-static PyGMenuTreeAlias     *pygmenu_tree_alias_wrap     (MenuTreeAlias     *alias);
+static PyGMenuTree          *pygmenu_tree_wrap           (GMenuTree          *tree);
+static PyGMenuTreeDirectory *pygmenu_tree_directory_wrap (GMenuTreeDirectory *directory);
+static PyGMenuTreeEntry     *pygmenu_tree_entry_wrap     (GMenuTreeEntry     *entry);
+static PyGMenuTreeSeparator *pygmenu_tree_separator_wrap (GMenuTreeSeparator *separator);
+static PyGMenuTreeHeader    *pygmenu_tree_header_wrap    (GMenuTreeHeader    *header);
+static PyGMenuTreeAlias     *pygmenu_tree_alias_wrap     (GMenuTreeAlias     *alias);
 
 static inline PyObject *
 lookup_item_type_str (const char *item_type_str)
@@ -71,8 +71,8 @@ pygmenu_tree_item_dealloc (PyGMenuTreeItem *self)
 {
   if (self->item != NULL)
     {
-      menu_tree_item_set_user_data (self->item, NULL, NULL);
-      menu_tree_item_unref (self->item);
+      gmenu_tree_item_set_user_data (self->item, NULL, NULL);
+      gmenu_tree_item_unref (self->item);
       self->item = NULL;
     }
 
@@ -94,25 +94,25 @@ pygmenu_tree_item_get_type (PyObject *self,
 
   item = (PyGMenuTreeItem *) self;
 
-  switch (menu_tree_item_get_type (item->item))
+  switch (gmenu_tree_item_get_type (item->item))
     {
-    case MENU_TREE_ITEM_DIRECTORY:
+    case GMENU_TREE_ITEM_DIRECTORY:
       retval = lookup_item_type_str ("TYPE_DIRECTORY");
       break;
 
-    case MENU_TREE_ITEM_ENTRY:
+    case GMENU_TREE_ITEM_ENTRY:
       retval = lookup_item_type_str ("TYPE_ENTRY");
       break;
 
-    case MENU_TREE_ITEM_SEPARATOR:
+    case GMENU_TREE_ITEM_SEPARATOR:
       retval = lookup_item_type_str ("TYPE_SEPARATOR");
       break;
 
-    case MENU_TREE_ITEM_HEADER:
+    case GMENU_TREE_ITEM_HEADER:
       retval = lookup_item_type_str ("TYPE_HEADER");
       break;
 
-    case MENU_TREE_ITEM_ALIAS:
+    case GMENU_TREE_ITEM_ALIAS:
       retval = lookup_item_type_str ("TYPE_ALIAS");
       break;
 
@@ -131,7 +131,7 @@ pygmenu_tree_item_get_parent (PyObject *self,
 			      PyObject *args)
 {
   PyGMenuTreeItem      *item;
-  MenuTreeDirectory    *parent;
+  GMenuTreeDirectory   *parent;
   PyGMenuTreeDirectory *retval;
 
   if (args != NULL)
@@ -142,7 +142,7 @@ pygmenu_tree_item_get_parent (PyObject *self,
 
   item = (PyGMenuTreeItem *) self;
 
-  parent = menu_tree_item_get_parent (item->item);
+  parent = gmenu_tree_item_get_parent (item->item);
   if (parent == NULL)
     {
       Py_INCREF (Py_None);
@@ -151,7 +151,7 @@ pygmenu_tree_item_get_parent (PyObject *self,
 
   retval = pygmenu_tree_directory_wrap (parent);
 
-  menu_tree_item_unref (parent);
+  gmenu_tree_item_unref (parent);
 
   return (PyObject *) retval;
 }
@@ -228,34 +228,34 @@ pygmenu_tree_directory_get_contents (PyObject *self,
 
   retval = PyList_New (0);
 
-  contents = menu_tree_directory_get_contents (MENU_TREE_DIRECTORY (directory->item));
+  contents = gmenu_tree_directory_get_contents (GMENU_TREE_DIRECTORY (directory->item));
 
   tmp = contents;
   while (tmp != NULL)
     {
-      MenuTreeItem *item = tmp->data;
-      PyObject     *pyitem;
+      GMenuTreeItem *item = tmp->data;
+      PyObject      *pyitem;
 
-      switch (menu_tree_item_get_type (item))
+      switch (gmenu_tree_item_get_type (item))
 	{
-	case MENU_TREE_ITEM_DIRECTORY:
-	  pyitem = (PyObject *) pygmenu_tree_directory_wrap (MENU_TREE_DIRECTORY (item));
+	case GMENU_TREE_ITEM_DIRECTORY:
+	  pyitem = (PyObject *) pygmenu_tree_directory_wrap (GMENU_TREE_DIRECTORY (item));
 	  break;
 
-	case MENU_TREE_ITEM_ENTRY:
-	  pyitem = (PyObject *) pygmenu_tree_entry_wrap (MENU_TREE_ENTRY (item));
+	case GMENU_TREE_ITEM_ENTRY:
+	  pyitem = (PyObject *) pygmenu_tree_entry_wrap (GMENU_TREE_ENTRY (item));
 	  break;
 
-	case MENU_TREE_ITEM_SEPARATOR:
-	  pyitem = (PyObject *) pygmenu_tree_separator_wrap (MENU_TREE_SEPARATOR (item));
+	case GMENU_TREE_ITEM_SEPARATOR:
+	  pyitem = (PyObject *) pygmenu_tree_separator_wrap (GMENU_TREE_SEPARATOR (item));
 	  break;
 
-	case MENU_TREE_ITEM_HEADER:
-	  pyitem = (PyObject *) pygmenu_tree_header_wrap (MENU_TREE_HEADER (item));
+	case GMENU_TREE_ITEM_HEADER:
+	  pyitem = (PyObject *) pygmenu_tree_header_wrap (GMENU_TREE_HEADER (item));
 	  break;
 
-	case MENU_TREE_ITEM_ALIAS:
-	  pyitem = (PyObject *) pygmenu_tree_alias_wrap (MENU_TREE_ALIAS (item));
+	case GMENU_TREE_ITEM_ALIAS:
+	  pyitem = (PyObject *) pygmenu_tree_alias_wrap (GMENU_TREE_ALIAS (item));
 	  break;
 
 	default:
@@ -266,7 +266,7 @@ pygmenu_tree_directory_get_contents (PyObject *self,
       PyList_Append (retval, pyitem);
       Py_DECREF (pyitem);
 
-      menu_tree_item_unref (item);
+      gmenu_tree_item_unref (item);
 
       tmp = tmp->next;
     }
@@ -291,7 +291,7 @@ pygmenu_tree_directory_get_name (PyObject *self,
 
   directory = (PyGMenuTreeDirectory *) self;
 
-  name = menu_tree_directory_get_name (MENU_TREE_DIRECTORY (directory->item));
+  name = gmenu_tree_directory_get_name (GMENU_TREE_DIRECTORY (directory->item));
   if (name == NULL)
     {
       Py_INCREF (Py_None);
@@ -316,7 +316,7 @@ pygmenu_tree_directory_get_comment (PyObject *self,
 
   directory = (PyGMenuTreeDirectory *) self;
 
-  comment = menu_tree_directory_get_comment (MENU_TREE_DIRECTORY (directory->item));
+  comment = gmenu_tree_directory_get_comment (GMENU_TREE_DIRECTORY (directory->item));
   if (comment == NULL)
     {
       Py_INCREF (Py_None);
@@ -341,7 +341,7 @@ pygmenu_tree_directory_get_icon (PyObject *self,
 
   directory = (PyGMenuTreeDirectory *) self;
 
-  icon = menu_tree_directory_get_icon (MENU_TREE_DIRECTORY (directory->item));
+  icon = gmenu_tree_directory_get_icon (GMENU_TREE_DIRECTORY (directory->item));
   if (icon == NULL)
     {
       Py_INCREF (Py_None);
@@ -366,7 +366,7 @@ pygmenu_tree_directory_get_menu_id (PyObject *self,
 
   directory = (PyGMenuTreeDirectory *) self;
 
-  menu_id = menu_tree_directory_get_menu_id (MENU_TREE_DIRECTORY (directory->item));
+  menu_id = gmenu_tree_directory_get_menu_id (GMENU_TREE_DIRECTORY (directory->item));
   if (menu_id == NULL)
     {
       Py_INCREF (Py_None);
@@ -390,8 +390,8 @@ pygmenu_tree_directory_make_path (PyObject *self,
 
   directory = (PyGMenuTreeDirectory *) self;
 
-  path = menu_tree_directory_make_path (MENU_TREE_DIRECTORY (directory->item),
-					MENU_TREE_ENTRY (entry->item));
+  path = gmenu_tree_directory_make_path (GMENU_TREE_DIRECTORY (directory->item),
+					GMENU_TREE_ENTRY (entry->item));
   if (path == NULL)
     {
       Py_INCREF (Py_None);
@@ -516,11 +516,11 @@ static PyTypeObject PyGMenuTreeDirectory_Type =
 };
 
 static PyGMenuTreeDirectory *
-pygmenu_tree_directory_wrap (MenuTreeDirectory *directory)
+pygmenu_tree_directory_wrap (GMenuTreeDirectory *directory)
 {
   PyGMenuTreeDirectory *retval;
 
-  if ((retval = menu_tree_item_get_user_data (MENU_TREE_ITEM (directory))) != NULL)
+  if ((retval = gmenu_tree_item_get_user_data (GMENU_TREE_ITEM (directory))) != NULL)
     {
       Py_INCREF (retval);
       return retval;
@@ -530,9 +530,9 @@ pygmenu_tree_directory_wrap (MenuTreeDirectory *directory)
 							&PyGMenuTreeDirectory_Type)))
     return NULL;
 
-  retval->item = menu_tree_item_ref (directory);
+  retval->item = gmenu_tree_item_ref (directory);
 
-  menu_tree_item_set_user_data (MENU_TREE_ITEM (directory), retval, NULL);
+  gmenu_tree_item_set_user_data (GMENU_TREE_ITEM (directory), retval, NULL);
 
   return retval;
 }
@@ -552,7 +552,7 @@ pygmenu_tree_entry_get_name (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  name = menu_tree_entry_get_name (MENU_TREE_ENTRY (entry->item));
+  name = gmenu_tree_entry_get_name (GMENU_TREE_ENTRY (entry->item));
   if (name == NULL)
     {
       Py_INCREF (Py_None);
@@ -577,7 +577,7 @@ pygmenu_tree_entry_get_comment (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  comment = menu_tree_entry_get_comment (MENU_TREE_ENTRY (entry->item));
+  comment = gmenu_tree_entry_get_comment (GMENU_TREE_ENTRY (entry->item));
   if (comment == NULL)
     {
       Py_INCREF (Py_None);
@@ -602,7 +602,7 @@ pygmenu_tree_entry_get_icon (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  icon = menu_tree_entry_get_icon (MENU_TREE_ENTRY (entry->item));
+  icon = gmenu_tree_entry_get_icon (GMENU_TREE_ENTRY (entry->item));
   if (icon == NULL)
     {
       Py_INCREF (Py_None);
@@ -627,7 +627,7 @@ pygmenu_tree_entry_get_exec (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  exec = menu_tree_entry_get_exec (MENU_TREE_ENTRY (entry->item));
+  exec = gmenu_tree_entry_get_exec (GMENU_TREE_ENTRY (entry->item));
   if (exec == NULL)
     {
       Py_INCREF (Py_None);
@@ -652,7 +652,7 @@ pygmenu_tree_entry_get_desktop_file_path (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  desktop_file_path = menu_tree_entry_get_desktop_file_path (MENU_TREE_ENTRY (entry->item));
+  desktop_file_path = gmenu_tree_entry_get_desktop_file_path (GMENU_TREE_ENTRY (entry->item));
   if (desktop_file_path == NULL)
     {
       Py_INCREF (Py_None);
@@ -677,7 +677,7 @@ pygmenu_tree_entry_get_desktop_file_id (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  desktop_file_id = menu_tree_entry_get_desktop_file_id (MENU_TREE_ENTRY (entry->item));
+  desktop_file_id = gmenu_tree_entry_get_desktop_file_id (GMENU_TREE_ENTRY (entry->item));
   if (desktop_file_id == NULL)
     {
       Py_INCREF (Py_None);
@@ -702,7 +702,7 @@ pygmenu_tree_entry_get_is_excluded (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  retval = menu_tree_entry_get_is_excluded (MENU_TREE_ENTRY (entry->item)) ? Py_True : Py_False;
+  retval = gmenu_tree_entry_get_is_excluded (GMENU_TREE_ENTRY (entry->item)) ? Py_True : Py_False;
   Py_INCREF (retval);
 
   return retval;
@@ -831,11 +831,11 @@ static PyTypeObject PyGMenuTreeEntry_Type =
 };
 
 static PyGMenuTreeEntry *
-pygmenu_tree_entry_wrap (MenuTreeEntry *entry)
+pygmenu_tree_entry_wrap (GMenuTreeEntry *entry)
 {
   PyGMenuTreeEntry *retval;
 
-  if ((retval = menu_tree_item_get_user_data (MENU_TREE_ITEM (entry))) != NULL)
+  if ((retval = gmenu_tree_item_get_user_data (GMENU_TREE_ITEM (entry))) != NULL)
     {
       Py_INCREF (retval);
       return retval;
@@ -845,9 +845,9 @@ pygmenu_tree_entry_wrap (MenuTreeEntry *entry)
 						    &PyGMenuTreeEntry_Type)))
     return NULL;
 
-  retval->item = menu_tree_item_ref (entry);
+  retval->item = gmenu_tree_item_ref (entry);
 
-  menu_tree_item_set_user_data (MENU_TREE_ITEM (entry), retval, NULL);
+  gmenu_tree_item_set_user_data (GMENU_TREE_ITEM (entry), retval, NULL);
 
   return retval;
 }
@@ -899,11 +899,11 @@ static PyTypeObject PyGMenuTreeSeparator_Type =
 };
 
 static PyGMenuTreeSeparator *
-pygmenu_tree_separator_wrap (MenuTreeSeparator *separator)
+pygmenu_tree_separator_wrap (GMenuTreeSeparator *separator)
 {
   PyGMenuTreeSeparator *retval;
 
-  if ((retval = menu_tree_item_get_user_data (MENU_TREE_ITEM (separator))) != NULL)
+  if ((retval = gmenu_tree_item_get_user_data (GMENU_TREE_ITEM (separator))) != NULL)
     {
       Py_INCREF (retval);
       return retval;
@@ -913,9 +913,9 @@ pygmenu_tree_separator_wrap (MenuTreeSeparator *separator)
 							&PyGMenuTreeSeparator_Type)))
     return NULL;
 
-  retval->item = menu_tree_item_ref (separator);
+  retval->item = gmenu_tree_item_ref (separator);
 
-  menu_tree_item_set_user_data (MENU_TREE_ITEM (separator), retval, NULL);
+  gmenu_tree_item_set_user_data (GMENU_TREE_ITEM (separator), retval, NULL);
 
   return retval;
 }
@@ -925,7 +925,7 @@ pygmenu_tree_header_get_directory (PyObject *self,
 				   PyObject *args)
 {
   PyGMenuTreeHeader    *header;
-  MenuTreeDirectory    *directory;
+  GMenuTreeDirectory   *directory;
   PyGMenuTreeDirectory *retval;
 
   if (args != NULL)
@@ -936,7 +936,7 @@ pygmenu_tree_header_get_directory (PyObject *self,
 
   header = (PyGMenuTreeHeader *) self;
 
-  directory = menu_tree_header_get_directory (MENU_TREE_HEADER (header->item));
+  directory = gmenu_tree_header_get_directory (GMENU_TREE_HEADER (header->item));
   if (directory == NULL)
     {
       Py_INCREF (Py_None);
@@ -945,7 +945,7 @@ pygmenu_tree_header_get_directory (PyObject *self,
 
   retval = pygmenu_tree_directory_wrap (directory);
 
-  menu_tree_item_unref (directory);
+  gmenu_tree_item_unref (directory);
 
   return (PyObject *) retval;
 }
@@ -1037,11 +1037,11 @@ static PyTypeObject PyGMenuTreeHeader_Type =
 };
 
 static PyGMenuTreeHeader *
-pygmenu_tree_header_wrap (MenuTreeHeader *header)
+pygmenu_tree_header_wrap (GMenuTreeHeader *header)
 {
   PyGMenuTreeHeader *retval;
 
-  if ((retval = menu_tree_item_get_user_data (MENU_TREE_ITEM (header))) != NULL)
+  if ((retval = gmenu_tree_item_get_user_data (GMENU_TREE_ITEM (header))) != NULL)
     {
       Py_INCREF (retval);
       return retval;
@@ -1051,9 +1051,9 @@ pygmenu_tree_header_wrap (MenuTreeHeader *header)
 						     &PyGMenuTreeHeader_Type)))
     return NULL;
 
-  retval->item = menu_tree_item_ref (header);
+  retval->item = gmenu_tree_item_ref (header);
 
-  menu_tree_item_set_user_data (MENU_TREE_ITEM (header), retval, NULL);
+  gmenu_tree_item_set_user_data (GMENU_TREE_ITEM (header), retval, NULL);
 
   return retval;
 }
@@ -1063,7 +1063,7 @@ pygmenu_tree_alias_get_directory (PyObject *self,
 				  PyObject *args)
 {
   PyGMenuTreeAlias     *alias;
-  MenuTreeDirectory    *directory;
+  GMenuTreeDirectory   *directory;
   PyGMenuTreeDirectory *retval;
 
   if (args != NULL)
@@ -1074,7 +1074,7 @@ pygmenu_tree_alias_get_directory (PyObject *self,
 
   alias = (PyGMenuTreeAlias *) self;
 
-  directory = menu_tree_alias_get_directory (MENU_TREE_ALIAS (alias->item));
+  directory = gmenu_tree_alias_get_directory (GMENU_TREE_ALIAS (alias->item));
   if (directory == NULL)
     {
       Py_INCREF (Py_None);
@@ -1083,7 +1083,7 @@ pygmenu_tree_alias_get_directory (PyObject *self,
 
   retval = pygmenu_tree_directory_wrap (directory);
 
-  menu_tree_item_unref (directory);
+  gmenu_tree_item_unref (directory);
 
   return (PyObject *) retval;
 }
@@ -1093,7 +1093,7 @@ pygmenu_tree_alias_get_item (PyObject *self,
 			     PyObject *args)
 {
   PyGMenuTreeAlias *alias;
-  MenuTreeItem     *item;
+  GMenuTreeItem    *item;
   PyObject         *retval;
 
   if (args != NULL)
@@ -1104,21 +1104,21 @@ pygmenu_tree_alias_get_item (PyObject *self,
 
   alias = (PyGMenuTreeAlias *) self;
 
-  item = menu_tree_alias_get_item (MENU_TREE_ALIAS (alias->item));
+  item = gmenu_tree_alias_get_item (GMENU_TREE_ALIAS (alias->item));
   if (item == NULL)
     {
       Py_INCREF (Py_None);
       return Py_None;
     }
 
-  switch (menu_tree_item_get_type (item))
+  switch (gmenu_tree_item_get_type (item))
     {
-    case MENU_TREE_ITEM_DIRECTORY:
-      retval = (PyObject *) pygmenu_tree_directory_wrap (MENU_TREE_DIRECTORY (item));
+    case GMENU_TREE_ITEM_DIRECTORY:
+      retval = (PyObject *) pygmenu_tree_directory_wrap (GMENU_TREE_DIRECTORY (item));
       break;
 
-    case MENU_TREE_ITEM_ENTRY:
-      retval = (PyObject *) pygmenu_tree_entry_wrap (MENU_TREE_ENTRY (item));
+    case GMENU_TREE_ITEM_ENTRY:
+      retval = (PyObject *) pygmenu_tree_entry_wrap (GMENU_TREE_ENTRY (item));
       break;
 
     default:
@@ -1126,7 +1126,7 @@ pygmenu_tree_alias_get_item (PyObject *self,
       break;
     }
 
-  menu_tree_item_unref (item);
+  gmenu_tree_item_unref (item);
 
   return retval;
 }
@@ -1224,11 +1224,11 @@ static PyTypeObject PyGMenuTreeAlias_Type =
 };
 
 static PyGMenuTreeAlias *
-pygmenu_tree_alias_wrap (MenuTreeAlias *alias)
+pygmenu_tree_alias_wrap (GMenuTreeAlias *alias)
 {
   PyGMenuTreeAlias *retval;
 
-  if ((retval = menu_tree_item_get_user_data (MENU_TREE_ITEM (alias))) != NULL)
+  if ((retval = gmenu_tree_item_get_user_data (GMENU_TREE_ITEM (alias))) != NULL)
     {
       Py_INCREF (retval);
       return retval;
@@ -1238,9 +1238,9 @@ pygmenu_tree_alias_wrap (MenuTreeAlias *alias)
 						    &PyGMenuTreeAlias_Type)))
     return NULL;
 
-  retval->item = menu_tree_item_ref (alias);
+  retval->item = gmenu_tree_item_ref (alias);
 
-  menu_tree_item_set_user_data (MENU_TREE_ITEM (alias), retval, NULL);
+  gmenu_tree_item_set_user_data (GMENU_TREE_ITEM (alias), retval, NULL);
 
   return retval;
 }
@@ -1250,7 +1250,7 @@ pygmenu_tree_get_root_directory (PyObject *self,
 				 PyObject *args)
 {
   PyGMenuTree          *tree;
-  MenuTreeDirectory    *directory;
+  GMenuTreeDirectory   *directory;
   PyGMenuTreeDirectory *retval;
 
   if (args != NULL)
@@ -1261,7 +1261,7 @@ pygmenu_tree_get_root_directory (PyObject *self,
 
   tree = (PyGMenuTree *) self;
 
-  directory = menu_tree_get_root_directory (tree->tree);
+  directory = gmenu_tree_get_root_directory (tree->tree);
   if (directory == NULL)
     {
       Py_INCREF (Py_None);
@@ -1270,7 +1270,7 @@ pygmenu_tree_get_root_directory (PyObject *self,
 
   retval = pygmenu_tree_directory_wrap (directory);
 
-  menu_tree_item_unref (directory);
+  gmenu_tree_item_unref (directory);
 
   return (PyObject *) retval;
 }
@@ -1280,7 +1280,7 @@ pygmenu_tree_get_directory_from_path (PyObject *self,
 				      PyObject *args)
 {
   PyGMenuTree          *tree;
-  MenuTreeDirectory    *directory;
+  GMenuTreeDirectory   *directory;
   PyGMenuTreeDirectory *retval;
   char                 *path;
 
@@ -1289,7 +1289,7 @@ pygmenu_tree_get_directory_from_path (PyObject *self,
 
   tree = (PyGMenuTree *) self;
 
-  directory = menu_tree_get_directory_from_path (tree->tree, path);
+  directory = gmenu_tree_get_directory_from_path (tree->tree, path);
   if (directory == NULL)
     {
       Py_INCREF (Py_None);
@@ -1298,7 +1298,7 @@ pygmenu_tree_get_directory_from_path (PyObject *self,
 
   retval = pygmenu_tree_directory_wrap (directory);
 
-  menu_tree_item_unref (directory);
+  gmenu_tree_item_unref (directory);
 
   return (PyObject *) retval;
 }
@@ -1340,7 +1340,7 @@ pygmenu_tree_callback_free (PyGMenuTreeCallback *callback)
 }
 
 static void
-pygmenu_tree_handle_monitor_callback (MenuTree            *tree,
+pygmenu_tree_handle_monitor_callback (GMenuTree            *tree,
 				      PyGMenuTreeCallback *callback)
 {
   PyObject *args;
@@ -1382,12 +1382,12 @@ pygmenu_tree_add_monitor (PyObject *self,
   tree->callbacks = g_slist_append (tree->callbacks, callback);
 
   {
-    MenuTreeDirectory *dir = menu_tree_get_root_directory (tree->tree);
-    menu_tree_item_unref (dir);
+    GMenuTreeDirectory *dir = gmenu_tree_get_root_directory (tree->tree);
+    gmenu_tree_item_unref (dir);
   }
 
-  menu_tree_add_monitor (tree->tree,
-			 (MenuTreeChangedFunc) pygmenu_tree_handle_monitor_callback,
+  gmenu_tree_add_monitor (tree->tree,
+			 (GMenuTreeChangedFunc) pygmenu_tree_handle_monitor_callback,
 			 callback);
 
   Py_INCREF (Py_None);
@@ -1439,7 +1439,7 @@ pygmenu_tree_dealloc (PyGMenuTree *self)
   self->callbacks = NULL;
 
   if (self->tree != NULL)
-    menu_tree_unref (self->tree);
+    gmenu_tree_unref (self->tree);
   self->tree = NULL;
 
   PyObject_DEL (self);
@@ -1524,11 +1524,11 @@ static PyTypeObject PyGMenuTree_Type =
 };
 
 static PyGMenuTree *
-pygmenu_tree_wrap (MenuTree *tree)
+pygmenu_tree_wrap (GMenuTree *tree)
 {
   PyGMenuTree *retval;
 
-  if ((retval = menu_tree_get_user_data (tree)) != NULL)
+  if ((retval = gmenu_tree_get_user_data (tree)) != NULL)
     {
       Py_INCREF (retval);
       return retval;
@@ -1537,10 +1537,10 @@ pygmenu_tree_wrap (MenuTree *tree)
   if (!(retval = (PyGMenuTree *) PyObject_NEW (PyGMenuTree, &PyGMenuTree_Type)))
     return NULL;
 
-  retval->tree      = menu_tree_ref (tree);
+  retval->tree      = gmenu_tree_ref (tree);
   retval->callbacks = NULL;
 
-  menu_tree_set_user_data (tree, retval, NULL);
+  gmenu_tree_set_user_data (tree, retval, NULL);
 
   return retval;
 }
@@ -1550,11 +1550,11 @@ pygmenu_lookup_tree (PyObject *self,
 		     PyObject *args)
 {
   char        *menu_file;
-  MenuTree    *tree;
+  GMenuTree   *tree;
   PyGMenuTree *retval;
   int          flags;
 
-  flags = MENU_TREE_FLAGS_NONE;
+  flags = GMENU_TREE_FLAGS_NONE;
 
   if (!PyArg_ParseTuple (args, "s|i:gmenu.lookup_tree", &menu_file, &flags))
     return NULL;
@@ -1562,7 +1562,7 @@ pygmenu_lookup_tree (PyObject *self,
   if (!gnome_vfs_initialized ())
     gnome_vfs_init ();
 
-  if (!(tree = menu_tree_lookup (menu_file, flags)))
+  if (!(tree = gmenu_tree_lookup (menu_file, flags)))
     {
       Py_INCREF (Py_None);
       return Py_None;
@@ -1570,7 +1570,7 @@ pygmenu_lookup_tree (PyObject *self,
 
   retval = pygmenu_tree_wrap (tree);
 
-  menu_tree_unref (tree);
+  gmenu_tree_unref (tree);
 
   return (PyObject *) retval;
 }
@@ -1614,14 +1614,14 @@ initgmenu (void)
   REGISTER_ITEM_TYPE (PyGMenuTreeHeader_Type,    "Header");
   REGISTER_ITEM_TYPE (PyGMenuTreeAlias_Type,     "Alias");
 
-  PyModule_AddIntConstant (mod, "TYPE_INVALID",   MENU_TREE_ITEM_INVALID);
-  PyModule_AddIntConstant (mod, "TYPE_DIRECTORY", MENU_TREE_ITEM_DIRECTORY);
-  PyModule_AddIntConstant (mod, "TYPE_ENTRY",     MENU_TREE_ITEM_ENTRY);
-  PyModule_AddIntConstant (mod, "TYPE_SEPARATOR", MENU_TREE_ITEM_SEPARATOR);
-  PyModule_AddIntConstant (mod, "TYPE_HEADER",    MENU_TREE_ITEM_HEADER);
-  PyModule_AddIntConstant (mod, "TYPE_ALIAS",     MENU_TREE_ITEM_ALIAS);
+  PyModule_AddIntConstant (mod, "TYPE_INVALID",   GMENU_TREE_ITEM_INVALID);
+  PyModule_AddIntConstant (mod, "TYPE_DIRECTORY", GMENU_TREE_ITEM_DIRECTORY);
+  PyModule_AddIntConstant (mod, "TYPE_ENTRY",     GMENU_TREE_ITEM_ENTRY);
+  PyModule_AddIntConstant (mod, "TYPE_SEPARATOR", GMENU_TREE_ITEM_SEPARATOR);
+  PyModule_AddIntConstant (mod, "TYPE_HEADER",    GMENU_TREE_ITEM_HEADER);
+  PyModule_AddIntConstant (mod, "TYPE_ALIAS",     GMENU_TREE_ITEM_ALIAS);
 
-  PyModule_AddIntConstant (mod, "FLAGS_NONE",             MENU_TREE_FLAGS_NONE);
-  PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_EXCLUDED", MENU_TREE_FLAGS_INCLUDE_EXCLUDED);
-  PyModule_AddIntConstant (mod, "FLAGS_SHOW_EMPTY",       MENU_TREE_FLAGS_SHOW_EMPTY);
+  PyModule_AddIntConstant (mod, "FLAGS_NONE",             GMENU_TREE_FLAGS_NONE);
+  PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_EXCLUDED", GMENU_TREE_FLAGS_INCLUDE_EXCLUDED);
+  PyModule_AddIntConstant (mod, "FLAGS_SHOW_EMPTY",       GMENU_TREE_FLAGS_SHOW_EMPTY);
 }

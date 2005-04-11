@@ -1,7 +1,7 @@
 NULL =
 
 INCLUDES =				\
-	-DMENU_I_KNOW_THIS_IS_UNSTABLE	\
+	-DGMENU_I_KNOW_THIS_IS_UNSTABLE	\
 	-I$(srcdir)/../libmenu		\
 	$(WARN_CFLAGS)			\
 	$(NO_STRICT_ALIASING_CFLAGS)	\
