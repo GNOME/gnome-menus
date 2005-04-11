@@ -15,3 +15,5 @@ desktop-directories/Settings-Accessibility.directory.in
 desktop-directories/Settings.directory.in
 desktop-directories/System-Settings.directory.in
 desktop-directories/System-Tools.directory.in
+simple-editor/GMenuSimpleEditor/maindialog.py
+simple-editor/GMenuSimpleEditor/menufilewriter.py

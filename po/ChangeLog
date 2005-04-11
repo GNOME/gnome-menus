@@ -1,3 +1,7 @@
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* POTFILES.in: add maindialog.py and menufilewriter.py
+
 2005-04-01  Adi Attar  <aattar@cvs.gnome.org>
 
 	* xh.po: Added Xhosa translation.
