@@ -1,5 +1,9 @@
 2005-04-11  Mark McLoughlin  <mark@skynet.ie>
 
+	* simple-editor/gmenu-simple-editor.glade: forgotten file.
+
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
 	* configure.in: use new form of AC_INIT - I think it cause
 	PACKAGE_NAME and PACKAGE_VALUE to be defined. Add simple-editor
 	dirs.
