@@ -1,5 +1,10 @@
 2005-04-11  Mark McLoughlin  <mark@skynet.ie>
 
+	* simple-editor/gmenu-simple-editor.glade: mark the "Defaults"
+	button as translatable.
+
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
 	* simple-editor/gmenu-simple-editor.glade: forgotten file.
 
 2005-04-11  Mark McLoughlin  <mark@skynet.ie>
