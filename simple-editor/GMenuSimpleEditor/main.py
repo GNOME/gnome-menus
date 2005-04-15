@@ -22,12 +22,14 @@ import locale
 import gettext
 
 import gtk
+import gtk.glade
 
 from config import *
 import maindialog
 
 locale.setlocale (locale.LC_ALL, "")
-gettext.install (PACKAGE, os.path.join (DATADIR, "locale"))
+gettext.install (PACKAGE, LOCALEDIR)
+gtk.glade.bindtextdomain (PACKAGE, LOCALEDIR)
 
 dialog = maindialog.MenuEditorDialog ()
 

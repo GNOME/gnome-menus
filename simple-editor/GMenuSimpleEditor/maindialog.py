@@ -31,7 +31,7 @@ import menufilewriter
 class MenuEditorDialog:
     def __init__ (self):
         glade_file = os.path.join (GLADEDIR, "gmenu-simple-editor.glade")
-        self.xml = gtk.glade.XML (glade_file, "menu_editor_dialog")
+        self.xml = gtk.glade.XML (glade_file, "menu_editor_dialog", PACKAGE)
 
         self.window = self.xml.get_widget ("menu_editor_dialog")
         self.window.connect ("destroy", gtk.main_quit)

@@ -1,3 +1,23 @@
+2005-04-15  Mark McLoughlin  <mark@skynet.ie>
+
+	Get libglade translating the messages in the glade file
+	correctly. Thanks to jamesh for help on this one.
+
+	* simple-editor/GMenuSimpleEditor/main.py: call
+	gtk.glade.bindtextdomain() so that bindtextdomain ("gnome-menus")
+	gets called in the C library. gettext.install() doesn't do this
+	since it parses the message catalogs itself.
+
+	* simple-editor/GMenuSimpleEditor/maindialog.py: pass the translation
+	domain to the gtk.glade.XML() constructor.
+	
+	* simple-editor/GMenuSimpleEditor/Makefile.am,
+	  simple-editor/GMenuSimpleEditor/config.py.in: add LOCALEDIR
+	to config so we use $(DATADIRNAME) since apparently the
+	message catalogs are in lib/ on some platforms. (This had
+	nothing to do with the libglade problem).
+	
+
 2005-04-14  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix for bug #300499. Random foo showing up in the panel's
