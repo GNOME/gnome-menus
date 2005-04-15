@@ -1,5 +1,31 @@
 2005-04-15  Mark McLoughlin  <mark@skynet.ie>
 
+	Fix for bug #300589 - if you've a .desktop file in
+	the user's app dir and another in the system app dir,
+	and they have a different set of categories, we'll
+	match against both .desktop files when processing
+	<Category>
+
+	* libmenu/gmenu-tree.c:
+	(get_by_category_foreach), (get_by_category): iterate
+	over a DesktopEntrySet looking for entries which have
+	a given category.
+	(process_include_rules): take a DesktopEntrySet which
+	contains the pool of desktop file IDs available, rather
+	than an EntryDirectoryList.
+	(process_layout): generate a pool of desktop file IDs
+	for matching against.
+	
+	* libmenu/entry-directories.[ch]:
+	(entry_directory_list_get_by_category),
+	(entry_directory_list_invert_set): remove, they're unused
+	now.
+	
+	* util/test-menu-spec.c: (print_entry): remove trailing
+	space which screws over the tests in menu-spec.
+
+2005-04-15  Mark McLoughlin  <mark@skynet.ie>
+
 	Get libglade translating the messages in the glade file
 	correctly. Thanks to jamesh for help on this one.
 

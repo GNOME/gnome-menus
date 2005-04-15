@@ -75,11 +75,11 @@ static void
 print_entry (GMenuTreeEntry *entry,
 	     const char     *path)
 {
-  g_print ("%s\t%s\t%s %s\n",
+  g_print ("%s\t%s\t%s%s\n",
 	   path,
 	   gmenu_tree_entry_get_desktop_file_id (entry),
 	   gmenu_tree_entry_get_desktop_file_path (entry),
-	   gmenu_tree_entry_get_is_excluded (entry) ? "<excluded>" : "");
+	   gmenu_tree_entry_get_is_excluded (entry) ? " <excluded>" : "");
 }
 
 static void

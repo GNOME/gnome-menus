@@ -71,11 +71,6 @@ DesktopEntry* entry_directory_list_get_directory (EntryDirectoryList *list,
 
 void entry_directory_list_get_all_desktops (EntryDirectoryList *list,
                                             DesktopEntrySet    *set);
-void entry_directory_list_get_by_category  (EntryDirectoryList *list,
-                                            const char         *category,
-                                            DesktopEntrySet    *set);
-void entry_directory_list_invert_set       (EntryDirectoryList *list,
-                                            DesktopEntrySet    *set);
 
 G_END_DECLS
 
