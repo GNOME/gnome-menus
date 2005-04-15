@@ -2360,9 +2360,39 @@ menu_tree_force_reload (MenuTree *tree)
   tree->layout = NULL;
 }
 
+typedef struct
+{
+  DesktopEntrySet *set;
+  const char      *category;
+} GetByCategoryForeachData;
+
+static void
+get_by_category_foreach (const char               *file_id,
+			 DesktopEntry             *entry,
+			 GetByCategoryForeachData *data)
+{
+  if (desktop_entry_has_category (entry, data->category))
+    desktop_entry_set_add_entry (data->set, entry, file_id);
+}
+
+static void
+get_by_category (DesktopEntrySet *entry_pool,
+		 DesktopEntrySet *set,
+		 const char      *category)
+{
+  GetByCategoryForeachData data;
+
+  data.set      = set;
+  data.category = category;
+
+  desktop_entry_set_foreach (entry_pool,
+			     (DesktopEntrySetForeachFunc) get_by_category_foreach,
+			     &data);
+}
+
 static DesktopEntrySet *
-process_include_rules (MenuLayoutNode     *layout,
-                       EntryDirectoryList *list)
+process_include_rules (MenuLayoutNode  *layout,
+		       DesktopEntrySet *entry_pool)
 {
   DesktopEntrySet *set = NULL;
 
@@ -2379,7 +2409,7 @@ process_include_rules (MenuLayoutNode     *layout,
           {
             DesktopEntrySet *child_set;
 
-            child_set = process_include_rules (child, list);
+            child_set = process_include_rules (child, entry_pool);
 
             if (set == NULL)
               {
@@ -2414,7 +2444,7 @@ process_include_rules (MenuLayoutNode     *layout,
           {
             DesktopEntrySet *child_set;
 
-            child_set = process_include_rules (child, list);
+            child_set = process_include_rules (child, entry_pool);
 
             if (set == NULL)
               {
@@ -2444,7 +2474,7 @@ process_include_rules (MenuLayoutNode     *layout,
           {
             DesktopEntrySet *child_set;
 
-            child_set = process_include_rules (child, list);
+            child_set = process_include_rules (child, entry_pool);
 
             if (set == NULL)
               {
@@ -2461,8 +2491,14 @@ process_include_rules (MenuLayoutNode     *layout,
 
         if (set != NULL)
           {
-            /* Now invert the result */
-            entry_directory_list_invert_set (list, set);
+	    DesktopEntrySet *inverted;
+
+	    /* Now invert the result */
+	    inverted = desktop_entry_set_new ();
+	    desktop_entry_set_union (inverted, entry_pool);
+	    desktop_entry_set_subtract (inverted, set);
+	    desktop_entry_set_unref (set);
+	    set = inverted;
           }
 	menu_verbose ("Processed <Not>\n");
       }
@@ -2471,7 +2507,7 @@ process_include_rules (MenuLayoutNode     *layout,
     case MENU_LAYOUT_NODE_ALL:
       menu_verbose ("Processing <All>\n");
       set = desktop_entry_set_new ();
-      entry_directory_list_get_all_desktops (list, set);
+      desktop_entry_set_union (set, entry_pool);
       menu_verbose ("Processed <All>\n");
       break;
 
@@ -2482,15 +2518,14 @@ process_include_rules (MenuLayoutNode     *layout,
 	menu_verbose ("Processing <Filename>%s</Filename>\n",
 		      menu_layout_node_get_content (layout));
 
-        entry = entry_directory_list_get_desktop (list,
-                                                  menu_layout_node_get_content (layout));
+        entry = desktop_entry_set_lookup (entry_pool,
+					  menu_layout_node_get_content (layout));
         if (entry != NULL)
           {
             set = desktop_entry_set_new ();
             desktop_entry_set_add_entry (set,
                                          entry,
                                          menu_layout_node_get_content (layout));
-            desktop_entry_unref (entry);
           }
 	menu_verbose ("Processed <Filename>%s</Filename>\n",
 		      menu_layout_node_get_content (layout));
@@ -2501,9 +2536,7 @@ process_include_rules (MenuLayoutNode     *layout,
       menu_verbose ("Processing <Category>%s</Category>\n",
 		    menu_layout_node_get_content (layout));
       set = desktop_entry_set_new ();
-      entry_directory_list_get_by_category (list,
-                                            menu_layout_node_get_content (layout),
-                                            set);
+      get_by_category (entry_pool, set, menu_layout_node_get_content (layout));
       menu_verbose ("Processed <Category>%s</Category>\n",
 		    menu_layout_node_get_content (layout));
       break;
@@ -2539,10 +2572,9 @@ process_layout (MenuTree          *tree,
                 MenuLayoutNode    *layout,
                 DesktopEntrySet   *allocated)
 {
-  EntryDirectoryList *app_dirs;
-  EntryDirectoryList *dir_dirs;
   MenuLayoutNode     *layout_iter;
   MenuTreeDirectory  *directory;
+  DesktopEntrySet    *entry_pool;
   DesktopEntrySet    *entries;
   gboolean            deleted;
   DesktopEntrySet    *allocated_set;
@@ -2561,11 +2593,12 @@ process_layout (MenuTree          *tree,
   deleted = FALSE;
   only_unallocated = FALSE;
 
-  app_dirs = menu_layout_node_menu_get_app_dirs (layout);
-  dir_dirs = menu_layout_node_menu_get_directory_dirs (layout);
-
   entries = desktop_entry_set_new ();
   allocated_set = desktop_entry_set_new ();
+
+  entry_pool = desktop_entry_set_new ();
+  entry_directory_list_get_all_desktops (menu_layout_node_menu_get_app_dirs (layout),
+					 entry_pool);
 
   layout_iter = menu_layout_node_get_children (layout);
   while (layout_iter != NULL)
@@ -2607,7 +2640,7 @@ process_layout (MenuTree          *tree,
               {
                 DesktopEntrySet *rule_set;
 
-                rule_set = process_include_rules (rule, app_dirs);
+                rule_set = process_include_rules (rule, entry_pool);
                 if (rule_set != NULL)
                   {
                     desktop_entry_set_union (entries, rule_set);
@@ -2639,7 +2672,7 @@ process_layout (MenuTree          *tree,
               {
                 DesktopEntrySet *rule_set;
 
-                rule_set = process_include_rules (rule, app_dirs);
+                rule_set = process_include_rules (rule, entry_pool);
                 if (rule_set != NULL)
                   {
                     desktop_entry_set_subtract (entries, rule_set);
@@ -2664,7 +2697,7 @@ process_layout (MenuTree          *tree,
 	    /*
              * The last <Directory> to exist wins, so we always try overwriting
              */
-            entry = entry_directory_list_get_directory (dir_dirs,
+            entry = entry_directory_list_get_directory (menu_layout_node_menu_get_directory_dirs (layout),
                                                         menu_layout_node_get_content (layout_iter));
 
             if (entry != NULL)
@@ -2712,6 +2745,8 @@ process_layout (MenuTree          *tree,
 
       layout_iter = menu_layout_node_get_next (layout_iter);
     }
+
+  desktop_entry_set_unref (entry_pool);
 
   directory->only_unallocated = only_unallocated;
 
