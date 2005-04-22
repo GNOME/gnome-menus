@@ -3,7 +3,7 @@ NULL =
 INCLUDES =				\
 	-DGMENU_I_KNOW_THIS_IS_UNSTABLE	\
 	-I$(srcdir)/../libmenu		\
-	$(LIBMENU_CFLAGS)		\
+	$(GLIB_CFLAGS)		\
 	$(DISABLE_DEPRECATED_CFLAGS)	\
 	$(DEBUG_CFLAGS)			\
 	$(WARN_CFLAGS)			\
@@ -19,5 +19,5 @@ gnome_menu_spec_test_SOURCES =		\
 
 gnome_menu_spec_test_LDADD =		\
 	../libmenu/libgnome-menu.la	\
-	$(LIBMENU_LIBS)			\
+	$(GLIB_LIBS)			\
 	$(NULL)

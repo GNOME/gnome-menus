@@ -23,10 +23,9 @@
 
 #include <string.h>
 #include <errno.h>
-#include <libgnomevfs/gnome-vfs.h>
-
 
 #include "menu-layout.h"
+#include "menu-monitor.h"
 #include "menu-util.h"
 #include "canonicalize.h"
 
@@ -253,19 +252,24 @@ typedef enum
   MENU_FILE_MONITOR_DIRECTORY
 } MenuFileMonitorType;
 
-static void
-handle_nonexistent_menu_file_changed (GnomeVFSMonitorHandle     *handle,
-				      const char                *monitor_uri,
-				      const char                *info_uri,
-				      GnomeVFSMonitorEventType   event,
-				      GMenuTree                 *tree)
+typedef struct
 {
-  if (event == GNOME_VFS_MONITOR_EVENT_CHANGED ||
-      event == GNOME_VFS_MONITOR_EVENT_CREATED)
+  MenuFileMonitorType  type;
+  MenuMonitor         *monitor;
+} MenuFileMonitor;
+
+static void
+handle_nonexistent_menu_file_changed (MenuMonitor      *monitor,
+				      MenuMonitorEvent  event,
+				      const char       *path,
+				      GMenuTree        *tree)
+{
+  if (event == MENU_MONITOR_EVENT_CHANGED ||
+      event == MENU_MONITOR_EVENT_CREATED)
     {
       menu_verbose ("\"%s\" %s, marking tree for recanonicalization\n",
-                    info_uri,
-                    event == GNOME_VFS_MONITOR_EVENT_CREATED ? "created" : "changed");
+                    path,
+                    event == MENU_MONITOR_EVENT_CREATED ? "created" : "changed");
 
       gmenu_tree_force_recanonicalize (tree);
       gmenu_tree_invoke_monitors (tree);
@@ -273,45 +277,33 @@ handle_nonexistent_menu_file_changed (GnomeVFSMonitorHandle     *handle,
 }
 
 static void
-handle_menu_file_changed (GnomeVFSMonitorHandle    *handle,
-                          const char               *monitor_uri,
-                          const char               *info_uri,
-                          GnomeVFSMonitorEventType  event,
-                          GMenuTree                *tree)
+handle_menu_file_changed (MenuMonitor      *monitor,
+			  MenuMonitorEvent  event,
+			  const char       *path,
+                          GMenuTree        *tree)
 {
-  if (event != GNOME_VFS_MONITOR_EVENT_DELETED &&
-      event != GNOME_VFS_MONITOR_EVENT_CHANGED &&
-      event != GNOME_VFS_MONITOR_EVENT_CREATED)
-    return;
-
   menu_verbose ("\"%s\" %s, marking tree for recanicalization\n",
-		info_uri,
-		event == GNOME_VFS_MONITOR_EVENT_CREATED ? "created" :
-		event == GNOME_VFS_MONITOR_EVENT_CHANGED ? "changed" : "deleted");
+		path,
+		event == MENU_MONITOR_EVENT_CREATED ? "created" :
+		event == MENU_MONITOR_EVENT_CHANGED ? "changed" : "deleted");
 
   gmenu_tree_force_recanonicalize (tree);
   gmenu_tree_invoke_monitors (tree);
 }
 
 static void
-handle_menu_file_directory_changed (GnomeVFSMonitorHandle    *handle,
-				    const char               *monitor_uri,
-				    const char               *info_uri,
-				    GnomeVFSMonitorEventType  event,
-				    GMenuTree                *tree)
+handle_menu_file_directory_changed (MenuMonitor      *monitor,
+				    MenuMonitorEvent  event,
+				    const char       *path,
+				    GMenuTree        *tree)
 {
-  if (event != GNOME_VFS_MONITOR_EVENT_DELETED &&
-      event != GNOME_VFS_MONITOR_EVENT_CHANGED &&
-      event != GNOME_VFS_MONITOR_EVENT_CREATED)
-    return;
-
-  if (!g_str_has_suffix (info_uri, ".menu"))
+  if (!g_str_has_suffix (path, ".menu"))
     return;
 
   menu_verbose ("\"%s\" %s, marking tree for recanicalization\n",
-		info_uri,
-		event == GNOME_VFS_MONITOR_EVENT_CREATED ? "created" :
-		event == GNOME_VFS_MONITOR_EVENT_CHANGED ? "changed" : "deleted");
+		path,
+		event == MENU_MONITOR_EVENT_CREATED ? "created" :
+		event == MENU_MONITOR_EVENT_CHANGED ? "changed" : "deleted");
 
   gmenu_tree_force_recanonicalize (tree);
   gmenu_tree_invoke_monitors (tree);
@@ -322,44 +314,39 @@ gmenu_tree_add_menu_file_monitor (GMenuTree           *tree,
 				  const char          *path,
 				  MenuFileMonitorType  type)
 {
-  GnomeVFSMonitorHandle *handle;
-  GnomeVFSResult         result;
-  char                  *uri;
+  MenuFileMonitor *monitor;
 
-  uri = gnome_vfs_get_uri_from_local_path (path);
+  monitor = g_new0 (MenuFileMonitor, 1);
 
-  handle = NULL;
+  monitor->type = type;
 
   switch (type)
     {
     case MENU_FILE_MONITOR_FILE:
       menu_verbose ("Adding a menu file monitor for \"%s\"\n", path);
 
-      result = gnome_vfs_monitor_add (&handle,
-				      uri,
-				      GNOME_VFS_MONITOR_FILE,
-				      (GnomeVFSMonitorCallback) handle_menu_file_changed,
-				      tree);
+      monitor->monitor = menu_get_file_monitor (path);
+      menu_monitor_add_notify (monitor->monitor,
+			       (MenuMonitorNotifyFunc) handle_menu_file_changed,
+			       tree);
       break;
 
     case MENU_FILE_MONITOR_NONEXISTENT_FILE:
       menu_verbose ("Adding a menu file monitor for non-existent \"%s\"\n", path);
 
-      result = gnome_vfs_monitor_add (&handle,
-				      uri,
-				      GNOME_VFS_MONITOR_FILE,
-				      (GnomeVFSMonitorCallback) handle_nonexistent_menu_file_changed,
-				      tree);
+      monitor->monitor = menu_get_file_monitor (path);
+      menu_monitor_add_notify (monitor->monitor,
+			       (MenuMonitorNotifyFunc) handle_nonexistent_menu_file_changed,
+			       tree);
       break;
 
     case MENU_FILE_MONITOR_DIRECTORY:
       menu_verbose ("Adding a menu directory monitor for \"%s\"\n", path);
 
-      result = gnome_vfs_monitor_add (&handle,
-				      uri,
-				      GNOME_VFS_MONITOR_DIRECTORY,
-				      (GnomeVFSMonitorCallback) handle_menu_file_directory_changed,
-				      tree);
+      monitor->monitor = menu_get_directory_monitor (path);
+      menu_monitor_add_notify (monitor->monitor,
+			       (MenuMonitorNotifyFunc) handle_menu_file_directory_changed,
+			       tree);
       break;
 
     default:
@@ -367,18 +354,44 @@ gmenu_tree_add_menu_file_monitor (GMenuTree           *tree,
       break;
     }
 
-  if (result == GNOME_VFS_OK)
+  tree->menu_file_monitors = g_slist_prepend (tree->menu_file_monitors, monitor);
+}
+
+static void
+remove_menu_file_monitor (MenuFileMonitor *monitor,
+			  GMenuTree       *tree)
+{
+  switch (monitor->type)
     {
-      tree->menu_file_monitors = g_slist_prepend (tree->menu_file_monitors, handle);
-    }
-  else
-    {
-      g_assert (handle == NULL);
-      menu_verbose ("Failed to add monitor for %s: %s\n",
-                    path, gnome_vfs_result_to_string (result));
+    case MENU_FILE_MONITOR_FILE:
+      menu_monitor_remove_notify (monitor->monitor,
+				  (MenuMonitorNotifyFunc) handle_menu_file_changed,
+				  tree);
+      break;
+
+    case MENU_FILE_MONITOR_NONEXISTENT_FILE:
+      menu_monitor_remove_notify (monitor->monitor,
+				  (MenuMonitorNotifyFunc) handle_nonexistent_menu_file_changed,
+				  tree);
+      break;
+
+    case MENU_FILE_MONITOR_DIRECTORY:
+      menu_monitor_remove_notify (monitor->monitor,
+				  (MenuMonitorNotifyFunc) handle_menu_file_directory_changed,
+				  tree);
+      break;
+
+    default:
+      g_assert_not_reached ();
+      break;
     }
 
-  g_free (uri);
+  menu_monitor_unref (monitor->monitor);
+  monitor->monitor = NULL;
+
+  monitor->type = MENU_FILE_MONITOR_INVALID;
+
+  g_free (monitor);
 }
 
 static void
@@ -387,8 +400,8 @@ gmenu_tree_remove_menu_file_monitors (GMenuTree *tree)
   menu_verbose ("Removing all menu file monitors\n");
 
   g_slist_foreach (tree->menu_file_monitors,
-                   (GFunc) gnome_vfs_monitor_cancel,
-                   NULL);
+                   (GFunc) remove_menu_file_monitor,
+                   tree);
   g_slist_free (tree->menu_file_monitors);
   tree->menu_file_monitors = NULL;
 }

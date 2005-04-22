@@ -21,7 +21,6 @@
 
 #include <Python.h>
 #include <gmenu-tree.h>
-#include <libgnomevfs/gnome-vfs-init.h>
 
 typedef struct
 {
@@ -1558,9 +1557,6 @@ pygmenu_lookup_tree (PyObject *self,
 
   if (!PyArg_ParseTuple (args, "s|i:gmenu.lookup_tree", &menu_file, &flags))
     return NULL;
-
-  if (!gnome_vfs_initialized ())
-    gnome_vfs_init ();
 
   if (!(tree = gmenu_tree_lookup (menu_file, flags)))
     {

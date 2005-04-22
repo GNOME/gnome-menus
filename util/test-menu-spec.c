@@ -22,7 +22,6 @@
 #include "gmenu-tree.h"
 
 #include <string.h>
-#include <libgnomevfs/gnome-vfs.h>
 
 static char     *menu_file = NULL;
 static gboolean  monitor = FALSE;
@@ -167,8 +166,6 @@ main (int argc, char **argv)
   GMenuTree          *tree;
   GMenuTreeDirectory *root;
 
-  gnome_vfs_init ();
-
   options_context = g_option_context_new ("- test GNOME's implementation of the Desktop Menu Specification");
   g_option_context_add_main_entries (options_context, options, GETTEXT_PACKAGE);
   g_option_context_parse (options_context, &argc, &argv, NULL);
@@ -207,8 +204,6 @@ main (int argc, char **argv)
     }
 
   gmenu_tree_unref (tree);
-
-  gnome_vfs_shutdown ();
 
   return 0;
 }

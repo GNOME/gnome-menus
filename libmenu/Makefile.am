@@ -2,7 +2,7 @@ NULL =
 
 INCLUDES =				\
 	-DGMENU_I_KNOW_THIS_IS_UNSTABLE	\
-	$(LIBMENU_CFLAGS)		\
+	$(GLIB_CFLAGS)			\
 	$(DISABLE_DEPRECATED_CFLAGS)	\
 	$(DEBUG_CFLAGS)			\
 	$(WARN_CFLAGS)			\
@@ -21,12 +21,15 @@ libgnome_menu_la_SOURCES =		\
 	gmenu-tree.h			\
 	menu-layout.c			\
 	menu-layout.h			\
+	menu-monitor.c			\
+	menu-monitor.h			\
 	menu-util.c			\
 	menu-util.h			\
 	$(NULL)
 
 libgnome_menu_la_LIBADD = 		\
-	$(LIBMENU_LIBS)			\
+	$(GLIB_LIBS)			\
+	$(FAM_LIBS)			\
 	$(NULL)
 libgnome_menu_la_LDFLAGS =			\
 	-version-info $(LIB_MENU_LT_VERSION)	\
@@ -46,6 +49,3 @@ EXTRA_DIST =				\
 
 pkgconfigdir   = $(libdir)/pkgconfig
 pkgconfig_DATA = libgnome-menu.pc
-
-
-

@@ -25,9 +25,9 @@
 #include <errno.h>
 #include <sys/types.h>
 #include <dirent.h>
-#include <libgnomevfs/gnome-vfs.h>
 
 #include "menu-util.h"
+#include "menu-monitor.h"
 #include "canonicalize.h"
 
 typedef struct CachedDir CachedDir;
@@ -58,8 +58,8 @@ struct CachedDir
   GSList *entries;
   GSList *subdirs;
 
-  GnomeVFSMonitorHandle *monitor;
-  GSList                *monitors;
+  MenuMonitor *dir_monitor;
+  GSList      *monitors;
 
   guint have_read_entries : 1;
   guint no_monitor_support : 1;
@@ -75,6 +75,11 @@ struct CachedDirMonitor
 static void     cached_dir_free                   (CachedDir  *dir);
 static gboolean cached_dir_load_entries_recursive (CachedDir  *dir,
                                                    const char *dirname);
+
+static void handle_cached_dir_changed (MenuMonitor      *monitor,
+				       MenuMonitorEvent  event,
+				       const char       *path,
+				       CachedDir        *dir);
 
 /*
  * Entry directory cache
@@ -120,9 +125,14 @@ cached_dir_free (CachedDir *dir)
   cached_dir_clear_entries (dir);
   cached_dir_clear_subdirs (dir);
 
-  if (dir->monitor)
-    gnome_vfs_monitor_cancel (dir->monitor);
-  dir->monitor = NULL;
+  if (dir->dir_monitor)
+    {
+      menu_monitor_remove_notify (dir->dir_monitor,
+				  (MenuMonitorNotifyFunc) handle_cached_dir_changed,
+				  dir);
+      menu_monitor_unref (dir->dir_monitor);
+      dir->dir_monitor = NULL;
+    }
 
   g_slist_foreach (dir->monitors, (GFunc) g_free, NULL);
   g_slist_free (dir->monitors);
@@ -451,29 +461,18 @@ cached_dir_invoke_monitors (CachedDir *dir)
 }
 
 static void
-handle_cached_dir_changed (GnomeVFSMonitorHandle    *handle,
-                           const char               *monitor_uri,
-                           const char               *info_uri,
-                           GnomeVFSMonitorEventType  event,
-                           CachedDir                *dir)
+handle_cached_dir_changed (MenuMonitor      *monitor,
+			   MenuMonitorEvent  event,
+			   const char       *path,
+                           CachedDir        *dir)
 {
   gboolean  handled = FALSE;
-  char     *path;
   char     *basename;
-
-  if (event != GNOME_VFS_MONITOR_EVENT_CREATED &&
-      event != GNOME_VFS_MONITOR_EVENT_DELETED &&
-      event != GNOME_VFS_MONITOR_EVENT_CHANGED)
-    return;
-
-  if (!(path = gnome_vfs_get_local_path_from_uri (info_uri)))
-    return;
 
   menu_verbose ("Notified of '%s' %s - invalidating cache\n",
                 path,
-                event == GNOME_VFS_MONITOR_EVENT_CREATED ? ("created") :
-                event == GNOME_VFS_MONITOR_EVENT_DELETED ? ("deleted") :
-                event == GNOME_VFS_MONITOR_EVENT_CHANGED ? ("changed") : ("unknown-event"));
+                event == MENU_MONITOR_EVENT_CREATED ? ("created") :
+                event == MENU_MONITOR_EVENT_DELETED ? ("deleted") : ("changed"));
 
   basename = g_path_get_basename (path);
 
@@ -482,15 +481,15 @@ handle_cached_dir_changed (GnomeVFSMonitorHandle    *handle,
     {
       switch (event)
         {
-        case GNOME_VFS_MONITOR_EVENT_CREATED:
+        case MENU_MONITOR_EVENT_CREATED:
           handled = cached_dir_add_entry (dir, basename, path);
           break;
 
-        case GNOME_VFS_MONITOR_EVENT_CHANGED:
+        case MENU_MONITOR_EVENT_CHANGED:
           handled = cached_dir_update_entry (dir, basename, path);
           break;
 
-        case GNOME_VFS_MONITOR_EVENT_DELETED:
+        case MENU_MONITOR_EVENT_DELETED:
           handled = cached_dir_remove_entry (dir, basename);
           break;
 
@@ -503,14 +502,14 @@ handle_cached_dir_changed (GnomeVFSMonitorHandle    *handle,
     {
       switch (event)
         {
-        case GNOME_VFS_MONITOR_EVENT_CREATED:
+        case MENU_MONITOR_EVENT_CREATED:
           handled = cached_dir_add_subdir (dir, basename, path);
           break;
 
-        case GNOME_VFS_MONITOR_EVENT_CHANGED:
+        case MENU_MONITOR_EVENT_CHANGED:
           break;
 
-        case GNOME_VFS_MONITOR_EVENT_DELETED:
+        case MENU_MONITOR_EVENT_DELETED:
           handled = cached_dir_remove_subdir (dir, basename);
           break;
 
@@ -521,7 +520,6 @@ handle_cached_dir_changed (GnomeVFSMonitorHandle    *handle,
     }
 
   g_free (basename);
-  g_free (path);
 
   if (handled)
     {
@@ -533,23 +531,13 @@ static void
 cached_dir_ensure_monitor (CachedDir  *dir,
                            const char *dirname)
 {
-  char *uri;
-
-  if (dir->monitor != NULL || dir->no_monitor_support)
-    return;
-
-  uri = gnome_vfs_get_uri_from_local_path (dirname);
-
-  if (gnome_vfs_monitor_add (&dir->monitor,
-                             uri,
-                             GNOME_VFS_MONITOR_DIRECTORY,
-                             (GnomeVFSMonitorCallback) handle_cached_dir_changed,
-                             dir) != GNOME_VFS_OK)
+  if (dir->dir_monitor == NULL)
     {
-      dir->no_monitor_support = TRUE;
+      dir->dir_monitor = menu_get_directory_monitor (dirname);
+      menu_monitor_add_notify (dir->dir_monitor,
+			       (MenuMonitorNotifyFunc) handle_cached_dir_changed,
+			       dir);
     }
-
-  g_free (uri);
 }
 
 static gboolean

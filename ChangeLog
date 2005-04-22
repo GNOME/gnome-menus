@@ -1,3 +1,33 @@
+2005-04-22  Mark McLoughlin  <mark@skynet.ie>
+
+	Use FAM directly instead of gnome-vfs and ensure that
+	we only ever add a single FAM monitor any given path.
+	Should fix bug #160194.
+
+	Oh, also use the FAMNoExists() extension from gamin
+	if available - should cut down on a whole heap of
+	FAM traffic.
+
+	* configure.in: don't require gnome-vfs, check for FAM
+	and FAMNoExists().
+	
+	* libmenu/Makefile.am: build menu-monitor.[ch] and
+	link against libfam.
+	
+	* libmenu/menu-monitor.[ch]: add file/directory monitoring
+	implementation using FAM.
+	
+	* libmenu/entry-directories.c,
+	  libmenu/gmenu-tree.c: use the internal monitoring API
+	instead of gnome-vfs.
+	
+	* python/gmenu.c,
+	  util/test-menu-spec.c: (main): no need to initialize
+	gnome-vfs anymore.
+	
+	* python/Makefile.am,
+	  util/Makefile.am: upd.
+
 2005-04-15  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix for bug #300589 - if you've a .desktop file in
