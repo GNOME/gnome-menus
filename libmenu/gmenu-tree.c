@@ -140,6 +140,7 @@ static void      gmenu_tree_force_reload         (GMenuTree       *tree);
 static void      gmenu_tree_build_from_layout    (GMenuTree       *tree);
 static void      gmenu_tree_force_rebuild        (GMenuTree       *tree);
 static void      gmenu_tree_resolve_files        (GMenuTree       *tree,
+						  GHashTable      *loaded_menu_files,
 						  MenuLayoutNode  *layout);
 static void      gmenu_tree_force_recanonicalize (GMenuTree       *tree);
 static void      gmenu_tree_invoke_monitors      (GMenuTree       *tree);
@@ -1463,6 +1464,7 @@ find_menu_child (MenuLayoutNode *layout)
 
 static void
 merge_resolved_children (GMenuTree      *tree,
+			 GHashTable     *loaded_menu_files,
                          MenuLayoutNode *where,
                          MenuLayoutNode *from)
 {
@@ -1470,7 +1472,7 @@ merge_resolved_children (GMenuTree      *tree,
   MenuLayoutNode *menu_child;
   MenuLayoutNode *from_child;
 
-  gmenu_tree_resolve_files (tree, from);
+  gmenu_tree_resolve_files (tree, loaded_menu_files, from);
 
   insert_after = where;
   g_assert (menu_layout_node_get_type (insert_after) != MENU_LAYOUT_NODE_ROOT);
@@ -1515,6 +1517,7 @@ merge_resolved_children (GMenuTree      *tree,
 
 static gboolean
 load_merge_file (GMenuTree      *tree,
+		 GHashTable     *loaded_menu_files,
                  const char     *filename,
                  gboolean        is_canonical,
 		 gboolean        add_monitor,
@@ -1522,7 +1525,11 @@ load_merge_file (GMenuTree      *tree,
 {
   MenuLayoutNode *to_merge;
   const char     *canonical;
-  char           *freeme = NULL;
+  char           *freeme;
+  gboolean        retval;
+
+  freeme = NULL;
+  retval = FALSE;
 
   if (!is_canonical)
     {
@@ -1536,12 +1543,20 @@ load_merge_file (GMenuTree      *tree,
 
           menu_verbose ("Failed to canonicalize merge file path \"%s\": %s\n",
                         filename, g_strerror (errno));
-          return FALSE;
+	  goto out;
         }
     }
   else
     {
       canonical = filename;
+    }
+
+  if (g_hash_table_lookup (loaded_menu_files, canonical) != NULL)
+    {
+      g_warning ("Not loading \"%s\": recursive loop detected in .menu files",
+		 canonical);
+      retval = TRUE;
+      goto out;
     }
 
   menu_verbose ("Merging file \"%s\"\n", canonical);
@@ -1551,26 +1566,34 @@ load_merge_file (GMenuTree      *tree,
     {
       menu_verbose ("No menu for file \"%s\" found when merging\n",
                     canonical);
-      return FALSE;
+      goto out;
     }
+
+  retval = TRUE;
+
+  g_hash_table_insert (loaded_menu_files,
+		       g_strdup (canonical),
+		       GUINT_TO_POINTER (TRUE));
 
   if (add_monitor)
     gmenu_tree_add_menu_file_monitor (tree,
 				      canonical,
 				      MENU_FILE_MONITOR_FILE);
 
-  merge_resolved_children (tree, where, to_merge);
+  merge_resolved_children (tree, loaded_menu_files, where, to_merge);
 
   menu_layout_node_unref (to_merge);
 
+ out:
   if (freeme)
     g_free (freeme);
 
-  return TRUE;
+  return retval;
 }
 
 static gboolean
 load_merge_file_with_config_dir (GMenuTree      *tree,
+				 GHashTable     *loaded_menu_files,
 				 const char     *menu_file,
 				 const char     *config_dir,
 				 MenuLayoutNode *where)
@@ -1582,7 +1605,7 @@ load_merge_file_with_config_dir (GMenuTree      *tree,
 
   merge_file = g_build_filename (config_dir, "menus", menu_file, NULL);
 
-  if (load_merge_file (tree, merge_file, FALSE, TRUE, where))
+  if (load_merge_file (tree, loaded_menu_files, merge_file, FALSE, TRUE, where))
     loaded = TRUE;
 
   g_free (merge_file);
@@ -1620,6 +1643,7 @@ compare_basedir_to_config_dir (const char *canonical_basedir,
 
 static gboolean
 load_parent_merge_file (GMenuTree      *tree,
+			GHashTable     *loaded_menu_files,
 			MenuLayoutNode *layout)
 {
   MenuLayoutNode     *root;
@@ -1665,6 +1689,7 @@ load_parent_merge_file (GMenuTree      *tree,
 			menu_file, system_config_dirs[i]);
 
 	  if (load_merge_file_with_config_dir (tree,
+					       loaded_menu_files,
 					       menu_file,
 					       system_config_dirs[i],
 					       layout))
@@ -1684,6 +1709,7 @@ load_parent_merge_file (GMenuTree      *tree,
 
 static void
 load_merge_dir (GMenuTree      *tree,
+		GHashTable     *loaded_menu_files,
                 const char     *dirname,
                 MenuLayoutNode *where)
 {
@@ -1707,7 +1733,7 @@ load_merge_dir (GMenuTree      *tree,
 
           full_path = g_build_filename (dirname, menu_file, NULL);
 
-          load_merge_file (tree, full_path, TRUE, FALSE, where);
+          load_merge_file (tree, loaded_menu_files, full_path, TRUE, FALSE, where);
 
           g_free (full_path);
         }
@@ -1718,6 +1744,7 @@ load_merge_dir (GMenuTree      *tree,
 
 static void
 load_merge_dir_with_config_dir (GMenuTree      *tree,
+				GHashTable     *loaded_menu_files,
                                 const char     *config_dir,
                                 const char     *dirname,
                                 MenuLayoutNode *where)
@@ -1726,20 +1753,21 @@ load_merge_dir_with_config_dir (GMenuTree      *tree,
 
   path = g_build_filename (config_dir, "menus", dirname, NULL);
 
-  load_merge_dir (tree, path, where);
+  load_merge_dir (tree, loaded_menu_files, path, where);
 
   g_free (path);
 }
 
 static void
 resolve_merge_file (GMenuTree      *tree,
+		    GHashTable     *loaded_menu_files,
                     MenuLayoutNode *layout)
 {
   char *filename;
 
   if (menu_layout_node_merge_file_get_type (layout) == MENU_MERGE_FILE_TYPE_PARENT)
     {
-      if (load_parent_merge_file (tree, layout))
+      if (load_parent_merge_file (tree, loaded_menu_files, layout))
         return;
     }
 
@@ -1750,7 +1778,7 @@ resolve_merge_file (GMenuTree      *tree,
     }
   else
     {
-      load_merge_file (tree, filename, FALSE, TRUE, layout);
+      load_merge_file (tree, loaded_menu_files, filename, FALSE, TRUE, layout);
 
       g_free (filename);
     }
@@ -1761,6 +1789,7 @@ resolve_merge_file (GMenuTree      *tree,
 
 static void
 resolve_merge_dir (GMenuTree      *tree,
+		   GHashTable     *loaded_menu_files,
                    MenuLayoutNode *layout)
 {
   char *path;
@@ -1772,7 +1801,7 @@ resolve_merge_dir (GMenuTree      *tree,
     }
   else
     {
-      load_merge_dir (tree, path, layout);
+      load_merge_dir (tree, loaded_menu_files, path, layout);
 
       g_free (path);
     }
@@ -1883,6 +1912,7 @@ resolve_default_directory_dirs (GMenuTree      *tree,
 
 static void
 resolve_default_merge_dirs (GMenuTree      *tree,
+			    GHashTable     *loaded_menu_files,
                             MenuLayoutNode *layout)
 {
   MenuLayoutNode     *root;
@@ -1905,12 +1935,14 @@ resolve_default_merge_dirs (GMenuTree      *tree,
     {
       i--;
       load_merge_dir_with_config_dir (tree,
+				      loaded_menu_files,
                                       system_config_dirs[i],
                                       merge_name,
                                       layout);
     }
 
   load_merge_dir_with_config_dir (tree,
+				  loaded_menu_files,
                                   g_get_user_config_dir (),
                                   merge_name,
                                   layout);
@@ -2062,6 +2094,7 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
 
 static void
 resolve_legacy_dir (GMenuTree      *tree,
+		    GHashTable     *loaded_menu_files,
                     MenuLayoutNode *legacy)
 {
   MenuLayoutNode *to_merge;
@@ -2078,7 +2111,7 @@ resolve_legacy_dir (GMenuTree      *tree,
                                menu_layout_node_legacy_dir_get_prefix (legacy),
                                menu_layout_node_menu_get_name (menu)))
     {
-      merge_resolved_children (tree, legacy, to_merge);
+      merge_resolved_children (tree, loaded_menu_files, legacy, to_merge);
     }
 
   menu_layout_node_unref (to_merge);
@@ -2086,6 +2119,7 @@ resolve_legacy_dir (GMenuTree      *tree,
 
 static MenuLayoutNode *
 add_legacy_dir (GMenuTree      *tree,
+		GHashTable     *loaded_menu_files,
                 MenuLayoutNode *before,
                 const char     *data_dir)
 {
@@ -2103,7 +2137,7 @@ add_legacy_dir (GMenuTree      *tree,
   menu_verbose ("Adding <LegacyDir>%s</LegacyDir> in <KDELegacyDirs/>\n",
                 dirname);
 
-  resolve_legacy_dir (tree, legacy);
+  resolve_legacy_dir (tree, loaded_menu_files, legacy);
 
   g_free (dirname);
 
@@ -2112,6 +2146,7 @@ add_legacy_dir (GMenuTree      *tree,
 
 static void
 resolve_kde_legacy_dirs (GMenuTree      *tree,
+			 GHashTable     *loaded_menu_files,
                          MenuLayoutNode *layout)
 {
   MenuLayoutNode     *before;
@@ -2121,13 +2156,14 @@ resolve_kde_legacy_dirs (GMenuTree      *tree,
   system_data_dirs = g_get_system_data_dirs ();
 
   before = add_legacy_dir (tree,
+			   loaded_menu_files,
 			   menu_layout_node_ref (layout),
 			   g_get_user_data_dir ());
 
   i = 0;
   while (system_data_dirs[i] != NULL)
     {
-      before = add_legacy_dir (tree, before, system_data_dirs[i]);
+      before = add_legacy_dir (tree, loaded_menu_files, before, system_data_dirs[i]);
 
       ++i;
     }
@@ -2138,14 +2174,9 @@ resolve_kde_legacy_dirs (GMenuTree      *tree,
   menu_layout_node_unlink (layout);
 }
 
-/* FIXME
- * if someone does <MergeFile>A.menu</MergeFile> inside
- * A.menu, or a more elaborate loop involving multiple
- * files, we'll just get really hosed and eat all the RAM
- * we can find
- */
 static void
 gmenu_tree_resolve_files (GMenuTree      *tree,
+			  GHashTable     *loaded_menu_files,
 			  MenuLayoutNode *layout)
 {
   MenuLayoutNode *child;
@@ -2156,11 +2187,11 @@ gmenu_tree_resolve_files (GMenuTree      *tree,
   switch (menu_layout_node_get_type (layout))
     {
     case MENU_LAYOUT_NODE_MERGE_FILE:
-      resolve_merge_file (tree, layout);
+      resolve_merge_file (tree, loaded_menu_files, layout);
       break;
 
     case MENU_LAYOUT_NODE_MERGE_DIR:
-      resolve_merge_dir (tree, layout);
+      resolve_merge_dir (tree, loaded_menu_files, layout);
       break;
 
     case MENU_LAYOUT_NODE_DEFAULT_APP_DIRS:
@@ -2172,15 +2203,15 @@ gmenu_tree_resolve_files (GMenuTree      *tree,
       break;
 
     case MENU_LAYOUT_NODE_DEFAULT_MERGE_DIRS:
-      resolve_default_merge_dirs (tree, layout);
+      resolve_default_merge_dirs (tree, loaded_menu_files, layout);
       break;
 
     case MENU_LAYOUT_NODE_LEGACY_DIR:
-      resolve_legacy_dir (tree, layout);
+      resolve_legacy_dir (tree, loaded_menu_files, layout);
       break;
 
     case MENU_LAYOUT_NODE_KDE_LEGACY_DIRS:
-      resolve_kde_legacy_dirs (tree, layout);
+      resolve_kde_legacy_dirs (tree, loaded_menu_files, layout);
       break;
 
     case MENU_LAYOUT_NODE_PASSTHROUGH:
@@ -2195,7 +2226,7 @@ gmenu_tree_resolve_files (GMenuTree      *tree,
         {
           MenuLayoutNode *next = menu_layout_node_get_next (child);
 
-          gmenu_tree_resolve_files (tree, child);
+          gmenu_tree_resolve_files (tree, loaded_menu_files, child);
 
           child = next;
         }
@@ -2615,7 +2646,8 @@ gmenu_tree_execute_moves (GMenuTree      *tree,
 static void
 gmenu_tree_load_layout (GMenuTree *tree)
 {
-  GError *error;
+  GHashTable *loaded_menu_files;
+  GError     *error;
 
   if (tree->layout)
     return;
@@ -2636,7 +2668,10 @@ gmenu_tree_load_layout (GMenuTree *tree)
       return;
     }
 
-  gmenu_tree_resolve_files (tree, tree->layout);
+  loaded_menu_files = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
+  gmenu_tree_resolve_files (tree, loaded_menu_files, tree->layout);
+  g_hash_table_destroy (loaded_menu_files);
+
   gmenu_tree_strip_duplicate_children (tree, tree->layout);
   gmenu_tree_execute_moves (tree, tree->layout, NULL);
 }

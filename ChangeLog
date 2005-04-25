@@ -1,5 +1,15 @@
 2005-04-25  Mark McLoughlin  <mark@skynet.ie>
 
+	Fix for bug #170704 - recursive MergeFile inclusion
+	crashes gnome.
+	
+	* libmenu/gmenu-tree.c: pass around a hash table
+	of already loaded menu files so we can detect when
+	we're loading one we've already loaded and refuse
+	to load it.
+
+2005-04-25  Mark McLoughlin  <mark@skynet.ie>
+
 	Update for latest changes to behaviour of <Move> in the
 	menu specification.
 
