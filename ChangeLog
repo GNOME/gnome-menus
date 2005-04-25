@@ -1,3 +1,11 @@
+2005-04-25  Mark McLoughlin  <mark@skynet.ie>
+
+	Update for latest changes to behaviour of <Move> in the
+	menu specification.
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_strip_duplicate_children):
+	Don't bother trying to remove duplicate <Move>s
+
 2005-04-22  Mark McLoughlin  <mark@skynet.ie>
 
 	Use FAM directly instead of gnome-vfs and ensure that

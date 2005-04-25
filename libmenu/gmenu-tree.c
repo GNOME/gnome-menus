@@ -2295,25 +2295,6 @@ node_menu_compare_func (const void *a,
                              menu_layout_node_menu_get_name (node_b));
 }
 
-/* Sort to remove move nodes with the same "old" field */
-static int
-node_move_compare_func (const void *a,
-                        const void *b)
-{
-  MenuLayoutNode *node_a = (MenuLayoutNode*) a;
-  MenuLayoutNode *node_b = (MenuLayoutNode*) b;
-  MenuLayoutNode *parent_a = menu_layout_node_get_parent (node_a);
-  MenuLayoutNode *parent_b = menu_layout_node_get_parent (node_b);
-
-  if (parent_a < parent_b)
-    return -1;
-  else if (parent_a > parent_b)
-    return 1;
-  else
-    return null_safe_strcmp (menu_layout_node_move_get_old (node_a),
-                             menu_layout_node_move_get_old (node_b));
-}
-
 static void
 gmenu_tree_strip_duplicate_children (GMenuTree      *tree,
 				     MenuLayoutNode *layout)
@@ -2321,7 +2302,6 @@ gmenu_tree_strip_duplicate_children (GMenuTree      *tree,
   MenuLayoutNode *child;
   GSList         *simple_nodes;
   GSList         *menu_layout_nodes;
-  GSList         *move_nodes;
   GSList         *prev;
   GSList         *tmp;
 
@@ -2332,7 +2312,6 @@ gmenu_tree_strip_duplicate_children (GMenuTree      *tree,
 
   simple_nodes = NULL;
   menu_layout_nodes = NULL;
-  move_nodes = NULL;
 
   child = menu_layout_node_get_children (layout);
   while (child != NULL)
@@ -2351,11 +2330,6 @@ gmenu_tree_strip_duplicate_children (GMenuTree      *tree,
            */
         case MENU_LAYOUT_NODE_MENU:
           menu_layout_nodes = g_slist_prepend (menu_layout_nodes, child);
-          break;
-
-          /* These have to be merged in a different more complicated way */
-        case MENU_LAYOUT_NODE_MOVE:
-          move_nodes = g_slist_prepend (move_nodes, child);
           break;
 
         default:
@@ -2437,49 +2411,6 @@ gmenu_tree_strip_duplicate_children (GMenuTree      *tree,
 
   g_slist_free (menu_layout_nodes);
   menu_layout_nodes = NULL;
-
-  /* Remove duplicate <Move> nodes */
-
-  if (move_nodes != NULL)
-    {
-      /* stable sort the move nodes by <Old> (the sort includes the
-       * parents of the nodes in the comparison)
-       */
-      move_nodes = g_slist_sort (move_nodes,
-                                 node_move_compare_func);
-
-      prev = NULL;
-      tmp = move_nodes;
-      while (tmp != NULL)
-        {
-	  GSList *next = tmp->next;
-
-          if (prev)
-            {
-              MenuLayoutNode *p = prev->data;
-              MenuLayoutNode *n = tmp->data;
-
-              if (node_move_compare_func (p, n) == 0)
-                {
-                  /* Same <Old>, so delete the first one */
-                  menu_verbose ("Removing duplicate move old = %s new = %s leaving old = %s new = %s\n",
-                                menu_layout_node_move_get_old (n),
-                                menu_layout_node_move_get_new (n),
-                                menu_layout_node_move_get_old (p),
-                                menu_layout_node_move_get_new (p));
-                  menu_layout_node_unlink (n);
-		  move_nodes = g_slist_delete_link (move_nodes, tmp);
-		  tmp = prev;
-                }
-            }
-
-          prev = tmp;
-          tmp = next;
-        }
-
-      g_slist_free (move_nodes);
-      move_nodes = NULL;
-    }
 
   /* Recursively clean up all children */
   child = menu_layout_node_get_children (layout);
