@@ -1,4 +1,16 @@
 2005-04-26  Mark McLoughlin  <mark@skynet.ie>
+
+	More correctly detect recursive MergeFile inclusion.
+
+	* libmenu/gmenu-tree.c:
+	(load_merge_file): remove the menu file from
+	the loaded_menu_files hash as soon as we've
+	recursed over it.
+	(gmenu_tree_load_layout): insert the root menu
+	file to the loaded_menu_files hash and don't
+	strdup() the path when inserting.
+
+2005-04-26  Mark McLoughlin  <mark@skynet.ie>
 	
 	* libmenu/menu-util.c:
 	(menu_debug_print_layout): add support for printing

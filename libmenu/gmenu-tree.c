@@ -1571,9 +1571,7 @@ load_merge_file (GMenuTree      *tree,
 
   retval = TRUE;
 
-  g_hash_table_insert (loaded_menu_files,
-		       g_strdup (canonical),
-		       GUINT_TO_POINTER (TRUE));
+  g_hash_table_insert (loaded_menu_files, (char *) canonical, GUINT_TO_POINTER (TRUE));
 
   if (add_monitor)
     gmenu_tree_add_menu_file_monitor (tree,
@@ -1581,6 +1579,8 @@ load_merge_file (GMenuTree      *tree,
 				      MENU_FILE_MONITOR_FILE);
 
   merge_resolved_children (tree, loaded_menu_files, where, to_merge);
+
+  g_hash_table_remove (loaded_menu_files, canonical);
 
   menu_layout_node_unref (to_merge);
 
@@ -2668,7 +2668,8 @@ gmenu_tree_load_layout (GMenuTree *tree)
       return;
     }
 
-  loaded_menu_files = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
+  loaded_menu_files = g_hash_table_new (g_str_hash, g_str_equal);
+  g_hash_table_insert (loaded_menu_files, tree->canonical_path, GUINT_TO_POINTER (TRUE));
   gmenu_tree_resolve_files (tree, loaded_menu_files, tree->layout);
   g_hash_table_destroy (loaded_menu_files);
 
