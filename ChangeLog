@@ -1,3 +1,10 @@
+2005-04-26  Mark McLoughlin  <mark@skynet.ie>
+	
+	* libmenu/menu-util.c:
+	(menu_debug_print_layout): add support for printing
+	<Layout>, <DefaultLayout>, <Menuname>, <Separator>
+	and <Merge> nodes.
+
 2005-04-25  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix for bug #170704 - recursive MergeFile inclusion

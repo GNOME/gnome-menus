@@ -175,6 +175,88 @@ append_simple_with_attr (MenuLayoutNode *node,
 }
 
 static void
+append_layout (MenuLayoutNode   *node,
+	       int               depth,
+	       const char       *node_name,
+	       MenuLayoutValues *layout_values,
+	       GString          *str)
+{
+  const char *content;
+
+  append_spaces (str, depth);
+
+  if ((content = menu_layout_node_get_content (node)))
+    {
+      char *escaped;
+
+      escaped = g_markup_escape_text (content, -1);
+
+      g_string_append_printf (str,
+			      "<%s show_empty=\"%s\" inline=\"%s\" inline_header=\"%s\""
+			         " inline_alias=\"%s\" inline_limit=\"%d\">%s</%s>\n",
+			      node_name,
+			      layout_values->show_empty    ? "true" : "false",
+			      layout_values->inline_menus  ? "true" : "false",
+			      layout_values->inline_header ? "true" : "false",
+			      layout_values->inline_alias  ? "true" : "false",
+			      layout_values->inline_limit,
+			      escaped,
+			      node_name);
+
+      g_free (escaped);
+    }
+  else
+    {
+      g_string_append_printf (str,
+			      "<%s show_empty=\"%s\" inline=\"%s\" inline_header=\"%s\""
+			         " inline_alias=\"%s\" inline_limit=\"%d\"/>\n",
+			      node_name,
+			      layout_values->show_empty    ? "true" : "false",
+			      layout_values->inline_menus  ? "true" : "false",
+			      layout_values->inline_header ? "true" : "false",
+			      layout_values->inline_alias  ? "true" : "false",
+			      layout_values->inline_limit);
+    }
+}
+
+static void
+append_merge (MenuLayoutNode      *node,
+	      int                  depth,
+	      const char          *node_name,
+	      MenuLayoutMergeType  merge_type,
+	      GString             *str)
+{
+  const char *merge_type_str;
+
+  merge_type_str = NULL;
+
+  switch (merge_type)
+    {
+    case MENU_LAYOUT_MERGE_NONE:
+      merge_type_str = "none";
+      break;
+
+    case MENU_LAYOUT_MERGE_MENUS:
+      merge_type_str = "menus";
+      break;
+      
+    case MENU_LAYOUT_MERGE_FILES:
+      merge_type_str = "files";
+      break;
+      
+    case MENU_LAYOUT_MERGE_ALL:
+      merge_type_str = "all";
+      break;
+
+    default:
+      g_assert_not_reached ();
+      break;
+    }
+      
+  append_simple_with_attr (node, depth, node_name, "type", merge_type_str, str);
+}
+
+static void
 append_simple (MenuLayoutNode *node,
                int             depth,
                const char     *node_name,
@@ -226,6 +308,8 @@ append_to_string (MenuLayoutNode *node,
                   int             depth,
                   GString        *str)
 {
+  MenuLayoutValues layout_values;
+
   switch (menu_layout_node_get_type (node))
     {
     case MENU_LAYOUT_NODE_ROOT:
@@ -360,10 +444,33 @@ append_to_string (MenuLayoutNode *node,
       break;
 
     case MENU_LAYOUT_NODE_LAYOUT:
+      append_container (node, onelevel, depth, "Layout", str);
+      break;
+
     case MENU_LAYOUT_NODE_DEFAULT_LAYOUT:
+      menu_layout_node_default_layout_get_values (node, &layout_values);
+      append_layout (node, depth, "DefaultLayout", &layout_values, str);
+      break;
+
     case MENU_LAYOUT_NODE_MENUNAME:
+      menu_layout_node_menuname_get_values (node, &layout_values);
+      append_layout (node, depth, "MenuName", &layout_values, str);
+      break;
+
     case MENU_LAYOUT_NODE_SEPARATOR:
+      append_simple (node, depth, "Name", str);
+      break;
+
     case MENU_LAYOUT_NODE_MERGE:
+      append_merge (node,
+		    depth,
+		    "Merge",
+		    menu_layout_node_merge_get_type (node),
+		    str);
+      break;
+
+    default:
+      g_assert_not_reached ();
       break;
     }
 }
