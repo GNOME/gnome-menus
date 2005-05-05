@@ -99,7 +99,15 @@ struct GMenuTreeDirectory
   GSList           *contents;
 
   guint only_unallocated : 1;
+  guint is_root : 1;
 };
+
+typedef struct
+{
+  GMenuTreeDirectory directory;
+
+  GMenuTree *tree;
+} GMenuTreeDirectoryRoot;
 
 struct GMenuTreeEntry
 {
@@ -703,6 +711,14 @@ gmenu_tree_get_user_data (GMenuTree *tree)
   return tree->user_data;
 }
 
+const char *
+gmenu_tree_get_menu_file (GMenuTree *tree)
+{
+  g_return_val_if_fail (tree != NULL, NULL);
+
+  return tree->type == GMENU_TREE_BASENAME ? tree->basename : tree->absolute_path;
+}
+
 GMenuTreeDirectory *
 gmenu_tree_get_root_directory (GMenuTree *tree)
 {
@@ -961,6 +977,24 @@ gmenu_tree_directory_get_menu_id (GMenuTreeDirectory *directory)
   return directory->name;
 }
 
+GMenuTree *
+gmenu_tree_directory_get_tree (GMenuTreeDirectory *directory)
+{
+  GMenuTreeDirectoryRoot *root;
+
+  g_return_val_if_fail (directory != NULL, NULL);
+
+  while (GMENU_TREE_ITEM (directory)->parent != NULL)
+    directory = GMENU_TREE_DIRECTORY (GMENU_TREE_ITEM (directory)->parent);
+
+  if (!directory->is_root)
+    return NULL;
+
+  root = (GMenuTreeDirectoryRoot *) directory;
+
+  return gmenu_tree_ref (root->tree);
+}
+
 static void
 append_directory_path (GMenuTreeDirectory *directory,
 		       GString            *path)
@@ -1079,11 +1113,30 @@ gmenu_tree_alias_get_item (GMenuTreeAlias *alias)
 
 static GMenuTreeDirectory *
 gmenu_tree_directory_new (GMenuTreeDirectory *parent,
-			  const char         *name)
+			  const char         *name,
+			  gboolean            is_root,
+			  GMenuTree          *tree)
 {
   GMenuTreeDirectory *retval;
 
-  retval = g_new0 (GMenuTreeDirectory, 1);
+  if (!is_root)
+    {
+      retval = g_new0 (GMenuTreeDirectory, 1);
+    }
+  else
+    {
+      GMenuTreeDirectoryRoot *root;
+
+      g_assert (tree != NULL);
+
+      root       = g_new0 (GMenuTreeDirectoryRoot, 1);
+      root->tree = gmenu_tree_ref (tree);
+
+      retval = GMENU_TREE_DIRECTORY (root);
+
+      retval->is_root = TRUE;
+    }
+
 
   retval->item.type     = GMENU_TREE_ITEM_DIRECTORY;
   retval->item.parent   = parent;
@@ -1119,6 +1172,14 @@ static void
 gmenu_tree_directory_finalize (GMenuTreeDirectory *directory)
 {
   g_assert (directory->item.refcount == 0);
+
+  if (directory->is_root)
+    {
+      GMenuTreeDirectoryRoot *root = (GMenuTreeDirectoryRoot *) directory;
+
+      gmenu_tree_unref (root->tree);
+      root->tree = NULL;
+    }
 
   g_slist_foreach (directory->contents,
 		   (GFunc) gmenu_tree_item_unref_and_unset_parent,
@@ -2916,8 +2977,8 @@ collect_layout_info (MenuLayoutNode  *layout,
 }
 
 static void
-entries_listify_foreach (const char        *desktop_file_id,
-                         DesktopEntry      *desktop_entry,
+entries_listify_foreach (const char         *desktop_file_id,
+                         DesktopEntry       *desktop_entry,
                          GMenuTreeDirectory *directory)
 {
   directory->entries =
@@ -2929,8 +2990,8 @@ entries_listify_foreach (const char        *desktop_file_id,
 }
 
 static void
-excluded_entries_listify_foreach (const char        *desktop_file_id,
-				  DesktopEntry      *desktop_entry,
+excluded_entries_listify_foreach (const char         *desktop_file_id,
+				  DesktopEntry       *desktop_entry,
 				  GMenuTreeDirectory *directory)
 {
   directory->entries =
@@ -2944,8 +3005,8 @@ excluded_entries_listify_foreach (const char        *desktop_file_id,
 static GMenuTreeDirectory *
 process_layout (GMenuTree          *tree,
                 GMenuTreeDirectory *parent,
-                MenuLayoutNode    *layout,
-                DesktopEntrySet   *allocated)
+                MenuLayoutNode     *layout,
+                DesktopEntrySet    *allocated)
 {
   MenuLayoutNode     *layout_iter;
   GMenuTreeDirectory *directory;
@@ -2961,7 +3022,9 @@ process_layout (GMenuTree          *tree,
   g_assert (menu_layout_node_menu_get_name (layout) != NULL);
 
   directory = gmenu_tree_directory_new (parent,
-                                       menu_layout_node_menu_get_name (layout));
+					menu_layout_node_menu_get_name (layout),
+					parent == NULL,
+					tree);
 
   menu_verbose ("=== Menu name = %s ===\n", directory->name);
 

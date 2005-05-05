@@ -64,7 +64,7 @@ typedef enum
   GMENU_TREE_FLAGS_MASK             = 0x03
 } GMenuTreeFlags;
 
-GMenuTree *gmenu_tree_lookup (const char    *menu_file,
+GMenuTree *gmenu_tree_lookup (const char     *menu_file,
 			      GMenuTreeFlags  flags);
 
 GMenuTree *gmenu_tree_ref   (GMenuTree *tree);
@@ -75,9 +75,11 @@ void     gmenu_tree_set_user_data (GMenuTree       *tree,
 				   GDestroyNotify  dnotify);
 gpointer gmenu_tree_get_user_data (GMenuTree       *tree);
 
-GMenuTreeDirectory *gmenu_tree_get_root_directory      (GMenuTree   *tree);
-GMenuTreeDirectory *gmenu_tree_get_directory_from_path (GMenuTree   *tree,
-							const char  *path);
+const char         *gmenu_tree_get_menu_file           (GMenuTree  *tree);
+GMenuTreeDirectory *gmenu_tree_get_root_directory      (GMenuTree  *tree);
+GMenuTreeDirectory *gmenu_tree_get_directory_from_path (GMenuTree  *tree,
+							const char *path);
+
 
 
 gpointer gmenu_tree_item_ref   (gpointer item);
@@ -97,6 +99,7 @@ const char *gmenu_tree_directory_get_name     (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_comment  (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_icon     (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_menu_id  (GMenuTreeDirectory *directory);
+GMenuTree  *gmenu_tree_directory_get_tree     (GMenuTreeDirectory *directory);
 
 char *gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
 				      GMenuTreeEntry     *entry);

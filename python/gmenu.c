@@ -376,6 +376,36 @@ pygmenu_tree_directory_get_menu_id (PyObject *self,
 }
 
 static PyObject *
+pygmenu_tree_directory_get_tree (PyObject *self,
+				 PyObject *args)
+{
+  PyGMenuTreeDirectory *directory;
+  GMenuTree            *tree;
+  PyGMenuTree          *retval;
+
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Item.get_tree"))
+	return NULL;
+    }
+
+  directory = (PyGMenuTreeDirectory *) self;
+
+  tree = gmenu_tree_directory_get_tree (GMENU_TREE_DIRECTORY (directory->item));
+  if (tree == NULL)
+    {
+      Py_INCREF (Py_None);
+      return Py_None;
+    }
+
+  retval = pygmenu_tree_wrap (tree);
+
+  gmenu_tree_unref (tree);
+
+  return (PyObject *) retval;
+}
+
+static PyObject *
 pygmenu_tree_directory_make_path (PyObject *self,
 				  PyObject *args)
 {
@@ -416,14 +446,15 @@ pygmenu_tree_directory_getattro (PyGMenuTreeDirectory *self,
 
       if (!strcmp (attr, "__members__"))
 	{
-	  return Py_BuildValue ("[sssss]",
+	  return Py_BuildValue ("[ssssssss]",
 				"type",
 				"parent",
 				"contents",
 				"name",
 				"comment",
 				"icon",
-				"menu_id");
+				"menu_id",
+				"tree");
 	}
       else if (!strcmp (attr, "type"))
 	{
@@ -453,6 +484,10 @@ pygmenu_tree_directory_getattro (PyGMenuTreeDirectory *self,
 	{
 	  return pygmenu_tree_directory_get_menu_id ((PyObject *) self, NULL);
 	}
+      else if (!strcmp (attr, "tree"))
+	{
+	  return pygmenu_tree_directory_get_tree ((PyObject *) self, NULL);
+	}
     }
 
   return PyObject_GenericGetAttr ((PyObject *) self, py_attr);
@@ -464,6 +499,8 @@ static struct PyMethodDef pygmenu_tree_directory_methods[] =
   { "get_name",     pygmenu_tree_directory_get_name,     METH_VARARGS },
   { "get_comment",  pygmenu_tree_directory_get_comment,  METH_VARARGS },
   { "get_icon",     pygmenu_tree_directory_get_icon,     METH_VARARGS },
+  { "get_menu_id",  pygmenu_tree_directory_get_menu_id,  METH_VARARGS },
+  { "get_tree",     pygmenu_tree_directory_get_tree,     METH_VARARGS },
   { "make_path",    pygmenu_tree_directory_make_path,    METH_VARARGS },
   { NULL,           NULL,                                0            }
 };
@@ -1245,6 +1282,31 @@ pygmenu_tree_alias_wrap (GMenuTreeAlias *alias)
 }
 
 static PyObject *
+pygmenu_tree_get_menu_file (PyObject *self,
+			    PyObject *args)
+{
+  PyGMenuTree *tree;
+  const char  *menu_file;
+
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Tree.get_menu_file"))
+	return NULL;
+    }
+
+  tree = (PyGMenuTree *) self;
+
+  menu_file = gmenu_tree_get_menu_file (tree->tree);
+  if (menu_file == NULL)
+    {
+      Py_INCREF (Py_None);
+      return Py_None;
+    }
+
+  return PyString_FromString (menu_file);
+}
+
+static PyObject *
 pygmenu_tree_get_root_directory (PyObject *self,
 				 PyObject *args)
 {
@@ -1456,11 +1518,15 @@ pygmenu_tree_getattro (PyGMenuTreeDirectory *self,
 
       if (!strcmp (attr, "__members__"))
 	{
-	  return Py_BuildValue ("[s]", "root");
+	  return Py_BuildValue ("[ss]", "root", "menu_file");
 	}
       else if (!strcmp (attr, "root"))
 	{
 	  return pygmenu_tree_get_root_directory ((PyObject *) self, NULL);
+	}
+      else if (!strcmp (attr, "menu_file"))
+	{
+	  return pygmenu_tree_get_menu_file ((PyObject *) self, NULL);
 	}
     }
 
@@ -1469,6 +1535,7 @@ pygmenu_tree_getattro (PyGMenuTreeDirectory *self,
 
 static struct PyMethodDef pygmenu_tree_methods[] =
 {
+  { "get_menu_file",           pygmenu_tree_get_menu_file,           METH_VARARGS },
   { "get_root_directory",      pygmenu_tree_get_root_directory,      METH_VARARGS },
   { "get_directory_from_path", pygmenu_tree_get_directory_from_path, METH_VARARGS },
   { "add_monitor",             pygmenu_tree_add_monitor,             METH_VARARGS },

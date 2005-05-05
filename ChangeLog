@@ -1,5 +1,26 @@
 2005-05-05  Mark McLoughlin  <mark@skynet.ie>
 
+	Add gmenu_tree_directory_get_tree() and gmenu_tree_get_menu_file()
+	as per bug #166321.
+
+	* libmenu/gmenu-tree.[ch]:
+	(gmenu_tree_get_menu_file): simple accessor to the menu_file
+	passed to gmenu_tree_lookup ().
+	(gmenu_tree_directory_get_tree): iterate back up through the
+	tree until we find the root and return a ref on the associated
+	tree.
+	(gmenu_tree_directory_new),
+	(gmenu_tree_directory_finalize): add a MenuTreeDirectoryRoot
+	subclass of MenuTreeDirectory and keep a ref on the parent.
+	
+	* python/gmenu.c:
+	(pygmenu_tree_directory_get_tree): impl gmenu.Directory.get_tree()
+	(pygmenu_tree_directory_getattro): impl gmenu.Directory.tree
+	(pygmenu_tree_get_menu_file): impl gmenu.Tree.get_menu_file()
+	(pygmenu_tree_getattro): impl gmenu.Tree.menu_file
+
+2005-05-05  Mark McLoughlin  <mark@skynet.ie>
+
 	* libmenu/desktop-entries.c: (desktop_entry_add_legacy_category):
 	Fix off-by-one error thrown up by valgrind.
 
