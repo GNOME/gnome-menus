@@ -136,6 +136,8 @@ emit_events_in_idle (void)
 
       event->event = MENU_MONITOR_EVENT_INVALID;
 
+      g_free (event);
+
       tmp = tmp->next;
     }
 
@@ -168,7 +170,7 @@ queue_fam_event (MenuMonitor *monitor,
   tmp = monitor->pending_events;
   while (tmp != NULL)
     {
-      MenuMonitorEventInfo *event = tmp->data;
+      event = tmp->data;
 
       if (strcmp (event->path, path) == 0)
 	break;
@@ -261,6 +263,9 @@ debug_event (FAMEvent *event)
 static gboolean
 process_fam_events (void)
 {
+  if (failed_to_connect)
+    return FALSE;
+
   while (FAMPending (&fam_connection))
     {
       FAMEvent event;
@@ -387,6 +392,17 @@ register_monitor_with_fam (MenuMonitor *monitor)
 #endif /* HAVE_FAM */
 }
 
+static void
+unregister_monitor_with_fam (MenuMonitor *monitor)
+{
+#ifdef HAVE_FAM
+  if (failed_to_connect)
+    return;
+
+  FAMCancelMonitor (&fam_connection, &monitor->request);
+#endif /* HAVE_FAM */
+}
+
 static inline char *
 get_registry_key (const char *path,
 		  gboolean    is_directory)
@@ -494,6 +510,8 @@ menu_monitor_unref (MenuMonitor *monitor)
   registry_key = get_registry_key (monitor->path, monitor->is_directory);
   g_hash_table_remove (monitors_registry, registry_key);
   g_free (registry_key);
+
+  unregister_monitor_with_fam (monitor);
 
   g_slist_foreach (monitor->notifies, (GFunc) g_free, NULL);
   g_slist_free (monitor->notifies);

@@ -1,3 +1,19 @@
+2005-05-05  Mark McLoughlin  <mark@skynet.ie>
+
+	Seems to fix some memory corruption being triggered
+	in gmenu-simple-editor.
+
+	* libmenu/menu-monitor.c:
+	(emit_events_in_idle): free the MenuMonitorEvenInfo when
+	we're done with it.
+	(queue_fam_event): don't shadow the existing "event"
+	variable.
+	(process_fam_events): don't try and process events if
+	we've had an error on the connection.
+	(unregister_monitor_with_fam),
+	(menu_monitor_unref): call FAMCancelMonitor() when we're
+	finalizing the monitor.
+
 2005-04-26  Mark McLoughlin  <mark@skynet.ie>
 
 	More correctly detect recursive MergeFile inclusion.
