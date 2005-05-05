@@ -1,5 +1,10 @@
 2005-05-05  Mark McLoughlin  <mark@skynet.ie>
 
+	* libmenu/desktop-entries.c: (desktop_entry_add_legacy_category):
+	Fix off-by-one error thrown up by valgrind.
+
+2005-05-05  Mark McLoughlin  <mark@skynet.ie>
+
 	Seems to fix some memory corruption being triggered
 	in gmenu-simple-editor.
 

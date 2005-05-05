@@ -554,7 +554,7 @@ desktop_entry_add_legacy_category (DesktopEntry *entry)
       for (; entry->categories[i]; i++);
     }
 
-  categories = g_new0 (GQuark, i + 1);
+  categories = g_new0 (GQuark, i + 2);
 
   i = 0;
   if (entry->categories != NULL)
