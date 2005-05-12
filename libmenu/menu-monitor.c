@@ -163,7 +163,8 @@ queue_fam_event (MenuMonitor *monitor,
   else
     {
       path = freeme = g_build_filename (monitor->path,
-					fam_event->filename);
+					fam_event->filename,
+					NULL);
     }
 
   event = NULL;

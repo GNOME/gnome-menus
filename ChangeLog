@@ -1,3 +1,10 @@
+2005-05-12  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #303927
+
+	* libmenu/menu-monitor.c: (queue_fam_event): NULL-terminate
+	the arguments to g_build_filename()
+
 2005-05-05  Mark McLoughlin  <mark@skynet.ie>
 
 	Add gmenu_tree_directory_get_tree() and gmenu_tree_get_menu_file()
