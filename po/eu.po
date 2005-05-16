@@ -1,132 +1,159 @@
-# translation of gnome-menus.HEAD.eu.po to 
-# translation of gnome-menus.HEAD.eu.po to
-# translation of gnome-menus.HEAD.po to Euskara
+# translation of gnome-menus.HEAD.po Basque
 # This file is distributed under the same license as the gnome-menus package.
 # Copyright (C) 2004 Mikel Olasagasti.
-# Mikel Olasagasti <hey_neken@mundurat.net>, 2004.
-#
+# Mikel Olasagasti <hey_neken@mundurat.net>, 2004, 2005.
+# Iñaki Larrañaga  <dooteo@euskalgnu.org>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus.HEAD.eu\n"
+"Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-10 17:49+0000\n"
-"PO-Revision-Date: 2004-12-08 00:38+0100\n"
-"Last-Translator: \n"
-"Language-Team:  <en@li.org>\n"
+"POT-Creation-Date: 2005-05-16 17:14+0200\n"
+"PO-Revision-Date: 2005-05-16 17:19+0200\n"
+"Last-Translator:  Iñaki Larrañaga  <dooteo@euskalgnu.org>\n"
+"Language-Team:  <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: desktop-directories/Accessibility.directory.in.h:1
-#: desktop-directories/Settings-Accessibility.directory.in.h:1
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
 msgstr "Erabilgarritasuna"
 
-#: desktop-directories/Accessibility.directory.in.h:2
+#: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
 msgstr "Erabilgarritasun-ezarpenak"
 
-#: desktop-directories/Accessories.directory.in.h:1
+#: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
 msgstr "Gehigarriak"
 
-#: desktop-directories/Accessories.directory.in.h:2
+#: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
 msgstr "Mahaigainaren gehigarriak"
 
-#: desktop-directories/Applications.directory.in.h:1
+#: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Aplikazioak"
 
-#: desktop-directories/Development.directory.in.h:1
+#: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "Programazioa"
 
-#: desktop-directories/Development.directory.in.h:2
+#: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
 msgstr "Softwarea garatzeko tresnak"
 
-#: desktop-directories/Edutainment.directory.in.h:1
+#: ../desktop-directories/Edutainment.directory.in.h:1
 msgid "Edutainment"
 msgstr "Hezkuntza"
 
-#: desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
 msgstr "Jokoak"
 
-#: desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Jokoak eta denbora-pasak"
 
-#: desktop-directories/Graphics.directory.in.h:1
+#: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
 msgstr "Irudiak"
 
-#: desktop-directories/Graphics.directory.in.h:2
+#: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
 msgstr "Irudi aplikazioak"
 
-#: desktop-directories/Internet.directory.in.h:1
+#: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
 
-#: desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Interneteko programak (web arakatzaileak eta posta bezeroak adib.)"
 
-#: desktop-directories/Multimedia.directory.in.h:1
+#: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
 msgstr "Multimediaren menua"
 
-#: desktop-directories/Multimedia.directory.in.h:2
+#: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Soinua eta bideoa"
 
-#: desktop-directories/Office.directory.in.h:1
+#: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
 msgstr "Bulegoa"
 
-#: desktop-directories/Office.directory.in.h:2
+#: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Bulegorako aplikazioak"
 
-#: desktop-directories/Other.directory.in.h:1
+#: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
 msgstr "Sailkatu ezin diren aplikazioak"
 
-#: desktop-directories/Other.directory.in.h:2
+#: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
 msgstr "Bestelakoak"
 
-#: desktop-directories/Settings-Accessibility.directory.in.h:2
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Erabilgarritasuneko hobespenak"
 
-#: desktop-directories/Settings.directory.in.h:1
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Hobespen eta ezarpen pertsonalak"
 
-#: desktop-directories/Settings.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Hobespenak"
 
-#: desktop-directories/System-Settings.directory.in.h:1
+#: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr ""
+msgstr "Sistema-konfigurazioa"
 
-#: desktop-directories/System-Settings.directory.in.h:2
+#: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
 msgstr "Aldatu sistema osoko ezarpenak (erabiltzaile guztiengan du eragina)"
 
-#: desktop-directories/System-Tools.directory.in.h:1
+#: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "Sistemaren tresnak"
 
-#: desktop-directories/System-Tools.directory.in.h:2
+#: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Sistemaren konfigurazioa eta monitorizazioa"
 
-#~ msgid "System Settings"
-#~ msgstr "Sistemaren ezarpenak"
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "Editatu menuak"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "_Aplikazioak:"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "_Lehenetsiak"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "_Menuak:"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+msgid "Name"
+msgstr "Izena"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Hide"
+msgstr "Ezkutatu"
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:43
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr "Ezin izan da etxeko direktorioa aurkitu: ez dago /etcpasswd-en ezarrita, ezta ere inguruneko $HOME aldagaian"
+
