@@ -1,4 +1,47 @@
 ==============
+Version 2.11.1
+==============
+
+  Features
+
+	* Simple menu editor (Mark)
+	* Python bindings (Mark)
+	* Support for <Layout> and <DefaultLayout> (Mark, Frederic Crozat)
+        * Use FAM directly for monitoring rather than gnome-vfs (Mark)
+	* Add API for retaining empty sub-menus and excluded items in
+	  the GMenuTree (Mark, Christian Neumair)
+        * Add gmenu_tree_directory_get_menu_id() API (Mark)
+        * Add gmenu_tree_directory_get_tree() and gmenu_tree_get_menu_file()
+          API (Mark)
+	* Namespace the API - i.e. MenuTree -> GMenuTree (Mark)
+
+  Fixes
+
+	* Plug major memory leak when the menu is reloaded (Mark)
+        * Fix "recursive <MergeFile> inclusion" crash (Mark)
+        * Fix problem where you could end up with identical items in
+          the same menu (Mark)
+	* Fix issue where you could end up with more than one menu
+          with the same name (Mark)
+        * Update for changes to <Move> behaviour in spec (Mark)
+        * Fix off-by-one errors shown up in valgrind (Mark)
+	* Remove <LegacyDir>s from default menu (Mark)
+
+   Translators
+
+	* Vladimir "Kaladan" Petkov (bg)
+	* Miloslav Trmac (cs)
+	* Hendrik Brandt (de)
+	* Adam Weinberger (en_CA)
+	* David Lodge (en_GB)
+	* Francisco Javier F. Serrador (es)
+	* Priit Laes (et)
+	* Iñaki Larrañaga (eu)
+	* Takeshi AIHANA (ja)
+	* Steve Murphy (rw)
+	* Canonical Ltd (xh)
+
+==============
 Version 2.10.1
 ==============
 
