@@ -977,6 +977,20 @@ gmenu_tree_directory_get_menu_id (GMenuTreeDirectory *directory)
   return directory->name;
 }
 
+static void
+gmenu_tree_directory_set_tree (GMenuTreeDirectory *directory,
+			       GMenuTree          *tree)
+{
+  GMenuTreeDirectoryRoot *root;
+
+  g_assert (directory != NULL);
+  g_assert (directory->is_root);
+
+  root = (GMenuTreeDirectoryRoot *) directory;
+
+  root->tree = tree;
+}
+
 GMenuTree *
 gmenu_tree_directory_get_tree (GMenuTreeDirectory *directory)
 {
@@ -1114,8 +1128,7 @@ gmenu_tree_alias_get_item (GMenuTreeAlias *alias)
 static GMenuTreeDirectory *
 gmenu_tree_directory_new (GMenuTreeDirectory *parent,
 			  const char         *name,
-			  gboolean            is_root,
-			  GMenuTree          *tree)
+			  gboolean            is_root)
 {
   GMenuTreeDirectory *retval;
 
@@ -1127,10 +1140,7 @@ gmenu_tree_directory_new (GMenuTreeDirectory *parent,
     {
       GMenuTreeDirectoryRoot *root;
 
-      g_assert (tree != NULL);
-
-      root       = g_new0 (GMenuTreeDirectoryRoot, 1);
-      root->tree = gmenu_tree_ref (tree);
+      root = g_new0 (GMenuTreeDirectoryRoot, 1);
 
       retval = GMENU_TREE_DIRECTORY (root);
 
@@ -1172,14 +1182,6 @@ static void
 gmenu_tree_directory_finalize (GMenuTreeDirectory *directory)
 {
   g_assert (directory->item.refcount == 0);
-
-  if (directory->is_root)
-    {
-      GMenuTreeDirectoryRoot *root = (GMenuTreeDirectoryRoot *) directory;
-
-      gmenu_tree_unref (root->tree);
-      root->tree = NULL;
-    }
 
   g_slist_foreach (directory->contents,
 		   (GFunc) gmenu_tree_item_unref_and_unset_parent,
@@ -3023,8 +3025,7 @@ process_layout (GMenuTree          *tree,
 
   directory = gmenu_tree_directory_new (parent,
 					menu_layout_node_menu_get_name (layout),
-					parent == NULL,
-					tree);
+					parent == NULL);
 
   menu_verbose ("=== Menu name = %s ===\n", directory->name);
 
@@ -3790,6 +3791,8 @@ gmenu_tree_build_from_layout (GMenuTree *tree)
                                allocated);
   if (tree->root)
     {
+      gmenu_tree_directory_set_tree (tree->root, tree);
+
       process_only_unallocated (tree, tree->root, allocated);
 
       process_layout_info (tree, tree->root);
@@ -3807,6 +3810,7 @@ gmenu_tree_force_rebuild (GMenuTree *tree)
 {
   if (tree->root)
     {
+      gmenu_tree_directory_set_tree (tree->root, NULL);
       gmenu_tree_item_unref (tree->root);
       tree->root = NULL;
 

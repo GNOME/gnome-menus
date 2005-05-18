@@ -1,3 +1,20 @@
+2005-05-18  Mark McLoughlin  <mark@skynet.ie>
+	
+	* simple-editor/GMenuSimpleEditor/menufilewriter.py:
+	Create $XDG_CONFIG_HOME/menus if it doesn't exist.
+	
+2005-05-18  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix crasher in bug #304626
+
+	* libmenu/gmenu-tree.c:
+	(gmenu_tree_directory_set_tree): add helper function.
+	(gmenu_tree_directory_new): don't take a ref on the tree.
+	(gmenu_tree_directory_finalize): don't unref the tree.
+	(gmenu_tree_build_from_layout): set the tree on the root
+	directory here.
+	(gmenu_tree_force_rebuild): unset it here.
+
 2005-05-17  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.11.2

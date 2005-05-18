@@ -19,6 +19,7 @@
 #
 
 import os
+import errno
 import pwd
 import gobject
 import menutreemodel
@@ -52,6 +53,13 @@ def get_user_menu_file_path (menu_file):
     return os.path.join (config_dir, "menus", menu_file)
 
 def write_file (filename, contents):
+    dir = os.path.dirname (filename)
+    try:
+        os.makedirs (dir)
+    except os.error, (err, str):
+        if err != errno.EEXIST:
+            raise
+    
     temp = filename + ".new"
     try:
         f = file (temp, "w")
