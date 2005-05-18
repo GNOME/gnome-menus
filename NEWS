@@ -1,3 +1,12 @@
+================
+Version 2.11.1.1
+================
+
+  Fixes
+
+	* Fix crasher bug in libgnome-menu triggered by editor (Mark)
+	* Make the editor create $XDG_CONFIG_HOME/menus if it doesn't exist (Mark)
+
 ==============
 Version 2.11.1
 ==============

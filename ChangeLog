@@ -1,4 +1,8 @@
 2005-05-18  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.11.1.1.
+
+2005-05-18  Mark McLoughlin  <mark@skynet.ie>
 	
 	* simple-editor/GMenuSimpleEditor/menufilewriter.py:
 	Create $XDG_CONFIG_HOME/menus if it doesn't exist.
