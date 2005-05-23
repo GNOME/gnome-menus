@@ -112,7 +112,7 @@ class MenuEditorDialog:
         self.entries_list.get_selection ().set_mode (gtk.SELECTION_SINGLE)
         self.entries_list.set_headers_visible (True)
 
-        column = gtk.TreeViewColumn (_("Hide"))
+        column = gtk.TreeViewColumn (_("Show"))
         self.entries_list.append_column (column)
         
         cell = gtk.CellRendererToggle ()

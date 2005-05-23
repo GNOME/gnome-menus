@@ -1,3 +1,11 @@
+2005-05-22  Dennis Cranston  <dennis_cranston@yahoo.com>
+
+	* simple-editor/gmenu-simple-editor.glade:  HIGify
+	the widget spacing and shadow type.
+	
+	* simple-editor/GMenuSimpleEditor/maindialog.py:  
+	"Hide" -> "Show".
+	
 2005-05-18  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.11.1.1
