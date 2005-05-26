@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-04-28 21:44+0000\n"
-"PO-Revision-Date: 2005-04-29 07:57+0300\n"
+"POT-Creation-Date: 2005-05-25 05:47+0000\n"
+"PO-Revision-Date: 2005-05-26 08:08+0300\n"
 "Last-Translator: Priit Laes <amd@store20.com>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -147,10 +147,13 @@ msgid "Name"
 msgstr "Nimi"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Hide"
-msgstr "Peida"
+msgid "Show"
+msgstr "Vaade"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:43
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
 msgstr "Kodukausta ei suudeta leida: pole määratud /etc/passwd failis ega $HOME keskkonnamuutujas"
+
+#~ msgid "Hide"
+#~ msgstr "Peida"
 
