@@ -1,13 +1,15 @@
 # Gnome-menus eesti keele tõlge.
+# Estonian translation of Gnome-menus
 #
 # Copyright (C) 2005 Free Software Foundation, Inc.
-# This file is distributed under the same license as the Gnome package.
+# This file is distributed under the same license as the Gnome-menus package.
 #
 # Priit Laes <amd@store20.com>, 2005.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: gnome-et@linux.ee\n"
 "POT-Creation-Date: 2005-05-25 05:47+0000\n"
 "PO-Revision-Date: 2005-05-26 08:08+0300\n"
 "Last-Translator: Priit Laes <amd@store20.com>\n"
