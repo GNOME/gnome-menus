@@ -7,120 +7,152 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-07 22:54+0100\n"
-"PO-Revision-Date: 2004-11-29 20:13+0800\n"
+"POT-Creation-Date: 2005-05-28 05:50+0000\n"
+"PO-Revision-Date: 2005-05-28 16:46+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: desktop-directories/Accessibility.directory.in.h:1
-#: desktop-directories/Settings-Accessibility.directory.in.h:1
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
 msgstr "辅助功能"
 
-#: desktop-directories/Accessibility.directory.in.h:2
+#: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
 msgstr "辅助功能设置"
 
-#: desktop-directories/Accessories.directory.in.h:1
+#: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
 msgstr "附件"
 
-#: desktop-directories/Accessories.directory.in.h:2
+#: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
 msgstr "桌面附件"
 
-#: desktop-directories/Applications.directory.in.h:1
+#: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "应用程序"
 
-#: desktop-directories/Development.directory.in.h:1
+#: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "编程"
 
-#: desktop-directories/Development.directory.in.h:2
+#: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
 msgstr "软件开发工具"
 
-#: desktop-directories/Edutainment.directory.in.h:1
+#: ../desktop-directories/Edutainment.directory.in.h:1
 msgid "Edutainment"
 msgstr "娱教"
 
-#: desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
 msgstr "游戏"
 
-#: desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
 msgstr "游戏和休闲"
 
-#: desktop-directories/Graphics.directory.in.h:1
+#: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
 msgstr "图像"
 
-#: desktop-directories/Graphics.directory.in.h:2
+#: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
 msgstr "图像应用程序"
 
-#: desktop-directories/Internet.directory.in.h:1
+#: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
 
-#: desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "访问 Internet 所用的程序，如 Web 和电子邮件"
 
-#: desktop-directories/Multimedia.directory.in.h:1
+#: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
 msgstr "多媒体菜单"
 
-#: desktop-directories/Multimedia.directory.in.h:2
+#: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
 msgstr "影音"
 
-#: desktop-directories/Office.directory.in.h:1
+#: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
 msgstr "办公"
 
-#: desktop-directories/Office.directory.in.h:2
+#: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "办公应用程序"
 
-#: desktop-directories/Other.directory.in.h:1
+#: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
 msgstr "无法分入其它类别的应用程序"
 
-#: desktop-directories/Other.directory.in.h:2
+#: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
 msgstr "其它"
 
-#: desktop-directories/Settings-Accessibility.directory.in.h:2
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "辅助功能相关的首选项"
 
-#: desktop-directories/Settings.directory.in.h:1
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "个人首选项和设置"
 
-#: desktop-directories/Settings.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "首选项"
 
-#: desktop-directories/System-Settings.directory.in.h:1
+#: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "系统管理"
 
-#: desktop-directories/System-Settings.directory.in.h:2
+#: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
 msgstr "更改系统级设置(影响全部用户)"
 
-#: desktop-directories/System-Tools.directory.in.h:1
+#: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "系统工具"
 
-#: desktop-directories/System-Tools.directory.in.h:2
+#: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "系统配置和监视"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "编辑菜单"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "应用程序(_A)："
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "默认值(_D)"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "菜单(_M)："
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+msgid "Name"
+msgstr "名称"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr "显示"
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"找不到主目录：未在 /etc/passwd 中设定，也未在 $HOME 环境变量中设置"
 
