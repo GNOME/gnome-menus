@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-04-15 05:12+0000\n"
-"PO-Revision-Date: 2005-04-15 13:32+0200\n"
+"POT-Creation-Date: 2005-05-29 06:35+0000\n"
+"PO-Revision-Date: 2005-05-29 13:53+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -147,14 +147,19 @@ msgid "Name"
 msgstr "Název"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Hide"
-msgstr "Skrýt"
+msgid "Show"
+msgstr "Zobrazit"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:43
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Nemohu najít domovský adresář: nenastaveno v /etc/passwd a žádná hodnota $HOME v prostředí"
+msgstr ""
+"Nemohu najít domovský adresář: nenastaveno v /etc/passwd a žádná hodnota "
+"$HOME v prostředí"
+
+#~ msgid "Hide"
+#~ msgstr "Skrýt"
 
 #~ msgid "System Settings"
 #~ msgstr "Systémová nastavení"
