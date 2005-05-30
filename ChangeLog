@@ -1,3 +1,7 @@
+2005-05-30  Swapnil Hajare  <dreamil@gmail.com>
+
+	* configure.in: Added entry fir Marathi (mr) in ALL_LINGUA
+
 2005-05-30  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix problem where menus and items mentioned in a <Layout>
