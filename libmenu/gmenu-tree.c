@@ -3477,7 +3477,7 @@ merge_entry (GMenuTree          *tree,
 static void
 merge_entry_by_id (GMenuTree          *tree,
 		   GMenuTreeDirectory *directory,
-		   const char        *file_id)
+		   const char         *file_id)
 {
   GSList *tmp;
 
@@ -3501,61 +3501,104 @@ merge_entry_by_id (GMenuTree          *tree,
     }
 }
 
+static inline gboolean
+find_name_in_list (const char *name,
+		   GSList     *list)
+{
+  while (list != NULL)
+    {
+      if (!strcmp (name, list->data))
+	return TRUE;
+
+      list = list->next;
+    }
+
+  return FALSE;
+}
+
 static void
 merge_subdirs (GMenuTree          *tree,
-	       GMenuTreeDirectory *directory)
+	       GMenuTreeDirectory *directory,
+	       GSList             *except)
 {
+  GSList *subdirs;
   GSList *tmp;
 
   menu_verbose ("Merging subdirs in directory '%s'\n", directory->name);
 
-  directory->subdirs = g_slist_sort (directory->subdirs,
-				     (GCompareFunc) gmenu_tree_directory_compare);
+  subdirs = directory->subdirs;
+  directory->subdirs = NULL;
 
-  tmp = directory->subdirs;
+  subdirs = g_slist_sort (subdirs,
+			  (GCompareFunc) gmenu_tree_directory_compare);
+
+  tmp = subdirs;
   while (tmp != NULL)
     {
       GMenuTreeDirectory *subdir = tmp->data;
 
-      merge_subdir (tree, directory, subdir, &directory->default_layout_values);
-      gmenu_tree_item_unref (subdir);
+      if (!find_name_in_list (subdir->name, except))
+	{
+	  merge_subdir (tree, directory, subdir, &directory->default_layout_values);
+	  gmenu_tree_item_unref (subdir);
+	}
+      else
+	{
+	  menu_verbose ("Not merging directory '%s' yet\n", subdir->name);
+	  directory->subdirs = g_slist_append (directory->subdirs, subdir);
+	}
 
       tmp = tmp->next;
     }
 
-  g_slist_free (directory->subdirs);
-  directory->subdirs = NULL;
+  g_slist_free (subdirs);
+  g_slist_free (except);
 }
 
 static void
 merge_entries (GMenuTree          *tree,
-	       GMenuTreeDirectory *directory)
+	       GMenuTreeDirectory *directory,
+	       GSList             *except)
 {
+  GSList *entries;
   GSList *tmp;
 
   menu_verbose ("Merging entries in directory '%s'\n", directory->name);
 
-  directory->entries = g_slist_sort (directory->entries,
-				     (GCompareFunc) gmenu_tree_entry_compare);
+  entries = directory->entries;
+  directory->entries = NULL;
 
-  tmp = directory->entries;
+  entries = g_slist_sort (entries,
+			  (GCompareFunc) gmenu_tree_entry_compare);
+
+  tmp = entries;
   while (tmp != NULL)
     {
       GMenuTreeEntry *entry = tmp->data;
 
-      merge_entry (tree, directory, entry);
-      gmenu_tree_item_unref (entry);
+      if (!find_name_in_list (entry->desktop_file_id, except))
+	{
+	  merge_entry (tree, directory, entry);
+	  gmenu_tree_item_unref (entry);
+	}
+      else
+	{
+	  menu_verbose ("Not merging entry '%s' yet\n", entry->desktop_file_id);
+	  directory->entries = g_slist_append (directory->entries, entry);
+	}
 
       tmp = tmp->next;
     }
 
-  g_slist_free (directory->entries);
-  directory->entries = NULL;
+  g_slist_free (entries);
+  g_slist_free (except);
 }
 
 static void
 merge_subdirs_and_entries (GMenuTree          *tree,
-			   GMenuTreeDirectory *directory)
+			   GMenuTreeDirectory *directory,
+			   GSList             *except_subdirs,
+			   GSList             *except_entries)
 {
   GSList *items;
   GSList *tmp;
@@ -3578,22 +3621,42 @@ merge_subdirs_and_entries (GMenuTree          *tree,
 
       if (gmenu_tree_item_get_type (item) == GMENU_TREE_ITEM_DIRECTORY)
 	{
-	  merge_subdir (tree,
-			directory,
-			GMENU_TREE_DIRECTORY (item),
-			&directory->default_layout_values);
+	  if (!find_name_in_list (GMENU_TREE_DIRECTORY (item)->name, except_subdirs))
+	    {
+	      merge_subdir (tree,
+			    directory,
+			    GMENU_TREE_DIRECTORY (item),
+			    &directory->default_layout_values);
+	      gmenu_tree_item_unref (item);
+	    }
+	  else
+	    {
+	      menu_verbose ("Not merging directory '%s' yet\n",
+			    GMENU_TREE_DIRECTORY (item)->name);
+	      directory->subdirs = g_slist_append (directory->subdirs, item);
+	    }
 	}
       else
 	{
-	  merge_entry (tree, directory, GMENU_TREE_ENTRY (item));
+	  if (!find_name_in_list (GMENU_TREE_ENTRY (item)->desktop_file_id, except_entries))
+	    {
+	      merge_entry (tree, directory, GMENU_TREE_ENTRY (item));
+	      gmenu_tree_item_unref (item);
+	    }
+	  else
+	    {
+	      menu_verbose ("Not merging entry '%s' yet\n",
+			    GMENU_TREE_ENTRY (item)->desktop_file_id);
+	      directory->entries = g_slist_append (directory->entries, item);
+	    }
 	}
-
-      gmenu_tree_item_unref (item);
 
       tmp = tmp->next;
     }
 
   g_slist_free (items);
+  g_slist_free (except_subdirs);
+  g_slist_free (except_entries);
 }
 
 static void
@@ -3643,6 +3706,56 @@ get_layout_info (GMenuTreeDirectory *directory)
   return NULL;
 }
 
+static GSList *
+get_subdirs_from_layout_info (GSList *layout_info)
+{
+  GSList *subdirs;
+  GSList *tmp;
+
+  subdirs = NULL;
+
+  tmp = layout_info;
+  while (tmp != NULL)
+    {
+      MenuLayoutNode *node = tmp->data;
+
+      if (menu_layout_node_get_type (node) == MENU_LAYOUT_NODE_MENUNAME)
+	{
+	  subdirs = g_slist_append (subdirs,
+				    (char *) menu_layout_node_get_content (node));
+	}
+
+      tmp = tmp->next;
+    }
+
+  return subdirs;
+}
+
+static GSList *
+get_entries_from_layout_info (GSList *layout_info)
+{
+  GSList *entries;
+  GSList *tmp;
+
+  entries = NULL;
+
+  tmp = layout_info;
+  while (tmp != NULL)
+    {
+      MenuLayoutNode *node = tmp->data;
+
+      if (menu_layout_node_get_type (node) == MENU_LAYOUT_NODE_FILENAME)
+	{
+	  entries = g_slist_append (entries,
+				    (char *) menu_layout_node_get_content (node));
+	}
+
+      tmp = tmp->next;
+    }
+
+  return entries;
+}
+
 static void
 process_layout_info (GMenuTree          *tree,
 		     GMenuTreeDirectory *directory)
@@ -3659,8 +3772,8 @@ process_layout_info (GMenuTree          *tree,
 
   if ((layout_info = get_layout_info (directory)) == NULL)
     {
-      merge_subdirs (tree, directory);
-      merge_entries (tree, directory);
+      merge_subdirs (tree, directory, NULL);
+      merge_entries (tree, directory, NULL);
     }
   else
     {
@@ -3707,15 +3820,22 @@ process_layout_info (GMenuTree          *tree,
 		  break;
 
 		case MENU_LAYOUT_MERGE_MENUS:
-		  merge_subdirs (tree, directory);
+		  merge_subdirs (tree,
+				 directory,
+				 get_subdirs_from_layout_info (tmp->next));
 		  break;
 
 		case MENU_LAYOUT_MERGE_FILES:
-		  merge_entries (tree, directory);
+		  merge_entries (tree,
+				 directory,
+				 get_entries_from_layout_info (tmp->next));
 		  break;
 
 		case MENU_LAYOUT_MERGE_ALL:
-		  merge_subdirs_and_entries (tree, directory);
+		  merge_subdirs_and_entries (tree,
+					     directory,
+					     get_subdirs_from_layout_info (tmp->next),
+					     get_entries_from_layout_info (tmp->next));
 		  break;
 
 		default:

@@ -1,3 +1,20 @@
+2005-05-30  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix problem where menus and items mentioned in a <Layout>
+	after a <Merge type="menus"> or <Merge type="files">
+	Bug #305723
+
+	* libmenu/gmenu-tree.c: 
+	(find_name_in_list): helper function.
+	(merge_subdirs), (merge_entries),
+	(merge_subdirs_and_entries): accept lists of menus or files
+	which appear after the merge and don't merge them.
+	(get_subdirs_from_layout_info),
+	(get_entries_from_layout_info): get a list of the menus or
+	files specified after a merge.
+	(process_layout_info): pass the exception lists to the
+	merge operations.
+
 2005-05-22  Dennis Cranston  <dennis_cranston@yahoo.com>
 
 	* simple-editor/gmenu-simple-editor.glade:  HIGify
