@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-04-12 19:12+0200\n"
-"PO-Revision-Date: 2005-04-12 19:15+0200\n"
+"POT-Creation-Date: 2005-06-01 18:40+0200\n"
+"PO-Revision-Date: 2005-06-01 18:40+0200\n"
 "Last-Translator: Hendrik Brandt <heb@gnome-de.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -147,13 +147,15 @@ msgid "Name"
 msgstr "Name"
 
 #: simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Hide"
-msgstr "Verstecken"
+msgid "Show"
+msgstr "Anzeigen"
 
-#: simple-editor/GMenuSimpleEditor/menufilewriter.py:43
+#: simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Das Heimatverzeichnis des Benutzers konnte nicht gefunden werden: "
-"es ist weder in /etc/passwd angegeben, noch gibt es einen Wert für die Umgebungsvariable $HOME"
+msgstr ""
+"Das Heimatverzeichnis des Benutzers konnte nicht gefunden werden: es ist "
+"weder in /etc/passwd angegeben, noch gibt es einen Wert für die "
+"Umgebungsvariable $HOME"
 
