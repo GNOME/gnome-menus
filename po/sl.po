@@ -1,0 +1,126 @@
+# Slovenian translation file for Evolution.
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# Andraz Tori <andraz.tori1@guest.arnes.si> 2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: evolution\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-06-01 15:05+0200\n"
+"PO-Revision-Date: 2000-07-28 03:15+0200\n"
+"Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
+
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Dostopnost"
+
+#: desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Nastavitve dostopnosti"
+
+#: desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Pripomoèki"
+
+#: desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Namizni pripomoèki"
+
+#: desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Programi"
+
+#: desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Programiranje"
+
+#: desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Orodja za razvoj programja"
+
+#: desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Zabava in izobra¾evanje"
+
+#: desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Igre"
+
+#: desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Igre in zabava"
+
+#: desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Grafika"
+
+#: desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Grafièni programi"
+
+#: desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
+
+#: desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Programi za dostop do interneta, npr. spleta in epo¹te"
+
+#: desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Menu veèpredstavnosti"
+
+#: desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Avdio in video"
+
+#: desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Pisarna"
+
+#: desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Pisarni¹ki programi"
+
+#: desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Programi, ki ne spadajo v druge kategorije"
+
+#: desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Drugo"
+
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Nastavitve povezane z dostopnostjo"
+
+#: desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Osebne nastavitve"
+
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Nastavitve"
+
+#: desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "Skrbni¹tvo"
+
+#: desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr "Spreminjanje sistemskih nastavitev (vpliva na vse uporabnike)"
+
+#: desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Sistemska orodja"
+
+#: desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Orodja za nastavljanje in nadzor sistema"
