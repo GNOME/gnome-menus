@@ -1,3 +1,4 @@
+
 # Slovenian translation file for Evolution.
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Andraz Tori <andraz.tori1@guest.arnes.si> 2005
