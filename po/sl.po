@@ -1,7 +1,7 @@
 # Slovenian translation file for Evolution.
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Andraz Tori <andraz.tori1@guest.arnes.si> 2005
-#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: evolution\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3);\n"
@@ -27,11 +27,11 @@ msgstr "Nastavitve dostopnosti"
 
 #: desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
-msgstr "PripomoËki"
+msgstr "Pripomoƒçki"
 
 #: desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Namizni pripomoËki"
+msgstr "Namizni pripomoƒçki"
 
 #: desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -47,7 +47,7 @@ msgstr "Orodja za razvoj programja"
 
 #: desktop-directories/Edutainment.directory.in.h:1
 msgid "Edutainment"
-msgstr "Zabava in izobraæevanje"
+msgstr "Zabava in izobra≈æevanje"
 
 #: desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -63,7 +63,7 @@ msgstr "Grafika"
 
 #: desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "GrafiËni programi"
+msgstr "Grafiƒçni programi"
 
 #: desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
@@ -71,11 +71,11 @@ msgstr "Internet"
 
 #: desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programi za dostop do interneta, npr. spleta in epoπte"
+msgstr "Programi za dostop do interneta, npr. spleta in epo≈°te"
 
 #: desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Menu veËpredstavnosti"
+msgstr "Menu veƒçpredstavnosti"
 
 #: desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
@@ -87,7 +87,7 @@ msgstr "Pisarna"
 
 #: desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Pisarniπki programi"
+msgstr "Pisarni≈°ki programi"
 
 #: desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
@@ -111,7 +111,7 @@ msgstr "Nastavitve"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr "Skrbniπtvo"
+msgstr "Skrbni≈°tvo"
 
 #: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
