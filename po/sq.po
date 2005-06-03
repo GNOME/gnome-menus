@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-05-11 05:42+0000\n"
-"PO-Revision-Date: 2005-05-18 19:01+0200\n"
+"POT-Creation-Date: 2005-06-02 14:35+0000\n"
+"PO-Revision-Date: 2005-06-02 23:57+0200\n"
 "Last-Translator: Elian Myftiu <helios7 at gmail dot com>\n"
 "Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -148,14 +148,16 @@ msgid "Name"
 msgstr "Emri"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Hide"
-msgstr "Fshih"
+msgid "Show"
+msgstr "Shfaq"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:43
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"E pamundur gjetja e dosjes shtëpi. e pacaktuar në /etc/password dhe asnjë vlerë "
-"për $HOME në mjedis"
+"E pamundur gjetja e dosjes shtëpi. e pacaktuar në /etc/password dhe asnjë "
+"vlerë për $HOME në mjedis"
 
+#~ msgid "Hide"
+#~ msgstr "Fshih"
