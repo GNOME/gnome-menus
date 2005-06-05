@@ -1,3 +1,7 @@
+2005-06-05  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* configure.in: Added 'gl' to ALL_LINGUA.
+
 2005-05-30  Swapnil Hajare  <dreamil@gmail.com>
 
 	* configure.in: Added entry fir Marathi (mr) in ALL_LINGUA
