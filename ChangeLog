@@ -1,3 +1,7 @@
+2005-06-05  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* configure.in: Added 'gl' to ALL_LINGUAS.
+
 2005-04-15  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix for bug #300589 - if you've a .desktop file in
