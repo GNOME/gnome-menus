@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-10 17:49+0000\n"
-"PO-Revision-Date: 2005-01-19 20:43+0700\n"
+"POT-Creation-Date: 2005-06-05 22:30+0700\n"
+"PO-Revision-Date: 2005-06-05 22:38+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
@@ -124,6 +124,38 @@ msgstr "เครื่องมือระบบ"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "ตั้งค่าและเฝ้าดูระบบ"
+
+#: simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "แก้ไขเมนู"
+
+#: simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "โ_ปรแกรม:"
+
+#: simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "ค่า_ปริยาย"
+
+#: simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "เ_มนู:"
+
+#: simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: simple-editor/GMenuSimpleEditor/maindialog.py:123
+msgid "Name"
+msgstr "ชื่อ"
+
+#: simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr "แสดง"
+
+#: simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"หาไดเรกทอรีบ้านไม่พบ: ไม่ได้ตั้งค่าไว้ใน /etc/passwd และไม่ได้กำหนดค่าตัวแปร $HOME ใน environment"
 
 #~ msgid "System Settings"
 #~ msgstr "ตั้งค่าระบบ"
