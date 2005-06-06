@@ -1,0 +1,159 @@
+# Беларускі пераклад gnome-menus.
+# Copyright (C) 2005 THE gnome-menus'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-menus package.
+# Ales Nyakhaychyk <nab@mail.by>, 2005.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus gnome-2-12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-06-06 06:40+0000\n"
+"PO-Revision-Date: 2005-06-06 15:28+0300\n"
+"Last-Translator: Ales Nyakhaychyk <nab@mail.by>\n"
+"Language-Team: Belarusian <i18n@mova.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Даступнасьць"
+
+#: ../desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Наладкі даступнасьці"
+
+#: ../desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Зручнасьці"
+
+#: ../desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Зручнасьці для стальца"
+
+#: ../desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Дастасаваньні"
+
+#: ../desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Праграмаваньне"
+
+#: ../desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Сродкі для распрацоўкі праграм"
+
+#: ../desktop-directories/Edutainment.directory.in.h:1
+msgid "Edutainment"
+msgstr "Навучаньне"
+
+#: ../desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Гульні"
+
+#: ../desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Гульні й забавы"
+
+#: ../desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Графіка"
+
+#: ../desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Дастасаваньні для працы з графічнымі даньнямі"
+
+#: ../desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Інтарнэт"
+
+#: ../desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Праграмы для доступу ў Інтарнэт (гартач, пошта і інш.)"
+
+#: ../desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Мультымэдыйнае мэню"
+
+#: ../desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Музыкі і фільмы"
+
+#: ../desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Канцылярыя"
+
+#: ../desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Канцылярскія дастасаваньні"
+
+#: ../desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Дастасаваньні, якія не патрапілі ў іншыя катэгорыі"
+
+#: ../desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Іншыя"
+
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Перавагі, якія датычуцца даступнасьці"
+
+#: ../desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Пэрсанальныя перавагі й наладкі"
+
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Перавагі"
+
+#: ../desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "Адміністраваньне"
+
+#: ../desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr "Зьмена агульнасыстэмных наладак (узьдзейнічаюць на ўсіх карыстальнікаў)"
+
+#: ../desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Сыстэмныя сродкі"
+
+#: ../desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Наладка й маніторынг сыстэмы"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "Рэдагаваць мэню"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "Д_астасаваньні:"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "Да_помнасьці"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "_Мэню:"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+msgid "Name"
+msgstr "Назва"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr "Паказаць"
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Немагчыма адшукаць хатнюю тэчку: яна не пазначана ў /etc/passwd, таксама адсутнічае "
+"значэньне пераменнай асяроддзя $HOME"
+
