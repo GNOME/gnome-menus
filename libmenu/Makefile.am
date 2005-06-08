@@ -45,6 +45,7 @@ libgnome_menu_include_HEADERS =		\
 
 EXTRA_DIST =				\
         libgnome-menu.pc.in		\
+        libgnome-menu-uninstalled.pc.in	\
 	$(NULL)
 
 pkgconfigdir   = $(libdir)/pkgconfig

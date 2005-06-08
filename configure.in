@@ -141,6 +141,7 @@ AC_OUTPUT([
 Makefile
 libmenu/Makefile
 libmenu/libgnome-menu.pc
+libmenu/libgnome-menu-uninstalled.pc
 layout/Makefile
 desktop-directories/Makefile
 util/Makefile

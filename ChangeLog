@@ -1,3 +1,16 @@
+2005-06-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Patch from Brian Cameron <brian.cameron@sun.com> in
+	bug #304129
+
+	* libmenu/libgnome-menu-uninstalled.pc.in: add pkg-config
+	file to support building against an uninstalled 
+	libgnome-menu.
+	
+	* configure.in: create libgnome-menu-uninstalled.pc
+	
+	* libmenu/Makefile.am: add uninstalled.pc to EXTRA_DIST
+
 2005-06-05  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
 
 	* configure.in: Added 'gl' to ALL_LINGUA.
