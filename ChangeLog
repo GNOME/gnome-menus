@@ -1,3 +1,7 @@
+2005-06-11  Christian Rose  <menthos@menthos.com>
+
+	* configure.in: Added "he" to ALL_LINGUAS.
+
 2005-06-08  Mark McLoughlin  <mark@skynet.ie>
 
 	Patch from Brian Cameron <brian.cameron@sun.com> in
