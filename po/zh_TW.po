@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menu 2.9.91\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-03 00:35+0800\n"
+"POT-Creation-Date: 2005-06-23 21:52+0000\n"
 "PO-Revision-Date: 2005-03-03 00:34+0800\n"
 "Last-Translator: Woodman Tuen <wmtuen@gmail.com>\n"
-"Language-Team: Chinese/Traditional <zh-l10n@linux.org.tw>\n"
+"Language-Team: Chinese/Traditional <community@linuxhall.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -123,3 +123,36 @@ msgstr "系統工具"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "系統配置及監察"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr ""
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#, fuzzy
+msgid "_Applications:"
+msgstr "應用程式"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr ""
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr ""
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#, fuzzy
+msgid "Name"
+msgstr "遊戲"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr ""
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
