@@ -5,4 +5,5 @@ Makefile.in
 *.la
 *.lo
 libgnome-menu.pc
+libgnome-menu-uninstalled.pc
 

@@ -1573,6 +1573,15 @@ add_filename_include (const char     *desktop_file_id,
     }
 }
 
+static void
+is_dot_directory (const char   *basename,
+		  DesktopEntry *entry,
+		  gboolean     *has_dot_directory)
+{
+  if (!strcmp (basename, ".directory"))
+    *has_dot_directory = TRUE;
+}
+
 static gboolean
 add_menu_for_legacy_dir (MenuLayoutNode *parent,
                          const char     *legacy_dir,
@@ -1582,20 +1591,30 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
 {
   EntryDirectory  *ed;
   DesktopEntrySet *desktop_entries;
+  DesktopEntrySet *directory_entries;
   GSList          *subdirs;
   gboolean         menu_added;
+  gboolean         has_dot_directory;
 
   ed = entry_directory_new_legacy (DESKTOP_ENTRY_INVALID, legacy_dir, legacy_prefix);
   if (!ed)
     return FALSE;
 
   subdirs = NULL;
-  desktop_entries = desktop_entry_set_new ();
+  desktop_entries   = desktop_entry_set_new ();
+  directory_entries = desktop_entry_set_new ();
+
   entry_directory_get_flat_contents (ed,
                                      desktop_entries,
-                                     NULL,
+                                     directory_entries,
                                      &subdirs);
   entry_directory_unref (ed);
+
+  has_dot_directory = FALSE;
+  desktop_entry_set_foreach (directory_entries,
+			     (DesktopEntrySetForeachFunc) is_dot_directory,
+			     &has_dot_directory);
+  desktop_entry_set_unref (directory_entries);
 
   menu_added = FALSE;
   if (desktop_entry_set_get_count (desktop_entries) > 0 || subdirs)
@@ -1620,21 +1639,24 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
       menu_layout_node_append_child (menu, node);
       menu_layout_node_unref (node);
 
-      node = menu_layout_node_new (MENU_LAYOUT_NODE_DIRECTORY);
-      if (relative_path != NULL)
-        {
-          char *directory_entry_path;
+      if (has_dot_directory)
+	{
+	  node = menu_layout_node_new (MENU_LAYOUT_NODE_DIRECTORY);
+	  if (relative_path != NULL)
+	    {
+	      char *directory_entry_path;
 
-          directory_entry_path = g_strdup_printf ("%s/.directory", relative_path);
-          menu_layout_node_set_content (node, directory_entry_path);
-          g_free (directory_entry_path);
-        }
-      else
-        {
-          menu_layout_node_set_content (node, ".directory");
-        }
-      menu_layout_node_append_child (menu, node);
-      menu_layout_node_unref (node);
+	      directory_entry_path = g_strdup_printf ("%s/.directory", relative_path);
+	      menu_layout_node_set_content (node, directory_entry_path);
+	      g_free (directory_entry_path);
+	    }
+	  else
+	    {
+	      menu_layout_node_set_content (node, ".directory");
+	    }
+	  menu_layout_node_append_child (menu, node);
+	  menu_layout_node_unref (node);
+	}
 
       if (desktop_entry_set_get_count (desktop_entries) > 0)
 	{
@@ -2714,8 +2736,9 @@ process_layout (MenuTree          *tree,
                   }
               }
 
-            menu_verbose ("Processed <Directory> new directory entry = %p\n",
-                          directory->directory_entry);
+            menu_verbose ("Processed <Directory> new directory entry = %p (%s)\n",
+                          directory->directory_entry,
+			  directory->directory_entry? desktop_entry_get_path (directory->directory_entry) : "null");
           }
           break;
 
