@@ -1,3 +1,8 @@
+2005-06-28  Mark McLoughlin  <mark@skynet.ie>
+
+	* POTFILES.in: Edutainment.directory renamed
+	to Education.directory
+
 2005-06-26  Ilkka Tuohela  <hile@iki.fi>
 
 	* fi.po: Updated Finnish translation
