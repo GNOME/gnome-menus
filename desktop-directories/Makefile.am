@@ -7,7 +7,7 @@ directory_in_files =				\
 	Accessories.directory.in		\
 	Applications.directory.in		\
 	Development.directory.in		\
-	Edutainment.directory.in		\
+	Education.directory.in			\
 	Games.directory.in			\
 	Graphics.directory.in			\
 	Internet.directory.in			\

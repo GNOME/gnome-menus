@@ -58,16 +58,16 @@
     </Include>
   </Menu> <!-- End Development Tools -->
 
-  <!-- Edutainment -->
+  <!-- Education -->
   <Menu>
-    <Name>Edutainment</Name>
-    <Directory>Edutainment.directory</Directory>
+    <Name>Education</Name>
+    <Directory>Education.directory</Directory>
     <Include>
       <And>
         <Category>Education</Category>
       </And>
     </Include>
-  </Menu> <!-- End Edutainment -->
+  </Menu> <!-- End Education -->
 
   <!-- Games -->
   <Menu>
