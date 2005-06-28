@@ -1,4 +1,27 @@
 ==============
+Version 2.10.2
+==============
+
+ Fixes
+
+	* Make user .desktop files correctly override system ones (Mark)
+	* Remove <LegacyDir> from settings menu (Mark)
+	* Fix memory leaks on re-load (Mark)
+	* Fix issue with duplicate sub-menus (Mark)
+	* Add support for building against uninstalled gnome-menus (Brian Cameron)
+
+ Translators
+
+	* Rostislav Raykov (bg)
+	* Priit Laes (et)
+	* Ignacio Casal Quinteiro (gl)
+	* Yuval Tanny (he)
+	* Steve Murphy (rw)
+	* Clytie Siddall (vi)
+	* Canonical Ltd (xh)
+	* Woodman Tuen (zh_TW)
+
+==============
 Version 2.10.1
 ==============
 
