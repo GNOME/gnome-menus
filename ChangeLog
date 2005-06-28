@@ -1,5 +1,16 @@
 2005-06-28  Mark McLoughlin  <mark@skynet.ie>
 
+	Fix for bug #305748 - only include ".directory" in
+	a <LegacyDir> if it actually exists.
+
+	* libmenu/gmenu-tree.c:
+	(is_dot_directory),
+	(add_menu_for_legacy_dir): only add a <Directory>.directory</Directory>
+	if the file exists.
+	(process_layout): expand debug spew.
+
+2005-06-28  Mark McLoughlin  <mark@skynet.ie>
+
 	Re-name the Edutainment sub-menu to Education.
 	Bug #307979
 
