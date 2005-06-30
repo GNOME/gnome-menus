@@ -1,19 +1,22 @@
+# translation of nb.po to Norwegian Bokmal
 # Norwegian translation of gnome-menus.
 # Copyright (C) 2004, 2005 Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2004, 2005
+# Kjartan Maraas <kmaraas@gnome.org>, 2004, 2005.
+# Terance Edward Sola <terance@lyse.net>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus 0.1\n"
+"Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-01 11:57+0200\n"
-"PO-Revision-Date: 2005-06-01 11:58+0200\n"
-"Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
-"Language-Team: Norsk bokmal <i18n-nb@lister.ping.uio.no>\n"
+"POT-Creation-Date: 2005-06-30 15:38+0200\n"
+"PO-Revision-Date: 2005-06-30 15:38+0200\n"
+"Last-Translator: Terance Edward Sola <terance@lyse.net>\n"
+"Language-Team: Norwegian Bokmal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -44,9 +47,9 @@ msgstr "Utvikling"
 msgid "Tools for software development"
 msgstr "Verktøy for programvareutvikling"
 
-#: ../desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "Underholdende opplæring"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Opplæring"
 
 #: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -153,4 +156,6 @@ msgstr "Vis"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Kan ikke finne hjemmekatalog: ikke satt i /etc/passwd og det finnes ingen verdi for $HOME i miljøet"
+msgstr ""
+"Kan ikke finne hjemmekatalog: ikke satt i /etc/passwd og det finnes ingen "
+"verdi for $HOME i miljøet"
