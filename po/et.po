@@ -1,4 +1,4 @@
-# Gnome-menus eesti keele tõlge.
+# GNOME menüüde eesti keele tõlge
 # Estonian translation of Gnome-menus
 #
 # Copyright (C) 2005 Free Software Foundation, Inc.
@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: gnome-et@linux.ee\n"
-"POT-Creation-Date: 2005-05-25 05:47+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-07-01 14:05+0000\n"
 "PO-Revision-Date: 2005-05-26 08:08+0300\n"
 "Last-Translator: Priit Laes <amd@store20.com>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
@@ -25,7 +25,7 @@ msgstr "Hõlbustus"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Hõlbustusseaded"
+msgstr "Hõlbustussätted"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -47,9 +47,9 @@ msgstr "Programmeerimine"
 msgid "Tools for software development"
 msgstr "Tööriistad tarkvaraarenduseks"
 
-#: ../desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "Õppemängud"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Õppeprogrammid"
 
 #: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -93,7 +93,7 @@ msgstr "Kontoritarkvara"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Rakendused,mis ei sobinud teistesse kategooriatesse"
+msgstr "Rakendused, mis ei sobinud teistesse kategooriatesse"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -105,7 +105,7 @@ msgstr "Hõlbustusega seotud eelistused"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Isiklikud eelistused ja seaded"
+msgstr "Isiklikud eelistused ja sätted"
 
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
@@ -117,7 +117,7 @@ msgstr "Administreerimine"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Süsteemsete seadete muutmine (mõjutab kõiki kasutajaid)"
+msgstr "Süsteemsete sätete muutmine (mõjutab kõiki kasutajaid)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -153,9 +153,10 @@ msgid "Show"
 msgstr "Vaade"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Kodukausta ei suudeta leida: pole määratud /etc/passwd failis ega $HOME keskkonnamuutujas"
-
-#~ msgid "Hide"
-#~ msgstr "Peida"
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Kodukausta pole võimalik leida: seda pole määratud ei /etc/passwd failis ega "
+"$HOME keskkonnamuutujas"
 
