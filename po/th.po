@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-05 22:30+0700\n"
-"PO-Revision-Date: 2005-06-05 22:38+0700\n"
+"POT-Creation-Date: 2005-07-02 09:49+0700\n"
+"PO-Revision-Date: 2005-07-02 09:53+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
@@ -45,9 +45,9 @@ msgstr "เขียนโปรแกรม"
 msgid "Tools for software development"
 msgstr "เครื่องมือพัฒนาซอฟต์แวร์"
 
-#: desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "เกมการศึกษา"
+#: desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "การศึกษา"
 
 #: desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -155,7 +155,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"หาไดเรกทอรีบ้านไม่พบ: ไม่ได้ตั้งค่าไว้ใน /etc/passwd และไม่ได้กำหนดค่าตัวแปร $HOME ใน environment"
+"หาไดเรกทอรีบ้านไม่พบ: ไม่ได้ตั้งค่าไว้ใน /etc/passwd และไม่ได้กำหนดค่าตัวแปร $HOME ใน "
+"environment"
 
 #~ msgid "System Settings"
 #~ msgstr "ตั้งค่าระบบ"
