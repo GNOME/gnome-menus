@@ -1,5 +1,5 @@
 # gnome-menus eesti keeletõlge.
-# Copyright (C) 2005 
+# Copyright (C) 2005
 # This file is distributed under the same license as the Gnome package.
 # Priit Laes <amd@store20.com>, 2005.
 #
@@ -23,7 +23,7 @@ msgstr "Hõlbustus"
 
 #: desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Hõlbustusseaded"
+msgstr "Hõlbustussätted"
 
 #: desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -91,7 +91,7 @@ msgstr "Kontoritarkvara"
 
 #: desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Rakendused,mis ei sobinud teistesse kategooriatesse"
+msgstr "Rakendused, mis ei sobinud teistesse kategooriatesse"
 
 #: desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -103,7 +103,7 @@ msgstr "Hõlbustusega seotud eelistused"
 
 #: desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Isiklikud eelistused ja seaded"
+msgstr "Isiklikud eelistused ja sätted"
 
 #: desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
@@ -115,7 +115,7 @@ msgstr "Administreerimine"
 
 #: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Süsteemsete seadete muutmine (mõjutab kõiki kasutajaid)"
+msgstr "Süsteemsete sätete muutmine (mõjutab kõiki kasutajaid)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -124,4 +124,3 @@ msgstr "Süsteemi tööriistad"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Süsteemi konfigureerimine ja jälgimine"
-
