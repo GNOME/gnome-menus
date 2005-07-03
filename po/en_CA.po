@@ -8,149 +8,149 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-05-23 18:50-0400\n"
-"PO-Revision-Date: 2005-05-23 01:44-0400\n"
+"POT-Creation-Date: 2005-07-03 18:29-0400\n"
+"PO-Revision-Date: 2005-07-03 01:44-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
+#: desktop-directories/Accessibility.directory.in.h:1
+#: desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
 msgstr "Accessibility"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
+#: desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
 msgstr "Accessibility Settings"
 
-#: ../desktop-directories/Accessories.directory.in.h:1
+#: desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
 msgstr "Accessories"
 
-#: ../desktop-directories/Accessories.directory.in.h:2
+#: desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
 msgstr "Desktop accessories"
 
-#: ../desktop-directories/Applications.directory.in.h:1
+#: desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Applications"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#: desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "Programming"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
 msgstr "Tools for software development"
 
-#: ../desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "Edutainment"
+#: desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Education"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: desktop-directories/Games.directory.in.h:1
 msgid "Games"
 msgstr "Games"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Games and amusements"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#: desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
 msgstr "Graphics"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
 msgstr "Graphics applications"
 
-#: ../desktop-directories/Internet.directory.in.h:1
+#: desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
 
-#: ../desktop-directories/Internet.directory.in.h:2
+#: desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Programs for Internet access, such as web and email"
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
+#: desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
 msgstr "Multimedia menu"
 
-#: ../desktop-directories/Multimedia.directory.in.h:2
+#: desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Sound & Video"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#: desktop-directories/Office.directory.in.h:1
 msgid "Office"
 msgstr "Office"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Office Applications"
 
-#: ../desktop-directories/Other.directory.in.h:1
+#: desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
 msgstr "Applications that do not fit in other categories"
 
-#: ../desktop-directories/Other.directory.in.h:2
+#: desktop-directories/Other.directory.in.h:2
 msgid "Other"
 msgstr "Other"
 
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
+#: desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Accessibility-related preferences"
 
-#: ../desktop-directories/Settings.directory.in.h:1
+#: desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Personal preferences and settings"
 
-#: ../desktop-directories/Settings.directory.in.h:2
+#: desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Preferences"
 
-#: ../desktop-directories/System-Settings.directory.in.h:1
+#: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "Administration"
 
-#: ../desktop-directories/System-Settings.directory.in.h:2
+#: desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
 msgstr "Change system-wide settings (affects all users)"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "System Tools"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "System configuration and monitoring"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
 msgstr "Edit Menus"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
 msgstr "_Applications:"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
 msgstr "_Defaults"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
 msgstr "_Menus:"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: simple-editor/GMenuSimpleEditor/maindialog.py:123
 msgid "Name"
 msgstr "Name"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: simple-editor/GMenuSimpleEditor/maindialog.py:115
 msgid "Show"
 msgstr "Show"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
