@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-04-23 15:41+0200\n"
-"PO-Revision-Date: 2005-04-23 15:43+0200\n"
+"POT-Creation-Date: 2005-07-06 18:27+0200\n"
+"PO-Revision-Date: 2005-07-06 18:28+0200\n"
 "Last-Translator: Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -47,9 +47,9 @@ msgstr "Programación"
 msgid "Tools for software development"
 msgstr "Herramientas para el desarrollo del software"
 
-#: ../desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "Educación y entretenimiento"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Educación"
 
 #: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -150,14 +150,19 @@ msgid "Name"
 msgstr "Nombre"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Hide"
-msgstr "Ocultar"
+msgid "Show"
+msgstr "Mostrar"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:43
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "No se puede encontrar el directorio personal: no está establecido en /etc/passwd y no hay ningún valor en la variable de entorno $HOME"
+msgstr ""
+"No se puede encontrar el directorio personal: no está establecido en /etc/"
+"passwd y no hay ningún valor en la variable de entorno $HOME"
+
+#~ msgid "Hide"
+#~ msgstr "Ocultar"
 
 #~ msgid "System Settings"
 #~ msgstr "Configuración del sistema"
