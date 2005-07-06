@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-05-20 19:30+0200\n"
+"POT-Creation-Date: 2005-07-06 18:48+0200\n"
 "PO-Revision-Date: 2005-05-16 17:19+0200\n"
 "Last-Translator:  Iñaki Larrañaga  <dooteo@euskalgnu.org>\n"
 "Language-Team:  <itzulpena@euskalgnu.org>\n"
@@ -46,8 +46,8 @@ msgstr "Programazioa"
 msgid "Tools for software development"
 msgstr "Softwarea garatzeko tresnak"
 
-#: ../desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
 msgstr "Hezkuntza"
 
 #: ../desktop-directories/Games.directory.in.h:1
@@ -148,13 +148,16 @@ msgid "Name"
 msgstr "Izena"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Hide"
-msgstr "Ezkutatu"
+msgid "Show"
+msgstr "Erakutsi"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Ezin izan da etxeko direktorioa aurkitu: ez dago /etcpasswd-en ezarrita, "
+"Ezin izan da etxeko direktorioa aurkitu: ez dago /etc/passwd-en ezarrita, "
 "ezta ere inguruneko $HOME aldagaian"
+
+#~ msgid "Hide"
+#~ msgstr "Ezkutatu"
