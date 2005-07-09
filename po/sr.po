@@ -9,122 +9,153 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-02 15:05+0100\n"
-"PO-Revision-Date: 2005-03-02 23:58+0100\n"
-"Last-Translator: Данило Шеган <danilo@prevod.org>\n"
-"Language-Team: Serbian (sr) <gnu@prevod.org>\n"
+"POT-Creation-Date: 2005-07-09 10:26+0200\n"
+"PO-Revision-Date: 2005-07-09 10:28+0200\n"
+"Last-Translator: Данило Шеган <danilo@gnome.org>\n"
+"Language-Team: Serbian (sr) <gnome@prevod.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: desktop-directories/Accessibility.directory.in.h:1
-#: desktop-directories/Settings-Accessibility.directory.in.h:1
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
 msgstr "Приступачност"
 
-#: desktop-directories/Accessibility.directory.in.h:2
+#: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
 msgstr "Подешавања приступачности"
 
-#: desktop-directories/Accessories.directory.in.h:1
+#: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
 msgstr "Алатке"
 
-#: desktop-directories/Accessories.directory.in.h:2
+#: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
 msgstr "Алатке окружења"
 
-#: desktop-directories/Applications.directory.in.h:1
+#: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Програми"
 
-#: desktop-directories/Development.directory.in.h:1
+#: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "Програмирање"
 
-#: desktop-directories/Development.directory.in.h:2
+#: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
 msgstr "Алати за развој софтвера"
 
-#: desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
 msgstr "Образовање"
 
-#: desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
 msgstr "Игре"
 
-#: desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Игре и забава"
 
-#: desktop-directories/Graphics.directory.in.h:1
+#: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
 msgstr "Графика"
 
-#: desktop-directories/Graphics.directory.in.h:2
+#: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
 msgstr "Графички програми"
 
-#: desktop-directories/Internet.directory.in.h:1
+#: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Интернет"
 
-#: desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Програми за приступ Интернету као што је веб и е-пошта"
 
-#: desktop-directories/Multimedia.directory.in.h:1
+#: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
 msgstr "Мени за мултимедију"
 
-#: desktop-directories/Multimedia.directory.in.h:2
+#: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Звук и видео"
 
-#: desktop-directories/Office.directory.in.h:1
+#: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
 msgstr "Канцеларија"
 
-#: desktop-directories/Office.directory.in.h:2
+#: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Програми за канцеларију"
 
-#: desktop-directories/Other.directory.in.h:1
+#: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
 msgstr "Програми који не припадају осталим категоријама"
 
-#: desktop-directories/Other.directory.in.h:2
+#: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
 msgstr "Остало"
 
-#: desktop-directories/Settings-Accessibility.directory.in.h:2
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Поставке у вези приступачности"
 
-#: desktop-directories/Settings.directory.in.h:1
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Личне поставке и подешавања"
 
-#: desktop-directories/Settings.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Поставке"
 
-#: desktop-directories/System-Settings.directory.in.h:1
+#: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "Администрација"
 
-#: desktop-directories/System-Settings.directory.in.h:2
+#: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
 msgstr "Промените системска подешавања (утиче на све кориснике)"
 
-#: desktop-directories/System-Tools.directory.in.h:1
+#: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "Системски алати"
 
-#: desktop-directories/System-Tools.directory.in.h:2
+#: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Подешавање и праћење система"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "Уреди меније"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "_Програми:"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "По_дразумевани"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "_Менији:"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+msgid "Name"
+msgstr "Назив"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr "Прикажи"
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr "Не могу да нађем лични директоријум: није постављен у /etc/passwd а нема ни вредности $HOME у окружењу"
 
 #~ msgid "System Settings"
 #~ msgstr "Системска подешавања"

@@ -1,4 +1,8 @@
-2005-07-07  Iñaki Larrañaga  <dooteo@euskalgnu.org>
+2005-07-09  Danilo Å egan  <danilo@gnome.org>
+
+	* sr.po, sr@Latn.po: Updated Serbian translation.
+
+2005-07-07  IÃ±aki LarraÃ±aga  <dooteo@euskalgnu.org>
 
 	* eu.po: Fixed some typos.
 
@@ -24,7 +28,7 @@
 
 2005-06-30  Terance Sola  <terance@lyse.net>
 
-	* nb.po: Updated Norwegian bokmål translation.
+	* nb.po: Updated Norwegian bokmal translation.
 	* no.po: Same.
 
 2005-06-28  Mark McLoughlin  <mark@skynet.ie>
@@ -80,7 +84,7 @@
 	
 2005-06-01  Kjartan Maraas  <kmaraas@gnome.org>
 
-	* nb.po: Updated Norwegian bokmål translation
+	* nb.po: Updated Norwegian bokmal translation
 	* no.po: Same here.
 
 2005-05-30  Swapnil Hajare  <dreamil@gmail.com>
@@ -107,7 +111,7 @@
 
 	* en_CA.po: Updated Canadian English translation.
 
-2005-05-20  Iñaki Larrañaga  <dooteo@euskalgnu.org>
+2005-05-20  IÃ±aki LarraÃ±aga  <dooteo@euskalgnu.org>
 
 	* eu.po: saved as UTF-8.
 
@@ -123,7 +127,7 @@
 
 ==================== 2.11.1 ====================
 
-2005-05-16  Iñaki Larrañaga  <dooteo@euskalgnu.org>
+2005-05-16  IÃ±aki LarraÃ±aga  <dooteo@euskalgnu.org>
 	
 	* eu.po: Updated Basque translation.
 
