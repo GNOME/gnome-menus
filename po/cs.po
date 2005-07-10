@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-05-29 06:35+0000\n"
-"PO-Revision-Date: 2005-05-29 13:53+0200\n"
+"POT-Creation-Date: 2005-07-05 14:06+0000\n"
+"PO-Revision-Date: 2005-07-05 22:14+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -45,9 +45,9 @@ msgstr "Programování"
 msgid "Tools for software development"
 msgstr "Nástroje pro vývoj software"
 
-#: ../desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "Škola hrou"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Vzdělávání"
 
 #: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
