@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-01 14:05+0000\n"
-"PO-Revision-Date: 2005-05-26 08:08+0300\n"
+"POT-Creation-Date: 2005-07-11 14:09+0000\n"
+"PO-Revision-Date: 2005-07-12 00:37+0300\n"
 "Last-Translator: Priit Laes <amd@store20.com>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -38,6 +38,14 @@ msgstr "Töölaua tarvikud"
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Rakendused"
+
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Töölaud"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Isiklikud eelistused ja haldussätted"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -99,6 +107,15 @@ msgstr "Rakendused, mis ei sobinud teistesse kategooriatesse"
 msgid "Other"
 msgstr "Muu"
 
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Isiklikud eelistused"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Eelistused"
+
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Hõlbustusega seotud eelistused"
@@ -106,10 +123,6 @@ msgstr "Hõlbustusega seotud eelistused"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Isiklikud eelistused ja sätted"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Eelistused"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -153,10 +166,6 @@ msgid "Show"
 msgstr "Vaade"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Kodukausta pole võimalik leida: seda pole määratud ei /etc/passwd failis ega "
-"$HOME keskkonnamuutujas"
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Kodukausta pole võimalik leida: seda pole määratud ei /etc/passwd failis ega $HOME keskkonnamuutujas"
 
