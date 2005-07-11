@@ -3,7 +3,7 @@
 
 <Menu>
   <Name>Preferences</Name>
-  <Directory>Settings.directory</Directory>
+  <Directory>Preferences.directory</Directory>
 
   <!-- Read standard .directory and .desktop file locations -->
   <DefaultAppDirs/>

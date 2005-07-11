@@ -3,8 +3,8 @@
 
 <Menu>
 
-  <Name>Settings</Name>
-  <Directory>Settings.directory</Directory>
+  <Name>Desktop</Name>
+  <Directory>Desktop.directory</Directory>
 
   <!-- Read standard .directory and .desktop file locations -->
   <DefaultAppDirs/>

@@ -1,3 +1,21 @@
+2005-07-11  Mark McLoughlin  <mark@skynet.ie>
+
+	Fixes "gmenu-simple-editor calls the Desktop menu
+	Preferences" (bug #309693)
+
+	* desktop-directories/Desktop.directory.in: add for
+	settings.menu
+	
+	* desktop-directories/Preferences.directory.in: add
+	for preferences.menu
+	
+	* desktop-directories/Makefile.am: add new .directory
+	files.
+	
+	* layout/preferences.menu: use Desktop.directory.in
+	
+	* layout/settings.menu: use Preferences.directory.in
+
 2005-06-28  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix for bug #305748 - only include ".directory" in

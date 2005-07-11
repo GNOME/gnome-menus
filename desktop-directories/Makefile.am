@@ -7,6 +7,7 @@ directory_in_files =				\
 	Accessories.directory.in		\
 	Applications.directory.in		\
 	Development.directory.in		\
+	Desktop.directory.in			\
 	Education.directory.in			\
 	Games.directory.in			\
 	Graphics.directory.in			\
@@ -14,6 +15,7 @@ directory_in_files =				\
 	Multimedia.directory.in			\
 	Office.directory.in			\
 	Other.directory.in			\
+	Preferences.directory.in		\
 	Settings-Accessibility.directory.in	\
 	Settings.directory.in			\
 	System-Settings.directory.in		\
