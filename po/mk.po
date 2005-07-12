@@ -8,10 +8,10 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus VERSION\n"
+"Project-Id-Version: gnome-menus 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-01 06:03+0000\n"
-"PO-Revision-Date: 2005-07-01 10:34+0200\n"
+"POT-Creation-Date: 2005-07-12 22:13+0000\n"
+"PO-Revision-Date: 2005-07-13 00:19+0200\n"
 "Last-Translator: Arangel Angov <ufo@users.ossm.org.mk>\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
 "MIME-Version: 1.0\n"
@@ -38,6 +38,14 @@ msgstr "Алатки за работната површина"
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Апликации"
+
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Работна површина"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Лични преференци и администраторски поставувања"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -99,6 +107,15 @@ msgstr "Апликации кои што не влегуваат во ниедн
 msgid "Other"
 msgstr "Други"
 
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Лични преференци"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Параметри"
+
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Параметри поврзани со пристапноста"
@@ -106,10 +123,6 @@ msgstr "Параметри поврзани со пристапноста"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Лични параметри и поставувања"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Параметри"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -156,7 +169,9 @@ msgstr "Покажи"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Не можам да го пронајдам домашниот директориум: не е поставен во /etc/passwd и нема вредност за $HOME во околината."
+msgstr ""
+"Не можам да го пронајдам домашниот директориум: не е поставен во /etc/passwd "
+"и нема вредност за $HOME во околината."
 
 #~ msgid "System Settings"
 #~ msgstr "Системски поставувања"
