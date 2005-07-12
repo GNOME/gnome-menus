@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: es\n"
+"Project-Id-Version: gnome-menus-2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-06 18:27+0200\n"
-"PO-Revision-Date: 2005-07-06 18:28+0200\n"
+"POT-Creation-Date: 2005-07-13 00:01+0200\n"
+"PO-Revision-Date: 2005-07-13 00:02+0200\n"
 "Last-Translator: Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,6 +38,14 @@ msgstr "Accesorios del escritorio"
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Aplicaciones"
+
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Escritorio"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Preferencias personales y opciones de administración"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -99,6 +107,15 @@ msgstr "Aplicaciones que no entran en otras categorías"
 msgid "Other"
 msgstr "Otro"
 
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Preferencias personales"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Preferencias"
+
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Preferencias relacionadas con accesibilidad"
@@ -106,10 +123,6 @@ msgstr "Preferencias relacionadas con accesibilidad"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Preferencias y configuración personales"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Preferencias"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
