@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-30 21:33+0200\n"
-"PO-Revision-Date: 2005-06-30 21:34+0200\n"
+"POT-Creation-Date: 2005-07-12 20:02+0200\n"
+"PO-Revision-Date: 2005-07-12 20:03+0200\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,14 @@ msgstr "Príslušenstvo pracovnej plochy"
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Aplikácie"
+
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Pracovná plocha"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Osobné predvoľby a správcovské nastavenia"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -98,6 +106,15 @@ msgstr "Aplikácie, ktoré nepatria do ostatných kategórií"
 msgid "Other"
 msgstr "Ostatné"
 
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Osobné predvoľby"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Predvoľby"
+
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Predvoľby súvisiace s postihnutými"
@@ -105,10 +122,6 @@ msgstr "Predvoľby súvisiace s postihnutými"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Osobné predvoľby a nastavenia"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Predvoľby"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
