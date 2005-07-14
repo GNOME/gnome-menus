@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-05 14:06+0000\n"
-"PO-Revision-Date: 2005-07-05 22:14+0200\n"
+"POT-Creation-Date: 2005-07-13 14:15+0000\n"
+"PO-Revision-Date: 2005-07-14 10:46+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,14 @@ msgstr "Příslušenství prostředí pracovní plochy"
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Aplikace"
+
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Pracovní plocha"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Osobní nastavení a nastavení správy"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -97,6 +105,15 @@ msgstr "Aplikace které nepatří do jiných kategorií"
 msgid "Other"
 msgstr "Ostatní"
 
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Osobní nastavení"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Nastavení"
+
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Nastavení související s usnadněním"
@@ -104,10 +121,6 @@ msgstr "Nastavení související s usnadněním"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Osobní nastavení"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Nastavení"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
