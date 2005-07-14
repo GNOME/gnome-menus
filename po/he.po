@@ -35,7 +35,7 @@ msgstr "עזרי שולחן עבודה"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
-msgstr "יישומים"
+msgstr "ישומים"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -63,7 +63,7 @@ msgstr "גרפיקה"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "יישומים גרפיים"
+msgstr "ישומים גרפיים"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
@@ -87,11 +87,11 @@ msgstr "משרד"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "יישומים משרדיים"
+msgstr "ישומים משרדיים"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "יישומים שלא מתאימים לקטגוריה אחרת"
+msgstr "ישומים שלא מתאימים לקטגוריה אחרת"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
