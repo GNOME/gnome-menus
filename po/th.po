@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-02 09:49+0700\n"
-"PO-Revision-Date: 2005-07-02 09:53+0700\n"
+"POT-Creation-Date: 2005-07-17 08:49+0700\n"
+"PO-Revision-Date: 2005-07-17 08:55+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,14 @@ msgstr "โปรแกรมอำนวยความสะดวกบนเ
 #: desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "โปรแกรม"
+
+#: desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "พื้นโต๊ะ"
+
+#: desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "ปรับแต่งพื้นโต๊ะส่วนตัวและตั้งค่าระบบ"
 
 #: desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -97,6 +105,15 @@ msgstr "โปรแกรมที่ไม่อยู่ในหมวดอ
 msgid "Other"
 msgstr "อื่นๆ"
 
+#: desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "ปรับแต่งพื้นโต๊ะส่วนตัว"
+
+#: desktop-directories/Preferences.directory.in.h:2
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "ปรับแต่งพื้นโต๊ะ"
+
 #: desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "การปรับแต่งเกี่ยวกับระบบอำนวยการใช้งาน"
@@ -104,10 +121,6 @@ msgstr "การปรับแต่งเกี่ยวกับระบบ
 #: desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "ปรับแต่งและตั้งค่าพื้นโต๊ะส่วนตัว"
-
-#: desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "ปรับแต่งพื้นโต๊ะ"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
