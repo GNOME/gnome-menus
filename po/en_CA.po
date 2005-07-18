@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-03 18:29-0400\n"
-"PO-Revision-Date: 2005-07-03 01:44-0400\n"
+"POT-Creation-Date: 2005-07-18 04:44-0400\n"
+"PO-Revision-Date: 2005-07-18 01:44-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,14 @@ msgstr "Desktop accessories"
 #: desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Applications"
+
+#: desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Desktop"
+
+#: desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Personal preferences and administration settings"
 
 #: desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -97,6 +105,15 @@ msgstr "Applications that do not fit in other categories"
 msgid "Other"
 msgstr "Other"
 
+#: desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Personal preferences"
+
+#: desktop-directories/Preferences.directory.in.h:2
+#: desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Preferences"
+
 #: desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Accessibility-related preferences"
@@ -104,10 +121,6 @@ msgstr "Accessibility-related preferences"
 #: desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Personal preferences and settings"
-
-#: desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Preferences"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
