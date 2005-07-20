@@ -1,3 +1,7 @@
+2005-07-20  Mark McLoughlin  <mark@skynet.ie>
+
+	* POTFILES.in: add util/test-menu-spec.c
+
 2005-07-19  Clytie Siddall <clytie@riverland.net.au>
 
         * vi.po: Updated Vietnamese translation.

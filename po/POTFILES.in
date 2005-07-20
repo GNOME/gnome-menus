@@ -20,3 +20,4 @@ desktop-directories/System-Tools.directory.in
 simple-editor/gmenu-simple-editor.glade
 simple-editor/GMenuSimpleEditor/maindialog.py
 simple-editor/GMenuSimpleEditor/menufilewriter.py
+util/test-menu-spec.c
