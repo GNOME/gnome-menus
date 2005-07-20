@@ -1,12 +1,13 @@
 NULL =
 
-INCLUDES =				\
-	-DGMENU_I_KNOW_THIS_IS_UNSTABLE	\
-	-I$(srcdir)/../libmenu		\
-	$(GLIB_CFLAGS)		\
-	$(DISABLE_DEPRECATED_CFLAGS)	\
-	$(DEBUG_CFLAGS)			\
-	$(WARN_CFLAGS)			\
+INCLUDES =							\
+	-DGMENU_I_KNOW_THIS_IS_UNSTABLE				\
+	-DGNOMELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\"	\
+	-I$(srcdir)/../libmenu					\
+	$(GLIB_CFLAGS)						\
+	$(DISABLE_DEPRECATED_CFLAGS)				\
+	$(DEBUG_CFLAGS)						\
+	$(WARN_CFLAGS)						\
 	$(NULL)
 
 bin_PROGRAMS =				\

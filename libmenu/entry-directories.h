@@ -31,9 +31,9 @@ typedef void (*EntryDirectoryChangedFunc) (EntryDirectory *ed,
                                            gpointer        user_data);
 
 EntryDirectory *entry_directory_new        (DesktopEntryType  entry_type,
-                                            const char       *path);
+                                            const char       *utf8_path);
 EntryDirectory *entry_directory_new_legacy (DesktopEntryType  entry_type,
-                                            const char       *path,
+                                            const char       *utf8_path,
                                             const char       *legacy_prefix);
 
 EntryDirectory *entry_directory_ref   (EntryDirectory *ed);
@@ -64,10 +64,8 @@ void entry_directory_list_remove_monitors (EntryDirectoryList        *list,
                                            EntryDirectoryChangedFunc  callback,
                                            gpointer                   user_data);
 
-DesktopEntry* entry_directory_list_get_desktop   (EntryDirectoryList *list,
-                                                  const char         *file_id);
 DesktopEntry* entry_directory_list_get_directory (EntryDirectoryList *list,
-                                                  const char         *relative_path);
+                                                  const char         *utf8_relative_path);
 
 void entry_directory_list_get_all_desktops (EntryDirectoryList *list,
                                             DesktopEntrySet    *set);

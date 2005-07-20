@@ -21,6 +21,7 @@
 
 #include "gmenu-tree.h"
 
+#include <glib/gi18n.h>
 #include <string.h>
 
 static char     *menu_file = NULL;
@@ -28,9 +29,9 @@ static gboolean  monitor = FALSE;
 static gboolean  include_excluded = FALSE;
 
 static GOptionEntry options[] = {
-  { "file",             'f', 0, G_OPTION_ARG_STRING, &menu_file,        "Menu file",                  "MENU_FILE" },
-  { "monitor",          'm', 0, G_OPTION_ARG_NONE,   &monitor,          "Monitor for menu changes",   NULL },
-  { "include-excluded", 'i', 0, G_OPTION_ARG_NONE,   &include_excluded, "Include <Exclude>d entries", NULL },
+  { "file",             'f', 0, G_OPTION_ARG_STRING, &menu_file,        N_("Menu file"),                  N_("MENU_FILE") },
+  { "monitor",          'm', 0, G_OPTION_ARG_NONE,   &monitor,          N_("Monitor for menu changes"),   NULL },
+  { "include-excluded", 'i', 0, G_OPTION_ARG_NONE,   &include_excluded, N_("Include <Exclude>d entries"), NULL },
   { NULL }
 };
 
@@ -74,11 +75,18 @@ static void
 print_entry (GMenuTreeEntry *entry,
 	     const char     *path)
 {
+  char *utf8_path;
+
+  utf8_path = g_filename_to_utf8 (gmenu_tree_entry_get_desktop_file_path (entry),
+				  -1, NULL, NULL, NULL);
+
   g_print ("%s\t%s\t%s%s\n",
 	   path,
 	   gmenu_tree_entry_get_desktop_file_id (entry),
-	   gmenu_tree_entry_get_desktop_file_path (entry),
-	   gmenu_tree_entry_get_is_excluded (entry) ? " <excluded>" : "");
+	   utf8_path ? utf8_path : _("[Invalid Filename]"),
+	   gmenu_tree_entry_get_is_excluded (entry) ? _(" <excluded>") : "");
+
+  g_free (utf8_path);
 }
 
 static void
@@ -146,12 +154,12 @@ handle_tree_changed (GMenuTree *tree)
 {
   GMenuTreeDirectory *root;
 
-  g_print ("\n\n\n==== Menu changed, reloading ====\n\n\n");
+  g_print (_("\n\n\n==== Menu changed, reloading ====\n\n\n"));
 
   root = gmenu_tree_get_root_directory (tree);
   if (root == NULL)
     {
-      g_warning ("Menu tree is empty");
+      g_warning (_("Menu tree is empty"));
       return;
     }
 
@@ -166,9 +174,14 @@ main (int argc, char **argv)
   GMenuTree          *tree;
   GMenuTreeDirectory *root;
 
-  options_context = g_option_context_new ("- test GNOME's implementation of the Desktop Menu Specification");
+  bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
+  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+  textdomain (GETTEXT_PACKAGE);
+
+  options_context = g_option_context_new (_("- test GNOME's implementation of the Desktop Menu Specification"));
   g_option_context_add_main_entries (options_context, options, GETTEXT_PACKAGE);
   g_option_context_parse (options_context, &argc, &argv, NULL);
+  g_option_context_free (options_context);
 
   tree = gmenu_tree_lookup (menu_file ? menu_file : "applications.menu",
 			    include_excluded ? GMENU_TREE_FLAGS_INCLUDE_EXCLUDED : GMENU_TREE_FLAGS_NONE);
@@ -182,7 +195,7 @@ main (int argc, char **argv)
     }
   else
     {
-      g_warning ("Menu tree is empty");
+      g_warning (_("Menu tree is empty"));
     }
 
   if (monitor)

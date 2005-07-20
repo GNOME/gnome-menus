@@ -494,6 +494,8 @@ free_event_info (MenuMonitorEventInfo *event)
 
   event->monitor = NULL;
   event->event   = MENU_MONITOR_EVENT_INVALID;
+
+  g_free (event);
 }
 #endif /* HAVE_FAM */
 

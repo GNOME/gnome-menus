@@ -306,6 +306,7 @@ desktop_entry_new (const char *path)
 {
   DesktopEntryType  type;
   DesktopEntry     *retval;
+  char             *utf8_path;
 
   menu_verbose ("Loading desktop entry \"%s\"\n", path);
 
@@ -322,6 +323,18 @@ desktop_entry_new (const char *path)
       menu_verbose ("Unknown desktop entry suffix in \"%s\"\n",
                     path);
       return NULL;
+    }
+
+  utf8_path = g_filename_to_utf8 (path, -1, NULL, NULL, NULL);
+  if (utf8_path == NULL)
+    {
+      menu_verbose ("Unrecognised filename encoding in '%s'\n",
+		    path);
+      return NULL;
+    }
+  else
+    {
+      g_free (utf8_path);
     }
 
   retval = g_new0 (DesktopEntry, 1);
@@ -451,12 +464,20 @@ desktop_entry_get_type (DesktopEntry *entry)
   return entry->type;
 }
 
+/*
+ * Return value is in filename encoding, but we're also
+ * guaranteed that it will convert to UTF-8
+ */
 const char *
 desktop_entry_get_path (DesktopEntry *entry)
 {
   return entry->path;
 }
 
+/*
+ * Return value is in filename encoding, but we're also
+ * guaranteed that it will convert to UTF-8
+ */
 const char *
 desktop_entry_get_basename (DesktopEntry *entry)
 {

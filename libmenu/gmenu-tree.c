@@ -1039,8 +1039,17 @@ gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
   append_directory_path (directory, path);
 
   if (entry != NULL)
-    g_string_append (path,
-		     desktop_entry_get_basename (entry->desktop_entry));
+    {
+      char *utf8_basename;
+
+      utf8_basename = g_filename_to_utf8 (desktop_entry_get_basename (entry->desktop_entry),
+					  -1, NULL, NULL, NULL);
+      g_assert (utf8_basename != NULL);
+
+      g_string_append (path, utf8_basename);
+
+      g_free (utf8_basename);
+    }
 
   return g_string_free (path, FALSE);
 }
@@ -1077,6 +1086,9 @@ gmenu_tree_entry_get_exec (GMenuTreeEntry *entry)
   return desktop_entry_get_exec (entry->desktop_entry);
 }
 
+/*
+ * Return value is in filename encoding
+ */
 const char *
 gmenu_tree_entry_get_desktop_file_path (GMenuTreeEntry *entry)
 {

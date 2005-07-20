@@ -1,3 +1,59 @@
+2005-07-20  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-monitor.c: (free_event_info): plug
+	a leak.
+
+	* libmenu/entry-directories.c:
+	(cached_dir_find_file_id),
+	(entry_directory_get_desktop),
+	(entry_directory_list_get_desktop): remove some unused code.
+	It became unused when we switched to matching <Filename>s
+	against a DesktopEntrySet of all the desktop entries.
+
+2005-07-20  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix things up so that we correctly handle different
+	filename encodings. Fixes bug #310939
+
+	As far as the API goes, the rule is that the return value
+	from gmenu_tree_entry_get_desktop_file_path() is in
+	the filename encoding; everything else is UTF-8
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_directory_make_path):
+	Convert filename encoded basename to UTF-8 before appending
+	to returned menu path.
+	
+	* libmenu/desktop-entries.c: (desktop_entry_new): don't
+	load any .desktop files whose filenames aren't in a
+	recognised encoding.
+	
+	* libmenu/entry-directories.[ch]:
+	(entry_directory_new_full): convert UTF-8 path to filename
+	encoding before loading; fallback to original path if UTF-8
+	conversion fails.
+	(get_desktop_file_id_from_path): convert the filename
+	encoded path to a UTF-8 desktop-file-id
+	(entry_directory_foreach_recursive): don't pass the
+	path and file_id to the callback; use the path as
+	a file_id for .directory files.
+	(entry_directory_get_flat_contents): convert filename
+	encoded path of .directory file to UTF-8 before using as
+	a desktop-file-id.
+	(entry_directory_list_get_directory): convert UTF-8 path
+	to filename encoding; fallback to original path if conversion
+	fails.
+	(get_all_func): we don't get passed the path anymore.
+	(entry_directory_list_get_all_desktops): munge the code
+	from entry_directory_list_add() in here since it was
+	its only user.
+
+	* util/Makefile.am: define GNOMELOCALEDIR in CFLAGS.
+	
+	* util/test-menu-spec.c:
+	(print_entry): convert desktop entry path to UTF-8 before
+	printing
+	(handle_tree_changed), (main): i18nize.
+	
 2005-07-11  Mark McLoughlin  <mark@skynet.ie>
 
 	Fixes "gmenu-simple-editor calls the Desktop menu

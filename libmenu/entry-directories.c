@@ -215,74 +215,6 @@ cached_dir_find_relative_path (CachedDir  *dir,
   return retval;
 }
 
-static DesktopEntry *
-cached_dir_find_file_id (CachedDir  *dir,
-                         const char *file_id,
-                         gboolean    legacy)
-{
-  DesktopEntry *retval = NULL;
-
-  if (!legacy)
-    {
-      char *p;
-      char *freeme;
-
-      p = freeme = g_strdup (file_id);
-      while (p != NULL)
-        {
-          char *q;
-
-          if ((retval = find_entry (dir, p)))
-            break;
-
-          q = strchr (p, '-');
-          if (q)
-            {
-              CachedDir *subdir;
-
-              *(q++) = '\0';
-
-              if ((subdir = find_subdir (dir, p)))
-                {
-                  retval = cached_dir_find_file_id (subdir, q, legacy);
-                  if (retval)
-                    break;
-                }
-            }
-
-          p = q;
-        }
-
-      g_free (freeme);
-    }
-  else /* legacy */
-    {
-      retval = find_entry (dir, file_id);
-
-      /* Ignore entries with categories in legacy trees
-       */
-      if (retval && desktop_entry_has_categories (retval))
-        retval = NULL;
-
-      if (!retval)
-        {
-          GSList *tmp;
-
-          tmp = dir->subdirs;
-          while (tmp != NULL)
-            {
-              retval = cached_dir_find_file_id (tmp->data, file_id, legacy);
-              if (retval)
-                break;
-
-              tmp = tmp->next;
-            }
-        }
-    }
-
-  return retval;
-}
-
 static CachedDir *
 cached_dir_lookup (const char *canonical)
 {
@@ -747,13 +679,19 @@ cached_dir_get_entries (CachedDir   *dir)
 
 static EntryDirectory *
 entry_directory_new_full (DesktopEntryType  entry_type,
-                          const char       *path,
+                          const char       *utf8_path,
                           gboolean          is_legacy,
                           const char       *legacy_prefix)
 {
   EntryDirectory *ed;
   CachedDir      *cd;
+  const char     *path;
+  char           *freeme;
   char           *canonical;
+
+  path = freeme = g_filename_from_utf8 (utf8_path, -1, NULL, NULL, NULL);
+  if (!path)
+    path = utf8_path;
 
   menu_verbose ("Loading entry directory \"%s\" (legacy %s)\n",
                 path,
@@ -764,6 +702,7 @@ entry_directory_new_full (DesktopEntryType  entry_type,
     {
       menu_verbose ("Failed to canonicalize \"%s\": %s\n",
                     path, g_strerror (errno));
+      g_free (freeme);
       return NULL;
     }
 
@@ -779,23 +718,24 @@ entry_directory_new_full (DesktopEntryType  entry_type,
   ed->refcount      = 1;
 
   g_free (canonical);
+  g_free (freeme);
 
   return ed;
 }
 
 EntryDirectory *
 entry_directory_new (DesktopEntryType  entry_type,
-                     const char       *path)
+                     const char       *utf8_path)
 {
-  return entry_directory_new_full (entry_type, path, FALSE, NULL);
+  return entry_directory_new_full (entry_type, utf8_path, FALSE, NULL);
 }
 
 EntryDirectory *
 entry_directory_new_legacy (DesktopEntryType  entry_type,
-                            const char       *path,
+                            const char       *utf8_path,
                             const char       *legacy_prefix)
 {
-  return entry_directory_new_full (entry_type, path, TRUE, legacy_prefix);
+  return entry_directory_new_full (entry_type, utf8_path, TRUE, legacy_prefix);
 }
 
 EntryDirectory *
@@ -845,47 +785,6 @@ entry_directory_remove_monitor (EntryDirectory            *ed,
 }
 
 static DesktopEntry *
-entry_directory_get_desktop (EntryDirectory *ed,
-                             const char     *file_id)
-{
-  DesktopEntry *entry;
-  const char   *unprefixed_id;
-
-  if (ed->entry_type != DESKTOP_ENTRY_DESKTOP)
-    return NULL;
-
-  unprefixed_id = NULL;
-
-  if (ed->is_legacy && ed->legacy_prefix)
-    {
-      if (!g_str_has_prefix (file_id, ed->legacy_prefix))
-        return NULL;
-
-      unprefixed_id = file_id + strlen (ed->legacy_prefix);
-
-      if (unprefixed_id[0] != '-')
-	return NULL;
-
-      unprefixed_id++;
-    }
-
-  entry = cached_dir_find_file_id (ed->dir,
-                                   unprefixed_id ? unprefixed_id : file_id,
-                                   ed->is_legacy);
-  if (entry == NULL || desktop_entry_get_type (entry) != DESKTOP_ENTRY_DESKTOP)
-    return NULL;
-
-  if (ed->is_legacy && !desktop_entry_has_categories (entry))
-    {
-      entry = desktop_entry_copy (entry);
-      desktop_entry_add_legacy_category (entry);
-      return entry;
-    }
-
-  return desktop_entry_ref (entry);
-}
-
-static DesktopEntry *
 entry_directory_get_directory (EntryDirectory *ed,
                                const char     *relative_path)
 {
@@ -903,37 +802,51 @@ entry_directory_get_directory (EntryDirectory *ed,
 
 static char *
 get_desktop_file_id_from_path (EntryDirectory *ed,
-                               const char     *relative_path)
+			       const char     *relative_path)
 {
   char *retval;
+  char *utf8_path;
 
-  if (!ed->is_legacy)
+  utf8_path = g_filename_to_utf8 (relative_path, -1, NULL, NULL, NULL);
+  g_assert (utf8_path != NULL);
+
+  if (ed->entry_type == DESKTOP_ENTRY_DESKTOP)
     {
-      retval = g_strdelimit (g_strdup (relative_path), "/", '-');
+      if (!ed->is_legacy)
+	{
+	  retval = g_strdelimit (utf8_path, "/", '-');
+	  utf8_path = NULL;
+	}
+      else
+	{
+	  char *basename;
+
+	  basename = g_path_get_basename (utf8_path);
+
+	  if (ed->legacy_prefix)
+	    {
+	      retval = g_strjoin ("-", ed->legacy_prefix, basename, NULL);
+	      g_free (basename);
+	    }
+	  else
+	    {
+	      retval = basename;
+	    }
+	}
     }
   else
     {
-      char *basename;
-
-      basename = g_path_get_basename (relative_path);
-
-      if (ed->legacy_prefix)
-        {
-          retval = g_strjoin ("-", ed->legacy_prefix, basename, NULL);
-          g_free (basename);
-        }
-      else
-        {
-          retval = basename;
-        }
+      retval = utf8_path;
+      utf8_path = NULL;
     }
+
+  g_free (utf8_path);
 
   return retval;
 }
 
 typedef gboolean (* EntryDirectoryForeachFunc) (EntryDirectory  *ed,
                                                 DesktopEntry    *entry,
-                                                const char      *relative_path,
                                                 const char      *file_id,
                                                 DesktopEntrySet *set,
                                                 gpointer         user_data);
@@ -964,11 +877,9 @@ entry_directory_foreach_recursive (EntryDirectory            *ed,
           g_string_append (relative_path,
                            desktop_entry_get_basename (entry));
 
-          file_id = NULL;
-          if (ed->entry_type == DESKTOP_ENTRY_DESKTOP)
-            file_id = get_desktop_file_id_from_path (ed, relative_path->str);
+	  file_id = get_desktop_file_id_from_path (ed, relative_path->str);
 
-          ret = func (ed, entry, relative_path->str, file_id, set, user_data);
+          ret = func (ed, entry, file_id, set, user_data);
 
           g_free (file_id);
 
@@ -1061,9 +972,16 @@ entry_directory_get_flat_contents (EntryDirectory   *ed,
       if (directory_entries &&
           desktop_entry_get_type (entry) == DESKTOP_ENTRY_DIRECTORY)
         {
+	  char *utf8_basename;
+
+	  utf8_basename = g_filename_to_utf8 (basename, -1, NULL, NULL, NULL);
+	  g_assert (utf8_basename != NULL);
+
           desktop_entry_set_add_entry (directory_entries,
-                                       entry,
-                                       g_strdup (basename));
+				       entry,
+				       utf8_basename);
+
+	  g_free (utf8_basename);
         }
 
       tmp = tmp->next;
@@ -1172,30 +1090,17 @@ entry_directory_list_append_list (EntryDirectoryList *list,
 }
 
 DesktopEntry *
-entry_directory_list_get_desktop (EntryDirectoryList *list,
-                                  const char         *file_id)
-{
-  DesktopEntry *retval = NULL;
-  GList        *tmp;
-
-  tmp = list->dirs;
-  while (tmp != NULL)
-    {
-      if ((retval = entry_directory_get_desktop (tmp->data, file_id)) != NULL)
-        break;
-
-      tmp = tmp->next;
-    }
-
-  return retval;
-}
-
-DesktopEntry *
 entry_directory_list_get_directory (EntryDirectoryList *list,
-                                    const char         *relative_path)
+                                    const char         *utf8_relative_path)
 {
   DesktopEntry *retval = NULL;
   GList        *tmp;
+  const char   *relative_path;
+  char         *freeme;
+
+  relative_path = freeme = g_filename_from_utf8 (utf8_relative_path, -1, NULL, NULL, NULL);
+  if (relative_path == NULL)
+    relative_path = utf8_relative_path;
 
   tmp = list->dirs;
   while (tmp != NULL)
@@ -1206,16 +1111,42 @@ entry_directory_list_get_directory (EntryDirectoryList *list,
       tmp = tmp->next;
     }
 
+  g_free (freeme);
+
   return retval;
 }
 
-static void
-entry_directory_list_add (EntryDirectoryList        *list,
-                          EntryDirectoryForeachFunc  func,
-                          DesktopEntrySet           *set,
-                          gpointer                   user_data)
+static gboolean
+get_all_func (EntryDirectory   *ed,
+              DesktopEntry     *entry,
+              const char       *file_id,
+              DesktopEntrySet  *set,
+              gpointer          user_data)
+{
+  if (ed->is_legacy && !desktop_entry_has_categories (entry))
+    {
+      entry = desktop_entry_copy (entry);
+      desktop_entry_add_legacy_category (entry);
+    }
+  else
+    {
+      entry = desktop_entry_ref (entry);
+    }
+
+  desktop_entry_set_add_entry (set, entry, file_id);
+  desktop_entry_unref (entry);
+
+  return TRUE;
+}
+
+void
+entry_directory_list_get_all_desktops (EntryDirectoryList *list,
+                                       DesktopEntrySet    *set)
 {
   GList *tmp;
+
+  menu_verbose (" Storing all of list %p in set %p\n",
+                list, set);
 
   /* The only tricky thing here is that desktop files later
    * in the search list with the same relative path
@@ -1233,46 +1164,10 @@ entry_directory_list_add (EntryDirectoryList        *list,
   tmp = g_list_last (list->dirs);
   while (tmp != NULL)
     {
-      entry_directory_foreach (tmp->data, func, set, user_data);
+      entry_directory_foreach (tmp->data, get_all_func, set, NULL);
 
       tmp = tmp->prev;
     }
-}
-
-static gboolean
-get_all_func (EntryDirectory   *ed,
-              DesktopEntry     *entry,
-              const char       *relative_path,
-              const char       *file_id,
-              DesktopEntrySet  *set,
-              gpointer          user_data)
-{
-  if (ed->is_legacy && !desktop_entry_has_categories (entry))
-    {
-      entry = desktop_entry_copy (entry);
-      desktop_entry_add_legacy_category (entry);
-    }
-  else
-    {
-      entry = desktop_entry_ref (entry);
-    }
-
-  desktop_entry_set_add_entry (set,
-                               entry,
-                               file_id ? file_id : relative_path);
-  desktop_entry_unref (entry);
-
-  return TRUE;
-}
-
-void
-entry_directory_list_get_all_desktops (EntryDirectoryList *list,
-                                       DesktopEntrySet    *set)
-{
-  menu_verbose (" Storing all of list %p in set %p\n",
-                list, set);
-
-  entry_directory_list_add (list, get_all_func, set, NULL);
 }
 
 void
