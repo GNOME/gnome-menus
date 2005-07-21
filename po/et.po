@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-11 14:09+0000\n"
-"PO-Revision-Date: 2005-07-12 00:37+0300\n"
+"POT-Creation-Date: 2005-07-20 22:24+0000\n"
+"PO-Revision-Date: 2005-07-21 08:24+0300\n"
 "Last-Translator: Priit Laes <amd@store20.com>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -168,4 +168,53 @@ msgstr "Vaade"
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
 msgstr "Kodukausta pole võimalik leida: seda pole määratud ei /etc/passwd failis ega $HOME keskkonnamuutujas"
+
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Menüüfail"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "MENU_FILE"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Jälgi muudatusi menüüs"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Kaasa <välistatud> kirjed"
+
+#: ../util/test-menu-spec.c:86
+msgid "[Invalid Filename]"
+msgstr "[Vigane failinimi]"
+
+#: ../util/test-menu-spec.c:87
+msgid " <excluded>"
+msgstr "<välistatud>"
+
+#: ../util/test-menu-spec.c:157
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Menüü muudetud, laen uuesti ====\n"
+"\n"
+"\n"
+
+#: ../util/test-menu-spec.c:162
+#: ../util/test-menu-spec.c:198
+msgid "Menu tree is empty"
+msgstr "Menüüpuu on tühi"
+
+#: ../util/test-menu-spec.c:181
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- testi GNOME'i teostust Töölaua menüü spetsifikatsioonist"
 
