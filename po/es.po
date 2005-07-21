@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus-2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-13 00:01+0200\n"
-"PO-Revision-Date: 2005-07-13 00:02+0200\n"
+"POT-Creation-Date: 2005-07-21 21:26+0200\n"
+"PO-Revision-Date: 2005-07-21 21:29+0200\n"
 "Last-Translator: Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -173,6 +173,48 @@ msgid ""
 msgstr ""
 "No se puede encontrar el directorio personal: no está establecido en /etc/"
 "passwd y no hay ningún valor en la variable de entorno $HOME"
+
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Archivo de menú"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "ARCHIVO_MENÚ"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Monitorizar cambios en el menú"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Incluir entradas <Exclude>"
+
+#: ../util/test-menu-spec.c:86
+msgid "[Invalid Filename]"
+msgstr "[Nombre de archivo inválido]"
+
+#: ../util/test-menu-spec.c:87
+msgid " <excluded>"
+msgstr " <excluded>"
+
+#: ../util/test-menu-spec.c:157
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr "\n\n\n==== El menú ha cambiado, recargándolo ====\n\n\n"
+
+#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+msgid "Menu tree is empty"
+msgstr "El árbol del menú está vacío"
+
+#: ../util/test-menu-spec.c:181
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- probar la implementación de Gnome de la Especificación del Menú de Escritorio"
 
 #~ msgid "Hide"
 #~ msgstr "Ocultar"
