@@ -7,14 +7,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus for Gnome 2.12\n"
-"POT-Creation-Date: 2005-07-19 06:25+0000\n"
-"PO-Revision-Date: 2005-07-19 22:30+0930\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-07-21 06:25+0000\n"
+"PO-Revision-Date: 2005-07-21 17:27+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -168,7 +168,54 @@ msgstr "Hiển thị"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Không tìm thấy thư mục chính: chưa lập trong «/etc/passwd» và không có giá trị cho biến «$HOME» trong môi trường."
+msgstr ""
+"Không tìm thấy thư mục chính: chưa lập trong «/etc/passwd» và không có giá "
+"trị cho biến «$HOME» trong môi trường."
 
-msgid "System Settings"
-msgstr "Thiết lập hệ thống"
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Tập tin trình đơn"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "TẬP_TIN_TRÌNH_ĐƠN"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Theo dõi thay đổi trình đơn"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Gồm các mục nhập bị [loại trừ]"
+
+#: ../util/test-menu-spec.c:86
+msgid "[Invalid Filename]"
+msgstr "[Tên tập tin không hợp lệ]"
+
+#: ../util/test-menu-spec.c:87
+msgid " <excluded>"
+msgstr "<bị loại trừ>"
+
+#: ../util/test-menu-spec.c:157
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"━━━ Trình đơn đã thay đổi nên tải lại ━━━\n"
+"\n"
+"\n"
+
+#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+msgid "Menu tree is empty"
+msgstr "Cây trình đơn rỗng"
+
+#: ../util/test-menu-spec.c:181
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "— thử ra sự thực hiện Gnome của Đặc tả Trình đơn Màn hình Làm việc"
