@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-11 20:39+0200\n"
-"PO-Revision-Date: 2005-07-11 20:40+0200\n"
+"POT-Creation-Date: 2005-07-22 16:11+0200\n"
+"PO-Revision-Date: 2005-07-22 16:15+0200\n"
 "Last-Translator: Hendrik Brandt <heb@gnome-de.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -171,4 +171,52 @@ msgstr ""
 "Das Heimatverzeichnis des Benutzers konnte nicht gefunden werden: es ist "
 "weder in /etc/passwd angegeben, noch gibt es einen Wert für die "
 "Umgebungsvariable $HOME"
+
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Menüdatei"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "MENÜ_DATEI"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Menüänderungen überwachen"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Mit <ausschließen> markierte Einträge einbeziehen"
+
+#: ../util/test-menu-spec.c:86
+msgid "[Invalid Filename]"
+msgstr "[Ungültiger Dateiname]"
+
+#: ../util/test-menu-spec.c:87
+msgid " <excluded>"
+msgstr " <ausschließen>"
+
+#: ../util/test-menu-spec.c:157
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Menü wurde geändert, wird neu geladen ====\n"
+"\n"
+"\n"
+
+#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+msgid "Menu tree is empty"
+msgstr "Der Menübaum ist leer"
+
+#: ../util/test-menu-spec.c:181
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- testen der GNOME-Implementation der Desktop-Menü-Spezifikation"
 
