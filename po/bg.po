@@ -1,16 +1,16 @@
 # Bulgarian translation of gnome-menus.
 # Copyright (C) 2004 Free Software Foundation
 # This file is distributed under the same license as the gnome-menus package.
-# Vladimir "Kaladan" Petkov <vpetkov@i-space.org>, 2004.
-# Vladimir "Kaladan" Petkov <vpetkov@i-space.org>, 2005.
+# Vladimir "Kaladan" Petkov <vpetkov@i-space.org>, 2004, 2005.
+# Rostislav "zbrox" Raykov <zbrox@i-space.org>, 2005
 # 
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-08 15:51+0300\n"
-"PO-Revision-Date: 2005-06-03 14:33+0300\n"
+"POT-Creation-Date: 2005-07-22 19:10+0300\n"
+"PO-Revision-Date: 2005-07-22 19:13+0300\n"
 "Last-Translator: Rostislav \"zbrox\" Raykov <zbrox@i-space.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,6 +39,14 @@ msgstr "Набор от помощни програми"
 msgid "Applications"
 msgstr "Програми"
 
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Работен плот"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Лични предпочитания и административни настройки"
+
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "Разработка"
@@ -47,9 +55,9 @@ msgstr "Разработка"
 msgid "Tools for software development"
 msgstr "Инструменти за разработка на софтуер"
 
-#: ../desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "Обучение чрез забавление"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Обучение"
 
 #: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -99,6 +107,15 @@ msgstr "Програми, които не принадлежат към друг
 msgid "Other"
 msgstr "Други"
 
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Лични предпочитания"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Настройки"
+
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Настройки, свързани с достъпността"
@@ -106,10 +123,6 @@ msgstr "Настройки, свързани с достъпността"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Лични настройки и предпочитания"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Настройки"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -162,8 +175,50 @@ msgstr ""
 "Домашната папка не може да бъде намерена: не е зададена в /etc/passwd и няма "
 "стойност за $HOME в средата"
 
-#~ msgid "Hide"
-#~ msgstr "Скриване"
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Файл за меню"
 
-#~ msgid "System Settings"
-#~ msgstr "Настройки на системата"
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "ФАЙЛ_ЗА_МЕНЮ"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Наблюдение за промени в менюто"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Включване на елементите отбелязани за <пропускане>"
+
+#: ../util/test-menu-spec.c:86
+msgid "[Invalid Filename]"
+msgstr "[невалидно файлово име]"
+
+#: ../util/test-menu-spec.c:87
+msgid " <excluded>"
+msgstr " <пропускане>"
+
+#: ../util/test-menu-spec.c:157
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Менюто е било променено - презарежда се ====\n"
+"\n"
+"\n"
+
+#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+msgid "Menu tree is empty"
+msgstr "Дървовидната структура на менюто е празна."
+
+#: ../util/test-menu-spec.c:181
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- тестване на реализацията на спецификазията за менюта към работния плот на GNOME"
