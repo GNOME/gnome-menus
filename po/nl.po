@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-05-18 05:44+0000\n"
-"PO-Revision-Date: 2005-05-18 08:10+0200\n"
+"POT-Creation-Date: 2005-07-21 14:25+0000\n"
+"PO-Revision-Date: 2005-07-22 01:21+0200\n"
 "Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,15 @@ msgstr "Bureaublad hulpmiddelen"
 msgid "Applications"
 msgstr "Toepassingen"
 
+# werkomgeving/bureaublad/desktop
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Bureaublad"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Persoonlijke voorkeuren en instellingen"
+
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "Ontwikkeling"
@@ -45,9 +54,10 @@ msgstr "Ontwikkeling"
 msgid "Tools for software development"
 msgstr "Gereedschap voor software ontwikkeling"
 
-#: ../desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "Edutainment"
+# leermiddelen
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Educatie"
 
 #: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -98,6 +108,15 @@ msgstr ""
 msgid "Other"
 msgstr "Overig"
 
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Persoonlijke voorkeuren"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Voorkeuren"
+
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Toegangelijkheid gerelateerde voorkeuren"
@@ -105,10 +124,6 @@ msgstr "Toegangelijkheid gerelateerde voorkeuren"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Persoonlijke voorkeuren en instellingen"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Voorkeuren"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -148,14 +163,62 @@ msgid "Name"
 msgstr "Naam"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Hide"
-msgstr "Verbergen"
+msgid "Show"
+msgstr "Tonen"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:43
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Kan de persoonlijke map niet vinden: niet ingesteld in /etc/passwd en geen waarde voor $HOME in de omgevingsvariabelen"
+msgstr ""
+"Kan de persoonlijke map niet vinden: niet ingesteld in /etc/passwd en geen "
+"waarde voor $HOME in de omgevingsvariabelen"
+
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Menubestand"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "MENU_BESTAND"
+
+# in de gaten houden/controleren op/monitoren voor 
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Monitoren voor menuwijzigingen"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Inclusief <uitgezonderd>e items"
+
+#: ../util/test-menu-spec.c:86
+msgid "[Invalid Filename]"
+msgstr "[Ongeldige bestandsnaam]"
+
+#: ../util/test-menu-spec.c:87
+msgid " <excluded>"
+msgstr " <uitgezonderd>"
+
+#: ../util/test-menu-spec.c:157
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr "\n\n\n==== Menu is gewijzigd, herladen ====\n\n\n"
+
+#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+msgid "Menu tree is empty"
+msgstr "Menu-boomstructuur is leeg"
+
+#: ../util/test-menu-spec.c:181
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- GNOME's implementatie van de Desktop Menu Specification testen"
+
+#~ msgid "Hide"
+#~ msgstr "Verbergen"
 
 #~ msgid "System Settings"
 #~ msgstr "Systeeminstellingen"
