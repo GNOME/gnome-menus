@@ -5,15 +5,17 @@
 # Clytie Siddall <clytie@riverland.net.au>, 2005.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gnome-menus.vi\n"
+"Project-Id-Version: Gnome-menus Gnome 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-21 06:25+0000\n"
-"PO-Revision-Date: 2005-05-10 15:03+0930\n"
+"POT-Creation-Date: 2005-07-21 23:24+0000\n"
+"PO-Revision-Date: 2005-07-22 20:34+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
-"Language-Team: Vietnamese <gnomevi-list@lists.sf.net>\n"
+"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: LocFactoryEditor 1.2.2\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -41,9 +43,8 @@ msgid "Desktop"
 msgstr "Màn hình nền"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
-#, fuzzy
 msgid "Personal preferences and administration settings"
-msgstr "Thiết lập và sở thích cá nhân"
+msgstr "Thiết lập quản lý và sở thích cá nhân"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -54,9 +55,8 @@ msgid "Tools for software development"
 msgstr "Công cụ phát triển phần mềm"
 
 #: ../desktop-directories/Education.directory.in.h:1
-#, fuzzy
 msgid "Education"
-msgstr "Trò chơi mang tính giáo dục"
+msgstr "Giáo dục"
 
 #: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -108,9 +108,8 @@ msgid "Other"
 msgstr "Trình khác"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
-#, fuzzy
 msgid "Personal preferences"
-msgstr "Thiết lập và sở thích cá nhân"
+msgstr "Sở thích cá nhân"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
@@ -146,9 +145,8 @@ msgid "Edit Menus"
 msgstr "Sửa trình đơn"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
-#, fuzzy
 msgid "_Applications:"
-msgstr "Ứng dụng"
+msgstr "Ứ_ng dụng"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
@@ -160,9 +158,8 @@ msgstr "_Trình đơn"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
-#, fuzzy
 msgid "Name"
-msgstr "Trò chơi"
+msgstr "Tên"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
 msgid "Show"
@@ -178,27 +175,27 @@ msgstr ""
 
 #: ../util/test-menu-spec.c:32
 msgid "Menu file"
-msgstr ""
+msgstr "Tập tin trình đơn"
 
 #: ../util/test-menu-spec.c:32
 msgid "MENU_FILE"
-msgstr ""
+msgstr "TẬP_TIN_TRÌNH_ĐƠN"
 
 #: ../util/test-menu-spec.c:33
 msgid "Monitor for menu changes"
-msgstr ""
+msgstr "Bộ theo thay đổi trình đơn"
 
 #: ../util/test-menu-spec.c:34
 msgid "Include <Exclude>d entries"
-msgstr ""
+msgstr "Gồm các mục nhập <bị loại trừ>"
 
 #: ../util/test-menu-spec.c:86
 msgid "[Invalid Filename]"
-msgstr ""
+msgstr "[Tên tập tin không hợp lệ]"
 
 #: ../util/test-menu-spec.c:87
 msgid " <excluded>"
-msgstr ""
+msgstr "<bị loại trừ>"
 
 #: ../util/test-menu-spec.c:157
 msgid ""
@@ -209,14 +206,17 @@ msgid ""
 "\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"\n"
+"━━━ Trình đơn đã thay đổi nên đang tải lại ━━━\n"
+"\n"
+"\n"
 
 #: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
 msgid "Menu tree is empty"
-msgstr ""
+msgstr "Cây trình đơn rỗng"
 
 #: ../util/test-menu-spec.c:181
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
-
-msgid "System Settings"
-msgstr "Thiết lập hệ thống"
+msgstr "— thử ra sự thực hiện Gnome của Đặc tả Trình đơn Màn hình làm việc"
