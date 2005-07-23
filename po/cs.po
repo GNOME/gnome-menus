@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-13 14:15+0000\n"
-"PO-Revision-Date: 2005-07-14 10:46+0200\n"
+"POT-Creation-Date: 2005-07-23 14:24+0000\n"
+"PO-Revision-Date: 2005-07-23 18:20+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -170,6 +170,48 @@ msgid ""
 msgstr ""
 "Nemohu najít domovský adresář: nenastaveno v /etc/passwd a žádná hodnota "
 "$HOME v prostředí"
+
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Soubor menu"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "SOUBOR_MENU"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Sledovat změny menu"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Zahrnout <Exclude>ované položky"
+
+#: ../util/test-menu-spec.c:86
+msgid "[Invalid Filename]"
+msgstr "[Neplatné jméno souboru]"
+
+#: ../util/test-menu-spec.c:87
+msgid " <excluded>"
+msgstr " <vynecháno>"
+
+#: ../util/test-menu-spec.c:157
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr "\n\n\n==== Menu změněno, načítám znovu ====\n\n\n"
+
+#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+msgid "Menu tree is empty"
+msgstr "Strom menu je prázdný"
+
+#: ../util/test-menu-spec.c:181
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- otestovat implementaci Desktop Menu Specification pro GNOME"
 
 #~ msgid "Hide"
 #~ msgstr "Skrýt"
