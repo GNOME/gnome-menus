@@ -2,14 +2,15 @@
 # Copyright (C) 2004-2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gail package.
 # Tommi Vainikainen <Tommi.Vainikainen@iki.fi>, 2004-2005.
+# Ilkka Tuohela <hile@iki.fi>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-26 12:54+0300\n"
-"PO-Revision-Date: 2005-06-26 13:01+0300\n"
-"Last-Translator: Tommi Vainikainen <thv@iki.fi>\n"
+"POT-Creation-Date: 2005-07-24 16:10+0300\n"
+"PO-Revision-Date: 2005-07-24 16:15+0300\n"
+"Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +38,14 @@ msgstr "Työpöydän apuohjelmat"
 msgid "Applications"
 msgstr "Sovellukset"
 
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Työpöytä"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Henkilökohtaiset ja järjestelmän asetukset"
+
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "Ohjelmointi"
@@ -45,9 +54,9 @@ msgstr "Ohjelmointi"
 msgid "Tools for software development"
 msgstr "Työkaluja sovellusten tekemiseen"
 
-#: ../desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "Opetusviihde"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Opetusohjelmat"
 
 #: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -97,6 +106,15 @@ msgstr "Muihin luokkiin sopimattomat sovellukset"
 msgid "Other"
 msgstr "Muut"
 
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Henkilökohtaiset asetukset"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Asetukset"
+
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Esteettömyyteen liittyvät asetukset"
@@ -104,10 +122,6 @@ msgstr "Esteettömyyteen liittyvät asetukset"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Henkilökohtaiset asetukset"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Asetukset"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -158,5 +172,52 @@ msgstr ""
 "Kotihakemistoa ei löydy: ei asetettu tiedostossa /etc/passwd eikä $HOME "
 "muuttujalla ole arvoa"
 
-#~ msgid "System Settings"
-#~ msgstr "Järjestelmän asetukset"
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Valikkotiedosto"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "MENU_FILE"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Tarkkaile valikon muuttumista"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Näytä myös piilotetut (<Exclude>) kohdat"
+
+#: ../util/test-menu-spec.c:86
+msgid "[Invalid Filename]"
+msgstr "[Virheellinen tiedostonimi]"
+
+#: ../util/test-menu-spec.c:87
+msgid " <excluded>"
+msgstr "<piilotettu"
+
+#: ../util/test-menu-spec.c:157
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Valikko on muuttunut, ladataan uudestaan ====\n"
+"\n"
+"\n"
+
+
+#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+msgid "Menu tree is empty"
+msgstr "Valikko on tyhjä"
+
+#: ../util/test-menu-spec.c:181
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- testaa Gnomen toteutusta Työpöytävalikkojen määrittelystä"
+
