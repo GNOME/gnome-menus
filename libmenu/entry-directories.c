@@ -679,19 +679,13 @@ cached_dir_get_entries (CachedDir   *dir)
 
 static EntryDirectory *
 entry_directory_new_full (DesktopEntryType  entry_type,
-                          const char       *utf8_path,
+                          const char       *path,
                           gboolean          is_legacy,
                           const char       *legacy_prefix)
 {
   EntryDirectory *ed;
   CachedDir      *cd;
-  const char     *path;
-  char           *freeme;
   char           *canonical;
-
-  path = freeme = g_filename_from_utf8 (utf8_path, -1, NULL, NULL, NULL);
-  if (!path)
-    path = utf8_path;
 
   menu_verbose ("Loading entry directory \"%s\" (legacy %s)\n",
                 path,
@@ -702,7 +696,6 @@ entry_directory_new_full (DesktopEntryType  entry_type,
     {
       menu_verbose ("Failed to canonicalize \"%s\": %s\n",
                     path, g_strerror (errno));
-      g_free (freeme);
       return NULL;
     }
 
@@ -718,24 +711,23 @@ entry_directory_new_full (DesktopEntryType  entry_type,
   ed->refcount      = 1;
 
   g_free (canonical);
-  g_free (freeme);
 
   return ed;
 }
 
 EntryDirectory *
 entry_directory_new (DesktopEntryType  entry_type,
-                     const char       *utf8_path)
+                     const char       *path)
 {
-  return entry_directory_new_full (entry_type, utf8_path, FALSE, NULL);
+  return entry_directory_new_full (entry_type, path, FALSE, NULL);
 }
 
 EntryDirectory *
 entry_directory_new_legacy (DesktopEntryType  entry_type,
-                            const char       *utf8_path,
+                            const char       *path,
                             const char       *legacy_prefix)
 {
-  return entry_directory_new_full (entry_type, utf8_path, TRUE, legacy_prefix);
+  return entry_directory_new_full (entry_type, path, TRUE, legacy_prefix);
 }
 
 EntryDirectory *
@@ -805,23 +797,20 @@ get_desktop_file_id_from_path (EntryDirectory *ed,
 			       const char     *relative_path)
 {
   char *retval;
-  char *utf8_path;
-
-  utf8_path = g_filename_to_utf8 (relative_path, -1, NULL, NULL, NULL);
-  g_assert (utf8_path != NULL);
+  
+  retval = NULL;
 
   if (ed->entry_type == DESKTOP_ENTRY_DESKTOP)
     {
       if (!ed->is_legacy)
 	{
-	  retval = g_strdelimit (utf8_path, "/", '-');
-	  utf8_path = NULL;
+	  retval = g_strdelimit (g_strdup (relative_path), "/", '-');
 	}
       else
 	{
 	  char *basename;
 
-	  basename = g_path_get_basename (utf8_path);
+	  basename = g_path_get_basename (relative_path);
 
 	  if (ed->legacy_prefix)
 	    {
@@ -836,11 +825,8 @@ get_desktop_file_id_from_path (EntryDirectory *ed,
     }
   else
     {
-      retval = utf8_path;
-      utf8_path = NULL;
+      retval = g_strdup (relative_path);
     }
-
-  g_free (utf8_path);
 
   return retval;
 }
@@ -972,16 +958,9 @@ entry_directory_get_flat_contents (EntryDirectory   *ed,
       if (directory_entries &&
           desktop_entry_get_type (entry) == DESKTOP_ENTRY_DIRECTORY)
         {
-	  char *utf8_basename;
-
-	  utf8_basename = g_filename_to_utf8 (basename, -1, NULL, NULL, NULL);
-	  g_assert (utf8_basename != NULL);
-
           desktop_entry_set_add_entry (directory_entries,
 				       entry,
-				       utf8_basename);
-
-	  g_free (utf8_basename);
+				       basename);
         }
 
       tmp = tmp->next;
@@ -1091,16 +1070,10 @@ entry_directory_list_append_list (EntryDirectoryList *list,
 
 DesktopEntry *
 entry_directory_list_get_directory (EntryDirectoryList *list,
-                                    const char         *utf8_relative_path)
+                                    const char         *relative_path)
 {
   DesktopEntry *retval = NULL;
   GList        *tmp;
-  const char   *relative_path;
-  char         *freeme;
-
-  relative_path = freeme = g_filename_from_utf8 (utf8_relative_path, -1, NULL, NULL, NULL);
-  if (relative_path == NULL)
-    relative_path = utf8_relative_path;
 
   tmp = list->dirs;
   while (tmp != NULL)
@@ -1110,8 +1083,6 @@ entry_directory_list_get_directory (EntryDirectoryList *list,
 
       tmp = tmp->next;
     }
-
-  g_free (freeme);
 
   return retval;
 }

@@ -76,16 +76,21 @@ print_entry (GMenuTreeEntry *entry,
 	     const char     *path)
 {
   char *utf8_path;
+  char *utf8_file_id;
 
   utf8_path = g_filename_to_utf8 (gmenu_tree_entry_get_desktop_file_path (entry),
 				  -1, NULL, NULL, NULL);
 
+  utf8_file_id = g_filename_to_utf8 (gmenu_tree_entry_get_desktop_file_id (entry),
+				     -1, NULL, NULL, NULL);
+
   g_print ("%s\t%s\t%s%s\n",
 	   path,
-	   gmenu_tree_entry_get_desktop_file_id (entry),
+	   utf8_file_id ? utf8_file_id : _("Invalid desktop file ID"),
 	   utf8_path ? utf8_path : _("[Invalid Filename]"),
 	   gmenu_tree_entry_get_is_excluded (entry) ? _(" <excluded>") : "");
 
+  g_free (utf8_file_id);
   g_free (utf8_path);
 }
 

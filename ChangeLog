@@ -1,3 +1,21 @@
+2005-07-25  Mark McLoughlin  <mark@skynet.ie>
+
+	Revert some of the changes related to handling different
+	filename encodings.
+
+	Basically, we shouldn't be trying to convert the desktop
+	file ID to UTF-8 as that makes the matching process
+	locale dependant.
+
+	* libmenu/desktop-entries.c,
+	  libmenu/entry-directories.[ch],
+	  libmenu/gmenu-tree.c:  don't try to convert the path
+	to UTF-8 in various places.
+
+	* util/test-menu-spec.c: (print_entry): convert the 
+	desktop file ID to UTF-8 before printing as well
+	as the desktop file path.
+
 2005-07-20  Mark McLoughlin  <mark@skynet.ie>
 
 	* libmenu/menu-monitor.c: (free_event_info): plug
