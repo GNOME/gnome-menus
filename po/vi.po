@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-menus Gnome 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-21 23:24+0000\n"
-"PO-Revision-Date: 2005-07-22 20:34+0930\n"
+"POT-Creation-Date: 2005-07-26 06:30+0000\n"
+"PO-Revision-Date: 2005-07-26 18:21+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -189,15 +189,19 @@ msgstr "Bộ theo thay đổi trình đơn"
 msgid "Include <Exclude>d entries"
 msgstr "Gồm các mục nhập <bị loại trừ>"
 
-#: ../util/test-menu-spec.c:86
+#: ../util/test-menu-spec.c:89
+msgid "Invalid desktop file ID"
+msgstr "ID tập tin màn hình không hợp lệ."
+
+#: ../util/test-menu-spec.c:90
 msgid "[Invalid Filename]"
 msgstr "[Tên tập tin không hợp lệ]"
 
-#: ../util/test-menu-spec.c:87
+#: ../util/test-menu-spec.c:91
 msgid " <excluded>"
 msgstr "<bị loại trừ>"
 
-#: ../util/test-menu-spec.c:157
+#: ../util/test-menu-spec.c:162
 msgid ""
 "\n"
 "\n"
@@ -213,10 +217,10 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
 msgid "Menu tree is empty"
 msgstr "Cây trình đơn rỗng"
 
-#: ../util/test-menu-spec.c:181
+#: ../util/test-menu-spec.c:186
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "— thử ra sự thực hiện Gnome của Đặc tả Trình đơn Màn hình làm việc"
