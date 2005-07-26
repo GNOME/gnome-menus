@@ -1,3 +1,55 @@
+===============
+Version 2.11.90
+===============
+
+  Fixes
+
+	* Fix issue with handling of filename encodings (Mark)
+	* Only try to include ".directory" for <LegacyDir> if it exists (Mark)
+	* Re-name the Edutainment sub-menu to Education (Mark)
+	* Fix spec compliance issue with <Merge> tag handling (Mark)
+	* Remove some unused code (Mark)
+	* Plug some leaks (Mark)
+
+  Menu Editor
+
+	* HIGify menu editor (Dennis Cranston)
+	* Make "Desktop" menu appear correctly (Mark)
+
+  Misc
+
+	* Allow building against uninstalled library (Brian Cameron)
+
+  Translators
+
+	* Ales Nyakhaychyk (be)
+	* Rostislav "zbrox" Raykov (bg)
+	* Miloslav Trmac (cs)
+	* Martin Willemoes Hansen (da)
+	* Hendrik Brandt (de)
+	* Nikos Charonitakis (el)
+	* Adam Weinberger (en_CA)
+	* Francisco Javier F. Serrador (es)
+	* Priit Laes (et)
+	* Iñaki Larrañaga (eu)
+	* Ilkka Tuohela (fi)
+	* Ignacio Casal Quinteiro (gl)
+	* Ankit Patel (gu)
+	* Yuval Tanny (he)
+	* Swapnil Hajare (mr)
+	* Terance Edward Sola (nb)
+	* Ganesh Ghimire (ne)
+	* Tino Meinen (nl)
+	* Terance Edward Sola (no)
+	* Marcel Telka (sk)
+	* Elian Myftiu (sq)
+	* Данило Шеган (sr)
+	* Theppitak Karoonboonyanan (th)
+	* Onur Can Cakmak (tr)
+	* Clytie Siddall (vi)
+	* Funda Wang (zh_CN)
+	* Woodman Tuen (zh_TW)
+
 ================
 Version 2.11.1.1
 ================
