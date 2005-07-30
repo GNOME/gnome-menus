@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus-2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-21 21:26+0200\n"
-"PO-Revision-Date: 2005-07-21 21:29+0200\n"
+"POT-Creation-Date: 2005-07-30 11:20+0200\n"
+"PO-Revision-Date: 2005-07-30 11:20+0200\n"
 "Last-Translator: Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -190,15 +190,19 @@ msgstr "Monitorizar cambios en el menú"
 msgid "Include <Exclude>d entries"
 msgstr "Incluir entradas <Exclude>"
 
-#: ../util/test-menu-spec.c:86
+#: ../util/test-menu-spec.c:89
+msgid "Invalid desktop file ID"
+msgstr "Id de archivo de escritorio inválido"
+
+#: ../util/test-menu-spec.c:90
 msgid "[Invalid Filename]"
 msgstr "[Nombre de archivo inválido]"
 
-#: ../util/test-menu-spec.c:87
+#: ../util/test-menu-spec.c:91
 msgid " <excluded>"
 msgstr " <excluded>"
 
-#: ../util/test-menu-spec.c:157
+#: ../util/test-menu-spec.c:162
 msgid ""
 "\n"
 "\n"
@@ -206,15 +210,23 @@ msgid ""
 "==== Menu changed, reloading ====\n"
 "\n"
 "\n"
-msgstr "\n\n\n==== El menú ha cambiado, recargándolo ====\n\n\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== El menú ha cambiado, recargándolo ====\n"
+"\n"
+"\n"
 
-#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
 msgid "Menu tree is empty"
 msgstr "El árbol del menú está vacío"
 
-#: ../util/test-menu-spec.c:181
+#: ../util/test-menu-spec.c:186
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- probar la implementación de Gnome de la Especificación del Menú de Escritorio"
+msgstr ""
+"- probar la implementación de Gnome de la Especificación del Menú de "
+"Escritorio"
 
 #~ msgid "Hide"
 #~ msgstr "Ocultar"
