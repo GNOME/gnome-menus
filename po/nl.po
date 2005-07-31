@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-21 14:25+0000\n"
-"PO-Revision-Date: 2005-07-22 01:21+0200\n"
+"POT-Creation-Date: 2005-07-29 06:23+0000\n"
+"PO-Revision-Date: 2005-07-29 19:11+0200\n"
 "Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgstr "Bureaublad hulpmiddelen"
 msgid "Applications"
 msgstr "Toepassingen"
 
-# werkomgeving/bureaublad/desktop
+# werkomgeving/bureaublad/desktop/werkblad
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Desktop"
 msgstr "Bureaublad"
@@ -52,7 +52,7 @@ msgstr "Ontwikkeling"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Gereedschap voor software ontwikkeling"
+msgstr "Gereedschap voor software-ontwikkeling"
 
 # leermiddelen
 #: ../desktop-directories/Education.directory.in.h:1
@@ -81,11 +81,12 @@ msgstr "Internet"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Toepassingen voor internet toegang zoals web en email"
+msgstr "Toepassingen voor internettoegang zoals web en e-mail"
 
+# menu weglaten
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Multimedia menu"
+msgstr "Multimedia"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
@@ -97,12 +98,11 @@ msgstr "Kantoor"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Kantoor toepassingen"
+msgstr "Kantoortoepassingen"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr ""
-"Applicaties die niet in een andere categorie ondergebracht kunnen worden"
+msgstr "Toepassingen die niet in een andere categorie ondergebracht kunnen worden"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -131,15 +131,16 @@ msgstr "Beheer"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Verander systeembrede instellingen (van toepassing op alle gebruikers)"
+msgstr "Systeembrede instellingen wijzigen (op alle gebruikers van toepassing)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "Systeemgereedschap"
 
+# was eerst monitoring, vervangen door controle
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Systeem configuratie en monitoring"
+msgstr "Systeemconfiguratie en controle"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
@@ -191,15 +192,19 @@ msgstr "Monitoren voor menuwijzigingen"
 msgid "Include <Exclude>d entries"
 msgstr "Inclusief <uitgezonderd>e items"
 
-#: ../util/test-menu-spec.c:86
+#: ../util/test-menu-spec.c:89
+msgid "Invalid desktop file ID"
+msgstr "Ongeldig desktopbestand-ID"
+
+#: ../util/test-menu-spec.c:90
 msgid "[Invalid Filename]"
 msgstr "[Ongeldige bestandsnaam]"
 
-#: ../util/test-menu-spec.c:87
+#: ../util/test-menu-spec.c:91
 msgid " <excluded>"
 msgstr " <uitgezonderd>"
 
-#: ../util/test-menu-spec.c:157
+#: ../util/test-menu-spec.c:162
 msgid ""
 "\n"
 "\n"
@@ -207,15 +212,21 @@ msgid ""
 "==== Menu changed, reloading ====\n"
 "\n"
 "\n"
-msgstr "\n\n\n==== Menu is gewijzigd, herladen ====\n\n\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Menu is gewijzigd, herladen ====\n"
+"\n"
+"\n"
 
-#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
 msgid "Menu tree is empty"
 msgstr "Menu-boomstructuur is leeg"
 
-#: ../util/test-menu-spec.c:181
+#: ../util/test-menu-spec.c:186
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- GNOME's implementatie van de Desktop Menu Specification testen"
+msgstr "- GNOME's implementatie testen van de Desktop Menu Specification"
 
 #~ msgid "Hide"
 #~ msgstr "Verbergen"
