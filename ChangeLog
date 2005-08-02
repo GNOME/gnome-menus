@@ -1,5 +1,16 @@
 2005-08-02  Mark McLoughlin  <mark@skynet.ie>
 
+	Based on patch from Dennis Cranston <dennis_cranston@yahoo.com>
+	in bug #312117
+
+	* simple-editor/gmenu-simple-editor.desktop.in: add a .desktop
+	file only so it may be launched using startup-notification.
+	
+	* simple-editor/Makefile.am: generate and install the .desktop
+	file.
+
+2005-08-02  Mark McLoughlin  <mark@skynet.ie>
+
 	Based on patch from in Jaap A. Haitsma <jaap@haitsma.org>
 	in bug #312143
 
