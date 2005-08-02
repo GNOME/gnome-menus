@@ -4,6 +4,8 @@
 	in bug #312143
 
 	* simple-editor/GMenuSimpleEditor/maindialog.py:
+	use gnome-main-menu as the window icon instead of
+	non-existant gmenu-simple-editor
 	
 2005-08-02  Mark McLoughlin  <mark@skynet.ie>
 
