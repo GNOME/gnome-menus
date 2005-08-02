@@ -1,3 +1,7 @@
+2005-08-02  Mark McLoughlin  <mark@skynet.ie>
+
+	* POTFILES.in: add gmenu-simple-editor.desktop.in
+
 2005-07-31  Vincent van Adrighem  <adrighem@gnome.org>
 
 	* nl.po: Translation updated by Tino Meinen.
