@@ -1,3 +1,27 @@
+2005-08-02  Mark McLoughlin  <mark@skynet.ie>
+
+	Based on patch from in Jaap A. Haitsma <jaap@haitsma.org>
+	in bug #312143
+
+	* simple-editor/GMenuSimpleEditor/maindialog.py:
+	
+2005-08-02  Mark McLoughlin  <mark@skynet.ie>
+
+	Allow running gmenu-simple-editor with a python
+	from a different prefix. Fixes bug #312274
+
+	* simple-editor/gmenu-simple-editor: remove
+	
+	* simple-editor/gmenu-simple-editor.in: if
+	pyexecdir isn't in sys.path, insert it before
+	trying to import main module.
+	
+	* simple-editor/Makefile.am: generate
+	gmenu-simple-editor
+	
+	* simple-editor/GMenuSimpleEditor/main.py: 
+	add a main() function.
+
 2005-07-26  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.11.91

@@ -36,7 +36,7 @@ class MenuEditorDialog:
         self.window = self.xml.get_widget ("menu_editor_dialog")
         self.window.connect ("destroy", gtk.main_quit)
         self.window.set_default_response (gtk.RESPONSE_ACCEPT)
-        self.window.set_icon_name ("gmenu-simple-editor")
+        self.window.set_icon_name ("gnome-main-menu")
 
         self.help_button = self.xml.get_widget ("help_button")
         self.help_button.set_sensitive (False)

@@ -18,19 +18,20 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
-import locale
-import gettext
+def main (args):
+    import locale
+    import gettext
 
-import gtk
-import gtk.glade
+    import gtk
+    import gtk.glade
 
-from config import *
-import maindialog
+    from config import *
+    import maindialog
 
-locale.setlocale (locale.LC_ALL, "")
-gettext.install (PACKAGE, LOCALEDIR)
-gtk.glade.bindtextdomain (PACKAGE, LOCALEDIR)
+    locale.setlocale (locale.LC_ALL, "")
+    gettext.install (PACKAGE, LOCALEDIR)
+    gtk.glade.bindtextdomain (PACKAGE, LOCALEDIR)
 
-dialog = maindialog.MenuEditorDialog ()
+    dialog = maindialog.MenuEditorDialog ()
 
-gtk.main ()
+    gtk.main ()

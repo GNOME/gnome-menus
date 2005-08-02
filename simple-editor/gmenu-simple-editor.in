@@ -18,4 +18,11 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
-from GMenuSimpleEditor import main
+import sys
+
+if not "@pyexecdir@" in sys.path:
+    sys.path.insert (0, "@pyexecdir@")
+
+import GMenuSimpleEditor.main
+
+GMenuSimpleEditor.main.main (sys.argv[1:])
