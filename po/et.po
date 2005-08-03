@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-25 22:27+0000\n"
-"PO-Revision-Date: 2005-07-26 09:06+0300\n"
+"POT-Creation-Date: 2005-08-03 06:30+0000\n"
+"PO-Revision-Date: 2005-08-03 10:39+0300\n"
 "Last-Translator: Priit Laes <amd@store20.com>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -139,6 +139,10 @@ msgstr "Süsteemi tööriistad"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Süsteemi konfigureerimine ja jälgimine"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "Menüüredaktor"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
