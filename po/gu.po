@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-28 06:27+0000\n"
-"PO-Revision-Date: 2005-07-28 12:16+0530\n"
+"POT-Creation-Date: 2005-08-02 22:25+0000\n"
+"PO-Revision-Date: 2005-08-03 10:27+0530\n"
 "Last-Translator: Ankit Patel <ankit644@yahoo.com>\n"
 "Language-Team: Gujarati <indianoss-gujarati@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"\n"
 "\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
@@ -136,6 +137,10 @@ msgstr "સિસ્ટમ સાધનો"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "સિસ્ટમ રૂપરેખાંકન અને મોનિટરીંગ"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "મેનુ સંપાદક"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
