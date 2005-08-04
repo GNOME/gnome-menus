@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-26 15:51+0700\n"
-"PO-Revision-Date: 2005-07-26 16:20+0700\n"
+"POT-Creation-Date: 2005-08-04 16:13+0700\n"
+"PO-Revision-Date: 2005-08-04 16:14+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
@@ -137,6 +137,10 @@ msgstr "เครื่องมือระบบ"
 #: desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "ตั้งค่าและเฝ้าดูระบบ"
+
+#: simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "แก้ไขเมนู"
 
 #: simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
