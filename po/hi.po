@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-01 06:30+0000\n"
-"PO-Revision-Date: 2005-08-01 16:17+0530\n"
+"POT-Creation-Date: 2005-08-04 06:30+0000\n"
+"PO-Revision-Date: 2005-08-04 15:13+0530\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -47,7 +48,7 @@ msgstr "डेस्कटॉप"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "निजी पसंद व प्रशासनिक जमावट"
+msgstr "निजी वरीयता व प्रशासनिक जमावट"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -95,11 +96,11 @@ msgstr "ध्वनि व वीडियो"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "ऑफिस"
+msgstr "कार्यालय"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "ऑफिस अनुप्रयोग"
+msgstr "कार्यालय अनुप्रयोग"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
@@ -142,9 +143,13 @@ msgstr "सिस्टम उपकरण"
 msgid "System configuration and monitoring"
 msgstr "सिस्टम विन्यास व निरीक्षण"
 
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "मेनू संपादक"
+
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "संपादन मेनू"
+msgstr "मेनू संपादित करें"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -171,7 +176,9 @@ msgstr "दिखाएँ"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "घर निर्देशिका नहीं पा सकता है: /etc/passwd में सेट नहीं और $HOME के लिये वातावरण में कोई मान नहीं"
+msgstr ""
+"घर निर्देशिका नहीं पा सकता है: /etc/passwd में सेट नहीं और $HOME के लिये वातावरण में कोई "
+"मान नहीं है"
 
 #: ../util/test-menu-spec.c:32
 msgid "Menu file"
@@ -183,7 +190,7 @@ msgstr "MENU_FILE"
 
 #: ../util/test-menu-spec.c:33
 msgid "Monitor for menu changes"
-msgstr "मेनू बदलाव के लिये निरीक्षण"
+msgstr "मेनू बदलाव का निरीक्षण"
 
 #: ../util/test-menu-spec.c:34
 msgid "Include <Exclude>d entries"
@@ -223,5 +230,5 @@ msgstr "मेनू तरू खाली है"
 
 #: ../util/test-menu-spec.c:186
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- डेस्कटॉप मेनू निर्दिष्टता जांच GNOME का कार्यान्वयन"
+msgstr "- डेस्कटॉप मेनू निर्दिष्टता की GNOME कार्यान्वयन की जांच करें"
 
