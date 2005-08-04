@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-28 18:59+0300\n"
-"PO-Revision-Date: 2005-07-28 19:00+0300\n"
+"POT-Creation-Date: 2005-08-04 06:37+0300\n"
+"PO-Revision-Date: 2005-08-04 06:38+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -138,6 +138,10 @@ msgstr "Järjestelmätyökalut"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Järjestelmäasetukset ja -seuranta"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "Valikon muokkain"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
