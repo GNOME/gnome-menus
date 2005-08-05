@@ -1,3 +1,12 @@
+2005-08-05  Mark McLoughlin  <mark@skynet.ie>
+
+	Backport fix from HEAD which fixes crasher in
+	bug #312502
+
+	* libmenu/desktop-entries.c:
+	(desktop_entry_add_legacy_category): Fix off-by-one
+	error.
+
 2005-06-28  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix for bug #305748 - only include ".directory" in
