@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-27 14:26+0000\n"
-"PO-Revision-Date: 2005-07-27 18:08-0300\n"
+"POT-Creation-Date: 2005-08-06 14:22+0000\n"
+"PO-Revision-Date: 2005-08-06 18:38-0300\n"
 "Last-Translator: Afonso Celso Medina <afmedina@uol.com.br>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
@@ -132,11 +132,15 @@ msgstr "Modifique configurações gerais do sistema (afeta a todos os usuários)
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Ferramentas de Sistema"
+msgstr "Ferramentas do Sistema"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Configuração e monitoramento do sistema"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "Editor de Menu"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
@@ -221,7 +225,8 @@ msgstr "A árvore do menu está vazia"
 
 #: ../util/test-menu-spec.c:186
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- test Implementação da Especificação de Menu da Área de Trabalho do GNOME"
+msgstr ""
+"- test Implementação da Especificação de Menu da Área de Trabalho do GNOME"
 
 #~ msgid "System Settings"
 #~ msgstr "Configurações do Sistema"
