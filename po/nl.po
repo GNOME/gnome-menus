@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-29 06:23+0000\n"
-"PO-Revision-Date: 2005-07-29 19:11+0200\n"
+"POT-Creation-Date: 2005-08-04 06:30+0000\n"
+"PO-Revision-Date: 2005-08-04 16:19+0200\n"
 "Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,8 @@ msgstr "Kantoortoepassingen"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Toepassingen die niet in een andere categorie ondergebracht kunnen worden"
+msgstr ""
+"Toepassingen die niet in een andere categorie ondergebracht kunnen worden"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -141,6 +142,10 @@ msgstr "Systeemgereedschap"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Systeemconfiguratie en controle"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "Menu-editor"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
