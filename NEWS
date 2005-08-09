@@ -1,4 +1,36 @@
 ===============
+Version 2.11.91
+===============
+
+  Fixes
+
+	* Install .desktop file for editor (Dennis Cranston, Mark)
+	* Fix the window icon in the editor (Jaap A. Haitsma, Mark)
+	* Allow running editor in different prefix from python (Mark)
+
+  Translators
+
+	* Miloslav Trmac (cs)
+	* Hendrik Brandt (de)
+	* Adam Weinberger (en_CA)
+	* Francisco Javier F. Serrador (es)
+	* Priit Laes (et)
+	* Ilkka Tuohela (fi)
+	* Ankit Patel (gu)
+	* Reuven Gonen (he)
+	* Gabor Kelemen (hu)
+	* Takeshi AIHANA (ja)
+	* Kjartan Maraas (nb)
+	* Tino Meinen (nl)
+	* Kjartan Maraas (no)
+	* Afonso Celso Medina (pt_BR)
+	* Marcel Telka (sk)
+	* Theppitak Karoonboonyanan (th)
+	* Clytie Siddall (vi)
+	* Funda Wang (zh_CN)
+	* Woodman Tuen (zh_TW)
+
+===============
 Version 2.11.90
 ===============
 
