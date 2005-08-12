@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-22 17:49+0300\n"
-"PO-Revision-Date: 2005-07-22 17:53+0300\n"
+"POT-Creation-Date: 2005-08-12 11:42+0300\n"
+"PO-Revision-Date: 2005-08-12 11:49+0300\n"
 "Last-Translator: Nikos Charonitakis <charosn@her.forthnet.gr>\n"
 "Language-Team:  <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
-msgstr "Προσβασιμότητα"
+msgstr "Προσιτότητα"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
@@ -81,8 +81,7 @@ msgstr "Διαδίκτυο"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr ""
-"Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
+msgstr "Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -119,7 +118,7 @@ msgstr "Προτιμήσεις"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
-msgstr "Προτιμήσεις σχετικά με προσβασιμότητα"
+msgstr "Προτιμήσεις σχετικά με προσιτότητα"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
@@ -140,6 +139,10 @@ msgstr "Εργαλεία Συστήματος"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Ρύθμιση και έλεγχος συστήματος"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "Επεξεργασία μενού"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
@@ -171,6 +174,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
+"Αδυναμία εύρεσης αρχικού καταλόγου: δεν έχει ορισθεί τιμή στο /etc/passwd και στο"
+"$HOME στο περιβάλλον"
 
 #: ../util/test-menu-spec.c:32
 msgid "Menu file"
@@ -178,25 +183,29 @@ msgstr "Αρχείο μενού"
 
 #: ../util/test-menu-spec.c:32
 msgid "MENU_FILE"
-msgstr ""
+msgstr "MENU_FILE"
 
 #: ../util/test-menu-spec.c:33
 msgid "Monitor for menu changes"
-msgstr ""
+msgstr "Παρακολούθηση για αλλαγές στο μενού"
 
 #: ../util/test-menu-spec.c:34
 msgid "Include <Exclude>d entries"
-msgstr ""
+msgstr "Να συμπεριλαμβάνονται <αποκλεισμένες> καταχωρίσεις"
 
-#: ../util/test-menu-spec.c:86
+#: ../util/test-menu-spec.c:89
+msgid "Invalid desktop file ID"
+msgstr "Μη έγκυρο αναγνωριστικό αρχείου επιφάνειας εργασίας"
+
+#: ../util/test-menu-spec.c:90
 msgid "[Invalid Filename]"
-msgstr ""
+msgstr "[Μη έγκυρο όνομα αρχείου]"
 
-#: ../util/test-menu-spec.c:87
+#: ../util/test-menu-spec.c:91
 msgid " <excluded>"
-msgstr ""
+msgstr " <αποκλεισμένα>"
 
-#: ../util/test-menu-spec.c:157
+#: ../util/test-menu-spec.c:162
 msgid ""
 "\n"
 "\n"
@@ -205,12 +214,18 @@ msgid ""
 "\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Το μενού άλλαξε, επαναφόρτωση ====\n"
+"\n"
+"\n"
 
-#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
 msgid "Menu tree is empty"
-msgstr ""
+msgstr "Το δέντρο μενού είναι κενό"
 
-#: ../util/test-menu-spec.c:181
+#: ../util/test-menu-spec.c:186
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
+msgstr "- δοκιμή της εφαρμογής από το GNOME των οδηγιών μενού επιφάνειας εργασίας"
 
