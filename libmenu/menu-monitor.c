@@ -47,6 +47,7 @@ typedef struct
 {
   MenuMonitorNotifyFunc notify_func;
   gpointer              user_data;
+  guint                 refcount;
 } MenuMonitorNotify;
 
 #ifdef HAVE_FAM
@@ -67,23 +68,40 @@ static gboolean       failed_to_connect = FALSE;
 static guint          fam_io_watch = 0;
 static guint          events_idle_handler = 0;
 
+static MenuMonitorNotify *menu_monitor_notify_ref   (MenuMonitorNotify *notify);
+static void               menu_monitor_notify_unref (MenuMonitorNotify *notify);
+
 static void
 invoke_notifies (MenuMonitor      *monitor,
 		 MenuMonitorEvent  event,
 		 const char       *path)
 {
+  GSList *copy;
   GSList *tmp;
 
-  tmp = monitor->notifies;
+  copy = g_slist_copy (monitor->notifies);
+  g_slist_foreach (copy,
+		   (GFunc) menu_monitor_notify_ref,
+		   NULL);
+		   
+
+  tmp = copy;
   while (tmp != NULL)
     {
       MenuMonitorNotify *notify = tmp->data;
-      GSList            *next    = tmp->next;
+      GSList            *next   = tmp->next;
 
-      notify->notify_func (monitor, event, path, notify->user_data);
+      if (notify->notify_func)
+	{
+	  notify->notify_func (monitor, event, path, notify->user_data);
+	}
+
+      menu_monitor_notify_unref (notify);
 
       tmp = next;
     }
+
+  g_slist_free (copy);
 }
 
 static void
@@ -516,7 +534,7 @@ menu_monitor_unref (MenuMonitor *monitor)
 
   unregister_monitor_with_fam (monitor);
 
-  g_slist_foreach (monitor->notifies, (GFunc) g_free, NULL);
+  g_slist_foreach (monitor->notifies, (GFunc) menu_monitor_notify_unref, NULL);
   g_slist_free (monitor->notifies);
   monitor->notifies = NULL;
 
@@ -538,6 +556,29 @@ menu_monitor_get_path (MenuMonitor *monitor)
   g_return_val_if_fail (monitor != NULL, NULL);
 
   return monitor->path;
+}
+
+static MenuMonitorNotify *
+menu_monitor_notify_ref (MenuMonitorNotify *notify)
+{
+  g_return_val_if_fail (notify != NULL, NULL);
+  g_return_val_if_fail (notify->refcount > 0, NULL);
+
+  notify->refcount++;
+
+  return notify;
+}
+
+static void
+menu_monitor_notify_unref (MenuMonitorNotify *notify)
+{
+  g_return_if_fail (notify != NULL);
+  g_return_if_fail (notify->refcount > 0);
+
+  if (--notify->refcount > 0)
+    return;
+
+  g_free (notify);
 }
 
 void
@@ -568,6 +609,7 @@ menu_monitor_add_notify (MenuMonitor           *monitor,
       notify              = g_new0 (MenuMonitorNotify, 1);
       notify->notify_func = notify_func;
       notify->user_data   = user_data;
+      notify->refcount    = 1;
 
       monitor->notifies = g_slist_append (monitor->notifies, notify);
     }
@@ -589,8 +631,11 @@ menu_monitor_remove_notify (MenuMonitor           *monitor,
       if (notify->notify_func == notify_func &&
           notify->user_data   == user_data)
         {
+	  notify->notify_func = NULL;
+	  notify->user_data   = NULL;
+          menu_monitor_notify_unref (notify);
+
           monitor->notifies = g_slist_delete_link (monitor->notifies, tmp);
-          g_free (notify);
         }
 
       tmp = next;

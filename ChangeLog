@@ -1,3 +1,22 @@
+2005-08-12  Mark McLoughlin  <mark@skynet.ie>
+
+	Fixes bug #313232 - memory corruption issue where notifies
+	were being removed from under us as we walked the list of
+	notifies.
+
+	* libmenu/menu-monitor.c:
+	(menu_monitor_notify_ref),
+	(menu_monitor_notify_unref): make MenuMonitorNotify refcounted.
+	(menu_monitor_add_notify): set initial refcount.
+	(menu_monitor_remove_notify): when removing the notify, unset
+	the callback pointer and unref.
+	(invoke_notifies): make a copy of the notifies list and
+	ref each notify before invoking the callbacks - callbacks
+	may cause arbitrary notifies to be removed as we walk the
+	list.
+	(menu_monitor_unref): unref each of the notifies rather
+	than freeing them.
+
 2005-08-09  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.11.92.
