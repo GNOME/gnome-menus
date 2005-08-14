@@ -1,3 +1,9 @@
+2005-08-14  Elijah Newren  <newren@gmail.com>
+
+	* libmenu/menu-monitor.c: Pull menu_monitor_notify_ref() and
+	menu_monitor_notify_unref() out of the #ifdef HAVE_FAM to fix a
+	compilation issue.
+
 2005-08-14  Mark McLoughlin  <mark@skynet.ie>
 
 	* simple-editor/GMenuSimpleEditor/main.py:

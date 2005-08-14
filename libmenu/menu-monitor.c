@@ -61,15 +61,15 @@ typedef struct
 
 static GHashTable *monitors_registry = NULL;
 
+static MenuMonitorNotify *menu_monitor_notify_ref   (MenuMonitorNotify *notify);
+static void               menu_monitor_notify_unref (MenuMonitorNotify *notify);
+
 #ifdef HAVE_FAM
 static FAMConnection  fam_connection;
 static gboolean       opened_connection = FALSE;
 static gboolean       failed_to_connect = FALSE;
 static guint          fam_io_watch = 0;
 static guint          events_idle_handler = 0;
-
-static MenuMonitorNotify *menu_monitor_notify_ref   (MenuMonitorNotify *notify);
-static void               menu_monitor_notify_unref (MenuMonitorNotify *notify);
 
 static void
 invoke_notifies (MenuMonitor      *monitor,
