@@ -1,6 +1,11 @@
-2005-05-12 Kostas Papadimas <pkst@gnome.org>
+2005-08-14  Roozbeh Pournader  <roozbeh@farsiweb.info>
 
-	* el.po Updated Greek Translation
+	* fa.po: Updated Persian translation by Meelad Zakaria
+	<meelad@farsiweb.info> and myself.
+
+2005-08-12  Kostas Papadimas  <pkst@gnome.org>
+
+	* el.po: Updated Greek Translation
 
 2005-08-11  Hendrik Brandt  <heb@gnome-de.org>
 
