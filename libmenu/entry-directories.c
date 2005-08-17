@@ -539,38 +539,6 @@ cached_dir_load_entries_recursive (CachedDir  *dir,
   return TRUE;
 }
 
-static char *
-cached_dir_get_full_path (CachedDir *dir)
-{
-  GString *str;
-  GSList  *parents = NULL;
-  GSList  *tmp;
-
-  if (dir == NULL || dir->parent == NULL)
-    return g_strdup ("/");
-
-  while (dir->parent != NULL)
-    {
-      parents = g_slist_prepend (parents, dir->name);
-      dir = dir->parent;
-    }
-
-  str = g_string_new ("/");
-
-  tmp = parents;
-  while (tmp != NULL)
-    {
-      g_string_append (str, tmp->data);
-      g_string_append_c (str, '/');
-
-      tmp = tmp->next;
-    }
-
-  g_slist_free (parents);
-
-  return g_string_free (str, FALSE);
-}
-
 static CachedDir *
 cached_dir_load (const char *canonical_path)
 {
@@ -642,35 +610,6 @@ cached_dir_remove_monitor (CachedDir                 *dir,
 
       tmp = next;
     }
-}
-
-static void
-cached_dir_ensure_loaded (CachedDir *dir)
-{
-  char *path;
-
-  if (dir->have_read_entries)
-    return;
-
-  path = cached_dir_get_full_path (dir);
-  cached_dir_load_entries_recursive (dir, path);
-  g_free (path);
-}
-
-static GSList*
-cached_dir_get_subdirs (CachedDir *dir)
-{
-  cached_dir_ensure_loaded (dir);
-
-  return dir->subdirs;
-}
-
-static GSList*
-cached_dir_get_entries (CachedDir   *dir)
-{
-  cached_dir_ensure_loaded (dir);
-
-  return dir->entries;
 }
 
 /*
@@ -850,7 +789,7 @@ entry_directory_foreach_recursive (EntryDirectory            *ed,
 
   relative_path_len = relative_path->len;
 
-  tmp = cached_dir_get_entries (cd);
+  tmp = cd->entries;
   while (tmp != NULL)
     {
       DesktopEntry *entry = tmp->data;
@@ -878,7 +817,7 @@ entry_directory_foreach_recursive (EntryDirectory            *ed,
       tmp = tmp->next;
     }
 
-  tmp = cached_dir_get_subdirs (cd);
+  tmp = cd->subdirs;
   while (tmp != NULL)
     {
       CachedDir *subdir = tmp->data;
@@ -933,7 +872,7 @@ entry_directory_get_flat_contents (EntryDirectory   *ed,
   if (subdirs)
     *subdirs = NULL;
 
-  tmp = cached_dir_get_entries (ed->dir);
+  tmp = ed->dir->entries;
   while (tmp != NULL)
     {
       DesktopEntry *entry = tmp->data;
@@ -968,7 +907,7 @@ entry_directory_get_flat_contents (EntryDirectory   *ed,
 
   if (subdirs)
     {
-      tmp = cached_dir_get_subdirs (ed->dir);
+      tmp = ed->dir->subdirs;
       while (tmp != NULL)
         {
           CachedDir *cd = tmp->data;

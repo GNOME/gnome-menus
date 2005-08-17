@@ -1,3 +1,16 @@
+2005-08-17  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/entry-directories.c:
+	(cached_dir_get_full_path),
+	(cached_dir_ensure_loaded),
+	(cached_dir_get_subdirs),
+	(cached_dir_get_entries): remove all this code.
+	(entry_directory_foreach_recursive),
+	(entry_directory_get_flat_contents): directly reference
+	a CachedDir's subdirs and entries lists since we can
+	be sure they're always already loaded - they get loaded
+	in entry_directory_new_full()
+
 2005-08-14  Elijah Newren  <newren@gmail.com>
 
 	* libmenu/menu-monitor.c: Pull menu_monitor_notify_ref() and
