@@ -100,31 +100,8 @@ cached_dir_new (const char *name)
 }
 
 static void
-cached_dir_clear_entries (CachedDir *dir)
-{
-  g_slist_foreach (dir->entries,
-                   (GFunc) desktop_entry_unref,
-                   NULL);
-  g_slist_free (dir->entries);
-  dir->entries = NULL;
-}
-
-static void
-cached_dir_clear_subdirs (CachedDir *dir)
-{
-  g_slist_foreach (dir->subdirs,
-                   (GFunc) cached_dir_free,
-                   NULL);
-  g_slist_free (dir->subdirs);
-  dir->subdirs = NULL;
-}
-
-static void
 cached_dir_free (CachedDir *dir)
 {
-  cached_dir_clear_entries (dir);
-  cached_dir_clear_subdirs (dir);
-
   if (dir->dir_monitor)
     {
       menu_monitor_remove_notify (dir->dir_monitor,
@@ -137,6 +114,18 @@ cached_dir_free (CachedDir *dir)
   g_slist_foreach (dir->monitors, (GFunc) g_free, NULL);
   g_slist_free (dir->monitors);
   dir->monitors = NULL;
+
+  g_slist_foreach (dir->entries,
+                   (GFunc) desktop_entry_unref,
+                   NULL);
+  g_slist_free (dir->entries);
+  dir->entries = NULL;
+
+  g_slist_foreach (dir->subdirs,
+                   (GFunc) cached_dir_free,
+                   NULL);
+  g_slist_free (dir->subdirs);
+  dir->subdirs = NULL;
 
   g_free (dir->name);
   g_free (dir);
@@ -497,7 +486,6 @@ cached_dir_load_entries_recursive (CachedDir  *dir,
       return FALSE;
     }
 
-  cached_dir_clear_entries (dir);
   cached_dir_ensure_monitor (dir, dirname);
 
   fullpath = g_string_new (dirname);
@@ -537,20 +525,6 @@ cached_dir_load_entries_recursive (CachedDir  *dir,
   dir->have_read_entries = TRUE;
 
   return TRUE;
-}
-
-static CachedDir *
-cached_dir_load (const char *canonical_path)
-{
-  CachedDir *retval;
-
-  menu_verbose ("Loading cached dir \"%s\"\n", canonical_path);
-
-  retval = cached_dir_lookup (canonical_path);
-
-  cached_dir_load_entries_recursive (retval, canonical_path);
-
-  return retval;
 }
 
 static void
@@ -623,7 +597,6 @@ entry_directory_new_full (DesktopEntryType  entry_type,
                           const char       *legacy_prefix)
 {
   EntryDirectory *ed;
-  CachedDir      *cd;
   char           *canonical;
 
   menu_verbose ("Loading entry directory \"%s\" (legacy %s)\n",
@@ -638,16 +611,16 @@ entry_directory_new_full (DesktopEntryType  entry_type,
       return NULL;
     }
 
-  cd = cached_dir_load (canonical);
-  g_assert (cd != NULL);
-
   ed = g_new0 (EntryDirectory, 1);
 
-  ed->dir           = cd;
+  ed->dir           = cached_dir_lookup (canonical);
   ed->legacy_prefix = g_strdup (legacy_prefix);
   ed->entry_type    = entry_type;
   ed->is_legacy     = is_legacy != FALSE;
   ed->refcount      = 1;
+
+  g_assert (ed->dir != NULL);
+  cached_dir_load_entries_recursive (ed->dir, canonical);
 
   g_free (canonical);
 
