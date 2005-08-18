@@ -1,3 +1,40 @@
+2005-08-18  Mark McLoughlin  <mark@skynet.ie>
+
+	Fixes "duplicate entry" issue in bug #313624
+	
+	* libmenu/entry-directories.c:
+	(handle_cached_dir_changed): Look up the CachedDir
+	for the parent of whatever path we're being notified
+	about - we could be getting notified about ourself
+	being created/deleted.
+	
+2005-08-18  Mark McLoughlin  <mark@skynet.ie>
+
+	Obfuscate this code some more. Basic issue is that if an
+	EntryDirectory has a subdir which is also an EntryDirectory
+	and the subdir gets deleted, then the CachedDir for the subdir
+	gets freed leaving us with a dangling reference in the
+	EntryDirectory.
+
+	* libmenu/entry-directories.c:
+	(cached_dir_find_relative_path),
+	(cached_dir_lookup): remove infinite loop code path.
+	(cached_dir_add_subdir): if the subdir already exists
+	but is deleted, just undelete it.
+	(cached_dir_remove_subdir): if the subdir is referenced
+	by an EntryDirectory, just mark it as deleted and don't
+	free it.
+	(cached_dir_add_reference),
+	(cached_dir_remove_reference): keep track of how many
+	EntryDirectories reference a CachedDir. If the count
+	falls to zero and the CachedDir is marked as deleted,
+	free it.
+	(entry_directory_new_full): add a reference here.
+	(entry_directory_unref): remove it here.
+	(entry_directory_foreach_recursive),
+	(entry_directory_get_flat_contents): don't list the
+	contents of a dir if its marked as deleted.
+
 2005-08-17  Mark McLoughlin  <mark@skynet.ie>
 
 	* libmenu/entry-directories.c:
