@@ -640,6 +640,8 @@ cached_dir_remove_reference (CachedDir *dir)
 		  parent->subdirs = g_slist_delete_link (parent->subdirs, tmp);
 		  break;
 		}
+
+	      tmp = tmp->next;
 	    }
 	}
 

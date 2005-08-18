@@ -1,5 +1,12 @@
 2005-08-18  Mark McLoughlin  <mark@skynet.ie>
 
+	Patch from Federic Crozat <fcrozat@mandriva.com>
+
+	* libmenu/entry-directories.c:
+	(cached_dir_remove_reference): Fix infinite loop.
+
+2005-08-18  Mark McLoughlin  <mark@skynet.ie>
+
 	Fixes "duplicate entry" issue in bug #313624
 	
 	* libmenu/entry-directories.c:
