@@ -1,7 +1,7 @@
 # Copyright (C) 2001-2005 Free Software Foundation, Inc.
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Aktualną wersję tego pliku możesz odnaleźć w repozytorium cvs.gnome.pl
-# (:pserver:anonymous@cvs.gnome.pl:/gnomepl, puste hasło)
+# Aktualną wersję tego pliku możesz odnaleźć w repozytorium cvs.gnomepl.org
+# (:pserver:anonymous@cvs.gnomepl.org:/gnomepl, puste hasło)
 # Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
 # pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas na adres:
 # <translators@gnomepl.org>
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-13 23:41+0100\n"
+"POT-Creation-Date: 2005-08-21 20:08+0200\n"
 "PO-Revision-Date: 2005-01-24 09:54+0100\n"
 "Last-Translator: GNOME PL Team <translators@gnomepl.org>\n"
 "Language-Team: GNOME PL Team <translators@gnomepl.org>\n"
@@ -41,6 +41,14 @@ msgstr "Akcesoria pulpitu"
 msgid "Applications"
 msgstr "Aplikacje"
 
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Pulpit"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Preferencje osobiste i ustawienia administracyjne"
+
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "Programowanie"
@@ -49,9 +57,9 @@ msgstr "Programowanie"
 msgid "Tools for software development"
 msgstr "Narzędzia do tworzenia oprogramowania"
 
-#: ../desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "Nauka i zabawa"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Nauka"
 
 #: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
@@ -101,6 +109,15 @@ msgstr "Aplikacje, które nie pasują do innych kategorii"
 msgid "Other"
 msgstr "Inne"
 
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Ustawienia osobiste"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Preferencje"
+
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Preferencje związane z dostępnością"
@@ -108,10 +125,6 @@ msgstr "Preferencje związane z dostępnością"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Ustawienia i osobiste preferencje"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Preferencje"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -128,3 +141,92 @@ msgstr "Narzędzia systemowe"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Monitorowanie i konfiguracja systemu"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "Edytor menu"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "Modyfikuje menu"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "_Aplikacje:"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "_Domyślne"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "_Menu:"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+msgid "Name"
+msgstr "Nazwa"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr "Wyświetlanie"
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Nie można odnaleźć katalogu domowego: nie jest ustawiony w /etc/passwd i "
+"brak wrtości zmiennej środowiskowej $HOME"
+
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Plik menu"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "PLIK_MENU"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Śledzenie zmian menu"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Włącznie z <wykluczonymi> elementami"
+
+#: ../util/test-menu-spec.c:89
+msgid "Invalid desktop file ID"
+msgstr "Niepoprawne ID pliku pulpitu"
+
+#: ../util/test-menu-spec.c:90
+msgid "[Invalid Filename]"
+msgstr "[Niepoprawna nazwa pliku]"
+
+#: ../util/test-menu-spec.c:91
+msgid " <excluded>"
+msgstr " <wykluczone>"
+
+#: ../util/test-menu-spec.c:162
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Menu uległo zmianie, ponowne wczytanie ====\n"
+"\n"
+"\n"
+
+#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
+msgid "Menu tree is empty"
+msgstr "Drzewo menu jest puste"
+
+#: ../util/test-menu-spec.c:186
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- testuje Specyfikację Menu Pulpitu zaimplementowaną w GNOME"
