@@ -8,120 +8,219 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-28 23:10+0100\n"
-"PO-Revision-Date: 2005-03-01 02:45+0200\n"
-"Last-Translator: Dan Damian <dand@gnome.ro>\n"
+"POT-Creation-Date: 2005-08-19 22:29+0000\n"
+"PO-Revision-Date: 2005-08-22 03:33+0300\n"
+"Last-Translator: Sebastian Ivan <sebastian.ivan@ubuntu.ro>\n"
 "Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: desktop-directories/Accessibility.directory.in.h:1
-#: desktop-directories/Settings-Accessibility.directory.in.h:1
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
 msgstr "Accesibilitate"
 
-#: desktop-directories/Accessibility.directory.in.h:2
+#: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
 msgstr "Setări accesibilitate"
 
-#: desktop-directories/Accessories.directory.in.h:1
+#: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
 msgstr "Accesorii"
 
-#: desktop-directories/Accessories.directory.in.h:2
+#: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
 msgstr "Accesorii desktop"
 
-#: desktop-directories/Applications.directory.in.h:1
+#: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Aplicaţii"
 
-#: desktop-directories/Development.directory.in.h:1
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Desktop"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Preferinţe personale şi setări administrative"
+
+#: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "Programare"
 
-#: desktop-directories/Development.directory.in.h:2
+#: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
 msgstr "Unelte pentru dezvoltare software"
 
-#: desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
 msgstr "Educaţie"
 
-#: desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
 msgstr "Jocuri"
 
-#: desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Jocuri şi amuzamente"
 
-#: desktop-directories/Graphics.directory.in.h:1
+#: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
 msgstr "Grafică"
 
-#: desktop-directories/Graphics.directory.in.h:2
+#: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
 msgstr "Aplicaţii de grafică"
 
-#: desktop-directories/Internet.directory.in.h:1
+#: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
 
-#: desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Programe pentru acessul la Internet cum ar fi web sau email"
 
-#: desktop-directories/Multimedia.directory.in.h:1
+#: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
 msgstr "Meniu multimedia"
 
-#: desktop-directories/Multimedia.directory.in.h:2
+#: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Sunet & video"
 
-#: desktop-directories/Office.directory.in.h:1
+#: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
 msgstr "Birou"
 
-#: desktop-directories/Office.directory.in.h:2
+#: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Aplicaţii de birou"
 
-#: desktop-directories/Other.directory.in.h:1
+#: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
 msgstr "Aplicaţii care nu s-au încadrat în alte categorii"
 
-#: desktop-directories/Other.directory.in.h:2
+#: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
 msgstr "Diverse"
 
-#: desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Preferiţe legate de accesibilitate"
-
-#: desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
 msgstr "Setări şi preferinţe personale"
 
-#: desktop-directories/Settings.directory.in.h:2
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Preferinţe"
 
-#: desktop-directories/System-Settings.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Preferiţe legate de accesibilitate"
+
+#: ../desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Setări şi preferinţe personale"
+
+#: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "Administrare"
 
-#: desktop-directories/System-Settings.directory.in.h:2
+#: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
 msgstr "Schimbă setările sistem (afectează toţi utilizatorii)"
 
-#: desktop-directories/System-Tools.directory.in.h:1
+#: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "Unelte sistem"
 
-#: desktop-directories/System-Tools.directory.in.h:2
+#: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Configurare şi monitorizare sistem"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "Editor meniuri"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "Editează meniuri"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "_Aplicaţii"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "_Setări implicite"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "_Meniuri:"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+msgid "Name"
+msgstr "Nume"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr "Afişează"
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Nu găsesc directorul „Acasă”: nu este setat în /etc/passwd şi nu există o valoare pentru variabila de mediu $HOME"
+
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Fişier meniu"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "MENU_FILE"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Monitorizează schimbările din menu"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Include elementele <Exclude>"
+
+#: ../util/test-menu-spec.c:89
+msgid "Invalid desktop file ID"
+msgstr "ID fişier desktop invalid"
+
+#: ../util/test-menu-spec.c:90
+msgid "[Invalid Filename]"
+msgstr "[Nume invalid de fişier]"
+
+#: ../util/test-menu-spec.c:91
+msgid " <excluded>"
+msgstr " <excluded>"
+
+#: ../util/test-menu-spec.c:162
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Meniu schimbat, reîncarc ====\n"
+"\n"
+"\n"
+
+#: ../util/test-menu-spec.c:167
+#: ../util/test-menu-spec.c:203
+msgid "Menu tree is empty"
+msgstr "Arborele meniu este vid"
+
+#: ../util/test-menu-spec.c:186
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- testează implementarea GNOME a specificaţiei meniurilor de desktop "
 
