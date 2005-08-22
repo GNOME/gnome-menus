@@ -1,4 +1,33 @@
 ===============
+Version 2.11.92
+===============
+
+ Fixes
+
+	* Fix memory corruption crasher handling notifies (Mark)
+	* Fix python syntax warning (Mark)
+	* Fix build when FAM isn't found (Elijah Newren)
+	* Fix crasher when a <AppDir> references a subdir of another <AppDir> (Mark)
+	* Fix duplicate entries after updating (Mark)
+	* Fix infinite loop (Frederic Crozat)
+	* Make <LegacyDir> with prefix work again (Chris Lahey, Mark)
+
+  Translators
+
+	* Rostislav "zbrox" Raykov (bg)
+	* Jordi Mallach (ca)
+	* Hendrik Brandt (de)
+	* Nikos Charonitakis (el)
+	* Roozbeh Pournader (fa)
+	* ahmad riza h nst (id)
+	* Takeshi AIHANA (ja)
+	* Young-Ho Cha (ko)
+	* GNOME PL Team (pl)
+	* Sebastian Ivan (ro)
+	* Maxim Dziumanenko (uk)
+	* Clytie Siddall (vi)
+
+===============
 Version 2.11.91
 ===============
 
