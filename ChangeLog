@@ -1,3 +1,16 @@
+2005-08-22  Mark McLoughlin  <mark@skynet.ie>
+
+	Based on patch from Chris Lahey <clahey@ximian.com>
+	in bug #313899
+
+	* libmenu/entry-directories.c:
+	(get_desktop_file_id_from_path): pass the DesktopEntryType
+	instead of using EntryDirectory:entry_type which may
+	be DESKTOP_ENTRY_INVALID with <LegacyDir>
+	(entry_directory_foreach_recursive),
+	(entry_directory_get_flat_contents): pass the appropriate
+	entry type.
+
 2005-08-18  Mark McLoughlin  <mark@skynet.ie>
 
 	Patch from Federic Crozat <fcrozat@mandriva.com>

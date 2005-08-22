@@ -777,14 +777,15 @@ entry_directory_get_directory (EntryDirectory *ed,
 }
 
 static char *
-get_desktop_file_id_from_path (EntryDirectory *ed,
-			       const char     *relative_path)
+get_desktop_file_id_from_path (EntryDirectory   *ed,
+			       DesktopEntryType  entry_type,
+			       const char       *relative_path)
 {
   char *retval;
   
   retval = NULL;
 
-  if (ed->entry_type == DESKTOP_ENTRY_DESKTOP)
+  if (entry_type == DESKTOP_ENTRY_DESKTOP)
     {
       if (!ed->is_legacy)
 	{
@@ -850,7 +851,9 @@ entry_directory_foreach_recursive (EntryDirectory            *ed,
           g_string_append (relative_path,
                            desktop_entry_get_basename (entry));
 
-	  file_id = get_desktop_file_id_from_path (ed, relative_path->str);
+	  file_id = get_desktop_file_id_from_path (ed,
+						   ed->entry_type,
+						   relative_path->str);
 
           ret = func (ed, entry, file_id, set, user_data);
 
@@ -933,7 +936,9 @@ entry_directory_get_flat_contents (EntryDirectory   *ed,
         {
           char *file_id;
 
-          file_id = get_desktop_file_id_from_path (ed, basename);
+          file_id = get_desktop_file_id_from_path (ed,
+						   DESKTOP_ENTRY_DESKTOP,
+						   basename);
 
           desktop_entry_set_add_entry (desktop_entries,
                                        entry,
