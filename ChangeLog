@@ -1,3 +1,12 @@
+2005-08-24  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix crasher where a FAMConnection may have events for
+	a monitor, even after the monitor may be cancelled.
+	Patch from Ed Catmur <ed@catmur.co.uk> in bug #314369
+
+	* libmenu/menu-monitor.c: (unregister_monitor_with_fam):
+	Process any pending events after cancelling the monitor.
+
 2005-08-22  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.11.93

@@ -419,6 +419,14 @@ unregister_monitor_with_fam (MenuMonitor *monitor)
     return;
 
   FAMCancelMonitor (&fam_connection, &monitor->request);
+
+  /* Need to process any remaining events for this monitor
+   */
+  if (!process_fam_events ())
+    {
+      g_source_remove (fam_io_watch);
+      fam_io_watch = 0;
+    }
 #endif /* HAVE_FAM */
 }
 
