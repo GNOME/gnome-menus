@@ -2,125 +2,227 @@
 # Copyright (C) 2004-2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Žygimantas Beručka <uid0@akl.lt>, 2004-2005.
-# 
+# Justina Klingaitė <justina.klingaite@gmail.com>, 2005. 
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-13 01:04+0200\n"
-"PO-Revision-Date: 2005-03-04 14:04+0200\n"
+"POT-Creation-Date: 2005-08-17 14:35+0000\n"
+"PO-Revision-Date: 2005-08-25 23:17+0300\n"
 "Last-Translator: Žygimantas Beručka <uid0@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: desktop-directories/Accessibility.directory.in.h:1
-#: desktop-directories/Settings-Accessibility.directory.in.h:1
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
 msgstr "Prieinamumas"
 
-#: desktop-directories/Accessibility.directory.in.h:2
+#: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
 msgstr "Prieinamumo nustatymai"
 
-#: desktop-directories/Accessories.directory.in.h:1
+#: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
 msgstr "Reikmenys"
 
-#: desktop-directories/Accessories.directory.in.h:2
+#: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Darbastalio reikmenys"
+msgstr "Darbo aplinkos reikmenys"
 
-#: desktop-directories/Applications.directory.in.h:1
+#: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Programos"
 
-#: desktop-directories/Development.directory.in.h:1
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Darbastalis"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Asmeniniai ir administravimo nustatymai"
+
+#: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "Programavimas"
 
-#: desktop-directories/Development.directory.in.h:2
+#: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
 msgstr "Programinės įrangos kūrimo įrankiai"
 
-#: desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
 msgstr "Švietimas"
 
-#: desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
 msgstr "Žaidimai"
 
-#: desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Žaidimai ir pramogos"
 
-#: desktop-directories/Graphics.directory.in.h:1
+#: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
 msgstr "Grafika"
 
-#: desktop-directories/Graphics.directory.in.h:2
+#: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
 msgstr "Grafinės programos"
 
-#: desktop-directories/Internet.directory.in.h:1
+#: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internetas"
 
-#: desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Programos Interneto prieigai (žiniatinklis, el. paštas)"
 
-#: desktop-directories/Multimedia.directory.in.h:1
+#: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
 msgstr "Daugialypės terpės meniu"
 
-#: desktop-directories/Multimedia.directory.in.h:2
+#: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Garsas ir vaizdas"
 
-#: desktop-directories/Office.directory.in.h:1
+#: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
 msgstr "Biuras"
 
-#: desktop-directories/Office.directory.in.h:2
+#: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Biuro programos"
 
-#: desktop-directories/Other.directory.in.h:1
+#: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
 msgstr "Programos, kurios netiko kitose kategorijose"
 
-#: desktop-directories/Other.directory.in.h:2
+#: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
-msgstr "Kita"
+msgstr "Kitos"
 
-#: desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Su prieinamumu susiję nustatymai"
-
-#: desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
 msgstr "Asmeniniai nustatymai"
 
-#: desktop-directories/Settings.directory.in.h:2
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Nustatymai"
 
-#: desktop-directories/System-Settings.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Su prieinamumu susiję nustatymai"
+
+#: ../desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Asmeniniai nustatymai"
+
+#: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "Administravimas"
 
-#: desktop-directories/System-Settings.directory.in.h:2
+#: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
 msgstr "Keisti sisteminio masto nustatymus (paveikia visus naudotojus)"
 
-#: desktop-directories/System-Tools.directory.in.h:1
+#: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "Sistemos įrankiai"
 
-#: desktop-directories/System-Tools.directory.in.h:2
+#: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Sistemos konfigūravimas ir stebėjimas"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "Meniu redaktorius"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "Redaguoti meniu"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "_Programos:"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "_Numatytieji"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "_Meniu:"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr "Rodyti"
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Nepavyko rasti namų aplanko: /etc/passwd nenurodyta ir aplinkoje nėra $HOME "
+"reikšmės"
+
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Meniu byla"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "MENIU_BYLA"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Ekranas meniu pasikeitimams"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude> entries"
+msgstr "Įtraukti <Pašalinti> įrašus"
+
+#: ../util/test-menu-spec.c:89
+msgid "Invalid desktop file ID"
+msgstr "Netinkamas darbastalio bylos ID"
+
+#: ../util/test-menu-spec.c:90
+msgid "[Invalid Filename]"
+msgstr "[Netinkamas bylos pavadinimas]"
+
+#: ../util/test-menu-spec.c:91
+msgid " <excluded>"
+msgstr " <pašalintas>"
+
+#: ../util/test-menu-spec.c:162
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Meniu pakeistas, perkraunama ====\n"
+"\n"
+"\n"
+
+#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
+msgid "Menu tree is empty"
+msgstr "Meniu medis yra tuščias"
+
+#: ../util/test-menu-spec.c:186
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- patikrinti GNOME darbo aplinkos meniu specifikacijos įgyvendinimą"
