@@ -1,14 +1,14 @@
-# Vietnamese Translation for gnome-menus.
+# Vietnamese Translation for Gnome Menus.
 # Copyright © 2005 Gnome i18n Project for Vietnamese.
 # This file is distributed under the same license as the gnome-menus package.
 # Trinh Minh Thanh <tmthanh@yahoo.com>, 2004.
 # Clytie Siddall <clytie@riverland.net.au>, 2005.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gnome-menus Gnome 2.12\n"
+"Project-Id-Version: Gnome-menus 2.11.92 Gnome HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-08-04 06:30+0000\n"
-"PO-Revision-Date: 2005-08-04 21:26+0930\n"
+"PO-Revision-Date: 2005-08-27 16:04+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr "Công cụ bổ sung"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Công cụ bổ sung cho màn hình nền"
+msgstr "Công cụ bổ sung cho mặt bàn"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -40,11 +40,11 @@ msgstr "Ứng dụng"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Desktop"
-msgstr "Màn hình nền"
+msgstr "Mặt bàn"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Thiết lập quản lý và sở thích cá nhân"
+msgstr "Thiết lập quản lý và Tùy thích cá nhân"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -89,7 +89,7 @@ msgstr "Trình đơn đa phương tiện"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Âm thanh và ảnh động"
+msgstr "Âm thanh và Ảnh động"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -109,20 +109,20 @@ msgstr "Trình khác"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Sở thích cá nhân"
+msgstr "Tùy thích cá nhân"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Sở thích"
+msgstr "Tùy thích"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
-msgstr "Tùy chọn liên quan đến khả năng truy cập"
+msgstr "Tùy thích liên quan đến khả năng truy cập"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Thiết lập và sở thích cá nhân"
+msgstr "Thiết lập và Tùy thích cá nhân"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -174,8 +174,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Không tìm thấy thư mục chính: chưa lập trong «/etc/passwd» và không có giá "
-"trị cho biến «$HOME» trong môi trường."
+"Không tìm thấy thư mục chính: chưa lập trong </etc/passwd> và không có giá "
+"trị cho biến <$HOME> trong môi trường."
 
 #: ../util/test-menu-spec.c:32
 msgid "Menu file"
@@ -191,11 +191,11 @@ msgstr "Bộ theo thay đổi trình đơn"
 
 #: ../util/test-menu-spec.c:34
 msgid "Include <Exclude>d entries"
-msgstr "Gồm các mục nhập <bị loại trừ>"
+msgstr "Gồm các mục nhập bị<loại trừ>"
 
 #: ../util/test-menu-spec.c:89
 msgid "Invalid desktop file ID"
-msgstr "ID tập tin màn hình không hợp lệ."
+msgstr "ID tập tin mặt bàn không hợp lệ."
 
 #: ../util/test-menu-spec.c:90
 msgid "[Invalid Filename]"
@@ -227,4 +227,4 @@ msgstr "Cây trình đơn rỗng"
 
 #: ../util/test-menu-spec.c:186
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "— thử ra sự thực hiện Gnome của Đặc tả Trình đơn Màn hình làm việc"
+msgstr "— thử ra sự thực hiện Gnome của Đặc tả Trình đơn Mặt bàn"
