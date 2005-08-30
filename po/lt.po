@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-17 14:35+0000\n"
-"PO-Revision-Date: 2005-08-25 23:17+0300\n"
+"POT-Creation-Date: 2005-08-30 20:22+0300\n"
+"PO-Revision-Date: 2005-08-30 20:25+0300\n"
 "Last-Translator: Žygimantas Beručka <uid0@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -188,8 +188,8 @@ msgid "Monitor for menu changes"
 msgstr "Ekranas meniu pasikeitimams"
 
 #: ../util/test-menu-spec.c:34
-msgid "Include <Exclude> entries"
-msgstr "Įtraukti <Pašalinti> įrašus"
+msgid "Include <Exclude>d entries"
+msgstr "Įtraukti <Pašalint>us įrašus"
 
 #: ../util/test-menu-spec.c:89
 msgid "Invalid desktop file ID"
