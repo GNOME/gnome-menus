@@ -7,200 +7,202 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-29 10:57+0100\n"
-"PO-Revision-Date: 2005-08-29 16:41+0100\n"
-"Last-Translator: Telsa Gwynne <hobbit@aloss.ukuu.org.uk>\n"
+"POT-Creation-Date: 2005-09-03 07:20+0100\n"
+"PO-Revision-Date: 2005-09-03 00:13-0000\n"
+"Last-Translator: Rhys Jones <rhys@sucs.org>\n"
 "Language-Team: Welsh <cy@pengwyn.linux.org.uk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: desktop-directories/Accessibility.directory.in.h:1
-#: desktop-directories/Settings-Accessibility.directory.in.h:1
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
 msgstr "Hygyrchedd"
 
-#: desktop-directories/Accessibility.directory.in.h:2
+#: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
 msgstr "Gosodiadau Hygyrchedd"
 
-#: desktop-directories/Accessories.directory.in.h:1
+#: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
 msgstr "Ategolion"
 
-#: desktop-directories/Accessories.directory.in.h:2
+#: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
 msgstr "Ategolion penbwrdd"
 
-#: desktop-directories/Applications.directory.in.h:1
+#: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Rhaglenni"
 
-#: desktop-directories/Desktop.directory.in.h:1
+#: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Desktop"
-msgstr "Penfwrdd"
+msgstr "Penbwrdd"
 
-#: desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Hoffterau a gosodiadau personol"
+msgstr "Hoffterau personol a gosodiadau gweinyddol"
 
-#: desktop-directories/Development.directory.in.h:1
+#: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
 msgstr "Rhaglennu"
 
-#: desktop-directories/Development.directory.in.h:2
+#: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
 msgstr "Offer ar gyfer datblygu meddalwedd"
 
-#: desktop-directories/Education.directory.in.h:1
+#: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
 msgstr "Addysg"
 
-#: desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
-msgstr "Gêmau"
+msgstr "Gemau"
 
-#: desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Gêmau a diddorion"
+msgstr "Gemau a difyrrwch"
 
-#: desktop-directories/Graphics.directory.in.h:1
+#: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
 msgstr "Graffeg"
 
-#: desktop-directories/Graphics.directory.in.h:2
+#: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
 msgstr "Rhaglennu graffeg"
 
-#: desktop-directories/Internet.directory.in.h:1
+#: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Rhyngrwyd"
 
-#: desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Rhaglenni ar gyfer mynediad Rhyngrwyd megis y we ac ebost"
+msgstr "Rhaglenni ar gyfer mynediad Rhyngrwyd megis y we ac e-bost"
 
-#: desktop-directories/Multimedia.directory.in.h:1
+#: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
 msgstr "Dewislen amlgyfrwng"
 
-#: desktop-directories/Multimedia.directory.in.h:2
+#: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Sain a Fideo"
 
-#: desktop-directories/Office.directory.in.h:1
+#: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
 msgstr "Swyddfa"
 
-#: desktop-directories/Office.directory.in.h:2
+#: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Rhaglennu Swyddfa"
+msgstr "Rhaglenni Swyddfa"
 
-#: desktop-directories/Other.directory.in.h:1
+#: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
 msgstr "Rhaglenni nad ydynt yn ffitio yng nghategorïau eraill"
 
-#: desktop-directories/Other.directory.in.h:2
+#: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
 msgstr "Eraill"
 
-#: desktop-directories/Preferences.directory.in.h:1
+#: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Hoffterau personol"
 
-#: desktop-directories/Preferences.directory.in.h:2
-#: desktop-directories/Settings.directory.in.h:2
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Hoffterau"
 
-#: desktop-directories/Settings-Accessibility.directory.in.h:2
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
-msgstr "Hoffterau yn gysylltiedig a hygyrchedd"
+msgstr "Hoffterau yn gysylltiedig â hygyrchedd"
 
-#: desktop-directories/Settings.directory.in.h:1
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Hoftterau a gosodiadau personol"
+msgstr "Hoffterau a gosodiadau personol"
 
-#: desktop-directories/System-Settings.directory.in.h:1
+#: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "Gweinyddiaeth"
 
-#: desktop-directories/System-Settings.directory.in.h:2
+#: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Newid gosodiadau system-eang (sy'n effeithio a phob defnyddiwr)"
+msgstr "Newid gosodiadau system-eang (sy'n effeithio pob defnyddiwr)"
 
-#: desktop-directories/System-Tools.directory.in.h:1
+#: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "Offer System"
 
-#: desktop-directories/System-Tools.directory.in.h:2
+#: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Cyflunio a monitro system"
 
-#: simple-editor/gmenu-simple-editor.desktop.in.h:1
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
 msgstr "Golygydd Dewislen"
 
-#: simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
 msgstr "Golygu Dewislenni"
 
-#: simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
 msgstr "_Rhaglenni:"
 
-#: simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
 msgstr "_Rhagosodiadau"
 
-#: simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
 msgstr "_Dewislenni"
 
-#: simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
 msgid "Name"
 msgstr "Enw"
 
-#: simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
 msgid "Show"
 msgstr "Dangos"
 
-#: simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Methu darganfod cyfeiriadur cartref: nid oes cofnod yn /etc/passwd nac yn yr amgylchedd"
+msgstr ""
+"Methu darganfod cyfeiriadur cartref: nid oes cofnod yn /etc/passwd na gwerth "
+"ar gyfer $HOME yn yr amgylchedd"
 
-#: util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:32
 msgid "Menu file"
-msgstr ""
+msgstr "Ffeil ddewislen"
 
-#: util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:32
 msgid "MENU_FILE"
-msgstr ""
+msgstr "FFEIL_DDEWISLEN"
 
-#: util/test-menu-spec.c:33
+#: ../util/test-menu-spec.c:33
 msgid "Monitor for menu changes"
-msgstr ""
+msgstr "Monitro newidiadau yn y ddewislen"
 
-#: util/test-menu-spec.c:34
+#: ../util/test-menu-spec.c:34
 msgid "Include <Exclude>d entries"
-msgstr ""
+msgstr "Cynnwys y cofnodion a <eithriwyd>"
 
-#: util/test-menu-spec.c:89
+#: ../util/test-menu-spec.c:89
 msgid "Invalid desktop file ID"
-msgstr ""
+msgstr "ID ffeil penbwrdd annilys"
 
-#: util/test-menu-spec.c:90
+#: ../util/test-menu-spec.c:90
 msgid "[Invalid Filename]"
-msgstr ""
+msgstr "[Enw Ffeil Annilys]"
 
-#: util/test-menu-spec.c:91
+#: ../util/test-menu-spec.c:91
 msgid " <excluded>"
-msgstr ""
+msgstr " <eithriwyd>"
 
-#: util/test-menu-spec.c:162
+#: ../util/test-menu-spec.c:162
 msgid ""
 "\n"
 "\n"
@@ -212,14 +214,14 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"=== Newidwyd y dewislen; ail-lwytho===\n"
+"=== Newidiwyd y ddewislen; ail-lwytho===\n"
 "\n"
 "\n"
 
-#: util/test-menu-spec.c:167 util/test-menu-spec.c:203
+#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
 msgid "Menu tree is empty"
-msgstr ""
+msgstr "Coeden ddewislen yn wag"
 
-#: util/test-menu-spec.c:186
+#: ../util/test-menu-spec.c:186
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
+msgstr "- profi gweithrediad GNOME o Fanyleb Dewislenni Penbwrdd"
