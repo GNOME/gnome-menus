@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-09 10:26+0200\n"
-"PO-Revision-Date: 2005-07-09 10:28+0200\n"
+"POT-Creation-Date: 2005-09-03 21:30+0200\n"
+"PO-Revision-Date: 2005-09-03 21:32+0200\n"
 "Last-Translator: Данило Шеган <danilo@gnome.org>\n"
 "Language-Team: Serbian (sr) <gnome@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,14 @@ msgstr "Алатке окружења"
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Програми"
+
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Окружење"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Личне поставке и администраторска подешавања"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -98,6 +106,15 @@ msgstr "Програми који не припадају осталим кат�
 msgid "Other"
 msgstr "Остало"
 
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Личне поставке"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Поставке"
+
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
 msgstr "Поставке у вези приступачности"
@@ -105,10 +122,6 @@ msgstr "Поставке у вези приступачности"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Личне поставке и подешавања"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Поставке"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -125,6 +138,10 @@ msgstr "Системски алати"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Подешавање и праћење система"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "Уређивач менија"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
@@ -155,7 +172,55 @@ msgstr "Прикажи"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Не могу да нађем лични директоријум: није постављен у /etc/passwd а нема ни вредности $HOME у окружењу"
+msgstr ""
+"Не могу да нађем лични директоријум: није постављен у /etc/passwd а нема ни "
+"вредности $HOME у окружењу"
+
+#: ../util/test-menu-spec.c:32
+msgid "Menu file"
+msgstr "Датотека менија"
+
+#: ../util/test-menu-spec.c:32
+msgid "MENU_FILE"
+msgstr "ДАТОТЕКА_МЕНИЈА"
+
+#: ../util/test-menu-spec.c:33
+msgid "Monitor for menu changes"
+msgstr "Прати измене менија"
+
+#: ../util/test-menu-spec.c:34
+msgid "Include <Exclude>d entries"
+msgstr "Укључи <Exclude>-ене ставке"
+
+#: ../util/test-menu-spec.c:89
+msgid "Invalid desktop file ID"
+msgstr "Неисправан ИД .desktop датотеке"
+
+#: ../util/test-menu-spec.c:90
+msgid "[Invalid Filename]"
+msgstr "[Неисправно име датотеке]"
+
+#: ../util/test-menu-spec.c:91
+msgid " <excluded>"
+msgstr " <искључена>"
+
+#: ../util/test-menu-spec.c:162
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr "\n\n\n==== Мени је измењен, поново учитава ====\n\n\n"
+
+#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
+msgid "Menu tree is empty"
+msgstr "Стабло менија је празно"
+
+#: ../util/test-menu-spec.c:186
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "— испробава Гномову изведбу Спецификације за меније окружења"
 
 #~ msgid "System Settings"
 #~ msgstr "Системска подешавања"
