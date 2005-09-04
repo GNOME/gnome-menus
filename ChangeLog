@@ -1,3 +1,7 @@
+2005-09-04  Danilo Segan  <danilo@gnome.org>
+
+	* configure.in: Added "hy" (Armenian) to ALL_LINGUAS.
+
 2005-08-24  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix crasher where a FAMConnection may have events for
