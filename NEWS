@@ -1,3 +1,25 @@
+==============
+Version 2.12.0
+==============
+
+ Fixes
+
+	* Fix FAM crasher in gmenu-simple-editor (Ed Catmur)
+
+ Translators
+
+	* Rhys Jones (cy)
+	* Vincent Untz (fr)
+	* Ignacio Casal Quinteiro (gl)
+	* Norayr Chilingaryan (hy)
+	* Žygimantas Beručka (lt)
+	* Duarte Loreto (pt)
+	* Leonid Kanter (ru)
+	* Elian Myftiu (sq)
+	* Данило Шеган (sr)
+	* Onur Can Cakmak (tr)
+	* Clytie Siddall (vi)
+
 ===============
 Version 2.11.92
 ===============
