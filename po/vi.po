@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-menus 2.11.92 Gnome HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-04 06:30+0000\n"
+"POT-Creation-Date: 2005-09-09 13:28+0200\n"
 "PO-Revision-Date: 2005-08-27 16:04+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
@@ -32,7 +32,7 @@ msgstr "Công cụ bổ sung"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Công cụ bổ sung cho mặt bàn"
+msgstr "Công cụ sử dụng bổ sung"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -217,7 +217,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"━━━ Trình đơn đã thay đổi nên đang tải lại ━━━\n"
+"━━━ Trình đơn đã thay đổi nên đang nạp lại ━━━\n"
 "\n"
 "\n"
 
@@ -227,4 +227,4 @@ msgstr "Cây trình đơn rỗng"
 
 #: ../util/test-menu-spec.c:186
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "— thử ra sự thực hiện Gnome của Đặc tả Trình đơn Mặt bàn"
+msgstr "— thử ra sự thực hiện Gnome của Desktop Menu Specification"
