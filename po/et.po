@@ -213,7 +213,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Menüü muudetud, laen uuesti ====\n"
+"==== Menüü muudetud, laetakse uuesti ====\n"
 "\n"
 "\n"
 
