@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the gnome-menus package.
 # Trinh Minh Thanh <tmthanh@yahoo.com>, 2004.
 # Clytie Siddall <clytie@riverland.net.au>, 2005.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Gnome-menus 2.11.92 Gnome HEAD\n"
+"Project-Id-Version: Gnome-menus 2.12 Gnome HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-09 13:28+0200\n"
-"PO-Revision-Date: 2005-08-27 16:04+0930\n"
+"PO-Revision-Date: 2005-09-16 16:38+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -85,7 +86,7 @@ msgstr ""
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Trình đơn đa phương tiện"
+msgstr "Trình đơn đa vật chứa"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
