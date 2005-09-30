@@ -1,3 +1,15 @@
+2005-09-30  Mark McLoughlin  <mark@skynet.ie>
+
+	Hopefully fix issue where menus wouldn't be completely
+	reloaded after a spew of file change events (#313833)
+	
+	Detailed analysis from Frederic Crozat <fcrozat@mandriva.com>
+
+	* libmenu/menu-monitor.c: make the pending_events list global
+	rather than per-monitor and don't try and coalesce events for
+	the same path so that we can guarantee that we emit all the
+	events in the same order as we receive them from FAM.
+
 2005-09-06  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.12.1.

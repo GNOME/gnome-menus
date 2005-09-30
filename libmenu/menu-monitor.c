@@ -37,7 +37,6 @@ struct MenuMonitor
 
 #ifdef HAVE_FAM
   FAMRequest  request;
-  GSList     *pending_events;
 #endif /* HAVE_FAM */
 
   guint is_directory : 1;
@@ -70,6 +69,7 @@ static gboolean       opened_connection = FALSE;
 static gboolean       failed_to_connect = FALSE;
 static guint          fam_io_watch = 0;
 static guint          events_idle_handler = 0;
+static GSList        *pending_events = NULL;
 
 static void
 invoke_notifies (MenuMonitor      *monitor,
@@ -83,7 +83,6 @@ invoke_notifies (MenuMonitor      *monitor,
   g_slist_foreach (copy,
 		   (GFunc) menu_monitor_notify_ref,
 		   NULL);
-		   
 
   tmp = copy;
   while (tmp != NULL)
@@ -104,62 +103,50 @@ invoke_notifies (MenuMonitor      *monitor,
   g_slist_free (copy);
 }
 
-static void
-list_pending_events_foreach (const char   *key,
-			     MenuMonitor  *monitor,
-			     GSList      **pending_events)
-{
-  GSList *tmp;
-
-  tmp = monitor->pending_events;
-  while (tmp != NULL)
-    {
-      MenuMonitorEventInfo *event = tmp->data;
-
-      menu_monitor_ref (event->monitor);
-
-      tmp = tmp->next;
-    }
-
-  *pending_events = g_slist_concat (*pending_events,
-				    monitor->pending_events);
-
-  monitor->pending_events = NULL;
-}
-
 static gboolean
 emit_events_in_idle (void)
 {
-  GSList *pending_events = NULL;
+  GSList *events_to_emit;
   GSList *tmp;
 
-  events_idle_handler = 0;
-  
-  g_hash_table_foreach (monitors_registry,
-			(GHFunc) list_pending_events_foreach,
-			&pending_events);
+  events_to_emit = pending_events;
 
-  tmp = pending_events;
+  pending_events = NULL;
+  events_idle_handler = 0;
+
+  tmp = events_to_emit;
   while (tmp != NULL)
     {
-      MenuMonitorEventInfo *event = tmp->data;
+      MenuMonitorEventInfo *event_info = tmp->data;
 
-      invoke_notifies (event->monitor, event->event, event->path);
+      menu_monitor_ref (event_info->monitor);
 
-      menu_monitor_unref (event->monitor);
-      event->monitor = NULL;
+      tmp = tmp->next;
+    }
+  
+  tmp = events_to_emit;
+  while (tmp != NULL)
+    {
+      MenuMonitorEventInfo *event_info = tmp->data;
 
-      g_free (event->path);
-      event->path = NULL;
+      invoke_notifies (event_info->monitor,
+		       event_info->event,
+		       event_info->path);
 
-      event->event = MENU_MONITOR_EVENT_INVALID;
+      menu_monitor_unref (event_info->monitor);
+      event_info->monitor = NULL;
 
-      g_free (event);
+      g_free (event_info->path);
+      event_info->path = NULL;
+
+      event_info->event = MENU_MONITOR_EVENT_INVALID;
+
+      g_free (event_info);
 
       tmp = tmp->next;
     }
 
-  g_slist_free (pending_events);
+  g_slist_free (events_to_emit);
 
   return FALSE;
 }
@@ -168,10 +155,10 @@ static void
 queue_fam_event (MenuMonitor *monitor,
 		 FAMEvent    *fam_event)
 {
-  MenuMonitorEventInfo *event;
+  MenuMonitorEventInfo *event_info;
+  MenuMonitorEvent      event;
   const char           *path;
   char                 *freeme;
-  GSList               *tmp;
 
   freeme = NULL;
   if (fam_event->filename[0] == '/')
@@ -185,49 +172,33 @@ queue_fam_event (MenuMonitor *monitor,
 					NULL);
     }
 
-  event = NULL;
-  tmp = monitor->pending_events;
-  while (tmp != NULL)
-    {
-      event = tmp->data;
-
-      if (strcmp (event->path, path) == 0)
-	break;
-
-      event = NULL;
-
-      tmp = tmp->next;
-    }
-
-  if (event == NULL)
-    {
-      event = g_new0 (MenuMonitorEventInfo, 1);
-
-      event->path    = g_strdup (path);
-      event->monitor = monitor;
-
-      monitor->pending_events = g_slist_append (monitor->pending_events,
-						event);
-    }
-
+  event = MENU_MONITOR_EVENT_INVALID;
   switch (fam_event->code)
     {
     case FAMChanged:
-      event->event = MENU_MONITOR_EVENT_CHANGED;
+      event = MENU_MONITOR_EVENT_CHANGED;
       break;
 
     case FAMCreated:
-      event->event = MENU_MONITOR_EVENT_CREATED;
+      event = MENU_MONITOR_EVENT_CREATED;
       break;
 
     case FAMDeleted:
-      event->event = MENU_MONITOR_EVENT_DELETED;
+      event = MENU_MONITOR_EVENT_DELETED;
       break;
 
     default:
       g_assert_not_reached ();
       break;
     }
+
+  event_info = g_new0 (MenuMonitorEventInfo, 1);
+
+  event_info->path    = g_strdup (path);
+  event_info->event   = event;
+  event_info->monitor = monitor;
+
+  pending_events = g_slist_append (pending_events, event_info);
 
   if (events_idle_handler == 0)
     {
@@ -513,15 +484,31 @@ menu_monitor_ref (MenuMonitor *monitor)
 
 #ifdef HAVE_FAM
 static void
-free_event_info (MenuMonitorEventInfo *event)
+menu_monitor_clear_pending_events (MenuMonitor *monitor)
 {
-  g_free (event->path);
-  event->path = NULL;
+  GSList *tmp;
 
-  event->monitor = NULL;
-  event->event   = MENU_MONITOR_EVENT_INVALID;
+  tmp = pending_events;
+  while (tmp != NULL)
+    {
+      MenuMonitorEventInfo *event_info = tmp->data;
+      GSList               *next = tmp->next;
 
-  g_free (event);
+      if (event_info->monitor == monitor)
+	{
+	  pending_events = g_slist_delete_link (pending_events, tmp);
+
+	  g_free (event_info->path);
+	  event_info->path = NULL;
+
+	  event_info->monitor = NULL;
+	  event_info->event   = MENU_MONITOR_EVENT_INVALID;
+
+	  g_free (event_info);
+	}
+
+      tmp = next;
+    }
 }
 #endif /* HAVE_FAM */
 
@@ -547,10 +534,8 @@ menu_monitor_unref (MenuMonitor *monitor)
   monitor->notifies = NULL;
 
 #ifdef HAVE_FAM
-  g_slist_foreach (monitor->pending_events, (GFunc) free_event_info, NULL);
-  g_slist_free (monitor->pending_events);
-  monitor->pending_events = NULL;
-#endif /* HAVE_FAM */
+  menu_monitor_clear_pending_events (monitor);
+#endif
 
   g_free (monitor->path);
   monitor->path = NULL;
