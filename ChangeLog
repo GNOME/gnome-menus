@@ -1,3 +1,6 @@
+2005-10-01  Runa Bhattacharjee <runa@bengalinux.org>
+	* configure.in: Added "bn" (Bengali) to ALL_LINGUAS.
+
 2005-09-30  Mark McLoughlin  <mark@skynet.ie>
 
 	Hopefully fix issue where menus wouldn't be completely
