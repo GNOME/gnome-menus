@@ -1831,7 +1831,6 @@ fixup_move_node (GMarkupParseContext   *context,
   if (n_new > 1)
     {
       MenuLayoutNode *prev;
-      MenuLayoutNode *parent;
       MenuLayoutNode *append_after;
 
       /* Need to split the <Move> into multiple <Move> */
@@ -1839,7 +1838,6 @@ fixup_move_node (GMarkupParseContext   *context,
       n_old = 0;
       n_new = 0;
       prev = NULL;
-      parent = node->parent;
       append_after = node;
 
       child = node->children;

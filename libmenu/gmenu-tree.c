@@ -2643,7 +2643,6 @@ gmenu_tree_execute_moves (GMenuTree      *tree,
   MenuLayoutNode *child;
   gboolean        need_remove_dups;
   GSList         *move_nodes;
-  GSList         *prev;
   GSList         *tmp;
 
   need_remove_dups = FALSE;
@@ -2673,7 +2672,6 @@ gmenu_tree_execute_moves (GMenuTree      *tree,
       child = menu_layout_node_get_next (child);
     }
 
-  prev = NULL;
   tmp = move_nodes;
   while (tmp != NULL)
     {

@@ -1,3 +1,9 @@
+2005-11-01  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_execute_moves):
+	* libmenu/menu-layout.c: (fixup_move_node): Remove some
+	unused code. Closes bug #320093.
+
 2005-10-31  Simos Xenitellis  <simos@gnome.org>
 
 	* configure.in: Added ky (Kirghiz) to ALL_LINGUAS.
