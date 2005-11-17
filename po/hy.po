@@ -1,7 +1,8 @@
 # translation of gnome-menus.HEAD.po to armenian
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005.
-#
+# Ruzanna Khachatryan <ruzannak@hotmail.com>
+# Norayr Chilingaryan <norik@freenet.am>
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Language-Team:  <norik@freenet.am>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 16bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
@@ -22,7 +23,7 @@ msgstr "Հնարավորություններ"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Հնարավորությունների կարգադրվածք"
+msgstr "Հնարավորությունների կարգավորումներ"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -30,19 +31,19 @@ msgstr "Աքսեսուարներ"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Աշխատանքային էկրանի աքսեսուարներ"
+msgstr "Աշխատասեղանի աքսեսուարներ"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
-msgstr "Կիրառական ծրագրեր"
+msgstr "Ծրագրեր"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Desktop"
-msgstr "Աշխատանքային էկրան"
+msgstr "Աշխատասեղան"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Անհատական պարամետրեր և կառավարման կարգադրվածքներ"
+msgstr "Անհատական և կառավարման կարգավորումներ"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -70,23 +71,23 @@ msgstr "Գրաֆիկա"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Գրաֆիկական կիրառական ծրագրեր"
+msgstr "Գրաֆիկական ծրագրեր"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
-msgstr "Ինտերնետ"
+msgstr "Hamacanc"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Ինտերնետ ընտրության ծրագրեր, ինչպիսիք են համաշխարհային սարդոստայնը և էլեկտրոնային փոստը"
+msgstr "Համացանցում աշխատելու ծրագրեր, ինչպես վեպ զննիչը"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Մուլտիմեդիա մենյու"
+msgstr "Համասփյուռ ծրագրերի ցանկ"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Ձայն և տեսապատկեր"
+msgstr "Ձայն և Վիդեո"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -94,11 +95,11 @@ msgstr "Օֆիս"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Օֆիսի կիրառական ծրագրեր"
+msgstr "Օֆիսային Ծրագրեր"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Կիրառական ծրագրեր, որոնք այլ կատեգորիաներին չեն համապատասխանում"
+msgstr "Ծրագրեր, որոնք այլ կատեգորիաներին չեն համապատասխանում"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -106,20 +107,20 @@ msgstr "Այլ"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Անհատական պարամետրեր"
+msgstr "Անհատական նախընտրանքներ"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Պարամետրեր"
+msgstr "Նախընտրանքներ"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
-msgstr "Կիրառական ծրագրերին առնչվող պարամետրեր"
+msgstr "Ծրագրերին առնչվող պարամետրեր"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Անհատական պարամետրեր և կարգադրվածքներ"
+msgstr "Անհատական նախընտրանքներ"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -127,7 +128,7 @@ msgstr "Կառավարում"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Փոխել ամբողջ համակարգի կարգադրվածքները (վերաբերում է բոլոր գործարկողներին)"
+msgstr "Փոխել ամբողջ համակարգի նախընտրանքները (վերաբերում է բոլոր գործարկողներին)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -135,23 +136,23 @@ msgstr "Համակարգի գործիքներ"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Համակարգի կոնֆիգուրացիա և վերահսկում"
+msgstr "Համակարգի կարգավորում և վերահսկում"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Մենյու խմբագրում"
+msgstr "Ցանկերի խմբագրում"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
-msgstr "_կիրառական ծրագրեր"
+msgstr "Ծրագրեր"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "_Նախադրվածք"
+msgstr "Նախնական"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "_Մենյու"
+msgstr "Ցանկ"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
@@ -160,11 +161,11 @@ msgstr "Անուն"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
 msgid "Show"
-msgstr "Պատկեր"
+msgstr "Ցուցադրում"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Անկարող է գտնել տուն թղթապանակը։ տեղադրված չէ /և այլն/ և միջավայրում $ տան համար ոչ մի արժեք "
+msgstr "Չի հաջողվել գտնել տան ապանակը։ այն նշված չէ /etc/passwd ֆայլի մեջ  և $HOME  միջավայրի փոփոխականը չի պարունակում ոչ մի արժեք"
 
