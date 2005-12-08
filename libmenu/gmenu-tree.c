@@ -100,6 +100,7 @@ struct GMenuTreeDirectory
 
   guint only_unallocated : 1;
   guint is_root : 1;
+  guint is_nodisplay : 1;
 };
 
 typedef struct
@@ -117,6 +118,7 @@ struct GMenuTreeEntry
   char         *desktop_file_id;
 
   guint is_excluded : 1;
+  guint is_nodisplay : 1;
 };
 
 struct GMenuTreeSeparator
@@ -1009,6 +1011,14 @@ gmenu_tree_directory_get_tree (GMenuTreeDirectory *directory)
   return gmenu_tree_ref (root->tree);
 }
 
+gboolean
+gmenu_tree_directory_get_is_nodisplay (GMenuTreeDirectory *directory)
+{
+  g_return_val_if_fail (directory != NULL, FALSE);
+
+  return directory->is_nodisplay;
+}
+
 static void
 append_directory_path (GMenuTreeDirectory *directory,
 		       GString            *path)
@@ -1101,6 +1111,14 @@ gmenu_tree_entry_get_is_excluded (GMenuTreeEntry *entry)
   return entry->is_excluded;
 }
 
+gboolean
+gmenu_tree_entry_get_is_nodisplay (GMenuTreeEntry *entry)
+{
+  g_return_val_if_fail (entry != NULL, FALSE);
+
+  return entry->is_nodisplay;
+}
+
 GMenuTreeDirectory *
 gmenu_tree_header_get_directory (GMenuTreeHeader *header)
 {
@@ -1160,6 +1178,7 @@ gmenu_tree_directory_new (GMenuTreeDirectory *parent,
   retval->layout_info         = NULL;
   retval->contents            = NULL;
   retval->only_unallocated    = FALSE;
+  retval->is_nodisplay        = FALSE;
 
   if (parent != NULL)
     {
@@ -1324,7 +1343,8 @@ static GMenuTreeEntry *
 gmenu_tree_entry_new (GMenuTreeDirectory *parent,
 		      DesktopEntry       *desktop_entry,
 		      const char         *desktop_file_id,
-		      gboolean            is_excluded)
+		      gboolean            is_excluded,
+                      gboolean            is_nodisplay)
 {
   GMenuTreeEntry *retval;
 
@@ -1337,6 +1357,7 @@ gmenu_tree_entry_new (GMenuTreeDirectory *parent,
   retval->desktop_entry   = desktop_entry_ref (desktop_entry);
   retval->desktop_file_id = g_strdup (desktop_file_id);
   retval->is_excluded     = is_excluded != FALSE;
+  retval->is_nodisplay    = is_nodisplay != FALSE;
 
   return retval;
 }
@@ -3006,9 +3027,10 @@ entries_listify_foreach (const char         *desktop_file_id,
   directory->entries =
     g_slist_prepend (directory->entries,
 		     gmenu_tree_entry_new (directory,
-					  desktop_entry,
-					  desktop_file_id,
-					  FALSE));
+                                           desktop_entry,
+                                           desktop_file_id,
+                                           FALSE,
+                                           desktop_entry_get_no_display (desktop_entry)));
 }
 
 static void
@@ -3021,7 +3043,8 @@ excluded_entries_listify_foreach (const char         *desktop_file_id,
 		     gmenu_tree_entry_new (directory,
 					   desktop_entry,
 					   desktop_file_id,
-					   TRUE));
+					   TRUE,
+                                           desktop_entry_get_no_display (desktop_entry)));
 }
 
 static GMenuTreeDirectory *
@@ -3239,9 +3262,14 @@ process_layout (GMenuTree          *tree,
     {
       if (desktop_entry_get_no_display (directory->directory_entry))
         {
-          menu_verbose ("Not showing menu %s because NoDisplay=true\n",
+          directory->is_nodisplay = TRUE;
+
+          if (!(tree->flags & GMENU_TREE_FLAGS_INCLUDE_NODISPLAY))
+            {
+              menu_verbose ("Not showing menu %s because NoDisplay=true\n",
                         desktop_entry_get_name (directory->directory_entry));
-          deleted = TRUE;
+              deleted = TRUE;
+            }
         }
 
       if (!desktop_entry_get_show_in_gnome (directory->directory_entry))
@@ -3288,7 +3316,8 @@ process_layout (GMenuTree          *tree,
           delete = TRUE;
         }
 
-      if (desktop_entry_get_no_display (entry->desktop_entry))
+      if (!(tree->flags & GMENU_TREE_FLAGS_INCLUDE_NODISPLAY) &&
+          desktop_entry_get_no_display (entry->desktop_entry))
         {
           menu_verbose ("Deleting %s because NoDisplay=true\n",
                         desktop_entry_get_name (entry->desktop_entry));

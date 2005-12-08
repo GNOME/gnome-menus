@@ -58,10 +58,11 @@ typedef enum
 
 typedef enum
 {
-  GMENU_TREE_FLAGS_NONE             = 0,
-  GMENU_TREE_FLAGS_INCLUDE_EXCLUDED = 1 << 0,
-  GMENU_TREE_FLAGS_SHOW_EMPTY       = 1 << 1,
-  GMENU_TREE_FLAGS_MASK             = 0x03
+  GMENU_TREE_FLAGS_NONE              = 0,
+  GMENU_TREE_FLAGS_INCLUDE_EXCLUDED  = 1 << 0,
+  GMENU_TREE_FLAGS_SHOW_EMPTY        = 1 << 1,
+  GMENU_TREE_FLAGS_INCLUDE_NODISPLAY = 1 << 2,
+  GMENU_TREE_FLAGS_MASK              = 0x07
 } GMenuTreeFlags;
 
 GMenuTree *gmenu_tree_lookup (const char     *menu_file,
@@ -101,6 +102,8 @@ const char *gmenu_tree_directory_get_icon     (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_menu_id  (GMenuTreeDirectory *directory);
 GMenuTree  *gmenu_tree_directory_get_tree     (GMenuTreeDirectory *directory);
 
+gboolean gmenu_tree_directory_get_is_nodisplay (GMenuTreeDirectory *directory);
+
 char *gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
 				      GMenuTreeEntry     *entry);
 
@@ -113,7 +116,8 @@ const char *gmenu_tree_entry_get_exec    (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_desktop_file_path (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_desktop_file_id   (GMenuTreeEntry *entry);
 
-gboolean gmenu_tree_entry_get_is_excluded (GMenuTreeEntry *entry);
+gboolean gmenu_tree_entry_get_is_excluded  (GMenuTreeEntry *entry);
+gboolean gmenu_tree_entry_get_is_nodisplay (GMenuTreeEntry *entry);
 
 GMenuTreeDirectory *gmenu_tree_header_get_directory (GMenuTreeHeader *header);
 

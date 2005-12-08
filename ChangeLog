@@ -1,3 +1,23 @@
+2005-12-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Add GMENU_TREE_FLAGS_INCLUDE_NODISPLAY, gmenu_tree_entry_get_nodisplay()
+	and gmenu_tree_directory_get_nodisplay() in order to allow fix for
+	bug #323476
+
+	* libmenu/gmenu-tree.[ch]:
+	(gmenu_tree_directory_get_is_nodisplay),
+	(gmenu_tree_entry_get_is_nodisplay): add new API
+	(gmenu_tree_directory_new),
+	(gmenu_tree_entry_new): add is_nodisplay flag on entries
+	and directories
+	(entries_listify_foreach),
+	(excluded_entries_listify_foreach): set the flag here
+	(process_layout): don't remove if is_nodisplay and the
+	INCLUDE_NODISPLAY tree flag is set.
+
+	* util/test-menu-spec.c: (main): add -n arg to allow
+	testing.
+
 2005-11-01  Kjartan Maraas  <kmaraas@gnome.org>
 
 	* libmenu/gmenu-tree.c: (gmenu_tree_execute_moves):

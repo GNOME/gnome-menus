@@ -27,11 +27,13 @@
 static char     *menu_file = NULL;
 static gboolean  monitor = FALSE;
 static gboolean  include_excluded = FALSE;
+static gboolean  include_nodisplay = FALSE;
 
 static GOptionEntry options[] = {
-  { "file",             'f', 0, G_OPTION_ARG_STRING, &menu_file,        N_("Menu file"),                  N_("MENU_FILE") },
-  { "monitor",          'm', 0, G_OPTION_ARG_NONE,   &monitor,          N_("Monitor for menu changes"),   NULL },
-  { "include-excluded", 'i', 0, G_OPTION_ARG_NONE,   &include_excluded, N_("Include <Exclude>d entries"), NULL },
+  { "file",              'f', 0, G_OPTION_ARG_STRING, &menu_file,         N_("Menu file"),                      N_("MENU_FILE") },
+  { "monitor",           'm', 0, G_OPTION_ARG_NONE,   &monitor,           N_("Monitor for menu changes"),       NULL },
+  { "include-excluded",  'i', 0, G_OPTION_ARG_NONE,   &include_excluded,  N_("Include <Exclude>d entries"),     NULL },
+  { "include-nodisplay", 'n', 0, G_OPTION_ARG_NONE,   &include_nodisplay, N_("Include NoDisplay=true entries"), NULL },
   { NULL }
 };
 
@@ -178,6 +180,7 @@ main (int argc, char **argv)
   GOptionContext    *options_context;
   GMenuTree          *tree;
   GMenuTreeDirectory *root;
+  GMenuTreeFlags      flags;
 
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
@@ -188,8 +191,13 @@ main (int argc, char **argv)
   g_option_context_parse (options_context, &argc, &argv, NULL);
   g_option_context_free (options_context);
 
-  tree = gmenu_tree_lookup (menu_file ? menu_file : "applications.menu",
-			    include_excluded ? GMENU_TREE_FLAGS_INCLUDE_EXCLUDED : GMENU_TREE_FLAGS_NONE);
+  flags = GMENU_TREE_FLAGS_NONE;
+  if (include_excluded)
+    flags |= GMENU_TREE_FLAGS_INCLUDE_EXCLUDED;
+  if (include_nodisplay)
+    flags |= GMENU_TREE_FLAGS_INCLUDE_NODISPLAY;
+
+  tree = gmenu_tree_lookup (menu_file ? menu_file : "applications.menu", flags);
   g_assert (tree != NULL);
 
   root = gmenu_tree_get_root_directory (tree);
