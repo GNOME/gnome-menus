@@ -223,13 +223,13 @@ desktop_entry_load (DesktopEntry *entry)
     }
   else
     {
-      menu_verbose ("\%s\" contains no \"" DESKTOP_ENTRY_GROUP "\" group\n",
+      menu_verbose ("\"%s\" contains no \"" DESKTOP_ENTRY_GROUP "\" group\n",
                     entry->path);
 
       if (g_key_file_has_group (key_file, KDE_DESKTOP_ENTRY_GROUP))
         {
           desktop_entry_group = KDE_DESKTOP_ENTRY_GROUP;
-          menu_verbose ("\%s\" contains deprecated \"" KDE_DESKTOP_ENTRY_GROUP "\" group\n",
+          menu_verbose ("\"%s\" contains deprecated \"" KDE_DESKTOP_ENTRY_GROUP "\" group\n",
                         entry->path);
         }
       else
@@ -240,28 +240,28 @@ desktop_entry_load (DesktopEntry *entry)
 
   if (!g_key_file_has_key (key_file, desktop_entry_group, "Name", NULL))
     {
-      menu_verbose ("\%s\" contains no \"Name\" key\n", entry->path);
+      menu_verbose ("\"%s\" contains no \"Name\" key\n", entry->path);
       goto out;
     }
 
   type_str = g_key_file_get_string (key_file, desktop_entry_group, "Type", NULL);
   if (!type_str)
     {
-      menu_verbose ("\%s\" contains no \"Type\" key\n", entry->path);
+      menu_verbose ("\"%s\" contains no \"Type\" key\n", entry->path);
       goto out;
     }
 
   if ((entry->type == DESKTOP_ENTRY_DESKTOP && strcmp (type_str, "Application") != 0) ||
       (entry->type == DESKTOP_ENTRY_DIRECTORY && strcmp (type_str, "Directory") != 0))
     {
-      menu_verbose ("\%s\" does not contain the correct \"Type\" value\n", entry->path);
+      menu_verbose ("\"%s\" does not contain the correct \"Type\" value\n", entry->path);
       goto out;
     }
 
   if (entry->type == DESKTOP_ENTRY_DESKTOP &&
       !g_key_file_has_key (key_file, desktop_entry_group, "Exec", NULL))
     {
-      menu_verbose ("\%s\" does not contain an \"Exec\" key\n", entry->path);
+      menu_verbose ("\"%s\" does not contain an \"Exec\" key\n", entry->path);
       goto out;
     }
 
