@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-04 05:49+0200\n"
-"PO-Revision-Date: 2005-08-04 05:49+0200\n"
+"POT-Creation-Date: 2005-12-16 00:35+0100\n"
+"PO-Revision-Date: 2005-12-16 00:36+0100\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -176,35 +176,39 @@ msgstr ""
 "Nepodarilo sa nájsť domovský priečinok: nie je nastavený v /etc/passwd a nie "
 "je nastavená hodnota premennej prostredia $HOME"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "Menu file"
 msgstr "Súbor menu"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
 msgstr "SÚBOR_MENU"
 
-#: ../util/test-menu-spec.c:33
+#: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
 msgstr "Sledovanie zmien menu"
 
-#: ../util/test-menu-spec.c:34
+#: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
 msgstr "Zahrnúť <Vynechané> položky"
 
-#: ../util/test-menu-spec.c:89
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "Zahrnúť položky NoDisplay=true"
+
+#: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
 msgstr "Neplatné ID súboru pracovnej plochy"
 
-#: ../util/test-menu-spec.c:90
+#: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
 msgstr "[Neplatný názov súboru]"
 
-#: ../util/test-menu-spec.c:91
+#: ../util/test-menu-spec.c:93
 msgid " <excluded>"
 msgstr " <vynechané>"
 
-#: ../util/test-menu-spec.c:162
+#: ../util/test-menu-spec.c:164
 msgid ""
 "\n"
 "\n"
@@ -220,10 +224,10 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Strom menu je prázdny"
 
-#: ../util/test-menu-spec.c:186
+#: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- testovacia GNOME implementácia Špecifikácie menu pracovnej plochy"
