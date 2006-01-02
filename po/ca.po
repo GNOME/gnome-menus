@@ -1,14 +1,14 @@
 # Catalan translation of GNOME Menus.
-# Copyright © 2004, 2005 Free Software Foundation, Inc.
+# Copyright © 2004, 2005, 2006 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
-# Jordi Mallach <jordi@sindominio.net>, 2004, 2005.
+# Jordi Mallach <jordi@sindominio.net>, 2004, 2005, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-15 18:46+0200\n"
-"PO-Revision-Date: 2005-08-15 18:50+0200\n"
+"POT-Creation-Date: 2006-01-02 19:21+0100\n"
+"PO-Revision-Date: 2006-01-02 19:29+0100\n"
 "Last-Translator: Jordi Mallach <jordi@sindominio.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,7 @@ msgstr "Aplicacions ofimàtiques"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Aplicacions que no encaixaven en altres categories"
+msgstr "Aplicacions que no encaixaven en d'altres categories"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -170,37 +170,43 @@ msgstr "Mostra"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "No s'ha trobat el directori d'inici: no està establert al fitxer /etc/passwd i no hi ha cap valor per a $HOME a l'entorn"
+msgstr ""
+"No s'ha trobat el directori d'inici: no està establert al fitxer /etc/passwd "
+"i no hi ha cap valor per a $HOME a l'entorn"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "Menu file"
 msgstr "Fitxer de menú"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
 msgstr "FITXER_MENU"
 
-#: ../util/test-menu-spec.c:33
-msgid "Monitor for menu changes"
-msgstr "Monitornitza els canvis de menú"
-
 #: ../util/test-menu-spec.c:34
+msgid "Monitor for menu changes"
+msgstr "Monitornitza els canvis del menú"
+
+#: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
 msgstr "Inclou entrades excloses amb <Exclude>"
 
-#: ../util/test-menu-spec.c:89
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "Inclou entrades amb NoDisplay=true"
+
+#: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
 msgstr "L'ID del fitxer desktop és invàlid"
 
-#: ../util/test-menu-spec.c:90
+#: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
 msgstr "[Nom de fitxer invàlid]"
 
-#: ../util/test-menu-spec.c:91
+#: ../util/test-menu-spec.c:93
 msgid " <excluded>"
 msgstr "<excluded>"
 
-#: ../util/test-menu-spec.c:162
+#: ../util/test-menu-spec.c:164
 msgid ""
 "\n"
 "\n"
@@ -208,12 +214,18 @@ msgid ""
 "==== Menu changed, reloading ====\n"
 "\n"
 "\n"
-msgstr "\n\n\n=== El menú ha canviat, s'està tornant a carregar ===\n\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"=== El menú ha canviat, s'està tornant a carregar ===\n"
+"\n"
 
-#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "L'arbre del menú és buit"
 
-#: ../util/test-menu-spec.c:186
+#: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- prova la implementació del GNOME de la especificació del menú de l'escriptori"
+msgstr ""
+"- proveu la implementació del GNOME de l'especificació del menú d'escriptori"
