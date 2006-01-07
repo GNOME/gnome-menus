@@ -46,11 +46,11 @@ msgstr "個人偏好及管理設定"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
-msgstr "軟體開發"
+msgstr "軟件開發"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "軟體開發工具"
+msgstr "軟件開發工具"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -74,11 +74,11 @@ msgstr "繪圖工具"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
-msgstr "網際網路"
+msgstr "互聯網"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "如瀏覽網頁及收發電郵等網路軟體"
+msgstr "如瀏覽網頁及收發電郵等網絡軟件"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -94,11 +94,11 @@ msgstr "辦公"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "辦公室軟體"
+msgstr "辦公室軟件"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "不符合其它分類的軟體"
+msgstr "不符合其它分類的軟件"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -182,7 +182,7 @@ msgstr "選單檔案"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "監視選單變更"
+msgstr "監視選單更改"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
@@ -216,7 +216,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== 選單已變更，重新載入中 ====\n"
+"==== 選單已更改，重新載入中 ====\n"
 "\n"
 "\n"
 
