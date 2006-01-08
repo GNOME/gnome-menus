@@ -1,6 +1,6 @@
 # Swedish messages for gnome-menus.
-# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
-# Christian Rose <menthos@menthos.com>, 2004, 2005.
+# Copyright (C) 2004, 2005, 2006 Free Software Foundation, Inc.
+# Christian Rose <menthos@menthos.com>, 2004, 2005, 2006.
 #
 # $Id$
 #
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-08 19:44+0200\n"
-"PO-Revision-Date: 2005-10-08 19:43+0200\n"
+"POT-Creation-Date: 2006-01-08 21:39+0100\n"
+"PO-Revision-Date: 2006-01-08 21:39+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -175,35 +175,39 @@ msgstr ""
 "Kan inte hitta hemkatalogen: inte angiven i /etc/passwd och inget värde på "
 "$HOME i miljön"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "Menu file"
 msgstr "Menyfil"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
 msgstr "MENYFIL"
 
-#: ../util/test-menu-spec.c:33
+#: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
 msgstr "Övervaka menyändringar"
 
-#: ../util/test-menu-spec.c:34
+#: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
 msgstr "Inkludera exkluderade poster"
 
-#: ../util/test-menu-spec.c:89
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "Inkludera poster med NoDisplay=true"
+
+#: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
 msgstr "Ogiltigt id på desktopfil"
 
-#: ../util/test-menu-spec.c:90
+#: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
 msgstr "[Ogiltigt filnamn]"
 
-#: ../util/test-menu-spec.c:91
+#: ../util/test-menu-spec.c:93
 msgid " <excluded>"
 msgstr " <exkluderad>"
 
-#: ../util/test-menu-spec.c:162
+#: ../util/test-menu-spec.c:164
 msgid ""
 "\n"
 "\n"
@@ -219,11 +223,11 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Menyträdet är tomt"
 
-#: ../util/test-menu-spec.c:186
+#: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- testa GNOMEs implementation av specifikationen för skrivbordsmenyer"
 
@@ -232,9 +236,6 @@ msgstr "- testa GNOMEs implementation av specifikationen för skrivbordsmenyer"
 
 #~ msgid "Applications:"
 #~ msgstr "Program"
-
-#~ msgid "Include excluded entries"
-#~ msgstr "Inkludera exkluderade poster"
 
 #~ msgid "Invalid Filename"
 #~ msgstr "Ogiltigt filnamn"
