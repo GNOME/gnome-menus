@@ -33,7 +33,7 @@ static GOptionEntry options[] = {
   { "file",              'f', 0, G_OPTION_ARG_STRING, &menu_file,         N_("Menu file"),                      N_("MENU_FILE") },
   { "monitor",           'm', 0, G_OPTION_ARG_NONE,   &monitor,           N_("Monitor for menu changes"),       NULL },
   { "include-excluded",  'i', 0, G_OPTION_ARG_NONE,   &include_excluded,  N_("Include <Exclude>d entries"),     NULL },
-  { "include-nodisplay", 'n', 0, G_OPTION_ARG_NONE,   &include_nodisplay, N_("Include NoDisplay=true entries"), NULL },
+  { "include-nodisplay", 'n', 0, G_OPTION_ARG_NONE,   &include_nodisplay, "Include NoDisplay=true entries",     NULL },
   { NULL }
 };
 

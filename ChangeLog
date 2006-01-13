@@ -1,3 +1,9 @@
+2006-01-13  Mark McLoughlin  <mark@skynet.ie>
+
+	* util/test-menu-spec.c: un-mark the "Include NoDisplay=true entries"
+	string for translation - string addition shouldn't have happened
+	on the gnome-2-12 branch.
+
 2006-01-07  Chao-Hsiung Liao  <j_h_liau@yahoo.com.tw>
 
 	* configure.in: Add "zh_HK" to ALL_LINGUAS.
