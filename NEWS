@@ -1,4 +1,47 @@
 ==============
+Version 2.13.5
+==============
+
+ Features
+
+        * Add "include NoDisplay" flag (Mark McLoughlin)
+
+ Fixes
+
+        * Fix issue where menu wouldn't fully reload after lots of
+          file change events (Mark McLoughlin, Frederic Crozat)
+        * Remove some unused code (Kjartan Maraas)
+        * Fix incorrect escaping of C format string (The Written Word)
+
+  Translators
+
+       * Rostislav Raykov (bg)
+       * Mahay Alam Khan (bn)
+       * Jordi Mallach (ca)
+       * Miloslav Trmac (cs)
+       * Adam Weinberger (en_CA)
+       * Francisco Javier F. Serrador (es)
+       * Priit Laes (et)
+       * Iñaki Larrañaga (eu)
+       * Ilkka Tuohela (fi)
+       * Christophe Merlet (RedFox) (fr)
+       * Ignacio Casal Quinteiro (gl)
+       * Ankit Patel (gu)
+       * Gabor Kelemen (hu)
+       * Francesco Marletta (it)
+       * Erdal Ronahî (ku)
+       * Timur Jamakeev (ky)
+       * Kjartan Maraas (nb, no)
+       * Tino Meinen (nl)
+       * Marcel Telka (sk)
+       * Christian Rose (sv)
+       * Y.Kiran Chandra (te)
+       * Theppitak Karoonboonyanan (th)
+       * Abduxukur Abdurixit (ug)
+       * Clytie Siddall (vi)
+       * Woodman Tuen (zh_HK, zh_TW)
+
+==============
 Version 2.12.0
 ==============
 
