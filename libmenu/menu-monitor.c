@@ -21,11 +21,7 @@
 
 #include "menu-monitor.h"
 
-#ifdef HAVE_FAM
-#include <string.h>
-#include <fam.h>
-#endif
-
+#include "menu-monitor-backend.h"
 #include "menu-util.h"
 
 struct MenuMonitor
@@ -35,9 +31,7 @@ struct MenuMonitor
 
   GSList *notifies;
 
-#ifdef HAVE_FAM
-  FAMRequest  request;
-#endif /* HAVE_FAM */
+  gpointer backend_data;
 
   guint is_directory : 1;
 };
@@ -49,27 +43,12 @@ typedef struct
   guint                 refcount;
 } MenuMonitorNotify;
 
-#ifdef HAVE_FAM
-typedef struct
-{
-  MenuMonitor      *monitor;
-  MenuMonitorEvent  event;
-  char             *path;
-} MenuMonitorEventInfo;
-#endif /* HAVE_FAM */
-
-static GHashTable *monitors_registry = NULL;
-
 static MenuMonitorNotify *menu_monitor_notify_ref   (MenuMonitorNotify *notify);
 static void               menu_monitor_notify_unref (MenuMonitorNotify *notify);
 
-#ifdef HAVE_FAM
-static FAMConnection  fam_connection;
-static gboolean       opened_connection = FALSE;
-static gboolean       failed_to_connect = FALSE;
-static guint          fam_io_watch = 0;
-static guint          events_idle_handler = 0;
-static GSList        *pending_events = NULL;
+static GHashTable *monitors_registry = NULL;
+static guint       events_idle_handler = 0;
+static GSList     *pending_events = NULL;
 
 static void
 invoke_notifies (MenuMonitor      *monitor,
@@ -151,254 +130,34 @@ emit_events_in_idle (void)
   return FALSE;
 }
 
-static void
-queue_fam_event (MenuMonitor *monitor,
-		 FAMEvent    *fam_event)
+void
+menu_monitor_queue_event (MenuMonitorEventInfo *event_info)
 {
-  MenuMonitorEventInfo *event_info;
-  MenuMonitorEvent      event;
-  const char           *path;
-  char                 *freeme;
-
-  freeme = NULL;
-  if (fam_event->filename[0] == '/')
-    {
-      path = fam_event->filename;
-    }
-  else
-    {
-      path = freeme = g_build_filename (monitor->path,
-					fam_event->filename,
-					NULL);
-    }
-
-  event = MENU_MONITOR_EVENT_INVALID;
-  switch (fam_event->code)
-    {
-    case FAMChanged:
-      event = MENU_MONITOR_EVENT_CHANGED;
-      break;
-
-    case FAMCreated:
-      event = MENU_MONITOR_EVENT_CREATED;
-      break;
-
-    case FAMDeleted:
-      event = MENU_MONITOR_EVENT_DELETED;
-      break;
-
-    default:
-      g_assert_not_reached ();
-      break;
-    }
-
-  event_info = g_new0 (MenuMonitorEventInfo, 1);
-
-  event_info->path    = g_strdup (path);
-  event_info->event   = event;
-  event_info->monitor = monitor;
-
   pending_events = g_slist_append (pending_events, event_info);
 
   if (events_idle_handler == 0)
     {
       events_idle_handler = g_idle_add ((GSourceFunc) emit_events_in_idle, NULL);
     }
-
-  g_free (freeme);
 }
 
-static inline void
-debug_event (FAMEvent *event)
+gboolean
+menu_monitor_get_is_directory (MenuMonitor *monitor)
 {
-#define PRINT_EVENT(str) menu_verbose ("Got event: %d %s <" str ">\n", event->code, event->filename);
-
-  switch (event->code)
-    {
-    case FAMChanged:
-      PRINT_EVENT ("changed");
-      break;
-    case FAMDeleted:
-      PRINT_EVENT ("deleted");
-      break;
-    case FAMStartExecuting:
-      PRINT_EVENT ("start-executing");
-      break;
-    case FAMStopExecuting:
-      PRINT_EVENT ("stop-executing");
-      break;
-    case FAMCreated:
-      PRINT_EVENT ("created");
-      break;
-    case FAMAcknowledge:
-      PRINT_EVENT ("acknowledge");
-      break;
-    case FAMExists:
-      PRINT_EVENT ("exists");
-      break;
-    case FAMEndExist:
-      PRINT_EVENT ("end-exist");
-      break;
-    case FAMMoved:
-      PRINT_EVENT ("moved");
-      break;
-    default:
-      PRINT_EVENT ("invalid");
-      break;
-    }
-
-#undef PRINT_EVENT
+  return monitor->is_directory;
 }
 
-static gboolean
-process_fam_events (void)
+void
+menu_monitor_set_backend_data (MenuMonitor *monitor,
+			       gpointer     backend_data)
 {
-  if (failed_to_connect)
-    return FALSE;
-
-  while (FAMPending (&fam_connection))
-    {
-      FAMEvent event;
-
-      if (FAMNextEvent (&fam_connection, &event) != 1)
-        {
-	  g_warning ("Failed to read next event from FAM: %s",
-		     FamErrlist[FAMErrno]);
-	  failed_to_connect = TRUE;
-          FAMClose (&fam_connection);
-          return FALSE;
-        }
-
-      debug_event (&event);
-
-      if (event.code != FAMChanged &&
-	  event.code != FAMCreated &&
-	  event.code != FAMDeleted)
-	continue;
-
-      queue_fam_event (event.userdata, &event);
-    }
-
-  return TRUE;
+  monitor->backend_data = backend_data;
 }
 
-static gboolean
-fam_data_pending (GIOChannel   *source,
-		  GIOCondition  condition)
+gpointer
+menu_monitor_get_backend_data (MenuMonitor *monitor)
 {
-  g_assert (condition == G_IO_IN || condition == G_IO_PRI);
-
-  if (!process_fam_events ())
-    {
-      fam_io_watch = 0;
-      return FALSE;
-    }
-
-  return TRUE; /* do come again */
-}
-
-static FAMConnection *
-get_fam_connection (void)
-{
-  if (!opened_connection)
-    {
-      if (FAMOpen (&fam_connection) == 0)
-	{
-	  GIOChannel *io_channel;
-
-#ifdef HAVE_FAMNOEXISTS
-	  FAMNoExists (&fam_connection);
-#endif /* HAVE_FAMNOEXISTS */
-
-	  io_channel = g_io_channel_unix_new (FAMCONNECTION_GETFD (&fam_connection));
-	  fam_io_watch = g_io_add_watch (io_channel,
-					 G_IO_IN|G_IO_PRI,
-					 (GIOFunc) fam_data_pending,
-					 NULL);
-	  g_io_channel_unref (io_channel);
-	}
-      else
-	{
-	  g_warning ("Failed to connect to the FAM server: %s",
-		     FamErrlist[FAMErrno]);
-	  failed_to_connect = TRUE;
-	}
-
-      opened_connection = TRUE;
-    }
-
-  return failed_to_connect ? NULL : &fam_connection;
-}
-#endif /* HAVE_FAM */
-
-static void
-register_monitor_with_fam (MenuMonitor *monitor)
-{
-#ifdef HAVE_FAM
-  FAMConnection *fam_connection;
-
-  if ((fam_connection = get_fam_connection ()) == NULL)
-    {
-      menu_verbose ("Not adding %s monitor on '%s', failed to connect to FAM server\n",
-		    monitor->is_directory ? "directory" : "file",
-		    monitor->path);
-      return;
-    }
-
-  /* Need to process any pending events, otherwise we may block
-   * on write - i.e. the FAM sever is blocked because its write
-   * buffer is full notifying us of events, we need to read those
-   * events before it can process our new request.
-   */
-  if (!process_fam_events ())
-    {
-      g_source_remove (fam_io_watch);
-      fam_io_watch = 0;
-      return;
-    }
-
-  if (monitor->is_directory)
-    {
-      if (FAMMonitorDirectory (fam_connection,
-			       monitor->path,
-			       &monitor->request,
-			       monitor) != 0)
-	{
-	  g_warning ("Failed to add directory monitor on '%s': %s",
-		     monitor->path, FamErrlist[FAMErrno]);
-	}
-    }
-  else
-    {
-      if (FAMMonitorFile (fam_connection,
-			  monitor->path,
-			  &monitor->request,
-			  monitor) != 0)
-	{
-	  g_warning ("Failed to add file monitor on '%s': %s",
-		     monitor->path, FamErrlist[FAMErrno]);
-	}
-    }
-#endif /* HAVE_FAM */
-}
-
-static void
-unregister_monitor_with_fam (MenuMonitor *monitor)
-{
-#ifdef HAVE_FAM
-  if (failed_to_connect)
-    return;
-
-  FAMCancelMonitor (&fam_connection, &monitor->request);
-
-  /* Need to process any remaining events for this monitor
-   */
-  if (!process_fam_events ())
-    {
-      g_source_remove (fam_io_watch);
-      fam_io_watch = 0;
-    }
-#endif /* HAVE_FAM */
+  return monitor->backend_data;
 }
 
 static inline char *
@@ -441,7 +200,7 @@ lookup_monitor (const char *path,
       retval->refcount     = 1;
       retval->is_directory = is_directory != FALSE;
 
-      register_monitor_with_fam (retval);
+      menu_monitor_backend_register_monitor (retval);
 
       g_hash_table_insert (monitors_registry, registry_key, retval);
 
@@ -482,7 +241,6 @@ menu_monitor_ref (MenuMonitor *monitor)
   return monitor;
 }
 
-#ifdef HAVE_FAM
 static void
 menu_monitor_clear_pending_events (MenuMonitor *monitor)
 {
@@ -510,7 +268,6 @@ menu_monitor_clear_pending_events (MenuMonitor *monitor)
       tmp = next;
     }
 }
-#endif /* HAVE_FAM */
 
 void
 menu_monitor_unref (MenuMonitor *monitor)
@@ -527,15 +284,13 @@ menu_monitor_unref (MenuMonitor *monitor)
   g_hash_table_remove (monitors_registry, registry_key);
   g_free (registry_key);
 
-  unregister_monitor_with_fam (monitor);
+  menu_monitor_backend_unregister_monitor (monitor);
 
   g_slist_foreach (monitor->notifies, (GFunc) menu_monitor_notify_unref, NULL);
   g_slist_free (monitor->notifies);
   monitor->notifies = NULL;
 
-#ifdef HAVE_FAM
   menu_monitor_clear_pending_events (monitor);
-#endif
 
   g_free (monitor->path);
   monitor->path = NULL;

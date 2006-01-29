@@ -23,6 +23,8 @@ libgnome_menu_la_SOURCES =		\
 	menu-layout.h			\
 	menu-monitor.c			\
 	menu-monitor.h			\
+	menu-monitor-backend.h		\
+	menu-monitor-fam.c		\
 	menu-util.c			\
 	menu-util.h			\
 	$(NULL)

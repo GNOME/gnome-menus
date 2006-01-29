@@ -1507,8 +1507,8 @@ pygmenu_tree_dealloc (PyGMenuTree *self)
 }
 
 static PyObject *
-pygmenu_tree_getattro (PyGMenuTreeDirectory *self,
-		       PyObject             *py_attr)
+pygmenu_tree_getattro (PyGMenuTree *self,
+		       PyObject    *py_attr)
 {
   if (PyString_Check (py_attr))
     {

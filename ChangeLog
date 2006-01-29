@@ -1,3 +1,28 @@
+2006-01-29  Mark McLoughlin  <mark@skynet.ie>
+
+	Begin adding inotify support - bug #314854
+
+	* libmenu/menu-monitor-backend.h: define a generic
+	backend interface for file monitor implementations
+	
+	* libmenu/menu-monitor.c: split out all the FAM
+	stuff and use the generic backend interface
+	
+	* libmenu/menu-monitor-fam.c: both the FAM and "null"
+	implementations
+	
+	* libmenu/Makefile.am: build menu-monitor-fam.c
+	
+	* libmenu/menu-monitor-inotify.c,
+	  libmenu/inotify-syscalls.h:
+	  libmenu/inotify.h: first cut at the inotify
+	implementation; not finished yet and not built
+	either.
+
+2006-01-29  Mark McLoughlin  <mark@skynet.ie>
+
+	* python/gmenu.c: (pygmenu_tree_getattro): fix typo.
+
 2006-01-15  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.13.6.
