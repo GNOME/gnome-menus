@@ -1,14 +1,14 @@
 # gnome-menus' Portuguese translation.
-# Copyright © 2004, 2005 gnome-menus
+# Copyright © 2004, 2005, 2006 gnome-menus
 # This file is distributed under the same license as the gnome-menus package.
-# Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005.
+# Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 2.12\n"
+"Project-Id-Version: 2.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-29 13:23+0100\n"
-"PO-Revision-Date: 2005-08-29 13:30+0000\n"
+"POT-Creation-Date: 2006-02-17 00:53+0000\n"
+"PO-Revision-Date: 2006-02-17 01:00+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -171,38 +171,42 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Incapaz de encontrar o directório pessoal: não se encontra definido em "
-"/etc/passwd e a variável de ambiente $HOME não possui nenhum valor"
+"Incapaz de encontrar o directório pessoal: não se encontra definido em /etc/"
+"passwd e a variável de ambiente $HOME não possui nenhum valor"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "Menu file"
 msgstr "Ficheiro de menu"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
 msgstr "FICHEIRO_MENU"
 
-#: ../util/test-menu-spec.c:33
+#: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
 msgstr "Monitor de alterações ao menu"
 
-#: ../util/test-menu-spec.c:34
+#: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
 msgstr "Incluir entradas <Exclude> (excluídas)"
 
-#: ../util/test-menu-spec.c:89
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "Incluir entradas NoDisplay=true"
+
+#: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
 msgstr "ID de ficheiro de área de trabalho inválido"
 
-#: ../util/test-menu-spec.c:90
+#: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
 msgstr "[Nome de ficheiro inválido]"
 
-#: ../util/test-menu-spec.c:91
+#: ../util/test-menu-spec.c:93
 msgid " <excluded>"
 msgstr " <excluded> (excluído)"
 
-#: ../util/test-menu-spec.c:162
+#: ../util/test-menu-spec.c:164
 msgid ""
 "\n"
 "\n"
@@ -218,13 +222,14 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Árvore de menu está vazia"
 
-#: ../util/test-menu-spec.c:186
+#: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- testar a implementação GNOME da Especificação de Menu de Área de Trabalho"
+msgstr ""
+"- testar a implementação GNOME da Especificação de Menu de Área de Trabalho"
 
 #~ msgid "System Settings"
 #~ msgstr "Definições de Sistema"
