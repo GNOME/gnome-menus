@@ -22,7 +22,7 @@ GETTEXT_PACKAGE=gnome-menus
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Name of default gettext domain])
 AC_SUBST(GETTEXT_PACKAGE)
 
-ALL_LINGUAS="ar bg bn ca cs cy da de el en_CA en_GB es et eu fa fi fr gl gu he hi hu hy id it ja ko ku ky lt mk mr ms nb ne nl nn no pa pl pt pt_BR ro ru rw sk sq sr sr@Latn sv te th tr ug uk vi xh zh_CN zh_HK zh_TW"
+ALL_LINGUAS="ar bg bn br ca cs cy da de el en_CA en_GB es et eu fa fi fr gl gu he hi hu hy id it ja ko ku ky lt mk mr ms nb ne nl nn no pa pl pt pt_BR ro ru rw sk sq sr sr@Latn sv te th tr ug uk vi xh zh_CN zh_HK zh_TW"
 AM_GLIB_GNU_GETTEXT
 
 AC_PROG_INTLTOOL([0.31])

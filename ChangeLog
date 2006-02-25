@@ -1,3 +1,7 @@
+2006-02-25  Ar Floc'h Jérémy  <jeremy.lefloch@gmail.com>
+
+	* configure.in: Add "br" to ALL_LINGUAS.
+	
 2006-01-29  Mark McLoughlin  <mark@skynet.ie>
 
 	Begin adding inotify support - bug #314854
