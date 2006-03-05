@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-21 20:08+0200\n"
+"POT-Creation-Date: 2006-03-05 13:02+0100\n"
 "PO-Revision-Date: 2005-01-24 09:54+0100\n"
 "Last-Translator: GNOME PL Team <translators@gnomepl.org>\n"
 "Language-Team: GNOME PL Team <translators@gnomepl.org>\n"
@@ -179,35 +179,39 @@ msgstr ""
 "Nie można odnaleźć katalogu domowego: nie jest ustawiony w /etc/passwd i "
 "brak wrtości zmiennej środowiskowej $HOME"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "Menu file"
 msgstr "Plik menu"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
 msgstr "PLIK_MENU"
 
-#: ../util/test-menu-spec.c:33
+#: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
 msgstr "Śledzenie zmian menu"
 
-#: ../util/test-menu-spec.c:34
+#: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
 msgstr "Włącznie z <wykluczonymi> elementami"
 
-#: ../util/test-menu-spec.c:89
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "Włącznie z niewyświetlanymi elementami"
+
+#: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
 msgstr "Niepoprawne ID pliku pulpitu"
 
-#: ../util/test-menu-spec.c:90
+#: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
 msgstr "[Niepoprawna nazwa pliku]"
 
-#: ../util/test-menu-spec.c:91
+#: ../util/test-menu-spec.c:93
 msgid " <excluded>"
 msgstr " <wykluczone>"
 
-#: ../util/test-menu-spec.c:162
+#: ../util/test-menu-spec.c:164
 msgid ""
 "\n"
 "\n"
@@ -223,10 +227,10 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Drzewo menu jest puste"
 
-#: ../util/test-menu-spec.c:186
+#: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- testuje Specyfikację Menu Pulpitu zaimplementowaną w GNOME"
