@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menu 2.12.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-25 18:53+0100\n"
+"POT-Creation-Date: 2006-03-10 21:57+0100\n"
 "PO-Revision-Date: 2006-02-25 18:53+0100\n"
 "Last-Translator: Jérémy Le Floc'h <jeremy.lefloch@gmail.com>\n"
 "Language-Team: GNOME Breton Team <jeremy.lefloch@gmail.com>\n"
@@ -23,7 +23,7 @@ msgstr "Haezadusted"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Neuziadoù d'ar haezadusted"
+msgstr "Neuziadoù ar haezadusted"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -31,7 +31,7 @@ msgstr "Reizhoù"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Reizhoù d'ar gorre-burev"
+msgstr "Reizhoù ar gorre-burev"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -39,11 +39,11 @@ msgstr "Meziantoù"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Desktop"
-msgstr "gorre-burev"
+msgstr "Gorre-burev"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Préférences personnelles et paramètres du système"
+msgstr "Pezh a blij deoc'h ar muiañ ha neuziadoù ar reizhiad"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -51,7 +51,7 @@ msgstr "Gouleviñ"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Ar binvioù diorren d'an meziantoù"
+msgstr "Ar binvioù da ziorren ar poelladoù"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -79,7 +79,7 @@ msgstr "Kenrouedad"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Meziantoù evit mont war ar genrouedad evel web ha postelerezh"
+msgstr "Ar programmoù da dizhout ar Genrouedad evel web ha postelerezh"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -107,7 +107,7 @@ msgstr "All"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Préférences personnelles"
+msgstr "Pezh a blij deoc'h ar muiañ"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
@@ -116,11 +116,11 @@ msgstr "Dibaboù gwellañ"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
-msgstr "Dibaboù d'ar haezadusted"
+msgstr "Dibaboù ar haezadusted"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Préférences et paramètres personnels"
+msgstr "Dibaboù gwellañ ha pezh a bloj deoc'h ar muiañ"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -128,7 +128,7 @@ msgstr "Mererezh"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Modifie les paramètres au niveau système (affecte tous les utilisateurs)"
+msgstr ""
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -136,11 +136,11 @@ msgstr "Binvioù reizhad"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Kenneuziadur ha eveshaerezh d'ar reizhad"
+msgstr "Kenneuziadur ha eveshaerezh ar reizhad"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Aozer d'ar lañseroù"
+msgstr "Aozer al lañseroù"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
@@ -152,7 +152,7 @@ msgstr "_Meziantoù :"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "Valeurs par _défaut"
+msgstr ""
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
@@ -168,42 +168,42 @@ msgid "Show"
 msgstr "Diskouez"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Impossible de trouver le dossier personnel : il n'est pas configuré dans /"
-"etc/passwd et aucune valeur pour $HOME ne se trouve dans l'environnement"
+msgstr ""
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
-msgstr "Restr d'ur lañser"
+msgstr "Restr ul lañser"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "RESTR_D'UR_LAÑSER"
+msgstr "RESTR_D'UL_LAÑSER"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Surveiller les changements de menu"
+msgstr ""
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "Inclure les entrées exclues avec <Exclude>"
+msgstr ""
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "Inclure les entrées NoDisplay=true"
+msgstr ""
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "Identifiant de fichier .desktop non valide"
+msgstr ""
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Nom de fichier non valide]"
+msgstr ""
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
-msgstr " <exclus>"
+msgstr ""
 
 #: ../util/test-menu-spec.c:164
 msgid ""
@@ -214,17 +214,11 @@ msgid ""
 "\n"
 "\n"
 msgstr ""
-"\n"
-"\n"
-"\n"
-"==== Changement du menu, rechargement ====\n"
-"\n"
-"\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "L'arbre de menu est vide"
+msgstr ""
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- teste l'implémentation GNOME de la spécification des menus .desktop"
+msgstr ""
