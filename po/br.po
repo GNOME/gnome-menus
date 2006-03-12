@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menu 2.12.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-10 21:57+0100\n"
-"PO-Revision-Date: 2006-02-25 18:53+0100\n"
+"POT-Creation-Date: 2006-03-12 14:42+0100\n"
+"PO-Revision-Date: 2006-03-12 14:40+0100\n"
 "Last-Translator: Jérémy Le Floc'h <jeremy.lefloch@gmail.com>\n"
 "Language-Team: GNOME Breton Team <jeremy.lefloch@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -23,27 +23,27 @@ msgstr "Haezadusted"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Neuziadoù ar haezadusted"
+msgstr "Kefluniadurioù an haezadusted"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
-msgstr "Reizhoù"
+msgstr "Mavegoù"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Reizhoù ar gorre-burev"
+msgstr "Mavegoù ar burev"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
-msgstr "Meziantoù"
+msgstr "Arloadoù"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Desktop"
-msgstr "Gorre-burev"
+msgstr "Gorretaol"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Pezh a blij deoc'h ar muiañ ha neuziadoù ar reizhiad"
+msgstr "Pezh a blij deoc'h ar muiañ ha kefluniadurioù ar mererezh"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -67,7 +67,7 @@ msgstr "C'hoarioù ha diduelloù"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "Skrivañ kaer"
+msgstr "Grafikoù"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
@@ -83,11 +83,11 @@ msgstr "Ar programmoù da dizhout ar Genrouedad evel web ha postelerezh"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Liesmedia"
+msgstr "Liesvedia"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Kleweled"
+msgstr "Son ha video"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -95,11 +95,11 @@ msgstr "Bureveg"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Meziantoù bureveg all"
+msgstr "Arloadoù bureveg all"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Les applications qui ne conviennent à aucune autre catégorie"
+msgstr "An arloadoù n'int ket staget ouzh ur rummad bennak all"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -120,7 +120,7 @@ msgstr "Dibaboù ar haezadusted"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Dibaboù gwellañ ha pezh a bloj deoc'h ar muiañ"
+msgstr "Pezh a blij deoc'h ar muiañ ha kefluniadurioù"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -128,15 +128,15 @@ msgstr "Mererezh"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr ""
+msgstr "Kemmañ an arventennoù war ar reizhiad (sell diouzh an holl arveriaded)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Binvioù reizhad"
+msgstr "Binvioù reizhiad"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Kenneuziadur ha eveshaerezh ar reizhad"
+msgstr "Kefluniadur hag eveshaerezh ar reizhiad"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -148,11 +148,11 @@ msgstr "Aozañ al lañseroù"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
-msgstr "_Meziantoù :"
+msgstr "_Arloadoù :"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr ""
+msgstr "_Dre ziouer"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
@@ -172,6 +172,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
+"N'eus ket tu da gavout ar renkell ar gêr : n'eo ket e-barzh /etc/passwd ha "
+"n'eus ket gwerzh evit $HOME en endro"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -183,27 +185,27 @@ msgstr "RESTR_D'UL_LAÑSER"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr ""
+msgstr "Eveshaat kemmoù al lañser"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr ""
+msgstr "Ensoc'hañ enkasoù forc'het gant <Exclude>"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr ""
+msgstr "Ensoc'hañ enkasoù NoDisplay=true"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr ""
+msgstr "Hennad (ID) ar restr .desktop a zo siek"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr ""
+msgstr "[Anv restr siek]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
-msgstr ""
+msgstr "<forc'het>"
 
 #: ../util/test-menu-spec.c:164
 msgid ""
@@ -214,10 +216,16 @@ msgid ""
 "\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Lañser kemmet, oc'h adkargañ ====\n"
+"\n"
+"\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr ""
+msgstr "Gwez al lañser goullo"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
