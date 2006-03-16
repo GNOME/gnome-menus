@@ -1,20 +1,22 @@
-# Georgian translation for Gnome Menus.
-# Copyright © 2006 Canonical Ltd. and Rosetta Contributors.
+# Georgian translation for gnome-menus
+# Copyright (c) (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
 # This file is distributed under the same license as the gnome-menus package.
-# Vladimer Sichinava <alinux@siena.linux.it>, 2006.
+# <>, 2005.
+# , fuzzy
+#  <>, 2006.
+# 
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus 2.13.5\n"
+"Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-02-09 23:56+0100\n"
-"PO-Revision-Date: 2006-02-06 04:32+0100\n"
+"PO-Revision-Date: 2006-03-16 19:00+0100\n"
 "Last-Translator: Vladimer Sichinava <alinux@siena.linux.it>\n"
 "Language-Team: Georgian <http://geoubuntu.cjb.net/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -187,11 +189,11 @@ msgstr "მენუში ცვლილებათა მონიტორ�
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr ""
+msgstr "<ჩაუმატებელი> ელემენტების ჩამატება"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr ""
+msgstr "ჩართე NoDisplay=true ელემენტები"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
@@ -232,4 +234,5 @@ msgstr "მენუს ხე ცარიელია"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
+msgstr "-·test·GNOME's·implementation·of·the·Desktop·Menu·Specification"
+
