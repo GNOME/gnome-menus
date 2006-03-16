@@ -1,3 +1,7 @@
+2006-02-16  Vladimer Sichinava  <alinux@siena.linux.it>
+
+	* configure.in: Added "ka" tp ALL_LINGUAS.
+	
 2006-02-25  Ar Floc'h Jérémy  <jeremy.lefloch@gmail.com>
 
 	* configure.in: Add "br" to ALL_LINGUAS.
