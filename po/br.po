@@ -1,4 +1,4 @@
-# Breton translation of gnome-menu.
+# Breton translation of gnome-menus.
 # Copyright (C) 2004-2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menu package.
 #
@@ -6,9 +6,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menu 2.12.1\n"
+"Project-Id-Version: gnome-menu 2.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-12 14:42+0100\n"
+"POT-Creation-Date: 2006-03-23 11:18+0100\n"
 "PO-Revision-Date: 2006-03-12 14:40+0100\n"
 "Last-Translator: Jérémy Le Floc'h <jeremy.lefloch@gmail.com>\n"
 "Language-Team: GNOME Breton Team <jeremy.lefloch@gmail.com>\n"
@@ -23,7 +23,7 @@ msgstr "Haezadusted"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Kefluniadurioù an haezadusted"
+msgstr "Neuziadoù an haezadusted"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -39,11 +39,11 @@ msgstr "Arloadoù"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Desktop"
-msgstr "Gorretaol"
+msgstr "Burev"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Pezh a blij deoc'h ar muiañ ha kefluniadurioù ar mererezh"
+msgstr "Pezh a blij deoc'h ar muiañ ha neuziadoù ar mererezh"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -71,7 +71,7 @@ msgstr "Grafikoù"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Meziantoù grafikoù"
+msgstr "Poelladoù grafikoù"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
@@ -79,7 +79,7 @@ msgstr "Kenrouedad"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Ar programmoù da dizhout ar Genrouedad evel web ha postelerezh"
+msgstr "Ar poelladoù da dizhout ar Genrouedad evel web ha postelerezh"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -116,11 +116,11 @@ msgstr "Dibaboù gwellañ"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
-msgstr "Dibaboù ar haezadusted"
+msgstr "Dibaboù an haezadusted"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Pezh a blij deoc'h ar muiañ ha kefluniadurioù"
+msgstr "Pezh a blij deoc'h ar muiañ ha neuziadoù"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -128,7 +128,7 @@ msgstr "Mererezh"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Kemmañ an arventennoù war ar reizhiad (sell diouzh an holl arveriaded)"
+msgstr "Kemmañ an arventennoù war ar reizhiad (sell diouzh an holl implijerien)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -136,7 +136,7 @@ msgstr "Binvioù reizhiad"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Kefluniadur hag eveshaerezh ar reizhiad"
+msgstr "Neuziadur hag eveshaerezh ar reizhiad"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -144,7 +144,7 @@ msgstr "Aozer al lañseroù"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Aozañ al lañseroù"
+msgstr "Aozañ ar rolloù"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -156,7 +156,7 @@ msgstr "_Dre ziouer"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "Lañseroù :"
+msgstr "_Rolloù :"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
@@ -177,15 +177,15 @@ msgstr ""
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
-msgstr "Restr ul lañser"
+msgstr "Restr ur roll"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "RESTR_D'UL_LAÑSER"
+msgstr "RESTR_D'UR_ROLL"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Eveshaat kemmoù al lañser"
+msgstr "Eveshaat kemmoù ar rolloù"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
@@ -219,13 +219,13 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Lañser kemmet, oc'h adkargañ ====\n"
+"==== Roll kemmet, oc'h adkargañ ====\n"
 "\n"
 "\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "Gwez al lañser goullo"
+msgstr "Gwez ar roll zo goullo"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
