@@ -2,15 +2,16 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Daniel van Eeden <daniel_e@dds.nl>, 2004
-# Tino Meinen <a.t.meinen@chello.nl>, 2005.
+# Tino Meinen <a.t.meinen@chello.nl>, 2005
+# Wouter Bolsterlee <uws+gnome@xs4all.nl>, 2006
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-12-21 22:39+0100\n"
-"PO-Revision-Date: 2005-12-22 02:57+0100\n"
-"Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
+"PO-Revision-Date: 2006-03-28 00:01+0100\n"
+"Last-Translator: Wouter Bolsterlee <uws+gnome@xs4all.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr "Toegankelijkheid"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Toegankelijkheid instellingen"
+msgstr "Toegankelijkheidsinstellingen"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -31,7 +32,7 @@ msgstr "Hulpmiddelen"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Bureaublad hulpmiddelen"
+msgstr "Bureaubladhulpmiddelen"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -120,7 +121,7 @@ msgstr "Voorkeuren"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
-msgstr "Toegangelijkheid gerelateerde voorkeuren"
+msgstr "Toegangelijkheidsgerelateerde voorkeuren"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
@@ -141,7 +142,7 @@ msgstr "Systeemgereedschap"
 # was eerst monitoring, vervangen door controle
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Systeemconfiguratie en controle"
+msgstr "Systeemconfiguratie en -controle"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -149,7 +150,7 @@ msgstr "Menu-editor"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Menus bewerken"
+msgstr "Menu's bewerken"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -157,11 +158,11 @@ msgstr "_Toepassingen:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "_Standaarden"
+msgstr "_Standaardinstellingen"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "_Menus:"
+msgstr "_Menu's:"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
@@ -195,7 +196,7 @@ msgstr "Monitoren voor menuwijzigingen"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "Inclusief <uitgezonderd>e items"
+msgstr "Inclusief <Excluded> items"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
@@ -203,7 +204,7 @@ msgstr "Inclusief NoDisplay=true items"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "Ongeldig desktopbestand-ID"
+msgstr "Ongeldig ID voor desktopbestand"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
@@ -211,7 +212,7 @@ msgstr "[Ongeldige bestandsnaam]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
-msgstr " <uitgezonderd>"
+msgstr " <excluded>"
 
 #: ../util/test-menu-spec.c:164
 msgid ""
@@ -231,11 +232,11 @@ msgstr ""
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "Menu-boomstructuur is leeg"
+msgstr "Menustructuur is leeg"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- GNOME's implementatie testen van de Desktop Menu Specification"
+msgstr "- de GNOME-implementatie van de Desktop Menu Specification testen"
 
 #~ msgid "Hide"
 #~ msgstr "Verbergen"
