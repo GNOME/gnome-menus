@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.gnome-2-10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-28 11:14+0300\n"
+"POT-Creation-Date: 2006-04-27 16:12+0300\n"
 "PO-Revision-Date: 2005-07-26 00:26+0300\n"
 "Last-Translator: Reuven Gonen <linxspider@yahoo.com>\n"
 "Language-Team:  <he@li.org>\n"
@@ -138,6 +138,10 @@ msgstr "כלי מערכת"
 msgid "System configuration and monitoring"
 msgstr "הגדרה וניטור של המערכת"
 
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "עורך תפריטים"
+
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
 msgstr "ערוך תפריטים"
@@ -171,34 +175,43 @@ msgstr ""
 "לא ניתן למצוא את תיקיית הבית: לא נקבע ב- etc/passwd/ ולא קיים ערך עבור HOME$ "
 "בסביבה"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "Menu file"
 msgstr "Menu file"
-#msgstr "קובץ תפריט"
 
-#: ../util/test-menu-spec.c:32
+# msgstr "קובץ תפריט"
+#: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
 msgstr "MENU_FILE"
 
-#: ../util/test-menu-spec.c:33
+#: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
 msgstr "Monitor for menu changes"
-#msgstr "פקח על שינויים בתפריט"
 
-#: ../util/test-menu-spec.c:34
+# msgstr "פקח על שינויים בתפריט"
+#: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
 msgstr "Include <Exclude>d entries"
 
-#: ../util/test-menu-spec.c:86
+# msgstr "פקח על שינויים בתפריט"
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "Include NoDisplay=true entries"
+
+#: ../util/test-menu-spec.c:91
+msgid "Invalid desktop file ID"
+msgstr "מזהה קובץ שולחן עבודה לא תקין"
+
+#: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
 msgstr "[Invalid Filename]"
-#msgstr "[שם קובץ לא תקין]"
 
-#: ../util/test-menu-spec.c:87
+# msgstr "[שם קובץ לא תקין]"
+#: ../util/test-menu-spec.c:93
 msgid " <excluded>"
 msgstr " <excluded>"
 
-#: ../util/test-menu-spec.c:157
+#: ../util/test-menu-spec.c:164
 msgid ""
 "\n"
 "\n"
@@ -213,21 +226,18 @@ msgstr ""
 "==== Menu changed, reloading ====\n"
 "\n"
 "\n"
-#"\n"
-#"\n"
-#"\n"
-#"==== התפריט השתנה, טוען מחדש ====\n"
-#"\n"
-#"\n"
 
-#: ../util/test-menu-spec.c:162 ../util/test-menu-spec.c:198
+# "\n"
+# "\n"
+# "\n"
+# "==== התפריט השתנה, טוען מחדש ====\n"
+# "\n"
+# "\n"
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Menu tree is empty"
-#msgstr "עץ התפריט ריק"
 
-#: ../util/test-menu-spec.c:181
+# msgstr "עץ התפריט ריק"
+#: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- test GNOME's implementation of the Desktop Menu Specification"
-
-#~ msgid "Invalid desktop file ID"
-#~ msgstr "מזהה קובץ שולחן עבודה לא תקין"
