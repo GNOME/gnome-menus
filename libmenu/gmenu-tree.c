@@ -770,7 +770,10 @@ find_path (GMenuTreeDirectory *directory,
       GMenuTreeItem *item = tmp->data;
 
       if (gmenu_tree_item_get_type (item) != GMENU_TREE_ITEM_DIRECTORY)
-	continue;
+        {
+          tmp = tmp->next;
+          continue;
+        }
 
       if (!strcmp (name, GMENU_TREE_DIRECTORY (item)->name))
 	{

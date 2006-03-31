@@ -1,3 +1,10 @@
+2006-03-31  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix infinite loop - bug #328644
+
+	* libmenu/gmenu-tree.c: (find_path): increment the
+	iterator before continuing.
+
 2006-03-24  Tommi Vainikainen  <thv@iki.fi>
 
 	* configure.in (ALL_LINGUAS): Added Dzongkha (dz).
