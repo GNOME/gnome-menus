@@ -1,3 +1,7 @@
+2006-04-01  Raphael Higino  <raphaelh@cvs.gnome.org>
+
+	* configure.in: Added lv to ALL_LINGUAS.
+
 2006-03-31  Mark McLoughlin  <mark@skynet.ie>
 
 	Fix infinite loop - bug #328644
