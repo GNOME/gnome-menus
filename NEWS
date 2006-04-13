@@ -1,4 +1,49 @@
 ==============
+Version 2.14.0
+==============
+
+ Features
+
+        * Start inotify support (not compiled by default) (Mark McLoughlin)
+
+ Fixes
+
+        * Small fix for the python bindings (Mark McLoughlin)
+        * Fix infinite loop (Mark McLoughlin)
+
+  Translators
+
+       * Ales Nyakhaychyk (be)
+       * Jérémy Le Floc'h (br)
+       * Petr Tomeš (cs)
+       * Rhys Jones (cy)
+       * Ole Laursen (da)
+       * Hendrik Richter (de)
+       * Pema Geyleg (dz)
+       * Kostas Papadimas (el)
+       * Reuven Gonen (he)
+       * Rajesh Ranjan (hi)
+       * Takeshi AIHANA (ja)
+       * Vladimer Sichinava (ka)
+       * Erdal Ronahi (ku)
+       * Žygimantas Beručka (lt)
+       * Raivis Dejus (lv)
+       * Thierry Randrianiriana (mg)
+       * Wouter Bolsterlee (nl)
+       * Kjartan Maraas (nn)
+       * GNOME PL Team (pl)
+       * Evandro Fernandes Giovanini (pt_BR)
+       * Duarte Loreto (pt)
+       * Sebastian Ivan (ro)
+       * Leonid Kanter (ru)
+       * Elian Myftiu (sq)
+       * Слободан Д. Средојевић (sr)
+       * Maxim Dziumanenko (uk)
+       * Funda Wang (zh_CN)
+       * Woodman Tuen (zh_HK)
+       * Woodman Tuen (zh_TW)
+
+==============
 Version 2.13.5
 ==============
 

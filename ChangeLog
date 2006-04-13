@@ -1,3 +1,9 @@
+2006-04-13  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.14.0.
+
 2006-04-07  Christian Rose  <menthos@menthos.com>
 
 	* configure.in: Added "mg" to ALL_LINGUAS.
