@@ -95,12 +95,13 @@ GMenuTreeItemType   gmenu_tree_item_get_type   (GMenuTreeItem *item);
 GMenuTreeDirectory *gmenu_tree_item_get_parent (GMenuTreeItem *item);
 
 
-GSList     *gmenu_tree_directory_get_contents (GMenuTreeDirectory *directory);
-const char *gmenu_tree_directory_get_name     (GMenuTreeDirectory *directory);
-const char *gmenu_tree_directory_get_comment  (GMenuTreeDirectory *directory);
-const char *gmenu_tree_directory_get_icon     (GMenuTreeDirectory *directory);
-const char *gmenu_tree_directory_get_menu_id  (GMenuTreeDirectory *directory);
-GMenuTree  *gmenu_tree_directory_get_tree     (GMenuTreeDirectory *directory);
+GSList     *gmenu_tree_directory_get_contents          (GMenuTreeDirectory *directory);
+const char *gmenu_tree_directory_get_name              (GMenuTreeDirectory *directory);
+const char *gmenu_tree_directory_get_comment           (GMenuTreeDirectory *directory);
+const char *gmenu_tree_directory_get_icon              (GMenuTreeDirectory *directory);
+const char *gmenu_tree_directory_get_desktop_file_path (GMenuTreeDirectory *directory);
+const char *gmenu_tree_directory_get_menu_id           (GMenuTreeDirectory *directory);
+GMenuTree  *gmenu_tree_directory_get_tree              (GMenuTreeDirectory *directory);
 
 gboolean gmenu_tree_directory_get_is_nodisplay (GMenuTreeDirectory *directory);
 
@@ -108,10 +109,11 @@ char *gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
 				      GMenuTreeEntry     *entry);
 
 
-const char *gmenu_tree_entry_get_name    (GMenuTreeEntry *entry);
-const char *gmenu_tree_entry_get_comment (GMenuTreeEntry *entry);
-const char *gmenu_tree_entry_get_icon    (GMenuTreeEntry *entry);
-const char *gmenu_tree_entry_get_exec    (GMenuTreeEntry *entry);
+const char *gmenu_tree_entry_get_name               (GMenuTreeEntry *entry);
+const char *gmenu_tree_entry_get_comment            (GMenuTreeEntry *entry);
+const char *gmenu_tree_entry_get_icon               (GMenuTreeEntry *entry);
+const char *gmenu_tree_entry_get_exec               (GMenuTreeEntry *entry);
+gboolean    gmenu_tree_entry_get_launch_in_terminal (GMenuTreeEntry *entry);
 
 const char *gmenu_tree_entry_get_desktop_file_path (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_desktop_file_id   (GMenuTreeEntry *entry);

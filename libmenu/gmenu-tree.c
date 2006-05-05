@@ -975,6 +975,17 @@ gmenu_tree_directory_get_icon (GMenuTreeDirectory *directory)
 }
 
 const char *
+gmenu_tree_directory_get_desktop_file_path (GMenuTreeDirectory *directory)
+{
+  g_return_val_if_fail (directory != NULL, NULL);
+
+  if (!directory->directory_entry)
+    return NULL;
+
+  return desktop_entry_get_path (directory->directory_entry);
+}
+
+const char *
 gmenu_tree_directory_get_menu_id (GMenuTreeDirectory *directory)
 {
   g_return_val_if_fail (directory != NULL, NULL);
@@ -1088,6 +1099,14 @@ gmenu_tree_entry_get_exec (GMenuTreeEntry *entry)
   g_return_val_if_fail (entry != NULL, NULL);
 
   return desktop_entry_get_exec (entry->desktop_entry);
+}
+
+gboolean
+gmenu_tree_entry_get_launch_in_terminal (GMenuTreeEntry *entry)
+{
+  g_return_val_if_fail (entry != NULL, NULL);
+
+  return desktop_entry_get_launch_in_terminal (entry->desktop_entry);
 }
 
 const char *

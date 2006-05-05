@@ -1,3 +1,14 @@
+2006-05-05  Travis Watkins  <alleykat@gmail.com>
+
+	* libmenu/desktop-entries.[ch]: add
+	desktop_entry_get_launch_in_terminal
+	* libmenu/gmenu-tree.[ch]: add
+	gmenu_tree_directory_get_desktop_file_path,
+	gmenu_tree_entry_get_launch_in_terminal
+	* python/gmenu.c: add pygmenu_tree_directory_get_desktop_file_path,
+	pygmenu_tree_entry_get_launch_in_terminal,
+	pygmenu_tree_entry_get_is_nodisplay, FLAGS_INCLUDE_NO_DISPLAY
+
 2006-05-05  William Jon McCann  <mccann@jhu.edu>
 
 	* simple-editor/GMenuSimpleEditor/main.py:

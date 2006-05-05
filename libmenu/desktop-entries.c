@@ -43,10 +43,11 @@ struct DesktopEntry
 
   GQuark *categories;
 
-  char *name;
-  char *comment;
-  char *icon;
-  char *exec;
+  char     *name;
+  char     *comment;
+  char     *icon;
+  char     *exec;
+  gboolean terminal;
 
   guint type : 2;
   guint flags : 4;
@@ -278,7 +279,10 @@ desktop_entry_load (DesktopEntry *entry)
   retval->categories = get_categories_from_key_file (retval, key_file, desktop_entry_group);
 
   if (entry->type == DESKTOP_ENTRY_DESKTOP)
-    retval->exec = g_key_file_get_string (key_file, desktop_entry_group, "Exec", NULL);
+    {
+      retval->exec = g_key_file_get_string (key_file, desktop_entry_group, "Exec", NULL);
+      retval->terminal = g_key_file_get_boolean (key_file, desktop_entry_group, "Terminal", NULL);
+    }
   
 #undef GET_LOCALE_STRING
 
@@ -356,6 +360,7 @@ desktop_entry_reload (DesktopEntry *entry)
   g_free (entry->exec);
   entry->exec = NULL;
 
+  entry->terminal = 0;
   entry->flags = 0;
 
   return desktop_entry_load (entry);
@@ -391,6 +396,7 @@ desktop_entry_copy (DesktopEntry *entry)
   retval->comment  = g_strdup (entry->comment);
   retval->icon     = g_strdup (entry->icon);
   retval->exec     = g_strdup (entry->exec);
+  retval->terminal = entry->terminal;
   retval->flags    = entry->flags;
 
   i = 0;
@@ -485,6 +491,12 @@ const char *
 desktop_entry_get_exec (DesktopEntry *entry)
 {
   return entry->exec;
+}
+
+gboolean
+desktop_entry_get_launch_in_terminal (DesktopEntry *entry)
+{
+  return entry->terminal;
 }
 
 gboolean

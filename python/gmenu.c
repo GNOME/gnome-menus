@@ -351,6 +351,31 @@ pygmenu_tree_directory_get_icon (PyObject *self,
 }
 
 static PyObject *
+pygmenu_tree_directory_get_desktop_file_path (PyObject *self,
+				              PyObject *args)
+{
+  PyGMenuTreeDirectory *directory;
+  const char           *path;
+
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Directory.get_desktop_file_path"))
+	return NULL;
+    }
+
+  directory = (PyGMenuTreeDirectory *) self;
+
+  path = gmenu_tree_directory_get_desktop_file_path (GMENU_TREE_DIRECTORY (directory->item));
+  if (path == NULL)
+    {
+      Py_INCREF (Py_None);
+      return Py_None;
+    }
+
+  return PyString_FromString (path);
+}
+
+static PyObject *
 pygmenu_tree_directory_get_menu_id (PyObject *self,
 				    PyObject *args)
 {
@@ -446,13 +471,14 @@ pygmenu_tree_directory_getattro (PyGMenuTreeDirectory *self,
 
       if (!strcmp (attr, "__members__"))
 	{
-	  return Py_BuildValue ("[ssssssss]",
+	  return Py_BuildValue ("[sssssssss]",
 				"type",
 				"parent",
 				"contents",
 				"name",
 				"comment",
 				"icon",
+				"desktop_file_path",
 				"menu_id",
 				"tree");
 	}
@@ -480,6 +506,10 @@ pygmenu_tree_directory_getattro (PyGMenuTreeDirectory *self,
 	{
 	  return pygmenu_tree_directory_get_icon ((PyObject *) self, NULL);
 	}
+      else if (!strcmp (attr, "desktop_file_path"))
+	{
+	  return pygmenu_tree_directory_get_desktop_file_path ((PyObject *) self, NULL);
+	}
       else if (!strcmp (attr, "menu_id"))
 	{
 	  return pygmenu_tree_directory_get_menu_id ((PyObject *) self, NULL);
@@ -495,14 +525,15 @@ pygmenu_tree_directory_getattro (PyGMenuTreeDirectory *self,
 
 static struct PyMethodDef pygmenu_tree_directory_methods[] =
 {
-  { "get_contents", pygmenu_tree_directory_get_contents, METH_VARARGS },
-  { "get_name",     pygmenu_tree_directory_get_name,     METH_VARARGS },
-  { "get_comment",  pygmenu_tree_directory_get_comment,  METH_VARARGS },
-  { "get_icon",     pygmenu_tree_directory_get_icon,     METH_VARARGS },
-  { "get_menu_id",  pygmenu_tree_directory_get_menu_id,  METH_VARARGS },
-  { "get_tree",     pygmenu_tree_directory_get_tree,     METH_VARARGS },
-  { "make_path",    pygmenu_tree_directory_make_path,    METH_VARARGS },
-  { NULL,           NULL,                                0            }
+  { "get_contents",           pygmenu_tree_directory_get_contents,           METH_VARARGS },
+  { "get_name",               pygmenu_tree_directory_get_name,               METH_VARARGS },
+  { "get_comment",            pygmenu_tree_directory_get_comment,            METH_VARARGS },
+  { "get_icon",               pygmenu_tree_directory_get_icon,               METH_VARARGS },
+  { "get_desktop_file_path",  pygmenu_tree_directory_get_desktop_file_path,  METH_VARARGS },
+  { "get_menu_id",            pygmenu_tree_directory_get_menu_id,            METH_VARARGS },
+  { "get_tree",               pygmenu_tree_directory_get_tree,               METH_VARARGS },
+  { "make_path",              pygmenu_tree_directory_make_path,              METH_VARARGS },
+  { NULL,                     NULL,                                          0            }
 };
 
 static PyTypeObject PyGMenuTreeDirectory_Type = 
@@ -674,6 +705,30 @@ pygmenu_tree_entry_get_exec (PyObject *self,
 }
 
 static PyObject *
+pygmenu_tree_entry_get_launch_in_terminal (PyObject *self,
+				    PyObject *args)
+{
+  PyGMenuTreeEntry *entry;
+  PyObject         *retval;
+
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Entry.get_launch_in_terminal"))
+	return NULL;
+    }
+
+  entry = (PyGMenuTreeEntry *) self;
+
+  if (gmenu_tree_entry_get_launch_in_terminal (GMENU_TREE_ENTRY (entry->item)))
+    retval = Py_True;
+  else
+    retval = Py_False;
+  Py_INCREF (retval);
+
+  return retval;
+}
+
+static PyObject *
 pygmenu_tree_entry_get_desktop_file_path (PyObject *self,
 					  PyObject *args)
 {
@@ -745,6 +800,30 @@ pygmenu_tree_entry_get_is_excluded (PyObject *self,
 }
 
 static PyObject *
+pygmenu_tree_entry_get_is_nodisplay (PyObject *self,
+				    PyObject *args)
+{
+  PyGMenuTreeEntry *entry;
+  PyObject         *retval;
+
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Entry.get_is_nodisplay"))
+	return NULL;
+    }
+
+  entry = (PyGMenuTreeEntry *) self;
+
+  if (gmenu_tree_entry_get_is_nodisplay (GMENU_TREE_ENTRY (entry->item)))
+    retval = Py_True;
+  else
+    retval = Py_False;
+  Py_INCREF (retval);
+
+  return retval;
+}
+
+static PyObject *
 pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 			     PyObject         *py_attr)
 {
@@ -756,16 +835,18 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 
       if (!strcmp (attr, "__members__"))
 	{
-	  return Py_BuildValue ("[sssssssss]",
+	  return Py_BuildValue ("[sssssssssss]",
 				"type",
 				"parent",
 				"name",
 				"comment",
 				"icon",
 				"exec_info",
+				"launch_in_terminal",
 				"desktop_file_path",
 				"desktop_file_id",
-				"is_excluded");
+				"is_excluded",
+				"is_nodisplay");
 	}
       else if (!strcmp (attr, "type"))
 	{
@@ -791,6 +872,10 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 	{
 	  return pygmenu_tree_entry_get_exec ((PyObject *) self, NULL);
 	}
+      else if (!strcmp (attr, "launch_in_terminal"))
+	{
+	  return pygmenu_tree_entry_get_launch_in_terminal ((PyObject *) self, NULL);
+	}
       else if (!strcmp (attr, "desktop_file_path"))
 	{
 	  return pygmenu_tree_entry_get_desktop_file_path ((PyObject *) self, NULL);
@@ -803,6 +888,10 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 	{
 	  return pygmenu_tree_entry_get_is_excluded ((PyObject *) self, NULL);
 	}
+      else if (!strcmp (attr, "is_nodisplay"))
+	{
+	  return pygmenu_tree_entry_get_is_nodisplay ((PyObject *) self, NULL);
+	}
     }
 
   return PyObject_GenericGetAttr ((PyObject *) self, py_attr);
@@ -810,14 +899,16 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 
 static struct PyMethodDef pygmenu_tree_entry_methods[] =
 {
-  { "get_name",              pygmenu_tree_entry_get_name,              METH_VARARGS },
-  { "get_comment",           pygmenu_tree_entry_get_comment,           METH_VARARGS },
-  { "get_icon",              pygmenu_tree_entry_get_icon,              METH_VARARGS },
-  { "get_exec",              pygmenu_tree_entry_get_exec,              METH_VARARGS },
-  { "get_desktop_file_path", pygmenu_tree_entry_get_desktop_file_path, METH_VARARGS },
-  { "get_desktop_file_id",   pygmenu_tree_entry_get_desktop_file_id,   METH_VARARGS },
-  { "get_is_excluded",       pygmenu_tree_entry_get_is_excluded,       METH_VARARGS },
-  { NULL,                    NULL,                                     0            }
+  { "get_name",               pygmenu_tree_entry_get_name,               METH_VARARGS },
+  { "get_comment",            pygmenu_tree_entry_get_comment,            METH_VARARGS },
+  { "get_icon",               pygmenu_tree_entry_get_icon,               METH_VARARGS },
+  { "get_exec",               pygmenu_tree_entry_get_exec,               METH_VARARGS },
+  { "get_launch_in_terminal", pygmenu_tree_entry_get_launch_in_terminal, METH_VARARGS },
+  { "get_desktop_file_path",  pygmenu_tree_entry_get_desktop_file_path,  METH_VARARGS },
+  { "get_desktop_file_id",    pygmenu_tree_entry_get_desktop_file_id,    METH_VARARGS },
+  { "get_is_excluded",        pygmenu_tree_entry_get_is_excluded,        METH_VARARGS },
+  { "get_is_nodisplay",       pygmenu_tree_entry_get_is_nodisplay,       METH_VARARGS },
+  { NULL,                     NULL,                                      0            }
 };
 
 static PyTypeObject PyGMenuTreeEntry_Type = 
@@ -1684,7 +1775,8 @@ initgmenu (void)
   PyModule_AddIntConstant (mod, "TYPE_HEADER",    GMENU_TREE_ITEM_HEADER);
   PyModule_AddIntConstant (mod, "TYPE_ALIAS",     GMENU_TREE_ITEM_ALIAS);
 
-  PyModule_AddIntConstant (mod, "FLAGS_NONE",             GMENU_TREE_FLAGS_NONE);
-  PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_EXCLUDED", GMENU_TREE_FLAGS_INCLUDE_EXCLUDED);
-  PyModule_AddIntConstant (mod, "FLAGS_SHOW_EMPTY",       GMENU_TREE_FLAGS_SHOW_EMPTY);
+  PyModule_AddIntConstant (mod, "FLAGS_NONE",              GMENU_TREE_FLAGS_NONE);
+  PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_EXCLUDED",  GMENU_TREE_FLAGS_INCLUDE_EXCLUDED);
+  PyModule_AddIntConstant (mod, "FLAGS_SHOW_EMPTY",        GMENU_TREE_FLAGS_SHOW_EMPTY);
+  PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_NODISPLAY", GMENU_TREE_FLAGS_INCLUDE_NODISPLAY);
 }
