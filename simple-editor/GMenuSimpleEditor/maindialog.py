@@ -29,7 +29,7 @@ import menutreemodel
 import menufilewriter
 
 class MenuEditorDialog:
-    def __init__ (self):
+    def __init__ (self, menu_files):
         glade_file = os.path.join (GLADEDIR, "gmenu-simple-editor.glade")
         self.xml = gtk.glade.XML (glade_file, "menu_editor_dialog", PACKAGE)
 
@@ -44,7 +44,7 @@ class MenuEditorDialog:
         self.menus_tree   = self.xml.get_widget ("menus_treeview")
         self.entries_list = self.xml.get_widget ("applications_treeview")
 
-        self.menu_tree_model = menutreemodel.MenuTreeModel ()
+        self.menu_tree_model = menutreemodel.MenuTreeModel (menu_files)
         
         self.menu_file_writer = menufilewriter.MenuFileWriter (self.menu_tree_model)
 

@@ -98,14 +98,17 @@ class MenuTreeModel (gtk.TreeStore):
         COLUMN_USER_VISIBLE
     ) = range (7)
 
-    def __init__ (self):
+    def __init__ (self, menu_files):
         gtk.TreeStore.__init__ (self, bool, str, str, gtk.gdk.Pixbuf, str, bool, bool)
 
         self.entries_list_iter = None
         
         self.icon_theme = gtk.icon_theme_get_default ()
 
-        for menu_file in ("applications.menu", "settings.menu"):
+        if (len (menu_files) < 1):
+            menu_files = ["applications.menu", "settings.menu"]
+
+        for menu_file in menu_files:
             tree = gmenu.lookup_tree (menu_file, gmenu.FLAGS_INCLUDE_EXCLUDED)
             self.__append_directory (tree.root, None, False, menu_file)
 

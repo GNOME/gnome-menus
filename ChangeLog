@@ -1,3 +1,11 @@
+2006-05-05  William Jon McCann  <mccann@jhu.edu>
+
+	* simple-editor/GMenuSimpleEditor/main.py:
+	* simple-editor/GMenuSimpleEditor/maindialog.py:
+	* simple-editor/GMenuSimpleEditor/menutreemodel.py:
+	Allow specifying alternate menu files as command line
+	arguments.  Fixes #339812
+
 2006-04-28  Wouter Bolsterlee  <uws+gnome@xs4all.nl>
 
 	* configure.in: Use po/LINGUAS. See

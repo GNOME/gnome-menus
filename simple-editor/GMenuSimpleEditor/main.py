@@ -32,6 +32,6 @@ def main (args):
     gettext.install (config.PACKAGE, config.LOCALEDIR)
     gtk.glade.bindtextdomain (config.PACKAGE, config.LOCALEDIR)
 
-    dialog = maindialog.MenuEditorDialog ()
+    dialog = maindialog.MenuEditorDialog (args)
 
     gtk.main ()
