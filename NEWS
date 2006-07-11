@@ -1,4 +1,30 @@
 ==============
+Version 2.15.4
+==============
+
+  Features
+
+	* Add new API to know if an application should be launched in a
+	  terminal and to know the path to the desktop file (Travis Watkins)
+	* Complete python bindings for the "No Display" flag (Travis Watkins)
+
+  Menu Editor
+
+	* Allow specifying alternate menu files as command line arguments
+	  (William Jon McCann)
+
+  Misc
+
+	* Use po/LINGUAS (Wouter Bolsterlee)
+	* Require intltool 0.35.0 (Vincent Untz)
+
+  Translators
+
+       * Runa Bhattacharjee (bn_IN)
+       * Matheus Grandi (gn)
+       * Swapnil Hajare (mr)
+
+==============
 Version 2.14.0
 ==============
 

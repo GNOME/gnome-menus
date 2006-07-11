@@ -1,5 +1,11 @@
 2006-07-11  Vincent Untz  <vuntz@gnome.org>
 
+	* NEWS:
+	* README:
+	* configure.in: Version 2.15.4.
+
+2006-07-11  Vincent Untz  <vuntz@gnome.org>
+
 	* configure.in: require intltool 0.35.0
 
 2006-05-05  Travis Watkins  <alleykat@gmail.com>
