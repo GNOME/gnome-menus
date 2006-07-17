@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-11 13:29+0700\n"
-"PO-Revision-Date: 2005-12-11 13:30+0700\n"
+"POT-Creation-Date: 2006-07-17 11:38+0700\n"
+"PO-Revision-Date: 2006-07-17 11:42+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,19 +19,19 @@ msgstr ""
 #: desktop-directories/Accessibility.directory.in.h:1
 #: desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
-msgstr "ระบบอำนวยการใช้งาน"
+msgstr "สิ่งอำนวยความสะดวก"
 
 #: desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "ตั้งค่าระบบอำนวยการใช้งาน"
+msgstr "ตั้งค่าสิ่งอำนวยความสะดวก"
 
 #: desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
-msgstr "อำนวยความสะดวก"
+msgstr "เครื่องใช้ไม้สอย"
 
 #: desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "โปรแกรมอำนวยความสะดวกบนเดสก์ทอป"
+msgstr "โปรแกรมเครื่องใช้ไม้สอยบนเดสก์ท็อป"
 
 #: desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -83,7 +83,7 @@ msgstr "โปรแกรมสำหรับเข้าอินเทอร
 
 #: desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "เมนูมัลติมีเดีย"
+msgstr "เมนูระบบสื่อผสม"
 
 #: desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
