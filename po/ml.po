@@ -1,0 +1,234 @@
+# translation of gnome-menus.HEAD to Malayalam
+# This file is distributed under the same license as the gnome-menus.HEAD package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Ani Peter <peter.ani@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-18 07:20+0200\n"
+"PO-Revision-Date: 2006-07-18 15:43+0530\n"
+"Last-Translator: Ani Peter <peter.ani@gmail.com>\n"
+"Language-Team: Malayalam\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "ആക്സസ്സിബിളിറ്റി"
+
+#: ../desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "ആക്സസ്സിബിളിറ്റി സെറ്റിങുകള്‍"
+
+#: ../desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "ഉപകരണങ്ങള്‍"
+
+#: ../desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "ഡസ്ക്ക്ടോപ്പ് ഉപകരണങ്ങള്‍"
+
+#: ../desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "പ്രയോഗങ്ങള്‍"
+
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "ഡസ്ക്ക്ടോപ്പ്"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "സ്വകാര്യ പ്രിഫറന്‍സുകളും അഡ്മിനിസ്ട്രേഷന്‍ സെറ്റിങുകളും"
+
+#: ../desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "പ്രോഗ്രാമിങ്"
+
+#: ../desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "സോഫ്റ്റ്വയര്‍ ഡവലപ്പ്മെന്‍റിന് ആവശ്യമുളള ആയുധങ്ങള്‍"
+
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "വിദ്യഭ്യാസം"
+
+#: ../desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "കളികള്‍"
+
+#: ../desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "കളികളും വിനോദങ്ങളും"
+
+#: ../desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "ഗ്രാഫിക്സ്"
+
+#: ../desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "ഗ്രാഫിക്സ് പ്രയോഗങ്ങള്‍"
+
+#: ../desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "ഇന്‍റര്‍നെറ്റ്"
+
+#: ../desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "ഇന്‍റര്‍നെറ്റ് ആവശ്യമുളള പ്രോഗ്രാമുളായ വെബും ഈമെയിലും"
+
+#: ../desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "മള്‍ട്ടീമീഡിയ മെന്യു"
+
+#: ../desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "ഓഡിയോയും വീഡിയോയും"
+
+#: ../desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "ഓഫീസ്"
+
+#: ../desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "ഓഫീസ് പ്രയോഗങ്ങള്‍"
+
+#: ../desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "മറ്റ് വിഭാഗങ്ങളില്‍ ഉല്‍പ്പെടുത്താത്ത പ്രയോഗങ്ങള്‍"
+
+#: ../desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "മറ്റുളളവ"
+
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "സ്ലാകാര്യ പ്രിഫറന്‍സുകള്‍"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "പ്രിഫറന്‍സുകള്‍"
+
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "ആക്സസ്സിബിളിറ്റി സംബന്ധിച്ചുളള പ്രിഫറന്‍സുകള്‍"
+
+#: ../desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "സ്ലാകാര്യ പ്രിഫറന്‍സുകളും സെറ്റിങുകളും"
+
+#: ../desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "അഡ്മിനിസ്ട്രേഷന്‍"
+
+#: ../desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr "സിസ്റ്റംമുഴുവനുളള സെറ്റിങുകളില്‍ മാറ്റം വരുത്തുക (എല്ലാ യൂസറുകളേയും ബാധിക്കുന്നു)"
+
+#: ../desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "സിസ്റ്റം ടൂളുകള്‍"
+
+#: ../desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "സിസ്റ്റം കോണ്‍ഫിഗറേഷനും നിരൂക്ഷണവും"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "മെന്യു എഡിറ്റര്‍"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "മെന്യുകളില്‍ മാറ്റം വരുത്തുക"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "പ്രയോഗങ്ങള്‍ (_A):"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "ഡീഫോള്‍ട്ടുകള്‍ (_D)"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "മെന്യുകള്‍ (_M):"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+msgid "Name"
+msgstr "പേര്"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr "കാണിക്കുക"
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"ഹോം ഡയറക്ടറി കണ്ടുകിട്ടിയില്ല: /etc/passwdല്‍ മാത്രമല്ല എന്‍വയോണ്‍മെന്‍റിലുളള $HOMEലും "
+"സെറ്റ് ചെയ്തിട്ടില്ല "
+
+#: ../util/test-menu-spec.c:33
+msgid "Menu file"
+msgstr "മെന്യു ഫയല്‍"
+
+#: ../util/test-menu-spec.c:33
+msgid "MENU_FILE"
+msgstr "മെന്യു ഫയല്‍ (_F)"
+
+#: ../util/test-menu-spec.c:34
+msgid "Monitor for menu changes"
+msgstr "മെന്യുവില്‍ വരുത്തുന്ന മാറ്റങ്ങള്‍ നിരീക്ഷിക്കുക"
+
+#: ../util/test-menu-spec.c:35
+msgid "Include <Exclude>d entries"
+msgstr "<Exclude> എന്‍ട്രികളും ഉല്‍പ്പെടുത്തുക"
+
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "NoDisplay=true എന്ന എന്‍ട്രികളും ഉല്‍പ്പെടുത്തുക"
+
+#: ../util/test-menu-spec.c:91
+msgid "Invalid desktop file ID"
+msgstr "അസാധുവായ ഡസ്ക്ക്ടോപ്പ് ഫയല്‍ ID"
+
+#: ../util/test-menu-spec.c:92
+msgid "[Invalid Filename]"
+msgstr "[അസാധുവായ ഫയല്‍നെയിം]"
+
+#: ../util/test-menu-spec.c:93
+msgid " <excluded>"
+msgstr " <excluded>"
+
+#: ../util/test-menu-spec.c:164
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== മെന്യു മാറ്റിയിരിക്കുന്നു, വീണ്ടും ലോഡ് ചെയ്യുന്നു ====\n"
+"\n, "
+"\n"
+
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+msgid "Menu tree is empty"
+msgstr "മെന്യു ട്രൂ ശൂന്യമാണ്"
+
+#: ../util/test-menu-spec.c:189
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- GNOMEന്‍റെ ഡസ്ക്ക്ടോപ്പ് മെന്യു സ്പെസിഫിക്കേഷന്‍ പരീക്ഷിക്കുക"
+
