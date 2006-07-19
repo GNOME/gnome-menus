@@ -85,7 +85,7 @@ msgstr "Chương trình truy cập Mạng như trình duyệt và trình nhận/
 
 #:../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Trình đơn đa vật chứa"
+msgstr "Trình đơn Đa phương tiện"
 
 #:../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
