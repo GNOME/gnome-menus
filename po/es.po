@@ -1,21 +1,22 @@
+# translation of es.po to Spanish
 # traducción de es.po al Spanish
 # translation of es.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 Gnome Foundation, 2005.
-# Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2005.
 #
+# Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2005, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus-2.12\n"
+"Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-09 12:00+0100\n"
-"PO-Revision-Date: 2005-12-09 12:01+0100\n"
+"POT-Creation-Date: 2006-07-26 15:52+0200\n"
+"PO-Revision-Date: 2006-07-26 15:52+0200\n"
 "Last-Translator: Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.1\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
@@ -130,8 +131,7 @@ msgstr "Administración"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr ""
-"Cambia las preferencias globales del sistema (afecta a todos los usuarios)"
+msgstr "Cambia las preferencias globales del sistema (afecta a todos los usuarios)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -233,11 +233,6 @@ msgstr "El árbol del menú está vacío"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr ""
-"- probar la implementación de Gnome de la Especificación del Menú de "
+"- probar la implementación de GNOME de la Especificación del Menú de "
 "Escritorio"
 
-#~ msgid "Hide"
-#~ msgstr "Ocultar"
-
-#~ msgid "System Settings"
-#~ msgstr "Configuración del sistema"
