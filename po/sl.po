@@ -1,0 +1,233 @@
+# -*- mode:po; coding:utf-8; -*- Slovenian message catalogue for gnome-menus.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# Matej Urbančič <matej.urban@gmail.com>, 2005.
+# Matic Zgur <mr.zgur@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-09-20 13:41+0200\n"
+"PO-Revision-Date: 2006-07-29 16:12+0100\n"
+"Last-Translator: Matic Žgur <mr.zgur@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3\n"
+"X-Poedit-Language: Slovenian\n"
+"X-Poedit-Country: SLOVENIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
+msgid "Accessibility"
+msgstr "Dostopnost"
+
+#: ../desktop-directories/Accessibility.directory.in.h:2
+msgid "Accessibility Settings"
+msgstr "Nastavitve dostopnosti"
+
+#: ../desktop-directories/Accessories.directory.in.h:1
+msgid "Accessories"
+msgstr "Pripomočki"
+
+#: ../desktop-directories/Accessories.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Namizni pripomočki"
+
+#: ../desktop-directories/Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Programi"
+
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "Namizje"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "Osebne izbire in skrbniške nastavitve"
+
+#: ../desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Programiranje"
+
+#: ../desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Orodja za razvoj programske opreme"
+
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Izobraževanje"
+
+#: ../desktop-directories/Games.directory.in.h:1
+msgid "Games"
+msgstr "Igre"
+
+#: ../desktop-directories/Games.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Igre in zabava"
+
+#: ../desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Grafika"
+
+#: ../desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Grafični programi"
+
+#: ../desktop-directories/Internet.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
+
+#: ../desktop-directories/Internet.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Programi za dostop do interneta kot sta brskalnik in e-pošta"
+
+#: ../desktop-directories/Multimedia.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Večpredstavnostni meni"
+
+#: ../desktop-directories/Multimedia.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Zvok & Video"
+
+#: ../desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Pisarna"
+
+#: ../desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Pisarniški Programi"
+
+#: ../desktop-directories/Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Programi, ki ne sodijo v druge kategorije"
+
+#: ../desktop-directories/Other.directory.in.h:2
+msgid "Other"
+msgstr "Ostalo"
+
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Osebne izbire"
+
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Izbire"
+
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "Izbire dostopnosti"
+
+#: ../desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "Osebne izbire in nastavitve"
+
+#: ../desktop-directories/System-Settings.directory.in.h:1
+msgid "Administration"
+msgstr "Skrbništvo"
+
+#: ../desktop-directories/System-Settings.directory.in.h:2
+msgid "Change systemwide settings (affects all users)"
+msgstr "Spremeni sistemske nastavitve (za vse uporabnike)"
+
+#: ../desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Sistemska orodja"
+
+#: ../desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Nastavitve in nadziranje sistema"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "Urejevalnik Menija"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "Uredi Menije"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "_Programi:"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "_Privzeto"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "_Meniji:"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+msgid "Name"
+msgstr "Ime"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr "Prikaži"
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Ni mogoče najti domače mape: ni določena v /etc/passwd in ni vrednosti za $HOME v okolju"
+
+#: ../util/test-menu-spec.c:33
+msgid "Menu file"
+msgstr "Datoteka menija"
+
+#: ../util/test-menu-spec.c:33
+msgid "MENU_FILE"
+msgstr "MENU_FILE"
+
+#: ../util/test-menu-spec.c:34
+msgid "Monitor for menu changes"
+msgstr "Spremljaj spremembe menija"
+
+#: ../util/test-menu-spec.c:35
+msgid "Include <Exclude>d entries"
+msgstr "Vključi <Izločene> vnose"
+
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "Vključi vnose NoDisplay=true"
+
+#: ../util/test-menu-spec.c:91
+msgid "Invalid desktop file ID"
+msgstr "Napačen ID datoteke namizja"
+
+#: ../util/test-menu-spec.c:92
+msgid "[Invalid Filename]"
+msgstr "[Nepravilno Ime datoteke]"
+
+#: ../util/test-menu-spec.c:93
+msgid " <excluded>"
+msgstr " <izločeno>"
+
+#: ../util/test-menu-spec.c:164
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Meni je spremenjen, ponovno nalaganje ====\n"
+"\n"
+"\n"
+
+#: ../util/test-menu-spec.c:169
+#: ../util/test-menu-spec.c:211
+msgid "Menu tree is empty"
+msgstr "Drevesna struktura menija je prazna"
+
+#: ../util/test-menu-spec.c:189
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- testiraj GNOME orodja za specifikacijo namiznega menija"
+
