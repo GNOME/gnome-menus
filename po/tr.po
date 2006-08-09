@@ -2,21 +2,22 @@
 # Copyright (C) 2004 THE Gnome-menus'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the Gnome-menus package.
 # Baris Cicek <baris@teamforce.name.tr>, 2005.
-#
-#
+# Onur Can Çakmak <onur.cakmak@gmail.com>, 2006.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-05 19:57+0300\n"
-"PO-Revision-Date: 2005-07-24 19:36+0300\n"
-"Last-Translator: Onur Can Cakmak <onur.cakmak@gmail.com>\n"
+"POT-Creation-Date: 2006-08-09 11:22+0300\n"
+"PO-Revision-Date: 2006-08-08 16:42+0200\n"
+"Last-Translator: Onur Can Çakmak <onur.cakmak@gmail.com>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.1\n"
-"Plural-Forms:  nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -177,35 +178,39 @@ msgstr ""
 "Ev dizini bulunamadı: /etc/passwd içinde ayarlanmamış ve ortam değişkeni "
 "$HOME içinde değer yok"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "Menu file"
 msgstr "Menü dosyası"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
 msgstr "MENU_DOSYASI"
 
-#: ../util/test-menu-spec.c:33
+#: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
 msgstr "Menü değişikliklerini izle"
 
-#: ../util/test-menu-spec.c:34
+#: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
 msgstr "<Exclude> edilmiş girişleri içer"
 
-#: ../util/test-menu-spec.c:89
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "NoDisplay=true girdileri içer"
+
+#: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
 msgstr "Geçersiz masaüstü dosya ID'si"
 
-#: ../util/test-menu-spec.c:90
+#: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
 msgstr "[Geçersiz Dosyaadı]"
 
-#: ../util/test-menu-spec.c:91
+#: ../util/test-menu-spec.c:93
 msgid " <excluded>"
 msgstr " <excluded>"
 
-#: ../util/test-menu-spec.c:162
+#: ../util/test-menu-spec.c:164
 msgid ""
 "\n"
 "\n"
@@ -221,10 +226,10 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Menü ağacı boş"
 
-#: ../util/test-menu-spec.c:186
+#: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- GNOME'un Masaüstü Menü Belirtimleri'ni sına"
