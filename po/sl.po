@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-09-20 13:41+0200\n"
-"PO-Revision-Date: 2006-07-29 16:12+0100\n"
+"POT-Creation-Date: 2006-08-13 07:54+0200\n"
+"PO-Revision-Date: 2006-08-13 14:11+0100\n"
 "Last-Translator: Matic Žgur <mr.zgur@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgstr "Večpredstavnostni meni"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Zvok & Video"
+msgstr "Zvok in video"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -98,7 +98,7 @@ msgstr "Pisarna"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Pisarniški Programi"
+msgstr "Pisarniški programi"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
@@ -110,24 +110,24 @@ msgstr "Ostalo"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Osebne izbire"
+msgstr "Osebne nastavitve"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Izbire"
+msgstr "Nastavitve"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
-msgstr "Izbire dostopnosti"
+msgstr "Nastavitve dostopa"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Osebne izbire in nastavitve"
+msgstr "Osebne nastavitve"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr "Skrbništvo"
+msgstr "Administracija"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
@@ -143,11 +143,11 @@ msgstr "Nastavitve in nadziranje sistema"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Urejevalnik Menija"
+msgstr "Urejevalnik menijev"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Uredi Menije"
+msgstr "Uredi menije"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -200,7 +200,7 @@ msgstr "Napačen ID datoteke namizja"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Nepravilno Ime datoteke]"
+msgstr "[Nepravilno ime datoteke]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
@@ -229,5 +229,5 @@ msgstr "Drevesna struktura menija je prazna"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- testiraj GNOME orodja za specifikacijo namiznega menija"
+msgstr "- testirajte GNOME-ova orodja za specifikacijo namiznega menija"
 
