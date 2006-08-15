@@ -1,3 +1,7 @@
+2006-08-15  Sanlig Badral  <badral@openmn.org>
+
+	* configure.in  Added Mongolian (mn) to ALL_LINGUAS.
+
 2006-07-31  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: post-release bump to 2.14.4.
