@@ -1,17 +1,23 @@
+# translation of gnome-menus.gnome-2-14.ne.po to Nepali
+# translation of gnome-menus.gnome-2-10.ne.po to Nepali
+# translation of gnome-menus.gnome-2-10.po to Nepali
 # translation of gnome-menus.HEAD.po to Nepali
 # Nepali Translation Project.
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2005.
 # Ganesh Ghimire <gghimire@gmail.com>, 2005.
+# Shiva  Pokharel <pokharelshiva@hotmail.com>, 2005.
+# Jaydeep Bhusal <zaydeep@hotmail.com>, 2005.
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-05-15 19:19+0545\n"
-"PO-Revision-Date: 2005-05-29 14:25+0545\n"
-"Last-Translator: Ganesh Ghimire <gghimire@gmail.com>\n"
+"Project-Id-Version: gnome-menus.gnome-2-14.ne\n"
+"Report-Msgid-Bugs-To:<info@mpp.org.np>\n"
+"POT-Creation-Date: 2006-07-14 22:12+0200\n"
+"PO-Revision-Date: 2006-07-17 22:58+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,145 +25,219 @@ msgstr ""
 "X-Poedit-Language: Nepali\n"
 "X-Poedit-Country: NEPAL\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=2;plural=(n!=1)\n"
 
-#: desktop-directories/Accessibility.directory.in.h:1
-#: desktop-directories/Settings-Accessibility.directory.in.h:1
+#: ../desktop-directories/Accessibility.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
-msgstr "उपलब्धता"
+msgstr "पहुँचता"
 
-#: desktop-directories/Accessibility.directory.in.h:2
+#: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "उपलब्धता सेटिङ्गहरू"
+msgstr "पहुँचता सेटिङगहरू"
 
-#: desktop-directories/Accessories.directory.in.h:1
+#: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
-msgstr "सहायक उपकरणहरू"
+msgstr "सहायक सामग्रीहरू"
 
-#: desktop-directories/Accessories.directory.in.h:2
+#: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "डेस्कटप सहायक उपकरणहरू"
+msgstr "डेस्कटप सहायक सामग्रीहरू"
 
-#: desktop-directories/Applications.directory.in.h:1
+#: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "अनुप्रयोगहरू"
 
-#: desktop-directories/Development.directory.in.h:1
+#: ../desktop-directories/Desktop.directory.in.h:1
+msgid "Desktop"
+msgstr "डेस्कटप"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+msgid "Personal preferences and administration settings"
+msgstr "व्यक्तिगत प्राथमिकताहरू र प्रशासनिक सेटिङगहरू"
+
+#: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
-msgstr "प्रोग्रामिङ्ग"
+msgstr "प्रोग्रामिङ्‌"
 
-#: desktop-directories/Development.directory.in.h:2
+#: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "सफ्टवेर विकासको निम्ति उपकरणहरू"
+msgstr "सफ्टवेर विकासका लागि उपकरणहरू"
 
-#: desktop-directories/Edutainment.directory.in.h:1
-msgid "Edutainment"
-msgstr "अध्ययन र मनोरञ्जन"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "शिक्षा"
 
-#: desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
 msgstr "खेलहरू"
 
-#: desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
 msgstr "खेलहरू र मनोरञ्जनहरू"
 
-#: desktop-directories/Graphics.directory.in.h:1
+#: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
 msgstr "ग्राफिक्स"
 
-#: desktop-directories/Graphics.directory.in.h:2
+#: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
 msgstr "ग्राफिक्स अनुप्रयोगहरू"
 
-#: desktop-directories/Internet.directory.in.h:1
+#: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "इन्टरनेट"
 
-#: desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "वेब र इमेल जस्तो इन्टरनेट पहुँचको निम्ति कार्यक्रमहरू"
+msgstr "वेब र इमेल जस्तो इन्टरनेट पहुँचका लागि कार्यक्रमहरू"
 
-#: desktop-directories/Multimedia.directory.in.h:1
+#: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "मल्टिमिडिया मिनू"
+msgstr "मल्टिमिडिया मेनु"
 
-#: desktop-directories/Multimedia.directory.in.h:2
+#: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
 msgstr "ध्वनि र भिडियो"
 
-#: desktop-directories/Office.directory.in.h:1
+#: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "कार्यालाय"
+msgstr "कार्यालय"
 
-#: desktop-directories/Office.directory.in.h:2
+#: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "कार्यालय अनुप्रयोगहरू "
+msgstr "कार्यालय अनुप्रयोगहरू"
 
-#: desktop-directories/Other.directory.in.h:1
+#: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "अनुप्रयोगहरू जून अन्य कोटिकाहरूमा ठिक्क मिल्दैनन्"
+msgstr "अन्य वर्गहरूमा नमिल्ने अनुप्रयोगहरू"
 
-#: desktop-directories/Other.directory.in.h:2
+#: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
 msgstr "अन्य"
 
-#: desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "पहुँचसँग सम्बन्धित प्राथमिक्ताहरू"
+#: ../desktop-directories/Preferences.directory.in.h:1
+msgid "Personal preferences"
+msgstr "व्यक्तिगत प्राथमिकताहरू"
 
-#: desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "व्यक्तिगत प्राथमिक्ताहरू र सेटिङ्गहरू"
-
-#: desktop-directories/Settings.directory.in.h:2
+#: ../desktop-directories/Preferences.directory.in.h:2
+#: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "प्राथमिकताहरू"
 
-#: desktop-directories/System-Settings.directory.in.h:1
+#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
+msgid "Accessibility related preferences"
+msgstr "पहुँचतासंग सम्बन्धित प्राथमिकताहरू"
+
+#: ../desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences and settings"
+msgstr "व्यक्तिगत प्राथमिकता र सेटिङ"
+
+#: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "प्रशासन"
 
-#: desktop-directories/System-Settings.directory.in.h:2
+#: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "सम्पुर्ण प्रणाली सेटिङ्गहरू परिवर्तन गर ( सबै प्रयोगकर्ताहरूलाई प्रभाव पार्छ)"
+msgstr "सम्पूर्ण प्रणाली सेटिङगहरू परिवर्तन गर्नुहोस् ( सबै प्रयोगकर्ताहरूलाई प्रभाव पार्छ)"
 
-#: desktop-directories/System-Tools.directory.in.h:1
+#: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "प्रणाली उपकरणहरू"
 
-#: desktop-directories/System-Tools.directory.in.h:2
+#: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "प्रणाली समायोजना र निरिक्षण कार्य"
+msgstr "प्रणाली कन्फिगरेसन र निरीक्षण"
 
-#: simple-editor/gmenu-simple-editor.glade.h:1
-msgid "Edit Menus"
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
 msgstr "मेनु सम्पादक"
 
-#: simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "मेनुहरू सम्पादन गर्नुहोस्"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
 msgstr "अनुप्रयोगहरू:"
 
-#: simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "पुर्वनिर्धारित"
+msgstr "पूर्वनिर्धारितहरू"
 
-#: simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "मेनु"
+msgstr "मेनुहरू:"
 
-#: simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
 msgid "Name"
 msgstr "नाम"
 
-#: simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Hide"
-msgstr "लुकाउ"
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+msgid "Show"
+msgstr "देखाउनुहोस्"
 
-#: simple-editor/GMenuSimpleEditor/menufilewriter.py:43
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "गृह डाइरेक्टरी पत्तालगाहन सकिदैन: /आदि/पासवर्डमा सेट छैन र $HOME वाताबरणमा कुनै मान छैन"
+msgstr "गृह डाइरेक्टरी फेला पार्न सकिँदैन: परिवेशमा $HOME को लागि मान छैन र /etc/passwd मा सेट छैन"
+
+#: ../util/test-menu-spec.c:33
+msgid "Menu file"
+msgstr "मेनु फाइल"
+
+#: ../util/test-menu-spec.c:33
+msgid "MENU_FILE"
+msgstr "MENU_FILE"
+
+#: ../util/test-menu-spec.c:34
+msgid "Monitor for menu changes"
+msgstr "मेनु परिवर्तनहरूको लागि मोनिटर"
+
+#: ../util/test-menu-spec.c:35
+msgid "Include <Exclude>d entries"
+msgstr "<Exclude>d प्रविष्टिहरू समावेश गर्नुहोस्"
+
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "NoDisplay=true प्रविष्टिहरू समावेश गर्नुहोस्"
+
+#: ../util/test-menu-spec.c:91
+msgid "Invalid desktop file ID"
+msgstr "अवैध डेस्कटप फाइल आइ डि"
+
+#: ../util/test-menu-spec.c:92
+msgid "[Invalid Filename]"
+msgstr "[अवैध फाइलनाम]"
+
+#: ../util/test-menu-spec.c:93
+msgid " <excluded>"
+msgstr " <excluded>"
+
+#: ../util/test-menu-spec.c:164
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== मेनु परिवर्तन गरियो, पुन: लोड हुदैछ ====\n"
+"\n"
+"\n"
+
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+msgid "Menu tree is empty"
+msgstr "मेनु ट्रि खाली छ"
+
+#: ../util/test-menu-spec.c:189
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "डेस्कटप मेनु निर्दिष्टिकरणको जिनोम कार्यन्वयन परीक्षण गर्नुहोस्"
 
