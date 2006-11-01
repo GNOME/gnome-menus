@@ -10,6 +10,14 @@ INCLUDES =				\
 
 lib_LTLIBRARIES = libgnome-menu.la
 
+if INOTIFY_SUPPORT
+MONITOR_BACKEND_SOURCES = menu-monitor-inotify.c
+MONITOR_BACKEND_EX_DIST = menu-monitor-fam.c
+else
+MONITOR_BACKEND_SOURCES = menu-monitor-fam.c
+MONITOR_BACKEND_EX_DIST = menu-monitor-inotify.c
+endif
+
 libgnome_menu_la_SOURCES =		\
 	canonicalize.c			\
 	canonicalize.h			\
@@ -24,9 +32,9 @@ libgnome_menu_la_SOURCES =		\
 	menu-monitor.c			\
 	menu-monitor.h			\
 	menu-monitor-backend.h		\
-	menu-monitor-fam.c		\
 	menu-util.c			\
 	menu-util.h			\
+	$(MONITOR_BACKEND_SOURCES)	\
 	$(NULL)
 
 libgnome_menu_la_LIBADD = 		\
@@ -48,6 +56,7 @@ libgnome_menu_include_HEADERS =		\
 EXTRA_DIST =				\
         libgnome-menu.pc.in		\
         libgnome-menu-uninstalled.pc.in	\
+	$(MONITOR_BACKEND_EX_DIST)	\
 	$(NULL)
 
 pkgconfigdir   = $(libdir)/pkgconfig

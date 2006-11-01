@@ -1,5 +1,18 @@
 2006-11-01  Mark McLoughlin  <mark@skynet.ie>
 
+	Flesh out the inotify support. Not enabled by default until
+	it gets a tad more testing. Closes bug #314854
+
+	* configure.in: add --enable-inotify
+	
+	* libmenu/Makefile.am: build menu-monitor-inotify.c if inotify
+	is enabled.
+	
+	* libmenu/menu-monitor-inotify.c: implement lots more of this.
+	See TODO list at the top of the file.
+
+2006-11-01  Mark McLoughlin  <mark@skynet.ie>
+
 	* libmenu/gmenu-tree.c:
 	(gmenu_tree_entry_get_launch_in_terminal): fix compile
 	warning
