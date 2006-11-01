@@ -1104,7 +1104,7 @@ gmenu_tree_entry_get_exec (GMenuTreeEntry *entry)
 gboolean
 gmenu_tree_entry_get_launch_in_terminal (GMenuTreeEntry *entry)
 {
-  g_return_val_if_fail (entry != NULL, NULL);
+  g_return_val_if_fail (entry != NULL, FALSE);
 
   return desktop_entry_get_launch_in_terminal (entry->desktop_entry);
 }

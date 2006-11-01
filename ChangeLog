@@ -1,5 +1,11 @@
 2006-11-01  Mark McLoughlin  <mark@skynet.ie>
 
+	* libmenu/gmenu-tree.c:
+	(gmenu_tree_entry_get_launch_in_terminal): fix compile
+	warning
+	
+2006-11-01  Mark McLoughlin  <mark@skynet.ie>
+
 	* configure.in: bump version to 2.17.1 - 2.16
 	development continues on the gnome-2-16 branch
 
