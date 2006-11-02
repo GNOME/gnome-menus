@@ -205,6 +205,7 @@ desktop_entry_load (DesktopEntry *entry)
   GKeyFile     *key_file;
   GError       *error;
   const char   *desktop_entry_group;
+  char         *name_str;
   char         *type_str;
 
   key_file = g_key_file_new ();
@@ -245,6 +246,15 @@ desktop_entry_load (DesktopEntry *entry)
       goto out;
     }
 
+  name_str = g_key_file_get_locale_string (key_file, desktop_entry_group, "Name", NULL, NULL);
+  if (!name_str)
+    {
+      menu_verbose ("\"%s\" contains an invalid \"Name\" key\n", entry->path);
+      goto out;
+    }
+
+  g_free (name_str);
+
   type_str = g_key_file_get_string (key_file, desktop_entry_group, "Type", NULL);
   if (!type_str)
     {
@@ -256,8 +266,11 @@ desktop_entry_load (DesktopEntry *entry)
       (entry->type == DESKTOP_ENTRY_DIRECTORY && strcmp (type_str, "Directory") != 0))
     {
       menu_verbose ("\"%s\" does not contain the correct \"Type\" value\n", entry->path);
+      g_free (type_str);
       goto out;
     }
+
+  g_free (type_str);
 
   if (entry->type == DESKTOP_ENTRY_DESKTOP &&
       !g_key_file_has_key (key_file, desktop_entry_group, "Exec", NULL))
@@ -265,8 +278,6 @@ desktop_entry_load (DesktopEntry *entry)
       menu_verbose ("\"%s\" does not contain an \"Exec\" key\n", entry->path);
       goto out;
     }
-
-  g_free (type_str);
 
   retval = entry;
 

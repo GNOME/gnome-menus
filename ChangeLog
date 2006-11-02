@@ -1,3 +1,9 @@
+2006-11-02  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/desktop-entries.c: (desktop_entry_load): don't
+	load a .desktop file which contains an incorrectly encoded
+	Name key. Fixes bug #339904
+
 2006-11-01  Mark McLoughlin  <mark@skynet.ie>
 
 	Flesh out the inotify support. Not enabled by default until
