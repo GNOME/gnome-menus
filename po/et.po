@@ -9,7 +9,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus HEAD\n"
+"Project-Id-Version: gnome-menus 2.16\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-12-08 14:31+0100\n"
 "PO-Revision-Date: 2005-12-08 19:13+0300\n"
@@ -230,4 +230,3 @@ msgstr "Menüüpuu on tühi"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- testi GNOME'ipoolset teostust Töölauamenüü spetsifikatsioonist"
-
