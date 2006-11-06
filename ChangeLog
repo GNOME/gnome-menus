@@ -1,5 +1,11 @@
 2006-11-06  Mark McLoughlin  <mark@skynet.ie>
 
+	* configure.in: post-release bump to 2.17.3
+	
+==================== 2.17.2 ====================
+
+2006-11-06  Mark McLoughlin  <mark@skynet.ie>
+
 	* configure.in: Version 2.17.2.
 
 2006-11-02  Mark McLoughlin  <mark@skynet.ie>
