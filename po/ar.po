@@ -1,19 +1,23 @@
-# translation of gnome-menus.HEAD.po to 
+# translation of gnome-menus.HEAD.ar.po to Arabic
+# translation of gnome-menus.HEAD.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER, 2005.
-# Djihed Afifi <djihed@gmail.com>, 2006.
 #
+# Djihed Afifi <djihed@gmail.com>, 2006.
+# Khaled Hosny <khaledhosny@eglug.org>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus.HEAD\n"
+"Project-Id-Version: gnome-menus.HEAD.ar\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-18 17:35+0200\n"
-"PO-Revision-Date: 2006-10-05 21:07-0000\n"
-"Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
-"Language-Team:  <en@li.org>\n"
+"PO-Revision-Date: 2006-11-03 01:43+0200\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"Language-Team: Arabic <support@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.2\n"
+"Plural-Forms: Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : 3\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -50,7 +54,7 @@ msgstr "برمجة"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "أدوات لتطوير البرامج"
+msgstr "أدوات لتطوير البرمجيات"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -78,7 +82,7 @@ msgstr "إنترنت"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "برامج للنّفاذ إلى الإنترنت مثل الواب و البريد الإلكتروني"
+msgstr "برامج للنّفاذ إلى الإنترنت مثل الوب و البريد الإلكتروني"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -147,7 +151,7 @@ msgstr "حرر القوائم"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
-msgstr "_تطبيقات"
+msgstr "_تطبيقات:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
@@ -155,7 +159,7 @@ msgstr "الا_فتراضيّات"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "ال_قوائم"
+msgstr "ال_قوائم:"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
@@ -164,7 +168,7 @@ msgstr "الاسم"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
 msgid "Show"
-msgstr "عرض"
+msgstr "اعرض"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
@@ -172,7 +176,7 @@ msgstr "لا يمكن العثور على المجلد المنزلي: غير م
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
-msgstr " ملف القائمة"
+msgstr "ملف القائمة"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
@@ -180,15 +184,15 @@ msgstr "MENU_FILE"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "رَصد تغيرات القوائم"
+msgstr "ارصد تغيرات القوائم"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "تضمين المداخل <Exclude>"
+msgstr "تضمين المدخلات المستبعدة"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "تضمين المداخل:NoDisplay=true  "
+msgstr "تضمين المدخلات:NoDisplay=true  "
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
@@ -225,5 +229,5 @@ msgstr "شجرة القوائم خالية"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- جرب تَنْفِيذ جنوم لمُوَاصِفَات قائمة سطح المكتب"
+msgstr "- اختبر تَنْفِيذ جنوم لمُوَاصِفَات قائمة سطح المكتب"
 
