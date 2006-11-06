@@ -1,4 +1,22 @@
 ==============
+Version 2.17.2
+==============
+
+  Features
+
+        * Flesh out inotify support (use --enable-inotify) (Mark)
+
+  Fixes
+
+        * Don't load incorrectly encoded .desktop files (Mark)
+        * Fix compile warning (Mark)
+
+  Translators
+
+        * Khaled Hosny (ar)
+        * Guillaume Savaton (eo)
+
+==============
 Version 2.16.1
 ==============
 

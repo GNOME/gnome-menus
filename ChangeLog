@@ -1,3 +1,7 @@
+2006-11-06  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.17.2.
+
 2006-11-02  Mark McLoughlin  <mark@skynet.ie>
 
 	* libmenu/desktop-entries.c: (desktop_entry_load): don't
