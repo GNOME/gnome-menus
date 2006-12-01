@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: gnome-menus.gnome-2-16.ar\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-18 17:35+0200\n"
-"PO-Revision-Date: 2006-11-17 14:17+0200\n"
+"PO-Revision-Date: 2006-11-24 19:27+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
@@ -147,7 +147,7 @@ msgstr "محرر القوائم"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "حرر القوائم"
+msgstr "حرّر القوائم"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -196,7 +196,7 @@ msgstr "اشمل المدخلات:NoDisplay=true  "
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "رقم ملف سطح المكتب غير صحيح."
+msgstr "رقم ملف سطح المكتب غير صحيح"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
@@ -218,7 +218,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== تغيرت القائمة, إعادة التحميل ====\n"
+"==== تغيرت القائمة، إعادة التحميل ====\n"
 "\n"
 "\n"
 
