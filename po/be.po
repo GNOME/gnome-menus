@@ -2,14 +2,15 @@
 # Copyright (C) 2005 THE gnome-menus'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-menus package.
 # Ales Nyakhaychyk <nab@mail.by>, 2005.
-# 
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus gnome-2-12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-25 06:55+0100\n"
+"POT-Creation-Date: 2006-12-17 02:51+0100\n"
 "PO-Revision-Date: 2005-06-06 15:28+0300\n"
-"Last-Translator: Ales Nyakhaychyk <nab@mail.by>\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,15 +23,15 @@ msgstr "Даступнасьць"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Наладкі даступнасьці"
+msgstr "Наладка даступнасьці"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
-msgstr "Зручнасьці"
+msgstr "Начыньне"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Зручнасьці стальца"
+msgstr "Начыньне"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -42,7 +43,7 @@ msgstr "Сталец"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Пэрсанальныя перавагі і адміністратарныя наладкі"
+msgstr "Прыватныя перавагі і адміністрацыйныя настаўленьні"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -50,7 +51,7 @@ msgstr "Праграмаваньне"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Сродкі для распрацоўкі праграмаў"
+msgstr "Праграмы для распрацоўваньня праграмаў"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -70,7 +71,7 @@ msgstr "Графіка"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Дастасаваньні для працы з графічнымі даньнямі"
+msgstr "Графічныя праграмы"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
@@ -78,7 +79,7 @@ msgstr "Інтэрнэт"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Праграмы для доступу ў Інтэрнэт (вандроўнік, пошта і інш.)"
+msgstr "Праграмы для работы ў Інтэрнэт (Сеціва, пошта і інш.)"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -86,19 +87,19 @@ msgstr "Мультымэдыя"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Гук і відэа"
+msgstr "Аўдыё і відэа"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "Канцылярыя"
+msgstr "Офіс"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Канцылярскія дастасаваньні"
+msgstr "Офісныя праграмы"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Дастасаваньні, якія не патрапілі ў іншыя катэгорыі"
+msgstr "Праграмы, якія ня трапілі ў іншыя катэгорыі"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -106,7 +107,7 @@ msgstr "Іншыя"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Пэрсанальныя перавагі"
+msgstr "Прыватныя перавагі"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
@@ -119,7 +120,7 @@ msgstr "Перавагі даступнасьці"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Пэрсанальныя перавагі і наладкі"
+msgstr "Прыватныя перавагі і настаўленьні"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -127,11 +128,11 @@ msgstr "Адміністраваньне"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Зьмяніць агульнасыстэмныя наладкі (кранаюць усіх карыстальнікаў)"
+msgstr "Зьмяніць агульнасыстэмныя настаўленьні (зьмены ўплываюць на ўсіх карыстальнікаў)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Сыстэмныя сродкі"
+msgstr "Сыстэмныя праграмы"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
@@ -139,11 +140,11 @@ msgstr "Наладка і назіраньне за сыстэмай"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Зьмяняльнік мэню"
+msgstr "Рэдактар мэню"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Зьмяніць мэню"
+msgstr "Рэдагаваць мэню"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -171,8 +172,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Немагчыма знайсьці хатнюю тэчку: яна ня вызначана ў /etc/passwd, а таксама "
-"зьменная асяродзьдзя $HOME ня вызначана"
+"Немагчыма знайсьці сваю тэчку: яна ня вызначаная ў /etc/passwd, а таксама "
+"зьменная асяродзьдзя $HOME нявызначаная"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -180,7 +181,7 @@ msgstr "Файл мэню"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "MENU_FILE"
+msgstr "Файл_мэню"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
@@ -196,7 +197,7 @@ msgstr "Уключыць NoDisplay=true элемэнты"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "Няправільны ID файла стальца"
+msgstr "Няправільны ID desktop-файла"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
@@ -218,14 +219,14 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Мэню зьменена, перазагружаем мэню ====\n"
+"==== Мэню зьмянілася, мэню перачытваецца ====\n"
 "\n"
 "\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "Дрэва мэню пустое"
+msgstr "Мэню пустое"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- праверыць рэалізацыю GNOME спэцыфікацыі мэню стальца"
+msgstr "- праверыць рэалізацыю спэцыфікацыі мэню стальца ў GNOME"
