@@ -18,8 +18,12 @@
       <Category>Settings</Category>
       <Not>
         <Or>
+          <Category>PersonalSettings</Category>
+          <Category>DesktopSettings</Category>
+          <Category>NetworkSettings</Category>
+          <Category>HardwareSettings</Category>
+          <Category>SystemSettings</Category>
           <Category>System</Category>
-	  <Category>Accessibility</Category>
         </Or>
       </Not>
     </And>
@@ -30,16 +34,77 @@
     <Filename>gnomecc.desktop</Filename>
   </Exclude>
 
-  <!-- Accessibility -->
+  <!-- Personal submenu -->
   <Menu>
-    <Name>Accessibility</Name>
-    <Directory>Settings-Accessibility.directory</Directory>
+    <Name>Personal</Name>
+    <Directory>Personal.directory</Directory>
     <Include>
       <And>
         <Category>Settings</Category>
-        <Category>Accessibility</Category>
+        <Category>PersonalSettings</Category>
       </And>
     </Include>
-  </Menu>
+  </Menu> <!-- End Personal -->
+
+  <!-- Look and Feel submenu -->
+  <Menu>
+    <Name>Look and Feel</Name>
+    <Directory>LookAndFeel.directory</Directory>
+    <Include>
+      <And>
+        <Category>Settings</Category>
+        <Category>DesktopSettings</Category>
+      </And>
+    </Include>
+  </Menu> <!-- End Personal -->
+
+  <!-- Internet and Network submenu -->
+  <Menu>
+    <Name>Internet and Network</Name>
+    <Directory>InternetAndNetwork.directory</Directory>
+    <Include>
+      <And>
+        <Category>Settings</Category>
+        <Category>NetworkSettings</Category>
+      </And>
+    </Include>
+  </Menu> <!-- End Hardware -->
+  
+  <!-- Hardware submenu -->
+  <Menu>
+    <Name>Hardware</Name>
+    <Directory>Hardware.directory</Directory>
+    <Include>
+      <And>
+        <Category>Settings</Category>
+        <Category>HardwareSettings</Category>
+      </And>
+    </Include>
+  </Menu> <!-- End Hardware -->
+
+  <!-- System submenu -->
+  <Menu>
+    <Name>System</Name>
+    <Directory>System.directory</Directory>
+    <Include>
+      <And>
+        <Category>Settings</Category>
+        <Or>
+          <Category>SystemSettings</Category>
+          <And>
+            <Category>System</Category>
+            <Not>
+              <Or>
+                <Category>PersonalSettings</Category>
+                <Category>DesktopSettings</Category>
+                <Category>HardwareSettings</Category>
+                <Category>NetworkSettings</Category> 
+              </Or>
+            </Not>
+          </And>
+        </Or>
+      </And>
+    </Include>
+  </Menu> <!-- End System -->
 
 </Menu>     <!-- End Prefs -->

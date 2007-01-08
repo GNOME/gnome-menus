@@ -11,13 +11,18 @@ directory_in_files =				\
 	Education.directory.in			\
 	Games.directory.in			\
 	Graphics.directory.in			\
+	Hardware.directory.in			\
 	Internet.directory.in			\
+	InternetAndNetwork.directory.in		\
+	LookAndFeel.directory.in		\	
 	Multimedia.directory.in			\
 	Office.directory.in			\
 	Other.directory.in			\
+	Personal.directory.in			\
 	Preferences.directory.in		\
 	Settings-Accessibility.directory.in	\
 	Settings.directory.in			\
+	System.directory.in			\
 	System-Settings.directory.in		\
 	System-Tools.directory.in		\
 	$(NULL)

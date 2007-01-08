@@ -1,3 +1,10 @@
+2007-01-08  Denis Washington <dwashington@gmx.net>
+
+	Fixes #393617
+
+	* desktop-directories/*:
+	* layout/*: rearrange preferences menus.
+
 2006-11-06  Mark McLoughlin  <mark@skynet.ie>
 
 	* configure.in: post-release bump to 2.17.3

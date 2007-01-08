@@ -13,22 +13,9 @@
   <!-- Read in overrides and child menus from applications-merged/ -->
   <DefaultMergeDirs/>
 
-  <!-- Merge in these other files as submenus -->
-  <Menu>
-    <Name>Preferences</Name>
-    <MergeFile>preferences.menu</MergeFile>
-  </Menu>
-
-  <!-- System Settings -->
-  <Menu>
-    <Name>Administration</Name>
-    <Directory>System-Settings.directory</Directory>
-    <Include>
-      <And>
-        <Category>Settings</Category>
-        <Category>System</Category>
-      </And>
-    </Include>
-  </Menu>     <!-- End System Settings -->
+  <!-- Add a link to the control center -->
+  <Include>
+    <Filename>gnomecc.desktop</Filename>
+  </Include>
 
 </Menu> <!-- End Applications -->
