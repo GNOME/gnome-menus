@@ -56,7 +56,7 @@
         <Category>DesktopSettings</Category>
       </And>
     </Include>
-  </Menu> <!-- End Personal -->
+  </Menu> <!-- End Look and Feel -->
 
   <!-- Internet and Network submenu -->
   <Menu>
@@ -68,7 +68,7 @@
         <Category>NetworkSettings</Category>
       </And>
     </Include>
-  </Menu> <!-- End Hardware -->
+  </Menu> <!-- End Internet and Network -->
   
   <!-- Hardware submenu -->
   <Menu>
