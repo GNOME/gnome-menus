@@ -1,5 +1,6 @@
 2007-01-08  Rodrigo Moya <rodrigo@gnome-db.org>
 
+	* desktop-directories/InternetAndNetwork.directory.in:
 	* desktop-directories/Hardware.directory.in: added missing file.
 
 2007-01-08  Denis Washington <dwashington@gmx.net>
