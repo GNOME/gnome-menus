@@ -1,3 +1,9 @@
+2007-01-09  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.17.5.
+
 2007-01-09  Rodrigo Moya <rodrigo@gnome-db.org>
 
 	* desktop-directories/*.directory.in: added missing files.
