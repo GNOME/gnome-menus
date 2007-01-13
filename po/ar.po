@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.gnome-2-16.ar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-18 17:35+0200\n"
+"POT-Creation-Date: 2007-01-13 05:55+0000\n"
 "PO-Revision-Date: 2006-11-24 19:27+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : 3\n"
+"Plural-Forms: Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && "
+"n<=10 ? 2 : 3\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -76,6 +77,22 @@ msgstr "رسوم"
 msgid "Graphics applications"
 msgstr "تطبيقات الرّسوم"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr ""
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr ""
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr ""
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr ""
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "إنترنت"
@@ -83,6 +100,14 @@ msgstr "إنترنت"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "برامج للنّفاذ إلى الإنترنت مثل الويب و البريد الإلكتروني"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr ""
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr ""
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -108,6 +133,15 @@ msgstr "تطبيقات لم تناسب أصنافا أخرى"
 msgid "Other"
 msgstr "أخرى"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr ""
+
+#: ../desktop-directories/Personal.directory.in.h:2
+#, fuzzy
+msgid "Personal settings"
+msgstr "تفضيلات و تعيينات شخصيّة"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "تفضيلات شخصيّة"
@@ -124,6 +158,15 @@ msgstr "تفضيلات مرتبطة بالإعانة"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "تفضيلات و تعيينات شخصيّة"
+
+#: ../desktop-directories/System.directory.in.h:1
+#, fuzzy
+msgid "System"
+msgstr "أدوات النّظام"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr ""
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -171,8 +214,12 @@ msgid "Show"
 msgstr "اعرض"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "لا يمكن العثور على الدليل المنزلي: غير مضبوط في /etc/passwd ولا قيمة لمتغيّر البيئة $HOME"
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"لا يمكن العثور على الدليل المنزلي: غير مضبوط في /etc/passwd ولا قيمة لمتغيّر "
+"البيئة $HOME"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -222,12 +269,10 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169
-#: ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "شجرة القوائم خالية"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- اختبر تَنْفِيذ جنوم لمُوَاصِفَات قائمة سطح المكتب"
-
