@@ -1,15 +1,15 @@
 # Thai translation of gnome-menus.
-# Copyright (C) 2004-2005 Free Software Foundation, Inc.
+# Copyright (C) 2004-2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
-# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2004-2005.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2004-2007.
 # 
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-17 11:38+0700\n"
-"PO-Revision-Date: 2006-07-17 11:42+0700\n"
+"POT-Creation-Date: 2007-01-16 10:27+0700\n"
+"PO-Revision-Date: 2007-01-16 10:33+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
@@ -73,6 +73,22 @@ msgstr "รูปภาพ"
 msgid "Graphics applications"
 msgstr "โปรแกรมสำหรับรูปภาพ"
 
+#: desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "ฮาร์ดแวร์"
+
+#: desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "ตั้งค่าอุปกรณ์ฮาร์ดแวร์ต่างๆ"
+
+#: desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "อินเทอร์เน็ตและเครือข่าย"
+
+#: desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "ตั้งค่าเกี่ยวกับเครือข่าย"
+
 #: desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "อินเทอร์เน็ต"
@@ -80,6 +96,14 @@ msgstr "อินเทอร์เน็ต"
 #: desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "โปรแกรมสำหรับเข้าอินเทอร์เน็ต เช่น เว็บและเมล"
+
+#: desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "รูปลักษณ์และการใช้งาน"
+
+#: desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "ตั้งค่าควบคุมรูปโฉมและพฤติกรรมของเดสก์ท็อป"
 
 #: desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -105,6 +129,14 @@ msgstr "โปรแกรมที่ไม่อยู่ในหมวดอ
 msgid "Other"
 msgstr "อื่นๆ"
 
+#: desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "ส่วนบุคคล"
+
+#: desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "ตั้งค่าส่วนบุคคล"
+
 #: desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "ปรับแต่งพื้นโต๊ะส่วนตัว"
@@ -121,6 +153,14 @@ msgstr "การปรับแต่งเกี่ยวกับระบบ
 #: desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "ปรับแต่งและตั้งค่าพื้นโต๊ะส่วนตัว"
+
+#: desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "ระบบ"
+
+#: desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "ตั้งค่าระบบ"
 
 #: desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -230,6 +270,3 @@ msgstr "โครงสร้างเมนูว่างเปล่า"
 #: util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- ทดสอบการทำงานของระบบเมนู GNOME ตามข้อกำหนดเมนูเดสก์ท็อป"
-
-#~ msgid "System Settings"
-#~ msgstr "ตั้งค่าระบบ"
