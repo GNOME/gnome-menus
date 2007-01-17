@@ -18,11 +18,11 @@
       <Category>Settings</Category>
       <Not>
         <Or>
-          <Category>PersonalSettings</Category>
+          <Category>X-GNOME-PersonalSettings</Category>
           <Category>DesktopSettings</Category>
-          <Category>NetworkSettings</Category>
+          <Category>X-GNOME-NetworkSettings</Category>
           <Category>HardwareSettings</Category>
-          <Category>SystemSettings</Category>
+          <Category>X-GNOME-SystemSettings</Category>
           <Category>System</Category>
         </Or>
       </Not>
@@ -41,7 +41,7 @@
     <Include>
       <And>
         <Category>Settings</Category>
-        <Category>PersonalSettings</Category>
+        <Category>X-GNOME-PersonalSettings</Category>
       </And>
     </Include>
   </Menu> <!-- End Personal -->
@@ -65,7 +65,7 @@
     <Include>
       <And>
         <Category>Settings</Category>
-        <Category>NetworkSettings</Category>
+        <Category>X-GNOME-NetworkSettings</Category>
       </And>
     </Include>
   </Menu> <!-- End Internet and Network -->
@@ -90,15 +90,15 @@
       <And>
         <Category>Settings</Category>
         <Or>
-          <Category>SystemSettings</Category>
+          <Category>X-GNOME-SystemSettings</Category>
           <And>
             <Category>System</Category>
             <Not>
               <Or>
-                <Category>PersonalSettings</Category>
+                <Category>X-GNOME-PersonalSettings</Category>
                 <Category>DesktopSettings</Category>
                 <Category>HardwareSettings</Category>
-                <Category>NetworkSettings</Category> 
+                <Category>X-GNOME-NetworkSettings</Category> 
               </Or>
             </Not>
           </And>
