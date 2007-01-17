@@ -1,5 +1,12 @@
 2007-01-17  Vincent Untz  <vuntz@gnome.org>
 
+	* layout/preferences.menu: add some layout, so that categories are
+	sorted in a more useful order.
+	Patch by Denis Washington <dwashington@gmx.net>
+	Fix bug #395774
+
+2007-01-17  Vincent Untz  <vuntz@gnome.org>
+
 	* layout/preferences.menu: fix categories. We shouldn't use
 	non-registered categories that do not start with X-.
 	Patch by Denis Washington <dwashington@gmx.net>
