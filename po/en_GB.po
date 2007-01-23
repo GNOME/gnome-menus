@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-10 10:16+0100\n"
-"PO-Revision-Date: 2006-09-10 10:16-0000\n"
+"POT-Creation-Date: 2007-01-23 19:59+0000\n"
+"PO-Revision-Date: 2007-01-23 19:59-0000\n"
 "Last-Translator: David Lodge <dave@cirt.net>\n"
 "Language-Team: English (British) <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -72,6 +72,22 @@ msgstr "Graphics"
 msgid "Graphics applications"
 msgstr "Graphics applications"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Hardware"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Settings for several hardware devices"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet and Network"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Network-related settings"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -79,6 +95,14 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Programs for Internet access such as web and email"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Look and Feel"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Settings controlling the desktop appearance and behavior"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -104,6 +128,14 @@ msgstr "Applications that did not fit in other categories"
 msgid "Other"
 msgstr "Other"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Personal"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Personal settings"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Personal preferences"
@@ -120,6 +152,14 @@ msgstr "Accessibility related preferences"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Personal preferences and settings"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "System"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "System settings"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
