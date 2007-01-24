@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-11 01:35+0100\n"
-"PO-Revision-Date: 2005-12-11 01:35+0100\n"
+"POT-Creation-Date: 2007-01-24 11:07+0100\n"
+"PO-Revision-Date: 2007-01-24 11:08+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -73,6 +73,22 @@ msgstr "Grafikk"
 msgid "Graphics applications"
 msgstr "Grafiske programmer"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Maskinvare"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Innstillinger for forskjellige maskinvareenheter"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internett og nettverk"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Nettverksrelaterte innstillinger"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internett"
@@ -80,6 +96,14 @@ msgstr "Internett"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Programmer for Internettaksess slik som nettleser og e-post"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Utseende og oppførsel"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Innstillinger som kontrollerer utseende og oppførsel for skrivebordet"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -105,6 +129,14 @@ msgstr "Programmer som ikke passer i andre kategorier"
 msgid "Other"
 msgstr "Annet"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Personlig"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Personlige innstillinger"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Personlige brukervalg"
@@ -121,6 +153,14 @@ msgstr "Brukervalg relatert til tilgjengelighet"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Personlige brukervalg og innstillinger"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "System"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Systeminnstillinger"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
