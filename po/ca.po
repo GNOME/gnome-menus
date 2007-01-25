@@ -1,14 +1,14 @@
 # Catalan translation of GNOME Menus.
-# Copyright © 2004, 2005, 2006 Free Software Foundation, Inc.
+# Copyright © 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
-# Jordi Mallach <jordi@sindominio.net>, 2004, 2005, 2006.
+# Jordi Mallach <jordi@sindominio.net>, 2004, 2005, 2006, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-02 19:21+0100\n"
-"PO-Revision-Date: 2006-01-02 19:29+0100\n"
+"POT-Creation-Date: 2007-01-26 00:51+0100\n"
+"PO-Revision-Date: 2007-01-26 00:53+0100\n"
 "Last-Translator: Jordi Mallach <jordi@sindominio.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -72,6 +72,22 @@ msgstr "Gràfics"
 msgid "Graphics applications"
 msgstr "Aplicacions de gràfics"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Maquinari"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Paràmetres per a diferents dispositius de maquinari"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet i xarxa"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Paràmetres de xarxa"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -79,6 +95,14 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Programes per a accedir a Internet, com la web i el correu"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr ""
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Paràmetres que controlen l'aparença i el comportament de l'escriptori"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -104,6 +128,14 @@ msgstr "Aplicacions que no encaixaven en d'altres categories"
 msgid "Other"
 msgstr "Altres"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Personal"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Paràmetres personals"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Preferències personals"
@@ -120,6 +152,14 @@ msgstr "Preferències relacionades amb l'accessibilitat"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Preferències i paràmetres personals"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistema"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Paràmetres del sistema"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
