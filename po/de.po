@@ -2,14 +2,14 @@
 # Copyright (C) 2004 THE gnome-menus'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-menus package.
 # Hendrik Brandt <heb@gnome-de.org>, 2004-2005.
-# Hendrik Richter <hendrikr@gnome.org>, 2006. 
+# Hendrik Richter <hendrikr@gnome.org>, 2006, 2007. 
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-02 20:37+0100\n"
-"PO-Revision-Date: 2006-03-02 20:38+0100\n"
+"POT-Creation-Date: 2007-01-26 10:34+0100\n"
+"PO-Revision-Date: 2007-01-26 10:37+0100\n"
 "Last-Translator: Hendrik Richter <hendrikr@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -73,6 +73,22 @@ msgstr "Grafik"
 msgid "Graphics applications"
 msgstr "Anwendungen zur Grafikbearbeitung"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Hardware"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Einstellungen für Hardware"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet und Netzwerk"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Netzwerkbezogene Einstellungen"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -80,6 +96,14 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Programme um Internet-Dienste wie E-Mail oder das WWW zu nutzen"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Darstellung"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Einstellungen für das Aussehen und das Verhalten der Arbeitsoberfläche"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -105,6 +129,14 @@ msgstr "Anwendungen welche in keine andere Kategorie eingeordnet werden können"
 msgid "Other"
 msgstr "Sonstige"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Persönlich"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Persönliche Vorlieben und Einstellungen"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Persönliche Einstellungen"
@@ -121,6 +153,14 @@ msgstr "Einstellungen zur Barrierefreiheit"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Persönliche Vorlieben und Einstellungen"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "System"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Systemeinstellungen"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
