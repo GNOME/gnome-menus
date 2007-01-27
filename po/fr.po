@@ -1,18 +1,19 @@
-# French translation of gnome-menu.
+# French translation of gnome-menus.
 # Copyright (C) 2004-2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menu package.
 #
 # Baptiste Mille-Mathias <bmm80@free.fr>, 2004-2005.
 # Vincent Untz <vuntz@gnome.org>, 2005.
 # Christophe Merlet (RedFox) <redfox@redfoxcenter.org>, 2005.
+# Robert-André Mauchin <zebob.m@gmail.com>, 2007.
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menu 2.12.1\n"
+"Project-Id-Version: gnome-menus 2.17.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-12 21:16+0100\n"
-"PO-Revision-Date: 2005-12-12 21:14+0100\n"
-"Last-Translator: Christophe Merlet (RedFox) <redfox@redfoxcenter.org>\n"
+"POT-Creation-Date: 2007-01-27 22:29+0100\n"
+"PO-Revision-Date: 2007-01-26 21:00+0100\n"
+"Last-Translator: Robert-André Mauchin <zebob.m@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,7 +66,7 @@ msgstr "Jeux"
 
 #: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Jeux et amusements"
+msgstr "Jeux et divertissements"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -75,6 +76,22 @@ msgstr "Graphisme"
 msgid "Graphics applications"
 msgstr "Applications graphiques"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Matériel"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Paramètres pour certains périphériques"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet et réseau"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Paramètres concernant le réseau"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -82,6 +99,14 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Les programmes pour accéder à Internet tel que le Web ou la messagerie"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Apparence"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Paramètres contrôlant l'apparence et le comportement du bureau"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -107,6 +132,14 @@ msgstr "Les applications qui ne conviennent à aucune autre catégorie"
 msgid "Other"
 msgstr "Autre"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Personnel"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Paramètres personnels"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Préférences personnelles"
@@ -123,6 +156,14 @@ msgstr "Préférences d'accessibilité"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Préférences et paramètres personnels"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Système"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Paramètres système"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
