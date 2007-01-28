@@ -1,16 +1,16 @@
 # Bulgarian translation of gnome-menus.
-# Copyright (C) 2004 Free Software Foundation
+# Copyright (C) 2004, 2005, 2007 Free Software Foundation
 # This file is distributed under the same license as the gnome-menus package.
-# Vladimir "Kaladan" Petkov <vpetkov@i-space.org>, 2004, 2005.
+# Vladimir "Kaladan" Petkov <vpetkov@i-space.org>, 2004, 2005, 2007.
 # Rostislav "zbrox" Raykov <zbrox@i-space.org>, 2005
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-09 11:04+0200\n"
-"PO-Revision-Date: 2005-12-09 11:15+0200\n"
+"POT-Creation-Date: 2007-01-28 21:38+0200\n"
+"PO-Revision-Date: 2007-01-28 21:38+0200\n"
 "Last-Translator: Rostislav \"zbrox\" Raykov <zbrox@i-space.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -75,6 +75,22 @@ msgstr "Графика"
 msgid "Graphics applications"
 msgstr "Програми за работа с графика"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Хардуер"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Настройки за много хардуерни устройства"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Интернет и мрежа"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Настройки за мрежата"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Интернет"
@@ -82,6 +98,14 @@ msgstr "Интернет"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Програми за работа в Интернет, например е-поща и браузър"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Външен изглед"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Настройки за външния изглед и поведение на работния плот"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -107,6 +131,14 @@ msgstr "Програми, които не принадлежат към друг
 msgid "Other"
 msgstr "Други"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Лични"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Лични настройки"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Лични предпочитания"
@@ -123,6 +155,14 @@ msgstr "Настройки, свързани с достъпността"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Лични настройки и предпочитания"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Система"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Системни настройки"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
