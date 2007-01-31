@@ -1,6 +1,10 @@
+2007-01-31  Wouter Bolsterlee  <wbolster@svn.gnome.org>
+
+	* nl.po: Translation updated by Wouter Bolsterlee.
+
 2007-01-31  Ihar Hrachyshka  <iharh@gnome.org>
 
-        * be.po: Updated Belarusian translation.
+	* be.po: Updated Belarusian translation.
 
 2007-01-31  Yair Hershkovitz  <yairhr@gmail.com>
 
@@ -124,7 +128,7 @@
 
 2006-08-15  Sanlig Badrak  <badral@openmn.org>
 
-        * mn.po: Added Mongolian translation.
+	* mn.po: Added Mongolian translation.
 
 2006-08-13  Matic Žgur  <mr.zgur@gmail.com>
 
@@ -172,14 +176,14 @@
 
 ==================== 2.15.4 ====================
 
-2006-07-07 Swapnil Hajare   <dreamil@gmail.com>
+2006-07-07 Swapnil Hajare  <dreamil@gmail.com>
 
 	* mr.po: Updated Marathi Translation
 
 2006-07-03  Runa Bhattacharjee <runabh@gmail.com>
 
-        * bn_IN.po: Added Bengali India Translation
-        * LINGUAS: Added Bengali India (bn_IN) to the list of languages.
+	* bn_IN.po: Added Bengali India Translation
+	* LINGUAS: Added Bengali India (bn_IN) to the list of languages.
 
 2006-05-11  Raphael Higino  <raphaelh@cvs.gnome.org>
 
@@ -203,12 +207,12 @@
 2006-04-07  Raphael Higino  <raphaelh@cvs.gnome.org>
 
 	* mg.po: Updated Malagasy translation by
-	         Thierry Randrianiriana <randrianiriana@gmail.com>
+	Thierry Randrianiriana <randrianiriana@gmail.com>
 
 2006-04-01  Raphael Higino  <raphaelh@cvs.gnome.org>
 
 	* lv.po: Added Latvian translation by
-	         Raivis Dejus <orvils@gmail.com>
+	Raivis Dejus <orvils@gmail.com>
 
 2006-03-28  Vincent van Adrighem  <adrighem@gnome.org>
 
@@ -253,7 +257,7 @@
 
 2006-03-06  Rajesh Ranjan <rranjan@redhat.com>
 
-        * hi.po: Updated Hindi Translation.
+	* hi.po: Updated Hindi Translation.
 
 2006-03-09  Kjartan Maraas <kmaraas@gnome.org>
 
@@ -289,7 +293,7 @@
 
 2006-02-27  Leonid Kanter <leon@asplinux.ru>
 
-        * ru.po: Updated Russian translation
+	* ru.po: Updated Russian translation
 
 2006-02-25  Ar Floc'h Jérémy <jeremy.lefloch@gmail.com>
 
@@ -321,7 +325,7 @@
 
 2006-01-27  Evandro Fernandes Giovanini <evandrofg@ig.com.br>
 
-        * pt_BR.po: Updated Brazilian Portuguese translation.
+	* pt_BR.po: Updated Brazilian Portuguese translation.
 
 2006-01-27  Chao-Hsiung Liao  <j_h_liau@yahoo.com.tw>
 
@@ -447,7 +451,7 @@
 
 2005-10-01  Runa Bhattacharjee <runa@bengalinux.org>
 
-        * bn.po: Added Bengali (bn) translation. Translation by Mahay Alam Khan <makl10n@yahoo.com>
+	* bn.po: Added Bengali (bn) translation. Translation by Mahay Alam Khan <makl10n@yahoo.com>
 
 2005-09-18  Alessio Frusciante  <algol@firenze.linux.it>
 
@@ -456,7 +460,7 @@
 
 2005-09-16  Clytie Siddall <clytie@riverland.net.au>
 
-        * vi.po: Updated Vietnamese translation.
+	* vi.po: Updated Vietnamese translation.
 
 2005-09-13  Priit Laes  <plaes@cvs.gnome.org>
 
@@ -507,7 +511,7 @@
 
 2005-08-29  Telsa Gwynne  <hobbit@aloss.ukuu.org.uk>
 
-        * cy.po: Updated Welsh translation.
+	* cy.po: Updated Welsh translation.
 
 2005-08-29  Duarte Loreto <happyguy_pt@hotmail.com>
 
@@ -515,7 +519,7 @@
 
 2005-08-27  Clytie Siddall <clytie@riverland.net.au>
 
-        * vi.po: Updated Vietnamese translation.
+	* vi.po: Updated Vietnamese translation.
 
 2005-08-25  Žygimantas Beručka <zygis@gnome.org>
 
@@ -694,7 +698,7 @@
 
 2005-07-26  Clytie Siddall <clytie@riverland.net.au>
 
-        * vi.po: Updated Vietnamese translation.
+	* vi.po: Updated Vietnamese translation.
 
 2005-07-26  Adam Weinberger  <adamw@gnome.org>
 
@@ -786,7 +790,7 @@
 
 2005-07-19  Clytie Siddall <clytie@riverland.net.au>
 
-        * vi.po: Updated Vietnamese translation.
+	* vi.po: Updated Vietnamese translation.
 
 2005-07-18  Adam Weinberger  <adamw@gnome.org>
 
@@ -1009,7 +1013,7 @@
 
 2005-03-31  Steve Murphy  <murf@e-tools.com>
 
-        * rw.po: Added Kinyarwanda translation.
+	* rw.po: Added Kinyarwanda translation.
 
 ==================== 2.10.1 ====================
 
@@ -1096,9 +1100,9 @@
 	* pl.po: Updated Polish translation by GNOME PL Team.
 
 2005-02-13  David Lodge <dave@cirt.net>
-                                                                                
-        * en_GB.po: Added British translation.
-                                                                                
+
+	* en_GB.po: Added British translation.
+
 2005-02-12  Changwoo Ryu  <cwryu@debian.org>
 
 	* ko.po: Added Korean translation by Sang-Gju Kim.
