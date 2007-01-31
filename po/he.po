@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.gnome-2-10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-27 16:12+0300\n"
+"POT-Creation-Date: 2007-01-31 10:49+0200\n"
 "PO-Revision-Date: 2005-07-26 00:26+0300\n"
 "Last-Translator: Reuven Gonen <linxspider@yahoo.com>\n"
 "Language-Team:  <he@li.org>\n"
@@ -73,6 +73,22 @@ msgstr "גרפיקה"
 msgid "Graphics applications"
 msgstr "יישומים גרפיים"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "חומרה"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "הגדרות עבור מספר התקני חומרה"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "אינטרט ורשת"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "הגדרות רשת"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "אינטרנט"
@@ -80,6 +96,14 @@ msgstr "אינטרנט"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "תוכנות לגישה לאינטרנט כגון דפדפן ולקוח דואר"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "מראה ומרגש"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "הגדרות לשליטה במראה והתנהגות שולחן העבודה"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -105,6 +129,14 @@ msgstr "יישומים שלא התאימו בקטגוריות אחרות"
 msgid "Other"
 msgstr "אחר"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "אישי"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "הגדרות אישיות"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "העדפות אישיות"
@@ -121,6 +153,14 @@ msgstr "העדפות הקשורות לנגישות"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "העדפות והגדרות אישיות"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "מערכת"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "הגדרות מערכת"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
