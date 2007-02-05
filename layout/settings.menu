@@ -18,4 +18,22 @@
     <Filename>gnomecc.desktop</Filename>
   </Include>
 
-</Menu> <!-- End Applications -->
+  <!-- Merge in these other files as submenus -->
+  <Menu>
+    <Name>Preferences</Name>
+    <MergeFile>preferences.menu</MergeFile>
+  </Menu>
+
+  <!-- System Settings -->
+  <Menu>
+    <Name>Administration</Name>
+    <Directory>System-Settings.directory</Directory>
+    <Include>
+      <And>
+        <Category>Settings</Category>
+        <Category>System</Category>
+      </And>
+    </Include>
+  </Menu>     <!-- End System Settings -->
+
+</Menu> <!-- End Settings -->

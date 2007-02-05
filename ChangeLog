@@ -1,3 +1,15 @@
+2007-02-06  Vincent Untz  <vuntz@gnome.org>
+
+	* layout/settings.menu:
+	* layout/preferences.menu: revert layout change to the one we had in
+	2.16
+	* desktop-directories/System-Settings.directory.in:
+	* desktop-directories/Preferences.directory.in: mark those two
+	directories with NoDisplay=true so they're hidden by default
+
+	Patch by Denis Washington <dwashington@gmx.net>
+	Fix gnome-menus part of bug #402797.
+
 2007-01-17  Vincent Untz  <vuntz@gnome.org>
 
 	* layout/preferences.menu: add some layout, so that categories are
