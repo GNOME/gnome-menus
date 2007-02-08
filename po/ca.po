@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-26 00:51+0100\n"
-"PO-Revision-Date: 2007-01-26 00:53+0100\n"
+"POT-Creation-Date: 2007-02-08 07:09+0100\n"
+"PO-Revision-Date: 2007-02-08 07:23+0100\n"
 "Last-Translator: Jordi Mallach <jordi@sindominio.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr "Jocs"
 
 #: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Jocs i distraccions"
+msgstr "Jocs i entreteniments"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -96,13 +96,14 @@ msgstr "Internet"
 msgid "Programs for Internet access such as web and email"
 msgstr "Programes per a accedir a Internet, com la web i el correu"
 
+# Termcat (josep)
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr ""
+msgstr "Aspecte i comportament"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Paràmetres que controlen l'aparença i el comportament de l'escriptori"
+msgstr "Paràmetres que controlen l'aspecte i el comportament de l'escriptori"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
