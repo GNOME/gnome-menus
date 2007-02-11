@@ -1,12 +1,12 @@
 # Sung-Hyun Nam <namsh@kldp.org>, 2000
-# Young-Ho Cha <ganadist@chollian.net>, 2000,2001,2003
+# Young-Ho Cha <ganadist@chollian.net>, 2000,2001,2003, 2007
 # Changwoo Ryu <cwryu@debian.org>, 1998, 2002, 2003
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-04 18:18+0900\n"
-"PO-Revision-Date: 2006-02-04 18:19+0900\n"
+"POT-Creation-Date: 2007-02-09 23:47+0900\n"
+"PO-Revision-Date: 2007-02-09 23:55+0900\n"
 "Last-Translator: Young-Ho Cha <ganadist@gmail.com>\n"
 "Language-Team: GNOME Korea <gnome-kr-hackers@lists.kldp.net>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr "접근성 기능"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "접근성 설정"
+msgstr "접근성 기능 설정"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -28,7 +28,7 @@ msgstr "보조 프로그램"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "데스크탑 보조 프로그램"
+msgstr "바탕환경의 보조 프로그램"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -36,7 +36,7 @@ msgstr "프로그램"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Desktop"
-msgstr "바탕화면"
+msgstr "바탕환경"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
@@ -70,13 +70,37 @@ msgstr "그림"
 msgid "Graphics applications"
 msgstr "그림 응용프로그램"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "하드웨어"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "하드웨어 장치를 설정합니다"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "인터넷과 네트워크"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "네트워크와 관련된 설정을 합니다"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "인터넷"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "웹과 전자메일 같이 인터넷에 접근 가능한 프로그램"
+msgstr "웹과 전자메일 같은 인터넷에 접근 가능한 프로그램"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "모양새"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "바탕환경의 모양새와 행동을 설정합니다"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -102,6 +126,14 @@ msgstr "어떤 범주에도 해당되지 않는 프로그램"
 msgid "Other"
 msgstr "기타"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "개인"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "개인 설정"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "개인 기본 설정"
@@ -118,6 +150,14 @@ msgstr "접근성과 관련된 기본 설정"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "개인 기본 설정"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "시스템"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "시스템 설정"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
