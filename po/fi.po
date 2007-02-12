@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-30 18:46+0200\n"
-"PO-Revision-Date: 2005-12-30 18:50+0200\n"
+"POT-Creation-Date: 2007-02-12 20:24+0300\n"
+"PO-Revision-Date: 2007-02-12 20:26+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -74,6 +74,22 @@ msgstr "Grafiikka"
 msgid "Graphics applications"
 msgstr "Grafiikkasovellukset"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Laitteisto"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Laitteiston asetukset"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet ja verkko"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Verkkoon liittyvät asetukset"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -81,6 +97,14 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Internet-sovellukset kuten selain ja sähköposti"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Ulkoasu ja käyttötuntuma"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Työpöytäympäristön ulkoasua ja toimintaa ohjaavat asetukset"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -106,9 +130,17 @@ msgstr "Muihin luokkiin sopimattomat sovellukset"
 msgid "Other"
 msgstr "Muut"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Henkilökohtaiset"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Henkilökohtaiset asetukset"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Henkilökohtaiset asetukset"
+msgstr "Henkilökohtaiset valinnat"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
@@ -122,6 +154,14 @@ msgstr "Esteettömyyteen liittyvät asetukset"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Henkilökohtaiset asetukset"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Järjestelmä"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Järjestelmän asetukset"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
