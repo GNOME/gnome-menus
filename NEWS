@@ -1,3 +1,45 @@
+===============
+Version 2.17.91
+===============
+
+  Features
+
+	* Rework the layout so that it's easy to have the old layout. The
+	  control center will ship its own menu file to have the layout for the
+	  shell. (Denis Washington)
+
+  Translators
+
+	* Khaled Hosny (ar)
+	* Ihar Hrachyshka (be)
+	* Alaksandar Navicki (be@latin)
+	* Rostislav "zbrox" Raykov (bg)
+	* Runa Bhattacharjee (bn_IN)
+	* Mahay Alam Khan (bn)
+	* Jordi Mallach (ca)
+	* Jakub Friedl (cs)
+	* Rhys Jones (cy)
+	* Hendrik Richter (de)
+	* David Lodge (en_GB)
+	* Ivar Smolin (et)
+	* Ilkka Tuohela (fi)
+	* Robert-André Mauchin (fr)
+	* Reuven Gonen (he)
+	* Rajesh Ranjan (hi)
+	* Gabor Kelemen (hu)
+	* Young-Ho Cha (ko)
+	* Žygimantas Beručka (lt)
+	* Jovan Naumovski (mk)
+	* Badral (mn)
+	* Kjartan Maraas (nb)
+	* Wouter Bolsterlee (nl)
+	* Og Maciel (pt_BR)
+	* Leonid Kanter (ru)
+	* Steve Murphy (rw)
+	* Daniel Nylander (sv)
+	* Theppitak Karoonboonyanan (th)
+	* Clytie Siddall (vi)
+
 ==============
 Version 2.17.5
 ==============
