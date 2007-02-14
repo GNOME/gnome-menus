@@ -1,14 +1,14 @@
 # gnome-menus' Portuguese translation.
-# Copyright © 2004, 2005, 2006 gnome-menus
+# Copyright © 2004, 2005, 2006, 2007 gnome-menus
 # This file is distributed under the same license as the gnome-menus package.
-# Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006.
+# Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 2.14\n"
+"Project-Id-Version: 2.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-17 00:53+0000\n"
-"PO-Revision-Date: 2006-02-17 01:00+0000\n"
+"POT-Creation-Date: 2007-02-14 22:37+0000\n"
+"PO-Revision-Date: 2007-02-14 22:40+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -72,6 +72,22 @@ msgstr "Gráficos"
 msgid "Graphics applications"
 msgstr "Aplicações gráficas"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Equipamento"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Definições para vários dispositivos de equipamento"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet e Rede"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Definições relacionadas com a rede"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -79,6 +95,14 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Aplicações para o acesso à Internet tais como web e email"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Aparência e Comportamento"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Definições que controlam a aparência e comportamento do ambiente de trabalho"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -104,6 +128,14 @@ msgstr "Aplicações que não se enquadravam em nenhuma outra categoria"
 msgid "Other"
 msgstr "Outras"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Pessoal"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Definições pessoais"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Preferências pessoais"
@@ -120,6 +152,14 @@ msgstr "Preferências relacionadas com a acessibilidade"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Preferências e definições pessoais"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistema"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Definições de sistema"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -230,6 +270,3 @@ msgstr "Árvore de menu está vazia"
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr ""
 "- testar a implementação GNOME da Especificação de Menu de Área de Trabalho"
-
-#~ msgid "System Settings"
-#~ msgstr "Definições de Sistema"
