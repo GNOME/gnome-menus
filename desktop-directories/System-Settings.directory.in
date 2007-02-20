@@ -4,4 +4,4 @@ _Name=Administration
 _Comment=Change systemwide settings (affects all users)
 Icon=gnome-system
 Encoding=UTF-8
-NoDisplay=true
+NoDisplay=false
