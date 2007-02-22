@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-06 07:00+0100\n"
-"PO-Revision-Date: 2006-02-06 16:58+0800\n"
-"Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
+"POT-Creation-Date: 2007-01-12 14:18+0000\n"
+"PO-Revision-Date: 2007-02-19 16:32+0800\n"
+"Last-Translator: Funda Wang <fundawang@gmail.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -72,6 +72,22 @@ msgstr "图像"
 msgid "Graphics applications"
 msgstr "图像应用程序"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "硬件"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "设置各种硬件设备"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet 和网络"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "网络相关的设置"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -79,6 +95,14 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "访问 Internet 所用的程序，如 Web 和电子邮件"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "观感"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "控制桌面外观和行为的设置"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -104,6 +128,14 @@ msgstr "无法分入其它类别的应用程序"
 msgid "Other"
 msgstr "其它"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "个人"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "个人设置"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "个人首选项"
@@ -120,6 +152,14 @@ msgstr "辅助功能相关的首选项"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "个人首选项和设置"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "系统"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "系统设置"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
