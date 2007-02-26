@@ -1,4 +1,23 @@
 ===============
+Version 2.17.92
+===============
+
+  Fixes
+
+	* Show the system menu directories by default (as it was in 2.16)
+	  (Denis Washington)
+
+  Translators
+
+	* Peter Bach (da)
+	* Takeshi AIHANA (ja)
+	* Duarte Loreto (pt)
+	* Clytie Siddall (vi)
+	* Funda Wang (zh_CN)
+	* Woodman Tuen (zh_HK)
+	* Woodman Tuen (zh_TW)
+
+===============
 Version 2.17.91
 ===============
 
