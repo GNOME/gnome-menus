@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-13 14:11+0200\n"
+"POT-Creation-Date: 2007-02-27 15:47+0200\n"
 "PO-Revision-Date: 2007-01-13 14:16+0200\n"
 "Last-Translator: Žygimantas Beručka <zygis@gnome.org>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -220,11 +220,11 @@ msgstr ""
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
-msgstr "Meniu rinkmena"
+msgstr "Meniu failas"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "MENIU_RINKMENA"
+msgstr "MENIU_FAILAS"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
@@ -240,11 +240,11 @@ msgstr "Įtraukti NoDisplay=true įrašus"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "Netinkamas darbastalio rinkmenos ID"
+msgstr "Netinkamas darbastalio failo ID"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Netinkamas rinkmenos vardas]"
+msgstr "[Netaisyklingas failo vardas]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
