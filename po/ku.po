@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ku\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-16 16:48+0100\n"
-"PO-Revision-Date: 2006-01-16 16:55+0100\n"
+"POT-Creation-Date: 2006-09-04 14:04+0000\n"
+"PO-Revision-Date: 2007-03-04 17:30+0100\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@gmail.com>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,36 +20,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
 "X-Poedit-Language: Kurdish\n"
-"Plural-Forms: nplurals=2; plural= n != 1\n"
+"X-Rosetta-Export-Date: 2007-03-04 15:38+0000\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Accessibility"
-msgstr "Gihîştin"
+msgstr "Gihîstin"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Mîhengên gihîştinê"
+msgstr "Mîhengên Gihîştinê"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
-msgstr "Bernameyên alîkar"
+msgstr "Bernameyên Alîkar"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Bernameyên alîkar ên sermasê"
+msgstr "Bernameyên alîkar ên sermaseyê"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
-msgstr "Bername"
+msgstr "Sepan"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Sermasê"
+msgid "Personal preferences and administration settings"
+msgstr "Vebijêrkên şexsî û mîhengên rêveberiyê"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
-msgid "Personal preferences and administration settings"
-msgstr "Vebijêrkên şehsî û mîhengên rêveberiyê"
+msgid "System"
+msgstr "Pergal"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -57,19 +57,19 @@ msgstr "Bernamekirin"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Amûrên ji bo pêşxistina nivîsbariyê"
+msgstr "Amûrên ji bo pêþxistina nivîsbariyê"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
-msgstr "Perwerdehî"
+msgstr "Zanîn"
 
 #: ../desktop-directories/Games.directory.in.h:1
 msgid "Games"
-msgstr "Leyîstik"
+msgstr "Lîstik"
 
 #: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Leyîstik û îstihrahat"
+msgstr "Lîstik û demxweşî"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -77,7 +77,7 @@ msgstr "Grafîk"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Bikaranînên grafîk"
+msgstr "Bikaranînên grafîkê"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
@@ -85,27 +85,27 @@ msgstr "Înternet"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Bernameyên ji bo înternetê wekî gerok, posta û sohbet"
+msgstr "Bernameyên wekî epeyam û gerokan ên ji bo pêwendiya înternetê"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Menuya multîmedya"
+msgstr "Pêşeka multîmedya"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Deng û Vîdeo"
+msgstr "Deng & Vîdeo"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "Ofîs"
+msgstr "Nivîsgeh"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Bikaranînên Ofîsê"
+msgstr "Sepandinên Ofîsê"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Bernameyên li derve kategoriyên din"
+msgstr "Sepanên ku nakeve kategoriyên din"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -113,7 +113,7 @@ msgstr "Yên din"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Vebijêrkên şehsî"
+msgstr "Vebijêrkên şexsî"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
@@ -122,11 +122,11 @@ msgstr "Vebijêrk"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Accessibility related preferences"
-msgstr "Vebijêrkên gihîştinê"
+msgstr "Vebijêrkên gihîþtinê"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Mîheng û vebijêrkên ferdî"
+msgstr "Mîheng û vebijêrkên şexsî"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -134,7 +134,7 @@ msgstr "Rêveberî"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Mîhengên ji bo hemû pergalê biguherîne (bandora li ser hemû biharkêneran)"
+msgstr "Mîhengên ji bo hemû pergalê biguherîne (hemû biharkêneran binbandor dike)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -142,27 +142,27 @@ msgstr "Amûrên Pergalê"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Mîheng û monîtorkirina pergalê"
+msgstr "Avakirin û şopandina pergalê"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Edîtorê Menuyan"
+msgstr "Edîtorê Pêşekê"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Menuyan biguherîne"
+msgstr "Pêşekan biguherîne"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
-msgstr "_Bername:"
+msgstr "_Sepan:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "_Asayî"
+msgstr "_Wekî heyî"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "_Menu:"
+msgstr "_Pêşek:"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
@@ -174,46 +174,42 @@ msgid "Show"
 msgstr "Nîşan bide"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Peldanka mal nayê dîtin: di /etc/passwd de nehat mîheng kirin û di environment "
-"de nirxa $HOME tune"
-
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "Dosiya menuyê"
-
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "DOSIYA_MENUYÊ"
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Peldanka mal nayê dîtin: di /etc/passwd nehat mîheng kirin û di environment de nirxa $HOME tune"
 
 #: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "Monîtorê ji bo guhartinên menuyê"
+msgid "Menu file"
+msgstr "Dosiya pêşekê"
+
+#: ../util/test-menu-spec.c:34
+msgid "MENU_FILE"
+msgstr "DOSIYA_PÊŞEKÊ"
 
 #: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "Yên <hatiye derxistin> hundir bike"
+msgid "Monitor for menu changes"
+msgstr "Guherînên pêşekê temaşe bike"
 
 #: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "Ketinên (entry) NoDisplay=true hundir bike"
+msgid "Include <Exclude>d entries"
+msgstr "Yên <hatine derxistin> bihundirîne"
 
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "ID ya dosiya sermasê nederbasdar e"
+#: ../util/test-menu-spec.c:37
+msgid "Include NoDisplay=true entries"
+msgstr "Ketinên (entry) NoDisplay=true bihundirîne"
 
 #: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[Navê dosiyê yê nederbasdar]"
+msgid "Invalid desktop file ID"
+msgstr "ID ya dosiya sermaseyê ne derbasdar e"
 
 #: ../util/test-menu-spec.c:93
+msgid "[Invalid Filename]"
+msgstr "[Navê dosiyê ya nederbasdar]"
+
+#: ../util/test-menu-spec.c:94
 msgid " <excluded>"
 msgstr " <hatiye derxistin>"
 
-#: ../util/test-menu-spec.c:164
+#: ../util/test-menu-spec.c:165
 msgid ""
 "\n"
 "\n"
@@ -225,15 +221,24 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Menu hat guherandin, ji nû ve tê bar kirin =====\n"
+"↵\n"
+"↵\n"
+"↵\n"
+"==== Pêşek hat guherandin, ji nû ve tê bar kirin====↵\n"
+"↵\n"
+"↵\n"
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:170
+#: ../util/test-menu-spec.c:214
 msgid "Menu tree is empty"
-msgstr "Dara menuyê vala ye"
+msgstr "Dara pêşekê vala ye"
 
-#: ../util/test-menu-spec.c:189
+#: ../util/test-menu-spec.c:192
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- Bikaranîna Desktop Menu Specification ya GNOME'yê test bike"
+msgstr "- bikaranîna Desktop Menu Specification ya GNOME'yê test bike"
+
+#~ msgid "Desktop"
+#~ msgstr "Sermasê"
 
