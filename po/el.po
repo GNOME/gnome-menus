@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-22 17:26+0200\n"
+"POT-Creation-Date: 2007-03-05 20:53+0800\n"
 "PO-Revision-Date: 2006-02-22 17:27+0200\n"
 "Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
@@ -78,13 +78,38 @@ msgstr "Γραφικά"
 msgid "Graphics applications"
 msgstr "Εφαρμογές γραφικών"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Υλικό"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Ρυθμίσεις για διάφορες συσκευές υλικού"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Διαδίκτυο και Δίκτυο"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr ""
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Διαδίκτυο"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
+msgstr ""
+"Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr ""
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr ""
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -110,6 +135,14 @@ msgstr "Εφαρμογές που δεν ταιριάζουν στις άλλε�
 msgid "Other"
 msgstr "Άλλα"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr ""
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Προσωπικές ρυθμίσεις"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Προσωπικές προτιμήσεις"
@@ -126,6 +159,15 @@ msgstr "Προτιμήσεις σχετικά με προσιτότητα"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Προσωπικές προτιμήσεις και ρυθμίσεις"
+
+#: ../desktop-directories/System.directory.in.h:1
+#, fuzzy
+msgid "System"
+msgstr "Εργαλεία Συστήματος"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr ""
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -234,5 +276,5 @@ msgstr "Το δέντρο μενού είναι κενό"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- δοκιμή της εφαρμογής από το GNOME των οδηγιών μενού επιφάνειας εργασίας"
-
+msgstr ""
+"- δοκιμή της εφαρμογής από το GNOME των οδηγιών μενού επιφάνειας εργασίας"
