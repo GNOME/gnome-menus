@@ -2,14 +2,15 @@
 # Albanian translation of gnome-menus.
 # Copyright (C) 2005 THE gnome-menus'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-menus package.
-#
-# Elian Myftiu <elian@alblinux.net>, 2005.
+# Elian Myftiu <elian@alblinux.net>, 2005-2007
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-13 06:51+0100\n"
-"PO-Revision-Date: 2006-03-13 09:28+0100\n"
+"POT-Creation-Date: 2007-03-05 13:21+0100\n"
+"PO-Revision-Date: 2007-02-28 17:16+0100\n"
 "Last-Translator: Elian Myftiu <elian@alblinux.net>\n"
 "Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -73,6 +74,22 @@ msgstr "Grafikë"
 msgid "Graphics applications"
 msgstr "Programe grafiku"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Hardware"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Rregullime për dispozitivë të ndryshëm"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet dhe Rrjet"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Rregullime lidhur me Rrjetin"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -80,6 +97,14 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Programe për hyrje në Internet (si p.sh. rrjeti dhe posta elektronike)"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Pamje dhe Ndjesi"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Rregullime që kontrollojnë pamjen e hapësirës së punës dhe sjelljen"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -105,6 +130,14 @@ msgstr "Programe që nuk gjejnë vend në kategori të tjera"
 msgid "Other"
 msgstr "Tjetër"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Vetjake"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Rregullime vetjake"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Preferime vetjake"
@@ -121,6 +154,14 @@ msgstr "Preferime në lidhje me açesibilitetin"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Preferime dhe rregullime vetjake"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistemi"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Rregullime sistemi"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -230,4 +271,3 @@ msgstr "Pema e menusë është bosh"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- provo implementimin e Specifikimit të Menuve GNOME"
-
