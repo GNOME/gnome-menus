@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-08 15:55+0100\n"
+"POT-Creation-Date: 2006-12-04 15:36+0100\n"
 "PO-Revision-Date: 2005-12-08 15:56+0100\n"
 "Last-Translator: Ignacio Casal Quinteiro <nacho.resa@gmail.com>\n"
 "Language-Team: Galego\n"
@@ -25,7 +25,7 @@ msgstr "Accesibilidade"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Accessibility Settings"
-msgstr "Configuración da accesibilidade"
+msgstr "Configuracións de accesibilidade"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -45,7 +45,7 @@ msgstr "Escritorio"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
-msgstr "Preferencias e opcións de administrador"
+msgstr "Preferencias persoais e configuracións de administración"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -53,7 +53,7 @@ msgstr "Programación"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Ferramentas para o desenrolamento do software"
+msgstr "Ferramentas para o desenvolvemento de software"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -65,15 +65,15 @@ msgstr "Xogos"
 
 #: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Xogos e distraccións"
+msgstr "Xogos e pasatempos"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "Gráficos"
+msgstr "Gráficas"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Aplicacións gráficas"
+msgstr "Aplicacións de gráficas"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
@@ -81,11 +81,11 @@ msgstr "Internet"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programas para acceso a Internet, tales como web e correo"
+msgstr "Programas para o acceso a Internet como a web e correo electrónico"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Menú de programas multimedia"
+msgstr "Menú multimedia"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
@@ -101,11 +101,11 @@ msgstr "Aplicacións de oficina"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Aplicacións que non entran en outras categorías"
+msgstr "Aplicacións que non se axustan a outras categorías"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
-msgstr "Outro"
+msgstr "Outros"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
@@ -122,7 +122,7 @@ msgstr "Preferencias relacionadas coa accesibilidade"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Preferencias e configuración persoais"
+msgstr "Preferencias e configuracións persoais"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
@@ -130,7 +130,8 @@ msgstr "Administración"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Cambia as preferencias globais do sistema (afecta a todos os usuarios)"
+msgstr "Cambia as preferencias globais do sistema (afecta a todos os "
+       "usuarios)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -146,7 +147,7 @@ msgstr "Editor de menú"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Editar menús"
+msgstr "Editar os menús"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -154,7 +155,7 @@ msgstr "_Aplicacións:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "_Por defecto"
+msgstr "Predeterminados"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
@@ -173,9 +174,8 @@ msgstr "Mostrar"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr ""
-"Non se pode atopar o directorio persoal: non está establecido en /etc/passwd "
-"e non hai ningún valor na variable do entorno $HOME"
+msgstr "Non se pode encontrar o directorio persoal: non está establecido en "
+       "/etc/passwd e non hai ningún valor para $HOME no contorno."
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -187,23 +187,23 @@ msgstr "FICHEIRO_MENÚ"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Monitorizar trocos no menú"
+msgstr "Monitorizar os cambios no menú"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "Incluir entradas <Exclude>"
+msgstr "Incluír entradas <Exclude>"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "Incluir entradas NoDisplay=true"
+msgstr "Incluír entradas NoDisplay=true"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "ID de ficheiro de escritorio inválido"
+msgstr "ID de ficheiro de escritorio non válido"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Nome de ficheiro inválido]"
+msgstr "[Nome de ficheiro non válido]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
@@ -217,19 +217,18 @@ msgid ""
 "==== Menu changed, reloading ====\n"
 "\n"
 "\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"====·O menú cambiou,·recargándoo·====\n"
-"\n"
-"\n"
+msgstr "\n"
+       "\n"
+       "\n"
+       "====·Modificouse o menú;·recargándoo·====\n"
+       "\n"
+       "\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "A árbore do menú está baleiro"
+msgstr "A árbore de menú está baleira"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- probar a implementación de Gnome da Especificación do Menú de Escritorio"
-
+msgstr "- probar a implementación de Gnome da Especificación de Menú de "
+       "Escritorio"
