@@ -1,21 +1,23 @@
+# translation of eu.po to Basque
 # translation of gnome-menus.HEAD.po Basque
 # This file is distributed under the same license as the gnome-menus package.
 # Copyright (C) 2004 Mikel Olasagasti.
-# Mikel Olasagasti <hey_neken@mundurat.net>, 2004, 2005.
-# Iñaki Larrañaga  <dooteo@euskalgnu.org>, 2005.
 #
+# Mikel Olasagasti <hey_neken@mundurat.net>, 2004, 2005.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2005, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-14 14:20+0100\n"
-"PO-Revision-Date: 2005-12-14 14:20+0100\n"
-"Last-Translator: Iñaki Larrañaga  <dooteo@euskalgnu.org>\n"
-"Language-Team:  Basque <itzulpena@euskalgnu.org>\n"
+"POT-Creation-Date: 2007-03-31 17:00+0200\n"
+"PO-Revision-Date: 2007-03-31 17:03+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
+"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -74,6 +76,22 @@ msgstr "Irudiak"
 msgid "Graphics applications"
 msgstr "Irudi aplikazioak"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Hardwarea"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Hainbat gailuentzako ezarpenak"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet eta sarea"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Sareko ezarpenak"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -81,6 +99,14 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Interneteko programak (web arakatzaileak eta posta bezeroak adib.)"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Itxura eta Izaera"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Mahaigainaren itxura eta portaera kontrolatzeko ezarpenak"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -106,6 +132,14 @@ msgstr "Sailkatu ezin diren aplikazioak"
 msgid "Other"
 msgstr "Bestelakoak"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Pertsonala"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Ezarpen pertsonalak"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Hobespen pertsonalak"
@@ -122,6 +156,14 @@ msgstr "Erabilgarritasuneko hobespenak"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Hobespen eta ezarpen pertsonalak"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistema"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Sistemaren ezarpenak"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
