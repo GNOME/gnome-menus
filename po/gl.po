@@ -1,22 +1,22 @@
 # translation of gl.po to Galego
-# translation of gnome-menus.gnome-2-10.po to Galego
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER.
+#
+#
 # Ignacio Casal Quinteiro <nacho.resa@gmail.com>, 2005.
-#
-#
+# Ignacio Casal Quinteiro <icq@cvs.gnome.org>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-04 15:36+0100\n"
-"PO-Revision-Date: 2005-12-08 15:56+0100\n"
-"Last-Translator: Ignacio Casal Quinteiro <nacho.resa@gmail.com>\n"
-"Language-Team: Galego\n"
+"POT-Creation-Date: 2007-04-09 00:02+0200\n"
+"PO-Revision-Date: 2007-04-09 00:04+0200\n"
+"Last-Translator: Ignacio Casal Quinteiro <icq@cvs.gnome.org>\n"
+"Language-Team: Galego <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -75,6 +75,22 @@ msgstr "Gráficas"
 msgid "Graphics applications"
 msgstr "Aplicacións de gráficas"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Hardware"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Configuracións para varios dispositivos hardware"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet e rede"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Configuracións relacionadas coa rede"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -82,6 +98,14 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Programas para o acceso a Internet como a web e correo electrónico"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Visualización e comportamento"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Configuracións que controlan a aparencia e o comportamento do escritorio"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -107,6 +131,14 @@ msgstr "Aplicacións que non se axustan a outras categorías"
 msgid "Other"
 msgstr "Outros"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Persoal"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Configuracións persoais"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Preferencias persoais"
@@ -124,14 +156,21 @@ msgstr "Preferencias relacionadas coa accesibilidade"
 msgid "Personal preferences and settings"
 msgstr "Preferencias e configuracións persoais"
 
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistema"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Configuracións do sistema"
+
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "Administración"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change systemwide settings (affects all users)"
-msgstr "Cambia as preferencias globais do sistema (afecta a todos os "
-       "usuarios)"
+msgstr "Cambia as preferencias globais do sistema (afecta a todos os usuarios)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -174,8 +213,9 @@ msgstr "Mostrar"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Non se pode encontrar o directorio persoal: non está establecido en "
-       "/etc/passwd e non hai ningún valor para $HOME no contorno."
+msgstr ""
+"Non se pode encontrar o directorio persoal: non está establecido en /etc/"
+"passwd e non hai ningún valor para $HOME no contorno."
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -217,12 +257,13 @@ msgid ""
 "==== Menu changed, reloading ====\n"
 "\n"
 "\n"
-msgstr "\n"
-       "\n"
-       "\n"
-       "====·Modificouse o menú;·recargándoo·====\n"
-       "\n"
-       "\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"====·Modificouse o menú;·recargándoo·====\n"
+"\n"
+"\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
@@ -230,5 +271,5 @@ msgstr "A árbore de menú está baleira"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- probar a implementación de Gnome da Especificación de Menú de "
-       "Escritorio"
+msgstr "- probar a implementación de Gnome da Especificación de Menú de Escritorio"
+
