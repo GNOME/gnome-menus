@@ -1,14 +1,14 @@
 # Italian translation of gnome-menus.
 # Copyright (C) 2005 THE gnome-menus'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-menus package.
-# Francesco Marletta <francesco.marletta @ tiscali.it>, 2005-2006.
+# Francesco Marletta <francesco.marletta @ tiscali.it>, 2005-2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-28 18:35+0200\n"
-"PO-Revision-Date: 2006-09-01 23:30+0200\n"
+"POT-Creation-Date: 2007-04-23 16:01+0200\n"
+"PO-Revision-Date: 2007-04-02 23:28+0200\n"
 "Last-Translator: Francesco Marletta <francesco.marletta@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr "Applicazioni"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Desktop"
-msgstr "Desktop"
+msgstr "Scrivania"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
@@ -72,6 +72,22 @@ msgstr "Grafica"
 msgid "Graphics applications"
 msgstr "Applicazioni grafiche"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Hardware"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Impostazioni per parecchi dispositivi hardware"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internet e Rete"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Impostazioni relative alla rete"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -79,6 +95,15 @@ msgstr "Internet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Programmi per l'accesso ad Internet come web ed email"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Aspetto e Stile"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr ""
+"Impostazioni che controllano la sembianza e il comportamento del desktop"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -104,6 +129,14 @@ msgstr "Applicazioni che non rientrano in altre categorie"
 msgid "Other"
 msgstr "Altro"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Personale"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Impostazioni personali"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Preferenze personali"
@@ -120,6 +153,14 @@ msgstr "Preferenze relative all'accessibilità"
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Preferenze e impostazioni personali"
+
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistema"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Impostazioni di sistema"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
