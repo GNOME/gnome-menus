@@ -89,7 +89,7 @@ class MenuEditorDialog:
         self.menus_model.set_visible_func (self.__is_menu_tree_directory)
         self.menus_tree.set_model (self.menus_model)
         
-        self.menus_tree.get_selection ().set_mode (gtk.SELECTION_SINGLE)
+        self.menus_tree.get_selection ().set_mode (gtk.SELECTION_BROWSE)
         self.menus_tree.get_selection ().connect ("changed", self.__menus_selection_changed)
         self.menus_tree.set_headers_visible (False)
 
@@ -145,6 +145,10 @@ class MenuEditorDialog:
 
     def __menus_selection_changed (self, selection):
         (model, iter) = selection.get_selected ()
+        if not iter:
+            self.entries_list.set_model (None)
+            return
+
         if iter:
             iter = model.convert_iter_to_child_iter (iter)
         
