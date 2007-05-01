@@ -3,7 +3,7 @@ SUBDIRS = GMenuSimpleEditor
 bin_SCRIPTS = gmenu-simple-editor
 
 gmenu-simple-editor: gmenu-simple-editor.in
-	sed -e s!\@pyexecdir\@!@pyexecdir@! < $< > $@
+	sed -e s!\@pyexecdir\@!@pyexecdir@! -e s!\@PYTHON\@!@PYTHON@! < $< > $@
 	chmod a+x $@
 
 gladedir   = $(pkgdatadir)/glade

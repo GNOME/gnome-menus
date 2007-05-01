@@ -1,5 +1,12 @@
 2007-05-01  Vincent Untz  <vuntz@gnome.org>
 
+	* simple-editor/Makefile.am:
+	* simple-editor/gmenu-simple-editor.in: use the PYTHON found by
+	configure instead of "env python"
+	Fix bug #343978
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
 	* layout/settings.menu: use <Layout> to put Preferences before
 	Administration
 
