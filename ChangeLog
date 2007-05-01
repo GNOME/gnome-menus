@@ -1,5 +1,11 @@
 2007-05-01  Vincent Untz  <vuntz@gnome.org>
 
+	* simple-editor/GMenuSimpleEditor/main.py: import pygtk and require
+	version 2.0
+	Fix bug #382111
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
 	* simple-editor/GMenuSimpleEditor/maindialog.py: (__setup_menus_tree):
 	use SELECTION_BROWSE instead of SELECTION_SINGLE so the user can't
 	unselect a menu

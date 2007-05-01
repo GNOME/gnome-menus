@@ -22,6 +22,8 @@ def main (args):
     import locale
     import gettext
 
+    import pygtk; pygtk.require('2.0');
+
     import gtk
     import gtk.glade
 
