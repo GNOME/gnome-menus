@@ -1,5 +1,10 @@
 2007-05-01  Vincent Untz  <vuntz@gnome.org>
 
+	* desktop-directories/*: use icons from icon naming spec
+	Fix bug #396994
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
 	* simple-editor/Makefile.am:
 	* simple-editor/gmenu-simple-editor.in: use the PYTHON found by
 	configure instead of "env python"
