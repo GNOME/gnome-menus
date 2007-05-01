@@ -143,7 +143,6 @@
     <OnlyUnallocated/>
     <Include>
       <And>
-        <Category>Application</Category>
         <Not><Category>Core</Category></Not>
         <Not><Category>Settings</Category></Not>
       </And>

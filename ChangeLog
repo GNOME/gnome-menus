@@ -1,5 +1,11 @@
 2007-05-01  Vincent Untz  <vuntz@gnome.org>
 
+	* layout/applications.menu: don't require Application category for the
+	Other submenu, since this is not a valid category.
+	Should fix bug #331142
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
 	* desktop-directories/Desktop.directory.in: s/Desktop/System/ since
 	the menu got renamed.
 	Fix for bug #367551
