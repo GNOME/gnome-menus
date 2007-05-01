@@ -1,5 +1,11 @@
 2007-05-01  Vincent Untz  <vuntz@gnome.org>
 
+	* desktop-directories/System-Settings.directory.in:
+	s/systemwide/system-wide/
+	Fix bug #326707
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
 	* simple-editor/GMenuSimpleEditor/main.py: import pygtk and require
 	version 2.0
 	Fix bug #382111
