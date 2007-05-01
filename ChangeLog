@@ -1,5 +1,11 @@
 2007-05-01  Vincent Untz  <vuntz@gnome.org>
 
+	* desktop-directories/Desktop.directory.in: s/Desktop/System/ since
+	the menu got renamed.
+	Fix for bug #367551
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
 	* desktop-directories/Settings-Accessibility.directory.in:
 	* desktop-directories/Accessibility.directory.in:
 	* layout/preferences.menu:
