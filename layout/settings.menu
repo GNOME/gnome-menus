@@ -36,4 +36,9 @@
     </Include>
   </Menu>     <!-- End System Settings -->
 
+  <Layout>
+    <Menuname>Preferences</Menuname>
+    <Menuname>Administration</Menuname>
+  </Layout>
+
 </Menu> <!-- End Settings -->

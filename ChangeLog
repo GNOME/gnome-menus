@@ -1,5 +1,10 @@
 2007-05-01  Vincent Untz  <vuntz@gnome.org>
 
+	* layout/settings.menu: use <Layout> to put Preferences before
+	Administration
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
 	* desktop-directories/System-Settings.directory.in:
 	s/systemwide/system-wide/
 	Fix bug #326707
