@@ -14,7 +14,7 @@ directory_in_files =				\
 	Hardware.directory.in			\
 	Internet.directory.in			\
 	InternetAndNetwork.directory.in		\
-	LookAndFeel.directory.in		\	
+	LookAndFeel.directory.in		\
 	Multimedia.directory.in			\
 	Office.directory.in			\
 	Other.directory.in			\

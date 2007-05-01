@@ -1,5 +1,11 @@
 2007-05-01  Vincent Untz  <vuntz@gnome.org>
 
+	* autogen.sh: require automake 1.9
+	Fix bug #344047
+	* desktop-directories/Makefile.am: remove trailing spaces
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
 	* layout/applications.menu: don't require Application category for the
 	Other submenu, since this is not a valid category.
 	Should fix bug #331142
