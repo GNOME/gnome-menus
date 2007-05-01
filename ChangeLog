@@ -1,5 +1,13 @@
 2007-05-01  Vincent Untz  <vuntz@gnome.org>
 
+	* desktop-directories/Settings-Accessibility.directory.in:
+	* desktop-directories/Accessibility.directory.in:
+	* layout/preferences.menu:
+	* layout/applications.menu: s/Accessibility/Universal Access/
+	Fix bug #376324
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
 	* desktop-directories/*: use icons from icon naming spec
 	Fix bug #396994
 

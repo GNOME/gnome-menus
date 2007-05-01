@@ -34,7 +34,7 @@
 
   <!-- Accessibility submenu -->
   <Menu>
-    <Name>Accessibility</Name>
+    <Name>Universal Access</Name>
     <Directory>Accessibility.directory</Directory>
     <Include>
       <And>
