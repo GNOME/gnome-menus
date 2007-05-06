@@ -7,25 +7,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-04 22:20+0200\n"
-"PO-Revision-Date: 2007-02-08 23:37+0100\n"
-"Last-Translator: Alaksandar Navicki <zolak@lacinka.org>\n"
+"POT-Creation-Date: 2007-05-06 00:40+0300\n"
+"PO-Revision-Date: 2007-05-06 00:41+0300\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Belarsian Latin\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Dastupnaść"
+msgid "Universal Access"
+msgstr "Universalny dostup"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Nałady dastupnaści"
+msgid "Universal Access Settings"
+msgstr "Nałady ŭniversalnaha dostupu"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -40,12 +39,13 @@ msgid "Applications"
 msgstr "Aplikacyi"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Stoł"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Asabistyja i administracyjnyja nałady"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Systema"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -149,16 +149,12 @@ msgid "Preferences"
 msgstr "Nałady"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Nałady dastupnaści"
+msgid "Universal access related preferences"
+msgstr "Nałady dla ŭniversalnaha dostupu"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Asabistyja nałady"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Systema"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -169,8 +165,8 @@ msgid "Administration"
 msgstr "Administravańnie"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "Źmiena systemnych naładaŭ (upłyvaje na ŭsich karystalnikaŭ)"
+msgid "Change system-wide settings (affects all users)"
+msgstr "Źmiani systemnyja nałady (upłyvaje na ŭsich karystalnikaŭ)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -210,12 +206,8 @@ msgid "Show"
 msgstr "Pakažy"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Niemahčyma znajści chatniaj tečki: jana nie akreślenaja ŭ /etc/passwd, a "
-"vartaść źmiennaj asiarodździa $HOME nia vyznačanaja"
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Niemahčyma znajści chatniaj tečki: jana nie akreślenaja ŭ /etc/passwd, a vartaść źmiennaj asiarodździa $HOME nia vyznačanaja"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -265,10 +257,19 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169
+#: ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Dreva menu pustoje"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "– testuje zaimplementavanuju ŭ GNOME Specyfikacyju menu stała"
+
+#~ msgid "Accessibility"
+#~ msgstr "Dastupnaść"
+#~ msgid "Accessibility Settings"
+#~ msgstr "Nałady dastupnaści"
+#~ msgid "Desktop"
+#~ msgstr "Stoł"
+
