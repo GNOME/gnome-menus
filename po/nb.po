@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-24 11:07+0100\n"
-"PO-Revision-Date: 2007-01-24 11:08+0100\n"
+"POT-Creation-Date: 2007-05-08 15:48+0200\n"
+"PO-Revision-Date: 2007-05-08 15:50+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
+msgid "Universal Access"
 msgstr "Tilgjengelighet"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
+msgid "Universal Access Settings"
 msgstr "Innstillinger for tilgjengelighet"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
@@ -38,12 +38,13 @@ msgid "Applications"
 msgstr "Programmer"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Skrivebord"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Personlige brukervalg og administrative innstillinger"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "System"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -147,16 +148,12 @@ msgid "Preferences"
 msgstr "Brukervalg"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
+msgid "Universal access related preferences"
 msgstr "Brukervalg relatert til tilgjengelighet"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Personlige brukervalg og innstillinger"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "System"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -167,7 +164,7 @@ msgid "Administration"
 msgstr "Administrasjon"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "Endre systeminnstillinger (påvirker alle brukere)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
