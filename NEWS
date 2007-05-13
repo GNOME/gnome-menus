@@ -1,4 +1,43 @@
 ==============
+Version 2.19.2
+==============
+
+  Menu Layout
+
+	* Fix "system-wide" typo (Vincent)
+	* Put Preferences before Administration in the System menu (Vincent)
+	* Use icons from the icon naming spec (Luca Ferreti, Matthias Clasen,
+	  Vincent)
+	* Use Universal Access instead of Accessibility (Calum Benson, Vincent)
+	* Use System instead of Desktop since the menu got renamed 
+	  (Sébastien Bacher)
+	* Do not require the Application category in the Other submenu (Vincent)
+
+  Menu Editor
+
+	* Fix a crash when unselecting the current menu (Vincent)
+	* Require pygtk at runtime (Vincent)
+	* Use the python executable found by configure (Vincent)
+
+  Misc
+
+	* Require automake 1.9
+
+  Translators
+
+	* Ihar Hrachyshka (be@latin)
+	* norbu (dz)
+	* Jorge González (es)
+	* Iñaki Larrañaga Murgoitio (eu)
+	* Ignacio Casal Quinteiro (gl)
+	* Francesco Marletta (it)
+	* Raivis Dejus (lv)
+	* Kjartan Maraas (nb)
+	* Yannig MARCHEGAY (Kokoyaya) (oc)
+	* Matej Urbančič (sl)
+	* Daniel Nylander (sv)
+
+==============
 Version 2.18.0
 ==============
 
