@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-23 19:59+0000\n"
-"PO-Revision-Date: 2007-01-23 19:59-0000\n"
+"POT-Creation-Date: 2007-05-15 22:39+0100\n"
+"PO-Revision-Date: 2007-05-15 22:40-0000\n"
 "Last-Translator: David Lodge <dave@cirt.net>\n"
 "Language-Team: English (British) <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +17,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Accessibility"
+msgid "Universal Access"
+msgstr "Universal Access"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Accessibility Settings"
+msgid "Universal Access Settings"
+msgstr "Universal Access Settings"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -37,12 +37,13 @@ msgid "Applications"
 msgstr "Applications"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Desktop"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Personal preferences and administration settings"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "System"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -146,16 +147,12 @@ msgid "Preferences"
 msgstr "Preferences"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Accessibility related preferences"
+msgid "Universal access related preferences"
+msgstr "Universal access related preferences"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Personal preferences and settings"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "System"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -166,8 +163,8 @@ msgid "Administration"
 msgstr "Administration"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
+msgstr "Change system-wide settings (affects all users)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -267,6 +264,12 @@ msgstr "Menu tree is empty"
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- test GNOME's implementation of the Desktop Menu Specification"
 
+#~ msgid "Accessibility"
+#~ msgstr "Accessibility"
+#~ msgid "Accessibility Settings"
+#~ msgstr "Accessibility Settings"
+#~ msgid "Desktop"
+#~ msgstr "Desktop"
 #~ msgid "Hide"
 #~ msgstr "Hide"
 
