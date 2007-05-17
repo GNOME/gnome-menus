@@ -284,6 +284,12 @@ menu_monitor_unref (MenuMonitor *monitor)
   g_hash_table_remove (monitors_registry, registry_key);
   g_free (registry_key);
 
+  if (g_hash_table_size (monitors_registry) == 0)
+    {
+      g_hash_table_destroy (monitors_registry);
+      monitors_registry = NULL;
+    }
+
   menu_monitor_backend_unregister_monitor (monitor);
 
   g_slist_foreach (monitor->notifies, (GFunc) menu_monitor_notify_unref, NULL);

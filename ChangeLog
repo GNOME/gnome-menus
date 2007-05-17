@@ -1,5 +1,10 @@
 2007-05-17  Vincent Untz  <vuntz@gnome.org>
 
+	* libmenu/menu-monitor.c: (menu_monitor_unref): destroy the hash table
+	if it's empty. Patch by William Jon McCann <mccann@jhu.edu>
+
+2007-05-17  Vincent Untz  <vuntz@gnome.org>
+
 	* libmenu/canonicalize.c: (menu_realpath):
 	* libmenu/entry-directories.c: (cached_dir_lookup),
 	(cached_dir_load_entries_recursive),
