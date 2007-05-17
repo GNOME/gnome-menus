@@ -155,7 +155,8 @@ handle_inotify_event (MenuInotifyData      *idata,
           monitor_path = menu_monitor_get_path (monitor);
 
           if (!strncmp (monitor_path, path, pathlen) &&
-              (monitor_path[pathlen] == '\0' || monitor_path[pathlen] == '/'))
+              (monitor_path[pathlen] == '\0' ||
+	       monitor_path[pathlen] == G_DIR_SEPARATOR))
             {
               MenuInotifyWatch *new_watch;
 

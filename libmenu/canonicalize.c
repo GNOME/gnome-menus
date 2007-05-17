@@ -80,7 +80,7 @@ menu_realpath (const char *name, char *resolved)
   rpath = resolved ? g_alloca (path_max) : g_malloc (path_max);
   rpath_limit = rpath + path_max;
 
-  if (name[0] != '/')
+  if (name[0] != G_DIR_SEPARATOR)
     {
       if (!getcwd (rpath, path_max))
         {
@@ -91,7 +91,7 @@ menu_realpath (const char *name, char *resolved)
     }
   else
     {
-      rpath[0] = '/';
+      rpath[0] = G_DIR_SEPARATOR;
       dest = rpath + 1;
     }
 
@@ -101,11 +101,11 @@ menu_realpath (const char *name, char *resolved)
       int n;
 
       /* Skip sequence of multiple path-separators.  */
-      while (*start == '/')
+      while (*start == G_DIR_SEPARATOR)
         ++start;
 
       /* Find end of path component.  */
-      for (end = start; *end && *end != '/'; ++end)
+      for (end = start; *end && *end != G_DIR_SEPARATOR; ++end)
         /* Nothing.  */;
 
       if (end - start == 0)
@@ -116,14 +116,14 @@ menu_realpath (const char *name, char *resolved)
         {
           /* Back up to previous component, ignore if at root already.  */
           if (dest > rpath + 1)
-            while ((--dest)[-1] != '/');
+            while ((--dest)[-1] != G_DIR_SEPARATOR);
         }
       else
         {
           size_t new_size;
 
-          if (dest[-1] != '/')
-            *dest++ = '/';
+          if (dest[-1] != G_DIR_SEPARATOR)
+            *dest++ = G_DIR_SEPARATOR;
 
           if (dest + (end - start) >= rpath_limit)
             {
@@ -199,16 +199,16 @@ menu_realpath (const char *name, char *resolved)
               g_memmove (&extra_buf[n], end, len + 1);
               name = end = memcpy (extra_buf, buf, n);
 
-              if (buf[0] == '/')
+              if (buf[0] == G_DIR_SEPARATOR)
                 dest = rpath + 1;       /* It's an absolute symlink */
               else
                 /* Back up to previous component, ignore if at root already: */
                 if (dest > rpath + 1)
-                  while ((--dest)[-1] != '/');
+                  while ((--dest)[-1] != G_DIR_SEPARATOR);
             }
         }
     }
-  if (dest > rpath + 1 && dest[-1] == '/')
+  if (dest > rpath + 1 && dest[-1] == G_DIR_SEPARATOR)
     --dest;
   *dest = '\0';
 

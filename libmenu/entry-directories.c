@@ -214,7 +214,7 @@ cached_dir_lookup (const char *canonical)
     dir_cache = cached_dir_new ("/");
   dir = dir_cache;
 
-  g_assert (canonical != NULL && canonical[0] == '/');
+  g_assert (canonical != NULL && canonical[0] == G_DIR_SEPARATOR);
 
   menu_verbose ("Looking up cached dir \"%s\"\n", canonical);
 
@@ -509,8 +509,8 @@ cached_dir_load_entries_recursive (CachedDir  *dir,
   cached_dir_ensure_monitor (dir, dirname);
 
   fullpath = g_string_new (dirname);
-  if (fullpath->str[fullpath->len - 1] != '/')
-    g_string_append_c (fullpath, '/');
+  if (fullpath->str[fullpath->len - 1] != G_DIR_SEPARATOR)
+    g_string_append_c (fullpath, G_DIR_SEPARATOR);
 
   fullpath_len = fullpath->len;
 
@@ -874,7 +874,7 @@ entry_directory_foreach_recursive (EntryDirectory            *ed,
       CachedDir *subdir = tmp->data;
 
       g_string_append (relative_path, subdir->name);
-      g_string_append_c (relative_path, '/');
+      g_string_append_c (relative_path, G_DIR_SEPARATOR);
 
       if (!entry_directory_foreach_recursive (ed,
                                               subdir,

@@ -746,13 +746,13 @@ find_path (GMenuTreeDirectory *directory,
   char       *freeme;
   GSList     *tmp;
 
-  while (path[0] == '/') path++;
+  while (path[0] == G_DIR_SEPARATOR) path++;
 
   if (path[0] == '\0')
     return directory;
 
   freeme = NULL;
-  slash = strchr (path, '/');
+  slash = strchr (path, G_DIR_SEPARATOR);
   if (slash)
     {
       name = freeme = g_strndup (path, slash - path);
@@ -803,7 +803,7 @@ gmenu_tree_get_directory_from_path (GMenuTree  *tree,
   g_return_val_if_fail (tree != NULL, NULL);
   g_return_val_if_fail (path != NULL, NULL);
 
-  if (path[0] != '/')
+  if (path[0] != G_DIR_SEPARATOR)
     return NULL;
 
   if (!(root = gmenu_tree_get_root_directory (tree)))
@@ -1040,14 +1040,14 @@ append_directory_path (GMenuTreeDirectory *directory,
 
   if (!directory->item.parent)
     {
-      g_string_append_c (path, '/');
+      g_string_append_c (path, G_DIR_SEPARATOR);
       return;
     }
 
   append_directory_path (directory->item.parent, path);
 
   g_string_append (path, directory->name);
-  g_string_append_c (path, '/');
+  g_string_append_c (path, G_DIR_SEPARATOR);
 }
 
 char *
@@ -2186,12 +2186,12 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
         {
           const char *subdir = tmp->data;
 
-          g_string_append_c (subdir_path, '/');
+          g_string_append_c (subdir_path, G_DIR_SEPARATOR);
           g_string_append (subdir_path, subdir);
 
 	  if (relative_path_len)
 	    {
-	      g_string_append_c (subdir_relative, '/');
+	      g_string_append_c (subdir_relative, G_DIR_SEPARATOR);
 	    }
           g_string_append (subdir_relative, subdir);
 
@@ -2594,10 +2594,10 @@ find_submenu (MenuLayoutNode *layout,
 
   menu_verbose (" (splitting \"%s\")\n", path);
 
-  if (path[0] == '\0' || path[0] == '/')
+  if (path[0] == '\0' || path[0] == G_DIR_SEPARATOR)
     return NULL;
 
-  slash = strchr (path, '/');
+  slash = strchr (path, G_DIR_SEPARATOR);
   if (slash != NULL)
     {
       name = g_strndup (path, slash - path);

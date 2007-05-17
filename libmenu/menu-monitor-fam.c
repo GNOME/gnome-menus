@@ -45,7 +45,7 @@ queue_fam_event (MenuMonitor *monitor,
   char                 *freeme;
 
   freeme = NULL;
-  if (fam_event->filename[0] == '/')
+  if (fam_event->filename[0] == G_DIR_SEPARATOR)
     {
       path = fam_event->filename;
     }

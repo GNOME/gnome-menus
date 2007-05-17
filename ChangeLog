@@ -1,3 +1,16 @@
+2007-05-17  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/canonicalize.c: (menu_realpath):
+	* libmenu/entry-directories.c: (cached_dir_lookup),
+	(cached_dir_load_entries_recursive),
+	(entry_directory_foreach_recursive):
+	* libmenu/gmenu-tree.c: (find_path),
+	(gmenu_tree_get_directory_from_path), (append_directory_path),
+	(add_menu_for_legacy_dir), (find_submenu):
+	* libmenu/menu-monitor-fam.c: (queue_fam_event):
+	* libmenu/menu-monitor-inotify.c: (handle_inotify_event):
+	Use G_DIR_SEPARATOR instead of '/'
+
 2007-05-13  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: post-release bump to 2.19.3
