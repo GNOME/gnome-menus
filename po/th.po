@@ -8,21 +8,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-16 10:27+0700\n"
-"PO-Revision-Date: 2007-01-16 10:33+0700\n"
+"POT-Creation-Date: 2007-05-18 13:19+0700\n"
+"PO-Revision-Date: 2007-05-18 13:22+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: desktop-directories/Accessibility.directory.in.h:1
 #: desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
+msgid "Universal Access"
 msgstr "สิ่งอำนวยความสะดวก"
 
 #: desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
+msgid "Universal Access Settings"
 msgstr "ตั้งค่าสิ่งอำนวยความสะดวก"
 
 #: desktop-directories/Accessories.directory.in.h:1
@@ -38,12 +38,13 @@ msgid "Applications"
 msgstr "โปรแกรม"
 
 #: desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "พื้นโต๊ะ"
-
-#: desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "ปรับแต่งพื้นโต๊ะส่วนตัวและตั้งค่าระบบ"
+
+#: desktop-directories/Desktop.directory.in.h:2
+#: desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "ระบบ"
 
 #: desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -147,16 +148,12 @@ msgid "Preferences"
 msgstr "ปรับแต่งพื้นโต๊ะ"
 
 #: desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "การปรับแต่งเกี่ยวกับระบบอำนวยการใช้งาน"
+msgid "Universal access related preferences"
+msgstr "การปรับแต่งเกี่ยวกับสิ่งอำนวยความสะดวก"
 
 #: desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "ปรับแต่งและตั้งค่าพื้นโต๊ะส่วนตัว"
-
-#: desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "ระบบ"
 
 #: desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -167,7 +164,7 @@ msgid "Administration"
 msgstr "ดูแลระบบ"
 
 #: desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "การตั้งค่าที่มีผลทั้งระบบ (มีผลต่อผู้ใช้ทุกคน)"
 
 #: desktop-directories/System-Tools.directory.in.h:1
@@ -270,3 +267,12 @@ msgstr "โครงสร้างเมนูว่างเปล่า"
 #: util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- ทดสอบการทำงานของระบบเมนู GNOME ตามข้อกำหนดเมนูเดสก์ท็อป"
+
+#~ msgid "Accessibility"
+#~ msgstr "สิ่งอำนวยความสะดวก"
+
+#~ msgid "Accessibility Settings"
+#~ msgstr "ตั้งค่าสิ่งอำนวยความสะดวก"
+
+#~ msgid "Desktop"
+#~ msgstr "พื้นโต๊ะ"
