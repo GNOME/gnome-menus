@@ -10,9 +10,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus HEAD\n"
+"Project-Id-Version: gnome-menus 2.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-12 14:18+0000\n"
+"POT-Creation-Date: 2007-05-03 03:34+0100\n"
 "PO-Revision-Date: 2007-01-26 18:43+0200\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
