@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-12 14:18+0000\n"
-"PO-Revision-Date: 2007-01-26 18:43+0200\n"
+"POT-Creation-Date: 2007-05-02 03:41+0100\n"
+"PO-Revision-Date: 2007-05-24 00:25+0300\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -22,12 +22,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Hõlbustused"
+msgid "Universal Access"
+msgstr "Universaalne ligipääs"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Hõlbustussätted"
+msgid "Universal Access Settings"
+msgstr "Universaalse ligipääsu sätted"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -42,12 +42,13 @@ msgid "Applications"
 msgstr "Rakendused"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Töölaud"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Isiklikud eelistused ja haldussätted"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Süsteem"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -151,16 +152,12 @@ msgid "Preferences"
 msgstr "Eelistused"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Hõlbustusega seotud eelistused"
+msgid "Universal access related preferences"
+msgstr "Universaalse ligipääsuga seotud eelistused"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Isiklikud eelistused ja sätted"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Süsteem"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -171,8 +168,8 @@ msgid "Administration"
 msgstr "Haldamine"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "Süsteemsete sätete muutmine (mõjutab kõiki kasutajaid)"
+msgid "Change system-wide settings (affects all users)"
+msgstr "Ülesüsteemiliste sätete muutmine (mõjutab kõiki kasutajaid)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
