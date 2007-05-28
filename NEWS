@@ -1,4 +1,25 @@
 ==============
+Version 2.18.2
+==============
+
+  Menu Editor
+
+	* Fix a crash when unselecting the current menu (Vincent)
+	* Require pygtk at runtime (Vincent)
+
+  Translators
+
+	* norbu (dz)
+	* Claudio Saavedra (es)
+	* Ivar Smolin (et)
+	* Iñaki Larrañaga Murgoitio (eu)
+	* Ignacio Casal Quinteiro (gl)
+	* Francesco Marletta (it)
+	* Raivis Dejus (lv)
+	* Yannig MARCHEGAY (Kokoyaya) (oc)
+	* Matej Urbančič (sl)
+
+==============
 Version 2.18.0
 ==============
 
