@@ -1,3 +1,9 @@
+2007-06-03  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.19.3.
+
 2007-05-17  Vincent Untz  <vuntz@gnome.org>
 
 	* libmenu/menu-monitor.c: (menu_monitor_unref): destroy the hash table

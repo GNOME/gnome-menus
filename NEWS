@@ -1,4 +1,20 @@
 ==============
+Version 2.19.3
+==============
+
+  Fixes
+
+	* Use G_DIR_SEPARATOR instead of '/' (Vincent)
+	* Fix small leak (William KJon McCann)
+
+  Translators
+
+	* David Lodge (en_GB)
+	* Jorge González (es)
+	* Ivar Smolin (et)
+	* Theppitak Karoonboonyanan (th)
+
+==============
 Version 2.19.2
 ==============
 
