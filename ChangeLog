@@ -1,4 +1,4 @@
-2007-06-14  Colin Walters  <walters@neutron.verbum.private>
+2007-06-14  Colin Walters  <walters@redhat.com>
 
 	* python/gmenu.c (pygmenu_tree_handle_monitor_callback): Acquire and
 	release Python GIL around invocation (#442747).
