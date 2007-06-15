@@ -1,3 +1,16 @@
+2007-06-15  Vincent Untz  <vuntz@gnome.org>
+
+	Fix crash with inotify backend happening when ~/.config/menus is
+	created (in fact, when there are more than one creation_monitors for a
+	given watch). Bug #422966.
+
+	* libmenu/menu-monitor-inotify.c: (handle_inotify_event): remove the
+	monitor from creation_monitors only if we couldn't add the monitor. If
+	we succeed in creating it, it'll get remove later, in remove_watch().
+	(remove_watch): free watch
+	(remove_watch_foreach): free watch
+	(close_inotify): destroy the path_to_watch hash table
+
 2007-06-14  Colin Walters  <walters@redhat.com>
 
 	* python/gmenu.c (pygmenu_tree_handle_monitor_callback): Acquire and
