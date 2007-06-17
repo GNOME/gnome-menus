@@ -1,3 +1,9 @@
+2007-06-17  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.19.4.
+
 2007-06-15  Vincent Untz  <vuntz@gnome.org>
 
 	Fix crash with inotify backend happening when ~/.config/menus is

@@ -15,7 +15,7 @@ AM_MAINTAINER_MODE
 #   change to C+1:0:0
 # - If the interface is the same as the previous version, change to C:R+1:A
 
-LIB_MENU_LT_VERSION=3:11:1
+LIB_MENU_LT_VERSION=3:12:1
 AC_SUBST(LIB_MENU_LT_VERSION)
 
 GETTEXT_PACKAGE=gnome-menus
