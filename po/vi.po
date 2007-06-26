@@ -1,51 +1,52 @@
 # Vietnamese Translation for Gnome Menus.
-# Copyright © 2005 Gnome i18n Project for Vietnamese.
+# Copyright © 2007 Gnome i18n Project for Vietnamese.
 # This file is distributed under the same license as the gnome-menus package.
 # Trinh Minh Thanh <tmthanh@yahoo.com>, 2004.
-# Clytie Siddall <clytie@riverland.net.au>, 2005.
+# Clytie Siddall <clytie@riverland.net.au>, 2005-2007.
 # 
 msgid ""
-msgstr ""
-"Project-Id-Version: Gnome-menus 2.12 Gnome HEAD\n"
+""
+msgstr "Project-Id-Version: gnome-menus 2.19.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-12 14:18+0000\n"
-"PO-Revision-Date: 2007-02-23 20:13+0700\n"
+"POT-Creation-Date: 2007-05-02 03:41+0100\n"
+"PO-Revision-Date: 2007-06-26 23:13+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: LocFactoryEditor 1.5.1b\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: LocFactoryEditor 1.6.4a3\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Khả năng truy cập"
+msgid "Universal Access"
+msgstr "Truy cập hoàn toàn"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Thiết lập khả năng truy cập"
+msgid "Universal Access Settings"
+msgstr "Thiết lập Truy cập Hoàn toàn"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
-msgstr "Công cụ bổ sung"
+msgstr "Bổ trợ"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Công cụ sử dụng bổ sung"
+msgstr "Bổ trợ môi trường"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
 msgstr "Ứng dụng"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Desktop"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Thiết lập quản lý và Tùy thích cá nhân"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Hệ thống"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -97,12 +98,11 @@ msgstr "Mạng"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr ""
-"Chương trình truy cập Mạng như trình duyệt và trình nhận/gởi thư điện tử"
+msgstr "Chương trình truy cập Mạng như trình duyệt và trình nhận/gửi thư điện tử"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Sắc thái"
+msgstr "Giao diện và Cảm nhận"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
@@ -110,7 +110,7 @@ msgstr "Thiết lập điều khiển diện mạo và cách ứng xử của h�
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Trình đơn Đa phương tiện"
+msgstr "Trình đơn Ảnh/Nhạc"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
@@ -130,7 +130,7 @@ msgstr "Chương trình chưa phân loại"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
-msgstr "Trình khác"
+msgstr "Khác"
 
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
@@ -150,16 +150,12 @@ msgid "Preferences"
 msgstr "Tùy thích"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
+msgid "Universal access related preferences"
 msgstr "Tùy thích liên quan đến khả năng truy cập"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Thiết lập và Tùy thích cá nhân"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Hệ thống"
+msgstr "Thiết lập và tùy thích cá nhân"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -170,7 +166,7 @@ msgid "Administration"
 msgstr "Quản lý"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "Thay đổi thiết lập cho toàn hệ thống (cho mọi người dùng)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
@@ -183,7 +179,7 @@ msgstr "Cấu hình và theo dõi hệ thống"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Bộ hiệu chỉnh trình đơn"
+msgstr "Bộ sửa trình đơn"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
@@ -191,7 +187,7 @@ msgstr "Sửa trình đơn"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
-msgstr "Ứ_ng dụng"
+msgstr "Ứ_ng dụng:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
@@ -199,7 +195,7 @@ msgstr "_Mặc định"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "_Trình đơn"
+msgstr "_Trình đơn:"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
@@ -214,9 +210,8 @@ msgstr "Hiển thị"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr ""
-"Không tìm thấy thư mục chính: chưa lập trong </etc/passwd> và không có giá "
-"trị cho biến <$HOME> trong môi trường."
+msgstr "Không tìm thấy thư mục chính: chưa lập trong tập tin « /etc/passwd » và không có giá "
+"trị cho biến $HOME trong môi trường."
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -228,11 +223,11 @@ msgstr "TẬP_TIN_TRÌNH_ĐƠN"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Bộ theo thay đổi trình đơn"
+msgstr "Bộ theo dõi thay đổi trình đơn"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "Gồm các mục nhập bị<loại trừ>"
+msgstr "Gồm các mục nhập bị <loại trừ>"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
@@ -240,7 +235,7 @@ msgstr "Gồm các mục nhập « NoDisplay=true » (không hiển thị là đ
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "desktop file ID không hợp lệ"
+msgstr "ID tập tin màn hình nền không hợp lệ"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
@@ -258,18 +253,27 @@ msgid ""
 "==== Menu changed, reloading ====\n"
 "\n"
 "\n"
-msgstr ""
-"\n"
+msgstr "\n"
 "\n"
 "\n"
 "━━━ Trình đơn đã thay đổi nên đang nạp lại ━━━\n"
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169
+#: ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Cây trình đơn rỗng"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "— thử ra sự thực hiện Gnome của Desktop Menu Specification"
+msgstr "— thử ra sự thực hiện GNOME của Đặc tả Trình đơn Môi trường"
+
+#~ msgid "Accessibility"
+#~ msgstr "Khả năng truy cập"
+
+#~ msgid "Accessibility Settings"
+#~ msgstr "Thiết lập khả năng truy cập"
+
+#~ msgid "Desktop"
+#~ msgstr "Desktop"
