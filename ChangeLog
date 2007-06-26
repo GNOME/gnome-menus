@@ -1,3 +1,8 @@
+2007-06-26  Ray Strode  <rstrode@redhat.com>
+
+	* layout/applications.menu: don't show screensavers
+	in the menus (bug 448361)
+
 2007-06-18  Vincent Untz  <vuntz@gnome.org>
 
 	* acinclude.m4: use python-config to get python includes
