@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.dz\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-12 14:18+0000\n"
-"PO-Revision-Date: 2007-03-01 15:51+0530\n"
-"Last-Translator: norbu <nor_den@hotmail.com>\n"
+"POT-Creation-Date: 2007-05-02 03:41+0100\n"
+"PO-Revision-Date: 2007-06-27 04:18+0530\n"
+"Last-Translator: Tshewang Norbu <bumthap2006@hotmail.com>\n"
 "Language-Team: DZONGKHA <pgeyleg@dit.gov.bt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,12 +20,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "འཛུལ་སྤྱོད།"
+msgid "Universal Access"
+msgstr "འཛམ་གླིང་ཡོངས་ཁྱབ་འཛུལ་སྤྱོད་འབད་ནི"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "འཛུལ་སྤྱོད་ཀྱི་གཞི་སྒྲིག་ཚུ།"
+msgid "Universal Access Settings"
+msgstr "འཛམ་གླིང་ཡོངས་ཁྱབ་འཛུལ་སྤྱོད་ཀྱི་གཞི་སྒྲིག་ཚུ"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -40,12 +40,13 @@ msgid "Applications"
 msgstr "གློག་རིམ།"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "ཌེཀསི་ཊོཔ།"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "རང་དོན་དགའ་གདམ་དང་ བདག་སྐྱོང་གི་གཞི་སྒྲིག་ཚུ།"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "རིམ་ལུགས་"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -149,16 +150,12 @@ msgid "Preferences"
 msgstr "དགའ་གདམ་ཚུ།"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "འཛུལ་སྤྱོད་དང་འབྲེལ་བའི་ དགའ་གདམ་ཚུ།"
+msgid "Universal access related preferences"
+msgstr "འཛམ་གླིང་ཡོངས་ཁྱབ་འཛུལ་སྤྱོད་དང་འབྲེལ་བའི་ དགའ་གདམ་ཚུ"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "རང་དོན་དགའ་གདམ་དང་ གཞི་སྒྲིག་ཚུ།"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "རིམ་ལུགས་"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -169,8 +166,8 @@ msgid "Administration"
 msgstr "བདག་སྐྱོང་།"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "རིམ་ལུགས་ཡོངས་ཀྱི་ གཞི་སྒྲིག་བསྒྱུར་བཅོས་འབད། (ལག་ལེན་པ་ཀུན་ལུ་ཕན་གནོད་ཡོད)"
+msgid "Change system-wide settings (affects all users)"
+msgstr "རིམ་ལུགས་ཡོངས་ཀྱི་ གཞི་སྒྲིག་བསྒྱུར་བཅོས་འབད (ལག་ལེན་པ་ཀུན་ལུ་ཕན་གནོད་ཡོད)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -268,4 +265,11 @@ msgstr "དཀར་ཆག་རྩ་འབྲེལ་སྟོངམ་ཨི
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "ཌེཀསི་ཊོཔ་ དཀར་ཆག་གསལ་བཀོད་ཀྱི་ ཇི་ནོམ་བསྟར་སྤྱོད་ལུ་ བརྟག་ཞིབ་འབད།"
+
+#~ msgid "Accessibility"
+#~ msgstr "འཛུལ་སྤྱོད།"
+#~ msgid "Accessibility Settings"
+#~ msgstr "འཛུལ་སྤྱོད་ཀྱི་གཞི་སྒྲིག་ཚུ།"
+#~ msgid "Desktop"
+#~ msgstr "ཌེཀསི་ཊོཔ།"
 
