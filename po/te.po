@@ -1,28 +1,30 @@
 # Telugu translation of gnome-menus
-# Copyright (C) 2005 Free Software Foundation, Andhra Pradesh
+# Copyright (C) 2005,2007 Free Software Foundation, Andhra Pradesh
 # This file is distributed under the same license as the gnome-menus package.
-# Y.Kiran Chandra <kiran@gnu.org.in>, 2005
+# Y.Kiran Chandra <kiran@gnu.org.in>, 2005.
+# Bharat Kumar <jonnalagaddabharat@gmail.com>, 2007.
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-12-18 10:45+0530\n"
-"PO-Revision-Date: 2005-12-18 11:06+0530\n"
-"Last-Translator: Y.Kiran Chandra<kiran@gnu.org.in>\n"
-"Language-Team: Telugu <localisation@swecha.org>\n"
+"POT-Creation-Date: 2007-07-01 21:59+0530\n"
+"PO-Revision-Date: 2007-07-01 22:20+0530\n"
+"Last-Translator: Bharat Kumar <jonnalagaddabharat@gmail.com>\n"
+"Language-Team: Swecha Telugu Localisation Team <localisation@swecha.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "అందుబాటు"
+msgid "Universal Access"
+msgstr "విశ్వాంతర సాంగత్యం"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "అందుబాటు అమరికలు"
+#, fuzzy
+msgid "Universal Access Settings"
+msgstr "విశ్వాంతర సాంగత్య అమరికలు"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -37,12 +39,14 @@ msgid "Applications"
 msgstr "కార్యక్షేత్రాలు"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "రంగస్థలం"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "వ్యక్తిగత అభీష్టాలు మరియు "
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+#, fuzzy
+msgid "System"
+msgstr "వ్యవస్థ పనిముట్లు"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -72,6 +76,22 @@ msgstr "చిత్ర రూపాలు"
 msgid "Graphics applications"
 msgstr "చిత్రరూప కార్యక్షేత్రాలు"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "హార్డ వేర్"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "హార్డ వేర్ పరికరాలకి అమరికలు"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "ఇంటర్నెట్ మరియు నెట్వర్క్"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "నెట్వర్క్ బంధిత  అమరికలు"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "మహాతలం"
@@ -79,6 +99,14 @@ msgstr "మహాతలం"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "ఇంటర్నెట్ తో  సాంగత్యం ఏర్పరుచు కార్యక్రమాలు"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr ""
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "రంగస్థల రూపం మరియు ప్రవర్తనను నియంత్రణ చేయు అమరికలు"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -104,6 +132,15 @@ msgstr "ఇతర విభాగాలలో  ఇమడని కార్య�
 msgid "Other"
 msgstr "ఇతర"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "వ్యక్తిగత"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+#, fuzzy
+msgid "Personal settings"
+msgstr "వ్యక్తిగత అభీష్టాలు మరియు అమరికలు"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "వ్యక్తిగత అభీష్టాలు"
@@ -114,19 +151,25 @@ msgid "Preferences"
 msgstr "అభీష్టాలు"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
+#, fuzzy
+msgid "Universal access related preferences"
 msgstr "సాంగత్యానికి సంబందించిన అభీష్టాలు"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "వ్యక్తిగత అభీష్టాలు మరియు అమరికలు"
 
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "వ్యవస్థ యొక్క అమరికలు"
+
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "నిర్వహణ"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+#, fuzzy
+msgid "Change system-wide settings (affects all users)"
 msgstr ""
 "వ్యవస్థకు సంబందించిన అన్ని అమరికలను మార్చు (ఈ మార్పులు అందరు వినియోగ దారులకు వమర్చబడతయిా)"
 
@@ -171,7 +214,7 @@ msgstr "చూపు"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr ""
+msgstr "నివాస వివరం ను కనిపెట్టలేదు"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -203,7 +246,7 @@ msgstr "[నిస్సారమైన దస్త్ర నామము]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
-msgstr ""
+msgstr "<బహిష్కరించబడిన>"
 
 #: ../util/test-menu-spec.c:164
 msgid ""
@@ -221,4 +264,10 @@ msgstr "జాబితా ఖాళీగా ఉంది"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
+msgstr "రంగస్థల యొక్క నిర్ధిష్ట జాబితాను గ్నోమ్  ఎలా  అమలు చేసిందో పరీక్షించు"
+
+msgid "Accessibility"
+msgstr "అందుబాటు"
+
+msgid "Desktop"
+msgstr "రంగస్థలం"
