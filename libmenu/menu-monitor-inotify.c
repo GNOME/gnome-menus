@@ -159,9 +159,6 @@ handle_inotify_event (MenuInotifyData      *idata,
             {
               MenuInotifyWatch *new_watch;
 
-              watch->creation_monitors =
-                g_slist_delete_link (watch->creation_monitors, tmp);
-
               new_watch = add_watch (idata, monitor);
 
               if (!new_watch)
@@ -169,6 +166,9 @@ handle_inotify_event (MenuInotifyData      *idata,
                   g_warning ("Failed to add monitor on '%s': %s",
                              menu_monitor_get_path (monitor),
                              g_strerror (errno));
+
+                  watch->creation_monitors =
+                    g_slist_delete_link (watch->creation_monitors, tmp);
                 }
               else if (new_watch != watch)
                 {
@@ -329,6 +329,8 @@ remove_watch (MenuInotifyData  *idata,
 
   inotify_rm_watch (idata->fd, watch->wd);
   watch->wd = -1;
+
+  g_free (watch);
 }
 
 static MenuInotifyWatch *
@@ -426,6 +428,8 @@ remove_watch_foreach (const char       *path,
   inotify_rm_watch (idata->fd, watch->wd);
   watch->wd = -1;
 
+  g_free (watch);
+
   return TRUE;
 }
 
@@ -442,6 +446,8 @@ close_inotify (void)
   g_hash_table_foreach_remove (inotify_data.path_to_watch,
                                (GHRFunc) remove_watch_foreach,
                                &inotify_data);
+  if (inotify_data.path_to_watch)
+    g_hash_table_destroy (inotify_data.path_to_watch);
   inotify_data.path_to_watch = NULL;
 
   if (inotify_data.wd_to_watch)
