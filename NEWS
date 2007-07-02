@@ -1,4 +1,14 @@
 ==============
+Version 2.18.3
+==============
+
+  Fixes
+
+	* Fix crashes in python bindings (Colin Walters)
+	* Fix crash in inotify backend when ~/.config/menus is created
+	  (Vincent)
+
+==============
 Version 2.18.2
 ==============
 

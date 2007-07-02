@@ -1,5 +1,11 @@
 2007-07-02  Vincent Untz  <vuntz@gnome.org>
 
+	* NEWS:
+	* README:
+	* configure.in: Version 2.18.3.
+
+2007-07-02  Vincent Untz  <vuntz@gnome.org>
+
 	Fix crash with inotify backend happening when ~/.config/menus is
 	created (in fact, when there are more than one creation_monitors for a
 	given watch). Bug #422966.
