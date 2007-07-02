@@ -1,3 +1,14 @@
+2007-07-02  Vincent Untz  <vuntz@gnome.org>
+
+	Patch by Colin Walters <walters@redhat.com>
+
+	* python/gmenu.c (pygmenu_tree_handle_monitor_callback): Acquire and
+	release Python GIL around invocation (#442747).
+	(pygmenu_tree_add_monitor): Set user data to NULL if it's not passed
+	in. Check that the passed object is a callable.
+
+	* configure.in: Require Python 2.3 for above changes.
+
 2007-05-28  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: post-release bump to 2.18.3

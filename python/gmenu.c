@@ -1497,6 +1497,9 @@ pygmenu_tree_handle_monitor_callback (GMenuTree            *tree,
 {
   PyObject *args;
   PyObject *ret;
+  PyGILState_STATE gstate;
+
+  gstate = PyGILState_Ensure();
 
   args = PyTuple_New (callback->user_data ? 2 : 1);
 
@@ -1513,6 +1516,8 @@ pygmenu_tree_handle_monitor_callback (GMenuTree            *tree,
 
   Py_XDECREF (ret);
   Py_DECREF (args);
+
+  PyGILState_Release(gstate);
 }
 
 static PyObject *
@@ -1522,10 +1527,15 @@ pygmenu_tree_add_monitor (PyObject *self,
   PyGMenuTree         *tree;
   PyGMenuTreeCallback *callback;
   PyObject            *pycallback;
-  PyObject            *pyuser_data;
+  PyObject            *pyuser_data = NULL;
 
   if (!PyArg_ParseTuple (args, "O|O:gmenu.Tree.add_monitor", &pycallback, &pyuser_data))
     return NULL;
+  if (!PyCallable_Check(pycallback))
+    {
+      PyErr_SetString(PyExc_TypeError, "callback must be callable");
+      return NULL;
+    }
 
   tree = (PyGMenuTree *) self;
 
