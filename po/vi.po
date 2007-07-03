@@ -102,7 +102,7 @@ msgstr "Chương trình truy cập Mạng như trình duyệt và trình nhận/
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Giao diện và Cảm nhận"
+msgstr "Sắc thái"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
@@ -110,7 +110,7 @@ msgstr "Thiết lập điều khiển diện mạo và cách ứng xử của h�
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Trình đơn Ảnh/Nhạc"
+msgstr "Trình đơn Đa phương tiện"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
@@ -256,7 +256,7 @@ msgid ""
 msgstr "\n"
 "\n"
 "\n"
-"━━━ Trình đơn đã thay đổi nên đang nạp lại ━━━\n"
+"==== Trình đơn đã thay đổi nên đang nạp lại ====\n"
 "\n"
 "\n"
 
@@ -267,7 +267,7 @@ msgstr "Cây trình đơn rỗng"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "— thử ra sự thực hiện GNOME của Đặc tả Trình đơn Môi trường"
+msgstr "— kiểm tra sự thực hiện GNOME của Đặc tả Trình đơn Môi trường"
 
 #~ msgid "Accessibility"
 #~ msgstr "Khả năng truy cập"
