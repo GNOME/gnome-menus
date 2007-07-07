@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-16 21:07+0900\n"
-"PO-Revision-Date: 2007-01-13 12:04+0900\n"
+"POT-Creation-Date: 2007-07-08 00:01+0900\n"
+"PO-Revision-Date: 2007-07-08 00:00+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -18,12 +18,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "アクセシビリティ"
+msgid "Universal Access"
+msgstr "ユニバーサル・アクセス"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "アクセシビリティを設定するツールです"
+msgid "Universal Access Settings"
+msgstr "ユニバーサル・アクセスの設定を変更します"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -38,12 +38,13 @@ msgid "Applications"
 msgstr "アプリケーション"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "デスクトップ"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "個人設定と管理者向けの設定ツールです"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "システム"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -147,16 +148,12 @@ msgid "Preferences"
 msgstr "設定"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "アクセシビリティに関連する設定を変更します"
+msgid "Universal access related preferences"
+msgstr "ユニバーサル・アクセスに関連する設定を変更します"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "ユーザ向けの設定を変更します"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "システム"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -167,8 +164,8 @@ msgid "Administration"
 msgstr "システム管理"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "システム全般にわたる設定を変更します (全てのユーザに影響します)"
+msgid "Change system-wide settings (affects all users)"
+msgstr "システム規模の設定を変更します (全てのユーザに影響します)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
