@@ -1,4 +1,25 @@
 ==============
+Version 2.19.5
+==============
+
+  Fixes
+
+	* Use python-config to get python includes (Sebastien Bacher)
+	* Don't show screensavers in the menus (Ray Strode)
+
+  Translators
+
+	* Tshewang Norbu (dz)
+	* Takeshi AIHANA (ja)
+	* Tomasz Dominikowski (pl)
+	* Danishka Navin (si)
+	* Daniel Nylander (sv)
+	* Dr.T.Vasudevan (ta)
+	* Bharat Kumar (te)
+	* Nurali Abdurahmonov (uz)
+	* Clytie Siddall (vi)
+
+==============
 Version 2.19.4
 ==============
 

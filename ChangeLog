@@ -1,3 +1,9 @@
+2007-07-08  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.19.5.
+
 2007-06-26  Ray Strode  <rstrode@redhat.com>
 
 	* layout/applications.menu: don't show screensavers
