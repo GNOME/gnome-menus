@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-12 20:24+0300\n"
+"POT-Creation-Date: 2007-07-16 10:43+0100\n"
 "PO-Revision-Date: 2007-02-12 20:26+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
@@ -19,12 +19,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
+msgid "Universal Access"
 msgstr "Esteettömyys"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Esteettömyysasetukset"
+msgid "Universal Access Settings"
+msgstr "Esteettömän käytön asetukset"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -39,12 +39,13 @@ msgid "Applications"
 msgstr "Sovellukset"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Työpöytä"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Henkilökohtaiset ja järjestelmän asetukset"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Järjestelmä"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -148,16 +149,12 @@ msgid "Preferences"
 msgstr "Asetukset"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
+msgid "Universal access related preferences"
 msgstr "Esteettömyyteen liittyvät asetukset"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Henkilökohtaiset asetukset"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Järjestelmä"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -168,7 +165,7 @@ msgid "Administration"
 msgstr "Hallinta"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "Muuta järjestelmänlaajuisia asetuksia (vaikuttaa joka käyttäjään)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
@@ -271,3 +268,12 @@ msgstr "Valikko on tyhjä"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- testaa Gnomen toteutusta Työpöytävalikkojen määrittelystä"
+
+#~ msgid "Accessibility"
+#~ msgstr "Esteettömyys"
+
+#~ msgid "Accessibility Settings"
+#~ msgstr "Esteettömyysasetukset"
+
+#~ msgid "Desktop"
+#~ msgstr "Työpöytä"
