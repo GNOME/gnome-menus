@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-01 21:59+0530\n"
-"PO-Revision-Date: 2007-07-01 22:20+0530\n"
+"POT-Creation-Date: 2007-07-23 19:59+0530\n"
+"PO-Revision-Date: 2007-07-19 13:12+0530\n"
 "Last-Translator: Bharat Kumar <jonnalagaddabharat@gmail.com>\n"
 "Language-Team: Swecha Telugu Localisation Team <localisation@swecha.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,9 +22,8 @@ msgid "Universal Access"
 msgstr "విశ్వాంతర సాంగత్యం"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-#, fuzzy
 msgid "Universal Access Settings"
-msgstr "విశ్వాంతర సాంగత్య అమరికలు"
+msgstr "విశ్వాంతర సాంగత్య అమరికలు "
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -44,9 +43,8 @@ msgstr "వ్యక్తిగత అభీష్టాలు మరియు 
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 #: ../desktop-directories/System.directory.in.h:1
-#, fuzzy
 msgid "System"
-msgstr "వ్యవస్థ పనిముట్లు"
+msgstr "వ్యవస్థ పనిముట్లు "
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -102,7 +100,7 @@ msgstr "ఇంటర్నెట్ తో  సాంగత్యం ఏర్�
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr ""
+msgstr "రూపు రేఖలు"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
@@ -137,9 +135,8 @@ msgid "Personal"
 msgstr "వ్యక్తిగత"
 
 #: ../desktop-directories/Personal.directory.in.h:2
-#, fuzzy
 msgid "Personal settings"
-msgstr "వ్యక్తిగత అభీష్టాలు మరియు అమరికలు"
+msgstr "వ్యక్తిగత అమరికలు"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
@@ -151,9 +148,8 @@ msgid "Preferences"
 msgstr "అభీష్టాలు"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-#, fuzzy
 msgid "Universal access related preferences"
-msgstr "సాంగత్యానికి సంబందించిన అభీష్టాలు"
+msgstr "సాంగత్యానికి సంబందించిన అభీష్టాలు "
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
@@ -168,10 +164,9 @@ msgid "Administration"
 msgstr "నిర్వహణ"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-#, fuzzy
 msgid "Change system-wide settings (affects all users)"
 msgstr ""
-"వ్యవస్థకు సంబందించిన అన్ని అమరికలను మార్చు (ఈ మార్పులు అందరు వినియోగ దారులకు వమర్చబడతయిా)"
+"వ్యవస్థకు సంబందించిన అన్ని అమరికలను మార్చు (ఈ మార్పులు అందరు వినియోగ దారులకు వమర్చబడతయి)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -230,11 +225,11 @@ msgstr "జాబితాలోని మార్పుల తనిఖీ "
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr ""
+msgstr "d నమోదులను చేర్చు<మినహాయించు>"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr ""
+msgstr "NoDisplay=true·నమోదులను చే"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
@@ -257,6 +252,12 @@ msgid ""
 "\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"\n"
+"====జాబితా మరింది, పున:స్థాపన జరుగుతున్నది·====\n"
+"\n"
+"\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
