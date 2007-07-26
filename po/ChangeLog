@@ -1,3 +1,7 @@
+2007-07-26  Wouter Bolsterlee  <wbolster@svn.gnome.org>
+
+	* nl.po: Dutch translation updated by Wouter Bolsterlee.
+
 2007-07-23  Sunil Mohan Adapa  <sunil@atc.tcs.com>
 
 	* te.po: Updated Telugu translation done by
@@ -132,11 +136,11 @@
 
 2007-04-08  Raivis Dejus <orvils@gmail.com>
 
-        * lv.po: Updated Latvian Translation.
+	* lv.po: Updated Latvian Translation.
 
 2007-04-01  Raivis Dejus <orvils@gmail.com>
 
-        * lv.po: Updated Latvian Translation.
+	* lv.po: Updated Latvian Translation.
 
 2007-03-31  Inaki Larranaga Murgoitio  <dooteo@euskalgnu.org>
 
@@ -242,7 +246,7 @@
 
 2007-02-09  Ihar Hrachyshka  <iharh@gnome.org>
 
-        * be@latin.po: Added Belarusian Latin translation by Ales Navicki.
+	* be@latin.po: Added Belarusian Latin translation by Ales Navicki.
 
 2007-02-08  Josep Puigdemont i Casamajó  <josep.puigdemont@gmail.com>
 
