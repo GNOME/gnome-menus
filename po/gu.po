@@ -5,24 +5,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-12 14:18+0000\n"
-"PO-Revision-Date: 2007-03-05 19:57+0530\n"
+"POT-Creation-Date: 2007-05-02 03:41+0100\n"
+"PO-Revision-Date: 2007-08-06 16:13+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "સુલભતા"
+msgid "Universal Access"
+msgstr "સાર્વત્રિક વપરાશ"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "સુલભતા સુયોજનો"
+msgid "Universal Access Settings"
+msgstr "સાર્વત્રિક વપરાશ સુયોજનો"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -37,12 +38,13 @@ msgid "Applications"
 msgstr "કાર્યક્રમો"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "ડેસ્કટોપ"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "ખાનગી પસંદગીઓ અને સંચાલન સુયોજનો"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "સિસ્ટમ"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -146,16 +148,12 @@ msgid "Preferences"
 msgstr "પસંદગીઓ"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "સુલભતા સંબંધિત પસંદગીઓ"
+msgid "Universal access related preferences"
+msgstr "સાર્વત્રિક વપરાશ સંબંધિત પસંદગીઓ"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "ખાનગી પસંદગીઓ અને સુયોજનો"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "સિસ્ટમ"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -166,8 +164,8 @@ msgid "Administration"
 msgstr "સંચાલન"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "સિસ્ટમ સુયોજનો બદલો (બધા વપરાશકર્તાઓને અસર કરશે)"
+msgid "Change system-wide settings (affects all users)"
+msgstr "સિસ્ટમ-લગતા સુયોજનો બદલો (બધા વપરાશકર્તાઓને અસર કરશે)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
