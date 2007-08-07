@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.gnome-2-10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-31 10:49+0200\n"
+"POT-Creation-Date: 2007-05-02 03:41+0100\n"
 "PO-Revision-Date: 2005-07-26 00:26+0300\n"
 "Last-Translator: Reuven Gonen <linxspider@yahoo.com>\n"
 "Language-Team:  <he@li.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "נגישות"
+msgid "Universal Access"
+msgstr "גישה כללית"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "הגדרות נגישות"
+msgid "Universal Access Settings"
+msgstr "הגדרות גישה כללית"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -38,12 +38,13 @@ msgid "Applications"
 msgstr "יישומים"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "שולחן עבודה"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "העדפות אישיות והגדרות ניהול"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "מערכת"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -147,16 +148,12 @@ msgid "Preferences"
 msgstr "העדפות"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "העדפות הקשורות לנגישות"
+msgid "Universal access related preferences"
+msgstr "העדפות הקשורות לגישה כללית"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "העדפות והגדרות אישיות"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "מערכת"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -167,7 +164,7 @@ msgid "Administration"
 msgstr "ניהול"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "שנה הגדרות מערכת כלליות (משפיע על כל המשתמשים)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
@@ -281,3 +278,12 @@ msgstr "Menu tree is empty"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- test GNOME's implementation of the Desktop Menu Specification"
+
+#~ msgid "Accessibility"
+#~ msgstr "נגישות"
+
+#~ msgid "Accessibility Settings"
+#~ msgstr "הגדרות נגישות"
+
+#~ msgid "Desktop"
+#~ msgstr "שולחן עבודה"
