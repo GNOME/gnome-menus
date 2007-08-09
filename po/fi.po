@@ -53,7 +53,7 @@ msgstr "Ohjelmointi"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Työkaluja sovellusten tekemiseen"
+msgstr "Työkaluja sovelluskehitykseen"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -178,7 +178,7 @@ msgstr "Järjestelmäasetukset ja -seuranta"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Valikon muokkain"
+msgstr "Valikkomuokkain"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
@@ -223,7 +223,7 @@ msgstr "MENU_FILE"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Tarkkaile valikon muuttumista"
+msgstr "Tarkkaile valikkomuutoksia"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
@@ -243,7 +243,7 @@ msgstr "[Virheellinen tiedostonimi]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
-msgstr "<piilotettu"
+msgstr "<piilotettu>"
 
 #: ../util/test-menu-spec.c:164
 msgid ""
@@ -257,13 +257,13 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Valikko on muuttunut, ladataan uudestaan ====\n"
+"==== Valikko on muuttunut, ladataan uudelleen ====\n"
 "\n"
 "\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "Valikko on tyhjä"
+msgstr "Valikkopuu on tyhjä"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
