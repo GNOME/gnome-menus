@@ -207,7 +207,7 @@ msgstr "Nom"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
 msgid "Show"
-msgstr "Visualizar"
+msgstr "Visualizacion"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
