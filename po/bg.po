@@ -7,10 +7,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome menus\n"
+"Project-Id-Version: gnome-menus trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-28 21:38+0200\n"
-"PO-Revision-Date: 2007-01-28 21:38+0200\n"
+"POT-Creation-Date: 2007-08-17 08:25+0300\n"
+"PO-Revision-Date: 2007-08-17 08:25+0300\n"
 "Last-Translator: Rostislav \"zbrox\" Raykov <zbrox@i-space.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Достъпност"
+msgid "Universal Access"
+msgstr "Универсален достъп"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Настройки на достъпността"
+msgid "Universal Access Settings"
+msgstr "Настройки на универсалния достъп"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -40,12 +40,13 @@ msgid "Applications"
 msgstr "Програми"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Работен плот"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Лични предпочитания и административни настройки"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Система"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -149,16 +150,12 @@ msgid "Preferences"
 msgstr "Настройки"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Настройки, свързани с достъпността"
+msgid "Universal access related preferences"
+msgstr "Настройки, свързани с универсалния достъп"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Лични настройки и предпочитания"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Система"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -169,9 +166,9 @@ msgid "Administration"
 msgstr "Администрация на системата"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr ""
-"Промяна на глобалните настройки на системата (ще се отразят на всички "
+"Промяна на глобалните настройки на системата (ще се отрази на всички "
 "потребители)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
@@ -241,7 +238,7 @@ msgstr "Включване на елементите отбелязани за <
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "Невалидно ID на desktop файла"
+msgstr "Невалиден идентификатор на файла .desktop"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
@@ -274,5 +271,5 @@ msgstr "Дървовидната структура на менюто е пра�
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr ""
-"- тестване на реализацията на спецификазията за менюта към работния плот на "
+"- тестване на реализацията на спецификацията за менюта към работния плот на "
 "GNOME"
