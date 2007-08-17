@@ -79,7 +79,7 @@ msgstr "Aplikacje graficzne"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
-msgstr "Sprzet"
+msgstr "Sprzęt"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
