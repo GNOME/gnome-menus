@@ -4,14 +4,15 @@
 # Raphael Higino <phhigino@gmail.com>, 2004-2005.
 # Afonso Celso Medina <afmedina@uol.com.br>, 2005.
 # Og Maciel <ogmaciel@ubuntu.com>, 2006-2007.
+# Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-02 03:30+0000\n"
-"PO-Revision-Date: 2007-02-02 13:27-0200\n"
-"Last-Translator: Og Maciel <ogmaciel@ubuntu.com>\n"
+"POT-Creation-Date: 2007-08-19 20:21-0300\n"
+"PO-Revision-Date: 2007-08-19 20:31-0300\n"
+"Last-Translator: Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,12 +20,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Acessibilidade"
+msgid "Universal Access"
+msgstr "Acesso Universal"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Configurações de Acessibilidade"
+msgid "Universal Access Settings"
+msgstr "Configurações do Acesso Universal"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -39,12 +40,13 @@ msgid "Applications"
 msgstr "Aplicações"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Área de Trabalho"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Preferências pessoais e configurações de administração"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistema"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -96,7 +98,7 @@ msgstr "Internet"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programas para acesso à Internet tais como web e email"
+msgstr "Programas para acesso à Internet tais como web e e-mail"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -104,7 +106,8 @@ msgstr "Visual e Comportamento"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Configurações que controlam o visual e o comportamento da área de trabalho"
+msgstr ""
+"Configurações que controlam o visual e o comportamento da área de trabalho"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -148,16 +151,12 @@ msgid "Preferences"
 msgstr "Preferências"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Preferências relativas à acessibilidade"
+msgid "Universal access related preferences"
+msgstr "Preferências relativas ao acesso universal"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Preferências e configurações pessoais"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistema"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -168,7 +167,7 @@ msgid "Administration"
 msgstr "Administração"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "Modifique configurações gerais do sistema (afeta a todos os usuários)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
@@ -212,7 +211,9 @@ msgstr "Exibir"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Não é possível localizar o diretório home: não está definido em /etc/passwd e nenhum valor para $HOME nas variáveis de ambiente"
+msgstr ""
+"Não foi possível localizar o diretório home: não está definido em /etc/passwd "
+"e nenhum valor para $HOME nas variáveis de ambiente"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -220,19 +221,19 @@ msgstr "Arquivo de menu"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "MENU_FILE"
+msgstr "ARQUIVO_MENU"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Monitor para alterações do menu"
+msgstr "Monitora alterações do menu"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "Incluir entradas <Exclude>d"
+msgstr "Inclui entradas <Exclude>d"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "Incluir entradas NoDisplay=true"
+msgstr "Inclui entradas NoDisplay=true"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
@@ -269,4 +270,13 @@ msgstr "A árvore do menu está vazia"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr ""
-"- test Implementação da Especificação de Menu da Área de Trabalho do GNOME"
+"- testa a implementação GNOME da Especificação de Menu da Área de Trabalho"
+
+#~ msgid "Accessibility"
+#~ msgstr "Acessibilidade"
+
+#~ msgid "Accessibility Settings"
+#~ msgstr "Configurações de Acessibilidade"
+
+#~ msgid "Desktop"
+#~ msgstr "Área de Trabalho"
