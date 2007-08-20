@@ -1022,7 +1022,10 @@ gmenu_tree_directory_get_tree (GMenuTreeDirectory *directory)
 
   root = (GMenuTreeDirectoryRoot *) directory;
 
-  return gmenu_tree_ref (root->tree);
+  if (root->tree)
+    gmenu_tree_ref (root->tree);
+
+  return root->tree;
 }
 
 gboolean
