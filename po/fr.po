@@ -1,32 +1,33 @@
 # French translation of gnome-menus.
-# Copyright (C) 2004-2005 Free Software Foundation, Inc.
+# Copyright (C) 2004-2005, 2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menu package.
 #
 # Baptiste Mille-Mathias <bmm80@free.fr>, 2004-2005.
 # Vincent Untz <vuntz@gnome.org>, 2005.
-# Christophe Merlet (RedFox) <redfox@redfoxcenter.org>, 2005.
+# Christophe Merlet <redfox@redfoxcenter.org>, 2005.
 # Robert-André Mauchin <zebob.m@gmail.com>, 2007.
-# 
+# Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus 2.17.5\n"
+"Project-Id-Version: gnome-menus.HEAD.fr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-27 22:29+0100\n"
-"PO-Revision-Date: 2007-01-26 21:00+0100\n"
-"Last-Translator: Robert-André Mauchin <zebob.m@gmail.com>\n"
-"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
+"POT-Creation-Date: 2007-08-24 15:17+0200\n"
+"PO-Revision-Date: 2007-08-16 01:23+0200\n"
+"Last-Translator: Stéphane Raimbault <stephane.raimbault@gmail.com>\n"
+"Language-Team: GNOME French team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Accessibilité"
+msgid "Universal Access"
+msgstr "Accès universel"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Paramètres d'accessibilité"
+msgid "Universal Access Settings"
+msgstr "Paramètres d'accès universel"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -41,12 +42,13 @@ msgid "Applications"
 msgstr "Applications"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Bureau"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Préférences personnelles et paramètres du système"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Système"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -114,7 +116,7 @@ msgstr "Multimédia"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Son et Vidéo"
+msgstr "Son et vidéo"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -150,16 +152,12 @@ msgid "Preferences"
 msgstr "Préférences"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Préférences d'accessibilité"
+msgid "Universal access related preferences"
+msgstr "Préférences associées à l'accès universel"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Préférences et paramètres personnels"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Système"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -170,9 +168,9 @@ msgid "Administration"
 msgstr "Administration"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr ""
-"Modifie les paramètres au niveau système (affecte tous les utilisateurs)"
+"Modifie globalement les paramètres du système (affecte tous les utilisateurs)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
