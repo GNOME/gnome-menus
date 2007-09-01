@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.18.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-17 17:01+0100\n"
-"PO-Revision-Date: 2007-08-21 00:05+0200\n"
+"POT-Creation-Date: 2007-08-21 12:07+0100\n"
+"PO-Revision-Date: 2007-09-01 20:17+0200\n"
 "Last-Translator: Yannig MARCHEGAY (Kokoyaya) <yannig@marchegay>\n"
 "Language-Team: Occitan (post 1500) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr ""
+msgstr "Accès universal"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
