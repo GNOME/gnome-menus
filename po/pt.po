@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 2.18\n"
+"Project-Id-Version: 2.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-14 22:37+0000\n"
-"PO-Revision-Date: 2007-02-14 22:40+0000\n"
+"POT-Creation-Date: 2007-09-02 17:59+0100\n"
+"PO-Revision-Date: 2007-09-02 18:05+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +17,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Acessibilidade"
+msgid "Universal Access"
+msgstr "Acesso Universal"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Definições de Acessibilidade"
+msgid "Universal Access Settings"
+msgstr "Definições de Acesso Universal"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -37,12 +37,13 @@ msgid "Applications"
 msgstr "Aplicações"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Área de Trabalho"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Preferências pessoais e definições de administração"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistema"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -102,7 +103,8 @@ msgstr "Aparência e Comportamento"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Definições que controlam a aparência e comportamento do ambiente de trabalho"
+msgstr ""
+"Definições que controlam a aparência e comportamento do ambiente de trabalho"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -146,16 +148,12 @@ msgid "Preferences"
 msgstr "Preferências"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Preferências relacionadas com a acessibilidade"
+msgid "Universal access related preferences"
+msgstr "Preferências relacionadas com o acesso universal"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Preferências e definições pessoais"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistema"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -166,7 +164,7 @@ msgid "Administration"
 msgstr "Administração"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "Alterar definições de sistema (afecta todos os utilizadores)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
@@ -270,3 +268,12 @@ msgstr "Árvore de menu está vazia"
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr ""
 "- testar a implementação GNOME da Especificação de Menu de Área de Trabalho"
+
+#~ msgid "Accessibility"
+#~ msgstr "Acessibilidade"
+
+#~ msgid "Accessibility Settings"
+#~ msgstr "Definições de Acessibilidade"
+
+#~ msgid "Desktop"
+#~ msgstr "Área de Trabalho"
