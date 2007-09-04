@@ -1,4 +1,22 @@
 ===============
+Version 2.19.92
+===============
+
+  Fixes
+
+	* Fix potential crash (Rob Bradford)
+
+  Translators
+
+	* Rostislav "zbrox" Raykov (bg)
+	* Stéphane Raimbault (fr)
+	* Arangel Angov (mk)
+	* Tomasz Dominikowski (pl)
+	* Leonardo Ferreira Fontenelle (pt_BR)
+	* Duarte Loreto (pt)
+	* Funda Wang (zh_CN)
+
+===============
 Version 2.19.90
 ===============
 
