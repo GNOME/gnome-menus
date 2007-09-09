@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-03 14:12+0100\n"
-"PO-Revision-Date: 2007-03-03 14:13+0100\n"
+"POT-Creation-Date: 2007-09-09 02:40+0200\n"
+"PO-Revision-Date: 2007-09-08 17:15+0200\n"
 "Last-Translator: Peter Bach <bach.peter@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Tilgængelighed"
+msgid "Universal Access"
+msgstr "Universel adgang"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Tilgængelighedsindstillinger"
+msgid "Universal Access Settings"
+msgstr "Indstillinger for universel adgang"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -40,12 +40,13 @@ msgid "Applications"
 msgstr "Programmer"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Skrivebord"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Personlige indstillinger og administrationskonfiguration"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "System"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -150,16 +151,12 @@ msgid "Preferences"
 msgstr "Indstillinger"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Tilgængeligheds-relaterede indstillinger"
+msgid "Universal access related preferences"
+msgstr "Indstillinger relateret til universel adgang"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Personlige indstillinger"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "System"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -170,8 +167,8 @@ msgid "Administration"
 msgstr "Administration"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "Ændr system indstillinger (påvirker alle brugere)"
+msgid "Change system-wide settings (affects all users)"
+msgstr "Ændr systemindstillinger (påvirker alle brugere)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -273,3 +270,12 @@ msgstr "Menutræ er tomt"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- test Gnomes implementering af specifikationen til skrivebordsmenuer"
+
+#~ msgid "Accessibility"
+#~ msgstr "Tilgængelighed"
+
+#~ msgid "Accessibility Settings"
+#~ msgstr "Tilgængelighedsindstillinger"
+
+#~ msgid "Desktop"
+#~ msgstr "Skrivebord"
