@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-12 14:18+0000\n"
-"PO-Revision-Date: 2007-03-12 14:58+0100\n"
+"POT-Creation-Date: 2007-09-12 01:21+0200\n"
+"PO-Revision-Date: 2007-09-12 01:22+0200\n"
 "Last-Translator: Goran Rakić <grakic@devbase.net>\n"
 "Language-Team: Serbian (sr) <gnome@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -21,12 +21,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Pristupačnost"
+msgid "Universal Access"
+msgstr "Univerzalni pristup"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Podešavanja pristupačnosti"
+msgid "Universal Access Settings"
+msgstr "Podešavanja univerzalnog pristupa"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -41,12 +41,13 @@ msgid "Applications"
 msgstr "Programi"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Okruženje"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Lične postavke i administratorska podešavanja"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistemski alati"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -150,16 +151,12 @@ msgid "Preferences"
 msgstr "Postavke"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Postavke u vezi pristupačnosti"
+msgid "Universal access related preferences"
+msgstr "Postavke u vezi univerzalnog pristupa"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Lične postavke i podešavanja"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistemski alati"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -170,7 +167,7 @@ msgid "Administration"
 msgstr "Administracija"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "Promenite sistemska podešavanja (utiče na sve korisnike)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
@@ -252,6 +249,7 @@ msgid " <excluded>"
 msgstr " <isključena>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -274,3 +272,12 @@ msgstr "Stablo menija je prazno"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "— isprobava Gnomovu izvedbu Specifikacije za menije okruženja"
+
+#~ msgid "Accessibility"
+#~ msgstr "Pristupačnost"
+
+#~ msgid "Accessibility Settings"
+#~ msgstr "Podešavanja pristupačnosti"
+
+#~ msgid "Desktop"
+#~ msgstr "Okruženje"
