@@ -1,3 +1,8 @@
+2007-09-11  Amitakhya Phukan  <amitakhya@svn.gnome.org>
+
+	* LINGUAS: Added as to LINGUAS file.
+	* as.po: Added and updated Assamese translations.
+
 2007-09-09  Kenneth Nielsen  <k.nielsen81@gmail.com>
 
 	* da.po: Updated Danish translation
