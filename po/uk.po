@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-21 01:56+0200\n"
-"PO-Revision-Date: 2007-02-21 16:17+0200\n"
+"POT-Creation-Date: 2007-09-11 17:12+0300\n"
+"PO-Revision-Date: 2007-09-11 16:17+0200\n"
 "Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +17,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Спеціальні можливості"
+msgid "Universal Access"
+msgstr "Універсальний доступ"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Налаштовування спеціальних можливостей"
+msgid "Universal Access Settings"
+msgstr "Параметри універсального доступу"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -37,12 +37,13 @@ msgid "Applications"
 msgstr "Програми"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Робочий стіл"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Особисті параметри та адміністративні параметри"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Системна"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -102,7 +103,8 @@ msgstr "Оформлення"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Параметри, що впливають на зовнішній вигляд та поведінку робочого столу"
+msgstr ""
+"Параметри, що впливають на зовнішній вигляд та поведінку робочого столу"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -146,16 +148,12 @@ msgid "Preferences"
 msgstr "Параметри"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Параметри пов'язані зі спеціальними можливостями"
+msgid "Universal access related preferences"
+msgstr "Параметри пов'язані з універсальним доступом"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Особисті параметри"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Системна"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -166,7 +164,7 @@ msgid "Administration"
 msgstr "Адміністрування"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "Зміна системних параметрів (впливає на усіх користувачів)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
@@ -269,3 +267,12 @@ msgstr "Дерево меню порожнє"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- перевірка реалізації у GNOME специфікації з меню робочого столу"
+
+#~ msgid "Accessibility"
+#~ msgstr "Спеціальні можливості"
+
+#~ msgid "Accessibility Settings"
+#~ msgstr "Налаштовування спеціальних можливостей"
+
+#~ msgid "Desktop"
+#~ msgstr "Робочий стіл"
