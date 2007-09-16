@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-08 07:09+0100\n"
+"POT-Creation-Date: 2007-09-16 21:03+0200\n"
 "PO-Revision-Date: 2007-02-08 07:23+0100\n"
 "Last-Translator: Jordi Mallach <jordi@sindominio.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Accessibilitat"
+msgid "Universal Access"
+msgstr "Accés universal"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Paràmetres d'accessibilitat"
+msgid "Universal Access Settings"
+msgstr "Paràmetres d'accés universal"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -37,12 +37,13 @@ msgid "Applications"
 msgstr "Aplicacions"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Escriptori"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Preferències personals i paràmetres d'administració"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistema"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -147,16 +148,12 @@ msgid "Preferences"
 msgstr "Preferències"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Preferències relacionades amb l'accessibilitat"
+msgid "Universal access related preferences"
+msgstr "Preferències relacionades amb l'accés universal"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Preferències i paràmetres personals"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistema"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -167,7 +164,7 @@ msgid "Administration"
 msgstr "Administració"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "Canvia els paràmetres del sistema (afecta a tots els usuaris)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
@@ -270,3 +267,12 @@ msgstr "L'arbre del menú és buit"
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr ""
 "- proveu la implementació del GNOME de l'especificació del menú d'escriptori"
+
+#~ msgid "Accessibility"
+#~ msgstr "Accessibilitat"
+
+#~ msgid "Accessibility Settings"
+#~ msgstr "Paràmetres d'accessibilitat"
+
+#~ msgid "Desktop"
+#~ msgstr "Escriptori"
