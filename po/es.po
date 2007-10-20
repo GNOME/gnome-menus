@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-02 03:41+0100\n"
-"PO-Revision-Date: 2007-05-04 02:13+0200\n"
+"POT-Creation-Date: 2007-05-04 01:21+0100\n"
+"PO-Revision-Date: 2007-10-20 14:51+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +131,7 @@ msgstr "Aplicaciones que no entran en otras categorías"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
-msgstr "Otro"
+msgstr "Otras"
 
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
