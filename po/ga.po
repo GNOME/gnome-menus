@@ -1,19 +1,20 @@
 # Irish translations for gnome-menus package.
 # Copyright (C) 2007 Free Software Foundation, Inc.
-# Sean Burke <leftmostcat@gmail.com>, 2007.
+# Seán de Búrca <leftmostcat@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-16 03:38+0100\n"
-"PO-Revision-Date: 2007-07-15 22:48-0700\n"
-"Last-Translator: Sean Burke <leftmostcat@gmail.com>\n"
+"POT-Creation-Date: 2007-10-21 11:35-0600\n"
+"PO-Revision-Date: 2007-07-19 00:42-0700\n"
+"Last-Translator: Seán de Búrca <leftmostcat@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : (n%10==1 || n%10==2) ? 1 : (n%10>=3 && n%10<= 6) ? 2 : ((n%10>=7 && n%10<=9) || n==10) ? 3 : 4;\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : (n%10==1 || n%10==2) ? 1 : (n%"
+"10>=3 && n%10<= 6) ? 2 : ((n%10>=7 && n%10<=9) || n==10) ? 3 : 4;\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -99,7 +100,7 @@ msgstr "Feidhmchláir le rochtain idirlín mar gréasán agus ríomhphost"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Cuma"
+msgstr "Cuma agus Mothú"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
@@ -111,7 +112,7 @@ msgstr "Roghchlár ilmheán"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Fuaim & Fiseán"
+msgstr "Fuaim & Físeán"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -160,7 +161,7 @@ msgstr "Socruithe chórais"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr "Riaracháin"
+msgstr "Riarachán"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
@@ -204,8 +205,12 @@ msgid "Show"
 msgstr "Taispeáin"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Ní féidir comhadlann baile a aimsiú: níl socraithe i /etc/passwd agus níl luach do $HOME sa thimpealleacht"
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Ní féidir comhadlann baile a aimsiú: níl socraithe i /etc/passwd agus níl "
+"luach do $HOME sa timpealleacht"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -255,12 +260,10 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169
-#: ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Tá crann roghchláir folamh"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- tastáil feidhmiú le GNOME den tSonraíocht Roghchláir Dheisce"
-
