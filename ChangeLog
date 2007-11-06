@@ -1,3 +1,23 @@
+2007-11-06  Sebastian Dröge  <slomo@circular-chaos.org>
+
+	* configure.in:
+	* libmenu/Makefile.am:
+	* libmenu/menu-monitor-fam.c: (get_fam_connection),
+	(menu_monitor_backend_register_monitor),
+	(menu_monitor_backend_unregister_monitor):
+	* libmenu/menu-monitor-gio.c: (monitor_callback),
+	(menu_monitor_backend_register_monitor),
+	(menu_monitor_backend_unregister_monitor):
+	* libmenu/menu-monitor-none.c:
+	(menu_monitor_backend_register_monitor),
+	(menu_monitor_backend_unregister_monitor):
+	Add a menu monitor backend that uses GIO and improve the
+	monitor backend selection by adding a --with-monitor-backend
+	configure parameter. The GIO backend is the preffered one currently.
+	
+	* configure.in:
+	Bump version to 2.21.2.
+
 2007-10-15  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: post-release bump to 2.20.2

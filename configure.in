@@ -1,4 +1,4 @@
-AC_INIT([gnome-menus], [2.20.2],
+AC_INIT([gnome-menus], [2.21.2],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus])
 AC_CONFIG_SRCDIR(libmenu/gmenu-tree.h)
 
@@ -40,31 +40,46 @@ PKG_CHECK_MODULES(GLIB, glib-2.0 >= 2.6.0)
 AC_SUBST(GLIB_CFLAGS)
 AC_SUBST(GLIB_LIBS)
 
-AC_ARG_ENABLE(inotify,
-              [AC_HELP_STRING([--enable-inotify],
-                              [enable inotify support [default=no]])],,
-              [enable_inotify=no])
+AC_ARG_WITH(monitor_backend,
+	[AC_HELP_STRING([--with-monitor-backend=BACKEND],
+            [Select which monitor backend to use. Possible values are gio, inotify and fam [default=auto]])],
+	with_monitor_backend=$withval,
+	with_monitor_backend=auto)
 
-if test "x$enable_inotify" = "xyes" ; then
-  dnl check for inotify
-  AC_CHECK_FUNC(inotify_init,
-    [AC_CHECK_HEADER([sys/inotify.h],
-      [AC_DEFINE(HAVE_INOTIFY, [], [Define if we have inotify])],
-      AC_MSG_ERROR([No sys/inotify.h header found - cannot enable inotify support]))],
-    AC_MSG_ERROR([No inotify syscalls in libc found - cannot enable inotify support]))
+used_monitor_backend=
+if test "x$with_monitor_backend" = "xgio" -o "x$with_monitor_backend" = "xauto"; then
+  PKG_CHECK_MODULES(GIO, gio-2.0 >= 0.1, have_gio=yes, have_gio=no)
+	
+  if test "x$with_monitor_backend" = "gio" -a "x$have_gio" = "xno"; then
+    AC_MSG_ERROR([No GIO found -- cannot enable GIO support])
+  fi
+
+  if test "x$have_gio" = "xyes"; then
+    used_monitor_backend="gio"
+  fi
+  
+  AC_SUBST(GIO_CFLAGS)
+  AC_SUBST(GIO_LIBS)
 fi
 
-AM_CONDITIONAL(INOTIFY_SUPPORT, test "x$enable_inotify" = "xyes")
-
-if test "x$enable_inotify" != "xyes" ; then
+if test -z "$used_monitor_backend" -a \( "x$with_monitor_backend" = "xfam" -o "x$with_monitor_backend" = "xauto" \); then
   dnl check for FAM
   FAM_LIBS=
   AC_CHECK_LIB(fam, FAMOpen,
     [AC_CHECK_HEADERS(fam.h,
-      [AC_DEFINE(HAVE_FAM, [], [Define if we have FAM])
+      [have_fam=yes 
        FAM_LIBS="-lfam"],
-      AC_MSG_WARN(*** FAM support will not be built (header files not found) ***))],
-    AC_MSG_WARN(*** FAM support will not be built (FAM library not found) ***))
+      have_fam=no)],
+    have_fam=no)
+
+  if test "x$with_monitor_backend" = "fam" -a "x$have_fam" = "xno"; then
+    AC_MSG_ERROR([No FAM found -- cannot enable FAM support])
+  fi
+
+  if test "x$have_fam" = "xyes"; then
+    used_monitor_backend="fam"
+  fi
+
   AC_SUBST(FAM_LIBS)
 
   dnl check for gamin extension
@@ -73,6 +88,32 @@ if test "x$enable_inotify" != "xyes" ; then
   AC_CHECK_FUNCS(FAMNoExists)
   LIBS="$gmenu_save_libs"
 fi
+
+if test -z "$used_monitor_backend" -a \( "x$with_monitor_backend" = "xinotify" -o "x$with_monitor_backend" = "xauto" \); then
+  dnl check for inotify
+  AC_CHECK_FUNC(inotify_init,
+    [AC_CHECK_HEADER([sys/inotify.h],
+      have_inotify=yes,
+      have_inotify=no)],
+    have_inotify=no)
+
+  if test "x$with_monitor_backend" = "inotify" -a "x$have_inotfy" = "xno"; then
+    AC_MSG_ERROR([No inotify found -- cannot enable inotify support])
+  fi
+
+  if test "x$have_inotify" = "xyes"; then
+    used_monitor_backend="inotify"
+  fi
+fi
+
+if test -z "$used_monitor_backend"; then
+  used_monitor_backend="none"
+fi
+
+AM_CONDITIONAL(HAVE_GIO, test "x$used_monitor_backend" = "xgio")
+AM_CONDITIONAL(HAVE_FAM, test "x$used_monitor_backend" = "xfam")
+AM_CONDITIONAL(HAVE_INOTIFY, test "x$used_monitor_backend" = "xinotify")
+AM_CONDITIONAL(HAVE_NO_MONITOR_BACKEND, test "x$used_monitor_backend" = "xnone")
 
 GNOME_COMPILE_WARNINGS(yes)
 

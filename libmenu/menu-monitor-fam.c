@@ -22,14 +22,11 @@
 
 #include "menu-monitor-backend.h"
 
-#ifdef HAVE_FAM
 #include <string.h>
 #include <fam.h>
-#endif
 
 #include "menu-util.h"
 
-#ifdef HAVE_FAM
 static FAMConnection  fam_connection;
 static gboolean       opened_connection = FALSE;
 static gboolean       failed_to_connect = FALSE;
@@ -208,12 +205,10 @@ get_fam_connection (void)
 
   return failed_to_connect ? NULL : &fam_connection;
 }
-#endif /* HAVE_FAM */
 
 void
 menu_monitor_backend_register_monitor (MenuMonitor *monitor)
 {
-#ifdef HAVE_FAM
   FAMConnection *fam_connection;
   FAMRequest    *request;
 
@@ -269,14 +264,11 @@ menu_monitor_backend_register_monitor (MenuMonitor *monitor)
     }
 
   menu_monitor_set_backend_data (monitor, request);
-
-#endif /* HAVE_FAM */
 }
 
 void
 menu_monitor_backend_unregister_monitor (MenuMonitor *monitor)
 {
-#ifdef HAVE_FAM
   FAMRequest *request;
 
   if (failed_to_connect)
@@ -296,5 +288,4 @@ menu_monitor_backend_unregister_monitor (MenuMonitor *monitor)
       g_source_remove (fam_io_watch);
       fam_io_watch = 0;
     }
-#endif /* HAVE_FAM */
 }
