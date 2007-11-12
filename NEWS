@@ -1,4 +1,24 @@
 ==============
+Version 2.21.2
+==============
+
+  Features
+
+	* Add a new GIO-based monitor backend. It is now the preferred one.
+	  The --with-monitor-backend configure flag can be used to select the
+	  backend to build. (Sebastian Dröge)
+
+  Translators
+
+	* Anas Husseini (ar)
+	* Peter Bach (da)
+	* Jorge González (es)
+	* Seán de Búrca (ga)
+	* Ignacio Casal Quinteiro (gl)
+	* Huda Toriq (id)
+	* Matej Urbančič (sl)
+
+==============
 Version 2.20.1
 ==============
 
