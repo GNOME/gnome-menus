@@ -98,6 +98,8 @@ menu_monitor_backend_register_monitor (MenuMonitor *monitor)
         backend = G_OBJECT (fmonitor);
     }
 
+  g_object_unref (G_OBJECT (file));
+
   if (backend == NULL)
     {
       menu_verbose ("Not adding %s monitor on '%s', failed to create monitor\n",

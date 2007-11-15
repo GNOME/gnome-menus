@@ -1,3 +1,9 @@
+2007-11-15  Sebastian Dröge  <slomo@circular-chaos.org>
+
+	* libmenu/menu-monitor-gio.c:
+	(menu_monitor_backend_register_monitor):
+	Don't forget to unref the GFile to prevent a major memory leak.
+
 2007-11-12  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: post-release bump to 2.21.3
