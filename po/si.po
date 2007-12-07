@@ -113,11 +113,11 @@ msgstr "බහුමාද්‍ය මෙනුව"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "ශබ්ද සහ ද්‍රෘශ්‍ය"
+msgstr "ශබ්ද සහ දෘශ්‍ය"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "කාර්‍යාලිය"
+msgstr "කාර්‍යයාලීය"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
