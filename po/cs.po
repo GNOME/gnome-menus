@@ -1,34 +1,33 @@
-# translation of cs.po to Czech
 # Czech translation of gnome-menus.
-# Copyright (C) 2004, 2005 gnome-menus' COPYRIGHT HOLDER
-# Copyright (C) 2004, 2005 Miloslav Trmac <mitr@volny.cz>
+# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005 Miloslav Trmac <mitr@volny.cz>.
 # This file is distributed under the same license as the gnome-menus package.
-#
 # Miloslav Trmac <mitr@volny.cz>, 2004, 2005.
 # Petr Tomeš <ptomes@gmail.com>, 2006.
 # Jakub Friedl <jfriedl@suse.cz>, 2007.
+# Petr Kovar <pknbe@volny.cz>, 2007.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: cs\n"
+"Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-22 13:37+0100\n"
-"PO-Revision-Date: 2007-01-22 13:54+0100\n"
-"Last-Translator: Jakub Friedl <jfriedl@suse.cz>\n"
+"POT-Creation-Date: 2007-11-25 22:25+0100\n"
+"PO-Revision-Date: 2007-11-03 04:44+0100\n"
+"Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Usnadnění"
+msgid "Universal Access"
+msgstr "Zpřístupnění"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Nastavení usnadnění"
+msgid "Universal Access Settings"
+msgstr "Nastavení zpřístupnění"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -43,12 +42,13 @@ msgid "Applications"
 msgstr "Aplikace"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Pracovní plocha"
+msgid "Personal preferences and administration settings"
+msgstr "Osobní předvolby a nastavení správy"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
-msgid "Personal preferences and administration settings"
-msgstr "Osobní nastavení a nastavení správy"
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Systém"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -56,7 +56,7 @@ msgstr "Programování"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Nástroje pro vývoj software"
+msgstr "Nástroje na vývoj softwaru"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -76,7 +76,7 @@ msgstr "Grafika"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Aplikace pro graficku"
+msgstr "Aplikace pro grafiku"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -128,7 +128,7 @@ msgstr "Kancelářské aplikace"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Aplikace které nepatří do jiných kategorií"
+msgstr "Aplikace nepatřící do jiných kategorií"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -144,24 +144,20 @@ msgstr "Osobní nastavení"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Osobní nastavení"
+msgstr "Osobní předvolby"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Nastavení"
+msgstr "Předvolby"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Nastavení související s usnadněním"
+msgid "Universal access related preferences"
+msgstr "Předvolby související se zpřístupněním"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Osobní nastavení"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Systém"
+msgstr "Osobní předvolby a nastavení"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -172,8 +168,8 @@ msgid "Administration"
 msgstr "Správa"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "Změnit nastavení systému (mají vliv na všechny uživatele)"
+msgid "Change system-wide settings (affects all users)"
+msgstr "Změnit nastavení pro celý systém (ovlivní všechny uživatele)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -197,11 +193,11 @@ msgstr "_Aplikace:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "_Implicitní"
+msgstr "Vý_chozí"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "_Nabídka:"
+msgstr "Na_bídka:"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
@@ -217,7 +213,7 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Nemohu najít domovský adresář: nenastaveno v /etc/passwd a žádná hodnota "
+"Nelze najít domovský adresář: nenastaveno v /etc/passwd a žádná hodnota "
 "$HOME v prostředí"
 
 #: ../util/test-menu-spec.c:33
@@ -230,15 +226,15 @@ msgstr "SOUBOR_NABÍDKY"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Sledovat změny nabídky"
+msgstr "Sleduje změny nabídky"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "Zahrnout <Exclude>ované položky"
+msgstr "Zahrne položky \"<Exclude>\""
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "Zahrnout položky s NoDisplay=true"
+msgstr "Zahrne položky s \"NoDisplay=true\""
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
@@ -246,11 +242,11 @@ msgstr "Neplatné ID souboru desktop"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Neplatné jméno souboru]"
+msgstr "[Neplatný název souboru]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
-msgstr " <vynecháno>"
+msgstr " <excluded>"
 
 #: ../util/test-menu-spec.c:164
 msgid ""
@@ -264,7 +260,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Nabídka změněna, načítám znovu ====\n"
+"==== Nabídka změněna, načítá se znovu ====\n"
 "\n"
 "\n"
 
@@ -274,5 +270,4 @@ msgstr "Strom nabídky je prázdný"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- otestovat implementaci Desktop Menu Specification pro GNOME"
-
+msgstr "- otestuje implementaci \"Desktop Menu Specification\" v GNOME"
