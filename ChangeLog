@@ -1,3 +1,9 @@
+2007-12-14  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* libmenu/menu-monitor-gio.c:
+	(menu_monitor_backend_register_monitor):
+	Fix for api change in gio.
+
 2007-11-15  Sebastian Dröge  <slomo@circular-chaos.org>
 
 	* libmenu/menu-monitor-gio.c:

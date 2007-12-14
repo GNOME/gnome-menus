@@ -23,9 +23,7 @@
 
 #include "menu-monitor-backend.h"
 
-#include <gio/gfile.h>
-#include <gio/gfilemonitor.h>
-#include <gio/gdirectorymonitor.h>
+#include <gio/gio.h>
 
 #include "menu-util.h"
 
@@ -85,14 +83,14 @@ menu_monitor_backend_register_monitor (MenuMonitor *monitor)
 
   if (menu_monitor_get_is_directory (monitor))
     {
-      GDirectoryMonitor *dmonitor = g_file_monitor_directory (file, G_FILE_MONITOR_FLAGS_NONE, NULL);
+      GDirectoryMonitor *dmonitor = g_file_monitor_directory (file, G_FILE_MONITOR_NONE, NULL);
 
       if (dmonitor)
         backend = G_OBJECT (dmonitor);
     }
   else
     {
-      GFileMonitor *fmonitor = g_file_monitor_file (file, G_FILE_MONITOR_FLAGS_NONE, NULL);
+      GFileMonitor *fmonitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE, NULL);
 
       if (fmonitor)
         backend = G_OBJECT (fmonitor);
