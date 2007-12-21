@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-10-21 11:35-0600\n"
-"PO-Revision-Date: 2007-07-19 00:42-0700\n"
+"POT-Creation-Date: 2007-12-20 22:46-0700\n"
+"PO-Revision-Date: 2007-12-20 22:46-0700\n"
 "Last-Translator: Seán de Búrca <leftmostcat@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -181,7 +181,7 @@ msgstr "Eagarthóir Roghchláir"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Eagar Roghchláir"
+msgstr "Cuir Roghchláir in Eagar"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -256,7 +256,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Roghchlár athruithe, ag athluchtú ====\n"
+"==== Roghchlár athruithe, á athluchtú ====\n"
 "\n"
 "\n"
 
