@@ -1,5 +1,12 @@
 2007-12-22  Olav Vitters  <olav@bkor.dhs.org>
 
+	* README:
+	* configure.in: Post-release bump to 2.21.4
+
+==================== 2.21.3 ====================
+
+2007-12-22  Olav Vitters  <olav@bkor.dhs.org>
+
 	* NEWS: Update.
 
 2007-12-14  Kjartan Maraas  <kmaraas@gnome.org>
