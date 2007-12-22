@@ -1,4 +1,20 @@
 ==============
+Version 2.21.3
+==============
+
+  Features
+
+	* Fix for api change in gio (Kjartan Maraas)
+	* Prevent a major memory leak (Sebastian Droge)
+
+  Translators
+
+
+	* Petr Kovar (cs)
+	* Seán de Búrca (ga)
+	* Danishka Navin (si)
+
+==============
 Version 2.21.2
 ==============
 
