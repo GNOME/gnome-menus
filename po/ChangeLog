@@ -1,3 +1,8 @@
+2008-01-04  Andre Klapper  <a9016009@gmx.de>
+
+	* LINGUAS:
+	* af.po: Add Afrikaans translation on behalf of
+	Friedel Wolff (bug #507247).
 
 2007-12-14  Danishka Navin <danishka@gmail.com>
 
