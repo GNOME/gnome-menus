@@ -4,13 +4,14 @@
 # Roy-Magne Mo <rmo@sunnmore.net>, 2001.
 # Åsmund Skjæveland <aasmunds@fys.uio.no>, 2003, 2004.
 # Kjartan Maraas <kmaraas@gnome.org>, 2005.
+# Eskild Hustvedt <eskildh@gnome.org>, 2008
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center 2.9.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-09 12:00+0100\n"
-"PO-Revision-Date: 2006-03-09 12:06+0100\n"
+"PO-Revision-Date: 2008-01-06 19:48+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -142,11 +143,11 @@ msgstr "Oppsett og overvaking av systemet"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr ""
+msgstr "Menyredigerar"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr ""
+msgstr "Rediger menyar"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -173,7 +174,7 @@ msgstr "Vis"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr ""
+msgstr "Klarte ikkje finne heimemappe: ikkje satt i /etc/passwd og ingen verdi for $HOME i miljøet"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -185,27 +186,27 @@ msgstr "MENY_FIL"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr ""
+msgstr "Overvak menyen for endringar"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr ""
+msgstr "Inkluder oppføringar som har blitt ekskludert med <exclude>"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr ""
+msgstr "Inkluder oppføringar som er satt til å ikkje bli vist med NoDisplay=true"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr ""
+msgstr "Ugyldig ID for desktop-fil"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr ""
+msgstr "[Ugyldig filnamn]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
-msgstr ""
+msgstr " <ekskludert>"
 
 #: ../util/test-menu-spec.c:164
 msgid ""
@@ -215,12 +216,12 @@ msgid ""
 "==== Menu changed, reloading ====\n"
 "\n"
 "\n"
-msgstr ""
+msgstr "\n\n\n==== Meny endra, lastar på nytt ===\n\n\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr ""
+msgstr "Menytreet er tomt"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
+msgstr "- test GNOME sin implementasjon av desktop-meny spesifikasjonen"
