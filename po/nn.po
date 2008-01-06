@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center 2.9.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-09 12:00+0100\n"
-"PO-Revision-Date: 2008-01-06 19:48+0100\n"
+"POT-Creation-Date: 2008-01-06 19:50+0100\n"
+"PO-Revision-Date: 2008-01-06 19:54+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -21,12 +21,12 @@ msgstr ""
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
+msgid "Universal Access"
 msgstr "Tilgjenge"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Tilgjengeinnstillingar"
+msgid "Universal Access Settings"
+msgstr "Innstillingar for tilgjenge"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -41,12 +41,13 @@ msgid "Applications"
 msgstr "Program"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Skrivebord"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Personlege brukarval og innstillingar"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "System"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -76,6 +77,22 @@ msgstr "Grafikk"
 msgid "Graphics applications"
 msgstr "Grafikk-program"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Maskinvare"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Innstillingar for fleire maskinvareeiningar"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "Internett og nettverk"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Nettverksrelaterte innstillingar"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "Internett"
@@ -83,6 +100,14 @@ msgstr "Internett"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Program for bruk på Internett til dømes nettlesar og e-post"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Utsjåande"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Innstillingar som kontrollerar skrivebordets utsjåande og oppførsel"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -108,6 +133,14 @@ msgstr "Program som ikkje passar i andre kategoriar"
 msgid "Other"
 msgstr "Anna"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Personleg"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Personlege innstillingar"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Personlege brukarval"
@@ -118,24 +151,28 @@ msgid "Preferences"
 msgstr "Brukarval"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Innstillingar for tilgjenge"
+msgid "Universal access related preferences"
+msgstr "Innstillingar relatert til tilgjenge"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Personlege brukarval og innstillingar"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Systeminnstillingar"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "Administrasjon"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
+msgid "Change system-wide settings (affects all users)"
 msgstr "Gjer om instillingar for heile systemet (påverkar alle brukarar)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Systemverkty"
+msgstr "Systemverktøy"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
@@ -174,7 +211,9 @@ msgstr "Vis"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Klarte ikkje finne heimemappe: ikkje satt i /etc/passwd og ingen verdi for $HOME i miljøet"
+msgstr ""
+"Klarte ikkje finne heimemappe: ikkje satt i /etc/passwd og ingen verdi for "
+"$HOME i miljøet"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -194,7 +233,8 @@ msgstr "Inkluder oppføringar som har blitt ekskludert med <exclude>"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "Inkluder oppføringar som er satt til å ikkje bli vist med NoDisplay=true"
+msgstr ""
+"Inkluder oppføringar som er satt til å ikkje bli vist med NoDisplay=true"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
@@ -209,6 +249,7 @@ msgid " <excluded>"
 msgstr " <ekskludert>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -216,7 +257,13 @@ msgid ""
 "==== Menu changed, reloading ====\n"
 "\n"
 "\n"
-msgstr "\n\n\n==== Meny endra, lastar på nytt ===\n\n\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Meny endra, lastar på nytt ===\n"
+"\n"
+"\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
@@ -225,3 +272,9 @@ msgstr "Menytreet er tomt"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- test GNOME sin implementasjon av desktop-meny spesifikasjonen"
+
+#~ msgid "Accessibility"
+#~ msgstr "Tilgjenge"
+
+#~ msgid "Desktop"
+#~ msgstr "Skrivebord"
