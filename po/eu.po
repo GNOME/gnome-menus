@@ -1,19 +1,17 @@
-# translation of eu.po to Basque
-# translation of gnome-menus.HEAD.po Basque
+# translation of gnome-menus.HEAD.po to Basque
 # This file is distributed under the same license as the gnome-menus package.
-# Copyright (C) 2004 Mikel Olasagasti.
 #
 # Mikel Olasagasti <hey_neken@mundurat.net>, 2004, 2005.
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2005, 2007.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2005, 2007, 2008.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: eu\n"
+"Project-Id-Version: gnome-menus.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-04 11:48+0200\n"
-"PO-Revision-Date: 2007-08-04 11:50+0200\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
-"Language-Team: Basque <eu@li.org>\n"
+"POT-Creation-Date: 2008-01-08 11:23+0100\n"
+"PO-Revision-Date: 2008-01-07 18:31+0100\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
+"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -271,4 +269,3 @@ msgstr "Menuaren zuhaitza hutsik dago"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- probatu GNOMEren mahaigaineko menuak zehazteko inplementazioa"
-
