@@ -1,3 +1,17 @@
+2008-01-08  Wouter Bolsterlee  <wbolster@svn.gnome.org>
+
+	reviewed by: Vincent Untz
+
+	* configure.in:
+	* libmenu/menu-monitor-gio.c:
+	(menu_monitor_backend_register_monitor),
+	(menu_monitor_backend_unregister_monitor):
+
+	Adapt to GIO file and directory monitoring API changes.
+	Initial patch by Sebastian Bacher, but updated to
+	actually do the right thing by Wouter Bolsterlee.
+	Fixes bug #507938
+
 2007-12-22  Olav Vitters  <olav@bkor.dhs.org>
 
 	* README:

@@ -68,8 +68,8 @@ monitor_callback (GFileMonitor      *monitor,
 void
 menu_monitor_backend_register_monitor (MenuMonitor *monitor)
 {
-  GObject *backend = NULL;
   GFile *file;
+  GFileMonitor *file_monitor;
 
   file = g_file_new_for_path (menu_monitor_get_path (monitor));
 
@@ -82,47 +82,33 @@ menu_monitor_backend_register_monitor (MenuMonitor *monitor)
     }
 
   if (menu_monitor_get_is_directory (monitor))
-    {
-      GDirectoryMonitor *dmonitor = g_file_monitor_directory (file, G_FILE_MONITOR_NONE, NULL);
-
-      if (dmonitor)
-        backend = G_OBJECT (dmonitor);
-    }
+      file_monitor = g_file_monitor_directory (file, G_FILE_MONITOR_NONE, NULL);
   else
-    {
-      GFileMonitor *fmonitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE, NULL);
-
-      if (fmonitor)
-        backend = G_OBJECT (fmonitor);
-    }
+      file_monitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE, NULL);
 
   g_object_unref (G_OBJECT (file));
 
-  if (backend == NULL)
+  if (file_monitor == NULL)
     {
       menu_verbose ("Not adding %s monitor on '%s', failed to create monitor\n",
                     menu_monitor_get_is_directory (monitor) ? "directory" : "file",
                     menu_monitor_get_path (monitor));
       return;
     }
-  
-  g_signal_connect (backend, "changed", G_CALLBACK (monitor_callback), monitor);
 
-  menu_monitor_set_backend_data (monitor, backend);
+  g_signal_connect (file_monitor, "changed", G_CALLBACK (monitor_callback), monitor);
+
+  menu_monitor_set_backend_data (monitor, file_monitor);
 }
 
 void
 menu_monitor_backend_unregister_monitor (MenuMonitor *monitor)
 {
-  GObject *backend;
+  GFileMonitor *file_monitor;
 
-  if ((backend = G_OBJECT (menu_monitor_get_backend_data (monitor))) != NULL)
+  if ((file_monitor = menu_monitor_get_backend_data (monitor)) != NULL)
     {
-      if (G_IS_FILE_MONITOR (backend)) 
-        g_file_monitor_cancel (G_FILE_MONITOR (backend));
-      else
-        g_directory_monitor_cancel (G_DIRECTORY_MONITOR (backend));
-      
-      g_object_unref (backend);
+      g_file_monitor_cancel (file_monitor);
+      g_object_unref (file_monitor);
     }
 }
