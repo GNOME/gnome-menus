@@ -82,9 +82,11 @@ menu_monitor_backend_register_monitor (MenuMonitor *monitor)
     }
 
   if (menu_monitor_get_is_directory (monitor))
-      file_monitor = g_file_monitor_directory (file, G_FILE_MONITOR_NONE, NULL);
+      file_monitor = g_file_monitor_directory (file, G_FILE_MONITOR_NONE,
+                                               NULL, NULL);
   else
-      file_monitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE, NULL);
+      file_monitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE,
+                                          NULL, NULL);
 
   g_object_unref (G_OBJECT (file));
 

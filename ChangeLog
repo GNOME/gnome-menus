@@ -1,3 +1,9 @@
+2008-01-14  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/menu-monitor-gio.c:
+	(menu_monitor_backend_register_monitor): update for
+	g_file_monitor_directory()/g_file_monitor_file() API change
+
 2008-01-08  Wouter Bolsterlee  <wbolster@svn.gnome.org>
 
 	reviewed by: Vincent Untz
