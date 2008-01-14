@@ -1,5 +1,11 @@
 2008-01-14  Vincent Untz  <vuntz@gnome.org>
 
+	* NEWS:
+	* README:
+	* configure.in: Version 2.21.5.
+
+2008-01-14  Vincent Untz  <vuntz@gnome.org>
+
 	* libmenu/menu-monitor-gio.c:
 	(menu_monitor_backend_register_monitor): update for
 	g_file_monitor_directory()/g_file_monitor_file() API change

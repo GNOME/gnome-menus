@@ -1,4 +1,22 @@
 ==============
+Version 2.21.5
+==============
+
+  Fixes
+
+	* Fix for API changes in gio (Sebastian Bacher, Wouter Bolsterlee,
+	  Vincent)
+
+  Translators
+
+
+	* F Wolff (af)
+	* Iñaki Larrañaga Murgoitio (eu)
+	* Erdal Ronahi (ku)
+	* Kjartan Maraas (nn)
+	* Yannig Marchegay (Kokoyaya) (oc)
+
+==============
 Version 2.21.3
 ==============
 
