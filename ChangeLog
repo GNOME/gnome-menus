@@ -1,3 +1,8 @@
+2008-01-20  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: test for gio 2.15.2
+	Fix bug #509826. Thanks to Saleem Abdulrasool <compnerd@compnerd.org>
+
 2008-01-14  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: post-release bump to 2.21.90
