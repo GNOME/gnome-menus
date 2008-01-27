@@ -2,15 +2,15 @@
 # Copyright (C) 2005 THE gnome-menus'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-menus package.
 # Ales Nyakhaychyk <nab@mail.by>, 2005, 2007
-# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006, 2008.
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus\n"
+"Project-Id-Version: gnome-menus gnome-2-12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 14:30+0200\n"
-"PO-Revision-Date: 2008-01-26 14:42+0200\n"
-"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
+"POT-Creation-Date: 2007-05-02 03:41+0100\n"
+"PO-Revision-Date: 2007-06-13 23:52+0300\n"
+"Last-Translator: Alexander Nyakhaychyk <nyakhaychyk@gmail.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,40 +19,40 @@ msgstr ""
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Універсальны доступ"
+msgstr "Унівэрсальны доступ"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Налады універсальнага доступу"
+msgstr "Настаўленьні унівэрсальнага доступу"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
-msgstr "Інструменты"
+msgstr "Інструмэнты"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Настольныя інструменты"
+msgstr "Настольныя інструмэнты"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
-msgstr "Праграмы"
+msgstr "Дастасаваньні"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Personal preferences and administration settings"
-msgstr "Прыватныя і адміністрацыйныя налады"
+msgstr "Прыватныя перавагі і адміністрацыйныя настаўленьні"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 #: ../desktop-directories/System.directory.in.h:1
 msgid "System"
-msgstr "Сістэма"
+msgstr "Сыстэма"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
-msgstr "Праграмаванне"
+msgstr "Праграмаваньне"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Прыладдзе для распрацоўкі праграм"
+msgstr "Інструмэнты для распрацоўкі праграм"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -72,7 +72,7 @@ msgstr "Графіка"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Праграмы для работы з графікай"
+msgstr "Графічныя дастасаваньні"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -80,7 +80,7 @@ msgstr "Апаратура"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "Налады для некаторых тыпаў апаратуры"
+msgstr "Настаўленьні для апаратуры"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
@@ -88,7 +88,7 @@ msgstr "Інтэрнэт і сетка"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
-msgstr "Налады сеткі"
+msgstr "Настаўленьні сеткі"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
@@ -96,23 +96,23 @@ msgstr "Інтэрнэт"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Праграмы для доступу ў Інтэрнэт"
+msgstr "Праграмы для доступу ў Інтэрнэт (Сеціва, пошта і інш.)"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Аздабленне"
+msgstr "Вонкавы выгляд"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Налады аздаблення і паводзін рабочага асяроддзя"
+msgstr "Настаўленьні, якія кантралююць вонавы выгляд і паводзіны асяродзьдзя"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Мультымедыйнае меню"
+msgstr "Мультымэдыя"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Гук і відэа"
+msgstr "Аўдыё і відэа"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -120,80 +120,80 @@ msgstr "Офіс"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Офісныя праграмы"
+msgstr "Офісныя дастасаваньні"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Праграмы, якія не трапілі ў іншыя катэгорыі"
+msgstr "Дастасаваньні, якія ня трапілі ў іншыя катэгорыі"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
-msgstr "Іншае"
+msgstr "Іншыя"
 
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
-msgstr "Прыватнае"
+msgstr "Пэрсанальныя"
 
 #: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal settings"
-msgstr "Прыватныя налады"
+msgstr "Пэрсанальныя настаўленьні"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Прыватныя налады"
+msgstr "Асабістыя перавагі"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Налады"
+msgstr "Перавагі"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Universal access related preferences"
-msgstr "Налады, якія датычаць універсальнага доступу"
+msgstr "Перавагі, якія датычацца унівэрсальнага доступу"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Прыватныя налады"
+msgstr "Пэрсанальныя перавагі і настаўленьні"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
-msgstr "Сістэмныя налады"
+msgstr "Сыстэмныя настаўленьні"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
-msgstr "Адміністраванне"
+msgstr "Адміністраваньне"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Змяняй сістэмныя налады (уплывае на ўсіх карыстальнікаў)"
+msgstr "Зьмены сыстэмных настаўленьняў (датычацца ўсіх карыстальнікаў"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Сістэмнае прыладдзе"
+msgstr "Сыстэмныя інструмэнты"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Канфігураванне сістэмы і нагляд за яе работай"
+msgstr "Наладка сыстэмы і маніторынг"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Рэдактар меню"
+msgstr "Рэдактар мэню"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Змяняй выклад меню"
+msgstr "Дазваляе рэдагаваць мэню"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
-msgstr "_Праграмы:"
+msgstr "Д_астасаваньні:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "_Змоўчанні"
+msgstr "Пра_двызначаныя значэньні"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "_Меню:"
+msgstr "_Мэню:"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
@@ -202,47 +202,47 @@ msgstr "Назва"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
 msgid "Show"
-msgstr "Пакажы"
+msgstr "Паказваць"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Немагчыма знайсці хатні каталог: не акрэслена ў файле /etc/passwd, а таксама "
-"зменная асяроддзя $HOME не акрэслена."
+"Немагчыма знайсьці сваю тэчку: яна ня вызначаная ў /etc/passwd, а таксама "
+"зьменная асяродзьдзя $HOME нявызначаная"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
-msgstr "Файл меню"
+msgstr "Файл мэню"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "ФАЙЛ_МЕНЮ"
+msgstr "ФАЙЛ_МЭНЮ"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Сачы за зменамі меню"
+msgstr "Сачыць за зьменамі мэню"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "Уключы выключаныя (<Exclude>) пункты"
+msgstr "Уключыць <Выключан>ыя пункты"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "Уключы элементы са значэннем NoDisplay=true"
+msgstr "Уключыць NoDisplay=true элемэнты"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "Няправільны ідэнтыфікатар файла асяроддзя"
+msgstr "Кепскі ID desktop-файла"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Няправільная назва файла]"
+msgstr "[Кепская назва файла]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
-msgstr " <excluded>"
+msgstr " <выключаны>"
 
 #: ../util/test-menu-spec.c:164
 msgid ""
@@ -256,14 +256,14 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Меню змянілася. Перачытваецца ====\n"
+"==== Мэню зьмянілася; перачытваецца... ====\n"
 "\n"
 "\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "Пустое дрэва меню"
+msgstr "Мэню пустое"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- правер імплементацыю спецыфікацыі меню ў асяроддзі GNOME"
+msgstr "- праверыць рэалізацыю спэцыфікацыі мэню стальца ў GNOME"
