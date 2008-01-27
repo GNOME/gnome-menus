@@ -1,3 +1,9 @@
+2008-01-28  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.21.90.
+
 2008-01-20  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: test for gio 2.15.2

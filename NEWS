@@ -1,3 +1,18 @@
+===============
+Version 2.21.90
+===============
+
+  Misc
+
+	* When using gio, require version 2.15.2 (Saleem Abdulrasool) 
+
+  Translators
+
+
+	* Djihed Afifi (ar)
+	* Alexander Nyakhaychyk (be)
+	* Michael Terry (io)
+
 ==============
 Version 2.21.5
 ==============
