@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-21 12:07+0100\n"
+"POT-Creation-Date: 2008-02-02 21:53+0100\n"
 "PO-Revision-Date: 2007-12-23 12:20+0100\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -97,7 +97,8 @@ msgstr "Internet"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Logicials per accedir a internet, coma lo web o los messatges electronics"
+msgstr ""
+"Logicials per accedir a internet, coma lo web o los messatges electronics"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -203,7 +204,7 @@ msgstr "Nom"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
 msgid "Show"
-msgstr "Mostrar"
+msgstr "Visualizar"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
@@ -246,6 +247,7 @@ msgid " <excluded>"
 msgstr " <excluses>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -267,5 +269,5 @@ msgstr "L'arborescéncia de menut es voida"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- ensajar l'implementacion GNOME de l'especificacion dels menuts .desktop"
-
+msgstr ""
+"- ensajar l'implementacion GNOME de l'especificacion dels menuts .desktop"
