@@ -46,8 +46,6 @@ MenuMonitor *menu_get_directory_monitor (const char *path);
 MenuMonitor *menu_monitor_ref   (MenuMonitor *monitor);
 void         menu_monitor_unref (MenuMonitor *monitor);
 
-const char *menu_monitor_get_path (MenuMonitor *monitor);
-
 void menu_monitor_add_notify    (MenuMonitor           *monitor,
 				 MenuMonitorNotifyFunc  notify_func,
 				 gpointer               user_data);

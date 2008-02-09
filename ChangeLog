@@ -1,3 +1,19 @@
+2008-02-09  Vincent Untz  <vuntz@gnome.org>
+
+	We don't need multiple monitor backends anymore. Just depend on gio.
+
+	* configure.in: unconditionnally depend on gio, remove backend
+	selection cruft
+	* libmenu/Makefile.am:
+	* libmenu/menu-monitor.c: (get_registry_key), (monitor_callback),
+	(register_monitor), (lookup_monitor), (menu_monitor_unref):
+	* libmenu/menu-monitor.h:
+	* libmenu/menu-monitor-backend.h: killed
+	* libmenu/menu-monitor-fam.c: killed
+	* libmenu/menu-monitor-gio.c: killed 
+	* libmenu/menu-monitor-inotify.c: killed
+	* libmenu/menu-monitor-none.c: killed
+
 2008-01-28  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: post-release bump to 2.21.91

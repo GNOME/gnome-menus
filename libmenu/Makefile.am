@@ -1,30 +1,5 @@
 NULL = 
 
-# only one will be defined
-if HAVE_GIO
-MONITOR_CFLAGS = $(GIO_CFLAGS)
-MONITOR_LIBS = $(GIO_LIBS)
-MONITOR_SOURCES = menu-monitor-gio.c
-endif
-
-if HAVE_FAM
-MONITOR_CFLAGS =
-MONITOR_LIBS = $(FAM_LIBS)
-MONITOR_SOURCES = menu-monitor-fam.c
-endif
-
-if HAVE_INOTIFY
-MONITOR_CFLAGS =
-MONITOR_LIBS =
-MONITOR_SOURCES = menu-monitor-inotify.c
-endif
-
-if HAVE_NO_MONITOR_BACKEND
-MONITOR_CFLAGS =
-MONITOR_LIBS =
-MONITOR_SOURCES = menu-monitor-none.c
-endif
-
 INCLUDES =				\
 	-DGMENU_I_KNOW_THIS_IS_UNSTABLE	\
 	$(GLIB_CFLAGS)			\
@@ -49,7 +24,6 @@ libgnome_menu_la_SOURCES =		\
 	menu-layout.h			\
 	menu-monitor.c			\
 	menu-monitor.h			\
-	menu-monitor-backend.h		\
 	menu-util.c			\
 	menu-util.h			\
 	$(MONITOR_SOURCES)		\
@@ -72,10 +46,6 @@ libgnome_menu_include_HEADERS =		\
 	$(NULL)
 
 EXTRA_DIST =				\
-	menu-monitor-gio.c		\
-	menu-monitor-fam.c		\
-	menu-monitor-inotify.c		\
-	menu-monitor-none.c		\
         libgnome-menu.pc.in		\
         libgnome-menu-uninstalled.pc.in	\
 	$(NULL)

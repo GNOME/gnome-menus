@@ -1,5 +1,8 @@
 /*
  * Copyright (C) 2005 Red Hat, Inc.
+ * Copyright (C) 2006 Mark McLoughlin
+ * Copyright (C) 2007 Sebastian Dröge
+ * Copyright (C) 2008 Vincent Untz
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,7 +24,8 @@
 
 #include "menu-monitor.h"
 
-#include "menu-monitor-backend.h"
+#include <gio/gio.h>
+
 #include "menu-util.h"
 
 struct MenuMonitor
@@ -31,10 +35,17 @@ struct MenuMonitor
 
   GSList *notifies;
 
-  gpointer backend_data;
+  GFileMonitor *monitor;
 
   guint is_directory : 1;
 };
+
+typedef struct
+{
+  MenuMonitor      *monitor;
+  MenuMonitorEvent  event;
+  char             *path;
+} MenuMonitorEventInfo;
 
 typedef struct
 {
@@ -130,7 +141,7 @@ emit_events_in_idle (void)
   return FALSE;
 }
 
-void
+static void
 menu_monitor_queue_event (MenuMonitorEventInfo *event_info)
 {
   pending_events = g_slist_append (pending_events, event_info);
@@ -141,25 +152,6 @@ menu_monitor_queue_event (MenuMonitorEventInfo *event_info)
     }
 }
 
-gboolean
-menu_monitor_get_is_directory (MenuMonitor *monitor)
-{
-  return monitor->is_directory;
-}
-
-void
-menu_monitor_set_backend_data (MenuMonitor *monitor,
-			       gpointer     backend_data)
-{
-  monitor->backend_data = backend_data;
-}
-
-gpointer
-menu_monitor_get_backend_data (MenuMonitor *monitor)
-{
-  return monitor->backend_data;
-}
-
 static inline char *
 get_registry_key (const char *path,
 		  gboolean    is_directory)
@@ -167,6 +159,88 @@ get_registry_key (const char *path,
   return g_strdup_printf ("%s:%s",
 			  path,
 			  is_directory ? "<dir>" : "<file>");
+}
+
+static gboolean
+monitor_callback (GFileMonitor      *monitor,
+                  GFile             *child,
+                  GFile             *other_file,
+                  GFileMonitorEvent eflags,
+                  gpointer          user_data)
+{
+  MenuMonitorEventInfo *event_info;
+  MenuMonitorEvent      event;
+  MenuMonitor          *menu_monitor = (MenuMonitor *) user_data;
+
+  event = MENU_MONITOR_EVENT_INVALID;
+  switch (eflags)
+    {
+    case G_FILE_MONITOR_EVENT_CHANGED:
+      event = MENU_MONITOR_EVENT_CHANGED;
+      break;
+    case G_FILE_MONITOR_EVENT_CREATED:
+      event = MENU_MONITOR_EVENT_CREATED;
+      break;
+    case G_FILE_MONITOR_EVENT_DELETED:
+      event = MENU_MONITOR_EVENT_DELETED;
+      break;
+    default:
+      return TRUE;
+    }
+
+  event_info = g_new0 (MenuMonitorEventInfo, 1);
+
+  event_info->path    = g_file_get_parse_name (child);
+  event_info->event   = event;
+  event_info->monitor = menu_monitor;
+
+  menu_monitor_queue_event (event_info);
+
+  return TRUE;
+}
+
+static MenuMonitor *
+register_monitor (const char *path,
+		  gboolean    is_directory)
+{
+  MenuMonitor  *retval;
+  GFile        *file;
+
+  retval = g_new0 (MenuMonitor, 1);
+
+  retval->path         = g_strdup (path);
+  retval->refcount     = 1;
+  retval->is_directory = is_directory != FALSE;
+
+  file = g_file_new_for_path (retval->path);
+
+  if (file == NULL)
+    {
+      menu_verbose ("Not adding monitor on '%s', failed to create GFile\n",
+                    retval->path);
+      return retval;
+    }
+
+  if (retval->is_directory)
+      retval->monitor = g_file_monitor_directory (file, G_FILE_MONITOR_NONE,
+                                                  NULL, NULL);
+  else
+      retval->monitor = g_file_monitor_file (file, G_FILE_MONITOR_NONE,
+                                             NULL, NULL);
+
+  g_object_unref (G_OBJECT (file));
+
+  if (retval->monitor == NULL)
+    {
+      menu_verbose ("Not adding monitor on '%s', failed to create monitor\n",
+                    retval->path);
+      return retval;
+    }
+
+  g_signal_connect (retval->monitor, "changed",
+                    G_CALLBACK (monitor_callback), retval);
+
+  return retval;
 }
 
 static MenuMonitor *
@@ -194,14 +268,7 @@ lookup_monitor (const char *path,
 
   if (retval == NULL)
     {
-      retval = g_new0 (MenuMonitor, 1);
-
-      retval->path         = g_strdup (path);
-      retval->refcount     = 1;
-      retval->is_directory = is_directory != FALSE;
-
-      menu_monitor_backend_register_monitor (retval);
-
+      retval = register_monitor (path, is_directory);
       g_hash_table_insert (monitors_registry, registry_key, retval);
 
       return retval;
@@ -290,7 +357,12 @@ menu_monitor_unref (MenuMonitor *monitor)
       monitors_registry = NULL;
     }
 
-  menu_monitor_backend_unregister_monitor (monitor);
+  if (monitor->monitor)
+    {
+      g_file_monitor_cancel (monitor->monitor);
+      g_object_unref (monitor->monitor);
+      monitor->monitor = NULL;
+    }
 
   g_slist_foreach (monitor->notifies, (GFunc) menu_monitor_notify_unref, NULL);
   g_slist_free (monitor->notifies);
@@ -302,14 +374,6 @@ menu_monitor_unref (MenuMonitor *monitor)
   monitor->path = NULL;
 
   g_free (monitor);
-}
-
-const char *
-menu_monitor_get_path (MenuMonitor *monitor)
-{
-  g_return_val_if_fail (monitor != NULL, NULL);
-
-  return monitor->path;
 }
 
 static MenuMonitorNotify *
