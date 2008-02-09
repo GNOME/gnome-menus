@@ -10,7 +10,7 @@ INCLUDES =							\
 	$(WARN_CFLAGS)						\
 	$(NULL)
 
-bin_PROGRAMS =				\
+noinst_PROGRAMS =			\
 	gnome-menu-spec-test		\
 	$(NULL)
 

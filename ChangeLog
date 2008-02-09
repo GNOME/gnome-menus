@@ -1,5 +1,9 @@
 2008-02-09  Vincent Untz  <vuntz@gnome.org>
 
+	* util/Makefile.am: don't install gnome-menu-spec-test
+
+2008-02-09  Vincent Untz  <vuntz@gnome.org>
+
 	We don't need multiple monitor backends anymore. Just depend on gio.
 
 	* configure.in: unconditionnally depend on gio, remove backend
