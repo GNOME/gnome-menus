@@ -1,4 +1,25 @@
 ===============
+Version 2.21.91
+===============
+
+  Fixes
+
+	* Remove the various monitor backends, and unconditionnaly use gio
+	  (Vincent)
+
+  Misc
+
+	* Do not install gnome-menu-spec-test, it's useless for the user
+	  (Vincent)
+	* Add a hard dependency on gio (Vincent)
+
+  Translators
+
+
+	* Woodman Tuen (zh_HK)
+	* Woodman Tuen (zh_TW)
+
+===============
 Version 2.21.90
 ===============
 
