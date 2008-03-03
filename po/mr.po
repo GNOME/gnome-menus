@@ -1,32 +1,33 @@
-# translation of gnome-menus.HEAD.mr.po to Marathi
+# translation of gnome-menus.HEAD.mr.po to marathi
 # Marathi Translation of gnome-menus
-# Copyright (C) 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2005, 2006, 2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
+#
 # FIRST AUTHOR: Gayatri Deshpande <gafinde@gmail.com>, 2005.
 # Rahul Bhalerao <b.rahul.pm@gmail.com>, 2006.
-#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.mr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-28 08:14+0200\n"
-"PO-Revision-Date: 2006-08-29 09:56+0530\n"
-"Last-Translator: Rahul Bhalerao <b.rahul.pm@gmail.com>\n"
-"Language-Team: Marathi\n"
+"POT-Creation-Date: 2007-05-02 03:41+0100\n"
+"PO-Revision-Date: 2008-02-29 21:19+0530\n"
+"Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
+"Language-Team: marathi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "सुलभता"
+msgid "Universal Access"
+msgstr "जागतीक प्रवेश"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "सुलभता संबंधित परिमाणे"
+msgid "Universal Access Settings"
+msgstr "जागतीक प्रवेश संयोजना"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -41,12 +42,13 @@ msgid "Applications"
 msgstr "उपकरणं"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "कार्यस्थळ"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "व्यक्तिगत प्राधान्यता व प्रशासकीय रचना"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "प्रणाली"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -76,6 +78,22 @@ msgstr "चित्र-विज्ञान"
 msgid "Graphics applications"
 msgstr "चित्र-विज्ञान उपकरणं"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "हार्डवेअर"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "विविध हार्डवेअर साधन करीता संयोजना"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "महाजाळ व संजाळ"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "संजाळ-संबंधी संयोजना"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "इंटरनेट"
@@ -83,6 +101,14 @@ msgstr "इंटरनेट"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "इंटरनेट वेब व ईमेल बघण्यासाठी प्रोग्राम"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "दृश्य व प्रभाव"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "डेस्कटॉप दृश्य व वागणूक नियंत्रीत करणारी संयोजना"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -108,6 +134,14 @@ msgstr "उपकरणं जे दुसरया कुठल्याही
 msgid "Other"
 msgstr "अन्य"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "व्यक्तिगत"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "व्यक्तिगत संयोजना"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "व्यक्तिगत प्राधान्यता"
@@ -118,20 +152,24 @@ msgid "Preferences"
 msgstr "प्राधान्ये"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "सुलभता संबंधित प्राधान्ये"
+msgid "Universal access related preferences"
+msgstr "जागतिक प्रवेश संबंधी प्राधान्यता"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "व्यक्तिगत प्राधान्ये व परिमाणे"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "प्रणाली संयोजना"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "व्यवथापन"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "यंत्रणेभर परिमाणे बदला - सर्वांवर लागु पडेल"
+msgid "Change system-wide settings (affects all users)"
+msgstr "प्रणाली-करीताचे संयोजना बदलवा (सर्व वापरकर्ते प्रभावीत होतात)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
