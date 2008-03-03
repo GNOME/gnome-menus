@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-09-15 18:31+0300\n"
-"PO-Revision-Date: 2007-09-15 18:32+0300\n"
-"Last-Translator: Simos Xenitellis <simos@gnome.org>\n"
+"PO-Revision-Date: 2008-03-04 00:31+0200\n"
+"Last-Translator: nikosCharonitakis <nikosx@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -86,7 +86,7 @@ msgstr "Ρυθμίσεις για διάφορες συσκευές υλικού
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Διαδίκτυο και Δίκτυο"
+msgstr "Διαδίκτυο και δίκτυο"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
@@ -98,8 +98,7 @@ msgstr "Διαδίκτυο"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr ""
-"Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
+msgstr "Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -115,7 +114,7 @@ msgstr "Μενού πολυμέσων"
 
 #: ../desktop-directories/Multimedia.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Ήχος & Βίντεο"
+msgstr "Ήχος & βίντεο"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -123,7 +122,7 @@ msgstr "Γραφείο"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Εφαρμογές Γραφείου"
+msgstr "Εφαρμογές γραφείου"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
@@ -172,7 +171,7 @@ msgstr "Τροποποίηση ρυθμίσεων συστήματος (επηρ
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Εργαλεία Συστήματος"
+msgstr "Εργαλεία συστήματος"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
@@ -180,7 +179,7 @@ msgstr "Ρύθμιση και έλεγχος συστήματος"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Επεξεργασία μενού"
+msgstr "Επεξεργαστής μενού"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
@@ -208,12 +207,8 @@ msgid "Show"
 msgstr "Εμφάνιση"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Αδυναμία εύρεσης αρχικού καταλόγου: δεν έχει ορισθεί τιμή στο /etc/passwd "
-"και στο$HOME στο περιβάλλον"
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Αδυναμία εύρεσης αρχικού καταλόγου: δεν έχει ορισθεί τιμή στο /etc/passwd και στο$HOME στο περιβάλλον"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -264,20 +259,19 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169
+#: ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Το δέντρο μενού είναι κενό"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
-"- δοκιμή της εφαρμογής από το GNOME των οδηγιών μενού επιφάνειας εργασίας"
+msgstr "- δοκιμή της εφαρμογής από το GNOME των οδηγιών μενού επιφάνειας εργασίας"
 
 #~ msgid "Accessibility"
 #~ msgstr "Προσιτότητα"
-
 #~ msgid "Accessibility Settings"
 #~ msgstr "Ρυθμίσεις Προσιτότητας"
-
 #~ msgid "Desktop"
 #~ msgstr "Επιφάνεια Εργασίας"
+
