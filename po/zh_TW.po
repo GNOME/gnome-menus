@@ -19,11 +19,11 @@ msgstr ""
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "普及近用"
+msgstr "無障礙功能"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "普及近用設定值"
+msgstr "無障礙功能設定值"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
