@@ -1,32 +1,33 @@
+# translation of tr.po to Turkish
 # translation of Gnome-menus.
 # Copyright (C) 2004 THE Gnome-menus'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the Gnome-menus package.
-# Baris Cicek <baris@teamforce.name.tr>, 2005.
+#
+#
+# Baris Cicek <baris@teamforce.name.tr>, 2005, 2008.
 # Onur Can Çakmak <onur.cakmak@gmail.com>, 2006.
-# 
-# 
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus\n"
+"Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-09 11:22+0300\n"
-"PO-Revision-Date: 2006-08-08 16:42+0200\n"
-"Last-Translator: Onur Can Çakmak <onur.cakmak@gmail.com>\n"
+"POT-Creation-Date: 2008-03-10 22:33+0200\n"
+"PO-Revision-Date: 2008-03-10 22:35+0200\n"
+"Last-Translator: Baris Cicek <baris@teamforce.name.tr>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.1\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=1; plural=0;\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Erişilebilirlik"
+msgid "Universal Access"
+msgstr "Evrensel Erişim"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Erişilebilirlik Ayarları"
+msgid "Universal Access Settings"
+msgstr "Evrensel Erişim Ayarları"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
@@ -41,12 +42,13 @@ msgid "Applications"
 msgstr "Uygulamalar"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Masaüstü"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
 msgid "Personal preferences and administration settings"
 msgstr "Kişisel tercihler ve yönetim ayarları"
+
+#: ../desktop-directories/Desktop.directory.in.h:2
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "Sistem"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -76,6 +78,22 @@ msgstr "Grafik"
 msgid "Graphics applications"
 msgstr "Grafik uygulamaları"
 
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "Donanım"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "Bazı donanım aygıtları için ayarlar"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "İnternet ve Ağ"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "Ağ ile ilgili ayarlar"
+
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
 msgstr "İnternet"
@@ -83,6 +101,14 @@ msgstr "İnternet"
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "Web ve eposta gibi internete erişim amaçlı programlar"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "Görünüş ve İşleyiş"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "Masaüstü görünüm ve işleyişini kontrol eden ayarlar"
 
 #: ../desktop-directories/Multimedia.directory.in.h:1
 msgid "Multimedia menu"
@@ -108,6 +134,14 @@ msgstr "Diğer sınıflandırmalara girmeyen uygulamalar"
 msgid "Other"
 msgstr "Diğer"
 
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "Kişisel"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "Kişisel ayarlar"
+
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Kişisel tercihler"
@@ -118,20 +152,24 @@ msgid "Preferences"
 msgstr "Tercihler"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Erişilebilirlikle ilgili tercihler"
+msgid "Universal access related preferences"
+msgstr "Evrensel erişim ile ilgili tercihler"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
 msgstr "Kişisel tercih ve ayarlar"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Sistem ayarları"
 
 #: ../desktop-directories/System-Settings.directory.in.h:1
 msgid "Administration"
 msgstr "Yönetim"
 
 #: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "Ayarları sistem genelinde değiştir (tüm kullanıcıları etkiler)"
+msgid "Change system-wide settings (affects all users)"
+msgstr "Sistem geneli ayarları değiştir (tüm kullanıcıları etkiler)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -155,7 +193,7 @@ msgstr "_Uygulamalar:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "_Öntanımlılar"
+msgstr "Ö_ntanımlılar"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
@@ -175,8 +213,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Ev dizini bulunamadı: /etc/passwd içinde ayarlanmamış ve ortam değişkeni "
-"$HOME içinde değer yok"
+"Başlangıç dizini bulunamadı: /etc/passwd içinde ayarlanmamış ve ortam "
+"değişkeni $HOME içinde değer yok"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -211,6 +249,7 @@ msgid " <excluded>"
 msgstr " <excluded>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -233,3 +272,4 @@ msgstr "Menü ağacı boş"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- GNOME'un Masaüstü Menü Belirtimleri'ni sına"
+
