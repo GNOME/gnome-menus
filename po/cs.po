@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-25 22:25+0100\n"
-"PO-Revision-Date: 2007-11-03 04:44+0100\n"
+"POT-Creation-Date: 2008-03-10 04:17+0100\n"
+"PO-Revision-Date: 2008-03-10 04:15+0100\n"
 "Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,7 @@ msgstr "Aplikace"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Personal preferences and administration settings"
-msgstr "Osobní předvolby a nastavení správy"
+msgstr "Osobní volby a nastavení správy"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 #: ../desktop-directories/System.directory.in.h:1
@@ -144,20 +144,20 @@ msgstr "Osobní nastavení"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Osobní předvolby"
+msgstr "Osobní volby"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Předvolby"
+msgstr "Volby"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Universal access related preferences"
-msgstr "Předvolby související se zpřístupněním"
+msgstr "Volby související se zpřístupněním"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Osobní předvolby a nastavení"
+msgstr "Osobní volby a nastavení"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -181,11 +181,11 @@ msgstr "Nastavení a sledování systému"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Editor nabídky"
+msgstr "Editor nabídek"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Upravit nabídku"
+msgstr "Upravit nabídky"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -197,7 +197,7 @@ msgstr "Vý_chozí"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "Na_bídka:"
+msgstr "Na_bídky:"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
@@ -249,6 +249,7 @@ msgid " <excluded>"
 msgstr " <excluded>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
