@@ -6,12 +6,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-13 04:03+0000\n"
-"PO-Revision-Date: 2008-02-13 13:22+0100\n"
+"POT-Creation-Date: 2008-03-11 13:20+0100\n"
+"PO-Revision-Date: 2008-03-10 13:15+0100\n"
 "Last-Translator: Massimo Furlani <massimo.furlani@libero.it>\n"
 "Language-Team: FRIULIAN <massimo.furlani@libero.it>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Friulian\n"
 "X-Poedit-Country: ITALY\n"
@@ -27,11 +27,11 @@ msgstr "Impostazions Acess Universâl"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
-msgstr "Acessoriis"
+msgstr "Robutis"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Acessoriis dal desktop"
+msgstr "Robutis dal desktop"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -64,7 +64,7 @@ msgstr "Zûcs"
 
 #: ../desktop-directories/Games.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Zûcs e passetimps"
+msgstr "Zûcs e golosets"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -72,7 +72,7 @@ msgstr "Grafiche"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Aplicazions grafichis"
+msgstr "Aplicazions di grafiche"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -124,7 +124,7 @@ msgstr "Aplicazions di ufici"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Aplicazions ch'a no jentrin ta chês altris categoriis"
+msgstr "Aplicazions ch'a no jentrin ta chês altres categoriis"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -205,8 +205,12 @@ msgid "Show"
 msgstr "Mostre"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Impussibil cjatâ la directory home: no je impostade in /etc/passwd e la variabil di ambient $HOME no a nissun valôr"
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Impussibil cjatâ la directory home: no je impostade in /etc/passwd e la "
+"variabil di ambient $HOME no a nissun valôr"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -241,6 +245,7 @@ msgid " <excluded>"
 msgstr " <excluded>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -256,12 +261,10 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169
-#: ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "L'arbul dai menu al è vueit"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- test da implementazion di GNOME da specifiche par i menu dal desktop"
-
