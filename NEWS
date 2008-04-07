@@ -1,4 +1,18 @@
 ==============
+Version 2.22.1
+==============
+
+  Misc
+
+	* Remove shebangs from non-executable Python scripts.
+
+  Translators
+
+	* David Lodge (en_GB)
+	* Massimo Furlani (fur)
+	* Eskild Hustvedt (nn)
+
+==============
 Version 2.22.0
 ==============
 
