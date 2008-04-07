@@ -10,10 +10,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center 2.9.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-06 19:50+0100\n"
-"PO-Revision-Date: 2008-01-06 19:54+0100\n"
-"Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
-"Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
+"POT-Creation-Date: 2008-04-07 14:28+0200\n"
+"PO-Revision-Date: 2008-04-07 14:30+0200\n"
+"Last-Translator: Eskild Hustvedt <eskildh@gnome.org>\n"
+"Language-Team: Norwegian Nynorsk <i18n-no@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,7 +42,7 @@ msgstr "Program"
 
 #: ../desktop-directories/Desktop.directory.in.h:1
 msgid "Personal preferences and administration settings"
-msgstr "Personlege brukarval og innstillingar"
+msgstr "Personlege og administrative innstillingar"
 
 #: ../desktop-directories/Desktop.directory.in.h:2
 #: ../desktop-directories/System.directory.in.h:1
@@ -143,12 +143,12 @@ msgstr "Personlege innstillingar"
 
 #: ../desktop-directories/Preferences.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Personlege brukarval"
+msgstr "Personlege innstillingar"
 
 #: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Brukarval"
+msgstr "Innstillingar"
 
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:2
 msgid "Universal access related preferences"
@@ -156,7 +156,7 @@ msgstr "Innstillingar relatert til tilgjenge"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences and settings"
-msgstr "Personlege brukarval og innstillingar"
+msgstr "Personlege innstillingar"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -198,16 +198,16 @@ msgstr "_Forval"
 msgid "_Menus:"
 msgstr "_Menyar:"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "Namn"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "Vis"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
