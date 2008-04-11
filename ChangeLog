@@ -1,3 +1,12 @@
+2008-04-11  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/inotify-syscalls.h:
+	* libmenu/inotify.h: killed
+	* libmenu/menu-monitor.c: (register_monitor): call g_type_init() once
+	since we're using gio in this file and so GObjects. Since
+	libgnome-menus doesn't export any GObject stuff, an app can't know that
+	g_type_init() has to be called and we have to do it.
+
 2008-04-07  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: post-release bump to 2.22.2
