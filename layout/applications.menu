@@ -25,9 +25,12 @@
     <Include>
       <And>
         <Category>Utility</Category>
-        <Not>
-          <Category>System</Category>
-        </Not>
+	<!-- Accessibility spec must have either the Utility or Settings
+	     category, and we display an accessibility submenu already for
+	     the ones that do not have Settings, so don't display accessibility
+	     applications here -->
+        <Not><Category>Accessibility</Category></Not>
+        <Not><Category>System</Category></Not>
       </And>
     </Include>
   </Menu> <!-- End Accessories -->
@@ -39,9 +42,7 @@
     <Include>
       <And>
         <Category>Accessibility</Category>
-        <Not>
-          <Category>Settings</Category>
-        </Not>
+        <Not><Category>Settings</Category></Not>
       </And>
     </Include>
   </Menu> <!-- End Accessibility -->
