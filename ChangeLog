@@ -1,5 +1,11 @@
 2008-04-11  Vincent Untz  <vuntz@gnome.org>
 
+	* libmenu/menu-monitor.c: (monitor_callback): get the path of the file
+	that caused the event, instead of something that will break in some
+	case because it returns an URI. Fix crash described in bug #522800.
+
+2008-04-11  Vincent Untz  <vuntz@gnome.org>
+
 	* libmenu/inotify-syscalls.h:
 	* libmenu/inotify.h: killed
 	* libmenu/menu-monitor.c: (register_monitor): call g_type_init() once

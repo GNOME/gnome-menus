@@ -190,7 +190,7 @@ monitor_callback (GFileMonitor      *monitor,
 
   event_info = g_new0 (MenuMonitorEventInfo, 1);
 
-  event_info->path    = g_file_get_parse_name (child);
+  event_info->path    = g_file_get_path (child);
   event_info->event   = event;
   event_info->monitor = menu_monitor;
 
