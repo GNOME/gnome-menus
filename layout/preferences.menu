@@ -20,15 +20,11 @@
         <Or>
           <Category>System</Category>
           <Category>Accessibility</Category>
+	  <Filename>gnomecc.desktop</Filename>
         </Or>
       </Not>
     </And>
   </Include>
-
-  <!-- Menu items to exclude from the toplevel -->
-  <Exclude>
-    <Filename>gnomecc.desktop</Filename>
-  </Exclude>
 
   <!-- Accessibility -->
   <Menu>

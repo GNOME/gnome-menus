@@ -1,5 +1,13 @@
 2008-04-12  Vincent Untz  <vuntz@gnome.org>
 
+	* layout/preferences.menu: do not exclude gnomecc.desktop (since
+	alacarte will show it as excluded), but instead explicitly do not
+	include it (and alacarte will not show it as excluded this way)
+	Fix a bug where gnomecc.desktop is shown both in the toplevel System
+	menu and in the Preferences submenu.
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
 	* libmenu/gmenu-tree.c: (process_layout): if showing excluded items (as
 	in alacarte), remove an entry from the excluded set if it's explicitly
 	included after the <Exclude> node.
