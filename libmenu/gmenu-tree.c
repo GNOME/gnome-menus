@@ -101,6 +101,7 @@ struct GMenuTreeDirectory
   guint only_unallocated : 1;
   guint is_root : 1;
   guint is_nodisplay : 1;
+  guint layout_pending_separator : 1;
 };
 
 typedef struct
@@ -3423,6 +3424,19 @@ static void process_layout_info (GMenuTree          *tree,
 				 GMenuTreeDirectory *directory);
 
 static void
+check_pending_separator (GMenuTreeDirectory *directory)
+{
+  if (directory->layout_pending_separator)
+    {
+      menu_verbose ("Adding pending separator in '%s'\n", directory->name);
+
+      directory->contents = g_slist_append (directory->contents,
+					    gmenu_tree_separator_new (directory));
+      directory->layout_pending_separator = FALSE;
+    }
+}
+
+static void
 merge_subdir (GMenuTree          *tree,
 	      GMenuTreeDirectory *directory,
 	      GMenuTreeDirectory *subdir,
@@ -3447,6 +3461,8 @@ merge_subdir (GMenuTree          *tree,
     }
   else if (layout_values->inline_menus)
     {
+      check_pending_separator (directory);
+
       if (layout_values->inline_alias && g_slist_length (subdir->contents) == 1)
 	{
 	  GMenuTreeAlias *alias;
@@ -3504,6 +3520,7 @@ merge_subdir (GMenuTree          *tree,
     }
   else
     {
+      check_pending_separator (directory);
       directory->contents = g_slist_append (directory->contents,
 					    gmenu_tree_item_ref (subdir));
     }
@@ -3545,6 +3562,7 @@ merge_entry (GMenuTree          *tree,
   menu_verbose ("Merging entry '%s' in directory '%s'\n",
 		entry->desktop_file_id, directory->name);
 
+  check_pending_separator (directory);
   directory->contents = g_slist_append (directory->contents,
 					gmenu_tree_item_ref (entry));
 }
@@ -3844,6 +3862,7 @@ process_layout_info (GMenuTree          *tree,
 		   NULL);
   g_slist_free (directory->contents);
   directory->contents = NULL;
+  directory->layout_pending_separator = FALSE;
 
   if ((layout_info = get_layout_info (directory)) == NULL)
     {
@@ -3883,9 +3902,28 @@ process_layout_info (GMenuTree          *tree,
 	      break;
 
 	    case MENU_LAYOUT_NODE_SEPARATOR:
-	      menu_verbose ("Adding a separator in '%s'\n", directory->name);
-	      directory->contents = g_slist_append (directory->contents,
-						    gmenu_tree_separator_new (directory));
+	      /* Unless explicitly told to show all separators, do not show a
+	       * separator at the beginning of a menu. Note that we don't add
+	       * the separators now, and instead make it pending. This way, we
+	       * won't show two consecutive separators nor will we show a
+	       * separator at the end of a menu. */
+              if (tree->flags & GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS)
+		{
+		  directory->layout_pending_separator = TRUE;
+		  check_pending_separator (directory);
+		}
+	      else if (directory->contents)
+		{
+		  menu_verbose ("Adding a potential separator in '%s'\n",
+				directory->name);
+
+		  directory->layout_pending_separator = TRUE;
+		}
+	      else
+		{
+		  menu_verbose ("Skipping separator at the beginning of '%s'\n",
+				directory->name);
+		}
 	      break;
 
 	    case MENU_LAYOUT_NODE_MERGE:

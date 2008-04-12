@@ -1785,8 +1785,9 @@ initgmenu (void)
   PyModule_AddIntConstant (mod, "TYPE_HEADER",    GMENU_TREE_ITEM_HEADER);
   PyModule_AddIntConstant (mod, "TYPE_ALIAS",     GMENU_TREE_ITEM_ALIAS);
 
-  PyModule_AddIntConstant (mod, "FLAGS_NONE",              GMENU_TREE_FLAGS_NONE);
-  PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_EXCLUDED",  GMENU_TREE_FLAGS_INCLUDE_EXCLUDED);
-  PyModule_AddIntConstant (mod, "FLAGS_SHOW_EMPTY",        GMENU_TREE_FLAGS_SHOW_EMPTY);
-  PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_NODISPLAY", GMENU_TREE_FLAGS_INCLUDE_NODISPLAY);
+  PyModule_AddIntConstant (mod, "FLAGS_NONE",                GMENU_TREE_FLAGS_NONE);
+  PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_EXCLUDED",    GMENU_TREE_FLAGS_INCLUDE_EXCLUDED);
+  PyModule_AddIntConstant (mod, "FLAGS_SHOW_EMPTY",          GMENU_TREE_FLAGS_SHOW_EMPTY);
+  PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_NODISPLAY",   GMENU_TREE_FLAGS_INCLUDE_NODISPLAY);
+  PyModule_AddIntConstant (mod, "FLAGS_SHOW_ALL_SEPARATORS", GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS);
 }

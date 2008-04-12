@@ -58,11 +58,12 @@ typedef enum
 
 typedef enum
 {
-  GMENU_TREE_FLAGS_NONE              = 0,
-  GMENU_TREE_FLAGS_INCLUDE_EXCLUDED  = 1 << 0,
-  GMENU_TREE_FLAGS_SHOW_EMPTY        = 1 << 1,
-  GMENU_TREE_FLAGS_INCLUDE_NODISPLAY = 1 << 2,
-  GMENU_TREE_FLAGS_MASK              = 0x07
+  GMENU_TREE_FLAGS_NONE                = 0,
+  GMENU_TREE_FLAGS_INCLUDE_EXCLUDED    = 1 << 0,
+  GMENU_TREE_FLAGS_SHOW_EMPTY          = 1 << 1,
+  GMENU_TREE_FLAGS_INCLUDE_NODISPLAY   = 1 << 2,
+  GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS = 1 << 3,
+  GMENU_TREE_FLAGS_MASK                = 0x0f
 } GMenuTreeFlags;
 
 GMenuTree *gmenu_tree_lookup (const char     *menu_file,

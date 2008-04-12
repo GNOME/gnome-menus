@@ -1,5 +1,22 @@
 2008-04-12  Vincent Untz  <vuntz@gnome.org>
 
+	Do not show unless specifically asked separators at the beginning of a
+	menu, or at the end of a menu, or after another separator.
+	Fix bug #497399.
+
+	* python/gmenu.c: (initgmenu): add new flag
+	* libmenu/gmenu-tree.[ch]: add new GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS
+	flag
+	(check_pending_separator): append a separator to a menu if there's a
+	pending one
+	(merge_subdir):
+	(merge_entry): add calls to check_pending_separator()
+	(process_layout_info): implement logic to add a separator if
+	GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS is specified or add a pending one
+	if it will be useful
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
 	* layout/applications.menu: do not show a11y in accessories submenu
 	since they're already in the a11y one
 	Patch by Josselin Mouette <joss@malsain.org>
