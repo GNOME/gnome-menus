@@ -3159,6 +3159,8 @@ process_layout (GMenuTree          *tree,
                   {
                     desktop_entry_set_union (entries, rule_set);
                     desktop_entry_set_union (allocated_set, rule_set);
+		    if (excluded_set != NULL)
+		      desktop_entry_set_subtract (excluded_set, rule_set);
                     desktop_entry_set_unref (rule_set);
                   }
 

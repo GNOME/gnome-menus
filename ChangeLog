@@ -1,5 +1,12 @@
 2008-04-12  Vincent Untz  <vuntz@gnome.org>
 
+	* libmenu/gmenu-tree.c: (process_layout): if showing excluded items (as
+	in alacarte), remove an entry from the excluded set if it's explicitly
+	included after the <Exclude> node.
+	Fix bug #441198.
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
 	* layout/settings.menu: Merge menus and files at the end of the layout.
 	Fix part of bug #458285.
 
