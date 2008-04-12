@@ -39,6 +39,8 @@
   <Layout>
     <Menuname>Preferences</Menuname>
     <Menuname>Administration</Menuname>
+    <Merge type="menus"/>
+    <Merge type="files"/>
   </Layout>
 
 </Menu> <!-- End Settings -->

@@ -1,5 +1,10 @@
 2008-04-12  Vincent Untz  <vuntz@gnome.org>
 
+	* layout/settings.menu: Merge menus and files at the end of the layout.
+	Fix part of bug #458285.
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
 	Do not show unless specifically asked separators at the beginning of a
 	menu, or at the end of a menu, or after another separator.
 	Fix bug #497399.
