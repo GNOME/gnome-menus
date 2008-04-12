@@ -1762,6 +1762,162 @@ start_element_handler (GMarkupParseContext   *context,
   add_context_to_error (error, context);
 }
 
+/* we want to make sure that the <Layout> or <DefaultLayout> is either empty,
+ * or contain one <Merge> of type "all", or contain one <Merge> of type "menus"
+ * and one <Merge> of type "files". If this is not the case, we try to clean up
+ * things:
+ *  + if there is at least one <Merge> of type "all", then we only keep the
+ *    last <Merge> of type "all" and remove all others <Merge>
+ *  + if there is no <Merge> with type "all", we keep only the last <Merge> of
+ *    type "menus" and the last <Merge> of type "files". If there's no <Merge>
+ *    of type "menus" we append one, and then if there's no <Merge> of type
+ *    "files", we append one. (So menus are before files)
+ */
+static gboolean
+fixup_layout_node (GMarkupParseContext   *context,
+                   MenuParser            *parser,
+                   MenuLayoutNode        *node,
+                   GError              **error)
+{
+  MenuLayoutNode *child;
+  MenuLayoutNode *last_all;
+  MenuLayoutNode *last_menus;
+  MenuLayoutNode *last_files;
+  int             n_all;
+  int             n_menus;
+  int             n_files;
+
+  if (!node->children)
+    {
+      return TRUE;
+    }
+
+  last_all   = NULL;
+  last_menus = NULL;
+  last_files = NULL;
+  n_all   = 0;
+  n_menus = 0;
+  n_files = 0;
+
+  child = node->children;
+  while (child != NULL)
+    {
+      switch (child->type)
+        {
+        case MENU_LAYOUT_NODE_MERGE:
+	  switch (menu_layout_node_merge_get_type (child))
+	    {
+	    case MENU_LAYOUT_MERGE_NONE:
+	      break;
+
+	    case MENU_LAYOUT_MERGE_MENUS:
+	      last_menus = child;
+	      n_menus++;
+	      break;
+
+	    case MENU_LAYOUT_MERGE_FILES:
+	      last_files = child;
+	      n_files++;
+	      break;
+
+	    case MENU_LAYOUT_MERGE_ALL:
+	      last_all = child;
+	      n_all++;
+	      break;
+
+	    default:
+	      g_assert_not_reached ();
+	      break;
+	    }
+          break;
+
+	  default:
+	    break;
+	}
+
+      child = node_next (child);
+    }
+
+  if ((n_all == 1 && n_menus == 0 && n_files == 0) ||
+      (n_all == 0 && n_menus == 1 && n_files == 1))
+    {
+      return TRUE;
+    }
+  else if (n_all > 1 || n_menus > 1 || n_files > 1 ||
+           (n_all == 1 && (n_menus != 0 || n_files != 0)))
+    {
+      child = node->children;
+      while (child != NULL)
+	{
+	  MenuLayoutNode *next;
+
+	  next = node_next (child);
+
+	  switch (child->type)
+	    {
+	    case MENU_LAYOUT_NODE_MERGE:
+	      switch (menu_layout_node_merge_get_type (child))
+		{
+		case MENU_LAYOUT_MERGE_NONE:
+		  break;
+
+		case MENU_LAYOUT_MERGE_MENUS:
+		  if (n_all || last_menus != child)
+		    {
+		      menu_verbose ("removing duplicated merge menus element\n");
+		      menu_layout_node_unlink (child);
+		    }
+		  break;
+
+		case MENU_LAYOUT_MERGE_FILES:
+		  if (n_all || last_files != child)
+		    {
+		      menu_verbose ("removing duplicated merge files element\n");
+		      menu_layout_node_unlink (child);
+		    }
+		  break;
+
+		case MENU_LAYOUT_MERGE_ALL:
+		  if (last_all != child)
+		    {
+		      menu_verbose ("removing duplicated merge all element\n");
+		      menu_layout_node_unlink (child);
+		    }
+		  break;
+
+		default:
+		  g_assert_not_reached ();
+		  break;
+		}
+	      break;
+
+	      default:
+		break;
+	    }
+
+	  child = next;
+	}
+    }
+
+  if (n_all == 0 && n_menus == 0)
+    {
+      last_menus = menu_layout_node_new (MENU_LAYOUT_NODE_MERGE);
+      menu_layout_node_merge_set_type (last_menus, "menus");
+      menu_verbose ("appending missing merge menus element\n");
+      menu_layout_node_append_child (node, last_menus);
+    }
+
+  if (n_all == 0 && n_files == 0)
+    {
+      last_files = menu_layout_node_new (MENU_LAYOUT_NODE_MERGE);
+      menu_layout_node_merge_set_type (last_files, "files");
+      menu_verbose ("appending missing merge files element\n");
+      menu_layout_node_append_child (node, last_files);
+    }
+
+  return TRUE;
+}
+
 /* we want to a) check that we have old-new pairs and b) canonicalize
  * such that each <Move> has exactly one old-new pair
  */
@@ -1965,11 +2121,15 @@ end_element_handler (GMarkupParseContext  *context,
     case MENU_LAYOUT_NODE_KDE_LEGACY_DIRS:
     case MENU_LAYOUT_NODE_DELETED:
     case MENU_LAYOUT_NODE_NOT_DELETED:
-    case MENU_LAYOUT_NODE_LAYOUT:
-    case MENU_LAYOUT_NODE_DEFAULT_LAYOUT:
     case MENU_LAYOUT_NODE_SEPARATOR:
     case MENU_LAYOUT_NODE_MERGE:
     case MENU_LAYOUT_NODE_MERGE_FILE:
+      break;
+
+    case MENU_LAYOUT_NODE_LAYOUT:
+    case MENU_LAYOUT_NODE_DEFAULT_LAYOUT:
+      if (!fixup_layout_node (context, parser, parser->stack_top, error))
+        goto out;
       break;
 
     case MENU_LAYOUT_NODE_MOVE:

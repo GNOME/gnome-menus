@@ -1,5 +1,16 @@
 2008-04-12  Vincent Untz  <vuntz@gnome.org>
 
+	If a <Layout> or <DefaultLayout> is missing some <Merge> nodes,
+	consider that they're implicit and add them.
+
+	* libmenu/menu-layout.c: (fixup_layout_node): new, to add the missing
+	<Merge> nodes
+	(end_element_handler): hook up the new function at the end of the
+	parsing of the <Layout> and <DefaultLayout> nodes
+	Fix end of bug #458285.
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
 	* layout/preferences.menu: do not exclude gnomecc.desktop (since
 	alacarte will show it as excluded), but instead explicitly do not
 	include it (and alacarte will not show it as excluded this way)
