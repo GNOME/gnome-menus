@@ -1,3 +1,10 @@
+2008-04-13  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_execute_moves): correctly order the
+	list of move operations to execute, so it's possible to undo a move by
+	doing the opposite move afterwards.
+	Fix bug #323771.
+
 2008-04-12  Vincent Untz  <vuntz@gnome.org>
 
 	If a <Layout> or <DefaultLayout> is missing some <Merge> nodes,

@@ -2719,6 +2719,9 @@ gmenu_tree_execute_moves (GMenuTree      *tree,
       child = menu_layout_node_get_next (child);
     }
 
+  /* We need to execute the move operations in the order that they appear */
+  move_nodes = g_slist_reverse (move_nodes);
+
   tmp = move_nodes;
   while (tmp != NULL)
     {
