@@ -314,20 +314,13 @@ cached_dir_add_subdir (CachedDir  *dir,
                        const char *path)
 {
   CachedDir *subdir;
-  GSList    *tmp;
 
-  tmp = dir->subdirs;
-  while (tmp != NULL)
+  subdir = find_subdir (dir, basename);
+
+  if (subdir != NULL)
     {
-      subdir = (CachedDir *) tmp->data;
-
-      if (strcmp (subdir->name, basename) == 0)
-        {
-	  subdir->deleted = FALSE;
-          return TRUE;
-        }
-
-      tmp = tmp->next;
+      subdir->deleted = FALSE;
+      return TRUE;
     }
 
   subdir = cached_dir_new (basename);
@@ -350,27 +343,21 @@ static gboolean
 cached_dir_remove_subdir (CachedDir  *dir,
                           const char *basename)
 {
-  GSList *tmp;
+  CachedDir *subdir;
 
-  tmp = dir->subdirs;
-  while (tmp != NULL)
+  subdir = find_subdir (dir, basename);
+
+  if (subdir != NULL)
     {
-      CachedDir *subdir = tmp->data;
+      subdir->deleted = TRUE;
 
-      if (strcmp (subdir->name, basename) == 0)
+      if (subdir->references == 0)
         {
-	  subdir->deleted = TRUE;
-
-	  if (subdir->references == 0)
-	    {
-	      cached_dir_free (subdir);
-	      dir->subdirs = g_slist_delete_link (dir->subdirs, tmp);
-	    }
-
-          return TRUE;
+          cached_dir_free (subdir);
+          dir->subdirs = g_slist_remove (dir->subdirs, subdir);
         }
 
-      tmp = tmp->next;
+      return TRUE;
     }
 
   return FALSE;

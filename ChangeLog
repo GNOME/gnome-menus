@@ -1,3 +1,10 @@
+2008-04-15  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/entry-directories.c: (cached_dir_add_subdir),
+	(cached_dir_remove_subdir): reuse find_subdir() to simplify code
+	Based on patch in bug #349695, by William Jon McCann <mccann@jhu.edu>
+	* libmenu/gmenu-tree.c: (add_menu_for_legacy_dir): fix leak
+
 2008-04-13  Vincent Untz  <vuntz@gnome.org>
 
 	* libmenu/gmenu-tree.c: (gmenu_tree_execute_moves): correctly order the

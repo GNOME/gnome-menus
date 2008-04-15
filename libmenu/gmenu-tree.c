@@ -2212,6 +2212,7 @@ add_menu_for_legacy_dir (MenuLayoutNode *parent,
         }
 
       g_string_free (subdir_path, TRUE);
+      g_string_free (subdir_relative, TRUE);
 
       menu_layout_node_unref (menu);
     }
