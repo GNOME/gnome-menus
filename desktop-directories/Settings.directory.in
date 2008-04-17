@@ -1,7 +1,5 @@
 [Desktop Entry]
 _Name=Preferences
 _Comment=Personal preferences
-Icon=gnome-settings
+Icon=preferences-desktop
 Type=Directory
-Encoding=UTF-8
-NoDisplay=false

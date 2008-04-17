@@ -1,6 +1,5 @@
 [Desktop Entry]
 _Name=Universal Access
 _Comment=Universal access related preferences
-Icon=accessibility-directory
+Icon=preferences-desktop-accessibility
 Type=Directory
-Encoding=UTF-8

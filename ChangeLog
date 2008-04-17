@@ -1,5 +1,32 @@
 2008-04-17  Vincent Untz  <vuntz@gnome.org>
 
+	* desktop-directories/AudioVideo.directory.in:
+	* desktop-directories/Development.directory.in:
+	* desktop-directories/Education.directory.in:
+	* desktop-directories/Game.directory.in:
+	* desktop-directories/Graphics.directory.in:
+	* desktop-directories/Hardware.directory.in:
+	* desktop-directories/InternetAndNetwork.directory.in:
+	* desktop-directories/LookAndFeel.directory.in:
+	* desktop-directories/Network.directory.in:
+	* desktop-directories/Office.directory.in:
+	* desktop-directories/Personal.directory.in:
+	* desktop-directories/Settings-Accessibility.directory.in:
+	* desktop-directories/Settings-System.directory.in:
+	* desktop-directories/Settings.directory.in:
+	* desktop-directories/System-Tools.directory.in:
+	* desktop-directories/System.directory.in:
+	* desktop-directories/Utility-Accessibility.directory.in:
+	* desktop-directories/Utility.directory.in:
+	* desktop-directories/X-GNOME-Menu-Applications.directory.in:
+	* desktop-directories/X-GNOME-Menu-System.directory.in:
+	* desktop-directories/X-GNOME-Other.directory.in:
+	Remove encoding key (deprecated)
+	Update a few icons to use ones from the icon naming spec.
+	Part of bug #396994.
+
+2008-04-17  Vincent Untz  <vuntz@gnome.org>
+
 	* desktop-directories/Accessibility.directory.in:
 	* desktop-directories/Accessories.directory.in:
 	* desktop-directories/Applications.directory.in:

@@ -2,6 +2,4 @@
 Type=Directory
 _Name=Administration
 _Comment=Change system-wide settings (affects all users)
-Icon=gnome-system
-Encoding=UTF-8
-NoDisplay=false
+Icon=preferences-system
