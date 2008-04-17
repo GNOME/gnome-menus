@@ -4,7 +4,7 @@
 <Menu>
 
   <Name>Applications</Name>
-  <Directory>Applications.directory</Directory>
+  <Directory>X-GNOME-Menu-Applications.directory</Directory>
 
   <!-- Scan legacy dirs first, as later items take priority -->
   <KDELegacyDirs/>
@@ -21,7 +21,7 @@
   <!-- Accessories submenu -->
   <Menu>
     <Name>Accessories</Name>
-    <Directory>Accessories.directory</Directory>
+    <Directory>Utility.directory</Directory>
     <Include>
       <And>
         <Category>Utility</Category>
@@ -38,7 +38,7 @@
   <!-- Accessibility submenu -->
   <Menu>
     <Name>Universal Access</Name>
-    <Directory>Accessibility.directory</Directory>
+    <Directory>Utility-Accessibility.directory</Directory>
     <Include>
       <And>
         <Category>Accessibility</Category>
@@ -73,7 +73,7 @@
   <!-- Games -->
   <Menu>
     <Name>Games</Name>
-    <Directory>Games.directory</Directory>
+    <Directory>Game.directory</Directory>
     <Include>
       <And>
         <Category>Game</Category>
@@ -95,7 +95,7 @@
   <!-- Internet -->
   <Menu>
     <Name>Internet</Name>
-    <Directory>Internet.directory</Directory>
+    <Directory>Network.directory</Directory>
     <Include>
       <And>
         <Category>Network</Category>
@@ -106,7 +106,7 @@
   <!-- Multimedia -->
   <Menu>
     <Name>Multimedia</Name>
-    <Directory>Multimedia.directory</Directory>
+    <Directory>AudioVideo.directory</Directory>
     <Include>
       <And>
         <Category>AudioVideo</Category>
@@ -140,7 +140,7 @@
   <!-- Other -->
   <Menu>
     <Name>Other</Name>
-    <Directory>Other.directory</Directory>
+    <Directory>X-GNOME-Other.directory</Directory>
     <OnlyUnallocated/>
     <Include>
       <And>

@@ -1,3 +1,26 @@
+2008-04-17  Vincent Untz  <vuntz@gnome.org>
+
+	* desktop-directories/Accessibility.directory.in:
+	* desktop-directories/Accessories.directory.in:
+	* desktop-directories/Applications.directory.in:
+	* desktop-directories/Desktop.directory.in:
+	* desktop-directories/Games.directory.in:
+	* desktop-directories/Internet.directory.in:
+	* desktop-directories/Makefile.am:
+	* desktop-directories/Multimedia.directory.in:
+	* desktop-directories/Other.directory.in:
+	* desktop-directories/Preferences.directory.in:
+	* desktop-directories/System-Settings.directory.in:
+	Rename most of those files according to real categories defined in the
+	fd.o spec.
+	* layout/Makefile.am:
+	* layout/applications.menu:
+	* layout/preferences.menu:
+	* layout/settings.menu:
+	Updated for those changes. Also remove preferences.menu and directly
+	include its content in settings.menu.
+	Will help with bug #396994.
+
 2008-04-15  Vincent Untz  <vuntz@gnome.org>
 
 	* libmenu/entry-directories.c: (cached_dir_add_subdir),

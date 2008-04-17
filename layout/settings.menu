@@ -4,7 +4,7 @@
 <Menu>
 
   <Name>Desktop</Name>
-  <Directory>Desktop.directory</Directory>
+  <Directory>X-GNOME-Menu-System.directory</Directory>
 
   <!-- Read standard .directory and .desktop file locations -->
   <DefaultAppDirs/>
@@ -21,13 +21,37 @@
   <!-- Merge in these other files as submenus -->
   <Menu>
     <Name>Preferences</Name>
-    <MergeFile>preferences.menu</MergeFile>
+    <Directory>Settings.directory</Directory>
+    <Include>
+      <And>
+        <Category>Settings</Category>
+        <Not>
+          <Or>
+            <Category>System</Category>
+            <Category>Accessibility</Category>
+            <Filename>gnomecc.desktop</Filename>
+          </Or>
+        </Not>
+      </And>
+    </Include>
+
+    <!-- Accessibility -->
+    <Menu>
+      <Name>Universal Access</Name>
+      <Directory>Settings-Accessibility.directory</Directory>
+      <Include>
+        <And>
+          <Category>Settings</Category>
+          <Category>Accessibility</Category>
+        </And>
+      </Include>
+    </Menu>
   </Menu>
 
   <!-- System Settings -->
   <Menu>
     <Name>Administration</Name>
-    <Directory>System-Settings.directory</Directory>
+    <Directory>Settings-System.directory</Directory>
     <Include>
       <And>
         <Category>Settings</Category>
