@@ -1,5 +1,13 @@
 2008-04-17  Vincent Untz  <vuntz@gnome.org>
 
+	* desktop-directories/Makefile.am:
+	* desktop-directories/Settings-Accessibility.directory.in:
+	* layout/settings.menu: remove a11y submenu from preferences, since
+	there's no such capplet anymore and having only one submenu is kind of
+	weird anyway.
+
+2008-04-17  Vincent Untz  <vuntz@gnome.org>
+
 	* desktop-directories/AudioVideo.directory.in:
 	* desktop-directories/Development.directory.in:
 	* desktop-directories/Education.directory.in:

@@ -19,7 +19,6 @@ directory_in_files =				\
 	Network.directory.in			\
 	Office.directory.in			\
 	Settings.directory.in			\
-	Settings-Accessibility.directory.in	\
 	Settings-System.directory.in		\
 	System-Tools.directory.in		\
 	Utility.directory.in			\

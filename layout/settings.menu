@@ -28,24 +28,11 @@
         <Not>
           <Or>
             <Category>System</Category>
-            <Category>Accessibility</Category>
             <Filename>gnomecc.desktop</Filename>
           </Or>
         </Not>
       </And>
     </Include>
-
-    <!-- Accessibility -->
-    <Menu>
-      <Name>Universal Access</Name>
-      <Directory>Settings-Accessibility.directory</Directory>
-      <Include>
-        <And>
-          <Category>Settings</Category>
-          <Category>Accessibility</Category>
-        </And>
-      </Include>
-    </Menu>
   </Menu>
 
   <!-- System Settings -->
