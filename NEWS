@@ -1,4 +1,55 @@
 ==============
+Version 2.23.1
+==============
+
+  Features
+
+	* Do not show separators at the beginning/end of a menu, or after
+	  another separator, but add an option to show them (Vincent)
+
+  Fixes
+
+	* Call g_type_init() because GIO needs it and we use GIO for file
+	  monitoring (Vincent)
+	* Fix a crash when a file notification is emitted with a non-ascii
+	  filename (Vincent)
+	* Remove entries from the excluded set if they are included after they
+	  were excluded (eg:
+	  <Exclude>something</Exclude><Include>something</Include>) (Vincent)
+	* Implicitly add <Merge> nodes to <Layout> and <DefaultLayout> that are
+	  missing some (Vincent)
+	* Correctly order the move operations to execute so that moving
+	  something and moving it back again works as undo (Vincent)
+	* Simplify some code (William Jon McCann, Vincent)
+	* Plug leak (Vincent)
+
+  Layout
+
+	* Do not show accessibility items in the accessories submenu
+	  (Josselin Mouette)
+	* Merge menus and files at the end of the layout of settings.menu
+	* Explicitly do not include gnomecc.menu in the preferences menu
+	  instead of explicitly excluding it, so that alacarte doesn't know it
+	  was excluded (Vincent)
+	* Rename many .directory files so they use fd.o Categories as name
+	  (Vincent)
+	* Remove preferences.menu and directly include things in settings.menu
+	  (Vincent)
+	* Update a few icons used in .directory files according to the icon
+	  naming spec (Vincent)
+	* Remove the accessibility submenu from Preferences, since it's empty
+	  now anyway (Vincent)
+
+  Misc
+
+	* Remove shebangs from non-executable Python scripts.
+
+  Translators
+
+	* Žygimantas Beručka (lt)
+	* Kjartan Maraas (nb)
+
+==============
 Version 2.22.1
 ==============
 

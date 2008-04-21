@@ -1,3 +1,9 @@
+2008-04-21  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.23.1.
+
 2008-04-17  Vincent Untz  <vuntz@gnome.org>
 
 	* desktop-directories/Makefile.am:
