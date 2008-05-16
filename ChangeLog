@@ -1,3 +1,23 @@
+2008-05-17  Vincent Untz  <vuntz@gnome.org>
+
+	Implement missing part of the menu spec: handling of $XDG_MENU_PREFIX
+	for applications.menu
+	Bug #533475
+
+	* libmenu/gmenu-tree.c: (canonicalize_basename): new, based on code
+	from gmenu_tree_canonicalize_path
+	(gmenu_tree_canonicalize_path): if the requested file is
+	applications.menu and the XDG_MENU_PREFIX environment variable is set,
+	use ${XDG_MENU_PREFIX}applications.menu is used
+	(gmenu_tree_get_menu_file): we need to return the basename of the real
+	file, potentially with $XDG_MENU_PREFIX. So find which file is being
+	used first.
+	(load_merge_file): update for menu_layout_load update
+	(gmenu_tree_load_layout): ditto
+	* libmenu/menu-layout.[ch]: (menu_layout_load): add a
+	non_prefixed_basename argument so that we can use the basename without
+	$XDG_MENU_PREFIX and use it as the name for the root node
+
 2008-04-21  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: post-release bump to 2.23.2

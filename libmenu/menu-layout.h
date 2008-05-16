@@ -106,6 +106,7 @@ typedef struct
 
 
 MenuLayoutNode *menu_layout_load (const char  *filename,
+                                  const char  *non_prefixed_basename,
                                   GError     **error);
 
 MenuLayoutNode *menu_layout_node_new   (MenuLayoutNodeType  type);

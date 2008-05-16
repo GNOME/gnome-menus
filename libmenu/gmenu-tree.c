@@ -495,6 +495,32 @@ canonicalize_basename_with_config_dir (GMenuTree   *tree,
   return tree->canonical;
 }
 
+static void
+canonicalize_basename (GMenuTree  *tree,
+                       const char *basename)
+{
+  if (!canonicalize_basename_with_config_dir (tree,
+                                              basename,
+                                              g_get_user_config_dir ()))
+    {
+      const char * const *system_config_dirs;
+      int                 i;
+
+      system_config_dirs = g_get_system_config_dirs ();
+
+      i = 0;
+      while (system_config_dirs[i] != NULL)
+        {
+          if (canonicalize_basename_with_config_dir (tree,
+                                                     basename,
+                                                     system_config_dirs[i]))
+            break;
+
+          ++i;
+        }
+    }
+}
+
 static gboolean
 gmenu_tree_canonicalize_path (GMenuTree *tree)
 {
@@ -507,26 +533,20 @@ gmenu_tree_canonicalize_path (GMenuTree *tree)
     {
       gmenu_tree_remove_menu_file_monitors (tree);
 
-      if (!canonicalize_basename_with_config_dir (tree,
-						  tree->basename,
-						  g_get_user_config_dir ()))
-	{
-	  const char * const *system_config_dirs;
-	  int                 i;
+      if (tree->type == GMENU_TREE_BASENAME &&
+          strcmp (tree->basename, "applications.menu") == 0 &&
+          g_getenv ("XDG_MENU_PREFIX"))
+        {
+          char *prefixed_basename;
+          prefixed_basename = g_strdup_printf ("%s%s",
+                                               g_getenv ("XDG_MENU_PREFIX"),
+                                               tree->basename);
+          canonicalize_basename (tree, prefixed_basename);
+          g_free (prefixed_basename);
+        }
 
-	  system_config_dirs = g_get_system_config_dirs ();
-
-	  i = 0;
-	  while (system_config_dirs[i] != NULL)
-	    {
-	      if (canonicalize_basename_with_config_dir (tree,
-							 tree->basename,
-							 system_config_dirs[i]))
-		break;
-
-	      ++i;
-	    }
-	}
+      if (!tree->canonical)
+        canonicalize_basename (tree, tree->basename);
 
       if (tree->canonical)
         menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
@@ -717,9 +737,31 @@ gmenu_tree_get_user_data (GMenuTree *tree)
 const char *
 gmenu_tree_get_menu_file (GMenuTree *tree)
 {
+  /* FIXME: this is horribly ugly. But it's done to keep the API. Would be bad
+   * to break the API only for a "const char *" => "char *" change. The other
+   * alternative is to leak the memory, which is bad too. */
+  static char *ugly_result_cache = NULL;
+
   g_return_val_if_fail (tree != NULL, NULL);
 
-  return tree->type == GMENU_TREE_BASENAME ? tree->basename : tree->absolute_path;
+  /* we need to canonicalize the path so we actually find out the real menu
+   * file that is being used -- and take into account XDG_MENU_PREFIX */
+  if (!gmenu_tree_canonicalize_path (tree))
+    return NULL;
+
+  if (ugly_result_cache != NULL)
+    {
+      g_free (ugly_result_cache);
+      ugly_result_cache = NULL;
+    }
+
+  if (tree->type == GMENU_TREE_BASENAME)
+    {
+      ugly_result_cache = g_path_get_basename (tree->canonical_path);
+      return ugly_result_cache;
+    }
+  else
+    return tree->absolute_path;
 }
 
 GMenuTreeDirectory *
@@ -1671,7 +1713,7 @@ load_merge_file (GMenuTree      *tree,
 
   menu_verbose ("Merging file \"%s\"\n", canonical);
 
-  to_merge = menu_layout_load (canonical, NULL);
+  to_merge = menu_layout_load (canonical, NULL, NULL);
   if (to_merge == NULL)
     {
       menu_verbose ("No menu for file \"%s\" found when merging\n",
@@ -2793,7 +2835,10 @@ gmenu_tree_load_layout (GMenuTree *tree)
                 tree->canonical_path);
 
   error = NULL;
-  tree->layout = menu_layout_load (tree->canonical_path, &error);
+  tree->layout = menu_layout_load (tree->canonical_path,
+                                   tree->type == GMENU_TREE_BASENAME ?
+                                        tree->basename : NULL,
+                                   &error);
   if (tree->layout == NULL)
     {
       g_warning ("Error loading menu layout from \"%s\": %s",

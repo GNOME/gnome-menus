@@ -2263,6 +2263,7 @@ menu_parser_free (MenuParser *parser)
 
 MenuLayoutNode *
 menu_layout_load (const char  *filename,
+                  const char  *non_prefixed_basename,
                   GError     **err)
 {
   GMarkupParseContext *context;
@@ -2301,7 +2302,10 @@ menu_layout_load (const char  *filename,
   root->basedir = g_path_get_dirname (filename);
   menu_verbose ("Set basedir \"%s\"\n", root->basedir);
 
-  s = g_path_get_basename (filename);
+  if (non_prefixed_basename)
+    s = g_strdup (non_prefixed_basename);
+  else
+    s = g_path_get_basename (filename);
   str = g_string_new (s);
   if (g_str_has_suffix (str->str, ".menu"))
     g_string_truncate (str, str->len - strlen (".menu"));
