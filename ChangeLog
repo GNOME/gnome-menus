@@ -1,5 +1,10 @@
 2008-05-17  Vincent Untz  <vuntz@gnome.org>
 
+	* libmenu/gmenu-tree.c: (gmenu_tree_canonicalize_path): remove useless
+	test that will always result in TRUE
+
+2008-05-17  Vincent Untz  <vuntz@gnome.org>
+
 	Implement missing part of the menu spec: handling of $XDG_MENU_PREFIX
 	for applications.menu
 	Bug #533475

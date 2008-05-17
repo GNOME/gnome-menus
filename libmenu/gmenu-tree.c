@@ -533,8 +533,7 @@ gmenu_tree_canonicalize_path (GMenuTree *tree)
     {
       gmenu_tree_remove_menu_file_monitors (tree);
 
-      if (tree->type == GMENU_TREE_BASENAME &&
-          strcmp (tree->basename, "applications.menu") == 0 &&
+      if (strcmp (tree->basename, "applications.menu") == 0 &&
           g_getenv ("XDG_MENU_PREFIX"))
         {
           char *prefixed_basename;
