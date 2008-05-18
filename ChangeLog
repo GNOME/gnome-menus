@@ -1,3 +1,21 @@
+2008-05-18  Vincent Untz  <vuntz@gnome.org>
+
+	Fix the values of <DefaultLayout> (ie, show_empty, inline,
+	inline_limit, etc.) not being inherited by submenus when the
+	<DefaultLayout> node is after the <Menu> node in the .menu file.
+	Can also fix other issues when there are multiple <DefaultLayout> nodes
+	mixed with the <Menu> nodes.
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_directory_new): do not set the
+	default layout values from the parent here since we might not have
+	the values of the parent yet. So just set to the default values.
+	(set_default_layout_values): new, set the default layout values of a
+	menu based on its parent, and then iterate on the children to do the
+	same
+	(process_layout): after having iterated over all the nodes, we'll have
+	found <DefaultLayout> if there's one and so we can make the submenus
+	inherit it
+
 2008-05-17  Vincent Untz  <vuntz@gnome.org>
 
 	* libmenu/gmenu-tree.c: (gmenu_tree_canonicalize_path): remove useless

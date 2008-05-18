@@ -1247,19 +1247,12 @@ gmenu_tree_directory_new (GMenuTreeDirectory *parent,
   retval->only_unallocated    = FALSE;
   retval->is_nodisplay        = FALSE;
 
-  if (parent != NULL)
-    {
-      retval->default_layout_values = parent->default_layout_values;
-    }
-  else
-    {
-      retval->default_layout_values.mask          = MENU_LAYOUT_VALUES_NONE;
-      retval->default_layout_values.show_empty    = FALSE;
-      retval->default_layout_values.inline_menus  = FALSE;
-      retval->default_layout_values.inline_limit  = 4;
-      retval->default_layout_values.inline_header = FALSE;
-      retval->default_layout_values.inline_alias  = FALSE;
-    }
+  retval->default_layout_values.mask          = MENU_LAYOUT_VALUES_NONE;
+  retval->default_layout_values.show_empty    = FALSE;
+  retval->default_layout_values.inline_menus  = FALSE;
+  retval->default_layout_values.inline_limit  = 4;
+  retval->default_layout_values.inline_header = FALSE;
+  retval->default_layout_values.inline_alias  = FALSE;
 
   return retval;
 }
@@ -3121,6 +3114,32 @@ excluded_entries_listify_foreach (const char         *desktop_file_id,
                                            desktop_entry_get_no_display (desktop_entry)));
 }
 
+static void
+set_default_layout_values (GMenuTreeDirectory *parent,
+                           GMenuTreeDirectory *child)
+{
+  GSList *tmp;
+
+  /* if the child has a defined default layout, we don't want to override its
+   * values, and if the parent doesn't have a defined default layout, then
+   * everybody already uses the default values */
+  if (parent->default_layout_info == NULL ||
+      child->default_layout_info != NULL)
+    return;
+
+  child->default_layout_values = parent->default_layout_values;
+
+  tmp = child->subdirs;
+  while (tmp != NULL)
+    {
+      GMenuTreeDirectory *subdir = tmp->data;
+
+      set_default_layout_values (child, subdir);
+
+      tmp = tmp->next;
+   }
+}
+
 static GMenuTreeDirectory *
 process_layout (GMenuTree          *tree,
                 GMenuTreeDirectory *parent,
@@ -3377,6 +3396,16 @@ process_layout (GMenuTree          *tree,
 				 directory);
       desktop_entry_set_unref (excluded_set);
     }
+
+  tmp = directory->subdirs;
+  while (tmp != NULL)
+    {
+      GMenuTreeDirectory *subdir = tmp->data;
+
+      set_default_layout_values (directory, subdir);
+
+      tmp = tmp->next;
+   }
 
   tmp = directory->entries;
   while (tmp != NULL)
