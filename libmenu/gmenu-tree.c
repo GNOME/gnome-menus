@@ -1813,9 +1813,6 @@ load_parent_merge_file_from_basename (GMenuTree      *tree,
 	}
       else
 	{
-	  g_print ("Looking for parent menu file '%s' in '%s'\n",
-			menu_file, system_config_dirs[i]);
-
 	  menu_verbose ("Looking for parent menu file '%s' in '%s'\n",
 			menu_file, system_config_dirs[i]);
 
