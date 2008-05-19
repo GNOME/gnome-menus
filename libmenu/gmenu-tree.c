@@ -1848,7 +1848,7 @@ load_parent_merge_file (GMenuTree      *tree,
   g_free (menu_file);
   g_free (canonical_basedir);
 
-  return found_basedir;
+  return system_config_dirs[i] != NULL;
 }
 
 static void
