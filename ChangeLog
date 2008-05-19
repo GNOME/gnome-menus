@@ -1,5 +1,10 @@
 2008-05-19  Vincent Untz  <vuntz@gnome.org>
 
+	* libmenu/gmenu-tree.c: (load_parent_merge_file): use the right
+	basename with XDG_MENU_PREFIX (fix previous commit)
+
+2008-05-19  Vincent Untz  <vuntz@gnome.org>
+
 	Complete XDG_MENU_PREFIX support: <MergeFile type="parent"> wasn't
 	working with it.
 

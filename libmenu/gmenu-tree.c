@@ -1868,7 +1868,7 @@ load_parent_merge_file (GMenuTree      *tree,
       char *prefixed_basename;
       prefixed_basename = g_strdup_printf ("%s%s",
                                            g_getenv ("XDG_MENU_PREFIX"),
-                                           tree->basename);
+                                           menu_file);
       found = load_parent_merge_file_from_basename (tree, loaded_menu_files,
                                                     layout, prefixed_basename,
                                                     canonical_basedir);
