@@ -1,5 +1,15 @@
 2008-05-19  Vincent Untz  <vuntz@gnome.org>
 
+	Complete XDG_MENU_PREFIX support: <MergeFile type="parent"> wasn't
+	working with it.
+
+	* libmenu/gmenu-tree.c: (load_parent_merge_file_from_basename): new
+	from code from load_parent_merge_file, with an extra comment :-)
+	(load_parent_merge_file): if the menu file is applications.menu, handle
+	XDG_MENU_PREFIX so that we load the right parent file.
+
+2008-05-19  Vincent Untz  <vuntz@gnome.org>
+
 	* libmenu/gmenu-tree.c: (load_parent_merge_file): do not return the
 	fact that we've found a base directory, but the fact that we really a
 	found a parent menu file. Fix a bug where the fallback on the filename

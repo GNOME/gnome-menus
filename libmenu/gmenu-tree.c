@@ -1786,34 +1786,18 @@ compare_basedir_to_config_dir (const char *canonical_basedir,
 }
 
 static gboolean
-load_parent_merge_file (GMenuTree      *tree,
-			GHashTable     *loaded_menu_files,
-			MenuLayoutNode *layout)
+load_parent_merge_file_from_basename (GMenuTree      *tree,
+                                      GHashTable     *loaded_menu_files,
+			              MenuLayoutNode *layout,
+                                      const char     *menu_file,
+                                      const char     *canonical_basedir)
 {
-  MenuLayoutNode     *root;
-  const char         *basedir;
-  const char         *menu_name;
-  char               *canonical_basedir;
-  char               *menu_file;
   gboolean            found_basedir;
   const char * const *system_config_dirs;
   int                 i;
 
-  root = menu_layout_node_get_root (layout);
-
-  basedir   = menu_layout_node_root_get_basedir (root);
-  menu_name = menu_layout_node_root_get_name (root);
-
-  canonical_basedir = menu_canonicalize_file_name (basedir, FALSE);
-  if (canonical_basedir == NULL)
-    {
-      menu_verbose ("Menu basedir '%s' no longer exists, not merging parent\n",
-		    basedir);
-      return FALSE;
-    }
-
-  menu_file = g_strconcat (menu_name, ".menu", NULL);
-
+  /* We're not interested in menu files that are in directories which are not a
+   * parent of the base directory of this menu file */
   found_basedir = compare_basedir_to_config_dir (canonical_basedir,
 						 g_get_user_config_dir ());
 
@@ -1829,6 +1813,9 @@ load_parent_merge_file (GMenuTree      *tree,
 	}
       else
 	{
+	  g_print ("Looking for parent menu file '%s' in '%s'\n",
+			menu_file, system_config_dirs[i]);
+
 	  menu_verbose ("Looking for parent menu file '%s' in '%s'\n",
 			menu_file, system_config_dirs[i]);
 
@@ -1845,10 +1832,60 @@ load_parent_merge_file (GMenuTree      *tree,
       ++i;
     }
 
+  return system_config_dirs[i] != NULL;
+}
+
+static gboolean
+load_parent_merge_file (GMenuTree      *tree,
+			GHashTable     *loaded_menu_files,
+			MenuLayoutNode *layout)
+{
+  MenuLayoutNode     *root;
+  const char         *basedir;
+  const char         *menu_name;
+  char               *canonical_basedir;
+  char               *menu_file;
+  gboolean            found;
+
+  root = menu_layout_node_get_root (layout);
+
+  basedir   = menu_layout_node_root_get_basedir (root);
+  menu_name = menu_layout_node_root_get_name (root);
+
+  canonical_basedir = menu_canonicalize_file_name (basedir, FALSE);
+  if (canonical_basedir == NULL)
+    {
+      menu_verbose ("Menu basedir '%s' no longer exists, not merging parent\n",
+		    basedir);
+      return FALSE;
+    }
+
+  menu_file = g_strconcat (menu_name, ".menu", NULL);
+
+  if (strcmp (menu_file, "applications.menu") == 0 &&
+      g_getenv ("XDG_MENU_PREFIX"))
+    {
+      char *prefixed_basename;
+      prefixed_basename = g_strdup_printf ("%s%s",
+                                           g_getenv ("XDG_MENU_PREFIX"),
+                                           tree->basename);
+      found = load_parent_merge_file_from_basename (tree, loaded_menu_files,
+                                                    layout, prefixed_basename,
+                                                    canonical_basedir);
+      g_free (prefixed_basename);
+    }
+
+  if (!found)
+    {
+      found = load_parent_merge_file_from_basename (tree, loaded_menu_files,
+                                                    layout, menu_file,
+                                                    canonical_basedir);
+    }
+
   g_free (menu_file);
   g_free (canonical_basedir);
 
-  return system_config_dirs[i] != NULL;
+  return found;
 }
 
 static void
