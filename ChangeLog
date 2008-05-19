@@ -2,8 +2,8 @@
 
 	* libmenu/gmenu-tree.c: (load_parent_merge_file): do not return the
 	fact that we've found a base directory, but the fact that we really a
-	found a parent menu file in a base directory. Fix a bug where the
-	fallback on the filename in <MergeFile> couldn't be used. 
+	found a parent menu file. Fix a bug where the fallback on the filename
+	in <MergeFile> couldn't be used. 
 
 2008-05-18  Vincent Untz  <vuntz@gnome.org>
 
