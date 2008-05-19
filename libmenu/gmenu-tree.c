@@ -1857,6 +1857,7 @@ load_parent_merge_file (GMenuTree      *tree,
       return FALSE;
     }
 
+  found = FALSE;
   menu_file = g_strconcat (menu_name, ".menu", NULL);
 
   if (strcmp (menu_file, "applications.menu") == 0 &&

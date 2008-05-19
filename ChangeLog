@@ -1,5 +1,10 @@
 2008-05-19  Vincent Untz  <vuntz@gnome.org>
 
+	* libmenu/gmenu-tree.c: (load_parent_merge_file): initialize variable
+	to get less unpredictable results :-)
+
+2008-05-19  Vincent Untz  <vuntz@gnome.org>
+
 	* libmenu/gmenu-tree.c: (load_parent_merge_file_from_basename): remove
 	debug spew.
 
