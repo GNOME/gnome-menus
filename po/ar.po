@@ -193,7 +193,7 @@ msgstr "ال_قوائم:"
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
-msgstr "الإسم"
+msgstr "الاسم"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
