@@ -4,6 +4,30 @@ Version 2.23.1
 
   Features
 
+	* Implement handling of $XDG_MENU_PREFIX from the xdg menu
+	  specification (Vincent)
+
+  Fixes
+
+	* Fix the values of <DefaultLayout> (ie, show_empty, inline,
+	  inline_limit, etc.) not being inherited by submenus when the
+	  <DefaultLayout> node is after the <Menu> node in the .menu file
+	  (Vincent)
+	* Fix a bug where the fallback on the filename in <MergeFile> couldn't
+	  be used (Vincent)
+
+  Translators
+
+	* Djihed Afifi (ar)
+	* Anna Ármansdóttir (is)
+	* Manoj Kumar Giri (or)
+
+==============
+Version 2.23.1
+==============
+
+  Features
+
 	* Do not show separators at the beginning/end of a menu, or after
 	  another separator, but add an option to show them (Vincent)
 

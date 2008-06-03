@@ -1,3 +1,9 @@
+2008-06-03  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.23.3.
+
 2008-05-19  Vincent Untz  <vuntz@gnome.org>
 
 	* libmenu/gmenu-tree.c: (load_parent_merge_file): initialize variable
