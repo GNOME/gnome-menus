@@ -8,12 +8,14 @@ msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-09-02 09:31+0100\n"
-"PO-Revision-Date: 2007-09-07 16:38+0800\n"
-"Last-Translator: Funda Wang <fundawang@gmail.com>\n"
+"PO-Revision-Date: 2008-06-10 15:29+0700\n"
+"Last-Translator: 甘露(Lu Gan) <rhythm.gan@gmail.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: CHINA\n"
 
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
@@ -83,7 +85,7 @@ msgstr "设置各种硬件设备"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Internet 和网络"
+msgstr "互联网和网络"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
@@ -91,11 +93,11 @@ msgstr "网络相关的设置"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
-msgstr "Internet"
+msgstr "互联网"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "访问 Internet 所用的程序，如 Web 和电子邮件"
+msgstr "访问互联网如网页和电子邮件所用的程序，"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -204,9 +206,7 @@ msgid "Show"
 msgstr "显示"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
 msgstr "找不到主目录：未在 /etc/passwd 中设定，也未在 $HOME 环境变量中设置"
 
 #: ../util/test-menu-spec.c:33
@@ -257,10 +257,12 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169
+#: ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "菜单树为空"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- 测试 GNOME 对桌面菜单规范的实现"
+
