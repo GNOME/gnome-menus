@@ -1,25 +1,23 @@
-# translation of gnome-menus.HEAD.ar.po to Arabic
-# translation of gnome-menus.HEAD.po to
+# translation of gnome-menus.HEAD.po to Arabic
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER, 2005.
 #
 # Djihed Afifi <djihed@gmail.com>, 2006.
-# Khaled Hosny <khaledhosny@eglug.org>, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2006, 2007, 2008.
 # Anas Husseini <linux.anas@gmail.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus.gnome-2-16.ar\n"
+"Project-Id-Version: gnome-menus.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-04-17 14:41+0100\n"
-"PO-Revision-Date: 2008-01-20 15:33+0100\n"
-"Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
+"PO-Revision-Date: 2008-05-26 13:58+0300\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && "
-"n<=10 ? 2 : 3\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Multimedia menu"
@@ -39,7 +37,7 @@ msgstr "أدوات لتطوير البرامج"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
-msgstr "تعليميّة"
+msgstr "تعليمي"
 
 #: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
@@ -47,7 +45,7 @@ msgstr "ألعاب"
 
 #: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "ألعاب و تسلية"
+msgstr "الألعاب و التسلية"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -71,11 +69,11 @@ msgstr "الإنترنت والشبكة"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
-msgstr "إعدادات متعلّقة بالشبكة"
+msgstr "الإعدادات المتعلّقة بالشبكة"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "المظهر والإحساس"
+msgstr "المظهر"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
@@ -87,7 +85,7 @@ msgstr "إنترنت"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "برامج للنّفاذ إلى الإنترنت مثل الويب و البريد الإلكتروني"
+msgstr "برامج للنّفاذ إلى الإنترنت مثل الوب و البريد الإلكتروني"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -95,7 +93,7 @@ msgstr "مكتب"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "تطبيقات مكتبيّة"
+msgstr "التطبيقات المكتبيّة"
 
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
@@ -103,7 +101,7 @@ msgstr "شخصي"
 
 #: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal settings"
-msgstr "إعدادات شخصيّة"
+msgstr "الإعدادات الشخصيّة"
 
 #: ../desktop-directories/Settings-System.directory.in.h:1
 msgid "Administration"
@@ -111,11 +109,11 @@ msgstr "إدارة"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "غيّر تعيينات جميع النظام (يؤثّر على جميع المستخدمين)"
+msgstr "غيّر إعدادات النظام العامة (يؤثّر على جميع المستخدمين)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
-msgstr "تفضيلات شخصيّة"
+msgstr "التفضيلات الشخصيّة"
 
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
@@ -140,11 +138,11 @@ msgstr "إعداد و مراقبة النّظام"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "إتاحة"
+msgstr "الإتاحة"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "إعدادات إتاحة"
+msgstr "إعدادات الإتاحة"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -160,11 +158,11 @@ msgstr "تطبيقات"
 
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
 msgid "Personal preferences and administration settings"
-msgstr "تفضيلات شخصيّة و تعيينات الإدارة"
+msgstr "التفضيلات الشخصيّة و إعدادات الإدارة"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "تطبيقات لم تناسب أصنافا أخرى"
+msgstr "تطبيقات لا تندرج تحت الفئات الأخرى"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Other"
@@ -184,7 +182,7 @@ msgstr "_تطبيقات:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "الإ_فتراضيّات"
+msgstr "ال_مبدئيات"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
@@ -264,17 +262,3 @@ msgstr "شجرة القوائم خالية"
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- اختبر تَنْفِيذ جنوم لمُوَاصِفَات قائمة سطح المكتب"
 
-#~ msgid "Universal access related preferences"
-#~ msgstr "تفضيلات مرتبطة بالإتاحة"
-
-#~ msgid "Personal preferences and settings"
-#~ msgstr "تفضيلات و تعيينات شخصيّة"
-
-#~ msgid "Accessibility"
-#~ msgstr "الإعانة"
-
-#~ msgid "Accessibility Settings"
-#~ msgstr "تعيينات الإعانة"
-
-#~ msgid "Desktop"
-#~ msgstr "سطح المكتب"
