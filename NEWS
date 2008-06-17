@@ -1,5 +1,17 @@
 ==============
-Version 2.23.1
+Version 2.23.4
+==============
+
+  Misc
+
+	* Require intltool 0.40.0 (Vincent)
+
+  Translators
+
+	* 甘露(Lu Gan) (zh_CN)
+
+==============
+Version 2.23.3
 ==============
 
   Features
