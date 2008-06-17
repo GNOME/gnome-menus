@@ -17,13 +17,4 @@ DIST_SUBDIRS = $(ALL_SUBDIRS) python simple-editor
 
 EXTRA_DIST = 			\
 	HACKING			\
-	intltool-extract.in	\
-	intltool-merge.in	\
-	intltool-update.in	\
-	$(NULL)
-
-DISTCLEANFILES =		\
-        intltool-extract	\
-        intltool-merge		\
-        intltool-update		\
 	$(NULL)
