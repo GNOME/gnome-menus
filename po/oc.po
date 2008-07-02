@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-07 10:21+0100\n"
+"POT-Creation-Date: 2008-07-02 08:58+0200\n"
 "PO-Revision-Date: 2007-12-23 12:20+0100\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -17,35 +17,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Universal Access"
-msgstr "Accès universal"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Multimèdia"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Universal Access Settings"
-msgstr ""
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "Accessòris"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "Accessòris del burèu"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "Aplicacions"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Preferéncias personalas e paramètres del sistèma"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistèma"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Son e vidèo"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -59,11 +37,11 @@ msgstr "Espleches per desvolopar de logicials"
 msgid "Education"
 msgstr "Educacion"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "Jòcs"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Jòcs e divertiments"
 
@@ -91,15 +69,6 @@ msgstr "Internet e ret"
 msgid "Network-related settings"
 msgstr "Paramètres en relacion amb la ret"
 
-#: ../desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "Internet"
-
-#: ../desktop-directories/Internet.directory.in.h:2
-msgid "Programs for Internet access such as web and email"
-msgstr ""
-"Logicials per accedir a internet, coma lo web o los messatges electronics"
-
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
 msgstr ""
@@ -108,13 +77,14 @@ msgstr ""
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr ""
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Multimèdia"
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
 
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "Son e vidèo"
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr ""
+"Logicials per accedir a internet, coma lo web o los messatges electronics"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -124,14 +94,6 @@ msgstr "Burèu"
 msgid "Office Applications"
 msgstr "Logicials pel burèu"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Logicials que dintran pas dins las autras categorias"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "Autre"
-
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
 msgstr "Personal"
@@ -140,34 +102,30 @@ msgstr "Personal"
 msgid "Personal settings"
 msgstr "Paramètres personals"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "Administracion"
+
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr ""
+
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Preferéncias personalas"
 
-#: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Preferéncias"
 
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Universal access related preferences"
-msgstr ""
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "Preferéncias e paramètres personals"
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "Sistèma"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
 msgstr "Paramètres del sistèma"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "Administracion"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr ""
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -176,6 +134,38 @@ msgstr "Espleches sistèma"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Configuracion e susvelhança del sistèma"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "Accès universal"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr ""
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "Accessòris"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Accessòris del burèu"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Aplicacions"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "Preferéncias personalas e paramètres del sistèma"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Logicials que dintran pas dins las autras categorias"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "Autre"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -197,16 +187,16 @@ msgstr "Valors pre_definidas"
 msgid "_Menus:"
 msgstr "_Menuts :"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "Nom"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "Visualizar"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -271,3 +261,6 @@ msgstr "L'arborescéncia de menut es voida"
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr ""
 "- ensajar l'implementacion GNOME de l'especificacion dels menuts .desktop"
+
+#~ msgid "Personal preferences and settings"
+#~ msgstr "Preferéncias e paramètres personals"
