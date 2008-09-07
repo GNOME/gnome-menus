@@ -1,13 +1,14 @@
 # Irish translations for gnome-menus package.
-# Copyright (C) 2007 Free Software Foundation, Inc.
-# Seán de Búrca <leftmostcat@gmail.com>, 2007.
+# Copyright (C) 2007-2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-menus package.
+# Seán de Búrca <leftmostcat@gmail.com>, 2007-2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-20 22:46-0700\n"
-"PO-Revision-Date: 2007-12-20 22:46-0700\n"
+"POT-Creation-Date: 2008-09-06 23:59-0400\n"
+"PO-Revision-Date: 2008-09-06 23:59-0500\n"
 "Last-Translator: Seán de Búrca <leftmostcat@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -16,35 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : (n%10==1 || n%10==2) ? 1 : (n%"
 "10>=3 && n%10<= 6) ? 2 : ((n%10>=7 && n%10<=9) || n==10) ? 3 : 4;\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Universal Access"
-msgstr "Rochtain Uilíoch"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Roghchlár ilmheán"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Universal Access Settings"
-msgstr "Socruithe Rochtana Uilíoch"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "Oiriúintí"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "Oiriúintí deisce"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "Feidhmchláir"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Sainroghanna pearsanta agus socruithe riaracháin"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Córas"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Fuaim & Fís"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -52,17 +31,17 @@ msgstr "Ríomhchlárú"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Uirlisí le forbairt bogearraí"
+msgstr "Uirlisí d'fhorbairt bogearraí"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
 msgstr "Oideachas"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "Cluichí"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Cluichí agus siamsaíochtaí"
 
@@ -80,23 +59,15 @@ msgstr "Crua-Earraí"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "Socruithe do roinnt gléis chrua-earraí"
+msgstr "Socruithe do roinnt ghléasanna crua-earraí"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Idirlíon agus Líon"
+msgstr "Idirlíon agus Líonra"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
-msgstr "Socruithe líon-gaolta"
-
-#: ../desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "Idirlíon"
-
-#: ../desktop-directories/Internet.directory.in.h:2
-msgid "Programs for Internet access such as web and email"
-msgstr "Feidhmchláir le rochtain idirlín mar gréasán agus ríomhphost"
+msgstr "Socruithe líonra-gaolta"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -104,15 +75,15 @@ msgstr "Cuma agus Mothú"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Socruithe ag rialú cuma agus oibriú an deisce"
+msgstr "Socruithe ag rialú cuma agus oibrithe na deisce"
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Roghchlár ilmheán"
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "Idirlíon"
 
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "Fuaim & Físeán"
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Feidhmchláir do rochtain an Idirlín mar ghréasán agus ríomhphost"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -122,14 +93,6 @@ msgstr "Oifig"
 msgid "Office Applications"
 msgstr "Feidhmchláir Oifige"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Feidhmchláir nár oiriúnaigh i gcatagóirí eile"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "Eile"
-
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
 msgstr "Pearsanta"
@@ -138,34 +101,30 @@ msgstr "Pearsanta"
 msgid "Personal settings"
 msgstr "Socruithe pearsanta"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "Riarachán"
+
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr "Athraigh socruithe ar fud an chórais (tionchar ar gach úsáideoir)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Sainroghanna pearsanta"
 
-#: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Sainroghanna"
 
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Universal access related preferences"
-msgstr "Sainroghanna rochtain uilíoch-gaolta"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "Sainroghanna agus socruithe pearsanta"
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "Córas"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
-msgstr "Socruithe chórais"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "Riarachán"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "Athraigh socruithe ar fud an córais (tionchar ar gach úsáideoir)"
+msgstr "Socruithe an chórais"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -173,11 +132,43 @@ msgstr "Uirlisí Córais"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Cumraíocht agus faireachán córais"
+msgstr "Cumraíocht agus monatóireacht an chórais"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "Rochtain Uilíoch"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "Socruithe Rochtana Uilíoch"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "Oiriúintí"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Oiriúintí deisce"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Feidhmchláir"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "Sainroghanna pearsanta agus socruithe riaracháin"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Feidhmchláir nár oiriúnaigh i gcatagóirí eile"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "Eile"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Eagarthóir Roghchláir"
+msgstr "Eagarthóir na Roghchlár"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
@@ -195,22 +186,22 @@ msgstr "Réamh_shocruithe"
 msgid "_Menus:"
 msgstr "_Roghchláir:"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "Ainm"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "Taispeáin"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Ní féidir comhadlann baile a aimsiú: níl socraithe i /etc/passwd agus níl "
-"luach do $HOME sa timpealleacht"
+"Ní féidir comhadlann baile a aimsiú: níl sí socraithe i /etc/passwd agus níl "
+"luach do $HOME ann sa timpealleacht"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -222,7 +213,7 @@ msgstr "COMHAD_ROGHCHLÁIR"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Déan faireachán ar athruithe roghchlár"
+msgstr "Déan monatóireacht ar athruithe roghchlár"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
@@ -245,6 +236,7 @@ msgid " <excluded>"
 msgstr "<eisiata>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -256,14 +248,14 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Roghchlár athruithe, á athluchtú ====\n"
+"==== Athraíodh an roghchlár, á athluchtú ====\n"
 "\n"
 "\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "Tá crann roghchláir folamh"
+msgstr "Tá an crann roghchlár folamh"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- tastáil feidhmiú le GNOME den tSonraíocht Roghchláir Dheisce"
+msgstr "- tastáil feidhmiú GNOME den tSonraíocht Roghchláir Deisce"
