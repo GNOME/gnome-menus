@@ -169,7 +169,7 @@ msgstr "Acessibilidade"
 #
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Configurações de Acessibilidade"
+msgstr "Configurações de acessibilidade"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -240,7 +240,7 @@ msgstr "Arquivo de menu"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "ARQUIVO_MENU"
+msgstr "ARQUIVO_DE_MENU"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
@@ -260,7 +260,7 @@ msgstr "ID do arquivo da área de trabalho inválido"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Nome de Arquivo Inválido]"
+msgstr "[Nome de arquivo inválido]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
@@ -302,7 +302,7 @@ msgstr ""
 #~ msgstr "Acessibilidade"
 
 #~ msgid "Accessibility Settings"
-#~ msgstr "Configurações de Acessibilidade"
+#~ msgstr "Configurações de acessibilidade"
 
 #~ msgid "Desktop"
 #~ msgstr "Área de Trabalho"
