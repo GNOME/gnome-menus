@@ -1,52 +1,30 @@
 # Hungarian translation of gnome-menus.
-# Copyright (C) 2004, 2005, 2007 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 #
-# Gabor Kelemen <kelemeng@gnome.hu>, 2004, 2005, 2006, 2007.
+# Gabor Kelemen <kelemeng@gnome.hu>, 2004, 2005, 2006, 2007, 2008.
 # Laszlo Dvornik <dvornik@gnome.hu>, 2005.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.hu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-02 03:41+0100\n"
-"PO-Revision-Date: 2007-07-11 01:49+0200\n"
+"POT-Creation-Date: 2008-04-17 14:41+0100\n"
+"PO-Revision-Date: 2008-09-15 15:26+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
-"Language-Team: Hungarian <gnome@gnome.hu>\n"
+"Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Universal Access"
-msgstr "Akadálymentesítés"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Multimédia menü"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Universal Access Settings"
-msgstr "Akadálymentesítés beállításai"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "Kellékek"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "Munkaasztali kellékek"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "Alkalmazások"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Személyes és adminisztrációs beállítások"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Rendszer"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Hang és videó"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -60,11 +38,11 @@ msgstr "Programfejlesztő eszközök"
 msgid "Education"
 msgstr "Oktatás"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "Játékok"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Játék és szórakozás"
 
@@ -92,14 +70,6 @@ msgstr "Internet és hálózat"
 msgid "Network-related settings"
 msgstr "Hálózattal kapcsolatos beállítások"
 
-#: ../desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "Internet"
-
-#: ../desktop-directories/Internet.directory.in.h:2
-msgid "Programs for Internet access such as web and email"
-msgstr "Programok az internet használatához (pl. web és e-mail)"
-
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
 msgstr "Megjelenés"
@@ -108,13 +78,13 @@ msgstr "Megjelenés"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Az asztal megjelenését és viselkedését vezérlő beállítások"
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Multimédia menü"
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
 
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "Hang és videó"
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Programok az internet használatához (pl. web és e-mail)"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -124,14 +94,6 @@ msgstr "Iroda"
 msgid "Office Applications"
 msgstr "Irodai alkalmazások"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Más kategóriákba be nem sorolható alkalmazások"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "Egyéb"
-
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
 msgstr "Személyes"
@@ -140,34 +102,30 @@ msgstr "Személyes"
 msgid "Personal settings"
 msgstr "Személyes beállítások"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "Adminisztráció"
+
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr "Rendszerszintű beállítások módosítása (minden felhasználóra kihat)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Személyes beállítások"
 
-#: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Universal access related preferences"
-msgstr "Akadálymentesítéssel kapcsolatos beállítások"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "Személyes beállítások"
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "Rendszer"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
 msgstr "Rendszerbeállítások"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "Adminisztráció"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "Rendszerszintű beállítások módosítása (minden felhasználóra kihat)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -176,6 +134,38 @@ msgstr "Rendszereszközök"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Rendszerbeállítás és megfigyelés"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "Akadálymentesítés"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "Akadálymentesítés beállításai"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "Kellékek"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Asztali kellékek"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Alkalmazások"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "Személyes és adminisztrációs beállítások"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Más kategóriákba be nem sorolható alkalmazások"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "Egyéb"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -197,16 +187,16 @@ msgstr "Ala_pértelmezések"
 msgid "_Menus:"
 msgstr "_Menük:"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "Név"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "Megjelenítés"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -247,6 +237,7 @@ msgid " <excluded>"
 msgstr " <kihagyott>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -268,5 +259,5 @@ msgstr "A menüfa üres"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- Az Asztali Menü Specifikáció GNOME megvalósításának tesztelése"
+msgstr "– Az Asztali Menü Specifikáció GNOME megvalósításának tesztelése"
 
