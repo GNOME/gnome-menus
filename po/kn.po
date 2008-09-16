@@ -1,14 +1,14 @@
-# translation of gnome-menus.HEAD.kn.po to Kannada
+# translation of kn.po to Kannada
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Shankar Prasad <svenkate@redhat.com>, 2007, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus.HEAD.kn\n"
+"Project-Id-Version: kn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-04-17 14:41+0100\n"
-"PO-Revision-Date: 2008-08-12 15:22+0530\n"
+"PO-Revision-Date: 2008-09-16 17:11+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -83,15 +83,15 @@ msgstr "ಅಂತರ್ಜಾಲ"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "ಜಾಲ ಹಾಗು ಈಮೇಲಿನಂತಹ ಅಂತರ್ಜಾಲ ನಿಲುಕಣೆಗಾಗಿನ ಪ್ರೊಗ್ರಾಂಗಳು"
+msgstr "ಜಾಲ ಹಾಗು ಇಮೈಲಿನಂತಹ ಅಂತರ್ಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "ಕಾರ್ಯಾಲಯ(Office)"
+msgstr "ಆಫೀಸ್"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "ಕಾರ್ಯಾಲಯ ಅನ್ವಯಗಳು"
+msgstr "ಆಫೀಸ್ ಅನ್ವಯಗಳು"
 
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
@@ -144,11 +144,11 @@ msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ ಸಂಯೋಜನೆಗಳು"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
-msgstr "ಬಿಡಿ ಭಾಗಗಳು(Accessories)"
+msgstr "ಸಲಕರಣೆಗಳು"
 
 #: ../desktop-directories/Utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "ಗಣಕತೆರೆ ಬಿಡಿ ಭಾಗಗಳು"
+msgstr "ಗಣಕತೆರೆಯ ಸಲಕರಣೆಗಳು"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
@@ -168,11 +168,11 @@ msgstr "ಇತರೆ"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "ಅಂಶಪಟ್ಟಿ ಸಂಪಾದಕ"
+msgstr "ಮೆನು ಸಂಪಾದಕ"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "ಪಟ್ಟಿಯ ಅಂಶಗಳನ್ನು ಸಂಪಾದಿಸು"
+msgstr "ಮೆನುಗಳನ್ನು ಸಂಪಾದಿಸು"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
@@ -180,11 +180,11 @@ msgstr "ಅನ್ವಯಗಳು(_A):"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "ಪೂರ್ವನಿಯೋಜಿತ(_D)"
+msgstr "ಡೀಫಾಲ್ಟ್‍ಗಳು(_D)"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "ಪಟ್ಟಿಯ ಅಂಶಗಳು(_M):"
+msgstr "ಮೆನುಗಳು(_M):"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
@@ -200,12 +200,12 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"ನೆಲೆ ಕೋಶವು ಕಂಡುಬಂದಿಲ್ಲ: /etc/passwd ನಲ್ಲಿ ಸಿದ್ಧಗೊಳಿಸಿಲ್ಲ ಹಾಗು ವಾತಾವರಣದಲ್ಲಿ $HOME "
+"ನೆಲೆ ಕಡತಕೋಶವು ಕಂಡುಬಂದಿಲ್ಲ: /etc/passwd ನಲ್ಲಿ ಸಿದ್ಧಗೊಳಿಸಿಲ್ಲ ಹಾಗು ವಾತಾವರಣದಲ್ಲಿ $HOME "
 "ಗೆ ಯಾವುದೇ ಮೌಲ್ಯವಿಲ್ಲ"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
-msgstr "ಅಂಶಪಟ್ಟಿ ಕಡತ"
+msgstr "ಮೆನು ಕಡತ"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
@@ -213,15 +213,15 @@ msgstr "MENU_FILE"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "ಪಟ್ಟಿ ಅಂಶಗಳ ಬದಲಾವಣೆಗೆ ಪರಿವೀಕ್ಷಕ"
+msgstr "ಮೆನು ಬದಲಾವಣೆಗಳಿಗೆ ಪರಿವೀಕ್ಷಕ"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "<Exclude>ಗೊಂಡ ನಮೂದುಗಳನ್ನು ಅಡಕಗೊಳಿಸು"
+msgstr "<Exclude>ಆದಂತಹ ನಮೂದುಗಳನ್ನು ಅಡಕಗೊಳಿಸು"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "ಪ್ರದರ್ಶನಇಲ್ಲ ಅನ್ನು ಅಡಕಗೊಳಿಸು=ನೈಜ ನಮೂದು"
+msgstr "NoDisplay=true ನಮೂದನ್ನು ಅಡಕಗೊಳಿಸು"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
@@ -248,15 +248,15 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== ಅಂಶಪಟ್ಟಿಯು ಬದಲಾಯಿಸಲ್ಪಟ್ಟಿದೆ, ಪುನಃ ಲೋಡ್ ಆಗುತ್ತಿದೆ ====\n"
+"==== ಮೆನು ಬದಲಾಯಿಸಲ್ಪಟ್ಟಿದೆ, ಪುನಃ ಲೋಡ್ ಆಗುತ್ತಿದೆ ====\n"
 "\n"
 "\n"
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "ಅಂಶಪಟ್ಟಿ ವೃಕ್ಷವು(tree) ಖಾಲಿ ಇದೆ"
+msgstr "ಮೆನು ವೃಕ್ಷವು(tree) ಖಾಲಿ ಇದೆ"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
+msgstr "- ಗಣಕತೆರೆ ಮೆನು ಸೂಚನೆಗಳ GNOME ನ ಅನ್ವಯಿಸುವಿಕೆಯನ್ನು ಪರೀಕ್ಷಿಸುತ್ತದೆ"
 
