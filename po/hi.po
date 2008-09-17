@@ -1,55 +1,33 @@
 # translation of gnome-menus.HEAD.hi.po to Hindi
-# translation of hi.po to Hindi
-# translation of pa.po to Punjabi
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-# Amanpreet Singh Alam <aalam@redhat.com>, 2004.
-# Rajesh Ranjan <rranjan@redhat.com>, 2005, 2006.
 #
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004.
+# Rajesh Ranjan <rranjan@redhat.com>, 2005, 2006, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-09 06:40+0100\n"
-"PO-Revision-Date: 2006-03-09 17:14+0530\n"
+"POT-Creation-Date: 2008-04-17 14:41+0100\n"
+"PO-Revision-Date: 2008-09-17 12:59+0530\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
-"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language-Team: Hindi <hindi.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n\n"
 "\n"
 "\n"
+"\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "अभिगम्यता"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "मल्टीमीडिया मेनू"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "अभिगम्यता जमावट"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "संलग्नक"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "डेस्कटॉप संलग्नक"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "अनुप्रयोग"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "डेस्कटॉप"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-msgid "Personal preferences and administration settings"
-msgstr "निजी वरीयता व प्रशासनिक जमावट"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "ध्वनि व वीडियो"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -63,11 +41,11 @@ msgstr "सॉफ्टवेयर विकास के औजार"
 msgid "Education"
 msgstr "शिक्षा"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "खेल"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "खेल व मनोरंजन"
 
@@ -79,21 +57,37 @@ msgstr "आलेखी"
 msgid "Graphics applications"
 msgstr "आलेखी अनुप्रयोग"
 
-#: ../desktop-directories/Internet.directory.in.h:1
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "हार्डवेयर"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "कई हार्डवेयर युक्तियों के लिए सेटिंग"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "इंटरनेट व संजाल"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "संजाल संबंधित सेटिंग"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "रूप व रंग"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "सेटिंग डेस्कटॉप प्रकटन व व्यवहार का नियंत्रण कर रहा है"
+
+#: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "इंटरनेट"
 
-#: ../desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "इंटरनेट से जुड़ने के लिये वेब व ईमेल जैसे प्रोग्राम"
-
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "मल्टीमीडिया मेनू"
-
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "ध्वनि व वीडियो"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -103,38 +97,38 @@ msgstr "कार्यालय"
 msgid "Office Applications"
 msgstr "कार्यालय अनुप्रयोग"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "अनुप्रयोग जो अन्य श्रेणी में सटीक नहीं बैठती है"
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "निजी"
 
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "अन्य"
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "निजी सेटिंग"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "प्रशासन"
+
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr "सिस्टमवाइड जमावट बदलें (सभी उपयोक्ताओं को प्रभावित करता है)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
 msgstr "निजी पसंद"
 
-#: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "वरीयता"
 
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "अभिगम्यता संबंधित वरीयता"
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "तंत्र"
 
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "निजी पसंद व जमावट"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "प्रशासन"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "सिस्टमवाइड जमावट बदलें (सभी उपयोक्ताओं को प्रभावित करता है)"
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "सिस्टम जमावट"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -143,6 +137,38 @@ msgstr "सिस्टम उपकरण"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "सिस्टम विन्यास व निरीक्षण"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "सार्वभौमिक पहुँच"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "सार्वभौमिक अभिगम्यता जमावट"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "संलग्नक"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "डेस्कटॉप संलग्नक"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "अनुप्रयोग"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "निजी वरीयता व प्रशासनिक जमावट"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "अनुप्रयोग जो अन्य श्रेणी में सटीक नहीं बैठती है"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "अन्य"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -164,16 +190,16 @@ msgstr "मूलभूत (_D)"
 msgid "_Menus:"
 msgstr "मेनू (_M):"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "नाम"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "दिखाएँ"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -214,6 +240,7 @@ msgid " <excluded>"
 msgstr " <excluded>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
