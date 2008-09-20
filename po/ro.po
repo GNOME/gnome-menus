@@ -1,51 +1,30 @@
 # Romanian translation of gnome-menus.
-# Copyright (C) 2005 Free Software Foundation, Inc.
+# Copyright (C) 2005-2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Dan Damian <dand@gnome.ro>, 2005.
 # Alexandru Szasz <alexxed@gmail.com>, 2007.
+# Adi Roiban <adi@roiban.ro>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-02 03:41+0100\n"
-"PO-Revision-Date: 2007-09-12 22:18+0300\n"
-"Last-Translator: Alexandru Szasz <alexxed@gmail.com>\n"
+"POT-Creation-Date: 2008-09-02 12:37+0000\n"
+"PO-Revision-Date: 2008-09-20 18:29+0300\n"
+"Last-Translator: Mișu Moldovan <dumol@gnome.ro>\n"
 "Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-09-16 19:00+0000\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Universal Access"
-msgstr "Accesibilitate universală"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Meniu multimedia"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Universal Access Settings"
-msgstr "Setări universale pentru accesibilitate"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "Accesorii"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "Accesorii pentru spaţiul de lucru"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "Aplicaţii"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Preferinţe personale şi setări administrative"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistem"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Multimedia"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -57,15 +36,15 @@ msgstr "Unelte pentru dezvoltare de software"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
-msgstr "Educaţie"
+msgstr "Educație"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "Jocuri"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Jocuri şi amuzamente"
+msgstr "Jocuri și divertisment"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -73,7 +52,7 @@ msgstr "Grafică"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Aplicaţii pentru grafică"
+msgstr "Aplicații pentru grafică"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -81,39 +60,31 @@ msgstr "Hardware"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "Setări pentru diverse dispozitive hardware"
+msgstr "Opțiuni hardware"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Internet şi reţea"
+msgstr "Internet și rețea"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
-msgstr "Setări legate de reţea"
-
-#: ../desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "Internet"
-
-#: ../desktop-directories/Internet.directory.in.h:2
-msgid "Programs for Internet access such as web and email"
-msgstr "Programe pentru acessul la Internet cum ar fi web sau email"
+msgstr "Opțiuni de rețea"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Aspect"
+msgstr "Aspect și comportament"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Controlaţi aspectul şi comportamentul spaţiului de lucru"
+msgstr "Opțiuni privind aspectul și comportamentul desktopului"
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Meniu multimedia"
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
 
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "Sunet şi video"
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Programe pentru acessul la Internet (navigare, mail etc.)"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -121,15 +92,7 @@ msgstr "Birou"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Aplicaţii de birou"
-
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Aplicaţii care nu se încadrează în nicio categorie"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "Altele"
+msgstr "Aplicații de birou"
 
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
@@ -137,85 +100,109 @@ msgstr "Personal"
 
 #: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal settings"
-msgstr "Setări personale"
+msgstr "Opțiuni personale"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
-msgid "Personal preferences"
-msgstr "Setări şi preferinţe personale"
-
-#: ../desktop-directories/Preferences.directory.in.h:2
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Preferinţe"
-
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Universal access related preferences"
-msgstr "Preferinţe universale legate de accesibilitate"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "Setări şi preferinţe personale"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Setări de sistem"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
 msgid "Administration"
 msgstr "Administrare"
 
-#: ../desktop-directories/System-Settings.directory.in.h:2
+#: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Schimbă setările sistemului (afectează toţi utilizatorii)"
+msgstr "Configurarea sistemului (afectează toți utilizatorii)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Preferințe personale"
+
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Preferințe"
+
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "Sistem"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Configurări de sistem"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Unelte de sistem"
+msgstr "Utilitare de sistem"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Configurare şi monitorizare sistem"
+msgstr "Configurare și monitorizare a sistemului"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "Accesibilitate"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "Opțiuni de accesibilitate"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "Accesorii"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Accesorii pentru desktop"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Aplicații"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "Preferințe personale și setări administrative"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Aplicații ce nu se încadrează în alte categorii"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "Diverse"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Editor de meniuri"
+msgstr "Editor meniu"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Editează meniuri"
+msgstr "Editare meniuri"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
-msgstr "_Aplicaţii:"
+msgstr "_Aplicații:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "_Setări implicite"
+msgstr "_Opțiuni implicite"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
 msgstr "_Meniuri:"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "Nume"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
-msgstr "Arată"
+msgstr "Afișare"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Nu se găseşte directorul „Acasă”: nu este setat în /etc/passwd şi "
-"nu există o valoare pentru variabila de mediu $HOME"
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Nu se găsește directorul „Acasă”: nu este setat în /etc/passwd și nu există o valoare pentru variabila de mediu $HOME"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
-msgstr "Meniul fişier"
+msgstr "Fișier meniu"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
@@ -227,32 +214,48 @@ msgstr "Monitorizează schimbările din menu"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "Include elementele <exclus>"
+msgstr "Include elementele cu eticheta <Exclude>"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "Include intrările cu NoDisplay=true"
+msgstr "Include intrările cu „NoDisplay=true”"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "ID de fişier desktop invalid"
+msgstr "ID de fișier desktop invalid"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Nume invalid de fişier]"
+msgstr "[Nume invalid de fișier]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
 msgstr " <exclus>"
 
 #: ../util/test-menu-spec.c:164
-msgid "\n\n\n==== Menu changed, reloading ====\n\n\n"
-msgstr "\n\n\n==== Meniu schimbat, se reîncarcă ====\n\n\n"
+#, c-format
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== Meniu schimbat, se reîncarcă ====\n"
+"\n"
+"\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169
+#: ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Arborele de meniuri este gol"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- testează implementarea GNOME pentru Desktop Menu Specification"
+msgstr "- testare a implementării GNOME pentru „Desktop Menu Specification”"
+
+
