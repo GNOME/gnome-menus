@@ -75,7 +75,7 @@ msgstr "Գրաֆիկական ծրագրեր"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
-msgstr "Hamacanc"
+msgstr "Համացանց"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
