@@ -1,16 +1,16 @@
-# Bulgarian translation of gnome-menus.
-# Copyright (C) 2004, 2005, 2007 Free Software Foundation
+# Bulgarian translation of gnome-menus po-file.
+# Copyright (C) 2004, 2005, 2007, 2008 Free Software Foundation
 # This file is distributed under the same license as the gnome-menus package.
 # Vladimir "Kaladan" Petkov <vpetkov@i-space.org>, 2004, 2005, 2007.
-# Rostislav "zbrox" Raykov <zbrox@i-space.org>, 2005
-#
+# Rostislav "zbrox" Raykov <zbrox@i-space.org>, 2005.
+# Alexander Shopov <ash@contact.bg>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-17 08:25+0300\n"
-"PO-Revision-Date: 2007-08-17 08:25+0300\n"
+"POT-Creation-Date: 2008-09-30 22:58+0300\n"
+"PO-Revision-Date: 2008-09-30 22:57+0300\n"
 "Last-Translator: Rostislav \"zbrox\" Raykov <zbrox@i-space.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,35 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Universal Access"
-msgstr "Универсален достъп"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Меню за мултимедия"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Universal Access Settings"
-msgstr "Настройки на универсалния достъп"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "Помощни програми"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "Набор от помощни програми"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "Програми"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Лични предпочитания и административни настройки"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Система"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Звук и видео"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -60,11 +38,11 @@ msgstr "Инструменти за разработка на софтуер"
 msgid "Education"
 msgstr "Обучение"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "Игри"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Игри и забавления"
 
@@ -92,14 +70,6 @@ msgstr "Интернет и мрежа"
 msgid "Network-related settings"
 msgstr "Настройки за мрежата"
 
-#: ../desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "Интернет"
-
-#: ../desktop-directories/Internet.directory.in.h:2
-msgid "Programs for Internet access such as web and email"
-msgstr "Програми за работа в Интернет, например е-поща и браузър"
-
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
 msgstr "Външен изглед"
@@ -108,13 +78,13 @@ msgstr "Външен изглед"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "Настройки за външния изглед и поведение на работния плот"
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Меню за мултимедия"
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "Интернет"
 
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "Звук и видео"
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Програми за работа в Интернет, например е-поща и браузър"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -124,14 +94,6 @@ msgstr "Офис"
 msgid "Office Applications"
 msgstr "Офисни програми"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Програми, които не принадлежат към друга категория"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "Други"
-
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
 msgstr "Лични"
@@ -140,36 +102,32 @@ msgstr "Лични"
 msgid "Personal settings"
 msgstr "Лични настройки"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
-msgid "Personal preferences"
-msgstr "Лични предпочитания"
-
-#: ../desktop-directories/Preferences.directory.in.h:2
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Настройки"
-
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Universal access related preferences"
-msgstr "Настройки, свързани с универсалния достъп"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "Лични настройки и предпочитания"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Системни настройки"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
 msgid "Administration"
 msgstr "Администрация на системата"
 
-#: ../desktop-directories/System-Settings.directory.in.h:2
+#: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
 msgstr ""
 "Промяна на глобалните настройки на системата (ще се отрази на всички "
 "потребители)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences"
+msgstr "Лични предпочитания"
+
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "Настройки"
+
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "Система"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "Системни настройки"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -178,6 +136,38 @@ msgstr "Системни инструменти"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Следене и настройване на системата"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "Универсален достъп"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "Настройки на универсалния достъп"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "Помощни програми"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Набор от помощни програми"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Програми"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "Лични предпочитания и административни настройки"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Програми, които не принадлежат към друга категория"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "Други"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -199,16 +189,16 @@ msgstr "_Стандартни"
 msgid "_Menus:"
 msgstr "_Менюта:"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "Име"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "Показване"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -249,6 +239,7 @@ msgid " <excluded>"
 msgstr " <пропускане>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -260,7 +251,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Менюто е било променено - презарежда се ====\n"
+"==== Менюто е било променено — презарежда се ====\n"
 "\n"
 "\n"
 
@@ -271,5 +262,5 @@ msgstr "Дървовидната структура на менюто е пра�
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr ""
-"- тестване на реализацията на спецификацията за менюта към работния плот на "
+"— тестване на реализацията на спецификацията за менюта към работния плот на "
 "GNOME"
