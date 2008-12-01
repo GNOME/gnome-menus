@@ -1,5 +1,11 @@
 2008-12-01  Vincent Untz  <vuntz@gnome.org>
 
+	* python/gmenu.c: (pygmenu_tree_add_monitor): do not assume
+	gmenu_tree_get_root_directory() returns something valid -- it might
+	not be the case if the menu file does not exist. Fix bug #536144.
+
+2008-12-01  Vincent Untz  <vuntz@gnome.org>
+
 	* util/Makefile.am:
 	* util/gnome-menus-ls.py:
 	Add a gnome-menus-ls.py that does more or less what

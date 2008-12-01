@@ -1545,7 +1545,8 @@ pygmenu_tree_add_monitor (PyObject *self,
 
   {
     GMenuTreeDirectory *dir = gmenu_tree_get_root_directory (tree->tree);
-    gmenu_tree_item_unref (dir);
+    if (dir)
+      gmenu_tree_item_unref (dir);
   }
 
   gmenu_tree_add_monitor (tree->tree,
