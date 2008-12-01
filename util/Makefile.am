@@ -22,3 +22,13 @@ gnome_menu_spec_test_LDADD =		\
 	../libmenu/libgnome-menu.la	\
 	$(GLIB_LIBS)			\
 	$(NULL)
+
+if HAVE_PYTHON
+pyexampledir   = $(pkgdatadir)/examples
+pyexample_DATA = gnome-menus-ls.py
+else
+pyexampledir   =
+pyexample_DATA =
+endif
+
+EXTRA_DIST = $(pyexample_DATA)

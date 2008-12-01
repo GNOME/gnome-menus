@@ -1,3 +1,12 @@
+2008-12-01  Vincent Untz  <vuntz@gnome.org>
+
+	* util/Makefile.am:
+	* util/gnome-menus-ls.py:
+	Add a gnome-menus-ls.py that does more or less what
+	gnome-menu-spec-test does, but in python and ship it as an example for
+	the python bindings.
+	Fix bug #542069.
+
 2008-11-25  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: post-release bump to 2.24.3
