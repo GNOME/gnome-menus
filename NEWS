@@ -1,4 +1,19 @@
 ==============
+Version 2.25.2
+==============
+
+  Fixes
+
+	* Fix a critical warning in the python binding for monitoring a file
+	  (Vincent)
+
+  Misc
+
+	* Ship a gnome-menus-ls.py script that is an example of python bindings
+	  and that can be used as a replacement for gnome-menu-spec-test
+	  (Vincent)
+
+==============
 Version 2.24.2
 ==============
 

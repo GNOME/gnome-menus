@@ -1,3 +1,9 @@
+2008-12-02  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.25.2.
+
 2008-12-01  Vincent Untz  <vuntz@gnome.org>
 
 	* python/gmenu.c: (pygmenu_tree_add_monitor): do not assume
