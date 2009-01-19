@@ -1,4 +1,19 @@
 ==============
+Version 2.25.5
+==============
+
+  Misc
+
+	* Use gnome-common macro to define DEPRECATED build variables (Vincent)
+
+  Translators
+
+	* Reşat SABIQ (crh)
+	* Saudat Mohammed (ha)
+	* Sylvester Onye (ig)
+	* Fajuyitan, Sunday Ayo (yo)
+
+==============
 Version 2.25.2
 ==============
 

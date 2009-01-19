@@ -1,4 +1,4 @@
-AC_INIT([gnome-menus], [2.25.3],
+AC_INIT([gnome-menus], [2.25.5],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus])
 AC_CONFIG_SRCDIR(libmenu/gmenu-tree.h)
 
@@ -16,7 +16,7 @@ GNOME_MAINTAINER_MODE_DEFINES
 #   change to C+1:0:0
 # - If the interface is the same as the previous version, change to C:R+1:A
 
-LIB_MENU_LT_VERSION=4:10:2
+LIB_MENU_LT_VERSION=4:11:2
 AC_SUBST(LIB_MENU_LT_VERSION)
 
 GETTEXT_PACKAGE=gnome-menus

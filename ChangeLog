@@ -1,3 +1,9 @@
+2009-01-19  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.25.5.
+
 2008-12-10  Vincent Untz  <vuntz@gnome.org>
 
 	* configure.in: use $DISABLE_DEPRECATED so we don't have to define
