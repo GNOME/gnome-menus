@@ -130,7 +130,7 @@ msgstr "Подешавања система"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Системски алатке"
+msgstr "Системске алатке"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
