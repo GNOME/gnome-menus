@@ -2,52 +2,31 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER.
 #
-#
 # Ignacio Casal Quinteiro <nacho.resa@gmail.com>, 2005.
 # Ignacio Casal Quinteiro <icq@cvs.gnome.org>, 2007.
-# Ignacio Casal Quinteiro <icq@svn.gnome.org>, 2007.
+# Ignacio Casal Quinteiro <icq@svn.gnome.org>, 2008.
+# Mancomún - Centro de Referencia e Servizos de Software Libre <g11n@mancomun.org>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-03 12:36+0100\n"
-"PO-Revision-Date: 2007-11-03 12:38+0100\n"
-"Last-Translator: Ignacio Casal Quinteiro <icq@svn.gnome.org>\n"
+"POT-Creation-Date: 2009-03-15 16:16+0100\n"
+"PO-Revision-Date: 2009-03-10 20:17+0000\n"
+"Last-Translator: Suso Baleato <suso.baleato@xunta.es>\n"
 "Language-Team: Galego <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"Language: gl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Universal Access"
-msgstr "Acceso universal"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Multimedia"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Universal Access Settings"
-msgstr "Configuración do acceso universal"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "Accesorios"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "Accesorios do escritorio"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "Aplicacións"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Preferencias persoais e configuracións de administración"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistema"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Son e vídeo"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -61,11 +40,11 @@ msgstr "Ferramentas para o desenvolvemento de software"
 msgid "Education"
 msgstr "Educación"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "Xogos"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Xogos e pasatempos"
 
@@ -75,7 +54,7 @@ msgstr "Gráficas"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Aplicacións de gráficas"
+msgstr "Aplicacións gráficas"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -83,7 +62,7 @@ msgstr "Hardware"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "Configuracións para varios dispositivos hardware"
+msgstr "Configuracións para varios dispositivos de hardware"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
@@ -93,29 +72,22 @@ msgstr "Internet e rede"
 msgid "Network-related settings"
 msgstr "Configuracións relacionadas coa rede"
 
-#: ../desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "Internet"
-
-#: ../desktop-directories/Internet.directory.in.h:2
-msgid "Programs for Internet access such as web and email"
-msgstr "Programas para o acceso a Internet como a web e correo electrónico"
-
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Visualización e comportamento"
+msgstr "Aparencia"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Configuracións que controlan a aparencia e o comportamento do escritorio"
+msgstr ""
+"Configuracións que controlan a aparencia e o comportamento do escritorio"
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Menú multimedia"
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
 
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "Son e vídeo"
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Programas para o acceso a Internet como a web e correo electrónico"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -125,14 +97,6 @@ msgstr "Oficina"
 msgid "Office Applications"
 msgstr "Aplicacións de oficina"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Aplicacións que non se axustan a outras categorías"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "Outros"
-
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
 msgstr "Persoal"
@@ -141,34 +105,31 @@ msgstr "Persoal"
 msgid "Personal settings"
 msgstr "Configuracións persoais"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "Administración"
+
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr ""
+"Cambiar as configuracións globais do sistema (afecta a todos os usuarios)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Preferencias persoais"
 
-#: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Universal access related preferences"
-msgstr "Preferencias relacionadas co acceso universal"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "Preferencias e configuracións persoais"
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "Sistema"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
 msgstr "Configuracións do sistema"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "Administración"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "Cambia as preferencias globais do sistema (afecta a todos os usuarios)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -177,6 +138,38 @@ msgstr "Ferramentas do sistema"
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
 msgstr "Configuración e monitorización do sistema"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "Acceso universal"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "Configuracións de acceso universal"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "Accesorios"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Accesorios do escritorio"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Aplicacións"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "Preferencias persoais e configuracións de administración"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Aplicacións que non se axustan a outras categorías"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "Outras"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -192,28 +185,28 @@ msgstr "_Aplicacións:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "Predeterminados"
+msgstr "_Predeterminados"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
 msgstr "_Menús:"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "Nome"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "Mostrar"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Non se pode encontrar o directorio persoal: non está establecido en /etc/"
-"passwd e non hai ningún valor para $HOME no contorno."
+"Non se puido encontrar o directorio persoal: non está establecido en /etc/"
+"passwd e non hai ningún valor para $HOME no contorno"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -260,7 +253,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"====·Modificouse o menú;·recargándoo·====\n"
+"==== Modificouse o menú; recargando ====\n"
 "\n"
 "\n"
 
@@ -270,5 +263,11 @@ msgstr "A árbore de menú está baleira"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- probar a implementación de Gnome da Especificación de Menú de Escritorio"
+msgstr ""
+"- probar a implementación do Gnome da Especificación de menú de escritorio"
 
+#~ msgid "Universal access related preferences"
+#~ msgstr "Preferencias relacionadas co acceso universal"
+
+#~ msgid "Personal preferences and settings"
+#~ msgstr "Preferencias e configuracións persoais"
