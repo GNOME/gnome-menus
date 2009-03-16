@@ -5,9 +5,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus TRUNK\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-01 19:47+0100\n"
-"PO-Revision-Date: 2008-12-25 00:51-0600\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&component=general\n"
+"POT-Creation-Date: 2009-03-15 15:17+0000\n"
+"PO-Revision-Date: 2008-12-29 23:12-0600\n"
 "Last-Translator: Reşat SABIQ <tilde.birlik@gmail.com>\n"
 "Language-Team: Qırımtatarca (Qırım Türkçesi)\n"
 "MIME-Version: 1.0\n"
@@ -257,7 +258,7 @@ msgstr ""
 
 #: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "Menü teregi boştur"
+msgstr "Menü teregi boştır"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
