@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-01 12:44+0100\n"
-"PO-Revision-Date: 2009-02-01 12:47+0100\n"
+"POT-Creation-Date: 2009-04-05 10:08+0200\n"
+"PO-Revision-Date: 2009-04-05 10:09+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -164,7 +164,7 @@ msgstr "Program som inte passar in i någon annan kategori"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Other"
-msgstr "Övriga"
+msgstr "Övrigt"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
