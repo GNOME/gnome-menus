@@ -1,0 +1,2671 @@
+2009-04-14  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.26.2
+
+==================== 2.26.1 ====================
+
+2009-04-14  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.26.1.
+
+2009-03-16  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.26.1
+
+==================== 2.26.0 ====================
+
+2009-03-16  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.26.0.
+
+2009-02-17  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.25.92
+
+==================== 2.25.91 ====================
+
+2009-02-17  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.25.91.
+
+2009-01-19  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.25.90
+
+==================== 2.25.5 ====================
+
+2009-01-19  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.25.5.
+
+2008-12-10  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: use $DISABLE_DEPRECATED so we don't have to define
+	ourselves the list of DEPRECATED stuff.
+
+2008-12-02  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.25.3
+
+==================== 2.25.2 ====================
+
+2008-12-02  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.25.2.
+
+2008-12-01  Vincent Untz  <vuntz@gnome.org>
+
+	* python/gmenu.c: (pygmenu_tree_add_monitor): do not assume
+	gmenu_tree_get_root_directory() returns something valid -- it might
+	not be the case if the menu file does not exist. Fix bug #536144.
+
+2008-12-01  Vincent Untz  <vuntz@gnome.org>
+
+	* util/Makefile.am:
+	* util/gnome-menus-ls.py:
+	Add a gnome-menus-ls.py that does more or less what
+	gnome-menu-spec-test does, but in python and ship it as an example for
+	the python bindings.
+	Fix bug #542069.
+
+2008-11-25  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.24.3
+
+==================== 2.24.2 ====================
+
+2008-11-25  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.24.2.
+
+2008-10-22  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.24.2
+
+==================== 2.24.1 ====================
+
+2008-10-22  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.24.1.
+
+2008-09-22  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.24.1
+
+==================== 2.24.0 ====================
+
+2008-09-22  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.24.0.
+
+2008-09-08  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.24.0
+
+==================== 2.23.92 ====================
+
+2008-09-08  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.23.92.
+
+2008-09-01  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.23.92
+
+==================== 2.23.91 ====================
+
+2008-09-01  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.23.91.
+
+2008-08-04  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.23.90
+
+==================== 2.23.6 ====================
+
+2008-08-04  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.23.6.
+
+2008-08-01  Matthias Clasen  <mclasen@redhat.com>
+
+	Bug 545862 - use standard icon names
+
+	* desktop-directories/Utility-Accessibility.directory.in:
+	Use a standard icon name.
+
+2008-07-22  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.23.6
+
+==================== 2.23.5 ====================
+
+2008-07-22  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.23.5.
+
+2008-06-17  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.23.5
+
+==================== 2.23.4 ====================
+
+2008-06-17  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.23.4.
+
+2008-06-17  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: require intltool 0.40.0
+	* Makefile.am: remove old intltool cruft
+
+2008-06-03  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.23.4
+
+==================== 2.23.3 ====================
+
+2008-06-03  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.23.3.
+
+2008-05-19  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/gmenu-tree.c: (load_parent_merge_file): initialize variable
+	to get less unpredictable results :-)
+
+2008-05-19  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/gmenu-tree.c: (load_parent_merge_file_from_basename): remove
+	debug spew.
+
+2008-05-19  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/gmenu-tree.c: (load_parent_merge_file): use the right
+	basename with XDG_MENU_PREFIX (fix previous commit)
+
+2008-05-19  Vincent Untz  <vuntz@gnome.org>
+
+	Complete XDG_MENU_PREFIX support: <MergeFile type="parent"> wasn't
+	working with it.
+
+	* libmenu/gmenu-tree.c: (load_parent_merge_file_from_basename): new
+	from code from load_parent_merge_file, with an extra comment :-)
+	(load_parent_merge_file): if the menu file is applications.menu, handle
+	XDG_MENU_PREFIX so that we load the right parent file.
+
+2008-05-19  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/gmenu-tree.c: (load_parent_merge_file): do not return the
+	fact that we've found a base directory, but the fact that we really a
+	found a parent menu file. Fix a bug where the fallback on the filename
+	in <MergeFile> couldn't be used. 
+
+2008-05-18  Vincent Untz  <vuntz@gnome.org>
+
+	Fix the values of <DefaultLayout> (ie, show_empty, inline,
+	inline_limit, etc.) not being inherited by submenus when the
+	<DefaultLayout> node is after the <Menu> node in the .menu file.
+	Can also fix other issues when there are multiple <DefaultLayout> nodes
+	mixed with the <Menu> nodes.
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_directory_new): do not set the
+	default layout values from the parent here since we might not have
+	the values of the parent yet. So just set to the default values.
+	(set_default_layout_values): new, set the default layout values of a
+	menu based on its parent, and then iterate on the children to do the
+	same
+	(process_layout): after having iterated over all the nodes, we'll have
+	found <DefaultLayout> if there's one and so we can make the submenus
+	inherit it
+
+2008-05-17  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_canonicalize_path): remove useless
+	test that will always result in TRUE
+
+2008-05-17  Vincent Untz  <vuntz@gnome.org>
+
+	Implement missing part of the menu spec: handling of $XDG_MENU_PREFIX
+	for applications.menu
+	Bug #533475
+
+	* libmenu/gmenu-tree.c: (canonicalize_basename): new, based on code
+	from gmenu_tree_canonicalize_path
+	(gmenu_tree_canonicalize_path): if the requested file is
+	applications.menu and the XDG_MENU_PREFIX environment variable is set,
+	use ${XDG_MENU_PREFIX}applications.menu is used
+	(gmenu_tree_get_menu_file): we need to return the basename of the real
+	file, potentially with $XDG_MENU_PREFIX. So find which file is being
+	used first.
+	(load_merge_file): update for menu_layout_load update
+	(gmenu_tree_load_layout): ditto
+	* libmenu/menu-layout.[ch]: (menu_layout_load): add a
+	non_prefixed_basename argument so that we can use the basename without
+	$XDG_MENU_PREFIX and use it as the name for the root node
+
+2008-04-21  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.23.2
+
+==================== 2.23.1 ====================
+
+2008-04-21  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.23.1.
+
+2008-04-17  Vincent Untz  <vuntz@gnome.org>
+
+	* desktop-directories/Makefile.am:
+	* desktop-directories/Settings-Accessibility.directory.in:
+	* layout/settings.menu: remove a11y submenu from preferences, since
+	there's no such capplet anymore and having only one submenu is kind of
+	weird anyway.
+
+2008-04-17  Vincent Untz  <vuntz@gnome.org>
+
+	* desktop-directories/AudioVideo.directory.in:
+	* desktop-directories/Development.directory.in:
+	* desktop-directories/Education.directory.in:
+	* desktop-directories/Game.directory.in:
+	* desktop-directories/Graphics.directory.in:
+	* desktop-directories/Hardware.directory.in:
+	* desktop-directories/InternetAndNetwork.directory.in:
+	* desktop-directories/LookAndFeel.directory.in:
+	* desktop-directories/Network.directory.in:
+	* desktop-directories/Office.directory.in:
+	* desktop-directories/Personal.directory.in:
+	* desktop-directories/Settings-Accessibility.directory.in:
+	* desktop-directories/Settings-System.directory.in:
+	* desktop-directories/Settings.directory.in:
+	* desktop-directories/System-Tools.directory.in:
+	* desktop-directories/System.directory.in:
+	* desktop-directories/Utility-Accessibility.directory.in:
+	* desktop-directories/Utility.directory.in:
+	* desktop-directories/X-GNOME-Menu-Applications.directory.in:
+	* desktop-directories/X-GNOME-Menu-System.directory.in:
+	* desktop-directories/X-GNOME-Other.directory.in:
+	Remove encoding key (deprecated)
+	Update a few icons to use ones from the icon naming spec.
+	Part of bug #396994.
+
+2008-04-17  Vincent Untz  <vuntz@gnome.org>
+
+	* desktop-directories/Accessibility.directory.in:
+	* desktop-directories/Accessories.directory.in:
+	* desktop-directories/Applications.directory.in:
+	* desktop-directories/Desktop.directory.in:
+	* desktop-directories/Games.directory.in:
+	* desktop-directories/Internet.directory.in:
+	* desktop-directories/Makefile.am:
+	* desktop-directories/Multimedia.directory.in:
+	* desktop-directories/Other.directory.in:
+	* desktop-directories/Preferences.directory.in:
+	* desktop-directories/System-Settings.directory.in:
+	Rename most of those files according to real categories defined in the
+	fd.o spec.
+	* layout/Makefile.am:
+	* layout/applications.menu:
+	* layout/preferences.menu:
+	* layout/settings.menu:
+	Updated for those changes. Also remove preferences.menu and directly
+	include its content in settings.menu.
+	Will help with bug #396994.
+
+2008-04-15  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/entry-directories.c: (cached_dir_add_subdir),
+	(cached_dir_remove_subdir): reuse find_subdir() to simplify code
+	Based on patch in bug #349695, by William Jon McCann <mccann@jhu.edu>
+	* libmenu/gmenu-tree.c: (add_menu_for_legacy_dir): fix leak
+
+2008-04-13  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_execute_moves): correctly order the
+	list of move operations to execute, so it's possible to undo a move by
+	doing the opposite move afterwards.
+	Fix bug #323771.
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
+	If a <Layout> or <DefaultLayout> is missing some <Merge> nodes,
+	consider that they're implicit and add them.
+
+	* libmenu/menu-layout.c: (fixup_layout_node): new, to add the missing
+	<Merge> nodes
+	(end_element_handler): hook up the new function at the end of the
+	parsing of the <Layout> and <DefaultLayout> nodes
+	Fix end of bug #458285.
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
+	* layout/preferences.menu: do not exclude gnomecc.desktop (since
+	alacarte will show it as excluded), but instead explicitly do not
+	include it (and alacarte will not show it as excluded this way)
+	Fix a bug where gnomecc.desktop is shown both in the toplevel System
+	menu and in the Preferences submenu.
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/gmenu-tree.c: (process_layout): if showing excluded items (as
+	in alacarte), remove an entry from the excluded set if it's explicitly
+	included after the <Exclude> node.
+	Fix bug #441198.
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
+	* layout/settings.menu: Merge menus and files at the end of the layout.
+	Fix part of bug #458285.
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
+	Do not show unless specifically asked separators at the beginning of a
+	menu, or at the end of a menu, or after another separator.
+	Fix bug #497399.
+
+	* python/gmenu.c: (initgmenu): add new flag
+	* libmenu/gmenu-tree.[ch]: add new GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS
+	flag
+	(check_pending_separator): append a separator to a menu if there's a
+	pending one
+	(merge_subdir):
+	(merge_entry): add calls to check_pending_separator()
+	(process_layout_info): implement logic to add a separator if
+	GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS is specified or add a pending one
+	if it will be useful
+
+2008-04-12  Vincent Untz  <vuntz@gnome.org>
+
+	* layout/applications.menu: do not show a11y in accessories submenu
+	since they're already in the a11y one
+	Patch by Josselin Mouette <joss@malsain.org>
+	Fix bug #510757
+
+2008-04-11  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/menu-monitor.c: (monitor_callback): get the path of the file
+	that caused the event, instead of something that will break in some
+	case because it returns an URI. Fix crash described in bug #522800.
+
+2008-04-11  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/inotify-syscalls.h:
+	* libmenu/inotify.h: killed
+	* libmenu/menu-monitor.c: (register_monitor): call g_type_init() once
+	since we're using gio in this file and so GObjects. Since
+	libgnome-menus doesn't export any GObject stuff, an app can't know that
+	g_type_init() has to be called and we have to do it.
+
+2008-04-07  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.22.2
+
+==================== 2.22.1 ====================
+
+2008-04-07  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.22.1.
+
+2008-03-13  Vincent Untz  <vuntz@gnome.org>
+
+	* simple-editor/GMenuSimpleEditor/main.py:
+	* simple-editor/GMenuSimpleEditor/maindialog.py:
+	* simple-editor/GMenuSimpleEditor/menufilewriter.py:
+	* simple-editor/GMenuSimpleEditor/menutreemodel.py: remove shebangs
+	from non-executable Python scripts
+
+2008-03-10  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.22.1
+
+==================== 2.22.0 ====================
+
+2008-03-10  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.22.0.
+
+2008-02-26  Olav Vitters  <olav@bkor.dhs.org>
+
+	* configure.in: post-release bump to 2.21.93
+
+==================== 2.21.92 ====================
+
+2008-02-26  Olav Vitters  <olav@bkor.dhs.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.21.92.
+
+2008-02-11  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.21.92
+
+==================== 2.21.91 ====================
+
+2008-02-11  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.21.91.
+
+2008-02-09  Vincent Untz  <vuntz@gnome.org>
+
+	* util/Makefile.am: don't install gnome-menu-spec-test
+
+2008-02-09  Vincent Untz  <vuntz@gnome.org>
+
+	We don't need multiple monitor backends anymore. Just depend on gio.
+
+	* configure.in: unconditionnally depend on gio, remove backend
+	selection cruft
+	* libmenu/Makefile.am:
+	* libmenu/menu-monitor.c: (get_registry_key), (monitor_callback),
+	(register_monitor), (lookup_monitor), (menu_monitor_unref):
+	* libmenu/menu-monitor.h:
+	* libmenu/menu-monitor-backend.h: killed
+	* libmenu/menu-monitor-fam.c: killed
+	* libmenu/menu-monitor-gio.c: killed 
+	* libmenu/menu-monitor-inotify.c: killed
+	* libmenu/menu-monitor-none.c: killed
+
+2008-01-28  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.21.91
+
+==================== 2.21.90 ====================
+
+2008-01-28  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.21.90.
+
+2008-01-20  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: test for gio 2.15.2
+	Fix bug #509826. Thanks to Saleem Abdulrasool <compnerd@compnerd.org>
+
+2008-01-14  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.21.90
+
+==================== 2.21.5 ====================
+
+2008-01-14  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.21.5.
+
+2008-01-14  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/menu-monitor-gio.c:
+	(menu_monitor_backend_register_monitor): update for
+	g_file_monitor_directory()/g_file_monitor_file() API change
+
+2008-01-08  Wouter Bolsterlee  <wbolster@svn.gnome.org>
+
+	reviewed by: Vincent Untz
+
+	* configure.in:
+	* libmenu/menu-monitor-gio.c:
+	(menu_monitor_backend_register_monitor),
+	(menu_monitor_backend_unregister_monitor):
+
+	Adapt to GIO file and directory monitoring API changes.
+	Initial patch by Sebastian Bacher, but updated to
+	actually do the right thing by Wouter Bolsterlee.
+	Fixes bug #507938
+
+2007-12-22  Olav Vitters  <olav@bkor.dhs.org>
+
+	* README:
+	* configure.in: Post-release bump to 2.21.4
+
+==================== 2.21.3 ====================
+
+2007-12-22  Olav Vitters  <olav@bkor.dhs.org>
+
+	* NEWS: Update.
+
+2007-12-14  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* libmenu/menu-monitor-gio.c:
+	(menu_monitor_backend_register_monitor):
+	Fix for api change in gio.
+
+2007-11-15  Sebastian Drˆge  <slomo@circular-chaos.org>
+
+	* libmenu/menu-monitor-gio.c:
+	(menu_monitor_backend_register_monitor):
+	Don't forget to unref the GFile to prevent a major memory leak.
+
+2007-11-12  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.21.3
+
+==================== 2.21.2 ====================
+
+2007-11-12  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.21.2.
+
+2007-11-06  Sebastian Drˆge  <slomo@circular-chaos.org>
+
+	* configure.in:
+	* libmenu/Makefile.am:
+	* libmenu/menu-monitor-fam.c: (get_fam_connection),
+	(menu_monitor_backend_register_monitor),
+	(menu_monitor_backend_unregister_monitor):
+	* libmenu/menu-monitor-gio.c: (monitor_callback),
+	(menu_monitor_backend_register_monitor),
+	(menu_monitor_backend_unregister_monitor):
+	* libmenu/menu-monitor-none.c:
+	(menu_monitor_backend_register_monitor),
+	(menu_monitor_backend_unregister_monitor):
+	Add a menu monitor backend that uses GIO and improve the
+	monitor backend selection by adding a --with-monitor-backend
+	configure parameter. The GIO backend is the preffered one currently.
+	
+	* configure.in:
+	Bump version to 2.21.2.
+
+2007-10-15  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.20.2
+
+==================== 2.20.1 ====================
+
+2007-10-15  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.20.1.
+
+2007-09-17  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.20.1
+
+==================== 2.20.0 ====================
+
+2007-09-17  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.20.0.
+
+2007-09-04  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.20.0
+
+==================== 2.19.92 ====================
+
+2007-09-04  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.19.92.
+
+2007-08-31  Vincent Untz  <vuntz@gnome.org>
+
+	* MAINTAINERS: update to new format, and add myself.
+
+2007-08-20  Rob Bradford  <rob@robster.org.uk>
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_directory_get_tree):
+	Avoid potentially passing NULL into gmenu_tree_ref 
+	(See #430074 for the background on this.)
+
+2007-08-13  Lucas Rocha  <lucasr@gnome.org>
+
+	* configure.in: post-release bump to 2.19.91
+
+==================== 2.19.90 ====================
+
+2007-08-13  Lucas Rocha  <lucasr@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.19.90.
+
+2007-07-30  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.19.90
+
+==================== 2.19.6 ====================
+
+2007-07-30  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.19.6.
+
+2007-07-08  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.19.6
+
+==================== 2.19.5 ====================
+
+2007-07-08  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.19.5.
+
+2007-06-26  Ray Strode  <rstrode@redhat.com>
+
+	* layout/applications.menu: don't show screensavers
+	in the menus (bug 448361)
+
+2007-06-18  Vincent Untz  <vuntz@gnome.org>
+
+	* acinclude.m4: use python-config to get python includes
+	Patch from Sebastien Bacher <seb128@ubuntu.com>. Fix bug #448711.
+
+2007-06-17  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.19.5
+
+==================== 2.19.4 ====================
+
+2007-06-17  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.19.4.
+
+2007-06-15  Vincent Untz  <vuntz@gnome.org>
+
+	Fix crash with inotify backend happening when ~/.config/menus is
+	created (in fact, when there are more than one creation_monitors for a
+	given watch). Bug #422966.
+
+	* libmenu/menu-monitor-inotify.c: (handle_inotify_event): remove the
+	monitor from creation_monitors only if we couldn't add the monitor. If
+	we succeed in creating it, it'll get remove later, in remove_watch().
+	(remove_watch): free watch
+	(remove_watch_foreach): free watch
+	(close_inotify): destroy the path_to_watch hash table
+
+2007-06-14  Colin Walters  <walters@redhat.com>
+
+	* python/gmenu.c (pygmenu_tree_handle_monitor_callback): Acquire and
+	release Python GIL around invocation (#442747).
+	(pygmenu_tree_add_monitor): Set user data to NULL if it's not passed in.
+	Check that the passed object is a callable.
+
+	* configure.in: Require Python 2.3 for above changes.
+
+2007-06-03  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.19.4
+
+==================== 2.19.3 ====================
+
+2007-06-03  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.19.3.
+
+2007-05-17  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/menu-monitor.c: (menu_monitor_unref): destroy the hash table
+	if it's empty. Patch by William Jon McCann <mccann@jhu.edu>
+
+2007-05-17  Vincent Untz  <vuntz@gnome.org>
+
+	* libmenu/canonicalize.c: (menu_realpath):
+	* libmenu/entry-directories.c: (cached_dir_lookup),
+	(cached_dir_load_entries_recursive),
+	(entry_directory_foreach_recursive):
+	* libmenu/gmenu-tree.c: (find_path),
+	(gmenu_tree_get_directory_from_path), (append_directory_path),
+	(add_menu_for_legacy_dir), (find_submenu):
+	* libmenu/menu-monitor-fam.c: (queue_fam_event):
+	* libmenu/menu-monitor-inotify.c: (handle_inotify_event):
+	Use G_DIR_SEPARATOR instead of '/'
+
+2007-05-13  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.19.3
+
+==================== 2.19.2 ====================
+
+2007-05-13  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.19.2.
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
+	* autogen.sh: require automake 1.9
+	Fix bug #344047
+	* desktop-directories/Makefile.am: remove trailing spaces
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
+	* layout/applications.menu: don't require Application category for the
+	Other submenu, since this is not a valid category.
+	Should fix bug #331142
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
+	* desktop-directories/Desktop.directory.in: s/Desktop/System/ since
+	the menu got renamed.
+	Fix for bug #367551
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
+	* desktop-directories/Settings-Accessibility.directory.in:
+	* desktop-directories/Accessibility.directory.in:
+	* layout/preferences.menu:
+	* layout/applications.menu: s/Accessibility/Universal Access/
+	Fix bug #376324
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
+	* desktop-directories/*: use icons from icon naming spec
+	Fix bug #396994
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
+	* simple-editor/Makefile.am:
+	* simple-editor/gmenu-simple-editor.in: use the PYTHON found by
+	configure instead of "env python"
+	Fix bug #343978
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
+	* layout/settings.menu: use <Layout> to put Preferences before
+	Administration
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
+	* desktop-directories/System-Settings.directory.in:
+	s/systemwide/system-wide/
+	Fix bug #326707
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
+	* simple-editor/GMenuSimpleEditor/main.py: import pygtk and require
+	version 2.0
+	Fix bug #382111
+
+2007-05-01  Vincent Untz  <vuntz@gnome.org>
+
+	* simple-editor/GMenuSimpleEditor/maindialog.py: (__setup_menus_tree):
+	use SELECTION_BROWSE instead of SELECTION_SINGLE so the user can't
+	unselect a menu
+	(__menus_selection_changed): if there's no selection (happens if the
+	user searches the treeview), just set the entries list to show no
+	model
+	Fix bug #417273
+
+2007-03-12  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.18.1
+
+==================== 2.18.0 ====================
+
+2007-03-12  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.18.0.
+
+2007-02-26  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.18.0
+
+==================== 2.17.92 ====================
+
+2007-02-26  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.17.92.
+
+2007-02-21 Maxim Dziumanenko <dziumanenko@gmail.com>
+
+	* uk.po: Update Ukrainian translation.
+
+2007-02-20  Denis Washington  <denisw@svn.gnome.org>
+
+	* desktop-directories/Preferences.directory:
+	* desktop-directories/System-Settings.directory:
+	Reverting the default use of the shell and use the menus for 2.18
+	instead. The shell still needs some love and probably will be default
+	for GNOME 2.20.
+	
+2007-02-13  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.17.92
+
+==================== 2.17.91 ====================
+
+2007-02-13  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.17.91.
+
+2007-02-06  Vincent Untz  <vuntz@gnome.org>
+
+	* layout/settings.menu:
+	* layout/preferences.menu: revert layout change to the one we had in
+	2.16
+	* desktop-directories/System-Settings.directory.in:
+	* desktop-directories/Preferences.directory.in: mark those two
+	directories with NoDisplay=true so they're hidden by default
+
+	Patch by Denis Washington <dwashington@gmx.net>
+	Fix gnome-menus part of bug #402797.
+
+2007-01-17  Vincent Untz  <vuntz@gnome.org>
+
+	* layout/preferences.menu: add some layout, so that categories are
+	sorted in a more useful order.
+	Patch by Denis Washington <dwashington@gmx.net>
+	Fix bug #395774
+
+2007-01-17  Vincent Untz  <vuntz@gnome.org>
+
+	* layout/preferences.menu: fix categories. We shouldn't use
+	non-registered categories that do not start with X-.
+	Patch by Denis Washington <dwashington@gmx.net>
+
+2007-01-09  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.17.90
+
+==================== 2.17.5 ====================
+
+2007-01-09  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.17.5.
+
+2007-01-09  Rodrigo Moya <rodrigo@gnome-db.org>
+
+	* desktop-directories/*.directory.in: added missing files.
+
+	* layout/preferences.menu: fixed typo.
+
+2007-01-08  Rodrigo Moya <rodrigo@gnome-db.org>
+
+	* desktop-directories/InternetAndNetwork.directory.in:
+	* desktop-directories/Hardware.directory.in: added missing file.
+
+2007-01-08  Denis Washington <dwashington@gmx.net>
+
+	Fixes #393617
+
+	* desktop-directories/*:
+	* layout/*: rearrange preferences menus.
+
+2006-11-06  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.17.3
+	
+==================== 2.17.2 ====================
+
+2006-11-06  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.17.2.
+
+2006-11-02  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/desktop-entries.c: (desktop_entry_load): don't
+	load a .desktop file which contains an incorrectly encoded
+	Name key. Fixes bug #339904
+
+2006-11-01  Mark McLoughlin  <mark@skynet.ie>
+
+	Flesh out the inotify support. Not enabled by default until
+	it gets a tad more testing. Closes bug #314854
+
+	* configure.in: add --enable-inotify
+	
+	* libmenu/Makefile.am: build menu-monitor-inotify.c if inotify
+	is enabled.
+	
+	* libmenu/menu-monitor-inotify.c: implement lots more of this.
+	See TODO list at the top of the file.
+
+2006-11-01  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/gmenu-tree.c:
+	(gmenu_tree_entry_get_launch_in_terminal): fix compile
+	warning
+	
+2006-11-01  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: bump version to 2.17.1 - 2.16
+	development continues on the gnome-2-16 branch
+
+2006-10-02  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.16.2.
+
+==================== 2.16.1 ====================
+
+2006-10-02  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.16.1.
+
+2006-09-04  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.16.1.
+
+==================== 2.16.0 ====================
+
+2006-09-04  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.16.0.
+
+2006-08-08  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.15.92.
+
+==================== 2.15.91 ====================
+
+2006-08-08  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.15.91.
+
+2006-07-24  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.15.91.
+
+==================== 2.15.90 ====================
+
+2006-07-24  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.15.90.
+
+2006-07-11  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.15.5.
+
+==================== 2.15.4.1 ====================
+
+2006-07-11  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.15.4.1.
+
+2006-07-11  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.15.5.
+
+==================== 2.15.4 ====================
+
+2006-07-11  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.15.4.
+
+2006-07-11  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: require intltool 0.35.0
+
+2006-05-05  Travis Watkins  <alleykat@gmail.com>
+
+	* libmenu/desktop-entries.[ch]: add
+	desktop_entry_get_launch_in_terminal
+	* libmenu/gmenu-tree.[ch]: add
+	gmenu_tree_directory_get_desktop_file_path,
+	gmenu_tree_entry_get_launch_in_terminal
+	* python/gmenu.c: add pygmenu_tree_directory_get_desktop_file_path,
+	pygmenu_tree_entry_get_launch_in_terminal,
+	pygmenu_tree_entry_get_is_nodisplay, FLAGS_INCLUDE_NO_DISPLAY
+
+2006-05-05  William Jon McCann  <mccann@jhu.edu>
+
+	* simple-editor/GMenuSimpleEditor/main.py:
+	* simple-editor/GMenuSimpleEditor/maindialog.py:
+	* simple-editor/GMenuSimpleEditor/menutreemodel.py:
+	Allow specifying alternate menu files as command line
+	arguments.  Fixes #339812
+
+2006-04-28  Wouter Bolsterlee  <uws+gnome@xs4all.nl>
+
+	* configure.in: Use po/LINGUAS. See
+	http://live.gnome.org/GnomeGoals/PoLinguas for more
+	details. Fixes #337930. Patch from Przemyslaw
+	Grzegorczyk.
+
+	* po/LINGUAS: New file listing all languages.
+
+2006-04-17  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* configure.in: Remove obsolete entry for no_NO
+	* po/no.po: And the translation.
+
+2006-04-13  Vincent Untz  <vuntz@gnome.org>
+
+	* configure.in: post-release bump to 2.14.1.
+
+==================== 2.14.0 ====================
+
+2006-04-13  Vincent Untz  <vuntz@gnome.org>
+
+	* NEWS:
+	* README:
+	* configure.in: Version 2.14.0.
+
+2006-04-07  Christian Rose  <menthos@menthos.com>
+
+	* configure.in: Added "mg" to ALL_LINGUAS.
+
+2006-04-01  Raphael Higino  <raphaelh@cvs.gnome.org>
+
+	* configure.in: Added lv to ALL_LINGUAS.
+
+2006-03-31  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix infinite loop - bug #328644
+
+	* libmenu/gmenu-tree.c: (find_path): increment the
+	iterator before continuing.
+
+2006-03-24  Tommi Vainikainen  <thv@iki.fi>
+
+	* configure.in (ALL_LINGUAS): Added Dzongkha (dz).
+
+2006-02-16  Vladimer Sichinava  <alinux@siena.linux.it>
+
+	* configure.in: Added "ka" tp ALL_LINGUAS.
+	
+2006-02-25  Ar Floc'h JÈrÈmy  <jeremy.lefloch@gmail.com>
+
+	* configure.in: Add "br" to ALL_LINGUAS.
+	
+2006-01-29  Mark McLoughlin  <mark@skynet.ie>
+
+	Begin adding inotify support - bug #314854
+
+	* libmenu/menu-monitor-backend.h: define a generic
+	backend interface for file monitor implementations
+	
+	* libmenu/menu-monitor.c: split out all the FAM
+	stuff and use the generic backend interface
+	
+	* libmenu/menu-monitor-fam.c: both the FAM and "null"
+	implementations
+	
+	* libmenu/Makefile.am: build menu-monitor-fam.c
+	
+	* libmenu/menu-monitor-inotify.c,
+	  libmenu/inotify-syscalls.h:
+	  libmenu/inotify.h: first cut at the inotify
+	implementation; not finished yet and not built
+	either.
+
+2006-01-29  Mark McLoughlin  <mark@skynet.ie>
+
+	* python/gmenu.c: (pygmenu_tree_getattro): fix typo.
+
+2006-01-15  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.13.6.
+
+==================== 2.13.5 ====================
+
+2006-01-15  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.13.5.
+
+2006-01-13  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: bump version to 2.13.1 - 2.12 version
+	continues on the gnome-2-12 branch
+
+2006-01-07  Chao-Hsiung Liao  <j_h_liau@yahoo.com.tw>
+
+	* configure.in: Add "zh_HK" to ALL_LINGUAS.
+
+2005-12-18  Sunil Mohan Adapa  <sunil@atc.tcs.co.in>
+
+	* configure.in: Added "te" to ALL_LINGUAS.
+
+2005-12-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Patch from The Written Word in bug #322222
+
+	* libmenu/desktop-entries.c: (desktop_entry_load): Fix incorrect
+	escaping in C format strings
+
+2005-12-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Add GMENU_TREE_FLAGS_INCLUDE_NODISPLAY, gmenu_tree_entry_get_nodisplay()
+	and gmenu_tree_directory_get_nodisplay() in order to allow fix for
+	bug #323476
+
+	* libmenu/gmenu-tree.[ch]:
+	(gmenu_tree_directory_get_is_nodisplay),
+	(gmenu_tree_entry_get_is_nodisplay): add new API
+	(gmenu_tree_directory_new),
+	(gmenu_tree_entry_new): add is_nodisplay flag on entries
+	and directories
+	(entries_listify_foreach),
+	(excluded_entries_listify_foreach): set the flag here
+	(process_layout): don't remove if is_nodisplay and the
+	INCLUDE_NODISPLAY tree flag is set.
+
+	* util/test-menu-spec.c: (main): add -n arg to allow
+	testing.
+
+2005-11-01  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_execute_moves):
+	* libmenu/menu-layout.c: (fixup_move_node): Remove some
+	unused code. Closes bug #320093.
+
+2005-10-31  Simos Xenitellis  <simos@gnome.org>
+
+	* configure.in: Added ky (Kirghiz) to ALL_LINGUAS.
+
+2005-10-27  Erdal Ronahi <erdal.ronahi@gmail.com>
+	* configure.in: Added "ku" (Kurdish) to ALL_LINGUAS.
+
+2005-10-14  Abduxukur Abdurixit <abdurixit@gmail.com>
+	* configure.in: Added "ug" (Uighur) to ALL_LINGUAS.
+
+2005-10-01  Runa Bhattacharjee <runa@bengalinux.org>
+	* configure.in: Added "bn" (Bengali) to ALL_LINGUAS.
+
+2005-09-30  Mark McLoughlin  <mark@skynet.ie>
+
+	Hopefully fix issue where menus wouldn't be completely
+	reloaded after a spew of file change events (#313833)
+	
+	Detailed analysis from Frederic Crozat <fcrozat@mandriva.com>
+
+	* libmenu/menu-monitor.c: make the pending_events list global
+	rather than per-monitor and don't try and coalesce events for
+	the same path so that we can guarantee that we emit all the
+	events in the same order as we receive them from FAM.
+
+2005-09-06  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.12.1.
+	
+==================== 2.12.0 ====================
+
+2005-09-06  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.12.0.
+
+2005-09-04  Danilo Segan  <danilo@gnome.org>
+
+	* configure.in: Added "hy" (Armenian) to ALL_LINGUAS.
+
+2005-08-24  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix crasher where a FAMConnection may have events for
+	a monitor, even after the monitor may be cancelled.
+	Patch from Ed Catmur <ed@catmur.co.uk> in bug #314369
+
+	* libmenu/menu-monitor.c: (unregister_monitor_with_fam):
+	Process any pending events after cancelling the monitor.
+
+2005-08-22  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.11.93
+
+==================== 2.11.92 ====================
+
+2005-08-22  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.11.92.
+	
+2005-08-22  Mark McLoughlin  <mark@skynet.ie>
+
+	Based on patch from Chris Lahey <clahey@ximian.com>
+	in bug #313899
+
+	* libmenu/entry-directories.c:
+	(get_desktop_file_id_from_path): pass the DesktopEntryType
+	instead of using EntryDirectory:entry_type which may
+	be DESKTOP_ENTRY_INVALID with <LegacyDir>
+	(entry_directory_foreach_recursive),
+	(entry_directory_get_flat_contents): pass the appropriate
+	entry type.
+
+2005-08-18  Mark McLoughlin  <mark@skynet.ie>
+
+	Patch from Federic Crozat <fcrozat@mandriva.com>
+
+	* libmenu/entry-directories.c:
+	(cached_dir_remove_reference): Fix infinite loop.
+
+2005-08-18  Mark McLoughlin  <mark@skynet.ie>
+
+	Fixes "duplicate entry" issue in bug #313624
+	
+	* libmenu/entry-directories.c:
+	(handle_cached_dir_changed): Look up the CachedDir
+	for the parent of whatever path we're being notified
+	about - we could be getting notified about ourself
+	being created/deleted.
+	
+2005-08-18  Mark McLoughlin  <mark@skynet.ie>
+
+	Obfuscate this code some more. Basic issue is that if an
+	EntryDirectory has a subdir which is also an EntryDirectory
+	and the subdir gets deleted, then the CachedDir for the subdir
+	gets freed leaving us with a dangling reference in the
+	EntryDirectory.
+
+	* libmenu/entry-directories.c:
+	(cached_dir_find_relative_path),
+	(cached_dir_lookup): remove infinite loop code path.
+	(cached_dir_add_subdir): if the subdir already exists
+	but is deleted, just undelete it.
+	(cached_dir_remove_subdir): if the subdir is referenced
+	by an EntryDirectory, just mark it as deleted and don't
+	free it.
+	(cached_dir_add_reference),
+	(cached_dir_remove_reference): keep track of how many
+	EntryDirectories reference a CachedDir. If the count
+	falls to zero and the CachedDir is marked as deleted,
+	free it.
+	(entry_directory_new_full): add a reference here.
+	(entry_directory_unref): remove it here.
+	(entry_directory_foreach_recursive),
+	(entry_directory_get_flat_contents): don't list the
+	contents of a dir if its marked as deleted.
+
+2005-08-17  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/entry-directories.c:
+	(cached_dir_clear_entries),
+	(cached_dir_clear_subdirs): remove
+	(cached_dir_free): free the subdirs and entries
+	directly here.
+	(cached_dir_load_entries_recursive): no need to
+	free the entries here - there shouldn't be any at this
+	point.
+	(cached_dir_load): remove.
+	(entry_directory_new_full): lookup and load the
+	CachedDir directly here.
+
+2005-08-17  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/entry-directories.c:
+	(cached_dir_get_full_path),
+	(cached_dir_ensure_loaded),
+	(cached_dir_get_subdirs),
+	(cached_dir_get_entries): remove all this code.
+	(entry_directory_foreach_recursive),
+	(entry_directory_get_flat_contents): directly reference
+	a CachedDir's subdirs and entries lists since we can
+	be sure they're always already loaded - they get loaded
+	in entry_directory_new_full()
+
+2005-08-14  Elijah Newren  <newren@gmail.com>
+
+	* libmenu/menu-monitor.c: Pull menu_monitor_notify_ref() and
+	menu_monitor_notify_unref() out of the #ifdef HAVE_FAM to fix a
+	compilation issue.
+
+2005-08-14  Mark McLoughlin  <mark@skynet.ie>
+
+	* simple-editor/GMenuSimpleEditor/main.py:
+	Fix a python syntax warning.
+
+2005-08-12  Mark McLoughlin  <mark@skynet.ie>
+
+	Fixes bug #313232 - memory corruption issue where notifies
+	were being removed from under us as we walked the list of
+	notifies.
+
+	* libmenu/menu-monitor.c:
+	(menu_monitor_notify_ref),
+	(menu_monitor_notify_unref): make MenuMonitorNotify refcounted.
+	(menu_monitor_add_notify): set initial refcount.
+	(menu_monitor_remove_notify): when removing the notify, unset
+	the callback pointer and unref.
+	(invoke_notifies): make a copy of the notifies list and
+	ref each notify before invoking the callbacks - callbacks
+	may cause arbitrary notifies to be removed as we walk the
+	list.
+	(menu_monitor_unref): unref each of the notifies rather
+	than freeing them.
+
+2005-08-09  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.11.92.
+
+==================== 2.11.91 ====================
+
+2005-08-09  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.11.91.
+	
+2005-08-02  Mark McLoughlin  <mark@skynet.ie>
+
+	Based on patch from Dennis Cranston <dennis_cranston@yahoo.com>
+	in bug #312117
+
+	* simple-editor/gmenu-simple-editor.desktop.in: add a .desktop
+	file only so it may be launched using startup-notification.
+	
+	* simple-editor/Makefile.am: generate and install the .desktop
+	file.
+
+2005-08-02  Mark McLoughlin  <mark@skynet.ie>
+
+	Based on patch from in Jaap A. Haitsma <jaap@haitsma.org>
+	in bug #312143
+
+	* simple-editor/GMenuSimpleEditor/maindialog.py:
+	use gnome-main-menu as the window icon instead of
+	non-existant gmenu-simple-editor
+	
+2005-08-02  Mark McLoughlin  <mark@skynet.ie>
+
+	Allow running gmenu-simple-editor with a python
+	from a different prefix. Fixes bug #312274
+
+	* simple-editor/gmenu-simple-editor: remove
+	
+	* simple-editor/gmenu-simple-editor.in: if
+	pyexecdir isn't in sys.path, insert it before
+	trying to import main module.
+	
+	* simple-editor/Makefile.am: generate
+	gmenu-simple-editor
+	
+	* simple-editor/GMenuSimpleEditor/main.py: 
+	add a main() function.
+
+2005-07-26  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.11.91
+
+==================== 2.11.90 ====================
+
+2005-07-26  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.11.90
+
+2005-07-25  Mark McLoughlin  <mark@skynet.ie>
+
+	Revert some of the changes related to handling different
+	filename encodings.
+
+	Basically, we shouldn't be trying to convert the desktop
+	file ID to UTF-8 as that makes the matching process
+	locale dependant.
+
+	* libmenu/desktop-entries.c,
+	  libmenu/entry-directories.[ch],
+	  libmenu/gmenu-tree.c:  don't try to convert the path
+	to UTF-8 in various places.
+
+	* util/test-menu-spec.c: (print_entry): convert the 
+	desktop file ID to UTF-8 before printing as well
+	as the desktop file path.
+
+2005-07-20  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-monitor.c: (free_event_info): plug
+	a leak.
+
+	* libmenu/entry-directories.c:
+	(cached_dir_find_file_id),
+	(entry_directory_get_desktop),
+	(entry_directory_list_get_desktop): remove some unused code.
+	It became unused when we switched to matching <Filename>s
+	against a DesktopEntrySet of all the desktop entries.
+
+2005-07-20  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix things up so that we correctly handle different
+	filename encodings. Fixes bug #310939
+
+	As far as the API goes, the rule is that the return value
+	from gmenu_tree_entry_get_desktop_file_path() is in
+	the filename encoding; everything else is UTF-8
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_directory_make_path):
+	Convert filename encoded basename to UTF-8 before appending
+	to returned menu path.
+	
+	* libmenu/desktop-entries.c: (desktop_entry_new): don't
+	load any .desktop files whose filenames aren't in a
+	recognised encoding.
+	
+	* libmenu/entry-directories.[ch]:
+	(entry_directory_new_full): convert UTF-8 path to filename
+	encoding before loading; fallback to original path if UTF-8
+	conversion fails.
+	(get_desktop_file_id_from_path): convert the filename
+	encoded path to a UTF-8 desktop-file-id
+	(entry_directory_foreach_recursive): don't pass the
+	path and file_id to the callback; use the path as
+	a file_id for .directory files.
+	(entry_directory_get_flat_contents): convert filename
+	encoded path of .directory file to UTF-8 before using as
+	a desktop-file-id.
+	(entry_directory_list_get_directory): convert UTF-8 path
+	to filename encoding; fallback to original path if conversion
+	fails.
+	(get_all_func): we don't get passed the path anymore.
+	(entry_directory_list_get_all_desktops): munge the code
+	from entry_directory_list_add() in here since it was
+	its only user.
+
+	* util/Makefile.am: define GNOMELOCALEDIR in CFLAGS.
+	
+	* util/test-menu-spec.c:
+	(print_entry): convert desktop entry path to UTF-8 before
+	printing
+	(handle_tree_changed), (main): i18nize.
+	
+2005-07-11  Mark McLoughlin  <mark@skynet.ie>
+
+	Fixes "gmenu-simple-editor calls the Desktop menu
+	Preferences" (bug #309693)
+
+	* desktop-directories/Desktop.directory.in: add for
+	settings.menu
+	
+	* desktop-directories/Preferences.directory.in: add
+	for preferences.menu
+	
+	* desktop-directories/Makefile.am: add new .directory
+	files.
+	
+	* layout/preferences.menu: use Desktop.directory.in
+	
+	* layout/settings.menu: use Preferences.directory.in
+
+2005-06-28  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #305748 - only include ".directory" in
+	a <LegacyDir> if it actually exists.
+
+	* libmenu/gmenu-tree.c:
+	(is_dot_directory),
+	(add_menu_for_legacy_dir): only add a <Directory>.directory</Directory>
+	if the file exists.
+	(process_layout): expand debug spew.
+
+2005-06-28  Mark McLoughlin  <mark@skynet.ie>
+
+	Re-name the Edutainment sub-menu to Education.
+	Bug #307979
+
+	* layout/applications.menu: s/Edutainment/Education/
+
+	* desktop-directories/Edutainment.directory.in:
+	Re-name from Edutainmenut.directory.in and change
+	the name.
+	
+	* desktop-directories/Makefile.am: upd.
+	
+2005-06-11  Christian Rose  <menthos@menthos.com>
+
+	* configure.in: Added "he" to ALL_LINGUAS.
+
+2005-06-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Patch from Brian Cameron <brian.cameron@sun.com> in
+	bug #304129
+
+	* libmenu/libgnome-menu-uninstalled.pc.in: add pkg-config
+	file to support building against an uninstalled 
+	libgnome-menu.
+	
+	* configure.in: create libgnome-menu-uninstalled.pc
+	
+	* libmenu/Makefile.am: add uninstalled.pc to EXTRA_DIST
+
+2005-06-05  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* configure.in: Added 'gl' to ALL_LINGUA.
+
+2005-05-30  Swapnil Hajare  <dreamil@gmail.com>
+
+	* configure.in: Added entry fir Marathi (mr) in ALL_LINGUA
+
+2005-05-30  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix problem where menus and items mentioned in a <Layout>
+	after a <Merge type="menus"> or <Merge type="files">
+	Bug #305723
+
+	* libmenu/gmenu-tree.c: 
+	(find_name_in_list): helper function.
+	(merge_subdirs), (merge_entries),
+	(merge_subdirs_and_entries): accept lists of menus or files
+	which appear after the merge and don't merge them.
+	(get_subdirs_from_layout_info),
+	(get_entries_from_layout_info): get a list of the menus or
+	files specified after a merge.
+	(process_layout_info): pass the exception lists to the
+	merge operations.
+
+2005-05-22  Dennis Cranston  <dennis_cranston@yahoo.com>
+
+	* simple-editor/gmenu-simple-editor.glade:  HIGify
+	the widget spacing and shadow type.
+	
+	* simple-editor/GMenuSimpleEditor/maindialog.py:  
+	"Hide" -> "Show".
+	
+2005-05-18  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.11.1.1
+
+==================== 2.11.1.1 ====================
+
+2005-05-18  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.11.1.1.
+
+2005-05-18  Mark McLoughlin  <mark@skynet.ie>
+	
+	* simple-editor/GMenuSimpleEditor/menufilewriter.py:
+	Create $XDG_CONFIG_HOME/menus if it doesn't exist.
+	
+2005-05-18  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix crasher in bug #304626
+
+	* libmenu/gmenu-tree.c:
+	(gmenu_tree_directory_set_tree): add helper function.
+	(gmenu_tree_directory_new): don't take a ref on the tree.
+	(gmenu_tree_directory_finalize): don't unref the tree.
+	(gmenu_tree_build_from_layout): set the tree on the root
+	directory here.
+	(gmenu_tree_force_rebuild): unset it here.
+
+2005-05-17  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.11.2
+
+==================== 2.11.1 ====================
+
+2005-05-17  Mark McLoughlin  <mark@skynet.ie>
+
+	* ChangeLog: Version 2.11.1.
+
+2005-05-12  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #303927
+
+	* libmenu/menu-monitor.c: (queue_fam_event): NULL-terminate
+	the arguments to g_build_filename()
+
+2005-05-05  Mark McLoughlin  <mark@skynet.ie>
+
+	Add gmenu_tree_directory_get_tree() and gmenu_tree_get_menu_file()
+	as per bug #166321.
+
+	* libmenu/gmenu-tree.[ch]:
+	(gmenu_tree_get_menu_file): simple accessor to the menu_file
+	passed to gmenu_tree_lookup ().
+	(gmenu_tree_directory_get_tree): iterate back up through the
+	tree until we find the root and return a ref on the associated
+	tree.
+	(gmenu_tree_directory_new),
+	(gmenu_tree_directory_finalize): add a MenuTreeDirectoryRoot
+	subclass of MenuTreeDirectory and keep a ref on the parent.
+	
+	* python/gmenu.c:
+	(pygmenu_tree_directory_get_tree): impl gmenu.Directory.get_tree()
+	(pygmenu_tree_directory_getattro): impl gmenu.Directory.tree
+	(pygmenu_tree_get_menu_file): impl gmenu.Tree.get_menu_file()
+	(pygmenu_tree_getattro): impl gmenu.Tree.menu_file
+
+2005-05-05  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/desktop-entries.c: (desktop_entry_add_legacy_category):
+	Fix off-by-one error thrown up by valgrind.
+
+2005-05-05  Mark McLoughlin  <mark@skynet.ie>
+
+	Seems to fix some memory corruption being triggered
+	in gmenu-simple-editor.
+
+	* libmenu/menu-monitor.c:
+	(emit_events_in_idle): free the MenuMonitorEvenInfo when
+	we're done with it.
+	(queue_fam_event): don't shadow the existing "event"
+	variable.
+	(process_fam_events): don't try and process events if
+	we've had an error on the connection.
+	(unregister_monitor_with_fam),
+	(menu_monitor_unref): call FAMCancelMonitor() when we're
+	finalizing the monitor.
+
+2005-04-26  Mark McLoughlin  <mark@skynet.ie>
+
+	More correctly detect recursive MergeFile inclusion.
+
+	* libmenu/gmenu-tree.c:
+	(load_merge_file): remove the menu file from
+	the loaded_menu_files hash as soon as we've
+	recursed over it.
+	(gmenu_tree_load_layout): insert the root menu
+	file to the loaded_menu_files hash and don't
+	strdup() the path when inserting.
+
+2005-04-26  Mark McLoughlin  <mark@skynet.ie>
+	
+	* libmenu/menu-util.c:
+	(menu_debug_print_layout): add support for printing
+	<Layout>, <DefaultLayout>, <Menuname>, <Separator>
+	and <Merge> nodes.
+
+2005-04-25  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #170704 - recursive MergeFile inclusion
+	crashes gnome.
+	
+	* libmenu/gmenu-tree.c: pass around a hash table
+	of already loaded menu files so we can detect when
+	we're loading one we've already loaded and refuse
+	to load it.
+
+2005-04-25  Mark McLoughlin  <mark@skynet.ie>
+
+	Update for latest changes to behaviour of <Move> in the
+	menu specification.
+
+	* libmenu/gmenu-tree.c: (gmenu_tree_strip_duplicate_children):
+	Don't bother trying to remove duplicate <Move>s
+
+2005-04-22  Mark McLoughlin  <mark@skynet.ie>
+
+	Use FAM directly instead of gnome-vfs and ensure that
+	we only ever add a single FAM monitor any given path.
+	Should fix bug #160194.
+
+	Oh, also use the FAMNoExists() extension from gamin
+	if available - should cut down on a whole heap of
+	FAM traffic.
+
+	* configure.in: don't require gnome-vfs, check for FAM
+	and FAMNoExists().
+	
+	* libmenu/Makefile.am: build menu-monitor.[ch] and
+	link against libfam.
+	
+	* libmenu/menu-monitor.[ch]: add file/directory monitoring
+	implementation using FAM.
+	
+	* libmenu/entry-directories.c,
+	  libmenu/gmenu-tree.c: use the internal monitoring API
+	instead of gnome-vfs.
+	
+	* python/gmenu.c,
+	  util/test-menu-spec.c: (main): no need to initialize
+	gnome-vfs anymore.
+	
+	* python/Makefile.am,
+	  util/Makefile.am: upd.
+
+2005-04-15  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #300589 - if you've a .desktop file in
+	the user's app dir and another in the system app dir,
+	and they have a different set of categories, we'll
+	match against both .desktop files when processing
+	<Category>
+
+	* libmenu/gmenu-tree.c:
+	(get_by_category_foreach), (get_by_category): iterate
+	over a DesktopEntrySet looking for entries which have
+	a given category.
+	(process_include_rules): take a DesktopEntrySet which
+	contains the pool of desktop file IDs available, rather
+	than an EntryDirectoryList.
+	(process_layout): generate a pool of desktop file IDs
+	for matching against.
+	
+	* libmenu/entry-directories.[ch]:
+	(entry_directory_list_get_by_category),
+	(entry_directory_list_invert_set): remove, they're unused
+	now.
+	
+	* util/test-menu-spec.c: (print_entry): remove trailing
+	space which screws over the tests in menu-spec.
+
+2005-04-15  Mark McLoughlin  <mark@skynet.ie>
+
+	Get libglade translating the messages in the glade file
+	correctly. Thanks to jamesh for help on this one.
+
+	* simple-editor/GMenuSimpleEditor/main.py: call
+	gtk.glade.bindtextdomain() so that bindtextdomain ("gnome-menus")
+	gets called in the C library. gettext.install() doesn't do this
+	since it parses the message catalogs itself.
+
+	* simple-editor/GMenuSimpleEditor/maindialog.py: pass the translation
+	domain to the gtk.glade.XML() constructor.
+	
+	* simple-editor/GMenuSimpleEditor/Makefile.am,
+	  simple-editor/GMenuSimpleEditor/config.py.in: add LOCALEDIR
+	to config so we use $(DATADIRNAME) since apparently the
+	message catalogs are in lib/ on some platforms. (This had
+	nothing to do with the libglade problem).
+	
+
+2005-04-14  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #300499. Random foo showing up in the panel's
+	Desktop menu.
+
+	* layout/settings.menu: remove all <LegacyDir>s
+
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
+	"Namespace" the API
+	  + menu-tree.h -> gmenu-tree.h
+	  + menu_tree_* -> gmenu_tree_*
+	  + MenuTree* -> GMenuTree*
+	  + MENU_TREE_* -> GMENU_TREE_*
+	  + MENU_I_KNOW_THIS_IS_UNSTABLE -> GMENU_I_KNOW_THIS_IS_UNSTABLE
+
+	* configure.in: upd for menu-tree.h rename.
+	
+	* libmenu/Makefile.am: upd for renamed files.
+	
+	* libmenu/gmenu-tree.[ch]: rename from menu-tree.[ch] and rename
+	the APIs.
+	
+	* python/Makefile.am,
+	  python/gmenu.c: update.
+	
+	* util/Makefile.am,
+	  util/test-menu-spec.c: update.
+
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* simple-editor/Makefile.am: add gmenu-simple-editor.glade
+	to $(EXTRA_DIST)
+
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* simple-editor/gmenu-simple-editor.glade: mark the "Defaults"
+	button as translatable.
+
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* simple-editor/gmenu-simple-editor.glade: forgotten file.
+
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: use new form of AC_INIT - I think it cause
+	PACKAGE_NAME and PACKAGE_VALUE to be defined. Add simple-editor
+	dirs.
+	
+	* Makefile.am: build the simple-editor subdir if we're
+	building the python bindings.
+	
+	* simple-editor/*: add gmenu-simple-editor
+	
+2005-04-11  Mark McLoughlin  <mark@skynet.ie>
+	
+	* libmenu/menu-tree.[ch]:
+	(menu_tree_directory_get_menu_id): new function to get the
+	menu's <Name> rather than the name from the .directory file.
+	(merge_resolved_children): improve debugging.
+	(move_children): don't reverse the order of nodes when merging
+	duplicate <Menu>s
+	
+	* python/Makefile.am: install in $(pyexecdir) instead of
+	$(pythondir)
+	
+	* python/gmenu.c:
+	(pygmenu_tree_directory_get_contents): return an empty list
+	instead of None when the directory is empty.
+	(pygmenu_tree_directory_get_menu_id): wrap new funcion.
+	(pygmenu_tree_directory_getattro): add "menu_id" and "contents"
+	attributes.
+	(pygmenu_tree_entry_getattro): add "is_excluded" attribute.
+	(pygmenu_tree_getattro): add "root" attribute.
+	(pygmenu_tree_wrap): set ->callbacks to NULL.
+	
+	* util/test-menu-spec.c: (main): add --file option to allow
+	looking at menus other than applications.menu
+
+2005-04-07  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.h: fixup flags definition.
+	
+	* python/gmenu.c:
+	(lookup_item_type_str): implement looking up
+	a constant from the module dict.
+	(pygmenu_tree_item_get_type): use it here.
+	(initgmenu): register integer constants with
+	PyModule_AddIntConstant() instead of manually
+	doing it and use PyModule_AddObject() to register
+	types.
+
+2005-04-07  Mark McLoughlin  <mark@skynet.ie>
+
+	Hopefully fixes crash in bug #172792.
+
+	* libmenu/menu-tree.c: (menu_tree_item_unref): don't unref the
+	parent because we don't hold a ref on it anymore.
+
+2005-04-06  Mark McLoughlin  <mark@skynet.ie>
+
+	Add a flags argument to menu_tree_lookup () to allow specifying
+	that the tree should include excluded items or empty submenus
+
+	Also add menu_tree_entry_get_is_excluded ()
+
+	Partially based on a patch from Christian Neumair <chris@gnome-de.org>
+	in bug #168526
+
+	* libmenu/Makefile.am: correctly pass the version info to libtool
+	and also specify an export-symbols regex.
+	
+	* libmenu/menu-tree.[ch]:
+	(get_cache_key), (menu_tree_add_to_cache),
+	(menu_tree_remove_from_cache), (menu_tree_lookup_from_cache),
+	(menu_tree_lookup_absolute), (menu_tree_lookup_basename): include
+	the flags in the menu tree cache key.
+	(menu_tree_lookup): add a "flags" argument.
+	(menu_tree_entry_get_is_excluded): new function.
+	(process_layout): include excluded entries in the entries list
+	if the "include excluded" flag is set.
+	(merge_subdir): include empty submenus if the "show empty" flag
+	is set.
+
+	* python/gmenu.c: add support for the new API.
+	
+	* util/test-menu-spec.c: add a --include-excluded option.
+
+2005-04-06  Mark McLoughlin  <mark@skynet.ie>
+
+	* python/gmenu.c:
+	(pygmenu_tree_directory_wrap), (pygmenu_tree_entry_wrap),
+	(pygmenu_tree_separator_wrap), (pygmenu_tree_header_wrap),
+	(pygmenu_tree_alias_wrap), (pygmenu_tree_wrap): ref the
+	python objects before returning them if they already
+	exist.
+
+2005-04-06  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(menu_tree_header_new),
+	(menu_tree_alias_new): unset the parent on aliased
+	items.
+
+2005-04-05  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix memory leaks on reload - bug #172472. Basically,
+	because of a cyclic reference we were leaking the entire
+	tree every time we reloaded.
+
+	* libmenu/menu-tree.c:
+	(menu_tree_item_set_parent): add.
+	(menu_tree_directory_finalize): unset the parent reference
+	on all items before unreffing them.
+	(menu_tree_directory_new), (menu_tree_separator_new),
+	(menu_tree_header_new),	(menu_tree_alias_new),
+	(menu_tree_entry_new): don't take a ref on the parent.
+	(menu_tree_item_unref_and_unset_parent): helper function.
+	(process_layout), (process_only_unallocated),
+	(merge_subdir), (process_layout_info):
+	update the parent reference on items when deleting them
+	or moving them between directories.
+	
+	* libmenu/desktop-entries.c: (desktop_entry_reload): add debug.
+	
+	* libmenu/entry-directories.c: (cached_dir_update_entry): don't
+	unref the entry if reloading fails - desktop_entry_reload ()
+	does that.
+	
+2005-04-05  Mark McLoughlin  <mark@skynet.ie>
+
+	Implement the python bindings with plain C rather
+	than pyrex.
+
+	* configure.in: don't require pyrex and pass -fno-strict-aliasing
+	to the compiler if it supports it.
+	
+	* libmenu/menu-tree.[ch]:
+	(menu_tree_set_user_data), (menu_tree_get_user_data),
+	(menu_tree_item_set_user_data),	(menu_tree_item_get_user_data):
+	Add chessy language bindings API.
+	
+	* python/Makefile.am: don't build with pyrex, use -fno-string-aliasing
+	if available.
+	
+	* python/gmenu.c: re-implement bindings.
+
+	* python/gmenu.pyx: remove pyrex bindings.
+
+2005-04-04  Mark McLoughlin  <mark@skynet.ie>
+
+	Implement support for <Merge>, <Separator> etc. in
+	<DefaultLayout> and fix nasty infinite recursion bug
+	with <Merge type="all"/>
+
+	* libmenu/menu-tree.c:
+	(collect_layout_info), (process_layout): keep track
+	of the default layout info nodes too.
+	(merge_subdirs_and_entries): nullify subdirs and entries
+	list pointers after concatenating them.
+	(get_layout_info): use the default layout from the
+	nearest ancestor which has it set if we have no explicit
+	layout info.
+	(process_layout_info): free the layout and default layout
+	info lists once processed.
+
+2005-04-01  Adi Attar  <aattar@cvs.gnome.org>
+
+	* configure.in: Added "xh" to ALL_LINGUAS.
+
+2005-03-31  Steve Murphy  <murf@e-tools.com>
+
+        * configure.in: Added "rw" to ALL_LINGUAS.
+
+2005-03-24  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix issue where you could end up with more than one
+	menu with the same name - bug #171366
+
+	* libmenu/menu-tree.c: (menu_tree_strip_duplicate_children):
+	When deleting an item from the list, make sure our prev pointer
+	doesn't point to the deleted one so that we catch any further
+	duplicates.
+
+2005-03-23  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: bump library soname.
+
+2005-03-23  Mark McLoughlin  <mark@skynet.ie>
+
+	* python/Makefile.am: don't build with $(WARN_CFLAGS)
+
+2005-03-23  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-layout.c: (menu_layout_values_set): fix silly
+	crasher.
+	
+	* libmenu/menu-tree.c:
+	(merge_subdir), (merge_subdir_by_name),
+	(merge_entry), (merge_entry_by_id), (merge_subdirs),
+	(merge_entries), (process_layout_info): adding debugging
+	verbosity.
+	(merge_subdirs_and_entries): ditto and fix thinko causing
+	warnings.
+
+2005-03-15  Mark McLoughlin  <mark@skynet.ie>
+
+	Implement the last bits of the python binding.
+
+	* python/gmenu.pyx:
+	Include definition for g_free()
+	Implement Directory.make_path ()
+	Add MonitorCallback class to encapsulate a python
+	callback, user data and menu tree
+	Implement Tree.add_monitor() and Tree.remove_montor()
+
+2005-03-15  Mark McLoughlin  <mark@skynet.ie>
+
+	Add python bindings. Mostly complete, but still need
+	to finish wraping:
+	  - menu_tree_directory_make_path ()
+	  - menu_tree_add_monitor ()
+	  - menu_tree_remove_monitor ()
+
+	* configure.in, acinclude.m4: add python checks, copied
+	from dbus.
+	
+	* Makefile.am: build the python subdir.
+	
+	* python/Makefile.am: again copied from dbus.
+	
+	* python/gmenu.pyx: Pyrex wrapping of the API.
+
+2005-03-15  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.h:
+	(menu_tree_entry_get_parent): remove.
+
+2005-03-14  Mark McLoughlin  <mark@skynet.ie>
+
+	Implement support for <Layout> and <DefaultLayout>.
+	
+	Based on a patch from Frederic Crozat <fcrozat@mandrakesoft.com>
+	in bug #164310.
+
+	* libmenu/menu-tree.h: API changes:
+	  - Add MenuTreeItem type as base class of other items
+	  - Make MenuTreeEntry and MenuTreeDirectory its sub-classes
+	  - Add MenuTreeSeparator, MenuTreeAlias and MenuTreeHeader
+	  - menu_tree_entry_ref/unref() becomes menu_tree_item_ref/unref()
+	  - ditto for menu_tree_directory_ref/unref()
+	  - Instead of having menu_tree_directory_get_entries() and
+	    menu_tree_directory_get_subdirs, we now have
+	    menu_tree_directory_get_contents()
+	  - menu_tree_directory/entry_get_parent() becomes
+	    menu_tree_item_get_parent()
+	  - Add menu_tree_header_get_directory (), menu_tree_alias_get_directory()
+	    and menu_tree_alias_get_item ()
+	
+	* libmenu/menu-tree.c:
+	(find_path): look up the path from the laid out contents.
+	(menu_tree_item_compare): add compare function for sorting
+	directories and entries as peers.
+	(collect_layout_info): retain the contents of the last <Layout>
+	node we come across for each <Menu>
+	(process_layout): retain the attributes of the last <DefaultLayout>
+	node we come across for each <Menu>.
+	(process_only_unallocated): don't prune empty subdirs here.
+	(merge_subdir), (merge_subdir_by_name),
+	(merge_entry), (merge_entry_by_id), (merge_subdirs),
+	(merge_entries), (merge_subdirs_and_entries): various helpers
+	to implement <Merge type="all|files|menus"> and merging by
+	<Filename>/<Menuname>
+	(get_values_with_defaults): get the <Layout> attributes from
+	a node, using the values from the <DefaultLayout> for any unset
+	attribute.
+	(process_layout_info): implement the final post-processing of
+	the menu where the list of entries and subdirs gets laid out
+	and merged according to <Layout> and <DefaultLayout>
+	
+	* libmenu/menu-layout.[ch]:
+	(menu_layout_node_new): allocate DefaultLayout, Layout and
+	Menuname structures.
+	(menu_layout_node_copy): remove, unused.
+	(menu_layout_node_legacy_dir_set_prefix): remove string compare
+	by pointer.
+	(menu_layout_node_merge_get_type),
+	(menu_layout_node_merge_set_type),
+	(menu_layout_node_default_layout_get_values),
+	(menu_layout_node_menuname_get_values),
+	(menu_layout_values_set),
+	(menu_layout_node_default_layout_set_values):
+	(menu_layout_node_menuname_set_values):  support setting/getting
+	the various attributes on <DefaultLayout>, <Layout> and <Menuname>
+	(start_menu_child_element),
+	(start_layout_child_element): set the attributes.
+	
+	* util/test-menu-spec.c:
+	(append_directory_path), (print_entry),	(print_directory),
+	(handle_tree_changed), (main): adapt to API changes.
+
+2005-03-23  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: bump version to 2.11.1 post branching.
+
+2005-03-23  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.10.2.
+
+==================== 2.10.1 ====================
+
+2005-03-23  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.10.1.
+	
+2005-03-22  Mark McLoughlin  <mark@skynet.ie>
+
+	Implement support for new "type" argument to <MergeFile>
+	
+	* libmenu/menu-layout.[ch]:
+	(menu_layout_node_root_get_basedir): add basedir accessor.
+	(menu_layout_node_merge_file_get_type),
+	(menu_layout_node_merge_file_set_type): add type accessors.
+	(start_menu_child_element): read the attribute.
+	
+	* libmenu/menu-tree.c:
+	(load_merge_file): return a boolean indicating whether the
+	file was successfully loaded.
+	(load_merge_file_with_config_dir): load a merge file from a
+	config dir.
+	(compare_basedir_to_config_dir): check to see if a basedir
+	matches a given config dir.
+	(load_parent_merge_file): try to find the parent of the
+	current menu file and load it if found.
+	(resolve_merge_file): load the parent menu file if requested.
+	
+	* libmenu/menu-util.c: (append_to_string): output the "type"
+	attribute on <MergeFile>
+
+2005-03-16  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix problem where if you installed an app which created
+	$XDG_DATA_DIRS/menus/applications-merged for the first
+	time and dumped its .menu file there, we wouldn't notice
+	and re-load the menu.
+
+	* libmenu/menu-tree.c:
+	(handle_menu_file_changed): always re-canonicalize so
+	that monitors get removed and re-added.
+	(handle_menu_file_directory_changed): callback for
+	<MergeDir> monitors.
+	(menu_tree_add_menu_file_monitor): handle adding <MergeDir>
+	monitors.
+	(load_merge_file): add a monitor if the <MergeFile> doesn't
+	exist.
+	(load_merge_dir): always monitor the <MergeDir>
+
+2005-03-09  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(add_app_dir), (resolve_default_app_dirs),
+	(add_directory_dir), (resolve_default_directory_dirs),
+	(add_legacy_dir),(resolve_kde_legacy_dirs): Better fix
+	for bug #164309 - get the dirs in the right order.
+	(resolve_default_merge_dirs): add the <MergeDir>s in
+	reverse order.
+
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #164309 - .directory files in
+	~/.local/share/desktop-directories not overriding the
+	system versions.
+
+	* libmenu/menu-tree.c:
+	(resolve_default_app_dirs), (resolve_default_directory_dirs),
+	(resolve_kde_legacy_dirs): append the user dir after the
+	system dirs since it has higher priority.
+
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #169031 - .directory files in subdirs of
+	<LegacyDir> not getting pulled in.
+
+	* libmenu/menu-tree.c:
+	(add_menu_for_legacy_dir): put the relative path
+	from the <LegacyDir> into the generated <Directory>
+	rather than just ".directory"
+
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix bug #168336 - weirdness with .desktop files which
+	use [KDE Desktop Entry] as the main group.
+
+	* libmenu/desktop-entries.c: (get_flags_from_key_file),
+	(get_categories_from_key_file): use the actual desktop
+	entry group name.
+
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Should fix bug #167934 even though the reporter
+	says it doesn't :-)
+
+	Well, this at least fixes a problem with <LegacyDir>
+	if the toplevel directory doesn't contain any entries.
+
+	* libmenu/menu-tree.c: (add_menu_for_legacy_dir):
+	Add a <Menu> for the <LegacyDir> if it has any subdirs.
+
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #168445 - menu items in LegacyDirs don't
+	get marked as allocated.
+
+	* libmenu/menu-tree.c:
+	(mark_allocated_foreach): kill.
+	(process_layout), (process_only_unallocated),
+	(menu_tree_build_from_layout): store the list of allocated
+	entires in a DesktopEntrySet so we can look up an entry
+	using its file ID rather than with a straight pointer
+	comparison. Entries in LegacyDirs are copies of the original
+	enties, so the pointer comparison doesn't work.
+
+2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix for bug #168444 - LegacyDirs with a prefix don't work.
+
+	* libmenu/entry-directories.c: (entry_directory_get_desktop):
+	Remove the hyphen from the desktop file ID as well as
+	the prefix when looking up the desktop file.
+
+2005-03-07  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.10.1.
+
+==================== 2.10.0 ====================
+
+2005-03-07  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.10.0.
+
+2005-03-04  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix from Jeremy Katz <katzj@redhat.com> for bug #169200
+
+	* libmenu/desktop-entries.c (get_categories_from_key_file):
+	sizeof(int) != sizeof(gsize).
+
+2005-03-06  Dafydd Harries  <daf@muse.19inch.net>
+
+	* configure.in: Added "cy" to ALL_LINGUAS.
+
+2005-03-02  Abel Cheung  <maddog@linuxhall.org>
+
+	* configure.in: Added "ca" "fi" "mk" "nn" "tr" "vi" "zh_TW" to ALL_LINGUAS.
+
+2005-03-02  Roozbeh Pournader  <roozbeh@farsiweb.info>
+
+	* configure.in: Added "fa" (Persian) to ALL_LINGUAS.
+
+2005-03-01  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.10.0
+
+==================== 2.9.92 ====================
+
+2005-03-01  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.9.92.
+
+2005-03-01  Dan Damian  <dand@gnome.ro>
+
+	* configure.in: Added ro (Romanian) to ALL_LINGUAS.
+
+2005-02-27  Alessio Frusciante  <algol@firenze.linux.it>
+
+	* configure.in: Added "it" (Italian) to ALL_LINGUAS.
+
+2005-02-27  Ahmad Riza H Nst  <ari@160c.afraid.org>
+
+	* id.po: Added id (Indonesian) in ALL_LINGUAS line.
+
+2005-02-24  Ankit Patel <ankit644@yahoo.com>
+
+	* configure.in: Added gu "Gujarati" in ALL_LINGUAS.
+
+2005-02-22  Arafat Medini  <kinryu@silverpen.de>
+
+	* configure.in: Added Arabic locale to ALL_LINGUAS.
+	
+2005-02-18  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/entry-directories.c:
+	(cached_dir_invoke_monitors): split out from
+	handle_cached_dir_changed() and invoke monitors on
+	ancestors too. Fixes bug #167759.
+	(handle_cached_dir_changed): upd.
+
+	* util/test-menu-spec.c: add a --monitor option
+	to test monitoring.
+
+2005-02-18  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix bug with the <Not> directive - bug #167758.
+	Thanks to Chris Lahey for the test case.
+
+	* libmenu/entry-directories.c: (get_inverse_func): lookup
+	the entry using its file id rather than relative path.
+	
+	* libmenu/menu-tree.c:
+	(process_include_rules), (process_layout): add some more
+	debugging.
+
+2005-02-18  Mark McLoughlin  <mark@skynet.ie>
+
+	Make us pass most of the spec tests again.
+
+	* util/test-menu-spec.c:
+	(append_directory_path), (make_path): add a variant
+	of menu_tree_directory_make_path() - difference is
+	we use the directory name from the directory entry
+	if available. We don't want to do that in
+	menu_tree_directory_make_path() because that would
+	make the path locale dependant.
+	(print_directory): use it here.
+
+2005-02-14  Pawan Chitrakar  <pawan@nplinux.org>
+
+	* configure.in: Added ne "Nepali" in ALL_LINGUAS
+
+2005-02-13  Artur Flinta <aflinta@cvs.gnome.org>
+
+	* configure.in: Added "pl" to ALL_LINGUAS.
+
+2005-02-13  David Lodge <dave@cirt.net>
+
+	* configure.in: Added "en_GB" to ALL_LINGUAS.
+
+2005-02-12  Changwoo Ryu  <cwryu@debian.org>
+
+	* configure.in: Added "ko" to ALL_LINGUAS.
+
+2004-01-25  Vincent Untz  <vincent@vuntz.net>
+
+	* configure.in: post-release bump to 2.9.91.
+
+==================== 2.9.90 ====================
+
+2004-01-25  Vincent Untz  <vincent@vuntz.net>
+
+	* README, NEWS, configure.in: version 2.9.90
+
+2005-01-15  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* configure.in: Adding ´noª as well.
+
+2004-01-14  Vincent Untz  <vincent@vuntz.net>
+
+	* layout/applications.menu: do not include the Core category in the
+	Other menu. We wanted .desktop files from the Core category to be
+	hidden.
+	Fix bug #164000
+
+2005-01-12  Maxim Dziumanenko <mvd@mylinux.com.ua>
+
+	* configure.in: Added "uk" (Ukrainian) to ALL_LINGUAS.
+
+2005-01-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.9.5.
+
+==================== 2.9.4.1 ====================
+
+2005-01-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.9.4.1.
+
+2005-01-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/desktop-entries.c: (desktop_entry_load):
+	require that .desktop files contain an Exec key.
+	
+2005-01-11  Mark McLoughlin  <mark@skynet.ie>
+
+	Patch from Richard Hult <richard@imendio.com>
+
+	* libmenu/desktop-entries.c: (desktop_entry_load),
+	(desktop_entry_reload), (desktop_entry_copy),
+	(desktop_entry_unref), (desktop_entry_get_icon),
+	(desktop_entry_get_exec):
+	* libmenu/desktop-entries.h:
+	* libmenu/menu-tree.c: (menu_tree_entry_get_exec):
+	* libmenu/menu-tree.h: Parse Exec field and add an accessor for
+	it.
+
+2005-01-10  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.9.5.
+
+==================== 2.9.4 ====================
+
+2005-01-10  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.9.4.
+
+2004-01-09  Vincent Untz  <vincent@vuntz.net>
+
+	* desktop-directories/System-Settings.directory.in: new Name
+	* layout/Makefile.am: add settings.menu
+	* layout/applications.menu: do not include Core items, Preferences
+	menu and System Settings menu
+	* layout/settings.menu: new file with Preferences menu and
+	Administration menu
+
+2004-01-07  Christophe Merlet <redfox@redfoxcenter.org>
+
+	* configure.in: Added "fr" (French) to ALL_LINGUAS.
+
+2005-01-07  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(menu_tree_entry_get_parent): ref the return value
+	just like all the other accessors.
+
+2005-01-07  Frederic Crozat <fcrozat@mandrakesoft.com>
+	
+	* libmenu/entry-directories.c: (cached_dir_update_entry),
+	(cached_dir_remove_subdir):
+	Reload menus correctly when they are deleted/updated.
+
+2004-12-27  Satoru SATOH <ss@gnome.gr.jp>
+
+	* configure.in: Added "ja" (Japanese) to ALL_LINGUAS.
+
+2004-12-21  Vincent Untz  <vincent@vuntz.net>
+
+	* configure.in: post-release bump to 2.9.4.
+
+==================== 2.9.3 ====================
+
+2004-12-21  Vincent Untz  <vincent@vuntz.net>
+
+	* NEWS:
+	* README: Version 2.9.3.
+
+2004-12-13  IÒaki LarraÒaga  <dooteo@euskalgnu.org>
+
+	* configure.in: Added "eu" (Basque) to ALL_LINGUAS.
+
+2004-12-11  Theppitak Karoonboonyanan  <thep@linux.thai.net>
+
+	* configure.in: Added "th" (Thai) to ALL_LINGUAS.
+
+2004-12-10  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(process_layout): mark all entries that match an <Include>
+	rule as "allocated", whether or not they later matched
+	an <Exclude>. New behaviour defined in version 0.9 of
+	the spec.
+
+2004-12-10  Alexander Shopov  <ash@contact.bg>
+
+	* configure.in (ALL_LINGUAS): Added "bg" (Bulgarian)
+
+2004-12-09  Duarte Loreto <happyguy_pt@hotmail.com>
+
+	* configure.in: Added Portuguese (pt) to ALL_LINGUAS.
+
+2004-12-09  Martin Willemoes Hansen  <mwh@sysrq.dk>
+
+	* configure.in: Added da (Danish) to ALL_LINGUAS.
+
+2004-12-08  Dmitry G. Mastrukov  <dmitry@taurussoft.org>
+
+	* configure.in: Added Russian to ALL_LINGUAS.
+
+2004-12-07  Marcel Telka  <marcel@telka.sk>
+
+	* configure.in (ALL_LINGUAS): Added sk.
+
+2004-12-07  Christian Rose  <menthos@menthos.com>
+
+	* configure.in: Added "sv" to ALL_LINGUAS.
+
+2004-12-06  Mark McLoughlin  <mark@skynet.ie>
+
+	Leak pointed out by Vincent Untz <vincent@vuntz.net>
+
+	* libmenu/menu-tree.c: (load_merge_file): free freeme.
+
+2004-12-06  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(menu_tree_add_menu_file_monitor): add anal
+	assertion.
+	(menu_tree_force_recanonicalize): remove the
+	menu file monitors whether the we've previously
+	found a menu file or not.
+	(find_path): handle the root path correctly.
+
+2004-12-05  Simos Xenitellis  <user@kl.asia.com>
+
+	* configure.in: Added "el" to ALL_LINGUAS.
+
+2004-12-05  ≈Ωygimantas Beruƒçka  <uid0@akl.lt>
+
+	* configure.in: Added "lt" to ALL_LINGUAS.
+
+2004-12-04  Danilo ≈†egan  <dsegan@gmx.net>
+
+	* configure.in: Added "sr" and "sr@Latn" to ALL_LINGUAS.
+
+2004-12-01  Frederic Crozat  <fcrozat@mandrakesoft.com>
+
+	* libmenu/desktop-entries.c: (desktop_entry_copy):
+	Copy the right string for icon field.
+
+2004-11-30  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: post-release bump to 2.9.3.
+
+==================== 2.9.2 ====================
+
+2004-11-30  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: Version 2.9.2.
+
+2004-11-29  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/entry-directories.c:
+	(cached_dir_update_entry),
+	(cached_dir_remove_subdir): fix another couple of leaks.
+	
+	* COPYING, COPYING.LIB: add the LGPL since autofoo
+	seems determined that COPYING should be the GPL.
+	
+2004-11-29  Mark McLoughlin  <mark@skynet.ie>
+	
+	Patch from Frederic Crozat <fcrozat@mandrakesoft.com>
+
+	* libmenu/desktop-entries.c: (desktop_entry_unref): don't leak
+	the path.
+	
+	* libmenu/entry-directories.c:
+	(cached_dir_clear_entries): iterate over the entries list, not
+	the subdirs list.
+	(cached_dir_remove_entry): don't leak the entry.
+
+2004-11-27  Hasbullah Bin Pit<sebol@my-penguin.org>
+
+        * configure.in: Added 'ms' (Malay) to ALL_LINGUAS.
+
+2004-11-25  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* configure.in: Add ¬´nb¬ª to ALL_LINGUAS.
+
+2004-11-24  Amampreet Singh Alam<amanlinux@netscape.net>
+
+	* configure.in: Added pa to ALL_LINGUAS
+
+2004-11-15  Hendrik Brandt  <hebra@cvs.gnome.org>
+
+	* configure.in: Added de to ALL_LINGUAS.
+
+2004-11-15  Raphael Higino  <raphaelh@cvs.gnome.org>
+
+	* configure.in: Added pt_BR to ALL_LINGUAS.
+
+2004-11-14  Adam Weinberger  <adamw@gnome.org>
+
+	* configure.in: Added en_CA to ALL_LINGUAS.
+
+2004-11-12  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/desktop-entries.c: (get_categories_from_key_file):
+	zero terminate the list of quarks. Most likely the cause
+	of entries randomly appearing in the wrong menus. Bug #157804.
+
+2004-11-11  Mark McLoughlin  <mark@skynet.ie>
+
+	Fixes a bug where we get an infinite loop if
+	$XDG_CONFIG_DIRS is set incorrectly. Bug #157931.
+
+	* libmenu/menu-tree.c:
+	(handle_nonexistent_menu_file_changed): handle events on
+	non-existent files differently.
+	(handle_menu_file_changed): handle deleted events differently
+	from created/changed events.
+	(menu_tree_force_recanonicalize): impl. re-canonicalization
+	better.
+
+2004-11-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/menu-tree.c:
+	(resolve_default_app_dirs),
+	(resolve_default_directory_dirs),
+	(resolve_default_merge_dirs),
+	(resolve_kde_legacy_dirs): put the user config/data dirs
+	before the system dirs.
+
+2004-11-11  Mark McLoughlin  <mark@skynet.ie>
+
+	* libmenu/entry-directories.c: (handle_cached_dir_changed):
+	  libmenu/menu-layout.c: (handle_entry_directory_changed):
+	  libmenu/menu-tree.c: (menu_tree_invoke_monitors): safeguard
+	against someone removing monitors from monitor handlers.
+
+2004-11-09  Mark McLoughlin  <mark@skynet.ie>
+
+	* configure.in: oops, we're not gnome-panel.
+
+2004-11-09  Mark McLoughlin  <mark@skynet.ie>
+
+	* autogen.sh: we don't want to use the docs build
+	stuff.
+
+2004-11-09  Mark McLoughlin  <mark@skynet.ie>
+
+	* desktop-directories/Makefile.am: distcheck fix.
+
+2004-11-09  Mark McLoughlin  <mark@skynet.ie>
+
+	* Initial import.
