@@ -8,7 +8,6 @@ PKG_NAME="GNOME Menus"
 REQUIRED_AUTOMAKE_VERSION=1.9
 
 (test -f $srcdir/configure.in \
-  && test -f $srcdir/HACKING \
   && test -d $srcdir/libmenu) || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
     echo " top-level $PKG_NAME directory"
@@ -16,7 +15,8 @@ REQUIRED_AUTOMAKE_VERSION=1.9
 }
 
 which gnome-autogen.sh || {
-    echo "You need to install gnome-common from the GNOME CVS"
+    echo "You need to install gnome-common."
     exit 1
 }
-USE_GNOME2_MACROS=1 . gnome-autogen.sh
+
+. gnome-autogen.sh
