@@ -4,6 +4,7 @@ AC_CONFIG_SRCDIR(libmenu/gmenu-tree.h)
 
 AM_INIT_AUTOMAKE
 AM_CONFIG_HEADER(config.h)
+AC_CONFIG_MACRO_DIR([m4])
 
 AM_MAINTAINER_MODE
 GNOME_MAINTAINER_MODE_DEFINES
@@ -121,8 +122,12 @@ if test "x$GCC" = "xyes" ; then
 fi
 AC_SUBST(NO_STRICT_ALIASING_CFLAGS)
 
+SHAVE_INIT([.], [enable])
+
 AC_OUTPUT([
 Makefile
+shave
+shave-libtool
 libmenu/Makefile
 libmenu/libgnome-menu.pc
 libmenu/libgnome-menu-uninstalled.pc

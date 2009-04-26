@@ -1,9 +1,11 @@
 SUBDIRS = GMenuSimpleEditor
 
+QUIET_GEN = $(Q:@=@echo '  GEN   '$@;)
+
 bin_SCRIPTS = gmenu-simple-editor
 
 gmenu-simple-editor: gmenu-simple-editor.in
-	sed -e s!\@pyexecdir\@!@pyexecdir@! -e s!\@PYTHON\@!@PYTHON@! < $< > $@
+	$(QUIET_GEN)sed -e s!\@pyexecdir\@!@pyexecdir@! -e s!\@PYTHON\@!@PYTHON@! < $< > $@ && \
 	chmod a+x $@
 
 gladedir   = $(pkgdatadir)/glade
