@@ -25,3 +25,5 @@ EXTRA_DIST =				\
 CLEANFILES =				\
 	gmenu-simple-editor		\
 	gmenu-simple-editor.desktop
+
+-include $(top_srcdir)/git.mk

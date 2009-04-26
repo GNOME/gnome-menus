@@ -17,3 +17,5 @@ gmenu_LTLIBRARIES = gmenu.la
 gmenu_la_LDFLAGS = -module -avoid-version -fPIC -export-symbols-regex initgmenu
 gmenu_la_LIBADD  = $(GLIB_LIBS) $(top_builddir)/libmenu/libgnome-menu.la
 gmenu_la_SOURCES = gmenu.c
+
+-include $(top_srcdir)/git.mk

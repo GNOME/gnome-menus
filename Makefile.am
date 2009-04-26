@@ -18,3 +18,21 @@ DIST_SUBDIRS = $(ALL_SUBDIRS) python simple-editor
 EXTRA_DIST = 			\
 	HACKING			\
 	$(NULL)
+
+MAINTAINERCLEANFILES = \
+	$(srcdir)/INSTALL \
+	$(srcdir)/aclocal.m4 \
+	$(srcdir)/config.guess \
+	$(srcdir)/config.h.in \
+	$(srcdir)/config.sub \
+	$(srcdir)/depcomp \
+	$(srcdir)/install-sh \
+	$(srcdir)/ltmain.sh \
+	$(srcdir)/missing \
+	$(srcdir)/mkinstalldirs \
+	$(srcdir)/py-compile \
+	`find "$(srcdir)" -type f -name Makefile.in -print` \
+	$(srcdir)/configure \
+	$(srcdir)/m4/intltool.m4
+
+-include $(top_srcdir)/git.mk

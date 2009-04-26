@@ -32,3 +32,5 @@ pyexample_DATA =
 endif
 
 EXTRA_DIST = $(pyexample_DATA)
+
+-include $(top_srcdir)/git.mk

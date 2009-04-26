@@ -52,3 +52,5 @@ EXTRA_DIST =				\
 
 pkgconfigdir   = $(libdir)/pkgconfig
 pkgconfig_DATA = libgnome-menu.pc
+
+-include $(top_srcdir)/git.mk
