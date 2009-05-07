@@ -44,6 +44,7 @@ struct DesktopEntry
   GQuark *categories;
 
   char     *name;
+  char     *generic_name;
   char     *comment;
   char     *icon;
   char     *exec;
@@ -283,11 +284,12 @@ desktop_entry_load (DesktopEntry *entry)
 
 #define GET_LOCALE_STRING(n) g_key_file_get_locale_string (key_file, desktop_entry_group, (n), NULL, NULL)
 
-  retval->name       = GET_LOCALE_STRING ("Name");
-  retval->comment    = GET_LOCALE_STRING ("Comment");
-  retval->icon       = GET_LOCALE_STRING ("Icon");
-  retval->flags      = get_flags_from_key_file (retval, key_file, desktop_entry_group);
-  retval->categories = get_categories_from_key_file (retval, key_file, desktop_entry_group);
+  retval->name         = GET_LOCALE_STRING ("Name");
+  retval->generic_name = GET_LOCALE_STRING ("GenericName");
+  retval->comment      = GET_LOCALE_STRING ("Comment");
+  retval->icon         = GET_LOCALE_STRING ("Icon");
+  retval->flags        = get_flags_from_key_file (retval, key_file, desktop_entry_group);
+  retval->categories   = get_categories_from_key_file (retval, key_file, desktop_entry_group);
 
   if (entry->type == DESKTOP_ENTRY_DESKTOP)
     {
@@ -297,9 +299,10 @@ desktop_entry_load (DesktopEntry *entry)
   
 #undef GET_LOCALE_STRING
 
-  menu_verbose ("Desktop entry \"%s\" (%s, %s, %s) flags: NoDisplay=%s, Hidden=%s, ShowInGNOME=%s, TryExecFailed=%s\n",
+  menu_verbose ("Desktop entry \"%s\" (%s, %s, %s, %s) flags: NoDisplay=%s, Hidden=%s, ShowInGNOME=%s, TryExecFailed=%s\n",
                 retval->basename,
                 retval->name,
+                retval->generic_name ? retval->generic_name : "(null)",
                 retval->comment ? retval->comment : "(null)",
                 retval->icon ? retval->icon : "(null)",
                 retval->flags & DESKTOP_ENTRY_NO_DISPLAY     ? "(true)" : "(false)",
@@ -362,6 +365,9 @@ desktop_entry_reload (DesktopEntry *entry)
   g_free (entry->name);
   entry->name = NULL;
 
+  g_free (entry->generic_name);
+  entry->generic_name = NULL;
+
   g_free (entry->comment);
   entry->comment = NULL;
 
@@ -399,16 +405,17 @@ desktop_entry_copy (DesktopEntry *entry)
 
   retval = g_new0 (DesktopEntry, 1);
 
-  retval->refcount = 1;
-  retval->type     = entry->type;
-  retval->basename = g_strdup (entry->basename);
-  retval->path     = g_strdup (entry->path);
-  retval->name     = g_strdup (entry->name);
-  retval->comment  = g_strdup (entry->comment);
-  retval->icon     = g_strdup (entry->icon);
-  retval->exec     = g_strdup (entry->exec);
-  retval->terminal = entry->terminal;
-  retval->flags    = entry->flags;
+  retval->refcount     = 1;
+  retval->type         = entry->type;
+  retval->basename     = g_strdup (entry->basename);
+  retval->path         = g_strdup (entry->path);
+  retval->name         = g_strdup (entry->name);
+  retval->generic_name = g_strdup (entry->generic_name);
+  retval->comment      = g_strdup (entry->comment);
+  retval->icon         = g_strdup (entry->icon);
+  retval->exec         = g_strdup (entry->exec);
+  retval->terminal     = entry->terminal;
+  retval->flags        = entry->flags;
 
   i = 0;
   if (entry->categories != NULL)
@@ -442,6 +449,9 @@ desktop_entry_unref (DesktopEntry *entry)
 
       g_free (entry->name);
       entry->name = NULL;
+
+      g_free (entry->generic_name);
+      entry->generic_name = NULL;
 
       g_free (entry->comment);
       entry->comment = NULL;
@@ -484,6 +494,12 @@ const char *
 desktop_entry_get_name (DesktopEntry *entry)
 {
   return entry->name;
+}
+
+const char *
+desktop_entry_get_generic_name (DesktopEntry *entry)
+{
+  return entry->generic_name;
 }
 
 const char *

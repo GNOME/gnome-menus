@@ -45,6 +45,7 @@ const char       *desktop_entry_get_path     (DesktopEntry *entry);
 const char       *desktop_entry_get_basename (DesktopEntry *entry);
 
 const char *desktop_entry_get_name               (DesktopEntry *entry);
+const char *desktop_entry_get_generic_name       (DesktopEntry *entry);
 const char *desktop_entry_get_comment            (DesktopEntry *entry);
 const char *desktop_entry_get_icon               (DesktopEntry *entry);
 const char *desktop_entry_get_exec               (DesktopEntry *entry);
