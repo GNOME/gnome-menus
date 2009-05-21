@@ -232,6 +232,8 @@ gmenu_tree_remove_from_cache (GMenuTree      *tree,
     {
       g_hash_table_destroy (gmenu_tree_cache);
       gmenu_tree_cache = NULL;
+
+      _entry_directory_list_empty_desktop_cache ();
     }
 }
 
@@ -3212,9 +3214,7 @@ process_layout (GMenuTree          *tree,
   else
     excluded_set = NULL;
 
-  entry_pool = desktop_entry_set_new ();
-  entry_directory_list_get_all_desktops (menu_layout_node_menu_get_app_dirs (layout),
-					 entry_pool);
+  entry_pool = _entry_directory_list_get_all_desktops (menu_layout_node_menu_get_app_dirs (layout));
 
   layout_iter = menu_layout_node_get_children (layout);
   while (layout_iter != NULL)
