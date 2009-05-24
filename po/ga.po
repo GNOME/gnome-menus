@@ -1,14 +1,14 @@
 # Irish translations for gnome-menus package.
 # Copyright (C) 2007-2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
-# Seán de Búrca <leftmostcat@gmail.com>, 2007-2008.
+# Seán de Búrca <leftmostcat@gmail.com>, 2007-2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-06 23:59-0400\n"
-"PO-Revision-Date: 2008-09-06 23:59-0500\n"
+"POT-Creation-Date: 2009-05-24 21:21+0100\n"
+"PO-Revision-Date: 2009-05-24 21:21+0100\n"
 "Last-Translator: Seán de Búrca <leftmostcat@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -200,8 +200,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Ní féidir comhadlann baile a aimsiú: níl sí socraithe i /etc/passwd agus níl "
-"luach do $HOME ann sa timpealleacht"
+"Ní féidir comhadlann bhaile a aimsiú: níl sí socraithe i /etc/passwd agus "
+"níl luach ann do $HOME sa timpealleacht"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
