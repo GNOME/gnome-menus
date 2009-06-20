@@ -18,7 +18,6 @@
 
 import os.path
 import gtk
-import gtk.glade
 import gmenu
 
 from config import *
@@ -28,19 +27,20 @@ import menufilewriter
 
 class MenuEditorDialog:
     def __init__ (self, menu_files):
-        glade_file = os.path.join (GLADEDIR, "gmenu-simple-editor.glade")
-        self.xml = gtk.glade.XML (glade_file, "menu_editor_dialog", PACKAGE)
-
-        self.window = self.xml.get_widget ("menu_editor_dialog")
+        ui_file = os.path.join (UI_DIR, "gmenu-simple-editor.ui")
+        self.ui = gtk.Builder()
+        self.ui.set_translation_domain (PACKAGE)
+        self.ui.add_from_file(ui_file)
+        self.window = self.ui.get_object ("menu_editor_dialog")
         self.window.connect ("destroy", gtk.main_quit)
         self.window.set_default_response (gtk.RESPONSE_ACCEPT)
         self.window.set_icon_name ("gnome-main-menu")
 
-        self.help_button = self.xml.get_widget ("help_button")
+        self.help_button = self.ui.get_object ("help_button")
         self.help_button.set_sensitive (False)
 
-        self.menus_tree   = self.xml.get_widget ("menus_treeview")
-        self.entries_list = self.xml.get_widget ("applications_treeview")
+        self.menus_tree   = self.ui.get_object ("menus_treeview")
+        self.entries_list = self.ui.get_object ("applications_treeview")
 
         self.menu_tree_model = menutreemodel.MenuTreeModel (menu_files)
         

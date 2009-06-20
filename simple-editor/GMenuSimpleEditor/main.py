@@ -26,14 +26,12 @@ def main (args):
     from gobject.option import OptionParser, make_option
 
     import gtk
-    import gtk.glade
 
     import maindialog
     import config
 
     locale.setlocale (locale.LC_ALL, "")
     gettext.install (config.PACKAGE, config.LOCALEDIR)
-    gtk.glade.bindtextdomain (config.PACKAGE, config.LOCALEDIR)
 
     parser = OptionParser (
             option_list = [

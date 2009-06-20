@@ -25,4 +25,4 @@ VERSION   = "@PACKAGE_VERSION@"
 DATADIR   = "@DATADIR@"
 LOCALEDIR = "@LOCALEDIR@"
 
-GLADEDIR = os.path.join (DATADIR, PACKAGE, "glade")
+UI_DIR = os.path.join (DATADIR, PACKAGE, "ui")
