@@ -22,6 +22,9 @@ def main (args):
 
     import pygtk; pygtk.require('2.0');
 
+    import gobject
+    from gobject.option import OptionParser, make_option
+
     import gtk
     import gtk.glade
 
@@ -32,6 +35,19 @@ def main (args):
     gettext.install (config.PACKAGE, config.LOCALEDIR)
     gtk.glade.bindtextdomain (config.PACKAGE, config.LOCALEDIR)
 
-    dialog = maindialog.MenuEditorDialog (args)
+    parser = OptionParser (
+            option_list = [
+		    # FIXME: remove this when we can get all the default
+		    # options
+                    make_option ("--version",
+                                 action="store_true",
+                                 dest="version",
+                                 help=config.VERSION),
+                ])
+    parser.parse_args (args)
 
-    gtk.main ()
+    if parser.values.version:
+        print _("Simple Menu Editor %s") % (config.VERSION)
+    else:
+        dialog = maindialog.MenuEditorDialog (args)
+        gtk.main ()
