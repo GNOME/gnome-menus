@@ -45,6 +45,7 @@ def main (args):
     parser.parse_args (args)
 
     if parser.values.version:
+        # Translators: %s is the version number 
         print _("Simple Menu Editor %s") % (config.VERSION)
     else:
         dialog = maindialog.MenuEditorDialog (args)
