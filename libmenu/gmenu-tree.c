@@ -3170,7 +3170,8 @@ set_default_layout_values (GMenuTreeDirectory *parent,
    * the DefaultLayout node) but it doesn't meant the default layout values
    * (ie, DefaultLayout attributes) aren't different from the global defaults.
    */
-  if (child->default_layout_info != NULL)
+  if (child->default_layout_info != NULL ||
+      child->default_layout_values.mask != MENU_LAYOUT_VALUES_NONE)
     return;
 
   child->default_layout_values = parent->default_layout_values;
