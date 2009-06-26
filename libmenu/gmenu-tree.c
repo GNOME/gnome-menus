@@ -3166,10 +3166,11 @@ set_default_layout_values (GMenuTreeDirectory *parent,
   GSList *tmp;
 
   /* if the child has a defined default layout, we don't want to override its
-   * values, and if the parent doesn't have a defined default layout, then
-   * everybody already uses the default values */
-  if (parent->default_layout_info == NULL ||
-      child->default_layout_info != NULL)
+   * values. The parent might have a non-defined layout info (ie, no child of
+   * the DefaultLayout node) but it doesn't meant the default layout values
+   * (ie, DefaultLayout attributes) aren't different from the global defaults.
+   */
+  if (child->default_layout_info != NULL)
     return;
 
   child->default_layout_values = parent->default_layout_values;
