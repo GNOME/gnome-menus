@@ -1,4 +1,23 @@
 ==============
+Version 2.26.2
+==============
+
+  Fixes
+
+	* Improve performance by using a cache to not compute the same thing
+	  again and again (Michael Meeks, Vincent)
+
+  Misc
+
+	* Use shave to improve build log readability (Vincent)
+
+  Translators
+
+	* Jordi Mallach (ca@valencia)
+	* Huxain (dv)
+	* Seán de Búrca (ga)
+
+==============
 Version 2.26.1
 ==============
 
