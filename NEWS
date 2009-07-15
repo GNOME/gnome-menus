@@ -1,4 +1,36 @@
 ==============
+Version 2.27.4
+==============
+
+  libmenu
+
+	* Improve performance by using a cache to not compute the same thing
+	  again and again (Michael Meeks, Vincent)
+	* Add API to access GenericName (Robert Staudinger)
+	* Fix DefaultLayout attributes not being inherited (Vincent)
+	* Do not always inherit parent DefaultLayout attributes (Vincent)
+	* Sort inlined items unless inline_header is used (Vincent)
+
+  Menu Editor
+
+	* Add --help and --version arguments (Vincent)
+	* Port to GtkBuilder (Pedro Fragoso, Vincent)
+
+  Misc
+
+	* Use shave to improve build log readability (Vincent)
+
+  Translators
+
+	* Jordi Mallach (ca@valencia)
+	* Huxain (dv)
+	* Jorge González (es)
+	* Mattias Põldaru (et)
+	* Seán de Búrca (ga)
+	* Yaron Shahrabani (he)
+	* Daniel Nylander (sv)
+
+==============
 Version 2.26.1
 ==============
 
