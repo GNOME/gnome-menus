@@ -1,5 +1,3 @@
-QUIET_GEN = $(Q:@=@echo '  GEN   '$@;)
-
 appdir     = $(pyexecdir)/GMenuSimpleEditor
 app_PYTHON = 			\
 	__init__.py		\
@@ -16,7 +14,7 @@ EXTRA_DIST = config.py.in
 all-local: config.py
 
 config.py: config.py.in
-	$(QUIET_GEN)sed								\
+	$(AM_V_GEN)sed								\
 		-e s!\@DATADIR\@!$(datadir)!				\
 		-e s!\@LOCALEDIR\@!$(prefix)/$(DATADIRNAME)/locale!	\
 		-e s!\@PACKAGE_NAME\@!$(PACKAGE_NAME)!			\
