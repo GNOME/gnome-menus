@@ -1,4 +1,16 @@
 ==============
+Version 2.27.5
+==============
+
+  Misc
+
+	* Use silent-rules with automake 1.11 (Vincent)
+
+  Translators
+
+	* Ilkka Tuohela (fi)
+
+==============
 Version 2.27.4
 ==============
 
