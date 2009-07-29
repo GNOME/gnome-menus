@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menu 2.14\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-17 15:27+0000\n"
-"PO-Revision-Date: 2009-07-29 06:12+0100\n"
-"Last-Translator: Denis <Unknown>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
+"POT-Creation-Date: 2009-07-29 05:10+0000\n"
+"PO-Revision-Date: 2009-07-29 07:38+0100\n"
+"Last-Translator: Denis <denisarnuad@yahoo.fr>\n"
 "Language-Team: GNOME Breton Team <jeremy.lefloch@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Meuziad al liesvedia"
+msgstr "Lañser al liesvedia"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
@@ -52,7 +52,7 @@ msgstr "Skeudennoù"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Meziantoù skeudennaouiñ"
+msgstr "Arloadoù skeudennaouiñ"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -68,7 +68,7 @@ msgstr "Kenrouedad ha Rouedad"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
-msgstr "Dibarzhioù ar rouedad"
+msgstr "Arventennoù ar rouedad"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -92,7 +92,7 @@ msgstr "Bureveg"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Polladoù burev all"
+msgstr "Arloadoù burev all"
 
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
@@ -108,15 +108,15 @@ msgstr "Merañ"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Cheñch dre vras arventennoù sistem (evit an holl implijourien)"
+msgstr "Kemmañ dre vras arventennoù ar reizhiad (evit an holl arveriaded)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Dibarzhioù hiniennel"
+msgstr "Gwellvezioù hiniennel"
 
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Dibarzhioù"
+msgstr "Gwellvezioù"
 
 #: ../desktop-directories/System.directory.in.h:1
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
@@ -137,11 +137,11 @@ msgstr "Neuziadur hag eveshaerezh ar reizhiad"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Moned hollvedel"
+msgstr "Haezhiñ hollvedel"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Dibarzhioù moned hollvedel"
+msgstr "Dibarzhioù haezhiñ hollvedel"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -169,23 +169,29 @@ msgstr "Arloadoù all"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Aozer meuziadoù"
+msgstr "Embanner lañserioù"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
-msgstr "Aozañ ar meuziadoù"
+msgstr "Embanner al lañserioù"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "_Arloadoù :"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Dre ziouer"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
-msgstr "_Meuziadoù:"
+msgstr "_Lañserioù :"
+
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "Embanner lañserioù eeun %s"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
@@ -202,31 +208,31 @@ msgstr "Dibosupl eo kavout ar renkell Kêr : n'eo ket e-barzh /etc/passwd ha n'e
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
-msgstr "Restr meuziad"
+msgstr "Restr lañser"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "RESTR_MEUZIAD"
+msgstr "RESTR_LAÑSER"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Eveshaat kemmoù ar meuziadoù"
+msgstr "Eveshaat kemmoù ar lañserioù"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "Enlakaat enkasoù forc'het gant <Exclude>"
+msgstr "Enlakaat enankadoù forc'het gant <Exclude>"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "Enlakaat an enkasoù NoDisplay=true"
+msgstr "Enlakaat an enankadoù NoDisplay=true"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "Direizh eo hennad (ID) ar restr desktop"
+msgstr "Didalvoudek eo hennad (ID) ar restr desktop"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Anv restr direizh]"
+msgstr "[Anv restr dididalvoudek]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
@@ -245,14 +251,14 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Kemmet ar meuziad, oc'h adkargañ ====\n"
+"==== Kemmet al lañser, oc'h adkargañ ====\n"
 "\n"
 "\n"
 
 #: ../util/test-menu-spec.c:169
 #: ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "Goullo eo gwezenn ar meuziad"
+msgstr "Goullo eo gwezenn al lañser"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
