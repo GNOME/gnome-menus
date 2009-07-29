@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-02 03:41+0100\n"
+"POT-Creation-Date: 2009-07-19 05:54+0530\n"
 "PO-Revision-Date: 2007-06-20 17:43+0530\n"
 "Last-Translator: Dr.T.Vasudevan <agnihot3@gmail.com>\n"
 "Language-Team: TAMIL <ubuntu-l10n-tam@lists.ubuntu.com>\n"
@@ -21,35 +21,13 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Universal Access"
-msgstr "உலகளாவிய அணுகல்"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "பல்முனை ஊடகப் பட்டியல்"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Universal Access Settings"
-msgstr "உலகளாவிய அணுகல் அமைப்புகள்"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "துணைப்பொருள்கள்"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "மேஜை துணைப்பொருள்கள்"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "பயன்பாடுகள்"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "தனிநபர் விருப்பங்கள் மற்றும் நிர்வாக அமைப்புகள்"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "கணிப்பொறி"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "ஒலி மற்றும் படக்காட்சி"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -63,11 +41,11 @@ msgstr "மென்பொருள் உற்பத்திக்கா�
 msgid "Education"
 msgstr "கல்வி"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "விளையாட்டுகள்"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "விளையாட்டுகள் மற்றும் பொழுதுப்போக்குகள்"
 
@@ -95,14 +73,6 @@ msgstr "இணையம் மற்றும் வலையமைப்பு"
 msgid "Network-related settings"
 msgstr "வலையமைப்பு சார்ந்த வடிவமைப்புகள்"
 
-#: ../desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "இணையம்"
-
-#: ../desktop-directories/Internet.directory.in.h:2
-msgid "Programs for Internet access such as web and email"
-msgstr "வலைப்பின்னல் மற்றும் மின்னஞ்சல் போன்ற இணைய அணுகலுக்கான நிரல்கள் "
-
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
 msgstr "பார்வையும் உணர்வும்"
@@ -111,13 +81,13 @@ msgstr "பார்வையும் உணர்வும்"
 msgid "Settings controlling the desktop appearance and behavior"
 msgstr "மேல்மேசையின் தோற்றம் மற்றும் நடத்தைகளை கட்டுப்படுத்தும் வடிவமைப்பு"
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "பல்முனை ஊடகப் பட்டியல்"
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "இணையம்"
 
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "ஒலி மற்றும் படக்காட்சி"
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "வலைப்பின்னல் மற்றும் மின்னஞ்சல் போன்ற இணைய அணுகலுக்கான நிரல்கள் "
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -127,14 +97,6 @@ msgstr "அலுவலகம்"
 msgid "Office Applications"
 msgstr "அலுவலகப் பயன்பாடுகள்"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "இதர இனங்களில் பொருந்தாத பயன்பாடுகள்"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "மற்றவை"
-
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
 msgstr "தனிப்பயன்"
@@ -143,34 +105,31 @@ msgstr "தனிப்பயன்"
 msgid "Personal settings"
 msgstr "தனிப்பயன் அமைப்புகள்"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "நிர்வாகம்"
+
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr ""
+"கணிப்பொறியின் அனைத்து அமைப்புகளை மாற்றுக (பயன்படுத்துவோர் அனைவரையும் பாதிக்கும்)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
 msgstr "தனிப்பயன் விருப்பங்கள்"
 
-#: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "விருப்பங்கள்"
 
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Universal access related preferences"
-msgstr "உலகளாவிய அணுகல் சார்ந்த விருப்பங்கள்"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "தனிநபர் விருப்பங்கள் மற்றும் அமைப்புகள்"
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "கணிப்பொறி"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
 msgstr "கணினி அமைப்புகள்"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "நிர்வாகம்"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "கணிப்பொறியின் அனைத்து அமைப்புகளை மாற்றுக (பயன்படுத்துவோர் அனைவரையும் பாதிக்கும்)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -180,42 +139,80 @@ msgstr "கணிப்பொறிக் கருவிகள்"
 msgid "System configuration and monitoring"
 msgstr "கணிப்பொறி அமைப்பு மற்றும் கண்காணித்தல்"
 
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "உலகளாவிய அணுகல்"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "உலகளாவிய அணுகல் அமைப்புகள்"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "துணைப்பொருள்கள்"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "மேஜை துணைப்பொருள்கள்"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "பயன்பாடுகள்"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "தனிநபர் விருப்பங்கள் மற்றும் நிர்வாக அமைப்புகள்"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "இதர இனங்களில் பொருந்தாத பயன்பாடுகள்"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "மற்றவை"
+
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
 msgstr "பட்டியல் திருத்தி"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "பட்டியலைத் திருத்த"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "பயன்பாடுகள்(_A):"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "முன்னிருப்பு மதிப்புகள்(_D)"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "பட்டியல்கள்(_M)"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, fuzzy, python-format
+msgid "Simple Menu Editor %s"
+msgstr "பட்டியல் திருத்தி"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "பெயர்"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "காட்டு"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"இல்ல அடைவு காண முடியவில்லை: /etc/passwd-ல் அமைக்கப்படவில்லை, "
-"மற்றும் சுற்றுச்சூழலில் $HOME மதிப்பு ஏதும் அமைக்கப்படவில்லை"
+"இல்ல அடைவு காண முடியவில்லை: /etc/passwd-ல் அமைக்கப்படவில்லை, மற்றும் சுற்றுச்சூழலில் "
+"$HOME மதிப்பு ஏதும் அமைக்கப்படவில்லை"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -250,6 +247,7 @@ msgid " <excluded>"
 msgstr " <சேர்க்காதவை>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -273,3 +271,8 @@ msgstr "பட்டியல் தூண் காலியாக உள்ள
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- கணோம் உடைய மேஜைப் பட்டியல் விவரக்குறிப்பின் கணோம் செயல்பாட்டைப் பரிசோதிக்கவும்"
 
+#~ msgid "Universal access related preferences"
+#~ msgstr "உலகளாவிய அணுகல் சார்ந்த விருப்பங்கள்"
+
+#~ msgid "Personal preferences and settings"
+#~ msgstr "தனிநபர் விருப்பங்கள் மற்றும் அமைப்புகள்"
