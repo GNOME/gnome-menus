@@ -1,4 +1,4 @@
-# translation of or.po to Oriya
+# translation of gnome-menus.master.or.po to Oriya
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -7,10 +7,10 @@
 # Manoj Kumar Giri <mgiri@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: or\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-07 13:10+0100\n"
-"PO-Revision-Date: 2009-03-03 12:42+0530\n"
+"Project-Id-Version: gnome-menus.master.or\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
+"POT-Creation-Date: 2009-06-21 17:35+0000\n"
+"PO-Revision-Date: 2009-08-13 20:05+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"\n"
+"\n"
 "\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
@@ -173,21 +175,28 @@ msgstr "ଅନ୍ଯାନ୍ଯ"
 msgid "Menu Editor"
 msgstr "ତାଲିକା ସମ୍ପାଦକ"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "ତାଲିକାକୁ ସମ୍ପାଦନ କରନ୍ତୁ"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "ପ୍ରୟୋଗ (_A):"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ (_D)"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "ତାଲିକା (_M):"
+
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+#| msgid "Menu Editor"
+msgid "Simple Menu Editor %s"
+msgstr "ସରଳ ତାଲିକା ସମ୍ପାଦକ %s"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
