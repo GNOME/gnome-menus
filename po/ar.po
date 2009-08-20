@@ -1,25 +1,24 @@
 # translation of gnome-menus.HEAD.po to Arabic
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER, 2005.
-#
 # Djihed Afifi <djihed@gmail.com>, 2006.
-# Khaled Hosny <khaledhosny@eglug.org>, 2006, 2007, 2008.
+# Khaled Hosny <khaledhosny@eglug.org>, 2006, 2007, 2008, 2009.
 # Anas Husseini <linux.anas@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&component=general\n"
-"POT-Creation-Date: 2009-03-16 22:29+0000\n"
-"PO-Revision-Date: 2008-05-26 13:58+0300\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-20 21:13+0300\n"
+"PO-Revision-Date: 2009-08-20 21:17+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.4.0\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Multimedia menu"
@@ -51,11 +50,11 @@ msgstr "الألعاب و التسلية"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "رسوم"
+msgstr "رسوميات"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "تطبيقات الرّسوم"
+msgstr "تطبيقات الرّسوميات"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -174,21 +173,27 @@ msgstr "أخرى"
 msgid "Menu Editor"
 msgstr "محرر القوائم"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "حرّر القوائم"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
-msgstr "_تطبيقات:"
+msgstr "ال_تطبيقات:"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "ال_مبدئيات"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "ال_قوائم:"
+
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "محرر القوائم البسيط %s"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
@@ -225,7 +230,7 @@ msgstr "اشمل المدخلات المستبعدة"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
-msgstr "اشمل المدخلات NoDisplay=true  "
+msgstr "اشمل مدخلات NoDisplay=true"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
