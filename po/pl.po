@@ -1,4 +1,4 @@
-# Copyright (C) 2001-2005 Free Software Foundation, Inc.
+# Copyright (C) 2001-2009 Free Software Foundation, Inc.
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 # Aviary.pl
 # Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
@@ -9,17 +9,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-10 21:46+0200\n"
-"PO-Revision-Date: 2008-07-10 21:42+0100\n"
-"Last-Translator: Wadim Dziedzic <wdziedzic@aviary.pl>\n"
-"Language-Team: Aviary.pl <gnomepl@aviary.pl>\n"
+"POT-Creation-Date: 2009-08-25 19:23+0200\n"
+"PO-Revision-Date: 2009-08-25 19:25+0100\n"
+"Last-Translator: Tomasz Dominikowski <dominikowski@gmail.com>\n"
+"Language-Team: Polish <gnomepl@aviary.pl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Polish\n"
-"X-Poedit-Country: POLAND\n"
+"X-Poedit-Country: Poland\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
@@ -175,21 +174,27 @@ msgstr "Inne"
 msgid "Menu Editor"
 msgstr "Edytor menu"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "Modyfikuje menu"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "Progr_amy:"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Domyślne"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "_Menu:"
+
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "Prosty edytor menu %s"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
@@ -201,12 +206,8 @@ msgid "Show"
 msgstr "Wyświetlanie"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Nie można odnaleźć katalogu domowego: brak ustawień w /etc/passwd i wartości "
-"zmiennej środowiskowej $HOME"
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Nie można odnaleźć katalogu domowego: brak ustawień w /etc/passwd i wartości zmiennej środowiskowej $HOME"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -257,25 +258,23 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169
+#: ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Drzewo menu jest puste"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- testuje specyfikację menu pulpitu zaimplementowaną w GNOME"
+msgstr "- testuje specyfikację menu pulpitu zaimplementowaną w środowisku GNOME"
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "Preferencje związane z uniwersalną dostępnością"
-
 #~ msgid "Personal preferences and settings"
 #~ msgstr "Ustawienia i osobiste preferencje"
-
 #~ msgid "Accessibility"
 #~ msgstr "Dostępność"
-
 #~ msgid "Accessibility Settings"
 #~ msgstr "Ustawienia dostępności"
-
 #~ msgid "Desktop"
 #~ msgstr "Pulpit"
+
