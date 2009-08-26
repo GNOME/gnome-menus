@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&component=general\n"
 "POT-Creation-Date: 2009-02-17 04:56+0000\n"
-"PO-Revision-Date: 2009-02-27 16:04+0100\n"
+"PO-Revision-Date: 2009-08-26 09:30+0200\n"
 "Last-Translator: Francesco Marletta <francesco.marletta@tiscali.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr "Menù multimedia"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
-msgstr "Audio e Video"
+msgstr "Audio e video"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
