@@ -1,49 +1,27 @@
 # gnome-menus' Portuguese translation.
-# Copyright © 2004, 2005, 2006, 2007 gnome-menus
+# Copyright © 2004, 2005, 2006, 2007, 2009 gnome-menus
 # This file is distributed under the same license as the gnome-menus package.
-# Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006, 2007.
+# Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006, 2007, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 2.20\n"
+"Project-Id-Version: 2.28\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-02 17:59+0100\n"
-"PO-Revision-Date: 2007-09-02 18:05+0000\n"
+"POT-Creation-Date: 2009-08-27 08:57+0100\n"
+"PO-Revision-Date: 2009-08-27 09:00+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Universal Access"
-msgstr "Acesso Universal"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "Menu de multimédia"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Universal Access Settings"
-msgstr "Definições de Acesso Universal"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "Acessórios"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "Acessórios de área de trabalho"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "Aplicações"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Preferências pessoais e definições de administração"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistema"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "Som & Vídeo"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -57,11 +35,11 @@ msgstr "Ferramentas para o desenvolvimento de aplicações"
 msgid "Education"
 msgstr "Educação"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "Jogos"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "Jogos e passatempos"
 
@@ -89,14 +67,6 @@ msgstr "Internet e Rede"
 msgid "Network-related settings"
 msgstr "Definições relacionadas com a rede"
 
-#: ../desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "Internet"
-
-#: ../desktop-directories/Internet.directory.in.h:2
-msgid "Programs for Internet access such as web and email"
-msgstr "Aplicações para o acesso à Internet tais como web e email"
-
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
 msgstr "Aparência e Comportamento"
@@ -106,13 +76,13 @@ msgid "Settings controlling the desktop appearance and behavior"
 msgstr ""
 "Definições que controlam a aparência e comportamento do ambiente de trabalho"
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Menu de multimédia"
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "Internet"
 
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "Som & Vídeo"
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Aplicações para o acesso à Internet tais como web e email"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -122,14 +92,6 @@ msgstr "Produtividade"
 msgid "Office Applications"
 msgstr "Aplicações de Produtividade"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Aplicações que não se enquadravam em nenhuma outra categoria"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "Outras"
-
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
 msgstr "Pessoal"
@@ -138,34 +100,30 @@ msgstr "Pessoal"
 msgid "Personal settings"
 msgstr "Definições pessoais"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "Administração"
+
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr "Alterar definições de sistema (afecta todos os utilizadores)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
 msgstr "Preferências pessoais"
 
-#: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "Preferências"
 
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Universal access related preferences"
-msgstr "Preferências relacionadas com o acesso universal"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "Preferências e definições pessoais"
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "Sistema"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
 msgstr "Definições de sistema"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "Administração"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "Alterar definições de sistema (afecta todos os utilizadores)"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -175,36 +133,74 @@ msgstr "Ferramentas de Sistema"
 msgid "System configuration and monitoring"
 msgstr "Configuração de sistema e monitorização"
 
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "Acesso Universal"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "Definições de Acesso Universal"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "Acessórios"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Acessórios de área de trabalho"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Aplicações"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "Preferências pessoais e definições de administração"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "Aplicações que não se enquadravam em nenhuma outra categoria"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "Outras"
+
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
 msgstr "Editor de Menus"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "Editar os Menus"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "_Aplicações:"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Omissões"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "_Menus:"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "Editor de Menus %s"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "Nome"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "Apresentar"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -245,6 +241,7 @@ msgid " <excluded>"
 msgstr " <excluded> (excluído)"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -268,6 +265,12 @@ msgstr "Árvore de menu está vazia"
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr ""
 "- testar a implementação GNOME da Especificação de Menu de Área de Trabalho"
+
+#~ msgid "Universal access related preferences"
+#~ msgstr "Preferências relacionadas com o acesso universal"
+
+#~ msgid "Personal preferences and settings"
+#~ msgstr "Preferências e definições pessoais"
 
 #~ msgid "Accessibility"
 #~ msgstr "Acessibilidade"
