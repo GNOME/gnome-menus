@@ -1,5 +1,5 @@
 # Serbian translation of gnome-menus
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2004, 2005, 2006, 2007.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2004 - 2009.
 #
 # This file is distributed under the same license as the gnome-menus package.
 #
@@ -10,8 +10,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-11 13:55+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&component=general\n"
+"POT-Creation-Date: 2009-06-21 17:35+0000\n"
 "PO-Revision-Date: 2007-09-12 01:22+0200\n"
 "Last-Translator: Горан Ракић <grakic@devbase.net>\n"
 "Language-Team: Serbian (sr) <gnome@prevod.org>\n"
@@ -172,21 +173,28 @@ msgstr "Остало"
 msgid "Menu Editor"
 msgstr "Уређивач менија"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "Уреди меније"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "_Програми:"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "По_дразумевани"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "_Менији:"
+
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+#| msgid "Menu Editor"
+msgid "Simple Menu Editor %s"
+msgstr "Уређивач менија %s"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
