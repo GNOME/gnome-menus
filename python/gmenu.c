@@ -912,11 +912,11 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 	}
       else if (!strcmp (attr, "generic_name"))
 	{
-	  return pygmenu_tree_entry_get_display_name ((PyObject *) self, NULL);
+	  return pygmenu_tree_entry_get_generic_name ((PyObject *) self, NULL);
 	}
       else if (!strcmp (attr, "display_name"))
 	{
-	  return pygmenu_tree_entry_get_generic_name ((PyObject *) self, NULL);
+	  return pygmenu_tree_entry_get_display_name ((PyObject *) self, NULL);
 	}
       else if (!strcmp (attr, "comment"))
 	{
