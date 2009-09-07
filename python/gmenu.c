@@ -630,6 +630,56 @@ pygmenu_tree_entry_get_name (PyObject *self,
 }
 
 static PyObject *
+pygmenu_tree_entry_get_generic_name (PyObject *self,
+				     PyObject *args)
+{
+  PyGMenuTreeEntry *entry;
+  const char       *generic_name;
+
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Entry.get_generic_name"))
+	return NULL;
+    }
+
+  entry = (PyGMenuTreeEntry *) self;
+
+  generic_name = gmenu_tree_entry_get_generic_name (GMENU_TREE_ENTRY (entry->item));
+  if (generic_name == NULL)
+    {
+      Py_INCREF (Py_None);
+      return Py_None;
+    }
+
+  return PyString_FromString (generic_name);
+}
+
+static PyObject *
+pygmenu_tree_entry_get_display_name (PyObject *self,
+				     PyObject *args)
+{
+  PyGMenuTreeEntry *entry;
+  const char       *display_name;
+
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Entry.get_display_name"))
+	return NULL;
+    }
+
+  entry = (PyGMenuTreeEntry *) self;
+
+  display_name = gmenu_tree_entry_get_display_name (GMENU_TREE_ENTRY (entry->item));
+  if (display_name == NULL)
+    {
+      Py_INCREF (Py_None);
+      return Py_None;
+    }
+
+  return PyString_FromString (display_name);
+}
+
+static PyObject *
 pygmenu_tree_entry_get_comment (PyObject *self,
 				PyObject *args)
 {
@@ -860,6 +910,14 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 	{
 	  return pygmenu_tree_entry_get_name ((PyObject *) self, NULL);
 	}
+      else if (!strcmp (attr, "generic_name"))
+	{
+	  return pygmenu_tree_entry_get_display_name ((PyObject *) self, NULL);
+	}
+      else if (!strcmp (attr, "display_name"))
+	{
+	  return pygmenu_tree_entry_get_generic_name ((PyObject *) self, NULL);
+	}
       else if (!strcmp (attr, "comment"))
 	{
 	  return pygmenu_tree_entry_get_comment ((PyObject *) self, NULL);
@@ -900,6 +958,8 @@ pygmenu_tree_entry_getattro (PyGMenuTreeEntry *self,
 static struct PyMethodDef pygmenu_tree_entry_methods[] =
 {
   { "get_name",               pygmenu_tree_entry_get_name,               METH_VARARGS },
+  { "get_generic_name",       pygmenu_tree_entry_get_generic_name,       METH_VARARGS },
+  { "get_display_name",       pygmenu_tree_entry_get_display_name,       METH_VARARGS },
   { "get_comment",            pygmenu_tree_entry_get_comment,            METH_VARARGS },
   { "get_icon",               pygmenu_tree_entry_get_icon,               METH_VARARGS },
   { "get_exec",               pygmenu_tree_entry_get_exec,               METH_VARARGS },
