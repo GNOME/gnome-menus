@@ -108,11 +108,13 @@ class MenuTreeModel (gtk.TreeStore):
 
         for menu_file in menu_files:
             tree = gmenu.lookup_tree (menu_file, gmenu.FLAGS_INCLUDE_EXCLUDED)
+            tree.sort_key = gmenu.SORT_DISPLAY_NAME
             self.__append_directory (tree.root, None, False, menu_file)
 
             system_file = lookup_system_menu_file (menu_file)
             if system_file:
                 system_tree = gmenu.lookup_tree (system_file, gmenu.FLAGS_INCLUDE_EXCLUDED)
+                system_tree.sort_key = gmenu.SORT_DISPLAY_NAME
                 self.__append_directory (system_tree.root, None, True, menu_file)
 
     def __append_directory (self, directory, parent_iter, system, menu_file):
@@ -161,7 +163,7 @@ class MenuTreeModel (gtk.TreeStore):
 
                 self[child_iter][self.COLUMN_IS_ENTRY] = True
                 self[child_iter][self.COLUMN_ID]       = child_item.desktop_file_id
-                self[child_iter][self.COLUMN_NAME]     = child_item.name
+                self[child_iter][self.COLUMN_NAME]     = child_item.display_name
                 self[child_iter][self.COLUMN_ICON]     = load_icon (self.icon_theme,
                                                                     child_item.icon)
 
