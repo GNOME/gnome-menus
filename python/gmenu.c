@@ -1515,6 +1515,56 @@ pygmenu_tree_get_directory_from_path (PyObject *self,
   return (PyObject *) retval;
 }
 
+static PyObject *
+pygmenu_tree_get_sort_key (PyObject *self,
+			   PyObject *args)
+{
+  PyGMenuTree *tree;
+  PyObject    *retval;
+
+  if (args != NULL)
+    {
+      if (!PyArg_ParseTuple (args, ":gmenu.Tree.get_sort_key"))
+	return NULL;
+    }
+
+  tree = (PyGMenuTree *) self;
+
+  switch (gmenu_tree_get_sort_key (tree->tree))
+    {
+    case GMENU_TREE_SORT_NAME:
+      retval = lookup_item_type_str ("SORT_NAME");
+      break;
+
+    case GMENU_TREE_SORT_DISPLAY_NAME:
+      retval = lookup_item_type_str ("SORT_DISPLAY_NAME");
+      break;
+
+    default:
+      g_assert_not_reached ();
+      break;
+    }
+
+  return (PyObject *) retval;
+}
+
+static PyObject *
+pygmenu_tree_set_sort_key (PyObject *self,
+			   PyObject *args)
+{
+  PyGMenuTree *tree;
+  int          sort_key;
+
+  if (!PyArg_ParseTuple (args, "i:gmenu.Tree.set_sort_key", &sort_key))
+    return NULL;
+
+  tree = (PyGMenuTree *) self;
+
+  gmenu_tree_set_sort_key (tree->tree, sort_key);
+
+  return Py_None;
+}
+
 static PyGMenuTreeCallback *
 pygmenu_tree_callback_new (PyObject *tree,
 			   PyObject *callback,
@@ -1680,7 +1730,7 @@ pygmenu_tree_getattro (PyGMenuTree *self,
 
       if (!strcmp (attr, "__members__"))
 	{
-	  return Py_BuildValue ("[ss]", "root", "menu_file");
+	  return Py_BuildValue ("[sss]", "root", "menu_file", "sort_key");
 	}
       else if (!strcmp (attr, "root"))
 	{
@@ -1690,9 +1740,47 @@ pygmenu_tree_getattro (PyGMenuTree *self,
 	{
 	  return pygmenu_tree_get_menu_file ((PyObject *) self, NULL);
 	}
+      else if (!strcmp (attr, "sort_key"))
+	{
+	  return pygmenu_tree_get_sort_key ((PyObject *) self, NULL);
+	}
     }
 
   return PyObject_GenericGetAttr ((PyObject *) self, py_attr);
+}
+
+static int
+pygmenu_tree_setattro (PyGMenuTree *self,
+		       PyObject    *py_attr,
+		       PyObject    *py_value)
+{
+  PyGMenuTree *tree;
+
+  tree = (PyGMenuTree *) self;
+
+  if (PyString_Check (py_attr))
+    {
+      char *attr;
+
+      attr = PyString_AsString (py_attr);
+
+      if (!strcmp (attr, "sort_key"))
+	{
+	  if (PyInt_Check (py_value))
+	    {
+	      int sort_key;
+
+	      sort_key = PyInt_AsLong (py_value);
+	      if (sort_key < GMENU_TREE_SORT_FIRST || sort_key > GMENU_TREE_SORT_LAST)
+		return -1;
+	      gmenu_tree_set_sort_key (tree->tree, sort_key);
+
+	      return 0;
+	    }
+	}
+    }
+
+  return -1;
 }
 
 static struct PyMethodDef pygmenu_tree_methods[] =
@@ -1700,6 +1788,8 @@ static struct PyMethodDef pygmenu_tree_methods[] =
   { "get_menu_file",           pygmenu_tree_get_menu_file,           METH_VARARGS },
   { "get_root_directory",      pygmenu_tree_get_root_directory,      METH_VARARGS },
   { "get_directory_from_path", pygmenu_tree_get_directory_from_path, METH_VARARGS },
+  { "get_sort_key",            pygmenu_tree_get_sort_key,            METH_VARARGS },
+  { "set_sort_key",            pygmenu_tree_set_sort_key,            METH_VARARGS },
   { "add_monitor",             pygmenu_tree_add_monitor,             METH_VARARGS },
   { "remove_monitor",          pygmenu_tree_remove_monitor,          METH_VARARGS },
   { NULL,                      NULL,                                 0            }
@@ -1725,7 +1815,7 @@ static PyTypeObject PyGMenuTree_Type =
   (ternaryfunc)0,                      /* tp_call */
   (reprfunc)0,                         /* tp_str */
   (getattrofunc)pygmenu_tree_getattro, /* tp_getattro */
-  (setattrofunc)0,                     /* tp_setattro */
+  (setattrofunc)pygmenu_tree_setattro, /* tp_setattro */
   0,                                   /* tp_as_buffer */
   Py_TPFLAGS_DEFAULT,                  /* tp_flags */
   NULL,                                /* Documentation string */
@@ -1851,4 +1941,7 @@ initgmenu (void)
   PyModule_AddIntConstant (mod, "FLAGS_SHOW_EMPTY",          GMENU_TREE_FLAGS_SHOW_EMPTY);
   PyModule_AddIntConstant (mod, "FLAGS_INCLUDE_NODISPLAY",   GMENU_TREE_FLAGS_INCLUDE_NODISPLAY);
   PyModule_AddIntConstant (mod, "FLAGS_SHOW_ALL_SEPARATORS", GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS);
+
+  PyModule_AddIntConstant (mod, "SORT_NAME",         GMENU_TREE_SORT_NAME);
+  PyModule_AddIntConstant (mod, "SORT_DISPLAY_NAME", GMENU_TREE_SORT_DISPLAY_NAME);
 }

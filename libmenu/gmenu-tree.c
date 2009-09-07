@@ -51,6 +51,7 @@ struct GMenuTree
   char *canonical_path;
 
   GMenuTreeFlags flags;
+  GMenuTreeSortKey sort_key;
 
   GSList *menu_file_monitors;
 
@@ -643,6 +644,8 @@ gmenu_tree_new (GMenuTreeType   type,
   tree->flags    = flags;
   tree->refcount = 1;
 
+  tree->sort_key = GMENU_TREE_SORT_NAME;
+
   if (tree->type == GMENU_TREE_BASENAME)
     {
       g_assert (canonical == FALSE);
@@ -862,6 +865,31 @@ gmenu_tree_get_directory_from_path (GMenuTree  *tree,
   gmenu_tree_item_unref (root);
 
   return directory ? gmenu_tree_item_ref (directory) : NULL;
+}
+
+GMenuTreeSortKey
+gmenu_tree_get_sort_key (GMenuTree *tree)
+{
+  g_return_val_if_fail (tree != NULL, GMENU_TREE_SORT_NAME);
+  g_return_val_if_fail (tree->refcount > 0, GMENU_TREE_SORT_NAME);
+
+  return tree->sort_key;
+}
+
+void
+gmenu_tree_set_sort_key (GMenuTree        *tree,
+			 GMenuTreeSortKey  sort_key)
+{
+  g_return_if_fail (tree != NULL);
+  g_return_if_fail (tree->refcount > 0);
+  g_return_if_fail (sort_key >= GMENU_TREE_SORT_FIRST);
+  g_return_if_fail (sort_key <= GMENU_TREE_SORT_LAST);
+
+  if (sort_key == tree->sort_key)
+    return;
+
+  tree->sort_key = sort_key;
+  gmenu_tree_force_rebuild (tree);
 }
 
 void
@@ -1468,10 +1496,25 @@ gmenu_tree_entry_finalize (GMenuTreeEntry *entry)
 
 static int
 gmenu_tree_entry_compare (GMenuTreeEntry *a,
-			  GMenuTreeEntry *b)
+			  GMenuTreeEntry *b,
+			  gpointer        sort_key_p)
 {
-  return g_utf8_collate (desktop_entry_get_name (a->desktop_entry),
-                         desktop_entry_get_name (b->desktop_entry));
+  GMenuTreeSortKey sort_key;
+
+  sort_key = GPOINTER_TO_INT (sort_key_p);
+
+  switch (sort_key)
+    {
+    case GMENU_TREE_SORT_NAME:
+      return g_utf8_collate (desktop_entry_get_name (a->desktop_entry),
+			     desktop_entry_get_name (b->desktop_entry));
+    case GMENU_TREE_SORT_DISPLAY_NAME:
+      return g_utf8_collate (gmenu_tree_entry_get_display_name (a),
+			     gmenu_tree_entry_get_display_name (b));
+    default:
+      g_assert_not_reached ();
+      return 0;
+    }
 }
 
 static int
@@ -1580,54 +1623,60 @@ gmenu_tree_item_get_user_data (GMenuTreeItem *item)
   return item->user_data;
 }
 
+static inline const char *
+gmenu_tree_item_compare_get_name_helper (GMenuTreeItem    *item,
+					 GMenuTreeSortKey  sort_key)
+{
+  const char *name;
+
+  switch (item->type)
+    {
+    case GMENU_TREE_ITEM_DIRECTORY:
+      if (GMENU_TREE_DIRECTORY (item)->directory_entry)
+	name = desktop_entry_get_name (GMENU_TREE_DIRECTORY (item)->directory_entry);
+      else
+	name = GMENU_TREE_DIRECTORY (item)->name;
+      break;
+
+    case GMENU_TREE_ITEM_ENTRY:
+      switch (sort_key)
+	{
+	case GMENU_TREE_SORT_NAME:
+	  name = desktop_entry_get_name (GMENU_TREE_ENTRY (item)->desktop_entry);
+	  break;
+	case GMENU_TREE_SORT_DISPLAY_NAME:
+	  gmenu_tree_entry_get_display_name (GMENU_TREE_ENTRY (item));
+	  break;
+	default:
+	  g_assert_not_reached ();
+	  break;
+	}
+      break;
+
+    case GMENU_TREE_ITEM_SEPARATOR:
+    case GMENU_TREE_ITEM_HEADER:
+    case GMENU_TREE_ITEM_ALIAS:
+    default:
+      g_assert_not_reached ();
+      break;
+    }
+
+  return name;
+}
+
 static int
 gmenu_tree_item_compare (GMenuTreeItem *a,
-			 GMenuTreeItem *b)
+			 GMenuTreeItem *b,
+			 gpointer       sort_key_p)
 {
-  const char *name_a;
-  const char *name_b;
+  const char       *name_a;
+  const char       *name_b;
+  GMenuTreeSortKey  sort_key;
 
-  switch (a->type)
-    {
-    case GMENU_TREE_ITEM_DIRECTORY:
-      if (GMENU_TREE_DIRECTORY (a)->directory_entry)
-	name_a = desktop_entry_get_name (GMENU_TREE_DIRECTORY (a)->directory_entry);
-      else
-	name_a = GMENU_TREE_DIRECTORY (a)->name;
-      break;
+  sort_key = GPOINTER_TO_INT (sort_key_p);
 
-    case GMENU_TREE_ITEM_ENTRY:
-      name_a = desktop_entry_get_name (GMENU_TREE_ENTRY (a)->desktop_entry);
-      break;
-
-    case GMENU_TREE_ITEM_SEPARATOR:
-    case GMENU_TREE_ITEM_HEADER:
-    case GMENU_TREE_ITEM_ALIAS:
-    default:
-      g_assert_not_reached ();
-      break;
-    }
-
-  switch (b->type)
-    {
-    case GMENU_TREE_ITEM_DIRECTORY:
-      if (GMENU_TREE_DIRECTORY (b)->directory_entry)
-	name_b = desktop_entry_get_name (GMENU_TREE_DIRECTORY (b)->directory_entry);
-      else
-	name_b = GMENU_TREE_DIRECTORY (b)->name;
-      break;
-
-    case GMENU_TREE_ITEM_ENTRY:
-      name_b = desktop_entry_get_name (GMENU_TREE_ENTRY (b)->desktop_entry);
-      break;
-
-    case GMENU_TREE_ITEM_SEPARATOR:
-    case GMENU_TREE_ITEM_HEADER:
-    case GMENU_TREE_ITEM_ALIAS:
-    default:
-      g_assert_not_reached ();
-      break;
-    }
+  name_a = gmenu_tree_item_compare_get_name_helper (a, sort_key);
+  name_b = gmenu_tree_item_compare_get_name_helper (b, sort_key);
 
   return g_utf8_collate (name_a, name_b);
 }
@@ -4108,8 +4157,9 @@ merge_entries (GMenuTree          *tree,
   entries = directory->entries;
   directory->entries = NULL;
 
-  entries = g_slist_sort (entries,
-			  (GCompareFunc) gmenu_tree_entry_compare);
+  entries = g_slist_sort_with_data (entries,
+				    (GCompareDataFunc) gmenu_tree_entry_compare,
+				    GINT_TO_POINTER (tree->sort_key));
 
   tmp = entries;
   while (tmp != NULL)
@@ -4151,8 +4201,9 @@ merge_subdirs_and_entries (GMenuTree          *tree,
   directory->subdirs = NULL;
   directory->entries = NULL;
 
-  items = g_slist_sort (items,
-			(GCompareFunc) gmenu_tree_item_compare);
+  items = g_slist_sort_with_data (items,
+				  (GCompareDataFunc) gmenu_tree_item_compare,
+				  GINT_TO_POINTER (tree->sort_key));
 
   tmp = items;
   while (tmp != NULL)

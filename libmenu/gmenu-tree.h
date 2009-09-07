@@ -66,6 +66,14 @@ typedef enum
   GMENU_TREE_FLAGS_MASK                = 0x0f
 } GMenuTreeFlags;
 
+typedef enum
+{
+  #define GMENU_TREE_SORT_FIRST GMENU_TREE_SORT_NAME
+  GMENU_TREE_SORT_NAME = 0,
+  GMENU_TREE_SORT_DISPLAY_NAME
+  #define GMENU_TREE_SORT_LAST GMENU_TREE_SORT_DISPLAY_NAME
+} GMenuTreeSortKey;
+
 GMenuTree *gmenu_tree_lookup (const char     *menu_file,
 			      GMenuTreeFlags  flags);
 
@@ -81,6 +89,10 @@ const char         *gmenu_tree_get_menu_file           (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_root_directory      (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_directory_from_path (GMenuTree  *tree,
 							const char *path);
+
+GMenuTreeSortKey     gmenu_tree_get_sort_key (GMenuTree        *tree);
+void                 gmenu_tree_set_sort_key (GMenuTree        *tree,
+					      GMenuTreeSortKey  sort_key);
 
 
 
