@@ -45,6 +45,7 @@ struct DesktopEntry
 
   char     *name;
   char     *generic_name;
+  char     *full_name;
   char     *comment;
   char     *icon;
   char     *exec;
@@ -286,6 +287,7 @@ desktop_entry_load (DesktopEntry *entry)
 
   retval->name         = GET_LOCALE_STRING ("Name");
   retval->generic_name = GET_LOCALE_STRING ("GenericName");
+  retval->full_name    = GET_LOCALE_STRING ("X-GNOME-FullName");
   retval->comment      = GET_LOCALE_STRING ("Comment");
   retval->icon         = GET_LOCALE_STRING ("Icon");
   retval->flags        = get_flags_from_key_file (retval, key_file, desktop_entry_group);
@@ -299,10 +301,11 @@ desktop_entry_load (DesktopEntry *entry)
   
 #undef GET_LOCALE_STRING
 
-  menu_verbose ("Desktop entry \"%s\" (%s, %s, %s, %s) flags: NoDisplay=%s, Hidden=%s, ShowInGNOME=%s, TryExecFailed=%s\n",
+  menu_verbose ("Desktop entry \"%s\" (%s, %s, %s, %s, %s) flags: NoDisplay=%s, Hidden=%s, ShowInGNOME=%s, TryExecFailed=%s\n",
                 retval->basename,
                 retval->name,
                 retval->generic_name ? retval->generic_name : "(null)",
+                retval->full_name ? retval->full_name : "(null)",
                 retval->comment ? retval->comment : "(null)",
                 retval->icon ? retval->icon : "(null)",
                 retval->flags & DESKTOP_ENTRY_NO_DISPLAY     ? "(true)" : "(false)",
@@ -368,6 +371,9 @@ desktop_entry_reload (DesktopEntry *entry)
   g_free (entry->generic_name);
   entry->generic_name = NULL;
 
+  g_free (entry->full_name);
+  entry->full_name = NULL;
+
   g_free (entry->comment);
   entry->comment = NULL;
 
@@ -411,6 +417,7 @@ desktop_entry_copy (DesktopEntry *entry)
   retval->path         = g_strdup (entry->path);
   retval->name         = g_strdup (entry->name);
   retval->generic_name = g_strdup (entry->generic_name);
+  retval->full_name    = g_strdup (entry->full_name);
   retval->comment      = g_strdup (entry->comment);
   retval->icon         = g_strdup (entry->icon);
   retval->exec         = g_strdup (entry->exec);
@@ -452,6 +459,9 @@ desktop_entry_unref (DesktopEntry *entry)
 
       g_free (entry->generic_name);
       entry->generic_name = NULL;
+
+      g_free (entry->full_name);
+      entry->full_name = NULL;
 
       g_free (entry->comment);
       entry->comment = NULL;
@@ -500,6 +510,12 @@ const char *
 desktop_entry_get_generic_name (DesktopEntry *entry)
 {
   return entry->generic_name;
+}
+
+const char *
+desktop_entry_get_full_name (DesktopEntry *entry)
+{
+  return entry->full_name;
 }
 
 const char *

@@ -112,6 +112,7 @@ char *gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
 
 const char *gmenu_tree_entry_get_name               (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_generic_name       (GMenuTreeEntry *entry);
+const char *gmenu_tree_entry_get_display_name       (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_comment            (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_icon               (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_exec               (GMenuTreeEntry *entry);

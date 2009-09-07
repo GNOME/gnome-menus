@@ -1137,6 +1137,20 @@ gmenu_tree_entry_get_generic_name (GMenuTreeEntry *entry)
 }
 
 const char *
+gmenu_tree_entry_get_display_name (GMenuTreeEntry *entry)
+{
+  const char *display_name;
+
+  g_return_val_if_fail (entry != NULL, NULL);
+
+  display_name = desktop_entry_get_full_name (entry->desktop_entry);
+  if (!display_name || display_name[0] == '\0')
+    display_name = desktop_entry_get_name (entry->desktop_entry);
+
+  return display_name;
+}
+
+const char *
 gmenu_tree_entry_get_comment (GMenuTreeEntry *entry)
 {
   g_return_val_if_fail (entry != NULL, NULL);
