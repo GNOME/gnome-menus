@@ -1,3 +1,59 @@
+===============
+Version 2.27.92
+===============
+
+This releases features new API that applications can use to display the full
+name contained in .desktop files that is now in the X-GNOME-FullName key. If an
+application chooses to use this, then it should set the sort key so that
+.desktop files are correctly sorted.
+
+  libmenu
+
+	* Add gmenu_tree_entry_get_display_name() API (Vincent)
+	  This will return X-GNOME-FullName if available, and fallback to Name.
+	* Add gmenu_tree_get_sort_key()/gmenu_tree_set_sort_key() (Vincent)
+	  The default sort key is still Name. Users of
+	  gmenu_tree_entry_get_display_name() should use
+	  gmenu_tree_set_sort_key().
+
+  Python
+
+	* Bind new API (Vincent)
+	* Add missing bindings for gmenu_tree_entry_get_generic_name() (Vincent)
+
+  Menu Editor
+
+	* Remove deprecated Encoding key from desktop file (Frédéric Péters)
+	* Use display name instead of name (Vincent)
+
+  Translators
+
+	* Khaled Hosny (ar)
+	* Alexander Shopov (bg)
+	* Runa Bhattacharjee (bn_IN)
+	* Denis (br)
+	* Mario Blättermann (de)
+	* Iñaki Larrañaga Murgoitio (eu)
+	* Claude Paroz (fr)
+	* Seán de Búrca (ga)
+	* Anton Meixome (gl)
+	* Sweta Kothari (gu)
+	* Gabor Kelemen (hu)
+	* Francesco Marletta (it)
+	* Takayuki KUSANO (ja)
+	* Changwoo Ryu (ko)
+	* Kjartan Maraas (nb)
+	* Mario Blättermann (nds)
+	* Manoj Kumar Giri (or)
+	* Tomasz Dominikowski (pl)
+	* Duarte Loreto (pt)
+	* Krix Apolinário (pt_BR)
+	* Горан Ракић (sr)
+	* Goran Rakić (sr@latin)
+	* Dr.T.Vasudevan (ta)
+	* Theppitak Karoonboonyanan (th)
+	* 甘露 (Lu Gan) (zh_CN)
+
 ==============
 Version 2.27.5
 ==============
