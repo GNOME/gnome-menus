@@ -6,11 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2009-07-16 06:33+0000\n"
-"PO-Revision-Date: 2009-08-22 14:59+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
-"Language-Team: German, Low <nds@li.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&component=general\n"
+"POT-Creation-Date: 2009-09-16 08:16+0000\n"
+"PO-Revision-Date: 2009-08-27 12:34+0100\n"
+"Last-Translator: Nils-Christoph Fiedler <linux@medienkompanie.de>\n"
+"Language-Team: Low German <nds-lowgerman@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -75,11 +76,11 @@ msgstr "Utsehn"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "InstellensStüerungen vun Schrievdiskverhollen un -utsehn"
+msgstr "Instellensstüerungen vun Schrievdiskverhollen un -utsehn"
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
-msgstr "Internet"
+msgstr "Innernet"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
@@ -91,7 +92,7 @@ msgstr "Kontor"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Kontor Programme"
+msgstr "Kontorprogramme"
 
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
@@ -119,7 +120,6 @@ msgstr "Instellens"
 
 #: ../desktop-directories/System.directory.in.h:1
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
-#| msgid "System Tools"
 msgid "System"
 msgstr "System"
 
@@ -129,11 +129,11 @@ msgstr "Systeminstellens"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "System Programme"
+msgstr "Systemprogramme"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "System Konfiguratschoon un Överwakung"
+msgstr "Systemkonfiguratschoon un Oppassens"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
@@ -141,7 +141,7 @@ msgstr "Togreep in'n Groten un Ganzen"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Togreep Instellens in'n Groten un Ganzen"
+msgstr "Togreepinstellens in'n Groten un Ganzen"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -169,49 +169,58 @@ msgstr "Annere"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Menü Verwaltens"
+msgstr "Menüverwaltens"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "Menüs bewarken"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "_Programme:"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Standard"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "_Menüs:"
 
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "Menü Verwaltens %s"
+
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
-#| msgid "Games"
 msgid "Name"
-msgstr "Name"
+msgstr "Naam"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "Opwiesen"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Kann dat eegen Verteeknis nich finnen: wedder in /etc/passwd noch in $HOME als Wert gesetzt"
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Kann dat eegen Verteeknis nich finnen: wedder in /etc/passwd noch in $HOME "
+"als Wert gesetzt"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
-msgstr "Menü Datei"
+msgstr "Menüdatei"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "Menü_Datei"
+msgstr "MENÜ_DATEI"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Menü Anpassungen överwaken"
+msgstr "Menüanpassungen överwaken"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
@@ -223,15 +232,15 @@ msgstr "Föge NoDisplay=true Indräge hento"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "Falsche Schrievdisk Datei ID"
+msgstr "Falsche Schrievdiskdatei ID"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Falscher Dateinom]"
+msgstr "[Falscher Dateinaam]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
-msgstr " <ausschluss>"
+msgstr " <utsluten>"
 
 #: ../util/test-menu-spec.c:164
 #, c-format
@@ -246,16 +255,14 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Menü is ännert worrn, lode nüe ====\n"
+"==== Menü is ännert worrn, lade nüe ====\n"
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169
-#: ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "Menü Struktur is leer"
+msgstr "Menüstruktur is leer"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- GNOME's Umsettung vun de Schrievdisk Spezifikatschoon vörknöpen"
-
+msgstr "- GNOME's Umsettung vun de Schrievdiskspezifikatschoon vorknöpen"
