@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-07 19:37+0200\n"
-"PO-Revision-Date: 2009-07-07 19:36+0100\n"
+"POT-Creation-Date: 2009-09-19 10:25+0200\n"
+"PO-Revision-Date: 2009-09-19 10:25+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -107,7 +107,7 @@ msgstr "Administration"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Ändra systembreda inställningar (påverkar alla användare)"
+msgstr "Ändra inställningar för hela systemet (påverkar alla användare)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
@@ -202,12 +202,8 @@ msgid "Show"
 msgstr "Visa"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Kan inte hitta hemkatalogen: inte angiven i /etc/passwd och inget värde för "
-"$HOME i miljön"
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Kan inte hitta hemkatalogen: inte angiven i /etc/passwd och inget värde för $HOME i miljön"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -258,7 +254,8 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+#: ../util/test-menu-spec.c:169
+#: ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "Menyträdet är tomt"
 
@@ -268,66 +265,46 @@ msgstr "- testa GNOME:s implementation av specifikationen för skrivbordsmenyer"
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "Inställningar relaterade till allmän åtkomst"
-
 #~ msgid "Personal preferences and settings"
 #~ msgstr "Personliga inställningar"
-
 #~ msgid "Accessibility"
 #~ msgstr "Tillgänglighet"
-
 #~ msgid "Accessibility Settings"
 #~ msgstr "Tillgänglighetsinställningar"
-
 #~ msgid "Desktop"
 #~ msgstr "Skrivbord"
-
 #~ msgid "Personal Preferences"
 #~ msgstr "Personliga inställningar"
-
 #~ msgid "Applications:"
 #~ msgstr "Program"
-
 #~ msgid "Invalid Filename"
 #~ msgstr "Ogiltigt filnamn"
-
 #~ msgid "<excluded>"
 #~ msgstr "<exkluderad>"
-
 #~ msgid "excluded"
 #~ msgstr "exkluderad"
-
 #~ msgid "Excluded"
 #~ msgstr "Exkluderad"
-
 #~ msgid "==== Menu changed, reloading ===="
 #~ msgstr "==== Menyn ändrad, läser om ===="
-
 #~ msgid "Menu changed, reloading"
 #~ msgstr "Menyn ändrad, läser om"
-
 #~ msgid "test GNOME's implementation of the Desktop Menu Specification"
 #~ msgstr "testa GNOMEs implementation av specifikationen för skrivbordsmenyer"
-
 #~ msgid "Test GNOME's implementation of the Desktop Menu Specification"
 #~ msgstr "Testa GNOMEs implementation av specifikationen för skrivbordsmenyer"
-
 #~ msgid "Desktop Accessories"
 #~ msgstr "Skrivbordstillbehör"
-
 #~ msgid "Software development"
 #~ msgstr "Programutveckling"
-
 #~ msgid "Software Development"
 #~ msgstr "Programutveckling"
-
 #~ msgid "Games and Amusements"
 #~ msgstr "Spel och underhållning"
-
 #~ msgid "Graphics Applications"
 #~ msgstr "Grafikprogram"
-
 #~ msgid "Multimedia"
 #~ msgstr "Multimedia"
-
 #~ msgid "Office applications"
 #~ msgstr "Kontorsprogram"
+
