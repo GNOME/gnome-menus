@@ -1,51 +1,32 @@
-# translation of gnome-menus.HEAD.po to maithili
+# translation of gnome-menus.master.mai.po to Hindi
 # translation of gnome-menus.HEAD.po to
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sangeeta Kumari <sangeeta09@gmail.com>, 2008.
+# Rajesh Ranjan <rajesh672@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-17 04:00+0000\n"
-"PO-Revision-Date: 2008-02-19 16:32+0530\n"
-"Last-Translator: Sangeeta Kumari <sangeeta09@gmail.com>\n"
-"Language-Team: maithili <maithili.sf.net>\n"
+"Project-Id-Version: gnome-menus.master.mai\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
+"POT-Creation-Date: 2009-06-21 17:35+0000\n"
+"PO-Revision-Date: 2009-09-20 12:27+0530\n"
+"Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
+"Language-Team: Hindi <hindi.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Universal Access"
-msgstr ""
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "मल्टीमीडिया मेनू"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Universal Access Settings"
-msgstr ""
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "संलग्नक"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "डेस्कटाप संलग्नकसभ"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "अनुप्रयोग"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "निज वरीयता आ प्रशासनिक जमावट"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr ""
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "ध्वनि आ वीडियो"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -59,11 +40,11 @@ msgstr "साफ्टवेयर विकासक लेल अओजार
 msgid "Education"
 msgstr "शिक्षा"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "खेल"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "खेल आ मनोरंजन"
 
@@ -77,43 +58,35 @@ msgstr "आलेखी अनुप्रयोगसभ"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
-msgstr ""
+msgstr "हार्डवेयर"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr ""
+msgstr "कतेक हार्डवेयर युक्तिक लेल सेटिंग"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
-msgstr ""
+msgstr "इंटरनेट आ संजाल"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
-msgstr ""
-
-#: ../desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "इंटरनेट"
-
-#: ../desktop-directories/Internet.directory.in.h:2
-msgid "Programs for Internet access such as web and email"
-msgstr "इंटरनेटसँ जुड़बाक लेल वेब आ इमेल जहिना प्रोग्राम"
+msgstr "संजाल संबंधित सेटिंग"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr ""
+msgstr "रूप-रंग"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr ""
+msgstr "डेस्कटाप रूपाकार आ व्यवहारक नियंत्रण करैबला सेटिंग"
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "मल्टीमीडिया मेनू"
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "इंटरनेट"
 
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "ध्वनि आ वीडियो"
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "इंटरनेटसँ जुड़बाक लेल वेब आ इमेल जहिना प्रोग्राम"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -123,50 +96,38 @@ msgstr "कार्यालय"
 msgid "Office Applications"
 msgstr "कार्यालयक अनुप्रयोग"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "अनुप्रयोगसभ जे आन श्रेणीमे सटीक नहि छला"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "आन"
-
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
-msgstr ""
+msgstr "निजी"
 
 #: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal settings"
-msgstr ""
+msgstr "निजी सेटिंग"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "प्रशासन"
+
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr "तंत्र स्तरीय सेटिंग बदलू (सभटा प्रयोक्ता प्रभावित होइछ)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
 msgstr "निज वरीयतासभ"
 
-#: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "वरीयतासभ"
 
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Universal access related preferences"
-msgstr ""
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "निजी पसंद आ जमावट"
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "तंत्र"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
-msgstr ""
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "प्रशासन"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr ""
+msgstr "तंत्र सेटिंग"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -176,40 +137,81 @@ msgstr "सिस्टम अओजार"
 msgid "System configuration and monitoring"
 msgstr "सिस्टम बिन्यास आ निरीक्षण"
 
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "सार्वभौमिक पहुँच"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "सार्वभौमिक पहुँच सेटिंग"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "संलग्नक"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "डेस्कटाप संलग्नकसभ"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "अनुप्रयोग"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "निज वरीयता आ प्रशासनिक जमावट"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "अनुप्रयोगसभ जे आन श्रेणीमे सटीक नहि छला"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "आन"
+
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
 msgstr "मेनू संपादक"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "मेनू संपादित करू"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "अनुप्रयोग (_A):"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "मूलभूत (_D)"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "मेनू (_M):"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+#| msgid "Menu Editor"
+msgid "Simple Menu Editor %s"
+msgstr "सरल मेनू संपादक %s"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "नाम"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "देखाबू"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "घर निर्देशिकाकेँ नहि पाबि सकैत अछि: /etc/passwd मे सेट नहि आओर $HOME क' लेल वातावरणमे कोनो मान नहि अछि"
+msgstr ""
+"घर निर्देशिकाकेँ नहि पाबि सकैत अछि: /etc/passwd मे सेट नहि आओर $HOME क' लेल वातावरणमे "
+"कोनो मान नहि अछि"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -244,6 +246,7 @@ msgid " <excluded>"
 msgstr " <excluded>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
