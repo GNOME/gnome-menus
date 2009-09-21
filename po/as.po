@@ -193,7 +193,7 @@ msgstr "তালিকা:(_M)"
 #, python-format
 #| msgid "Menu Editor"
 msgid "Simple Menu Editor %s"
-msgstr "তালিকা সম্পাদক"
+msgstr "%s তালিকা সম্পাদক"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
