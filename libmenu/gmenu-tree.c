@@ -1629,6 +1629,8 @@ gmenu_tree_item_compare_get_name_helper (GMenuTreeItem    *item,
 {
   const char *name;
 
+  name = NULL;
+
   switch (item->type)
     {
     case GMENU_TREE_ITEM_DIRECTORY:
@@ -1645,7 +1647,7 @@ gmenu_tree_item_compare_get_name_helper (GMenuTreeItem    *item,
 	  name = desktop_entry_get_name (GMENU_TREE_ENTRY (item)->desktop_entry);
 	  break;
 	case GMENU_TREE_SORT_DISPLAY_NAME:
-	  gmenu_tree_entry_get_display_name (GMENU_TREE_ENTRY (item));
+	  name = gmenu_tree_entry_get_display_name (GMENU_TREE_ENTRY (item));
 	  break;
 	default:
 	  g_assert_not_reached ();
