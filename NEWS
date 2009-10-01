@@ -1,3 +1,16 @@
+================
+Version 2.28.0.1
+================
+
+  libmenu
+
+	* Fix sorting of menu items during merge to actually work (and not
+	  crash) (Frédéric Crozat)
+
+  Python
+
+	* Link the python module to libpython (Frédéric Crozat, Vincent)
+
 ==============
 Version 2.28.0
 ==============
