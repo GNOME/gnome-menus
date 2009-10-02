@@ -2,14 +2,16 @@
 # Icelandic translation of gnome-menus.
 # Copyright (C) 2008 Free Software Foundation, Inc.
 # Anna Jonna Ármannsdóttir <annajonna@gmail.com>, 2008.
+# Sveinn í Felli <sveinki@nett.is>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-14 01:29+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&component=general\n"
+"POT-Creation-Date: 2009-09-29 14:04+0000\n"
 "PO-Revision-Date: 2008-05-14 01:40+0000\n"
-"Last-Translator: Anna Jonna Ármannsdóttir <annajonna@gmail.com>\n"
+"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,7 +44,7 @@ msgstr "Leikir"
 
 #: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Leikir og gaman"
+msgstr "Leikir og skemmtun"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -94,7 +96,7 @@ msgstr "Skrifstofuforrit"
 
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
-msgstr "Persónuleg"
+msgstr "Persónulegt"
 
 #: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal settings"
@@ -147,7 +149,7 @@ msgstr "Aukahlutir"
 
 #: ../desktop-directories/Utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Skjáborðs aukahlutir"
+msgstr "Aukahlutir fyrir skjáborð"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
@@ -163,27 +165,33 @@ msgstr "Forrit sem passa ekki í aðra flokka"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Other"
-msgstr "Aðrir"
+msgstr "Annað"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
 msgstr "Valmyndaritill"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "Breyta valmyndum"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "_Forrit:"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Sjálfgefið"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "_Valmyndir:"
+
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "Einfaldur valmyndaritill %s"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
@@ -199,8 +207,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Gat ekki fundið heimamöppu: ekki stillt í /etc/passwd og ekkert gildi fyrir "
-"$HOME í víðværumbreytum"
+"Gat ekki fundið heimamöppu: er ekki stillt í /etc/passwd og ekkert gildi "
+"fyrir $HOME í víðværum breytum"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -212,11 +220,11 @@ msgstr "VALMYNDAR_SKRÁ"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Vakt eftir breytingum í valmynd"
+msgstr "Fylgjast með breytingum í valmynd"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
-msgstr "Taka <útilokað> færslur með"
+msgstr "Taka <útilokað>ar færslur með"
 
 #: ../util/test-menu-spec.c:36
 msgid "Include NoDisplay=true entries"
@@ -228,13 +236,14 @@ msgstr "Kenni skjáborðsskrár er ógilt"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
-msgstr "[Ólöglegt skráarnafn]"
+msgstr "[Ógilt skráarnafn]"
 
 #: ../util/test-menu-spec.c:93
 msgid " <excluded>"
 msgstr " <útilokað>"
 
 #: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
