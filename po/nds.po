@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&component=general\n"
-"POT-Creation-Date: 2009-09-16 08:16+0000\n"
-"PO-Revision-Date: 2009-08-27 12:34+0100\n"
+"POT-Creation-Date: 2009-10-21 05:32+0000\n"
+"PO-Revision-Date: 2009-10-22 18:55+0100\n"
 "Last-Translator: Nils-Christoph Fiedler <linux@medienkompanie.de>\n"
 "Language-Team: Low German <nds-lowgerman@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -32,11 +32,11 @@ msgstr "Programmeeren"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Hölpsprogrammen to'r Programmentwicklung"
+msgstr "Hölpprogrammen to'r Programmkonstruktschoon"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
-msgstr "Ertekung"
+msgstr "Erteken"
 
 #: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
@@ -64,11 +64,11 @@ msgstr "Instellens för unnerscheedliche Hardware"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Innernet un Nettwark"
+msgstr "Innernet un Netwark"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
-msgstr "Nettwarksinstellens"
+msgstr "Netwarksinstellens"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -76,7 +76,7 @@ msgstr "Utsehn"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Instellensstüerungen vun Schrievdiskverhollen un -utsehn"
+msgstr "Instellensstüern vun Schrievdiskverhollen un -utsehn"
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
@@ -84,7 +84,7 @@ msgstr "Innernet"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programme för Innernettogreep as Web un Epost"
+msgstr "Programme för Innernettogrip as Net un E-Post"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -108,7 +108,7 @@ msgstr "Verwaltens"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Systemwiete Instellens ännern (Geit all Bruker wat an)"
+msgstr "Systemwiete Instellens ännern (Geiht all Bruker wat an)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
@@ -137,11 +137,11 @@ msgstr "Systemkonfiguratschoon un Oppassens"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Togreep in'n Groten un Ganzen"
+msgstr "Togrip in'n Groten un Ganzen"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Togreepinstellens in'n Groten un Ganzen"
+msgstr "Togripinstellens in'n Groten un Ganzen"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -216,11 +216,11 @@ msgstr "Menüdatei"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "MENÜ_DATEI"
+msgstr "MENU_FILE"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "Menüanpassungen överwaken"
+msgstr "Menüanpassens oppassen"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
@@ -265,4 +265,4 @@ msgstr "Menüstruktur is leer"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- GNOME's Umsettung vun de Schrievdiskspezifikatschoon vorknöpen"
+msgstr "- GNOME's Umsetten vun de Schrievdiskspezifikatschoon vorknüppen"
