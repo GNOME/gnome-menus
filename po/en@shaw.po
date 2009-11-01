@@ -1,0 +1,261 @@
+# gnome-menus Shavian translation.
+# Copyright (C) 2009
+# This file is distributed under the same license as the gnome-menus package.
+# Thomas Thurman <tthurman@gnome.org>, 2009
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&component=general\n"
+"POT-Creation-Date: 2009-01-01 18:52+0000\n"
+"PO-Revision-Date: 2009-10-31 22:25-0500\n"
+"Last-Translator: Thomas Thurman <tthurman@gnome.org>\n"
+"Language-Team: Shavian <ubuntu-l10n-en-shaw@launchpad.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "𐑥𐑩𐑤𐑑𐑰𐑥𐑰𐑛𐑰𐑩 𐑥𐑧𐑯𐑿"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "𐑕𐑬𐑯𐑛 𐑯 𐑝𐑦𐑛𐑦𐑴"
+
+#: ../desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙"
+
+#: ../desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "𐑑𐑵𐑤𐑟 𐑓𐑹 𐑕𐑪𐑓𐑑𐑢𐑺 𐑛𐑦𐑝𐑧𐑤𐑩𐑐𐑥𐑩𐑯𐑑"
+
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "𐑧𐑛𐑿𐑒𐑱𐑖𐑩𐑯"
+
+#: ../desktop-directories/Game.directory.in.h:1
+msgid "Games"
+msgstr "𐑜𐑱𐑥𐑟"
+
+#: ../desktop-directories/Game.directory.in.h:2
+msgid "Games and amusements"
+msgstr "𐑜𐑱𐑥𐑟 𐑯 𐑨𐑥𐑿𐑟𐑥𐑩𐑯𐑑𐑕"
+
+#: ../desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "𐑜𐑮𐑨𐑓𐑦𐑒𐑕"
+
+#: ../desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "𐑜𐑮𐑨𐑓𐑦𐑒𐑕 𐑩𐑐𐑤𐑦𐑒𐑱𐑕𐑩𐑯𐑟"
+
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "𐑣𐑭𐑮𐑛𐑢𐑧𐑮"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "𐑕𐑧𐑑𐑦𐑙𐑟 𐑓𐑹 𐑕𐑧𐑝𐑼𐑩𐑤 𐑣𐑭𐑮𐑛𐑢𐑧𐑮 𐑛𐑦𐑝𐑲𐑕𐑩𐑟"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "·𐑦𐑯𐑑𐑼𐑯𐑧𐑑 𐑯 𐑯𐑧𐑑𐑢𐑻𐑒"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "𐑯𐑧𐑑𐑢𐑻𐑒-𐑮𐑦𐑤𐑱𐑑𐑩𐑛 𐑕𐑧𐑑𐑦𐑙𐑟"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "𐑤𐑫𐑒 𐑯 𐑓𐑰𐑤"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "𐑕𐑧𐑑𐑦𐑙𐑟 𐑒𐑩𐑯𐑑𐑮𐑴𐑤𐑦𐑙 𐑞 𐑛𐑧𐑕𐑒𐑑𐑪𐑐 𐑩𐑐𐑽𐑩𐑯𐑕 𐑯 𐑚𐑦𐑣𐑱𐑝𐑘𐑼"
+
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "·𐑦𐑯𐑑𐑼𐑯𐑧𐑑"
+
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑟 𐑓𐑹 ·𐑦𐑯𐑑𐑼𐑯𐑧𐑑 𐑨𐑒𐑕𐑧𐑕 𐑕𐑳𐑗 𐑨𐑟 𐑢𐑧𐑚 𐑯 𐑰𐑥𐑱𐑤"
+
+#: ../desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "𐑪𐑓𐑦𐑕"
+
+#: ../desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "𐑪𐑓𐑦𐑕 𐑩𐑐𐑤𐑦𐑒𐑱𐑕𐑩𐑯𐑟"
+
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "𐑐𐑻𐑕𐑩𐑯𐑩𐑤"
+
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "𐑐𐑻𐑕𐑩𐑯𐑩𐑤 𐑕𐑧𐑑𐑦𐑙𐑟"
+
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "𐑩𐑛𐑥𐑦𐑯𐑦𐑕𐑑𐑮𐑱𐑖𐑩𐑯"
+
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr "𐑗𐑱𐑯𐑡 𐑕𐑦𐑕𐑑𐑩𐑥-𐑢𐑲𐑛 𐑕𐑧𐑑𐑦𐑙𐑟 (𐑩𐑓𐑧𐑒𐑑𐑕 𐑷𐑤 𐑿𐑟𐑼𐑟)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
+msgid "Personal preferences"
+msgstr "𐑐𐑻𐑕𐑩𐑯𐑩𐑤 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟"
+
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟"
+
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "𐑕𐑦𐑕𐑑𐑩𐑥"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "𐑕𐑦𐑕𐑑𐑩𐑥 𐑕𐑧𐑑𐑦𐑙𐑟"
+
+#: ../desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "𐑕𐑦𐑕𐑑𐑩𐑥 𐑑𐑵𐑤𐑟"
+
+#: ../desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "𐑕𐑦𐑕𐑑𐑩𐑥 𐑒𐑩𐑯𐑓𐑦𐑜𐑘𐑼𐑱𐑖𐑩𐑯 𐑯 𐑥𐑭𐑯𐑩𐑑𐑻𐑦𐑙"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "𐑿𐑯𐑩𐑝𐑻𐑕𐑩𐑤 𐑨𐑒𐑕𐑧𐑕"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "𐑿𐑯𐑩𐑝𐑻𐑕𐑩𐑤 𐑨𐑒𐑕𐑧𐑕 𐑕𐑧𐑑𐑦𐑙𐑟"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "𐑨𐑒𐑕𐑧𐑕𐑼𐑦𐑟"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "𐑛𐑧𐑕𐑒𐑑𐑪𐑐 𐑨𐑒𐑕𐑧𐑕𐑼𐑦𐑟"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "𐑩𐑐𐑤𐑦𐑒𐑱𐑕𐑩𐑯𐑟"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "𐑐𐑻𐑕𐑩𐑯𐑩𐑤 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟 𐑯 𐑩𐑛𐑥𐑦𐑯𐑦𐑕𐑑𐑮𐑱𐑖𐑩𐑯 𐑕𐑧𐑑𐑦𐑙𐑟"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "𐑩𐑐𐑤𐑦𐑒𐑱𐑕𐑩𐑯𐑟 𐑞𐑨𐑑 𐑛𐑦𐑛 𐑯𐑪𐑑 𐑓𐑦𐑑 𐑦𐑯 𐑳𐑞𐑼 𐑒𐑨𐑑𐑩𐑜𐑪𐑮𐑰𐑟"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "𐑳𐑞𐑼"
+
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "𐑥𐑧𐑯𐑿 𐑧𐑛𐑦𐑑𐑹"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:1
+msgid "Edit Menus"
+msgstr "𐑧𐑛𐑦𐑑 𐑥𐑧𐑯𐑿𐑟"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:2
+msgid "_Applications:"
+msgstr "_𐑨𐑐𐑤𐑦𐑒𐑱𐑖𐑩𐑯𐑟:"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:3
+msgid "_Defaults"
+msgstr "_𐑛𐑩𐑓𐑪𐑤𐑑𐑕"
+
+#: ../simple-editor/gmenu-simple-editor.glade.h:4
+msgid "_Menus:"
+msgstr "_𐑥𐑧𐑯𐑿𐑟:"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+msgid "Name"
+msgstr "𐑯𐑱𐑥"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+msgid "Show"
+msgstr "𐑖𐑴"
+
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"𐑒𐑨𐑯𐑪𐑑 𐑓𐑲𐑯𐑛 𐑣𐑴𐑥 𐑛𐑲𐑮𐑧𐑒𐑑𐑼𐑦: 𐑯𐑪𐑑 𐑕𐑧𐑑 𐑦𐑯 /etc/passwd 𐑯 𐑯𐑴 𐑝𐑨𐑤𐑿 𐑓𐑹 $HOME 𐑦𐑯 "
+"𐑧𐑯𐑝𐑲𐑼𐑯𐑥𐑩𐑯𐑑"
+
+#: ../util/test-menu-spec.c:33
+msgid "Menu file"
+msgstr "𐑥𐑧𐑯𐑿 𐑓𐑲𐑤"
+
+#: ../util/test-menu-spec.c:33
+msgid "MENU_FILE"
+msgstr "MENU_FILE"
+
+#: ../util/test-menu-spec.c:34
+msgid "Monitor for menu changes"
+msgstr "𐑥𐑪𐑯𐑦𐑑𐑼 𐑓𐑹 𐑥𐑧𐑯𐑿 𐑗𐑱𐑯𐑡𐑩𐑟"
+
+#: ../util/test-menu-spec.c:35
+msgid "Include <Exclude>d entries"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 <Exclude>𐑛 𐑧𐑯𐑑𐑮𐑦𐑟"
+
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "𐑦𐑯𐑒𐑤𐑵𐑛 NoDisplay=true 𐑧𐑯𐑑𐑮𐑦𐑟"
+
+#: ../util/test-menu-spec.c:91
+msgid "Invalid desktop file ID"
+msgstr "𐑦𐑯𐑝𐑨𐑤𐑦𐑛 𐑛𐑧𐑕𐑒𐑑𐑪𐑐 𐑓𐑲𐑤 ID"
+
+#: ../util/test-menu-spec.c:92
+msgid "[Invalid Filename]"
+msgstr "[𐑦𐑯𐑝𐑨𐑤𐑦𐑛 𐑓𐑲𐑤𐑯𐑱𐑥]"
+
+#: ../util/test-menu-spec.c:93
+msgid " <excluded>"
+msgstr " <excluded>"
+
+#: ../util/test-menu-spec.c:164
+#, c-format
+msgid ""
+"\n"
+"\n"
+"\n"
+"==== Menu changed, reloading ====\n"
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"==== 𐑥𐑧𐑯𐑿 𐑗𐑱𐑯𐑡𐑛, 𐑮𐑰𐑤𐑴𐑛𐑦𐑙 ====\n"
+"\n"
+"\n"
+
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
+msgid "Menu tree is empty"
+msgstr "𐑥𐑧𐑯𐑿 𐑑𐑮𐑰 𐑦𐑟 𐑧𐑥𐑐𐑑𐑦"
+
+#: ../util/test-menu-spec.c:189
+msgid "- test GNOME's implementation of the Desktop Menu Specification"
+msgstr "- 𐑑𐑧𐑕𐑑 ·𐑜𐑯𐑴𐑥'𐑕 𐑦𐑥𐑐𐑤𐑩𐑥𐑧𐑯𐑑𐑱𐑖𐑩𐑯 𐑝 𐑞 𐑛𐑧𐑕𐑒𐑑𐑪𐑐 𐑥𐑧𐑯𐑿 𐑕𐑐𐑧𐑕𐑦𐑓𐑦𐑒𐑱𐑖𐑩𐑯"
+
