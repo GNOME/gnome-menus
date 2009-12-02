@@ -179,15 +179,15 @@ msgstr "జాబితాలను సరిచేయు"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
-msgstr "కార్యక్షేత్రాలు"
+msgstr "అనువర్తనములు (_A)"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
-msgstr "అప్రమేయాలు"
+msgstr "అప్రమేయాలు (_D)"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
-msgstr "జాబితాలు"
+msgstr "జాబితాలు (_M)"
 
 #. Translators: %s is the version number
 #: ../simple-editor/GMenuSimpleEditor/main.py:49
@@ -217,7 +217,7 @@ msgstr "జాబితా దస్త్రము"
 
 #: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
-msgstr "జాబితా _దస్త్రము"
+msgstr "జాబితా దస్త్రము (_F)"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
