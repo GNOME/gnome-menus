@@ -1359,26 +1359,6 @@ gmenu_tree_directory_finalize (GMenuTreeDirectory *directory)
   directory->name = NULL;
 }
 
-static int
-gmenu_tree_directory_compare (GMenuTreeDirectory *a,
-			      GMenuTreeDirectory *b)
-{
-  const char *name_a;
-  const char *name_b;
-
-  if (a->directory_entry)
-    name_a = desktop_entry_get_name (a->directory_entry);
-  else
-    name_a = a->name;
-
-  if (b->directory_entry)
-    name_b = desktop_entry_get_name (b->directory_entry);
-  else
-    name_b = b->name;
-
-  return g_utf8_collate (name_a, name_b);
-}
-
 static GMenuTreeSeparator *
 gmenu_tree_separator_new (GMenuTreeDirectory *parent)
 {
@@ -1495,33 +1475,17 @@ gmenu_tree_entry_finalize (GMenuTreeEntry *entry)
 }
 
 static int
-gmenu_tree_entry_compare (GMenuTreeEntry *a,
-			  GMenuTreeEntry *b,
-			  gpointer        sort_key_p)
+gmenu_tree_entry_compare_by_id (GMenuTreeItem *a,
+				GMenuTreeItem *b)
 {
-  GMenuTreeSortKey sort_key;
+  if (a->type == GMENU_TREE_ITEM_ALIAS)
+    a = GMENU_TREE_ALIAS (a)->aliased_item;
 
-  sort_key = GPOINTER_TO_INT (sort_key_p);
+  if (b->type == GMENU_TREE_ITEM_ALIAS)
+    b = GMENU_TREE_ALIAS (b)->aliased_item;
 
-  switch (sort_key)
-    {
-    case GMENU_TREE_SORT_NAME:
-      return g_utf8_collate (desktop_entry_get_name (a->desktop_entry),
-			     desktop_entry_get_name (b->desktop_entry));
-    case GMENU_TREE_SORT_DISPLAY_NAME:
-      return g_utf8_collate (gmenu_tree_entry_get_display_name (a),
-			     gmenu_tree_entry_get_display_name (b));
-    default:
-      g_assert_not_reached ();
-      return 0;
-    }
-}
-
-static int
-gmenu_tree_entry_compare_by_id (GMenuTreeEntry *a,
-				GMenuTreeEntry *b)
-{
-  return strcmp (a->desktop_file_id, b->desktop_file_id);
+  return strcmp (GMENU_TREE_ENTRY (a)->desktop_file_id,
+                 GMENU_TREE_ENTRY (b)->desktop_file_id);
 }
 
 gpointer
@@ -1655,9 +1619,16 @@ gmenu_tree_item_compare_get_name_helper (GMenuTreeItem    *item,
 	}
       break;
 
+    case GMENU_TREE_ITEM_ALIAS:
+      {
+        GMenuTreeItem *dir;
+        dir = GMENU_TREE_ITEM (GMENU_TREE_ALIAS (item)->directory);
+        name = gmenu_tree_item_compare_get_name_helper (dir, sort_key);
+      }
+      break;
+
     case GMENU_TREE_ITEM_SEPARATOR:
     case GMENU_TREE_ITEM_HEADER:
-    case GMENU_TREE_ITEM_ALIAS:
     default:
       g_assert_not_reached ();
       break;
@@ -3639,6 +3610,8 @@ get_layout_info (GMenuTreeDirectory *directory)
   iter = directory;
   while (iter != NULL)
     {
+      /* FIXME: this is broken: we might skip real parent in the
+       * XML structure, that are hidden because of inlining. */
       if (iter->default_layout_info != NULL)
 	{
 	  return iter->default_layout_info;
@@ -3955,10 +3928,17 @@ preprocess_layout_info (GMenuTree          *tree,
       tmp = directory->entries;
       while (tmp != NULL && tmp->next != NULL)
         {
-          GMenuTreeEntry *a = tmp->data;
-          GMenuTreeEntry *b = tmp->next->data;
+          GMenuTreeItem *a = tmp->data;
+          GMenuTreeItem *b = tmp->next->data;
 
-          if (strcmp (a->desktop_file_id, b->desktop_file_id) == 0)
+          if (a->type == GMENU_TREE_ITEM_ALIAS)
+            a = GMENU_TREE_ALIAS (a)->aliased_item;
+
+          if (b->type == GMENU_TREE_ITEM_ALIAS)
+            b = GMENU_TREE_ALIAS (b)->aliased_item;
+
+          if (strcmp (GMENU_TREE_ENTRY (a)->desktop_file_id,
+                      GMENU_TREE_ENTRY (b)->desktop_file_id) == 0)
             {
               tmp = g_slist_delete_link (tmp, tmp->next);
               gmenu_tree_item_unref (b);
@@ -3985,6 +3965,25 @@ check_pending_separator (GMenuTreeDirectory *directory)
 					    gmenu_tree_separator_new (directory));
       directory->layout_pending_separator = FALSE;
     }
+}
+
+static void
+merge_alias (GMenuTree          *tree,
+	     GMenuTreeDirectory *directory,
+	     GMenuTreeAlias     *alias)
+{
+  menu_verbose ("Merging alias '%s' in directory '%s'\n",
+		alias->directory->name, directory->name);
+
+  if (alias->aliased_item->type == GMENU_TREE_ITEM_DIRECTORY)
+    {
+      process_layout_info (tree, GMENU_TREE_DIRECTORY (alias->aliased_item));
+    }
+
+  check_pending_separator (directory);
+
+  directory->contents = g_slist_append (directory->contents,
+					gmenu_tree_item_ref (alias));
 }
 
 static void
@@ -4041,6 +4040,11 @@ merge_subdir_by_name (GMenuTree          *tree,
       GMenuTreeDirectory *subdir = tmp->data;
       GSList             *next = tmp->next;
 
+      /* if it's an alias, then it cannot be affected by
+       * the Merge nodes in the layout */
+      if (GMENU_TREE_ITEM (subdir)->type == GMENU_TREE_ITEM_ALIAS)
+        continue;
+
       if (!strcmp (subdir->name, subdir_name))
 	{
 	  directory->subdirs = g_slist_delete_link (directory->subdirs, tmp);
@@ -4081,6 +4085,11 @@ merge_entry_by_id (GMenuTree          *tree,
       GMenuTreeEntry *entry = tmp->data;
       GSList         *next = tmp->next;
 
+      /* if it's an alias, then it cannot be affected by
+       * the Merge nodes in the layout */
+      if (GMENU_TREE_ITEM (entry)->type == GMENU_TREE_ITEM_ALIAS)
+        continue;
+
       if (!strcmp (entry->desktop_file_id, file_id))
 	{
 	  directory->entries = g_slist_delete_link (directory->entries, tmp);
@@ -4120,15 +4129,21 @@ merge_subdirs (GMenuTree          *tree,
   subdirs = directory->subdirs;
   directory->subdirs = NULL;
 
-  subdirs = g_slist_sort (subdirs,
-			  (GCompareFunc) gmenu_tree_directory_compare);
+  subdirs = g_slist_sort_with_data (subdirs,
+				    (GCompareDataFunc) gmenu_tree_item_compare,
+				     GINT_TO_POINTER (GMENU_TREE_SORT_NAME));
 
   tmp = subdirs;
   while (tmp != NULL)
     {
       GMenuTreeDirectory *subdir = tmp->data;
 
-      if (!find_name_in_list (subdir->name, except))
+      if (GMENU_TREE_ITEM (subdir)->type == GMENU_TREE_ITEM_ALIAS)
+        {
+	  merge_alias (tree, directory, GMENU_TREE_ALIAS (subdir));
+	  gmenu_tree_item_unref (subdir);
+        }
+      else if (!find_name_in_list (subdir->name, except))
 	{
 	  merge_subdir (tree, directory, subdir);
 	  gmenu_tree_item_unref (subdir);
@@ -4160,7 +4175,7 @@ merge_entries (GMenuTree          *tree,
   directory->entries = NULL;
 
   entries = g_slist_sort_with_data (entries,
-				    (GCompareDataFunc) gmenu_tree_entry_compare,
+				    (GCompareDataFunc) gmenu_tree_item_compare,
 				    GINT_TO_POINTER (tree->sort_key));
 
   tmp = entries;
@@ -4168,7 +4183,12 @@ merge_entries (GMenuTree          *tree,
     {
       GMenuTreeEntry *entry = tmp->data;
 
-      if (!find_name_in_list (entry->desktop_file_id, except))
+      if (GMENU_TREE_ITEM (entry)->type == GMENU_TREE_ITEM_ALIAS)
+        {
+	  merge_alias (tree, directory, GMENU_TREE_ALIAS (entry));
+	  gmenu_tree_item_unref (entry);
+        }
+      else if (!find_name_in_list (entry->desktop_file_id, except))
 	{
 	  merge_entry (tree, directory, entry);
 	  gmenu_tree_item_unref (entry);
@@ -4210,9 +4230,17 @@ merge_subdirs_and_entries (GMenuTree          *tree,
   tmp = items;
   while (tmp != NULL)
     {
-      GMenuTreeItem *item = tmp->data;
+      GMenuTreeItem     *item = tmp->data;
+      GMenuTreeItemType  type;
 
-      if (gmenu_tree_item_get_type (item) == GMENU_TREE_ITEM_DIRECTORY)
+      type = gmenu_tree_item_get_type (item);
+
+      if (type == GMENU_TREE_ITEM_ALIAS)
+        {
+          merge_alias (tree, directory, GMENU_TREE_ALIAS (item));
+          gmenu_tree_item_unref (item);
+        }
+      else if (type == GMENU_TREE_ITEM_DIRECTORY)
 	{
 	  if (!find_name_in_list (GMENU_TREE_DIRECTORY (item)->name, except_subdirs))
 	    {
@@ -4228,7 +4256,7 @@ merge_subdirs_and_entries (GMenuTree          *tree,
 	      directory->subdirs = g_slist_append (directory->subdirs, item);
 	    }
 	}
-      else
+      else if (type == GMENU_TREE_ITEM_ENTRY)
 	{
 	  if (!find_name_in_list (GMENU_TREE_ENTRY (item)->desktop_file_id, except_entries))
 	    {
@@ -4242,6 +4270,10 @@ merge_subdirs_and_entries (GMenuTree          *tree,
 	      directory->entries = g_slist_append (directory->entries, item);
 	    }
 	}
+      else
+        {
+          g_assert_not_reached ();
+        }
 
       tmp = tmp->next;
     }
