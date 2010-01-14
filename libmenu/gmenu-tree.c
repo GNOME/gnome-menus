@@ -1416,7 +1416,10 @@ gmenu_tree_alias_new (GMenuTreeDirectory *parent,
   retval->item.refcount = 1;
 
   retval->directory    = gmenu_tree_item_ref (directory);
-  retval->aliased_item = gmenu_tree_item_ref (item);
+  if (item->type != GMENU_TREE_ITEM_ALIAS)
+    retval->aliased_item = gmenu_tree_item_ref (item);
+  else
+    retval->aliased_item = gmenu_tree_item_ref (gmenu_tree_alias_get_item (GMENU_TREE_ALIAS (item)));
 
   gmenu_tree_item_set_parent (GMENU_TREE_ITEM (retval->directory), NULL);
   gmenu_tree_item_set_parent (retval->aliased_item, NULL);
@@ -3716,10 +3719,12 @@ preprocess_layout_info_subdir_helper (GMenuTree          *tree,
           item = GMENU_TREE_ITEM (list->data);
 
           menu_verbose ("Inline aliasing '%s' to '%s'\n",
-                        subdir->name,
                         item->type == GMENU_TREE_ITEM_ENTRY ?
-                        gmenu_tree_entry_get_name (GMENU_TREE_ENTRY (item)) :
-                        GMENU_TREE_DIRECTORY (directory)->name);
+                          gmenu_tree_entry_get_name (GMENU_TREE_ENTRY (item)) :
+                          (item->type == GMENU_TREE_ITEM_DIRECTORY ?
+                             gmenu_tree_directory_get_name (GMENU_TREE_DIRECTORY (item)) :
+                             gmenu_tree_directory_get_name (GMENU_TREE_ALIAS (item)->directory)),
+                        subdir->name);
 
           alias = gmenu_tree_alias_new (directory, subdir, item);
 
