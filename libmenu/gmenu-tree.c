@@ -3664,7 +3664,7 @@ get_real_subdirs_len (GMenuTreeDirectory *directory)
 
       tmp = tmp->next;
 
-      if (subdir->will_inline_header)
+      if (subdir->will_inline_header != G_MAXUINT16)
         {
           len += get_real_subdirs_len (subdir) + g_slist_length (subdir->entries) + 1;
         }
