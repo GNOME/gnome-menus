@@ -3690,7 +3690,7 @@ get_real_subdirs_len (GMenuTreeDirectory *directory)
 
       if (subdir->will_inline_header)
         {
-          len = get_real_subdirs_len (subdir) + g_slist_length (subdir->entries) + 1;
+          len += get_real_subdirs_len (subdir) + g_slist_length (subdir->entries) + 1;
         }
       else
         len += 1;
@@ -3834,7 +3834,7 @@ preprocess_layout_info (GMenuTree          *tree,
    */
   layout_info = get_layout_info (directory);
   tmp = layout_info;
-  /* see comment below about Menuname to undersand why we leave the loop if
+  /* see comment below about Menuname to understand why we leave the loop if
    * last_subdir is NULL */
   while (tmp != NULL && last_subdir != NULL)
     {
