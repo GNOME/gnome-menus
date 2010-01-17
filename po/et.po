@@ -10,10 +10,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus HEAD\n"
+"Project-Id-Version: gnome-menus 2.28\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&component=general\n"
-"POT-Creation-Date: 2009-06-21 17:35+0000\n"
+"POT-Creation-Date: 2010-01-13 07:31+0000\n"
 "PO-Revision-Date: 2009-06-25 01:27+0300\n"
 "Last-Translator: Mattias Põldaru <mahfiaz gmail com>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
@@ -149,7 +149,6 @@ msgstr "_Menüüd:"
 
 #. Translators: %s is the version number
 #, python-format
-#| msgid "Menu Editor"
 msgid "Simple Menu Editor %s"
 msgstr "Lihtne menüüredaktor %s"
 
@@ -211,9 +210,3 @@ msgstr "Menüüpuu on tühi"
 
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- testi GNOME'ipoolset teostust Töölauamenüü spetsifikatsioonist"
-
-#~ msgid "Universal access related preferences"
-#~ msgstr "Universaalse ligipääsuga seotud eelistused"
-
-#~ msgid "Personal preferences and settings"
-#~ msgstr "Isiklikud eelistused ja sätted"
