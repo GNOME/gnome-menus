@@ -3,49 +3,28 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Mahay Alam Khan <makl10n@yahoo.com>, 2005.
 # Samia Niamatullah <mailsamia2001@yahoo.com>, 2005.
-#
+# Sadia Afroz <sadia@ankur.org.bd>, 2010.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-01 05:50+0200\n"
-"PO-Revision-Date: 2005-09-30 22:55+0600\n"
-"Last-Translator: Mahay Alam Khan <makl10n@yahoo.com>\n"
-"Language-Team: Bengali <gnome-translation@bengalinux.org>\n"
+"Project-Id-Version: bn\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&component=general\n"
+"POT-Creation-Date: 2009-06-21 17:35+0000\n"
+"PO-Revision-Date: 2010-01-24 22:55+0600\n"
+"Last-Translator: Sadia Afroz <sadia@ankur.org.bd>\n"
+"Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# Easy to access by physically handicapped persons. Translation should be done regarding this fact. - mak
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "অভিগম্যতা"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "মাল্টিমিডিয়া মেনু"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "অভিগম্যতা বৈশিষ্ট্যাবলী"
-
-# আনুসাঙ্গিক - mak
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "আনুসাঙ্গিক"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "ডেস্কটপের আনুসাঙ্গিক অ্যাপ্লিকেশন"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "অ্যাপলিকেশন"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "ডেস্কটপ"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-msgid "Personal preferences and administration settings"
-msgstr "ব্যক্তিগত পছন্দতালিকা এবং অ্যাডমিনস্ট্রেশন বৈশিষ্ট্যাবলী"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "শব্দ ও ভিডিও"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -59,11 +38,11 @@ msgstr "সফটওয়্যার ডেভেলপমেন্টের য�
 msgid "Education"
 msgstr "শিক্ষা"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "খেলা"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
 msgstr "খেলা ও বিনোদন"
 
@@ -75,21 +54,43 @@ msgstr "গ্রাফিক্স"
 msgid "Graphics applications"
 msgstr "গ্রাফিক্স অ্যাপ্লিকেশন"
 
-#: ../desktop-directories/Internet.directory.in.h:1
+# Translated by sadia
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "হার্ডওয়্যার"
+
+# Translated by sadia
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "কয়েকটি হার্ডওয়্যার ডিভাইসের সেটিংস "
+
+# Translated by sadia
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "ইন্টারনেট ও নেটওয়ার্ক"
+
+# Translated by sadia
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "নেটওয়ার্ক সম্পর্কিত সেটিংস "
+
+# Translated by sadia
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "দেখুন ও উপভোগ করুন"
+
+# Translated by sadia
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "ডেক্সটপের অবয়ব ও আচরণ নিয়ন্ত্রণের সেটিংস"
+
+#: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "ইন্টারনেট"
 
-#: ../desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
 msgstr "ইন্টারনেট ব্যবহারের প্রোগ্রাম, যেমন ওয়েব বা ইমেইল"
-
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "মাল্টিমিডিয়া মেনু"
-
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "শব্দ ও ভিডিও"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -99,38 +100,43 @@ msgstr "অফিস"
 msgid "Office Applications"
 msgstr "অফিস অ্যাপলিকেশন"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "অ্যাপ্লিকেশন যেগুলো অন্য কোন শ্রেণীভূক্ত নয়"
+# Translated by sadia
+#: ../desktop-directories/Personal.directory.in.h:1
+msgid "Personal"
+msgstr "ব্যক্তিগত"
 
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "অন্যান্য"
+# Translated by sadia
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal settings"
+msgstr "ব্যক্তিগত সেটিংস"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "অ্যাডমিনস্ট্রেশন"
+
+# Translated by sadia
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr "সিস্টেমব্যাপী সেটিংস পরিবর্তন করা হবে (সব ব্যবহারকারীর জন্য প্রযোজ্য)"
+
+#: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
 msgstr "ব্যক্তিগত পছন্দতালিকা"
 
-#: ../desktop-directories/Preferences.directory.in.h:2
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
 msgstr "পছন্দতালিকা"
 
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "অভিগম্যতা সম্পর্কীয় পছন্দতালিকা"
+# Translated by sadia
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "সিস্টেম  "
 
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "ব্যক্তিগত পছন্দ এবং বৈশিষ্ট্যাবলী"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "অ্যাডমিনস্ট্রেশন"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "সিস্টেমব্যাপী বৈশিষ্ট্যাবলী পরিবর্তন করো (সব ব্যবহারকারীর জন্য প্রযোজ্য)"
+# Translated by sadia
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "সিস্টেম সেটিংস "
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -140,37 +146,79 @@ msgstr "সিস্টেম টুল"
 msgid "System configuration and monitoring"
 msgstr "সিস্টেম কনফিগারেশন এবং মনিটরিং"
 
+# Translated by sadia
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "সর্বজনীন প্রবেশাধিকার"
+
+# Translated by sadia
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "সর্বজনীন প্রবেশাধিকার সেটিংস"
+
+# আনুসাঙ্গিক - mak
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "আনুসাঙ্গিক"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "ডেস্কটপের আনুসাঙ্গিক অ্যাপ্লিকেশন"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "অ্যাপলিকেশন"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "ব্যক্তিগত পছন্দতালিকা এবং অ্যাডমিনস্ট্রেশন বৈশিষ্ট্যাবলী"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "অ্যাপ্লিকেশন যেগুলো অন্য কোন শ্রেণীভূক্ত নয়"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "অন্যান্য"
+
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
 msgstr "মেনু সম্পাদক"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "মেনু সম্পাদন"
 
 # the (_)underscore can be used with the English "A", but it's not possible to use with bangla অ্যা cause user canot press the Alt+অ্যা simultaneously. - mak
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "অ্যাপ্লিকেশন (_অ):"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "ডিফল্ট (_ড)"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "মেনু (_ম):"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+# Translated by sadia
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "সাধারণ মেনু সম্পাদক %s"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
 msgstr "নাম"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
 msgstr "প্রদর্শন করো"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -178,39 +226,47 @@ msgstr ""
 "home ডিরেক্টরি পাওয়া যায়নি: /etc/passwd তে সেট করা নেই এবং পরিবেশে $HOME এর "
 "কোন মান নেই"
 
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "Menu file"
 msgstr "মেনু ফাইল"
 
 # sam: variable?
-#: ../util/test-menu-spec.c:32
+#: ../util/test-menu-spec.c:33
 msgid "MENU_FILE"
 msgstr "MENU_FILE"
 
-#: ../util/test-menu-spec.c:33
+#: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
 msgstr "মেনু পরিবর্তনের মনিটর"
 
 # <Exclude> = variable?
-#: ../util/test-menu-spec.c:34
+#: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
 msgstr "বাদ দেয়া <Exclude> অংশগুলো অন্তর্ভুক্ত করো"
 
-#: ../util/test-menu-spec.c:89
+# <Exclude> = variable?
+#
+# Translated by sadia
+#: ../util/test-menu-spec.c:36
+msgid "Include NoDisplay=true entries"
+msgstr "Include NoDisplay=true entries"
+
+#: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
 msgstr "অবৈধ ডেস্কটপ ফাইল আইডি"
 
 # ত্রুটিযুক্ত ফাইলের নাম
-#: ../util/test-menu-spec.c:90
+#: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
 msgstr "[Invalid Filename]"
 
 #  <বাদ দেওয়া হয়েছে>
-#: ../util/test-menu-spec.c:91
+#: ../util/test-menu-spec.c:93
 msgid " <excluded>"
 msgstr " <excluded>"
 
-#: ../util/test-menu-spec.c:162
+#: ../util/test-menu-spec.c:164
+#, c-format
 msgid ""
 "\n"
 "\n"
@@ -226,10 +282,20 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
+#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
 msgstr "মেনু ট্রী খালি"
 
-#: ../util/test-menu-spec.c:186
+#: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "‌- GNOME দ্বারা ডেস্কটপ মেনু বৈশিষ্ট্যাবলীর প্রয়োগ পরীক্ষা করো"
+
+# Easy to access by physically handicapped persons. Translation should be done regarding this fact. - mak
+#~ msgid "Accessibility"
+#~ msgstr "অভিগম্যতা"
+
+#~ msgid "Desktop"
+#~ msgstr "ডেস্কটপ"
+
+#~ msgid "Accessibility related preferences"
+#~ msgstr "অভিগম্যতা সম্পর্কীয় পছন্দতালিকা"
