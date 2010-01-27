@@ -1,3 +1,27 @@
+==============
+Version 2.29.6
+==============
+
+  libmenu
+
+	* Fix miscalculation for inlining when inline_header = true (Vincent)
+	* Add real support for inline aliases during layout processing
+	  (Vincent)
+	* Support inline alias of an inline alias (Vincent)
+	* Do not count non-inlining submenus as inlining with header (Vincent)
+
+  Translators
+
+	* Sadia Afroz (bn)
+	* Gil Forcada (ca)
+	* Reşat SABIQ (crh)
+	* Thomas Thurman (en@shaw)
+	* Sveinn í Felli (is)
+	* Nils-Christoph Fiedler (nds)
+	* Dmitry Yacenko (ru)
+	* Krishna Babu K (te)
+	* 甘露(Gan Lu) (zh_CN)
+
 ================
 Version 2.28.0.1
 ================
