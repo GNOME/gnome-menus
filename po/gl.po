@@ -8,14 +8,15 @@
 # Suso Baleato <suso.baleato@xunta.es>,2009.
 # Fran Dieguez <fran.dieguez@glug.es>, 2009.
 # Anton Meixome <meixome@mancomun.org>, 2009.
+# Fran Diéguez <frandieguez@ubuntu.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-12 13:25+0200\n"
-"PO-Revision-Date: 2009-08-11 10:49+0200\n"
-"Last-Translator: Anton Meixome <meixome@mancomun.org>\n"
-"Language-Team: Galician <gnome@mancomun.org>\n"
+"POT-Creation-Date: 2010-02-15 18:44+0100\n"
+"PO-Revision-Date: 2010-02-12 02:03+0100\n"
+"Last-Translator: Fran Diéguez <frandieguez@ubuntu.com>\n"
+"Language-Team: Gallician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,7 +54,7 @@ msgstr "Xogos e pasatempos"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "Gráficas"
+msgstr "Gráficos"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
@@ -214,8 +215,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Non se puido encontrar o directorio persoal: non está estabelecido en /etc/"
-"passwd e non hai ningún valor para $HOME no contorno"
+"Non foi posíbel encontrar o directorio persoal: non está estabelecido en /"
+"etc/passwd e non hai ningún valor para $HOME no contorno"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -273,7 +274,7 @@ msgstr "A árbore de menú está baleira"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr ""
-"- probar a implementación en Gnome da Especificación de menú de escritorio"
+"- probar a implementación da Especificación de menú de escritorio de GNOME"
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "Preferencias relacionadas co acceso universal"
