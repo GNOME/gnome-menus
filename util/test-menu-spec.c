@@ -21,8 +21,13 @@
 
 #include "gmenu-tree.h"
 
-#include <glib/gi18n.h>
 #include <string.h>
+
+/* This is only a test program, so we don't need translations. Still keep the
+ * infrastructure in place in case we suddenly decide we want to localize this
+ * program. */
+#define _(x) x
+#define N_(x) x
 
 static char     *menu_file = NULL;
 static gboolean  monitor = FALSE;
