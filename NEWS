@@ -1,3 +1,17 @@
+===============
+Version 2.29.91
+===============
+
+  Misc
+
+	* Make some non-visible strings non-translatable (Vincent)
+	* Add translator comment (Vincent)
+
+  Translators
+
+	* Fran Diéguez (gl)
+	* Torstein Adolf Winterseth (nn)
+
 ==============
 Version 2.29.6
 ==============
