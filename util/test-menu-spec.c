@@ -25,7 +25,8 @@
 
 /* This is only a test program, so we don't need translations. Still keep the
  * infrastructure in place in case we suddenly decide we want to localize this
- * program. */
+ * program. Don't forget to reenable the call to bindtextdomain() if going back
+ * to real localization. */
 #define _(x) x
 #define N_(x) x
 
@@ -187,9 +188,12 @@ main (int argc, char **argv)
   GMenuTreeDirectory *root;
   GMenuTreeFlags      flags;
 
+#if 0
+  /* See comment when defining _() at the top of this file. */
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
+#endif
 
   options_context = g_option_context_new (_("- test GNOME's implementation of the Desktop Menu Specification"));
   g_option_context_add_main_entries (options_context, options, GETTEXT_PACKAGE);
