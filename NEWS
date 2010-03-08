@@ -1,4 +1,21 @@
 ===============
+Version 2.29.92
+===============
+
+  libmenu
+
+	* Add gobject-introspection support (Vincent)
+
+  Misc
+
+	* Build fix (Vincent)
+
+  Translators
+
+	* Nikos Charonitakis (el)
+	* Pavol Klačanský (sk)
+
+===============
 Version 2.29.91
 ===============
 
