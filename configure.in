@@ -1,3 +1,5 @@
+AC_PREREQ(2.62)
+
 AC_INIT([gnome-menus], [2.29.92],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus])
 AC_CONFIG_SRCDIR(libmenu/gmenu-tree.h)
@@ -122,6 +124,8 @@ if test "x$GCC" = "xyes" ; then
   fi
 fi
 AC_SUBST(NO_STRICT_ALIASING_CFLAGS)
+
+GOBJECT_INTROSPECTION_CHECK([0.6.7])
 
 AC_OUTPUT([
 Makefile

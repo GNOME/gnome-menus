@@ -21,6 +21,8 @@ EXTRA_DIST = 			\
 	HACKING			\
 	$(NULL)
 
+DISTCHECK_CONFIGURE_FLAGS = --enable-introspection
+
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \
 	$(srcdir)/aclocal.m4 \
