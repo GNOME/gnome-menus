@@ -3838,7 +3838,7 @@ preprocess_layout_info (GMenuTree          *tree,
       subdir_l = directory->subdirs;
       while (subdir_l != NULL)
         {
-          GMenuTreeDirectory *subdir = subdir_l->data;
+          subdir = subdir_l->data;
 
           if (!strcmp (subdir->name, name))
             break;
@@ -3849,6 +3849,8 @@ preprocess_layout_info (GMenuTree          *tree,
           /* we do not want to use Menuname on a menu that appeared via
            * inlining: without inlining, the Menuname wouldn't have matched
            * anything, and we want to keep the same behavior */
+          /* FIXME: might not be true if the layout node comes from a
+           * DefaultLayout */
           if (subdir_l == last_subdir)
             {
               subdir_l = NULL;
