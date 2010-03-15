@@ -3601,13 +3601,25 @@ static void preprocess_layout_info (GMenuTree          *tree,
                                     GMenuTreeDirectory *directory);
 
 static GSList *
-get_layout_info (GMenuTreeDirectory *directory)
+get_layout_info (GMenuTreeDirectory *directory,
+                 gboolean           *is_default_layout)
 {
   GMenuTreeDirectory *iter;
 
   if (directory->layout_info != NULL)
     {
+      if (is_default_layout)
+        {
+          *is_default_layout = FALSE;
+        }
       return directory->layout_info;
+    }
+
+  /* Even if there's no layout information at all, the result will be an
+   * implicit default layout */
+  if (is_default_layout)
+    {
+      *is_default_layout = TRUE;
     }
 
   iter = directory;
@@ -3790,6 +3802,7 @@ preprocess_layout_info (GMenuTree          *tree,
 {
   GSList   *tmp;
   GSList   *layout_info;
+  gboolean  using_default_layout;
   GSList   *last_subdir;
   gboolean  strip_duplicates;
   gboolean  contents_added;
@@ -3810,7 +3823,7 @@ preprocess_layout_info (GMenuTree          *tree,
   /*
    * First process subdirectories with explicit layout
    */
-  layout_info = get_layout_info (directory);
+  layout_info = get_layout_info (directory, &using_default_layout);
   tmp = layout_info;
   /* see comment below about Menuname to understand why we leave the loop if
    * last_subdir is NULL */
@@ -3846,12 +3859,12 @@ preprocess_layout_info (GMenuTree          *tree,
           subdir = NULL;
           subdir_l = subdir_l->next;
 
-          /* we do not want to use Menuname on a menu that appeared via
+          /* We do not want to use Menuname on a menu that appeared via
            * inlining: without inlining, the Menuname wouldn't have matched
-           * anything, and we want to keep the same behavior */
-          /* FIXME: might not be true if the layout node comes from a
-           * DefaultLayout */
-          if (subdir_l == last_subdir)
+           * anything, and we want to keep the same behavior.
+           * Unless the layout is a default layout, in which case the Menuname
+           * does match the subdirectory. */
+          if (!using_default_layout && subdir_l == last_subdir)
             {
               subdir_l = NULL;
               break;
@@ -4355,7 +4368,9 @@ process_layout_info (GMenuTree          *tree,
   directory->contents = NULL;
   directory->layout_pending_separator = FALSE;
 
-  if ((layout_info = get_layout_info (directory)) == NULL)
+  layout_info = get_layout_info (directory, NULL);
+
+  if (layout_info == NULL)
     {
       merge_subdirs (tree, directory, NULL);
       merge_entries (tree, directory, NULL);
