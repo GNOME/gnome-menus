@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-06 17:36+0200\n"
-"PO-Revision-Date: 2009-10-06 17:36+0200\n"
+"POT-Creation-Date: 2010-03-17 08:22+0100\n"
+"PO-Revision-Date: 2010-03-17 08:22+0100\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -87,17 +87,18 @@ msgstr "Programes per a accedir a Internet, com la web i el correu"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "Oficina"
+msgstr "Ofimàtica"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Aplicacions ofimàtiques"
 
-#: ../desktop-directories/Personal.directory.in.h:1
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal"
 msgstr "Personal"
 
-#: ../desktop-directories/Personal.directory.in.h:2
+#: ../desktop-directories/Personal.directory.in.h:3
 msgid "Personal settings"
 msgstr "Paràmetres personals"
 
@@ -209,62 +210,51 @@ msgstr ""
 "No s'ha trobat el directori d'inici: no està establert al fitxer /etc/passwd "
 "i no hi ha cap valor per a $HOME a l'entorn"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "Fitxer de menú"
+#~ msgid "Menu file"
+#~ msgstr "Fitxer de menú"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "FITXER_MENU"
+#~ msgid "MENU_FILE"
+#~ msgstr "FITXER_MENU"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "Fes un seguiment dels canvis del menú"
+#~ msgid "Monitor for menu changes"
+#~ msgstr "Fes un seguiment dels canvis del menú"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "Inclou entrades excloses amb <Exclude>"
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "Inclou entrades excloses amb <Exclude>"
 
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "Inclou entrades amb NoDisplay=true"
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "Inclou entrades amb NoDisplay=true"
 
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "L'ID del fitxer desktop és invàlid"
+#~ msgid "Invalid desktop file ID"
+#~ msgstr "L'ID del fitxer desktop és invàlid"
 
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[Nom de fitxer invàlid]"
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[Nom de fitxer invàlid]"
 
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr "<excluded>"
+#~ msgid " <excluded>"
+#~ msgstr " <exclòs>"
 
-#: ../util/test-menu-spec.c:164
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"=== El menú ha canviat, s'està tornant a carregar ===\n"
-"\n"
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "=== El menú ha canviat, s'està tornant a carregar ===\n"
+#~ "\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "L'arbre del menú és buit"
+#~ msgid "Menu tree is empty"
+#~ msgstr "L'arbre del menú és buit"
 
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
-"- proveu la implementació del GNOME de l'especificació del menú d'escriptori"
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr ""
+#~ "- proveu la implementació del GNOME de l'especificació del menú "
+#~ "d'escriptori"
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "Preferències relacionades amb l'accés universal"
