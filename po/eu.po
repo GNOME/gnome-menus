@@ -1,15 +1,15 @@
-# translation of gnome-menus.HEAD.po to Basque
+# translation of eu.po to Basque
 # This file is distributed under the same license as the gnome-menus package.
 #
 # Mikel Olasagasti <hey_neken@mundurat.net>, 2004, 2005.
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2005, 2007, 2008.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2005, 2007, 2008, 2010.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus.HEAD\n"
+"Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 11:23+0100\n"
-"PO-Revision-Date: 2008-01-07 18:31+0100\n"
+"PO-Revision-Date: 2010-03-23 15:11+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,7 @@ msgstr "Interneteko programak (web arakatzaileak eta posta bezeroak adib.)"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Itxura eta Izaera"
+msgstr "Itxura eta izaera"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
@@ -269,3 +269,4 @@ msgstr "Menuaren zuhaitza hutsik dago"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- probatu GNOMEren mahaigaineko menuak zehazteko inplementazioa"
+
