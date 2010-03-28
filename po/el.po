@@ -8,10 +8,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2010-02-22 11:08+0000\n"
-"PO-Revision-Date: 2010-02-25 00:52+0200\n"
-"Last-Translator: nikosCharonitakis <nikosx@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-28 09:57+0300\n"
+"PO-Revision-Date: 2010-03-28 10:00+0200\n"
+"Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +60,7 @@ msgstr "Υλικό"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "Ρυθμίσεις για διάφορες συσκευές υλικού"
+msgstr "Ρυθμίσεις για διάφορες συσκευές"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
@@ -72,7 +72,7 @@ msgstr "Ρυθμίσεις για το δίκτυο"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Μορφή εμφάνισης"
+msgstr "Ρυθμίσεις εμφάνισης"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
@@ -94,11 +94,12 @@ msgstr "Γραφείο"
 msgid "Office Applications"
 msgstr "Εφαρμογές γραφείου"
 
-#: ../desktop-directories/Personal.directory.in.h:1
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal"
 msgstr "Προσωπικά"
 
-#: ../desktop-directories/Personal.directory.in.h:2
+#: ../desktop-directories/Personal.directory.in.h:3
 msgid "Personal settings"
 msgstr "Προσωπικές ρυθμίσεις"
 
@@ -190,7 +191,6 @@ msgstr "_Μενού:"
 #. Translators: %s is the version number
 #: ../simple-editor/GMenuSimpleEditor/main.py:49
 #, python-format
-#| msgid "Menu Editor"
 msgid "Simple Menu Editor %s"
 msgstr "Απλός Επεξεργαστής μενού %s"
 
@@ -209,34 +209,24 @@ msgstr "Αδυναμία εύρεσης αρχικού καταλόγου: δε�
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "Προτιμήσεις σχετικά με γενική πρόσβαση"
-
 #~ msgid "Personal preferences and settings"
 #~ msgstr "Προσωπικές προτιμήσεις και ρυθμίσεις"
-
 #~ msgid "Menu file"
 #~ msgstr "Αρχείο μενού"
-
 #~ msgid "MENU_FILE"
 #~ msgstr "MENU_FILE"
-
 #~ msgid "Monitor for menu changes"
 #~ msgstr "Παρακολούθηση για αλλαγές στο μενού"
-
 #~ msgid "Include <Exclude>d entries"
 #~ msgstr "Να συμπεριλαμβάνονται <αποκλεισμένες> καταχωρίσεις"
-
 #~ msgid "Include NoDisplay=true entries"
 #~ msgstr "Να συμπεριλαμβάνονται <αποκλεισμένες> καταχωρίσεις"
-
 #~ msgid "Invalid desktop file ID"
 #~ msgstr "Μη έγκυρο αναγνωριστικό αρχείου επιφάνειας εργασίας"
-
 #~ msgid "[Invalid Filename]"
 #~ msgstr "[Μη έγκυρο όνομα αρχείου]"
-
 #~ msgid " <excluded>"
 #~ msgstr " <αποκλεισμένα>"
-
 #~ msgid ""
 #~ "\n"
 #~ "\n"
@@ -251,19 +241,15 @@ msgstr "Αδυναμία εύρεσης αρχικού καταλόγου: δε�
 #~ "==== Το μενού άλλαξε, επαναφόρτωση ====\n"
 #~ "\n"
 #~ "\n"
-
 #~ msgid "Menu tree is empty"
 #~ msgstr "Το δέντρο μενού είναι κενό"
-
 #~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
 #~ msgstr ""
 #~ "- δοκιμή της εφαρμογής από το GNOME των οδηγιών μενού επιφάνειας εργασίας"
-
 #~ msgid "Accessibility"
 #~ msgstr "Προσιτότητα"
-
 #~ msgid "Accessibility Settings"
 #~ msgstr "Ρυθμίσεις Προσιτότητας"
-
 #~ msgid "Desktop"
 #~ msgstr "Επιφάνεια Εργασίας"
+
