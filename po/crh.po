@@ -1,15 +1,15 @@
 # translation of gnome-menus to Qırımtatarca
 # This file is distributed under the same license as the gnome-menus package.
 #
-# Reşat SABIQ <tilde.birlik@gmail.com>, 2009.
+# Reşat SABIQ <tilde.birlik@gmail.com>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus TRUNK\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-21 00:24-0500\n"
-"PO-Revision-Date: 2009-10-21 00:26-0500\n"
+"PO-Revision-Date: 2010-03-30 00:46-0500\n"
 "Last-Translator: Reşat SABIQ <tilde.birlik@gmail.com>\n"
-"Language-Team: Qırımtatarca (Qırım Türkçesi) <tilde-birlik-tercime@lists."
+"Language-Team: QIRIMTATARCA (Qırım Türkçesi) <tilde-birlik-tercime@lists."
 "sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "Çoqlu-müit menüsi"
+msgstr "Çoqlu-vasat menüsi"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
@@ -99,12 +99,12 @@ msgstr "Şahsiy"
 
 #: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal settings"
-msgstr "Şahsiy tesbitler"
+msgstr "Şahsiy ayarlar"
 
 # tüylü
 #: ../desktop-directories/Settings-System.directory.in.h:1
 msgid "Administration"
-msgstr "İdare"
+msgstr "Memuriyet"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
