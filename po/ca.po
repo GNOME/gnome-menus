@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-menus 2.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-17 08:22+0100\n"
-"PO-Revision-Date: 2010-03-17 08:22+0100\n"
+"PO-Revision-Date: 2010-04-02 17:41+0200\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr "Administració"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Canvia els paràmetres del sistema (afecta a tots els usuaris)"
+msgstr "Canvia els paràmetres del sistema (afecta tots els usuaris)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
@@ -133,7 +133,7 @@ msgstr "Eines del sistema"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Configuració i monitorització del sistema"
+msgstr "Configuració i supervisió del sistema"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
