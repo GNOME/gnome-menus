@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009.
+# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master.kn\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2009-06-21 17:35+0000\n"
-"PO-Revision-Date: 2009-09-16 00:36+0530\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-04-21 11:52+0530\n"
+"PO-Revision-Date: 2010-03-24 17:49+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
-"Language-Team: Kannada <en@li.org>\n"
+"Language-Team: kn-IN <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
@@ -31,7 +31,7 @@ msgstr "ಪ್ರೊಗ್ರಾಮಿಂಗ್"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "ತಂತ್ರಾಂಶ ಅಭಿವೃದ್ದಿಗೆ ಉಪಕರಣಗಳು"
+msgstr "ತಂತ್ರಾಂಶ ವಿಕಸನೆಗಾಗಿನ ಉಪಕರಣಗಳು"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -59,15 +59,15 @@ msgstr "ಯಂತ್ರಾಂಶ"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "ಹಲವಾರು ಯಂತ್ರಾಂಶ ಸಾಧನಗಳಿಗಾಗಿನ ಸಂಯೋಜನೆಗಳು"
+msgstr "ಹಲವಾರು ಯಂತ್ರಾಂಶ ಸಾಧನಗಳಿಗಾಗಿನ ಸಿದ್ಧತೆಗಳು"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
-msgstr "ಅಂತರ್ಜಾಲ ಹಾಗು ಜಾಲಬಂಧ"
+msgstr "ಅಂತರಜಾಲ ಹಾಗು ಜಾಲಬಂಧ"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
-msgstr "ಜಾಲಬಂಧ-ಸಂಬಂಧಿತ ಸಂಯೋಜನೆಗಳು"
+msgstr "ಜಾಲಬಂಧ-ಸಂಬಂಧಿತ ಸಿದ್ಧತೆಗಳು"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -75,15 +75,15 @@ msgstr "ನೋಟ ಹಾಗು ಮಾಟ"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "ಗಣಕತೆರೆಯ ಸ್ವರೂಪ ಹಾಗು ವರ್ತನೆಯನ್ನು ನಿಯಂತ್ರಿಸುವ ಸಂಯೋಜನೆಗಳು"
+msgstr "ಗಣಕತೆರೆಯ ಸ್ವರೂಪ ಹಾಗು ವರ್ತನೆಯನ್ನು ನಿಯಂತ್ರಿಸುವ ಸಿದ್ಧತೆಗಳು"
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
-msgstr "ಅಂತರ್ಜಾಲ"
+msgstr "ಅಂತರಜಾಲ"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "ಜಾಲ ಹಾಗು ಇಮೈಲಿನಂತಹ ಅಂತರ್ಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
+msgstr "ಜಾಲ ಹಾಗು ಇಮೈಲಿನಂತಹ ಅಂತರಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -99,7 +99,7 @@ msgstr "ವೈಯಕ್ತಿಕ"
 
 #: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal settings"
-msgstr "ವೈಯಕ್ತಿಕ ಸಂಯೋಜನೆಗಳು"
+msgstr "ವೈಯಕ್ತಿಕ ಸಿದ್ಧತೆಗಳು"
 
 #: ../desktop-directories/Settings-System.directory.in.h:1
 msgid "Administration"
@@ -107,7 +107,7 @@ msgstr "ನಿರ್ವಹಣೆ"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "ಗಣಕಾದ್ಯಂತದ ಸಂಯೋಜನೆಗಳನ್ನು ಬದಲಾಯಿಸು (ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗೂ ಪರಿಣಾಮಬೀರುತ್ತದೆ)"
+msgstr "ವ್ಯವಸ್ಥೆಯಾದ್ಯಂತದ ಸಿದ್ಧತೆಗಳನ್ನು ಬದಲಾಯಿಸಿ (ಎಲ್ಲಾ ಬಳಕೆದಾರರ ಮೇಲೂ ಪರಿಣಾಮಬೀರುತ್ತದೆ)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
@@ -120,27 +120,27 @@ msgstr "ಆದ್ಯತೆಗಳು"
 #: ../desktop-directories/System.directory.in.h:1
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
-msgstr "ಗಣಕ"
+msgstr "ವ್ಯವಸ್ಥೆ"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
-msgstr "ಗಣಕ ಸಂಯೋಜನೆಗಳು"
+msgstr "ವ್ಯವಸ್ಥೆಯ ಸಿದ್ಧತೆಗಳು"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "ಗಣಕ ಉಪಕರಣಗಳು"
+msgstr "ವ್ಯವಸ್ಥೆಯ ಉಪಕರಣಗಳು"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "ಗಣಕ ಸಂರಚನೆ ಹಾಗು ಪರಿವೀಕ್ಷಣೆ"
+msgstr "ವ್ಯವಸ್ಥೆಯ ಸಂರಚನೆ ಹಾಗು ಪರಿವೀಕ್ಷಣೆ"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ(Universal Access)"
+msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ ಸಂಯೋಜನೆಗಳು"
+msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ ಸಿದ್ಧತೆಗಳು"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -156,7 +156,7 @@ msgstr "ಅನ್ವಯಗಳು"
 
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
 msgid "Personal preferences and administration settings"
-msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು ಹಾಗು ನಿರ್ವಹಣಾ ಸಂಯೋಜನೆಗಳು"
+msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು ಹಾಗು ನಿರ್ವಹಣಾ ಸಿದ್ಧತೆಗಳು"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
@@ -180,7 +180,7 @@ msgstr "ಅನ್ವಯಗಳು(_A):"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
-msgstr "ಡೀಫಾಲ್ಟ್‍ಗಳು(_D)"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ(_D)"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
@@ -189,7 +189,6 @@ msgstr "ಮೆನುಗಳು(_M):"
 #. Translators: %s is the version number
 #: ../simple-editor/GMenuSimpleEditor/main.py:49
 #, python-format
-#| msgid "Menu Editor"
 msgid "Simple Menu Editor %s"
 msgstr "ಸರಳ ಮೆನು ಸಂಪಾದಕ %s"
 
@@ -220,7 +219,7 @@ msgstr "MENU_FILE"
 
 #: ../util/test-menu-spec.c:34
 msgid "Monitor for menu changes"
-msgstr "ಮೆನು ಬದಲಾವಣೆಗಳಿಗೆ ಪರಿವೀಕ್ಷಕ"
+msgstr "ಮೆನು ಬದಲಾವಣೆಗಳ ಪರಿವೀಕ್ಷಕ"
 
 #: ../util/test-menu-spec.c:35
 msgid "Include <Exclude>d entries"
@@ -266,4 +265,3 @@ msgstr "ಮೆನು ವೃಕ್ಷವು(tree) ಖಾಲಿ ಇದೆ"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- ಗಣಕತೆರೆ ಮೆನು ಸೂಚನೆಗಳ GNOME ನ ಅನ್ವಯಿಸುವಿಕೆಯನ್ನು ಪರೀಕ್ಷಿಸುತ್ತದೆ"
-
