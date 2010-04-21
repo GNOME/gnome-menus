@@ -1,15 +1,16 @@
-# Valencian (southern Catalan) translation of GNOME Menus.
+# Catalan translation of GNOME Menus.
 # Copyright © 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Jordi Mallach <jordi@sindominio.net>, 2004, 2005, 2006, 2007.
+# Gil Forcada <gilforcada@guifi.net>, 2008, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-21 15:04+0200\n"
-"PO-Revision-Date: 2007-02-08 07:23+0100\n"
-"Last-Translator: Jordi Mallach <jordi@sindominio.net>\n"
+"POT-Creation-Date: 2010-04-21 23:31+0200\n"
+"PO-Revision-Date: 2010-04-02 17:41+0200\n"
+"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -86,17 +87,18 @@ msgstr "Programes per a accedir a Internet, com la web i el correu"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "Oficina"
+msgstr "Ofimàtica"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Aplicacions ofimàtiques"
 
-#: ../desktop-directories/Personal.directory.in.h:1
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal"
 msgstr "Personal"
 
-#: ../desktop-directories/Personal.directory.in.h:2
+#: ../desktop-directories/Personal.directory.in.h:3
 msgid "Personal settings"
 msgstr "Paràmetres personals"
 
@@ -106,7 +108,7 @@ msgstr "Administració"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Canvia els paràmetres del sistema (afecta a tots els usuaris)"
+msgstr "Canvia els paràmetres del sistema (afecta tots els usuaris)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
@@ -131,7 +133,7 @@ msgstr "Eines del sistema"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Configuració i monitorització del sistema"
+msgstr "Configuració i supervisió del sistema"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
@@ -169,21 +171,27 @@ msgstr "Altres"
 msgid "Menu Editor"
 msgstr "Editor del menú"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "Edita els menús"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "_Aplicacions:"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Predeterminats"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "_Menús:"
+
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "Editor del menú (versió %s)"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
@@ -199,65 +207,54 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"No s'ha trobat el directori d'inici: no està establert al fitxer /etc/passwd "
+"No s'ha trobat el directori d'inici: no està establit al fitxer /etc/passwd "
 "i no hi ha cap valor per a $HOME a l'entorn"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "Fitxer de menú"
+#~ msgid "Menu file"
+#~ msgstr "Fitxer de menú"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "FITXER_MENU"
+#~ msgid "MENU_FILE"
+#~ msgstr "FITXER_MENU"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "Monitornitza els canvis del menú"
+#~ msgid "Monitor for menu changes"
+#~ msgstr "Fes un seguiment dels canvis del menú"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "Inclou entrades excloses amb <Exclude>"
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "Inclou entrades excloses amb <Exclude>"
 
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "Inclou entrades amb NoDisplay=true"
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "Inclou entrades amb NoDisplay=true"
 
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "L'ID del fitxer desktop és invàlid"
+#~ msgid "Invalid desktop file ID"
+#~ msgstr "L'ID del fitxer desktop és invàlid"
 
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[Nom de fitxer invàlid]"
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[Nom de fitxer invàlid]"
 
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr "<excluded>"
+#~ msgid " <excluded>"
+#~ msgstr " <exclòs>"
 
-#: ../util/test-menu-spec.c:164
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"=== El menú ha canviat, s'està tornant a carregar ===\n"
-"\n"
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "=== El menú ha canviat, s'està tornant a carregar ===\n"
+#~ "\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "L'arbre del menú és buit"
+#~ msgid "Menu tree is empty"
+#~ msgstr "L'arbre del menú és buit"
 
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
-"- proveu la implementació del GNOME de l'especificació del menú d'escriptori"
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr ""
+#~ "- proveu la implementació del GNOME de l'especificació del menú "
+#~ "d'escriptori"
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "Preferències relacionades amb l'accés universal"
