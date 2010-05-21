@@ -1,15 +1,16 @@
+# Slovenian translation for gnome-menues.
 # Copyright (C) 2005-2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the program package.
 #
 # Matic Žgur <mr.zgur@gmail.com>, 2006.
-# Matej Urbančič <mateju@svn.gnome.org>, 2005 - 2009.
+# Matej Urbančič <mateju@svn.gnome.org>, 2005 - 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
 "POT-Creation-Date: 2009-07-29 23:45+0000\n"
-"PO-Revision-Date: 2009-08-04 09:59+0100\n"
+"PO-Revision-Date: 2010-05-21 22:19+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +67,7 @@ msgstr "Nastavitve več strojnih naprav"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Internet in omrežje"
+msgstr "Splet in omrežje"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
@@ -82,11 +83,11 @@ msgstr "Nastavitve videza in obnašanja namizja"
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
-msgstr "Internet"
+msgstr "Splet"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programi za dostop do interneta kot sta brskalnik in e-pošta"
+msgstr "Programi za dostop do spleta, kot sta brskalnik in elektronska pošta"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -106,7 +107,7 @@ msgstr "Osebne nastavitve"
 
 #: ../desktop-directories/Settings-System.directory.in.h:1
 msgid "Administration"
-msgstr "Administracija"
+msgstr "Skrbništvo"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
@@ -114,11 +115,11 @@ msgstr "Spremeni sistemske nastavitve (za vse uporabnike)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Osebne nastavitve"
+msgstr "Osebne možnosti"
 
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Nastavitve"
+msgstr "Možnosti"
 
 #: ../desktop-directories/System.directory.in.h:1
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
@@ -159,7 +160,7 @@ msgstr "Programi"
 
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
 msgid "Personal preferences and administration settings"
-msgstr "Osebne izbire in skrbniške nastavitve"
+msgstr "Osebne možnosti in skrbniške nastavitve"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
@@ -187,7 +188,7 @@ msgstr "_Privzeto"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
-msgstr "_Menuji:"
+msgstr "_Meniji:"
 
 #. Translators: %s is the version number
 #: ../simple-editor/GMenuSimpleEditor/main.py:49
@@ -202,11 +203,11 @@ msgstr "Ime"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
-msgstr "Prikaži"
+msgstr "Pokaži"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Ni mogoče najti domače mape: ni določena v /etc/passwd in ni vrednosti za $HOME v okolju"
+msgstr "Ni mogoče najti domače mape: ni določila v /etc/passwd in ni vrednosti spremenljivke $HOME"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -230,7 +231,7 @@ msgstr "Vključi vnose NoDisplay=true"
 
 #: ../util/test-menu-spec.c:91
 msgid "Invalid desktop file ID"
-msgstr "Napačen ID datoteke namizja"
+msgstr "Neveljaven ID datoteke namizja"
 
 #: ../util/test-menu-spec.c:92
 msgid "[Invalid Filename]"
@@ -253,21 +254,21 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"==== Meni je spremenjen, ponovno nalaganje ====\n"
+"==== Meni je spremenjen; ponovno bo naložen ====\n"
 "\n"
 "\n"
 
 #: ../util/test-menu-spec.c:169
 #: ../util/test-menu-spec.c:211
 msgid "Menu tree is empty"
-msgstr "Drevesna struktura menija je prazna"
+msgstr "Drevesna zgradba menija je prazna"
 
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- testirajte GNOME-ova orodja za določanje namiznega menija"
+msgstr "- preizkus GNOME orodja za določanje namiznega menija"
 
 #~ msgid "Universal access related preferences"
-#~ msgstr "Splošne lastnosti dostopa"
+#~ msgstr "Splošne možnosti dostopa"
 #~ msgid "Personal preferences and settings"
-#~ msgstr "Osebne nastavitve"
+#~ msgstr "Osebne možnosti in nastavitve"
 
