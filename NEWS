@@ -1,4 +1,26 @@
 ==============
+Version 2.30.2
+==============
+
+  Misc
+
+	* Do not ship gir files in the tarball (Yaakov Selkowitz)
+
+  Translators
+
+	* Daniel Martinez (an)
+	* Gil Forcada (ca)
+	* Gil Forcada (ca@valencia)
+	* Reşat SABIQ (crh)
+	* Christian Kirbach (de)
+	* Thomas Thurman (en@shaw)
+	* Fran Diéguez (gl)
+	* Shankar Prasad (kn)
+	* Peteris Krisjanis (lv)
+	* Wouter Bolsterlee (nl)
+	* Matej Urbančič (sl)
+
+==============
 Version 2.30.0
 ==============
 
