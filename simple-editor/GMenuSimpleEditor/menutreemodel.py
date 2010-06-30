@@ -107,6 +107,9 @@ class MenuTreeModel (gtk.TreeStore):
             menu_files = ["applications.menu", "settings.menu"]
 
         for menu_file in menu_files:
+            if menu_file == "applications.menu" and os.environ.has_key ("XDG_MENU_PREFIX"):
+                menu_file = os.environ["XDG_MENU_PREFIX"] + menu_file
+
             tree = gmenu.lookup_tree (menu_file, gmenu.FLAGS_INCLUDE_EXCLUDED)
             tree.sort_key = gmenu.SORT_DISPLAY_NAME
             self.__append_directory (tree.root, None, False, menu_file)

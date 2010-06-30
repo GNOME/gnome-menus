@@ -145,12 +145,6 @@ class MenuFileWriter:
 
     def sync (self, iter):
         menu_file = self.model[iter][self.model.COLUMN_MENU_FILE]
-
-        if os.environ.has_key ("XDG_MENU_PREFIX") and menu_file == "applications.menu":
-            prefixed_menu_file = os.environ["XDG_MENU_PREFIX"] + menu_file
-        else:
-            prefixed_menu_file = menu_file
-
         system_menu_file = menutreemodel.lookup_system_menu_file (menu_file)
         
         (contents, has_changes) = self.__append_menu (DTD_DECLARATION,
@@ -160,12 +154,12 @@ class MenuFileWriter:
 
         if not has_changes:
             try:
-                os.remove (get_user_menu_file_path (prefixed_menu_file))
+                os.remove (get_user_menu_file_path (menu_file))
             except:
                 pass
             return
             
-        write_file (get_user_menu_file_path (prefixed_menu_file), contents)
+        write_file (get_user_menu_file_path (menu_file), contents)
 
     def __sync_idle_handler_func (self, iter):
         self.sync (iter)
