@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus trunk\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-17 14:41+0100\n"
-"PO-Revision-Date: 2008-09-22 10:23+0600\n"
-"Last-Translator: Margulan Moldabekov <frost.uw@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
+"POT-Creation-Date: 2009-04-21 13:07+0000\n"
+"PO-Revision-Date: 2009-06-11 17:30+0600\n"
+"Last-Translator: Baurzhan M. <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <gnome-cyr@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,15 +26,15 @@ msgstr "Аудио және видео"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
-msgstr "Программдау"
+msgstr "Бағдарламалау"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Программа құруға арналған құралдар"
+msgstr "Бағдарламалауға арналған құралдар"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
-msgstr "Білім программалары"
+msgstr "Оқыту"
 
 #: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
@@ -54,19 +54,19 @@ msgstr "Графикалық айқындауыштар"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
-msgstr "Жабдықтар"
+msgstr "Құрылғылар"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "Аппараттық жабдықтардың параметрлері"
+msgstr "Құрылғылардың баптаулары"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
-msgstr "Интернет және тор"
+msgstr "Интернет пен желі"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
-msgstr "Торға байланысты параметрлер"
+msgstr "Желілік баптаулар"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -74,7 +74,7 @@ msgstr "Көркемдеу"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Жұмыс үстелін көркейтетін параметрлер"
+msgstr "Жұмыс үстелін көркейтетін баптаулар"
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
@@ -82,15 +82,15 @@ msgstr "Интернет"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Интернетті қолдануға арналған программалар (пошта, браузер, т.б.)"
+msgstr "Интернетті қолдануға арналған бағдарламалар (пошта, браузер, т.б.)"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "Офис"
+msgstr "Кеңсе"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Офистық айқындауыштар"
+msgstr "Кеңселік қолданбалар"
 
 #: ../desktop-directories/Personal.directory.in.h:1
 msgid "Personal"
@@ -98,7 +98,7 @@ msgstr "Жеке"
 
 #: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal settings"
-msgstr "Жеке параметрлер"
+msgstr "Жеке баптаулар"
 
 #: ../desktop-directories/Settings-System.directory.in.h:1
 msgid "Administration"
@@ -106,7 +106,7 @@ msgstr "Әкімшілік"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Системалық орнатуларды өзгерту (баралық қолданушыларға әсер етеді)"
+msgstr "Жүйелік орнатуларды өзгерту (барлық пайдаланушылар үшін)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
@@ -114,24 +114,24 @@ msgstr "Жеке қалаулар"
 
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Параметрлер"
+msgstr "Қалаулар"
 
 #: ../desktop-directories/System.directory.in.h:1
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
-msgstr "Система"
+msgstr "Жүйе"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
-msgstr "Системалық параметрлер"
+msgstr "Жүйелік баптаулар"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Системалық"
+msgstr "Жүйелік"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Системаны бақылау және кұру программалары"
+msgstr "Жүйені баптау мен бақылау"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
@@ -143,23 +143,23 @@ msgstr "Арнайы мүмкіндіктер параметрлері"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
-msgstr "Стандарттық"
+msgstr "Қалыпты"
 
 #: ../desktop-directories/Utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Стандарттық айқындауыштар"
+msgstr "Қалыпты қолданбалар"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
-msgstr "Айқындауыштар"
+msgstr "Қолданбалар"
 
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
 msgid "Personal preferences and administration settings"
-msgstr "Жеке қалаулар және әкімшілік параметрлер"
+msgstr "Жеке қалаулар және әкімшілік баптаулар"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Ешқандай санатқа жатпайтын айқындауыштар"
+msgstr "Ешқандай санатқа жатпайтын қолданбалар"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Other"
@@ -167,23 +167,23 @@ msgstr "Басқалар"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Мәзір дұрыстаушысы"
+msgstr "Мәзір түзетушісі"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
-msgstr "Мәзірді дұрыстау"
+msgstr "Мәзірді түзету"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
-msgstr "Айқындауыштар:"
+msgstr "Қ_олданбалар:"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
-msgstr "Бастапқы қалпы"
+msgstr "_Бастапқы қалпы"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "Мәзір:"
+msgstr "_Мәзірлер:"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
@@ -196,7 +196,7 @@ msgstr "Көрсету"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Не удается найти домашний каталог: не установлен ни в /etc/passwd, ни при помощи переменной $HOME"
+msgstr "Үй бумасы табылмады: /etc/passwd ішінде жоқ және $HOME айнымалысы орнатылмаған"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -255,3 +255,4 @@ msgstr "Мәзір ағашы бос"
 #: ../util/test-menu-spec.c:189
 msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- GNOME-да қолданылған Desktop Menu-дің тексерісі"
+
