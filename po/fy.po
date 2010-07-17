@@ -1,7 +1,11 @@
 # Frisian translation for gnome-menus
-# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+#
 # This file is distributed under the same license as the gnome-menus package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+# Dooitze de Jong <dooitzedejong@gmail.com>, 2009-2010.
+# Jaap Haitsma <jaap@haitsma.org>, 2007.
+# Peter Hoogsteen <p.hoogsteen@chello.nl >, 2008.
+# Sietse <>, 2009.
+# berend <berendy@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
