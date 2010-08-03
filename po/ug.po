@@ -1,92 +1,91 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Gheyret T.Kenji <gheyret@yahoo.com>
+# Sahran <sahran@live.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome/menus\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-11 11:15+0200\n"
-"PO-Revision-Date: 2005-10-11 11:15+0200\n"
-"Last-Translator: Abduxukur Abdurixit <abdurixit@gmail.com>\n"
-"Language-Team: Gnome Uighur Translation Project <gnome-uighur@yahoogroups.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&component=general\n"
+"POT-Creation-Date: 2010-07-20 10:11+0000\n"
+"PO-Revision-Date: 2010-08-02 01:02+0600\n"
+"Last-Translator: Sahran <sahran@live.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-05-05 21:49+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "ياردەمچى قوراللار"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Multimedia menu"
+msgstr "كۆپ ۋاسىتە تىزىملىك"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "ياردەمچى قوراللارنىڭ بەلگۈلىنىشى"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "قوشۇمچە زاپچاسلار"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "ئۈستەل ئۈستى قوشۇمچە زاپچاسلىرى"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "پىروگراممىلار"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "ئۈستەل ئۈستى"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-msgid "Personal preferences and administration settings"
-msgstr ""
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Sound & Video"
+msgstr "ئۈن ۋە سىن"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
-msgstr "پىرگرامما تۈزەش"
+msgstr "پروگراممىچىلىق"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "يۇمشاق دېتال تۈزۈش قوراللىرى"
+msgstr "يۇمشاق دېتال ئىجادىيەت قوراللىرى"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
-msgstr "ئوقۇتۇش"
+msgstr "مائارىپ"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "ئويۇنلار"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "ئويۇنلار ۋە كۆڭۈل ئېچىش پىروگراممىلىرى"
+msgstr "ئويۇن ۋە كۆڭۈل ئېچىش پروگراممىلىرى"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "گىرافىكلار"
+msgstr "گرافىكلار"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "گىرافىك پىروگراممىلىرى"
+msgstr "گرافىك قوللىنىشچان پروگراممىلىرى"
 
-#: ../desktop-directories/Internet.directory.in.h:1
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "قاتتىق دېتال"
+
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "قاتتىق دېتاللار تەڭشىكى"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
+msgid "Internet and Network"
+msgstr "تۇتاش تور ۋە تور"
+
+#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
+msgid "Network-related settings"
+msgstr "تورغا مۇناسىۋەتلىك تەڭشەك"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:1
+msgid "Look and Feel"
+msgstr "كۆرۈنۈش تۇيغۇسى"
+
+#: ../desktop-directories/LookAndFeel.directory.in.h:2
+msgid "Settings controlling the desktop appearance and behavior"
+msgstr "ئۈستەل ئۈستى ئۇسلۇبى ۋە ھەرىكىتىنى كونترول قىلىش تەڭشىكى"
+
+#: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
-msgstr "ئىنتېرنەت"
+msgstr "تۇتاش تور"
 
-#: ../desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "تور ۋە ئلېكتىرونلىق پوچتىغا ئوخشاش ئىنتېرنەت پىروگراممىلىرى"
-
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Multimedia menu"
-
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "ئاۋاز ۋە فىلىملەر"
+msgstr "تور ۋە ئېلخەتكە ئوخشاش تۇتاش تور زىيارەت پروگراممىلىرى"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -94,40 +93,41 @@ msgstr "ئىشخانا"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "ئىشخانا پىروگراممىلىرى"
+msgstr "ئىشخانا قوللىنىشچان پروگراممىلىرى"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "باشقا تۈرلەرگە تەۋە بولمىغان پىروگراممىلار"
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal"
+msgstr "شەخسىي"
 
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "باشقىلار"
+#: ../desktop-directories/Personal.directory.in.h:3
+msgid "Personal settings"
+msgstr "شەخسىي تەڭشەكلەر"
 
-#: ../desktop-directories/Preferences.directory.in.h:1
-msgid "Personal preferences"
-msgstr ""
+#: ../desktop-directories/Settings-System.directory.in.h:1
+msgid "Administration"
+msgstr "باشقۇر"
 
-#: ../desktop-directories/Preferences.directory.in.h:2
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr ""
-
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr ""
+#: ../desktop-directories/Settings-System.directory.in.h:2
+msgid "Change system-wide settings (affects all users)"
+msgstr "سىستېما تەڭشىكىنى ئۆزگەرت (ھەممە ئىشلەتكۈچىگە تەسىر كۆرسىتىدۇ)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr ""
+msgid "Personal preferences"
+msgstr "شەخسىي مايىللىق"
 
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "باشقۇرۇش"
+#: ../desktop-directories/Settings.directory.in.h:2
+msgid "Preferences"
+msgstr "مايىللىق"
 
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "(سىستېما قۇرلمىسىنى ئۆزگەرتىش (ھەممە ئشلەتكۈچىلەرگە تەسىرى بولىدۇ "
+#: ../desktop-directories/System.directory.in.h:1
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
+msgid "System"
+msgstr "سىستېما"
+
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "سىستېما تەڭشەكلىرى"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -135,92 +135,163 @@ msgstr "سىستېما قوراللىرى"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "سىستېمىنى توغرىلاش ۋە كۈزىتىش"
+msgstr "سىستېما سەپلەش ۋە كۆزىتىش"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "ھەممىباب زىيارەت"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "ھەممىباب زىيارەت تەڭشىكى"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "قوشۇمچە"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "ئۈستەل ئۈستى قوشۇمچە دېتاللىرى"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "قوللىنىشچان پروگراممىلار"
+
+#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
+msgid "Personal preferences and administration settings"
+msgstr "شەخسىي مايىللىق ۋە باشقۇرۇش تەڭشىكى"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Applications that did not fit in other categories"
+msgstr "باشقا تۈرلەرگە تەۋە بولمىغان پروگراممىلار"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Other"
+msgstr "باشقا"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "تەھرىرلىگۈچ Menu"
+msgstr "تىزىملىك تەھرىرلىگۈچ"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
-msgstr "نى ئېدىتلاش Menu"
+msgstr "تىزىملىك تەھرىر"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
-msgstr "قوللىنىش پىروگراممىلىرى"
+msgstr "قوللىنىشچان پروگراممىلار(_A)"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
-msgstr ""
+msgstr "كۆڭۈلدىكى(_D)"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
-msgstr "لار Menu"
+msgstr "تىزىملىكلەر(_M):"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "ئاددىي تىزىملىك تەھرىرلىگۈچ %s"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
 msgid "Name"
-msgstr "نامى"
+msgstr "ئاتى"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
 msgid "Show"
-msgstr "كۆرسىتىش"
+msgstr "كۆرسەت"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "دا بەلگۈلەنمىگەن /etc/passwd :مۇندەرىجىسى تېپىلمىدى home"
-"ھەم سىستېما مۇھىتىدا $HOME نىڭ قىممىتى بەلگۈلەنمىگەن"
-
-#: ../util/test-menu-spec.c:32
-msgid "Menu file"
-msgstr "ھۆججىتى Menu"
-
-#: ../util/test-menu-spec.c:32
-msgid "MENU_FILE"
-msgstr "ھۆججىتى MENU"
-
-#: ../util/test-menu-spec.c:33
-msgid "Monitor for menu changes"
-msgstr "ئۆزگۈرۈشلىرىنى كۈزىتىش Menu"
-
-#: ../util/test-menu-spec.c:34
-msgid "Include <Exclude>d entries"
 msgstr ""
+"home مۇندەرىجىسى تېپىلمىدى: /etc/passwd دا بەلگىلەنمىگەن  ياكى  سىستېما "
+"مۇھىتىدا $HOME نىڭ قىممىتى يوق"
 
-#: ../util/test-menu-spec.c:89
-msgid "Invalid desktop file ID"
-msgstr "قانۇنسىز ئۈستەل ئۈستى ھۆججەت نومۇرى"
+#~ msgid "Action"
+#~ msgstr "مەشغۇلات"
 
-#: ../util/test-menu-spec.c:90
-msgid "[Invalid Filename]"
-msgstr "[قانۇنسىز ھۆججەت ئىسمى]"
+#~ msgid "Action games"
+#~ msgstr "ھەرىكەتلىك ئويۇنلار"
 
-#: ../util/test-menu-spec.c:91
-msgid " <excluded>"
-msgstr "<سىقىپ چىقىرىلدى>"
+#~ msgid "Adventure"
+#~ msgstr "خەتەرلىك"
 
-#: ../util/test-menu-spec.c:162
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"==== تىزىملىك ئۆزگەردى، قايتىدىن يۈكلىنىۋاتىدۇ ====\n"
-"\n"
-"\n"
+#~ msgid "Adventure style games"
+#~ msgstr "قاباھەتلىك ئويۇنلار"
 
-#: ../util/test-menu-spec.c:167 ../util/test-menu-spec.c:203
-msgid "Menu tree is empty"
-msgstr "زەنجىرى قۇرۇق Menu"
+#~ msgid "Arcade"
+#~ msgstr "Arcade"
 
-#: ../util/test-menu-spec.c:186
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
+#~ msgid "Arcade style games"
+#~ msgstr "Arcade style games"
+
+#~ msgid "Falling blocks"
+#~ msgstr "Falling blocks"
+
+#~ msgid "Falling blocks games"
+#~ msgstr "Falling blocks games"
+
+#~ msgid "Board"
+#~ msgstr "تاختا"
+
+#~ msgid "Board games"
+#~ msgstr "تاختا ئويۇنلار"
+
+#~ msgid "Card games"
+#~ msgstr "قارتا ئويۇنلىرى"
+
+#~ msgid "Cards"
+#~ msgstr "قارتىلار"
+
+#~ msgid "Debian"
+#~ msgstr "Debian"
+
+#~ msgid "The Debian menu"
+#~ msgstr "Debainتىزىملىكى"
+
+#~ msgid "Science"
+#~ msgstr "ئىلىم"
+
+#~ msgid "Scientific applications"
+#~ msgstr "ئىلىم دېتاللىرى"
+
+#~ msgid "Games for kids"
+#~ msgstr "بالىلار ئويۇنلىرى"
+
+#~ msgid "Kids"
+#~ msgstr "بالىلار"
+
+#~ msgid "Logic"
+#~ msgstr "لوگىكا"
+
+#~ msgid "Logic and puzzle games"
+#~ msgstr "لوگىكىلىق ۋە تېپىشماقلىق ئويۇنلار"
+
+#~ msgid "Role playing"
+#~ msgstr "رول ئېلىپ ئويناش"
+
+#~ msgid "Role playing games"
+#~ msgstr "رول ئېلىپ ئوينايدىغان ئورۇنلار"
+
+#~ msgid "Simulation"
+#~ msgstr "تەقلىدلەشتۈرگۈچ"
+
+#~ msgid "Simulation games"
+#~ msgstr "تەقلىدلەشتۈرگۈچ ئويۇنى"
+
+#~ msgid "Sports"
+#~ msgstr "تەنتەربىيە"
+
+#~ msgid "Sports games"
+#~ msgstr "تەنتەربىيە ئويۇنلىرى"
+
+#~ msgid "Strategy"
+#~ msgstr "ئىستراتېگىيە"
+
+#~ msgid "Strategy games"
+#~ msgstr "ئىستراتېگىيىلىك ئويۇنلا"
