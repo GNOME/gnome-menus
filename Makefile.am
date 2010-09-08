@@ -19,6 +19,7 @@ ACLOCAL_AMFLAGS = -I m4
 
 EXTRA_DIST = 			\
 	HACKING			\
+	MAINTAINERS		\
 	$(NULL)
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-introspection
