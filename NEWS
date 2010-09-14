@@ -1,4 +1,26 @@
 ==============
+Version 2.30.3
+==============
+
+  Menu Editor
+
+	* Respect XDG_MENU_PREFIX when writing user menu file (Vincent)
+
+  Misc
+
+	* Update information in README and other files (Vincent)
+
+  Translators
+
+	* Kristjan SCHMIDT (eo)
+	* Sense Hofstede (fy)
+	* Fran Diéguez (gl)
+	* Reuben Potts (gv)
+	* Dirgita (id)
+	* Baurzhan M. (kk)
+	* Sahran (ug)
+
+==============
 Version 2.30.2
 ==============
 
