@@ -3,18 +3,21 @@
 #
 # Moldabekov Margulan <moldabekov@gmail.com>, 2008
 # Erzhan Shaniev <erzhan.jktl@gmail.com>, 2008
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus trunk\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2009-04-21 13:07+0000\n"
-"PO-Revision-Date: 2009-06-11 17:30+0600\n"
-"Last-Translator: Baurzhan M. <baurthefirst@gmail.com>\n"
-"Language-Team: Kazakh <gnome-cyr@gnome.org>\n"
+"POT-Creation-Date: 2010-07-02 11:40+0000\n"
+"PO-Revision-Date: 2010-09-15 12:55+0600\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Poedit-Language: Kazakh\n"
+"X-Poedit-Country: KAZAKHSTAN\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Multimedia menu"
@@ -50,7 +53,7 @@ msgstr "Графика"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Графикалық айқындауыштар"
+msgstr "Графикалық қолданбалар"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -70,7 +73,7 @@ msgstr "Желілік баптаулар"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
-msgstr "Көркемдеу"
+msgstr "Сыртқы түрі"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
@@ -86,17 +89,18 @@ msgstr "Интернетті қолдануға арналған бағдарл�
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "Кеңсе"
+msgstr "Кеңселік"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Кеңселік қолданбалар"
 
-#: ../desktop-directories/Personal.directory.in.h:1
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal"
 msgstr "Жеке"
 
-#: ../desktop-directories/Personal.directory.in.h:2
+#: ../desktop-directories/Personal.directory.in.h:3
 msgid "Personal settings"
 msgstr "Жеке баптаулар"
 
@@ -106,20 +110,20 @@ msgstr "Әкімшілік"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "Жүйелік орнатуларды өзгерту (барлық пайдаланушылар үшін)"
+msgstr "Жүйелік баптауларды өзгерту (барлық пайдаланушылар үшін)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Жеке қалаулар"
+msgstr "Жеке баптаулар"
 
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Қалаулар"
+msgstr "Баптаулар"
 
 #: ../desktop-directories/System.directory.in.h:1
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
-msgstr "Жүйе"
+msgstr "Жүйелік"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
@@ -127,7 +131,7 @@ msgstr "Жүйелік баптаулар"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Жүйелік"
+msgstr "Жүйелік саймандар"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
@@ -139,7 +143,7 @@ msgstr "Арнайы мүмкіндіктер"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Арнайы мүмкіндіктер параметрлері"
+msgstr "Арнайы мүмкіндіктер баптаулары"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -155,7 +159,7 @@ msgstr "Қолданбалар"
 
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
 msgid "Personal preferences and administration settings"
-msgstr "Жеке қалаулар және әкімшілік баптаулар"
+msgstr "Жеке мен әкімшілік баптаулар"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
@@ -169,21 +173,28 @@ msgstr "Басқалар"
 msgid "Menu Editor"
 msgstr "Мәзір түзетушісі"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "Мәзірді түзету"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "Қ_олданбалар:"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Бастапқы қалпы"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "_Мәзірлер:"
+
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#, python-format
+#| msgid "Menu Editor"
+msgid "Simple Menu Editor %s"
+msgstr "Қарапайым мәзір түзетушісі %s"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
@@ -198,61 +209,47 @@ msgstr "Көрсету"
 msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
 msgstr "Үй бумасы табылмады: /etc/passwd ішінде жоқ және $HOME айнымалысы орнатылмаған"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "Мәзір файлы"
+#~ msgid "Menu file"
+#~ msgstr "Мәзір файлы"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "МӘЗІР_ФАЙЛЫ"
+#~ msgid "MENU_FILE"
+#~ msgstr "МӘЗІР_ФАЙЛЫ"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "Мәзірде болған өзгерістерді бақылау"
+#~ msgid "Monitor for menu changes"
+#~ msgstr "Мәзірде болған өзгерістерді бақылау"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "Шығарылған элементтерді іске келтіру"
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "Шығарылған элементтерді іске келтіру"
 
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "NoDisplay=true элементтерін іске келтіру"
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "NoDisplay=true элементтерін іске келтіру"
 
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "Desktop-файлдың ID-і қате"
+#~ msgid "Invalid desktop file ID"
+#~ msgstr "Desktop-файлдың ID-і қате"
 
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[файлдың аты дұрыс емес]"
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[файлдың аты дұрыс емес]"
 
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr " <excluded>"
+#~ msgid " <excluded>"
+#~ msgstr " <excluded>"
 
-#: ../util/test-menu-spec.c:164
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"==== Мәзір өзгертілді, жаңадан қосылуда ====\n"
-"\n"
-"\n"
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Мәзір өзгертілді, жаңадан қосылуда ====\n"
+#~ "\n"
+#~ "\n"
 
-#: ../util/test-menu-spec.c:169
-#: ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "Мәзір ағашы бос"
+#~ msgid "Menu tree is empty"
+#~ msgstr "Мәзір ағашы бос"
 
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- GNOME-да қолданылған Desktop Menu-дің тексерісі"
-
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr "- GNOME-да қолданылған Desktop Menu-дің тексерісі"
