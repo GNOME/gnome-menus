@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.an\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&component=general\n"
-"POT-Creation-Date: 2010-04-21 21:32+0000\n"
+"POT-Creation-Date: 2010-09-15 06:57+0000\n"
 "PO-Revision-Date: 2010-04-24 02:30+0200\n"
 "Last-Translator: Daniel Martinez <entaltoaragon@gmail.com>\n"
 "Language-Team: Aragonés <softaragones@googlegroups.com>\n"
@@ -30,7 +30,7 @@ msgstr "Programacion"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Ferramientas ta lo desarrollo de software"
+msgstr "Ainas ta lo desarrollo de software"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -66,7 +66,7 @@ msgstr "Internet y rete"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
-msgstr "Propiedaz arredol d'o rete"
+msgstr "Propiedatz arredol d'o rete"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -128,7 +128,7 @@ msgstr "Preferencias d'o sistema"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Ferramientas d'o sistema"
+msgstr "Ainas d'o sistema"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
@@ -180,7 +180,7 @@ msgstr "_Aplicacions:"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
-msgstr "_Por defecto"
+msgstr "_Predeterminaus"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
@@ -208,3 +208,4 @@ msgid ""
 msgstr ""
 "No s'ha puesto trobar lo direutorio presonal: no ye estableciu en o /etc/"
 "passwd y no bi ha dengun valor en a variable d'entorno $HOME"
+
