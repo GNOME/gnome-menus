@@ -1,28 +1,16 @@
-NULL =
+SUBDIRS = libmenu desktop-directories layout util po
 
 if HAVE_PYTHON
-PYTHON_SUBDIRS = python simple-editor
+SUBDIRS += python simple-editor
 endif
-
-ALL_SUBDIRS = 			\
-	po 			\
-	libmenu			\
-	layout			\
-	desktop-directories	\
-	util			\
-	$(NULL)
-
-SUBDIRS = $(ALL_SUBDIRS) $(PYTHON_SUBDIRS)
-DIST_SUBDIRS = $(ALL_SUBDIRS) python simple-editor
 
 ACLOCAL_AMFLAGS = -I m4
 
+DISTCHECK_CONFIGURE_FLAGS = --enable-introspection --enable-python
+
 EXTRA_DIST = 			\
 	HACKING			\
-	MAINTAINERS		\
-	$(NULL)
-
-DISTCHECK_CONFIGURE_FLAGS = --enable-introspection
+	MAINTAINERS
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \
@@ -38,6 +26,11 @@ MAINTAINERCLEANFILES = \
 	$(srcdir)/py-compile \
 	`find "$(srcdir)" -type f -name Makefile.in -print` \
 	$(srcdir)/configure \
-	$(srcdir)/m4/intltool.m4
+	$(srcdir)/m4/intltool.m4 \
+	$(srcdir)/m4/libtool.m4 \
+	$(srcdir)/m4/ltoptions.m4 \
+	$(srcdir)/m4/ltsugar.m4 \
+	$(srcdir)/m4/ltversion.m4 \
+	$(srcdir)/m4/lt~obsolete.m4
 
 -include $(top_srcdir)/git.mk
