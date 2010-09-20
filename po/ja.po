@@ -1,16 +1,16 @@
 # ja.po for gnome-menus.
-# Copyright (C) 2004-2007 THE gnome-menus' COPYRIGHT HOLDER
+# Copyright (C) 2004-2007,2009-2010 THE gnome-menus' COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-menus package.
 # Satoru SATOH <ss@gnome.gr.jp>, 2004.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2005-2007.
-# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2009.
+# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2009-2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&component=general\n"
-"POT-Creation-Date: 2009-09-08 22:08+0900\n"
+"POT-Creation-Date: 2010-09-18 18:45+0000\n"
 "PO-Revision-Date: 2009-09-08 22:13+0900\n"
 "Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -94,11 +94,12 @@ msgstr "オフィス"
 msgid "Office Applications"
 msgstr "オフィス・アプリケーションです"
 
-#: ../desktop-directories/Personal.directory.in.h:1
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal"
 msgstr "ユーザ向け"
 
-#: ../desktop-directories/Personal.directory.in.h:2
+#: ../desktop-directories/Personal.directory.in.h:3
 msgid "Personal settings"
 msgstr "ユーザ向けの設定を変更します"
 
@@ -108,7 +109,7 @@ msgstr "システム管理"
 
 #: ../desktop-directories/Settings-System.directory.in.h:2
 msgid "Change system-wide settings (affects all users)"
-msgstr "システム規模の設定を変更します (全てのユーザに影響します)"
+msgstr "システム規模の設定を変更します (すべてのユーザに影響します)"
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
@@ -210,62 +211,50 @@ msgstr ""
 "ホーム・フォルダが見つかりません: \"/etc/passwd\" に記述されていないか、環境"
 "変数 $HOME の値が空です。"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "メニュー・ファイル"
+#~ msgid "Menu file"
+#~ msgstr "メニュー・ファイル"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "MENU_FILE"
+#~ msgid "MENU_FILE"
+#~ msgstr "MENU_FILE"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "メニューの変更を監視する"
+#~ msgid "Monitor for menu changes"
+#~ msgstr "メニューの変更を監視する"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "<Exclude> のエントリを含める"
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "<Exclude> のエントリを含める"
 
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "NoDisplay=true のエントリを含める"
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "NoDisplay=true のエントリを含める"
 
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr ".desktop ファイルの ID が間違っています"
+#~ msgid "Invalid desktop file ID"
+#~ msgstr ".desktop ファイルの ID が間違っています"
 
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[ファイル名が間違っています]"
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[ファイル名が間違っています]"
 
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr " <excluded>"
+#~ msgid " <excluded>"
+#~ msgstr " <excluded>"
 
-#: ../util/test-menu-spec.c:164
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"==== メニューが変更されました (再読込中...) ====\n"
-"\n"
-"\n"
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== メニューが変更されました (再読み込み中...) ====\n"
+#~ "\n"
+#~ "\n"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "メニューのツリーが空です"
+#~ msgid "Menu tree is empty"
+#~ msgstr "メニューのツリーが空です"
 
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- GNOME のデスクトップ・メニューの実装をテストします"
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr "- GNOME のデスクトップ・メニューの実装をテストします"
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "ユニバーサル・アクセスに関連する設定を変更します"
