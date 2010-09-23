@@ -451,6 +451,12 @@ handle_cached_dir_changed (MenuMonitor      *monitor,
 
   if (handled)
     {
+      /* CHANGED events don't change the set of desktop entries */
+      if (event == MENU_MONITOR_EVENT_CREATED || event == MENU_MONITOR_EVENT_DELETED)
+        {
+          _entry_directory_list_empty_desktop_cache ();
+        }
+
       cached_dir_invoke_monitors (dir);
     }
 }
