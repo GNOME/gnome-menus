@@ -62,6 +62,7 @@ GMenu-2.0.gir: libgnome-menu.la
 GMenu_2_0_gir_INCLUDES = GObject-2.0
 GMenu_2_0_gir_CFLAGS = $(AM_CPPFLAGS)
 GMenu_2_0_gir_LIBS = libgnome-menu.la
+GMenu_2_0_gir_SCANNERFLAGS = --pkg-export=libgnome-menu
 GMenu_2_0_gir_FILES = $(addprefix $(srcdir)/,$(introspection_sources))
 INTROSPECTION_GIRS += GMenu-2.0.gir
 
