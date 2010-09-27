@@ -1,4 +1,26 @@
 ==============
+Version 2.30.4
+==============
+
+  libmenu
+
+	* Clear cache of desktop entries set when files are added/removed
+	  (Vincent)
+
+  Misc
+
+	* Associate .gir with pkg-config file (Vincent)
+	* Rename --enable-deprecations configure option to
+	  --enable-deprecation-flags (Vincent)
+
+  Translators
+
+	* Daniel Martinez (an)
+	* Takayuki KUSANO (ja)
+	* Baurzhan Muftakhidinov (kk)
+	* Torstein Winterseth (nn)
+
+==============
 Version 2.30.3
 ==============
 
