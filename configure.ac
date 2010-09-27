@@ -47,16 +47,15 @@ AC_SUBST(GLIB_LIBS)
 
 GNOME_COMPILE_WARNINGS(yes)
 
-AC_ARG_ENABLE(deprecations,
-              [AC_HELP_STRING([--enable-deprecations],
-                              [warn about deprecated usages @<:@default=no@:>@])],,
-              [enable_deprecations=no])
+AC_ARG_ENABLE(deprecation_flags,
+              [AC_HELP_STRING([--enable-deprecation-flags],
+                              [use *_DISABLE_DEPRECATED flags @<:@default=no@:>@])],,
+              [enable_deprecation_flags=no])
 
-DISABLE_DEPRECATED_CFLAGS=
-if test "x$enable_deprecations" = "xyes"; then
+if test "x$enable_deprecation_flags" = "xyes"; then
    DISABLE_DEPRECATED_CFLAGS=$DISABLE_DEPRECATED
+   AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
 fi
-AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
 
 dnl --enable-debug=(yes|minimum|no)
 AC_ARG_ENABLE(debug,
@@ -166,7 +165,7 @@ echo "
         compiler:                     ${CC}
         cflags:                       ${CFLAGS}
         Maintainer mode:              ${USE_MAINTAINER_MODE}
-        Warn about deprecations:      ${enable_deprecations}
+        Use *_DISABLE_DEPRECATED:     ${enable_deprecation_flags}
 
         Turn on debugging:            ${enable_debug}
         Build python bindings:        ${have_python}
