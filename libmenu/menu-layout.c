@@ -65,6 +65,7 @@ struct MenuLayoutNodeRoot
   char *name;
 
   GSList *monitors;
+  guint   monitors_idle_handler;
 };
 
 struct MenuLayoutNodeMenu
@@ -133,16 +134,14 @@ node_next (MenuLayoutNode *node)
   return node->next;
 }
 
-static void
-handle_entry_directory_changed (EntryDirectory *dir,
-                                MenuLayoutNode *node)
+static gboolean
+menu_layout_invoke_monitors (MenuLayoutNodeRoot *nr)
 {
-  MenuLayoutNodeRoot *nr;
-  GSList             *tmp;
+  GSList *tmp;
 
-  g_assert (node->type == MENU_LAYOUT_NODE_MENU);
+  g_assert (nr->node.type == MENU_LAYOUT_NODE_ROOT);
 
-  nr = (MenuLayoutNodeRoot *) menu_layout_node_get_root (node);
+  nr->monitors_idle_handler = 0;
 
   tmp = nr->monitors;
   while (tmp != NULL)
@@ -153,6 +152,24 @@ handle_entry_directory_changed (EntryDirectory *dir,
       monitor->callback ((MenuLayoutNode *) nr, monitor->user_data);
 
       tmp = next;
+    }
+
+  return FALSE;
+}
+
+static void
+handle_entry_directory_changed (EntryDirectory *dir,
+                                MenuLayoutNode *node)
+{
+  MenuLayoutNodeRoot *nr;
+
+  g_assert (node->type == MENU_LAYOUT_NODE_MENU);
+
+  nr = (MenuLayoutNodeRoot *) menu_layout_node_get_root (node);
+
+  if (nr->monitors_idle_handler == 0)
+    {
+      nr->monitors_idle_handler = g_idle_add ((GSourceFunc) menu_layout_invoke_monitors, nr);
     }
 }
 
@@ -223,6 +240,10 @@ menu_layout_node_unref (MenuLayoutNode *node)
 
           g_slist_foreach (nr->monitors, (GFunc) g_free, NULL);
           g_slist_free (nr->monitors);
+
+          if (nr->monitors_idle_handler != 0)
+            g_source_remove (nr->monitors_idle_handler);
+          nr->monitors_idle_handler = 0;
 
           g_free (nr->basedir);
           g_free (nr->name);

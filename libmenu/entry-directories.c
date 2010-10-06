@@ -74,6 +74,8 @@ struct CachedDirMonitor
   gpointer                   user_data;
 };
 
+static void     cached_dir_add_reference          (CachedDir *dir);
+static void     cached_dir_remove_reference       (CachedDir *dir);
 static void     cached_dir_free                   (CachedDir  *dir);
 static gboolean cached_dir_load_entries_recursive (CachedDir  *dir,
                                                    const char *dirname);
@@ -363,6 +365,9 @@ cached_dir_remove_subdir (CachedDir  *dir,
   return FALSE;
 }
 
+static guint   monitors_idle_handler = 0;
+static GSList *pending_monitors_dirs = NULL;
+
 static void
 cached_dir_invoke_monitors (CachedDir *dir)
 {
@@ -379,9 +384,70 @@ cached_dir_invoke_monitors (CachedDir *dir)
       tmp = next;
     }
 
+  /* we explicitly don't invoke monitors of the parent since an
+   * event has been queued for it too */
+}
+
+static gboolean
+emit_monitors_in_idle (void)
+{
+  GSList *monitors_to_emit;
+  GSList *tmp;
+
+  monitors_to_emit = pending_monitors_dirs;
+
+  pending_monitors_dirs = NULL;
+  monitors_idle_handler = 0;
+
+  tmp = monitors_to_emit;
+  while (tmp != NULL)
+    {
+      CachedDir *dir = tmp->data;
+
+      cached_dir_invoke_monitors (dir);
+      cached_dir_remove_reference (dir);
+
+      tmp = tmp->next;
+    }
+
+  g_slist_free (monitors_to_emit);
+
+  return FALSE;
+}
+
+static void
+cached_dir_queue_monitor_event (CachedDir *dir)
+{
+  GSList *tmp;
+
+  tmp = pending_monitors_dirs;
+  while (tmp != NULL)
+    {
+      CachedDir *d    = tmp->data;
+      GSList    *next = tmp->next;
+
+      if (dir->parent == d->parent &&
+          g_strcmp0 (dir->name, d->name) == 0)
+        break;
+
+      tmp = next;
+    }
+
+  /* not found, so let's queue it */
+  if (tmp == NULL)
+    {
+      cached_dir_add_reference (dir);
+      pending_monitors_dirs = g_slist_append (pending_monitors_dirs, dir);
+    }
+
   if (dir->parent)
     {
-      cached_dir_invoke_monitors (dir->parent);
+      cached_dir_queue_monitor_event (dir->parent);
+    }
+
+  if (monitors_idle_handler == 0)
+    {
+      monitors_idle_handler = g_idle_add ((GSourceFunc) emit_monitors_in_idle, NULL);
     }
 }
 
@@ -457,7 +523,7 @@ handle_cached_dir_changed (MenuMonitor      *monitor,
           _entry_directory_list_empty_desktop_cache ();
         }
 
-      cached_dir_invoke_monitors (dir);
+      cached_dir_queue_monitor_event (dir);
     }
 }
 
