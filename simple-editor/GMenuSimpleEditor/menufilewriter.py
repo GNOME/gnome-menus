@@ -20,6 +20,8 @@ import os
 import errno
 import pwd
 import gobject
+from gi.repository import Gtk
+
 import menutreemodel
 
 DTD_DECLARATION = '<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"\n' \
@@ -83,7 +85,7 @@ class MenuFileWriter:
         self.sync_idle_handlers = {}
 
     def __del__ (self):
-        for (id, iter) in self.sync_idle_handlers:
+        for (path, id) in self.sync_idle_handlers.items():
             gobject.source_remove (id)
 
     def __append_menu (self, contents, indent, iter, system_menu_file = None):
@@ -91,7 +93,7 @@ class MenuFileWriter:
         orig_contents = contents
         
         contents += indent + "<Menu>\n"
-        contents += indent + "  <Name>%s</Name>\n" % self.model[iter][self.model.COLUMN_ID]
+        contents += indent + "  <Name>%s</Name>\n" % self.model.get_value (iter, self.model.COLUMN_ID)
 
         if system_menu_file:
             contents += indent + '  <MergeFile type="parent">%s</MergeFile>\n' % system_menu_file
@@ -99,19 +101,19 @@ class MenuFileWriter:
         includes = []
         excludes = []
 
-        child_iter = self.model.iter_children (iter)
-        while child_iter:
-            if self.model[child_iter][self.model.COLUMN_IS_ENTRY]:
-                desktop_file_id = self.model[child_iter][self.model.COLUMN_ID]
-                system_visible  = self.model[child_iter][self.model.COLUMN_SYSTEM_VISIBLE]
-                user_visible    = self.model[child_iter][self.model.COLUMN_USER_VISIBLE]
+        (has_iter, child_iter) = self.model.iter_children (iter)
+        while has_iter:
+            if self.model.get_value (child_iter, self.model.COLUMN_IS_ENTRY):
+                desktop_file_id = self.model.get_value (child_iter, self.model.COLUMN_ID)
+                system_visible  = self.model.get_value (child_iter, self.model.COLUMN_SYSTEM_VISIBLE)
+                user_visible    = self.model.get_value (child_iter, self.model.COLUMN_USER_VISIBLE)
 
                 if not system_visible and user_visible:
                     includes.append (desktop_file_id)
                 elif system_visible and not user_visible:
                     excludes.append (desktop_file_id)
 
-            child_iter = self.model.iter_next (child_iter)
+            has_iter = self.model.iter_next (child_iter)
 
         if len (includes) > 0:
             contents += indent + "  <Include>\n"
@@ -127,16 +129,16 @@ class MenuFileWriter:
             contents += indent + "  </Exclude>\n"
             has_changes = True
         
-        child_iter = self.model.iter_children (iter)
-        while child_iter:
-            if not self.model[child_iter][self.model.COLUMN_IS_ENTRY]:
+        (has_iter, child_iter) = self.model.iter_children (iter)
+        while has_iter:
+            if not self.model.get_value (child_iter, self.model.COLUMN_IS_ENTRY):
                 (contents, subdir_has_changes) = self.__append_menu (contents,
                                                                      indent + "  ",
                                                                      child_iter)
                 if not has_changes:
                     has_changes = subdir_has_changes
 
-            child_iter = self.model.iter_next (child_iter)
+            has_iter = self.model.iter_next (child_iter)
 
         if has_changes:
             return (contents + indent + "</Menu>\n", True)
@@ -144,7 +146,7 @@ class MenuFileWriter:
             return (orig_contents, False)
 
     def sync (self, iter):
-        menu_file = self.model[iter][self.model.COLUMN_MENU_FILE]
+        menu_file = self.model.get_value (iter, self.model.COLUMN_MENU_FILE)
         system_menu_file = menutreemodel.lookup_system_menu_file (menu_file)
         
         (contents, has_changes) = self.__append_menu (DTD_DECLARATION,
@@ -161,32 +163,37 @@ class MenuFileWriter:
             
         write_file (get_user_menu_file_path (menu_file), contents)
 
-    def __sync_idle_handler_func (self, iter):
+    def __sync_idle_handler_func (self, path):
+        del self.sync_idle_handlers[path]
+
+        real_path = Gtk.TreePath.new_from_string (path)
+        (has_iter, iter) = self.model.get_iter(real_path)
+
+        if not has_iter:
+            return False
+
         self.sync (iter)
-        del self.sync_idle_handlers[iter]
         return False
 
     def queue_sync (self, iter):
         def find_menu_file_parent (model, iter):
-            if model[iter][model.COLUMN_MENU_FILE]:
+            if model.get_value (iter, model.COLUMN_MENU_FILE):
                 return iter
             
-            parent_iter = model.iter_parent (iter)
-            if not parent_iter:
+            (has_iter, parent_iter) = model.iter_parent (iter)
+            if not has_iter:
                 return None
 
             return find_menu_file_parent (model, parent_iter)
 
         menu_file_iter = find_menu_file_parent (self.model, iter)
-        if not menu_file_iter:
+        if menu_file_iter is None:
             return
 
         menu_file_path = self.model.get_string_from_iter (menu_file_iter)
-        for iter in self.sync_idle_handlers:
-            path = self.model.get_string_from_iter (iter)
-            if path == menu_file_path:
-                return
 
-        id = gobject.idle_add (self.__sync_idle_handler_func, menu_file_iter)
+        if self.sync_idle_handlers.has_key (menu_file_path):
+            return
 
-        self.sync_idle_handlers[menu_file_iter] = id
+        id = gobject.idle_add (self.__sync_idle_handler_func, menu_file_path)
+        self.sync_idle_handlers[menu_file_path] = id

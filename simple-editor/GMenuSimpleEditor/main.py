@@ -25,7 +25,7 @@ def main (args):
     import gobject
     from gobject.option import OptionParser, make_option
 
-    import gtk
+    from gi.repository import Gtk
 
     import maindialog
     import config
@@ -49,4 +49,4 @@ def main (args):
         print _("Simple Menu Editor %s") % (config.VERSION)
     else:
         dialog = maindialog.MenuEditorDialog (args)
-        gtk.main ()
+        Gtk.main ()

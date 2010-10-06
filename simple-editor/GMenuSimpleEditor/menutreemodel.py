@@ -18,8 +18,9 @@
 
 import os
 import os.path
-import gtk
-import gtk.gdk
+import gobject
+from gi.repository import Gtk
+from gi.repository import GdkPixbuf
 import gmenu
 
 def lookup_system_menu_file (menu_file):
@@ -39,7 +40,7 @@ def lookup_system_menu_file (menu_file):
 def load_icon_from_path (icon_path):
     if os.path.isfile (icon_path):
         try:
-            return gtk.gdk.pixbuf_new_from_file_at_size (icon_path, 24, 24)
+            return GdkPixbuf.new_from_file_at_size (icon_path, 24, 24)
         except:
             pass
     return None
@@ -85,7 +86,7 @@ def load_icon (icon_theme, icon_value):
     except:
         return load_icon_from_data_dirs (icon_value)
 
-class MenuTreeModel (gtk.TreeStore):
+class MenuTreeModel (Gtk.TreeStore):
     (
         COLUMN_IS_ENTRY,
         COLUMN_ID,
@@ -97,11 +98,11 @@ class MenuTreeModel (gtk.TreeStore):
     ) = range (7)
 
     def __init__ (self, menu_files):
-        gtk.TreeStore.__init__ (self, bool, str, str, gtk.gdk.Pixbuf, str, bool, bool)
+        Gtk.TreeStore.__init__ (self, bool, str, str, GdkPixbuf.Pixbuf, str, bool, bool)
 
         self.entries_list_iter = None
         
-        self.icon_theme = gtk.icon_theme_get_default ()
+        self.icon_theme = Gtk.IconTheme.get_default ()
 
         if (len (menu_files) < 1):
             menu_files = ["applications.menu", "settings.menu"]
@@ -124,28 +125,21 @@ class MenuTreeModel (gtk.TreeStore):
         if not directory:
             return
         
-        iter = self.iter_children (parent_iter)
-        while iter:
-            if self[iter][self.COLUMN_ID] == directory.menu_id:
+        (has_iter, iter) = self.iter_children (parent_iter)
+        while has_iter:
+            if self.get_value(iter, self.COLUMN_ID) == directory.menu_id:
                 break
-            iter = self.iter_next (iter)
+            has_iter = self.iter_next (iter)
 
-        if not iter:
-            iter = self.append (parent_iter)
-
-            self[iter][self.COLUMN_IS_ENTRY] = False
-            self[iter][self.COLUMN_ID]       = directory.menu_id
-            self[iter][self.COLUMN_NAME]     = directory.name
-            self[iter][self.COLUMN_ICON]     = load_icon (self.icon_theme, directory.icon)
-
-            if not menu_file is None:
-                self[iter][self.COLUMN_MENU_FILE] = menu_file
+        if not has_iter:
+            row = (False, directory.menu_id, directory.name, load_icon (self.icon_theme, directory.icon), menu_file, False, False)
+            iter = self.append (parent_iter, row)
 
         if system:
-            self[iter][self.COLUMN_SYSTEM_VISIBLE] = True
+            self.set_value (iter, self.COLUMN_SYSTEM_VISIBLE, True)
         else:
-            self[iter][self.COLUMN_USER_VISIBLE]   = True
-        
+            self.set_value (iter, self.COLUMN_USER_VISIBLE, True)
+
         for child_item in directory.contents:
             if isinstance (child_item, gmenu.Directory):
                 self.__append_directory (child_item, iter, system, None)
@@ -153,24 +147,19 @@ class MenuTreeModel (gtk.TreeStore):
             if not isinstance (child_item, gmenu.Entry):
                 continue
             
-            child_iter = self.iter_children (iter)
-            while child_iter:
+            (has_iter, child_iter) = self.iter_children (iter)
+            while has_iter:
                 if child_item.type == gmenu.TYPE_ENTRY and \
-                   self[child_iter][self.COLUMN_IS_ENTRY] and \
-                   self[child_iter][self.COLUMN_ID] == child_item.desktop_file_id:
+                   self.get_value(child_iter, self.COLUMN_IS_ENTRY) and \
+                   self.get_value(child_iter, self.COLUMN_ID) == child_item.desktop_file_id:
                         break
-                child_iter = self.iter_next (child_iter)
+                has_iter = self.iter_next (child_iter)
 
-            if not child_iter:
-                child_iter = self.append (iter)
-
-                self[child_iter][self.COLUMN_IS_ENTRY] = True
-                self[child_iter][self.COLUMN_ID]       = child_item.desktop_file_id
-                self[child_iter][self.COLUMN_NAME]     = child_item.display_name
-                self[child_iter][self.COLUMN_ICON]     = load_icon (self.icon_theme,
-                                                                    child_item.icon)
+            if not has_iter:
+                row = (True, child_item.desktop_file_id, child_item.display_name, load_icon (self.icon_theme, child_item.icon), None, False, False)
+                child_iter = self.append (iter, row)
 
             if system:
-                self[child_iter][self.COLUMN_SYSTEM_VISIBLE] = not child_item.is_excluded
+                self.set_value (child_iter, self.COLUMN_SYSTEM_VISIBLE, not child_item.is_excluded,)
             else:
-                self[child_iter][self.COLUMN_USER_VISIBLE]   = not child_item.is_excluded
+                self.set_value (child_iter, self.COLUMN_USER_VISIBLE, not child_item.is_excluded,)
