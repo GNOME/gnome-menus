@@ -18,7 +18,6 @@
 
 import os.path
 from gi.repository import Gtk
-import gmenu
 
 from config import *
 
