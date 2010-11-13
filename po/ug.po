@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# Uyghur translation for gnome-menus.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Gheyret T.Kenji <gheyret@yahoo.com>
@@ -7,9 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome/menus\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&component=general\n"
-"POT-Creation-Date: 2010-07-20 10:11+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
+"POT-Creation-Date: 2010-08-03 11:54+0000\n"
 "PO-Revision-Date: 2010-08-02 01:02+0600\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -49,11 +48,11 @@ msgstr "ئويۇن ۋە كۆڭۈل ئېچىش پروگراممىلىرى"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "گرافىكلار"
+msgstr "گرافىك"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "گرافىك قوللىنىشچان پروگراممىلىرى"
+msgstr "گرافىك پروگراممىلىرى"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -65,7 +64,7 @@ msgstr "قاتتىق دېتاللار تەڭشىكى"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
-msgstr "تۇتاش تور ۋە تور"
+msgstr "ئىنتېرنېت ۋە تور"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:2
 msgid "Network-related settings"
@@ -81,11 +80,11 @@ msgstr "ئۈستەل ئۈستى ئۇسلۇبى ۋە ھەرىكىتىنى كون�
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
-msgstr "تۇتاش تور"
+msgstr "ئىنتېرنېت"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "تور ۋە ئېلخەتكە ئوخشاش تۇتاش تور زىيارەت پروگراممىلىرى"
+msgstr "تور ۋە ئېلخەتكە ئوخشاش ئىنتېرنېت زىيارەت پروگراممىلىرى"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -93,7 +92,7 @@ msgstr "ئىشخانا"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "ئىشخانا قوللىنىشچان پروگراممىلىرى"
+msgstr "ئىشخانا پروگراممىلىرى"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/Personal.directory.in.h:2
@@ -155,7 +154,7 @@ msgstr "ئۈستەل ئۈستى قوشۇمچە دېتاللىرى"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
-msgstr "قوللىنىشچان پروگراممىلار"
+msgstr "پروگراممىلار"
 
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
 msgid "Personal preferences and administration settings"
@@ -179,7 +178,7 @@ msgstr "تىزىملىك تەھرىر"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
-msgstr "قوللىنىشچان پروگراممىلار(_A)"
+msgstr "پروگراممىلار(_A)"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
@@ -208,9 +207,7 @@ msgstr "كۆرسەت"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr ""
-"home مۇندەرىجىسى تېپىلمىدى: /etc/passwd دا بەلگىلەنمىگەن  ياكى  سىستېما "
-"مۇھىتىدا $HOME نىڭ قىممىتى يوق"
+msgstr "home مۇندەرىجىسى تېپىلمىدى: /etc/passwd دا بەلگىلەنمىگەن  ياكى  سىستېما مۇھىتىدا $HOME نىڭ قىممىتى يوق"
 
 #~ msgid "Action"
 #~ msgstr "مەشغۇلات"
