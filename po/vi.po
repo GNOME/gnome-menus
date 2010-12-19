@@ -21,19 +21,19 @@ msgstr "Project-Id-Version: gnome-menus 2.19.4\n"
 #: ../desktop-directories/Accessibility.directory.in.h:1
 #: ../desktop-directories/Settings-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Truy cập hoàn toàn"
+msgstr "Hỗ trợ truy cập"
 
 #: ../desktop-directories/Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Thiết lập Truy cập Hoàn toàn"
+msgstr "Thiết lập Hỗ trợ truy cập"
 
 #: ../desktop-directories/Accessories.directory.in.h:1
 msgid "Accessories"
-msgstr "Bổ trợ"
+msgstr "Tiện ích bổ trợ"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Bổ trợ môi trường"
+msgstr "Công cụ bổ trợ cho Bàn làm việc"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -82,7 +82,7 @@ msgstr "Phần cứng"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "Thiết lập cho các thiết bị phần cứng"
+msgstr "Các thiết lập cho một số thiết bị phần cứng"
 
 #: ../desktop-directories/InternetAndNetwork.directory.in.h:1
 msgid "Internet and Network"
@@ -94,11 +94,12 @@ msgstr "Thiết lập mạng"
 
 #: ../desktop-directories/Internet.directory.in.h:1
 msgid "Internet"
-msgstr "Mạng"
+msgstr "Internet"
 
 #: ../desktop-directories/Internet.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Chương trình truy cập Mạng như trình duyệt và trình nhận/gửi thư điện tử"
+msgstr ""
+"Các chương trình dùng để truy cập các dịch vụ Internet như web và thư điện tử"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:1
 msgid "Look and Feel"
@@ -126,7 +127,7 @@ msgstr "Ứng dụng văn phòng"
 
 #: ../desktop-directories/Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "Chương trình chưa phân loại"
+msgstr "Những ứng dụng không thuộc các nhóm khác"
 
 #: ../desktop-directories/Other.directory.in.h:2
 msgid "Other"
@@ -179,7 +180,7 @@ msgstr "Cấu hình và theo dõi hệ thống"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "Bộ sửa trình đơn"
+msgstr "Bộ hiệu chỉnh trình đơn"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:1
 msgid "Edit Menus"
@@ -204,14 +205,15 @@ msgstr "Tên"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
 msgid "Show"
-msgstr "Hiển thị"
+msgstr "Hiện"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Không tìm thấy thư mục chính: chưa lập trong tập tin « /etc/passwd » và không có giá "
-"trị cho biến $HOME trong môi trường."
+msgstr ""
+"Không tìm thấy thư mục chính: chưa lập trong tập tin /etc/passwd và không có "
+"giá trị cho biến $HOME trong môi trường"
 
 #: ../util/test-menu-spec.c:33
 msgid "Menu file"
@@ -272,8 +274,8 @@ msgstr "— kiểm tra sự thực hiện GNOME của Đặc tả Trình đơn M
 #~ msgid "Accessibility"
 #~ msgstr "Khả năng truy cập"
 
+msgid "Desktop"
+msgstr "Màn hình nền"
+
 #~ msgid "Accessibility Settings"
 #~ msgstr "Thiết lập khả năng truy cập"
-
-#~ msgid "Desktop"
-#~ msgstr "Desktop"
