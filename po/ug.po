@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome/menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2010-11-13 21:20+0000\n"
+"POT-Creation-Date: 2010-11-20 10:41+0000\n"
 "PO-Revision-Date: 2010-08-02 01:02+0600\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -76,7 +76,7 @@ msgstr "كۆرۈنۈش تۇيغۇسى"
 
 #: ../desktop-directories/LookAndFeel.directory.in.h:2
 msgid "Settings controlling the desktop appearance and behavior"
-msgstr "ئۈستەل ئۈستى ئۇسلۇبى ۋە ھەرىكىتىنى كونترول قىلىش تەڭشىكى"
+msgstr "ئۈستەلئۈستى ئۇسلۇبى ۋە ھەرىكىتىنى كونترول قىلىش تەڭشىكى"
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
@@ -142,7 +142,7 @@ msgstr "ھەممىباب زىيارەت"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "ھەممىباب زىيارەت تەڭشىكى"
+msgstr "ئۇنىۋېرسال زىيارەت تەڭشىكى"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -150,7 +150,7 @@ msgstr "قوشۇمچە"
 
 #: ../desktop-directories/Utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "ئۈستەل ئۈستى قوشۇمچە دېتاللىرى"
+msgstr "ئۈستەلئۈستى قوشۇمچە دېتاللىرى"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
