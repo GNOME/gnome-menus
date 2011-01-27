@@ -8,20 +8,20 @@
 # Suso Baleato <suso.baleato@xunta.es>,2009.
 # Fran Dieguez <fran.dieguez@glug.es>, 2009.
 # Anton Meixome <meixome@mancomun.org>, 2009.
-# Fran Diéguez <frandieguez@ubuntu.com>, 2010.
+# Fran Diéguez <frandieguez@ubuntu.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-20 11:18+0200\n"
-"PO-Revision-Date: 2010-07-20 11:18+0200\n"
+"POT-Creation-Date: 2011-01-27 03:38+0100\n"
+"PO-Revision-Date: 2011-01-25 00:49+0100\n"
 "Last-Translator: Fran Diéguez <frandieguez@ubuntu.com>\n"
 "Language-Team: Galician <gnome-gl-list@gnome.org>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 0.2\n"
 
@@ -190,34 +190,34 @@ msgstr "_Aplicativos:"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
-msgstr "_Predefinidos"
+msgstr "_Predeterminados"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "_Menús:"
 
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#: ../simple-editor/GMenuSimpleEditor/main.py:47
 #, python-format
 msgid "Simple Menu Editor %s"
 msgstr "Editor sinxelo de menú %s"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
 msgid "Name"
 msgstr "Nome"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
 msgid "Show"
 msgstr "Mostrar"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Non foi posíbel encontrar o directorio persoal: non está estabelecido en /"
-"etc/passwd e non hai ningún valor para $HOME no contorno"
+"Non foi posíbel atopar o cartafol persoal: non está estabelecido en /etc/"
+"passwd e non hai ningún valor para $HOME no contorno"
 
 #~ msgid "Menu file"
 #~ msgstr "Ficheiro de menú"
