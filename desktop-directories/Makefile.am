@@ -3,8 +3,6 @@ directorydir = $(datadir)/desktop-directories
 # Should be moved to gnome-control-center:
 directory_in_controlcenterfiles =		\
 	Hardware.directory.in			\
-	InternetAndNetwork.directory.in		\
-	LookAndFeel.directory.in		\
 	Personal.directory.in			\
 	System.directory.in
 
@@ -16,14 +14,11 @@ directory_in_files =				\
 	Graphics.directory.in			\
 	Network.directory.in			\
 	Office.directory.in			\
-	Settings.directory.in			\
-	Settings-System.directory.in		\
 	System-Tools.directory.in		\
 	Utility.directory.in			\
 	Utility-Accessibility.directory.in	\
 	X-GNOME-Other.directory.in		\
 	X-GNOME-Menu-Applications.directory.in	\
-	X-GNOME-Menu-System.directory.in	\
 	$(directory_in_controlcenterfiles)
 
 directory_DATA = $(directory_in_files:.directory.in=.directory)

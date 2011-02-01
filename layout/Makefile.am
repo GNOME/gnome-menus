@@ -1,8 +1,7 @@
 menudir = $(sysconfdir)/xdg/menus
 
 menu_DATA =			\
-	applications.menu	\
-	settings.menu
+	applications.menu
 
 EXTRA_DIST= $(menu_DATA)
 
