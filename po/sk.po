@@ -1,17 +1,17 @@
 # Slovak translation for gnome-menus.
-# Copyright (C) 2004, 2005, 2007, 2010 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005, 2007, 2010, 2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Marcel Telka <marcel@telka.sk>, 2004, 2005.
 # Peter Tuharsky <tuharsky@misbb.sk>, 2007.
-# Pavol Klačanský <pavol@klacansky.com>, 2010.
+# Pavol Klačanský <pavol@klacansky.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&component=general\n"
-"POT-Creation-Date: 2010-02-22 19:18+0000\n"
-"PO-Revision-Date: 2010-02-09 18:14+0100\n"
+"POT-Creation-Date: 2010-10-29 00:15+0000\n"
+"PO-Revision-Date: 2011-02-02 09:03+0100\n"
 "Last-Translator: Pavol Klačanský <pavol@klacansky.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -114,11 +114,11 @@ msgstr "Zmeniť nastavenia pre celý systém (ovplyvní všetkých používateľ
 
 #: ../desktop-directories/Settings.directory.in.h:1
 msgid "Personal preferences"
-msgstr "Osobné predvoľby"
+msgstr "Osobné nastavenia"
 
 #: ../desktop-directories/Settings.directory.in.h:2
 msgid "Preferences"
-msgstr "Predvoľby"
+msgstr "Nastavenia"
 
 #: ../desktop-directories/System.directory.in.h:1
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
@@ -139,11 +139,11 @@ msgstr "Systémová konfigurácia a sledovanie"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Univerzálny prístup"
+msgstr "Bezbariérový prístup"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Nastavenia univerzálneho prístupu"
+msgstr "Nastavenia bezbariérového prístupu"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -159,7 +159,7 @@ msgstr "Aplikácie"
 
 #: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
 msgid "Personal preferences and administration settings"
-msgstr "Osobné predvoľby a správcovské nastavenia"
+msgstr "Osobné a správcovské nastavenia"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
@@ -190,21 +190,21 @@ msgid "_Menus:"
 msgstr "_Ponuky:"
 
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#: ../simple-editor/GMenuSimpleEditor/main.py:47
 #, python-format
 msgid "Simple Menu Editor %s"
 msgstr "Jednoduchý editor ponúk %s"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
 msgid "Name"
 msgstr "Názov"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
 msgid "Show"
 msgstr "Zobraziť"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
