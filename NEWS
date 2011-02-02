@@ -1,4 +1,32 @@
 ==============
+Version 2.91.6
+==============
+
+  libmenu
+
+	* Do not send multiple notifications for one file change (Vincent)
+
+  Menu Editor
+
+	* Port to pygobject-based introspection bindings (Vincent)
+	* Make editor GTK+ 3 ready (Vincent)
+
+  Misc
+
+	* Improve introspection build (Vincent)
+	* Drop settings.menu (Vincent)
+
+  Translators
+
+	* Gil Forcada (ca@valencia)
+	* Mattias Põldaru (et)
+	* Mahyar Moghimi (fa)
+	* Fran Diéguez (gl)
+	* Kikongo Translation Team (kg)
+	* Sahran (ug)
+	* Clytie Siddall (vi)
+
+==============
 Version 2.30.4
 ==============
 
