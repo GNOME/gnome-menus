@@ -4,8 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-22 00:23+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&component=general\n"
+"POT-Creation-Date: 2011-02-02 00:22+0000\n"
 "PO-Revision-Date: 2008-09-15 20:46+0200\n"
 "Last-Translator: F Wolff <friedel@translate.org.za>\n"
 "Language-Team: translate-discuss-af@lists.sourceforge.net\n"
@@ -58,22 +59,6 @@ msgstr "Hardeware"
 msgid "Settings for several hardware devices"
 msgstr "Instellings vir verskeie hardewaretoestelle"
 
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "Internet en netwerk"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "Netwerkverwante instellings"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "Voorkoms en gedrag"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Instellings wat die werkskerm se voorkoms en gedrag beheer"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -90,32 +75,16 @@ msgstr "Kantoor"
 msgid "Office Applications"
 msgstr "Kantoortoepassings"
 
-#: ../desktop-directories/Personal.directory.in.h:1
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal"
 msgstr "Persoonlik"
 
-#: ../desktop-directories/Personal.directory.in.h:2
+#: ../desktop-directories/Personal.directory.in.h:3
 msgid "Personal settings"
 msgstr "Persoonlike instellings"
 
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "Administrasie"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "Wysig instellings stelselwyd (affekteer alle gebruikers)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "Persoonlike voorkeure"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Voorkeure"
-
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
 msgstr "Stelsel"
 
@@ -151,10 +120,6 @@ msgstr "Werkskermtoebehore"
 msgid "Applications"
 msgstr "Toepassings"
 
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Persoonlike voorkeure en administrasie-instellings"
-
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
 msgstr "Toepassings wat nie in ander kategorieë pas nie"
@@ -167,32 +132,38 @@ msgstr "Ander"
 msgid "Menu Editor"
 msgstr "Kieslysredigeerder"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
 msgstr "Redigeer kieslyste"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
 msgstr "_Toepassings:"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Verstekwaardes"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
 msgstr "_Kieslyste:"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:47
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "Eenvoudige kieslysredigeerder %s"
+
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
 msgid "Name"
 msgstr "Naam"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
 msgid "Show"
 msgstr "Wys"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -200,56 +171,35 @@ msgstr ""
 "Kan nie tuisgids vind nie: nie aangedui in /etc/passwd nie een geen waarde "
 "vir $HOME in die omgewing nie"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "Kieslyslêer"
+#~ msgid "Internet and Network"
+#~ msgstr "Internet en netwerk"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr ""
+#~ msgid "Network-related settings"
+#~ msgstr "Netwerkverwante instellings"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr ""
+#~ msgid "Look and Feel"
+#~ msgstr "Voorkoms en gedrag"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr ""
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "Instellings wat die werkskerm se voorkoms en gedrag beheer"
 
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr ""
+#~ msgid "Administration"
+#~ msgstr "Administrasie"
 
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr ""
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr "Wysig instellings stelselwyd (affekteer alle gebruikers)"
 
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr ""
+#~ msgid "Personal preferences"
+#~ msgstr "Persoonlike voorkeure"
 
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr ""
+#~ msgid "Preferences"
+#~ msgstr "Voorkeure"
 
-#: ../util/test-menu-spec.c:164
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "Persoonlike voorkeure en administrasie-instellings"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr ""
-
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
+#~ msgid "Menu file"
+#~ msgstr "Kieslyslêer"
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "Voorkeure aangaande universele toegang"
