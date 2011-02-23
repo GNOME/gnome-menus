@@ -101,8 +101,8 @@ class MenuFileWriter:
         includes = []
         excludes = []
 
-        (has_iter, child_iter) = self.model.iter_children (iter)
-        while has_iter:
+        child_iter = self.model.iter_children (iter)
+        while child_iter is not None:
             if self.model.get_value (child_iter, self.model.COLUMN_IS_ENTRY):
                 desktop_file_id = self.model.get_value (child_iter, self.model.COLUMN_ID)
                 system_visible  = self.model.get_value (child_iter, self.model.COLUMN_SYSTEM_VISIBLE)
@@ -113,7 +113,7 @@ class MenuFileWriter:
                 elif system_visible and not user_visible:
                     excludes.append (desktop_file_id)
 
-            has_iter = self.model.iter_next (child_iter)
+            child_iter = self.model.iter_next (child_iter)
 
         if len (includes) > 0:
             contents += indent + "  <Include>\n"
@@ -129,8 +129,8 @@ class MenuFileWriter:
             contents += indent + "  </Exclude>\n"
             has_changes = True
         
-        (has_iter, child_iter) = self.model.iter_children (iter)
-        while has_iter:
+        child_iter = self.model.iter_children (iter)
+        while child_iter is not None:
             if not self.model.get_value (child_iter, self.model.COLUMN_IS_ENTRY):
                 (contents, subdir_has_changes) = self.__append_menu (contents,
                                                                      indent + "  ",
@@ -138,7 +138,7 @@ class MenuFileWriter:
                 if not has_changes:
                     has_changes = subdir_has_changes
 
-            has_iter = self.model.iter_next (child_iter)
+            child_iter = self.model.iter_next (child_iter)
 
         if has_changes:
             return (contents + indent + "</Menu>\n", True)
@@ -167,10 +167,7 @@ class MenuFileWriter:
         del self.sync_idle_handlers[path]
 
         real_path = Gtk.TreePath.new_from_string (path)
-        (has_iter, iter) = self.model.get_iter(real_path)
-
-        if not has_iter:
-            return False
+        iter = self.model.get_iter(real_path)
 
         self.sync (iter)
         return False
@@ -180,8 +177,8 @@ class MenuFileWriter:
             if model.get_value (iter, model.COLUMN_MENU_FILE):
                 return iter
             
-            (has_iter, parent_iter) = model.iter_parent (iter)
-            if not has_iter:
+            parent_iter = model.iter_parent (iter)
+            if parent_iter is None:
                 return None
 
             return find_menu_file_parent (model, parent_iter)

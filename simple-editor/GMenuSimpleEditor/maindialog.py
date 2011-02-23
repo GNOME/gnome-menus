@@ -58,15 +58,15 @@ class MenuEditorDialog:
     def __revert_to_system_default (self, parent_iter = None):
         model = self.menu_tree_model
         
-        (has_iter, iter) = model.iter_children (parent_iter)
-        while has_iter:
+        iter = model.iter_children (parent_iter)
+        while iter is not None:
             if model.get_value (iter, model.COLUMN_IS_ENTRY):
                 visible = model.get_value (iter, model.COLUMN_SYSTEM_VISIBLE)
                 model.set_value (iter, model.COLUMN_USER_VISIBLE, visible)
             else:
                 self.__revert_to_system_default (iter)
             
-            has_iter = model.iter_next (iter)
+            iter = model.iter_next (iter)
 
     def __dialog_destroyed (self, dialog):
         Gtk.main_quit ()
@@ -74,10 +74,10 @@ class MenuEditorDialog:
     def __dialog_response (self, dialog, response_id):
         if response_id == Gtk.ResponseType.REJECT:
             self.__revert_to_system_default ()
-            (has_iter, iter) = self.menu_tree_model.get_iter_first ()
-            while has_iter:
+            iter = self.menu_tree_model.get_iter_first ()
+            while iter is not None:
                 self.menu_file_writer.queue_sync (iter)
-                has_iter = self.menu_tree_model.iter_next (iter)
+                iter = self.menu_tree_model.iter_next (iter)
             return
         
         dialog.destroy ()
@@ -140,18 +140,15 @@ class MenuEditorDialog:
 
         real_path = Gtk.TreePath.new_from_string (path)
         child_path = self.entries_model.convert_path_to_child_path (real_path)
-        (has_iter, child_iter) = self.menu_tree_model.get_iter (child_path)
+        child_iter = self.menu_tree_model.get_iter (child_path)
         
-        if not has_iter:
-            return
-
         toggle_value (self.menu_tree_model, child_iter, self.menu_tree_model.COLUMN_USER_VISIBLE)
 
         self.menu_file_writer.queue_sync (child_iter)
 
     def __menus_selection_changed (self, selection):
-        (is_selected, model, iter) = selection.get_selected ()
-        if not is_selected:
+        (model, iter) = selection.get_selected ()
+        if iter is None:
             self.entries_list.set_model (None)
             return
 
