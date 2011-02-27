@@ -4,14 +4,14 @@
 # Sung-Hyun Nam <namsh@kldp.org>, 2000.
 # Young-Ho Cha <ganadist@chollian.net>, 2000,2001,2003, 2007.
 # Eunju Kim <eukim@redhat.com>, 2007.
-# Changwoo Ryu <cwryu@debian.org>, 1998, 2002, 2003, 2008, 2009, 2010.
+# Changwoo Ryu <cwryu@debian.org>, 1998, 2002, 2003, 2008, 2009, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
 "POT-Creation-Date: 2009-08-23 07:27+0900\n"
-"PO-Revision-Date: 2010-03-13 23:55+0900\n"
+"PO-Revision-Date: 2011-02-27 17:17+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -137,11 +137,11 @@ msgstr "시스템 설정과 감시"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "보편적 접근성"
+msgstr "접근성"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "보편적 접근성 설정"
+msgstr "접근성 설정"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -149,7 +149,7 @@ msgstr "보조 프로그램"
 
 #: ../desktop-directories/Utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "바탕환경의 보조 프로그램"
+msgstr "데스크톱 보조 프로그램"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
