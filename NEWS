@@ -1,3 +1,22 @@
+===============
+Version 2.91.91
+===============
+
+  Menu Editor
+
+	* Fix to work with latest pygi (Vincent)
+
+  Misc
+
+	* Build fix (Vincent)
+
+  Translators
+
+	* F Wolff (af)
+	* Changwoo Ryu (ko)
+	* Pavol Klačanský (sk)
+	* Korostil Daniel (uk)
+
 ==============
 Version 2.91.6
 ==============
