@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome/menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2010-11-20 10:41+0000\n"
+"POT-Creation-Date: 2011-02-04 11:05+0000\n"
 "PO-Revision-Date: 2010-08-02 01:02+0600\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -62,22 +62,6 @@ msgstr "قاتتىق دېتال"
 msgid "Settings for several hardware devices"
 msgstr "قاتتىق دېتاللار تەڭشىكى"
 
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "ئىنتېرنېت ۋە تور"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "تورغا مۇناسىۋەتلىك تەڭشەك"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "كۆرۈنۈش تۇيغۇسى"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "ئۈستەلئۈستى ئۇسلۇبى ۋە ھەرىكىتىنى كونترول قىلىش تەڭشىكى"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "ئىنتېرنېت"
@@ -103,24 +87,7 @@ msgstr "شەخسىي"
 msgid "Personal settings"
 msgstr "شەخسىي تەڭشەكلەر"
 
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "باشقۇر"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "سىستېما تەڭشىكىنى ئۆزگەرت (ھەممە ئىشلەتكۈچىگە تەسىر كۆرسىتىدۇ)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "شەخسىي مايىللىق"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "مايىللىق"
-
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
 msgstr "سىستېما"
 
@@ -155,10 +122,6 @@ msgstr "ئۈستەلئۈستى قوشۇمچە دېتاللىرى"
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
 msgstr "پروگراممىلار"
-
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "شەخسىي مايىللىق ۋە باشقۇرۇش تەڭشىكى"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
@@ -208,6 +171,33 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr "home مۇندەرىجىسى تېپىلمىدى: /etc/passwd دا بەلگىلەنمىگەن  ياكى  سىستېما مۇھىتىدا $HOME نىڭ قىممىتى يوق"
+
+#~ msgid "Internet and Network"
+#~ msgstr "ئىنتېرنېت ۋە تور"
+
+#~ msgid "Network-related settings"
+#~ msgstr "تورغا مۇناسىۋەتلىك تەڭشەك"
+
+#~ msgid "Look and Feel"
+#~ msgstr "كۆرۈنۈش تۇيغۇسى"
+
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "ئۈستەلئۈستى ئۇسلۇبى ۋە ھەرىكىتىنى كونترول قىلىش تەڭشىكى"
+
+#~ msgid "Administration"
+#~ msgstr "باشقۇر"
+
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr "سىستېما تەڭشىكىنى ئۆزگەرت (ھەممە ئىشلەتكۈچىگە تەسىر كۆرسىتىدۇ)"
+
+#~ msgid "Personal preferences"
+#~ msgstr "شەخسىي مايىللىق"
+
+#~ msgid "Preferences"
+#~ msgstr "مايىللىق"
+
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "شەخسىي مايىللىق ۋە باشقۇرۇش تەڭشىكى"
 
 #~ msgid "Action"
 #~ msgstr "مەشغۇلات"
