@@ -145,8 +145,8 @@
     <Include>
       <And>
         <Not><Category>Core</Category></Not>
-        <Not><Category>Settings</Category></Not>
         <Not><Category>Screensaver</Category></Not>
+        <Not><Category>X-GNOME-Settings-Panel</Category></Not>
       </And>
     </Include>
   </Menu> <!-- End Other -->
