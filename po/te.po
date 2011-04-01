@@ -6,35 +6,36 @@
 # Y.Kiran Chandra <kiran@gnu.org.in>, 2005.
 # Bharat Kumar <jonnalagaddabharat@gmail.com>, 2007.
 # Krishna Babu K <kkrothap@redhat.com>, 2009.
+# Praveen Illa <mail2ipn@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master.te\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2009-06-21 17:35+0000\n"
-"PO-Revision-Date: 2009-09-17 15:12+0530\n"
-"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
-"Language-Team: Telugu <en@li.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?\n"
+"POT-Creation-Date: 2011-02-02 00:22+0000\n"
+"PO-Revision-Date: 2011-03-26 18:21+0530\n"
+"Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
+"Language-Team: Telugu <  Telugu <ubuntu-l10n-te@lists.launchpad.net>>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\""
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "బహుళమాధ్యమాల జాబితా"
+msgstr "బహుళమాధ్యమాల మెను"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
-msgstr "ధ్వని మరియు ద్రుశ్యం"
+msgstr "ధ్వని మరియు దృశ్యం"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
-msgstr "కార్య రూపకరణ"
+msgstr "ప్రోగ్రామింగ్"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "కార్యరూపకాలని తయారు చేయుటకు పనిముట్లు"
+msgstr "సాఫ్ట్‍వేర్ అభివృద్ధిచేయుటకు సాధనాలు"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -50,43 +51,27 @@ msgstr "ఆటలు మరియు వినోదకాలు"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "చిత్ర రూపాలు"
+msgstr "చిత్రరూపాలు"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "చిత్రరూప కార్యక్షేత్రాలు"
+msgstr "చిత్రరూపాల అనువర్తనాలు"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
-msgstr "హార్డ వేర్"
+msgstr "హార్డ్‍వేర్"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "హార్డ వేర్ పరికరాలకి అమరికలు"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "ఇంటర్నెట్ మరియు నెట్వర్క్"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "నెట్వర్క్ బంధిత  అమరికలు"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "రూపు రేఖలు"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "రంగస్థల రూపం మరియు ప్రవర్తనను నియంత్రణ చేయు అమరికలు"
+msgstr "వివిధ హార్డ్‍వేర్ పరికరాల కొరకు అమరికలు"
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
-msgstr "మహాతలం"
+msgstr "అంతర్జాలం"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "ఇంటర్నెట్ తో  సాంగత్యం ఏర్పరుచు కార్యక్రమాలు"
+msgstr "అంతర్జాల సౌలభ్యత కొరకు వెబ్ మరియు ఈమెయిల్ వంటి వాటికోసం ప్రోగ్రాములు"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -94,40 +79,24 @@ msgstr "కార్యాలయం"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "కార్యాలయపు కార్యక్షేత్రాలు"
+msgstr "కార్యాలయ అనువర్తనాలు"
 
-#: ../desktop-directories/Personal.directory.in.h:1
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal"
 msgstr "వ్యక్తిగత"
 
-#: ../desktop-directories/Personal.directory.in.h:2
+#: ../desktop-directories/Personal.directory.in.h:3
 msgid "Personal settings"
 msgstr "వ్యక్తిగత అమరికలు"
 
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "నిర్వహణ"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "వ్యవస్థకు సంబందించిన అన్ని అమరికలను మార్చు (ఈ మార్పులు అందరు వినియోగ దారులకు వమర్చబడతయి)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "వ్యక్తిగత అభీష్టాలు"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "అభీష్టాలు"
-
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
-msgstr "వ్యవస్థ పనిముట్లు "
+msgstr "వ్యవస్థ"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
-msgstr "వ్యవస్థ యొక్క అమరికలు"
+msgstr "వ్యవస్థ అమరికలు"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -135,15 +104,15 @@ msgstr "వ్యవస్థ పనిముట్లు"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "వ్యవస్థ రూపకరణ మరియు తనిఖీ"
+msgstr "వ్యవస్థ స్వరూపణ మరియు పర్యవేక్షణ"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "విశ్వాంతర సాంగత్యం"
+msgstr "సార్వత్రిక సౌలభ్యత"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "విశ్వాంతర సాంగత్య అమరికలు "
+msgstr "సార్వత్రిక సౌలభ్యత అమరికలు "
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -155,15 +124,11 @@ msgstr "రంగస్థల సహాయకాలు"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
-msgstr "కార్యక్షేత్రాలు"
-
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "వ్యక్తిగత అభీష్టాలు మరియు "
+msgstr "అనువర్తనాలు"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "ఇతర విభాగాలలో  ఇమడని కార్యక్షేత్రాలు"
+msgstr "ఇతర విభాగాలలో  ఇమడని అనువర్తనాలు"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Other"
@@ -171,15 +136,15 @@ msgstr "ఇతర"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "జాబితాను సరిచేయునది"
+msgstr "మెను కూర్పరి"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
-msgstr "జాబితాలను సరిచేయు"
+msgstr "మెనూలను సవరించు"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
-msgstr "అనువర్తనములు (_A)"
+msgstr "అనువర్తనాలు (_A):"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
@@ -187,84 +152,100 @@ msgstr "అప్రమేయాలు (_D)"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
-msgstr "జాబితాలు (_M)"
+msgstr "మెనూలు (_M)"
 
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#: ../simple-editor/GMenuSimpleEditor/main.py:47
 #, python-format
-#| msgid "Menu Editor"
 msgid "Simple Menu Editor %s"
-msgstr "సాధారణ మెనూ సరికూర్పరి %s"
+msgstr "సులభ మెనూ కూర్పరి %s"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
 msgid "Name"
-msgstr "నామం"
+msgstr "పేరు"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
 msgid "Show"
 msgstr "చూపు"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "నివాస వివరం ను కనిపెట్టలేదు"
-
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "జాబితా దస్త్రము"
-
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "జాబితా దస్త్రము (_F)"
-
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "జాబితాలోని మార్పుల తనిఖీ "
-
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "d నమోదులను చేర్చు<మినహాయించు>"
-
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "NoDisplay=true·నమోదులను చే"
-
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "నిస్సారమైన రంగస్థల దస్త్ర గుర్తింపు చిహ్నం"
-
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[నిస్సారమైన దస్త్ర నామము]"
-
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr "<బహిష్కరించబడిన>"
-
-#: ../util/test-menu-spec.c:164
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
 msgstr ""
-"\n"
-"\n"
-"\n"
-"====జాబితా మరింది, పున:స్థాపన జరుగుతున్నది·====\n"
-"\n"
-"\n"
+"నివాస చిరునామాను కనిపెట్టలేదు: /etc/passwd లో అమర్చబడలేదు మరియు పరిసరములో $HOME కు విలువ "
+"కనుగొనబడలేదు"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "జాబితా ఖాళీగా ఉంది"
+#~ msgid "Internet and Network"
+#~ msgstr "ఇంటర్నెట్ మరియు నెట్వర్క్"
 
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "రంగస్థల యొక్క నిర్ధిష్ట జాబితాను గ్నోమ్  ఎలా  అమలు చేసిందో పరీక్షించు"
+#~ msgid "Network-related settings"
+#~ msgstr "నెట్వర్క్ బంధిత  అమరికలు"
 
+#~ msgid "Look and Feel"
+#~ msgstr "రూపు రేఖలు"
+
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "రంగస్థల రూపం మరియు ప్రవర్తనను నియంత్రణ చేయు అమరికలు"
+
+#~ msgid "Administration"
+#~ msgstr "నిర్వహణ"
+
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr ""
+#~ "వ్యవస్థకు సంబందించిన అన్ని అమరికలను మార్చు (ఈ మార్పులు అందరు వినియోగ దారులకు వమర్చబడతయి)"
+
+#~ msgid "Personal preferences"
+#~ msgstr "వ్యక్తిగత అభీష్టాలు"
+
+#~ msgid "Preferences"
+#~ msgstr "అభీష్టాలు"
+
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "వ్యక్తిగత అభీష్టాలు మరియు "
+
+#~ msgid "Menu file"
+#~ msgstr "జాబితా దస్త్రము"
+
+#~ msgid "MENU_FILE"
+#~ msgstr "జాబితా దస్త్రము (_F)"
+
+#~ msgid "Monitor for menu changes"
+#~ msgstr "జాబితాలోని మార్పుల తనిఖీ "
+
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "d నమోదులను చేర్చు<మినహాయించు>"
+
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "NoDisplay=true·నమోదులను చే"
+
+#~ msgid "Invalid desktop file ID"
+#~ msgstr "నిస్సారమైన రంగస్థల దస్త్ర గుర్తింపు చిహ్నం"
+
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[నిస్సారమైన దస్త్ర నామము]"
+
+#~ msgid " <excluded>"
+#~ msgstr "<బహిష్కరించబడిన>"
+
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "====జాబితా మరింది, పున:స్థాపన జరుగుతున్నది·====\n"
+#~ "\n"
+#~ "\n"
+
+#~ msgid "Menu tree is empty"
+#~ msgstr "జాబితా ఖాళీగా ఉంది"
+
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr "రంగస్థల యొక్క నిర్ధిష్ట జాబితాను గ్నోమ్  ఎలా  అమలు చేసిందో పరీక్షించు"
