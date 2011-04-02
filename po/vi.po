@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&component=general\n"
 "POT-Creation-Date: 2011-02-04 11:05+0000\n"
-"PO-Revision-Date: 2007-06-26 23:13+0930\n"
+"PO-Revision-Date: 2011-04-02 10:31+0700\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -155,10 +155,10 @@ msgstr "_Trình đơn:"
 
 #. Translators: %s is the version number
 #: ../simple-editor/GMenuSimpleEditor/main.py:47
-#, fuzzy, python-format
+#, python-format
 #| msgid "Menu Editor"
 msgid "Simple Menu Editor %s"
-msgstr "Bộ hiệu chỉnh trình đơn"
+msgstr "Bộ hiệu chỉnh trình đơn %s"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
