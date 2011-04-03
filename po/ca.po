@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-menus 2.12\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-17 08:22+0100\n"
-"PO-Revision-Date: 2010-04-02 17:41+0200\n"
+"PO-Revision-Date: 2011-04-04 00:14+0200\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Programació"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Eines per a desenvolupar programari"
+msgstr "Eines per desenvolupar programari"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -83,7 +83,7 @@ msgstr "Internet"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programes per a accedir a Internet, com la web i el correu"
+msgstr "Programes per accedir a Internet, com la web i el correu"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
