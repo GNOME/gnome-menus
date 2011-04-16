@@ -39,7 +39,7 @@ enum
 struct DesktopEntry
 {
   char *path;
-  char *basename;
+  const char *basename;
 
   GQuark *categories;
 
@@ -65,6 +65,23 @@ struct DesktopEntrySet
 /*
  * Desktop entries
  */
+
+/**
+ * unix_basename_from_path:
+ * @path: Path string
+ * 
+ * Returns: A constant pointer into the basename of @path 
+ */
+static const char *
+unix_basename_from_path (const char *path)
+{
+  const char *basename = g_strrstr (path, "/");
+  if (basename)
+    return basename + 1;
+  else
+    return path;
+}
+
 
 static guint
 get_flags_from_key_file (DesktopEntry *entry,
@@ -349,8 +366,8 @@ desktop_entry_new (const char *path)
 
   retval->refcount = 1;
   retval->type     = type;
-  retval->basename = g_path_get_basename (path);
   retval->path     = g_strdup (path);
+  retval->basename = unix_basename_from_path (retval->path);
 
   return desktop_entry_load (retval);
 }
@@ -413,8 +430,8 @@ desktop_entry_copy (DesktopEntry *entry)
 
   retval->refcount     = 1;
   retval->type         = entry->type;
-  retval->basename     = g_strdup (entry->basename);
   retval->path         = g_strdup (entry->path);
+  retval->basename     = unix_basename_from_path (retval->path);
   retval->name         = g_strdup (entry->name);
   retval->generic_name = g_strdup (entry->generic_name);
   retval->full_name    = g_strdup (entry->full_name);
@@ -471,9 +488,6 @@ desktop_entry_unref (DesktopEntry *entry)
 
       g_free (entry->exec);
       entry->exec = NULL;
-
-      g_free (entry->basename);
-      entry->basename = NULL;
 
       g_free (entry->path);
       entry->path = NULL;
