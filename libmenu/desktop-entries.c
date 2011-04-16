@@ -35,25 +35,38 @@ struct DesktopEntry
   char *path;
   const char *basename;
 
-  GQuark *categories;
-
   char     *name;
-  char     *generic_name;
-  char     *full_name;
   char     *comment;
   char     *icon;
-  char     *exec;
-  char     *try_exec;
 
   guint    type              : 2;
-  guint    terminal          : 1;
-  guint    tryexec_evaluated : 1;
-  guint    tryexec_failed    : 1;
   guint    show_in_gnome     : 1;
   guint    nodisplay         : 1;
   guint    hidden            : 1;
-  guint    reserved          : 24;
+  guint    reserved          : 27;
 };
+
+typedef struct 
+{
+  DesktopEntry base;
+
+  GQuark   *categories;
+
+  char     *generic_name;
+  char     *full_name;
+  char     *exec;
+  char     *try_exec;
+
+  guint    terminal          : 1;
+  guint    tryexec_evaluated : 1;
+  guint    tryexec_failed    : 1;
+  guint    reserved          : 29;
+} DesktopEntryDesktop;
+
+typedef struct
+{
+  DesktopEntry base;
+} DesktopEntryDirectory;
 
 struct DesktopEntrySet
 {
@@ -131,8 +144,7 @@ key_file_get_show_in_gnome (GKeyFile  *key_file,
 }
 
 static GQuark *
-get_categories_from_key_file (DesktopEntry *entry,
-                              GKeyFile     *key_file,
+get_categories_from_key_file (GKeyFile     *key_file,
                               const char   *desktop_entry_group)
 {
   GQuark  *retval;
@@ -158,140 +170,138 @@ get_categories_from_key_file (DesktopEntry *entry,
   return retval;
 }
 
-static DesktopEntry *
-desktop_entry_load (DesktopEntry *entry)
+static gboolean
+desktop_entry_load_base (DesktopEntry *entry,
+			 GKeyFile     *key_file,
+			 const char   *desktop_entry_group,
+			 GError      **error)
 {
-  DesktopEntry *retval = NULL;
-  GKeyFile     *key_file;
-  GError       *error;
-  const char   *desktop_entry_group;
-  char         *name_str;
-  char         *type_str;
-
-  key_file = g_key_file_new ();
-
-  error = NULL;
-  if (!g_key_file_load_from_file (key_file, entry->path, 0, &error))
-    {
-      menu_verbose ("Failed to load \"%s\": %s\n",
-                    entry->path, error->message);
-      g_error_free (error);
-      goto out;
-    }
-
-  if (g_key_file_has_group (key_file, DESKTOP_ENTRY_GROUP))
-    {
-      desktop_entry_group = DESKTOP_ENTRY_GROUP;
-    }
-  else
-    {
-      menu_verbose ("\"%s\" contains no \"" DESKTOP_ENTRY_GROUP "\" group\n",
-                    entry->path);
-
-      if (g_key_file_has_group (key_file, KDE_DESKTOP_ENTRY_GROUP))
-        {
-          desktop_entry_group = KDE_DESKTOP_ENTRY_GROUP;
-          menu_verbose ("\"%s\" contains deprecated \"" KDE_DESKTOP_ENTRY_GROUP "\" group\n",
-                        entry->path);
-        }
-      else
-        {
-          goto out;
-        }
-    }
-
-  if (!g_key_file_has_key (key_file, desktop_entry_group, "Name", NULL))
-    {
-      menu_verbose ("\"%s\" contains no \"Name\" key\n", entry->path);
-      goto out;
-    }
-
-  name_str = g_key_file_get_locale_string (key_file, desktop_entry_group, "Name", NULL, NULL);
-  if (!name_str)
-    {
-      menu_verbose ("\"%s\" contains an invalid \"Name\" key\n", entry->path);
-      goto out;
-    }
-
-  g_free (name_str);
+  char *type_str;
 
   type_str = g_key_file_get_string (key_file, desktop_entry_group, "Type", NULL);
   if (!type_str)
     {
-      menu_verbose ("\"%s\" contains no \"Type\" key\n", entry->path);
-      goto out;
+      g_set_error (error,
+		   G_KEY_FILE_ERROR,
+		   G_KEY_FILE_ERROR_INVALID_VALUE,
+		   "\"%s\" contains no \"Type\" key\n", entry->path);
+      return FALSE;
     }
 
   if ((entry->type == DESKTOP_ENTRY_DESKTOP && strcmp (type_str, "Application") != 0) ||
       (entry->type == DESKTOP_ENTRY_DIRECTORY && strcmp (type_str, "Directory") != 0))
     {
-      menu_verbose ("\"%s\" does not contain the correct \"Type\" value\n", entry->path);
+      g_set_error (error,
+		   G_KEY_FILE_ERROR,
+		   G_KEY_FILE_ERROR_INVALID_VALUE,
+		   "\"%s\" does not contain the correct \"Type\" value\n", entry->path);
       g_free (type_str);
-      goto out;
+      return FALSE;
     }
 
   g_free (type_str);
 
-  if (entry->type == DESKTOP_ENTRY_DESKTOP &&
-      !g_key_file_has_key (key_file, desktop_entry_group, "Exec", NULL))
+  entry->name         = g_key_file_get_locale_string (key_file, desktop_entry_group, "Name", NULL, error);
+  if (entry->name == NULL)
+    return FALSE;
+
+  entry->comment      = g_key_file_get_locale_string (key_file, desktop_entry_group, "Comment", NULL, NULL);
+  entry->icon         = g_key_file_get_locale_string (key_file, desktop_entry_group, "Icon", NULL, NULL);
+  entry->nodisplay    = g_key_file_get_boolean (key_file,
+						 desktop_entry_group,
+						 "NoDisplay",
+						 NULL);
+  entry->hidden       = g_key_file_get_boolean (key_file,
+						 desktop_entry_group,
+						 "Hidden",
+						 NULL);
+  entry->show_in_gnome = key_file_get_show_in_gnome (key_file, desktop_entry_group);
+
+  return TRUE;
+}
+
+static gboolean
+desktop_entry_load_desktop (DesktopEntry  *entry,
+			    GKeyFile      *key_file,
+			    const char    *desktop_entry_group,
+			    GError       **error)
+{
+  DesktopEntryDesktop *desktop_entry;
+
+  desktop_entry = (DesktopEntryDesktop*)entry;
+
+  desktop_entry->exec = g_key_file_get_string (key_file, desktop_entry_group, "Exec", error);
+
+  if (desktop_entry->exec == NULL)
+    return FALSE;
+
+  desktop_entry->categories   = get_categories_from_key_file (key_file, desktop_entry_group);
+  desktop_entry->generic_name = g_key_file_get_locale_string (key_file, desktop_entry_group, "GenericName", NULL, NULL);
+  desktop_entry->full_name    = g_key_file_get_locale_string (key_file, desktop_entry_group, "X-GNOME-FullName", NULL, NULL);
+  desktop_entry->try_exec     = g_key_file_get_string (key_file,
+						       desktop_entry_group,
+						       "TryExec",
+						       NULL);
+  /* why are we stripping tryexec but not exec? */
+  if (desktop_entry->try_exec != NULL)
+    desktop_entry->try_exec = g_strstrip (desktop_entry->try_exec);
+  desktop_entry->terminal = g_key_file_get_boolean (key_file, desktop_entry_group, "Terminal", NULL);
+
+  return TRUE;
+}
+
+static gboolean
+desktop_entry_load (DesktopEntry *entry)
+{
+  GKeyFile         *key_file;
+  GError           *error = NULL;
+  gboolean          retval = FALSE;
+  const char       *desktop_entry_group;
+
+  key_file = g_key_file_new ();
+
+  if (!g_key_file_load_from_file (key_file, entry->path, 0, &error))
+    goto out;
+
+  if (g_key_file_has_group (key_file, DESKTOP_ENTRY_GROUP))
+    desktop_entry_group = DESKTOP_ENTRY_GROUP;
+  else
     {
-      menu_verbose ("\"%s\" does not contain an \"Exec\" key\n", entry->path);
-      goto out;
+      if (g_key_file_has_group (key_file, KDE_DESKTOP_ENTRY_GROUP))
+	desktop_entry_group = KDE_DESKTOP_ENTRY_GROUP;
+      else
+	{
+	  g_set_error (&error,
+		       G_KEY_FILE_ERROR,
+		       G_KEY_FILE_ERROR_INVALID_VALUE,
+		       "Desktop file does not have Desktop group");
+	  goto out;
+	}
     }
 
-  retval = entry;
-
-#define GET_LOCALE_STRING(n) g_key_file_get_locale_string (key_file, desktop_entry_group, (n), NULL, NULL)
-
-  retval->name         = GET_LOCALE_STRING ("Name");
-  retval->generic_name = GET_LOCALE_STRING ("GenericName");
-  retval->full_name    = GET_LOCALE_STRING ("X-GNOME-FullName");
-  retval->comment      = GET_LOCALE_STRING ("Comment");
-  retval->icon         = GET_LOCALE_STRING ("Icon");
-  retval->categories   = get_categories_from_key_file (retval, key_file, desktop_entry_group);
-
-  retval->nodisplay = g_key_file_get_boolean (key_file,
-					      desktop_entry_group,
-					      "NoDisplay",
-					      NULL);
-  retval->hidden = g_key_file_get_boolean (key_file,
-					   desktop_entry_group,
-					   "Hidden",
-					   NULL);
-  retval->show_in_gnome = key_file_get_show_in_gnome (key_file, desktop_entry_group);
+  if (!desktop_entry_load_base (entry, key_file, desktop_entry_group, &error))
+    goto out;
 
   if (entry->type == DESKTOP_ENTRY_DESKTOP)
     {
-      retval->exec = g_key_file_get_string (key_file, desktop_entry_group, "Exec", NULL);
-      retval->try_exec = g_key_file_get_string (key_file,
-						desktop_entry_group,
-						"TryExec",
-						NULL);
-      /* why are we stripping tryexec but not exec? */
-      if (retval->try_exec != NULL)
-	retval->try_exec = g_strstrip (retval->try_exec);
-      retval->terminal = g_key_file_get_boolean (key_file, desktop_entry_group, "Terminal", NULL);
+      if (!desktop_entry_load_desktop (entry, key_file, desktop_entry_group, &error))
+	goto out;
     }
+  else if (entry->type == DESKTOP_ENTRY_DIRECTORY)
+    {
+    }
+  else
+    g_assert_not_reached ();
   
-#undef GET_LOCALE_STRING
-
-  menu_verbose ("Desktop entry \"%s\" (%s, %s, %s, %s, %s) flags: NoDisplay=%s, Hidden=%s, ShowInGNOME=%s\n",
-                retval->basename,
-                retval->name,
-                retval->generic_name ? retval->generic_name : "(null)",
-                retval->full_name ? retval->full_name : "(null)",
-                retval->comment ? retval->comment : "(null)",
-                retval->icon ? retval->icon : "(null)",
-                retval->nodisplay ? "(true)" : "(false)",
-                retval->hidden ? "(true)" : "(false)",
-                retval->show_in_gnome ? "(true)" : "(false)");
-
+  retval = TRUE;
  out:
-  g_key_file_free (key_file);
-
   if (!retval)
-    desktop_entry_unref (entry);
-
+    {
+      menu_verbose ("Failed to load \"%s\": %s\n",
+		    entry->path, error->message);
+      g_clear_error (&error);
+    }
+  g_key_file_free (key_file);
   return retval;
 }
 
@@ -306,10 +316,12 @@ desktop_entry_new (const char *path)
   if (g_str_has_suffix (path, ".desktop"))
     {
       type = DESKTOP_ENTRY_DESKTOP;
+      retval = (DesktopEntry*)g_new0 (DesktopEntryDesktop, 1);
     }
   else if (g_str_has_suffix (path, ".directory"))
     {
       type = DESKTOP_ENTRY_DIRECTORY;
+      retval = (DesktopEntry*)g_new0 (DesktopEntryDirectory, 1);
     }
   else
     {
@@ -318,14 +330,18 @@ desktop_entry_new (const char *path)
       return NULL;
     }
 
-  retval = g_new0 (DesktopEntry, 1);
-
   retval->refcount = 1;
   retval->type     = type;
   retval->path     = g_strdup (path);
   retval->basename = unix_basename_from_path (retval->path);
 
-  return desktop_entry_load (retval);
+  if (!desktop_entry_load (retval))
+    {
+      desktop_entry_unref (retval);
+      return NULL;
+    }
+
+  return retval;
 }
 
 DesktopEntry *
@@ -335,17 +351,8 @@ desktop_entry_reload (DesktopEntry *entry)
 
   menu_verbose ("Re-loading desktop entry \"%s\"\n", entry->path);
 
-  g_free (entry->categories);
-  entry->categories = NULL;
-
   g_free (entry->name);
   entry->name = NULL;
-
-  g_free (entry->generic_name);
-  entry->generic_name = NULL;
-
-  g_free (entry->full_name);
-  entry->full_name = NULL;
 
   g_free (entry->comment);
   entry->comment = NULL;
@@ -353,12 +360,37 @@ desktop_entry_reload (DesktopEntry *entry)
   g_free (entry->icon);
   entry->icon = NULL;
 
-  g_free (entry->exec);
-  entry->exec = NULL;
+  if (entry->type == DESKTOP_ENTRY_DESKTOP)
+    {
+      DesktopEntryDesktop *entry_desktop = (DesktopEntryDesktop *) entry;
 
-  entry->terminal = 0;
+      g_free (entry_desktop->categories);
+      entry_desktop->categories = NULL;
 
-  return desktop_entry_load (entry);
+      g_free (entry_desktop->generic_name);
+      entry_desktop->generic_name = NULL;
+
+      g_free (entry_desktop->full_name);
+      entry_desktop->full_name = NULL;
+
+      g_free (entry_desktop->exec);
+      entry_desktop->exec = NULL;
+
+      g_free (entry_desktop->try_exec);
+      entry_desktop->try_exec = NULL;
+    }
+  else if (entry->type == DESKTOP_ENTRY_DIRECTORY)
+    {
+    }
+  else
+    g_assert_not_reached ();
+
+  if (!desktop_entry_load (entry))
+    {
+      desktop_entry_unref (entry);
+      return NULL;
+    }
+  return entry;
 }
 
 DesktopEntry *
@@ -381,40 +413,52 @@ desktop_entry_copy (DesktopEntry *entry)
   menu_verbose ("Copying desktop entry \"%s\"\n",
                 entry->basename);
 
-  retval = g_new0 (DesktopEntry, 1);
+  if (entry->type == DESKTOP_ENTRY_DESKTOP)
+    retval = (DesktopEntry*)g_new0 (DesktopEntryDesktop, 1);
+  else if (entry->type == DESKTOP_ENTRY_DIRECTORY)
+    retval = (DesktopEntry*)g_new0 (DesktopEntryDirectory, 1);
+  else
+    g_assert_not_reached ();
 
   retval->refcount     = 1;
   retval->type         = entry->type;
   retval->path         = g_strdup (entry->path);
   retval->basename     = unix_basename_from_path (retval->path);
   retval->name         = g_strdup (entry->name);
-  retval->generic_name = g_strdup (entry->generic_name);
-  retval->full_name    = g_strdup (entry->full_name);
   retval->comment      = g_strdup (entry->comment);
   retval->icon         = g_strdup (entry->icon);
-  retval->exec         = g_strdup (entry->exec);
-  retval->try_exec     = g_strdup (entry->try_exec);
 
-  retval->terminal          = entry->terminal;
-  retval->tryexec_evaluated = entry->tryexec_evaluated;
-  retval->tryexec_failed    = entry->tryexec_failed;
   retval->show_in_gnome     = entry->show_in_gnome; 
   retval->nodisplay         = entry->nodisplay;
   retval->hidden            = entry->hidden;
 
-  i = 0;
-  if (entry->categories != NULL)
+  if (retval->type == DESKTOP_ENTRY_DESKTOP)
     {
-      for (; entry->categories[i]; i++);
-    }
+      DesktopEntryDesktop *desktop_entry = (DesktopEntryDesktop*) entry;
+      DesktopEntryDesktop *retval_desktop_entry = (DesktopEntryDesktop*) retval;
 
-  retval->categories = g_new0 (GQuark, i + 1);
+      retval_desktop_entry->generic_name = g_strdup (desktop_entry->generic_name);
+      retval_desktop_entry->full_name    = g_strdup (desktop_entry->full_name);
+      retval_desktop_entry->exec         = g_strdup (desktop_entry->exec);
+      retval_desktop_entry->try_exec     = g_strdup (desktop_entry->try_exec);
+      retval_desktop_entry->terminal          = desktop_entry->terminal;
+      retval_desktop_entry->tryexec_evaluated = desktop_entry->tryexec_evaluated;
+      retval_desktop_entry->tryexec_failed    = desktop_entry->tryexec_failed;
+      
+      i = 0;
+      if (desktop_entry->categories != NULL)
+	{
+	  for (; desktop_entry->categories[i]; i++);
+	}
 
-  i = 0;
-  if (entry->categories != NULL)
-    {
-      for (; entry->categories[i]; i++)
-        retval->categories[i] = entry->categories[i];
+      retval_desktop_entry->categories = g_new0 (GQuark, i + 1);
+      
+      i = 0;
+      if (desktop_entry->categories != NULL)
+	{
+	  for (; desktop_entry->categories[i]; i++)
+	    retval_desktop_entry->categories[i] = desktop_entry->categories[i];
+	}
     }
 
   return retval;
@@ -427,37 +471,38 @@ desktop_entry_unref (DesktopEntry *entry)
   g_return_if_fail (entry->refcount > 0);
 
   entry->refcount -= 1;
-  if (entry->refcount == 0)
+  if (entry->refcount != 0)
+    return;
+
+  g_free (entry->path);
+  entry->path = NULL;
+  
+  g_free (entry->name);
+  entry->name = NULL;
+
+  g_free (entry->comment);
+  entry->comment = NULL;
+
+  g_free (entry->icon);
+  entry->icon = NULL;
+
+
+  if (entry->type == DESKTOP_ENTRY_DESKTOP)
     {
-      g_free (entry->categories);
-      entry->categories = NULL;
-
-      g_free (entry->name);
-      entry->name = NULL;
-
-      g_free (entry->generic_name);
-      entry->generic_name = NULL;
-
-      g_free (entry->full_name);
-      entry->full_name = NULL;
-
-      g_free (entry->comment);
-      entry->comment = NULL;
-
-      g_free (entry->icon);
-      entry->icon = NULL;
-
-      g_free (entry->exec);
-      entry->exec = NULL;
-
-      g_free (entry->try_exec);
-      entry->try_exec = NULL;
-
-      g_free (entry->path);
-      entry->path = NULL;
-
-      g_free (entry);
+      DesktopEntryDesktop *desktop_entry = (DesktopEntryDesktop*) entry;
+      g_free (desktop_entry->categories);
+      g_free (desktop_entry->generic_name);
+      g_free (desktop_entry->full_name);
+      g_free (desktop_entry->exec);
+      g_free (desktop_entry->try_exec);
     }
+  else if (entry->type == DESKTOP_ENTRY_DIRECTORY)
+    {
+    }
+  else
+    g_assert_not_reached ();
+
+  g_free (entry);
 }
 
 DesktopEntryType
@@ -487,13 +532,17 @@ desktop_entry_get_name (DesktopEntry *entry)
 const char *
 desktop_entry_get_generic_name (DesktopEntry *entry)
 {
-  return entry->generic_name;
+  if (entry->type != DESKTOP_ENTRY_DESKTOP)
+    return NULL;
+  return ((DesktopEntryDesktop*)entry)->generic_name;
 }
 
 const char *
 desktop_entry_get_full_name (DesktopEntry *entry)
 {
-  return entry->full_name;
+  if (entry->type != DESKTOP_ENTRY_DESKTOP)
+    return NULL;
+  return ((DesktopEntryDesktop*)entry)->full_name;
 }
 
 const char *
@@ -511,13 +560,17 @@ desktop_entry_get_icon (DesktopEntry *entry)
 const char *
 desktop_entry_get_exec (DesktopEntry *entry)
 {
-  return entry->exec;
+  if (entry->type != DESKTOP_ENTRY_DESKTOP)
+    return NULL;
+  return ((DesktopEntryDesktop*)entry)->exec;
 }
 
 gboolean
 desktop_entry_get_launch_in_terminal (DesktopEntry *entry)
 {
-  return entry->terminal;
+  if (entry->type != DESKTOP_ENTRY_DESKTOP)
+    return FALSE;
+  return ((DesktopEntryDesktop*)entry)->terminal;
 }
 
 gboolean
@@ -541,28 +594,40 @@ desktop_entry_get_show_in_gnome (DesktopEntry *entry)
 gboolean
 desktop_entry_get_tryexec_failed (DesktopEntry *entry)
 {
-  if (entry->try_exec == NULL)
+  DesktopEntryDesktop *desktop_entry;
+
+  if (entry->type != DESKTOP_ENTRY_DESKTOP)
     return FALSE;
-  if (!entry->tryexec_evaluated)
+  desktop_entry = (DesktopEntryDesktop*) entry;
+
+  if (desktop_entry->try_exec == NULL)
+    return FALSE;
+
+  if (!desktop_entry->tryexec_evaluated)
     {
       char *path;
 
-      entry->tryexec_evaluated = TRUE;
+      desktop_entry->tryexec_evaluated = TRUE;
 
-      path = g_find_program_in_path (entry->try_exec);
+      path = g_find_program_in_path (desktop_entry->try_exec);
 
-      entry->tryexec_failed = (path == NULL);
+      desktop_entry->tryexec_failed = (path == NULL);
 
       g_free (path);
     }
 
-  return entry->tryexec_failed;
+  return desktop_entry->tryexec_failed;
 }
 
 gboolean
 desktop_entry_has_categories (DesktopEntry *entry)
 {
-  return (entry->categories != NULL && entry->categories[0] != 0);
+  DesktopEntryDesktop *desktop_entry;
+  if (entry->type != DESKTOP_ENTRY_DESKTOP)
+    return FALSE;
+
+  desktop_entry = (DesktopEntryDesktop*) entry;
+  return (desktop_entry->categories != NULL && desktop_entry->categories[0] != 0);
 }
 
 gboolean
@@ -571,16 +636,22 @@ desktop_entry_has_category (DesktopEntry *entry,
 {
   GQuark quark;
   int    i;
+  DesktopEntryDesktop *desktop_entry;
 
-  if (entry->categories == NULL)
+  if (entry->type != DESKTOP_ENTRY_DESKTOP)
+    return FALSE;
+
+  desktop_entry = (DesktopEntryDesktop*) entry;
+
+  if (desktop_entry->categories == NULL)
     return FALSE;
 
   if (!(quark = g_quark_try_string (category)))
     return FALSE;
 
-  for (i = 0; entry->categories[i]; i++)
+  for (i = 0; desktop_entry->categories[i]; i++)
     {
-      if (quark == entry->categories[i])
+      if (quark == desktop_entry->categories[i])
         return TRUE;
     }
 
@@ -592,29 +663,34 @@ desktop_entry_add_legacy_category (DesktopEntry *entry)
 {
   GQuark *categories;
   int     i;
+  DesktopEntryDesktop *desktop_entry;
+
+  g_return_if_fail (entry->type == DESKTOP_ENTRY_DESKTOP);
+
+  desktop_entry = (DesktopEntryDesktop*) entry;
 
   menu_verbose ("Adding Legacy category to \"%s\"\n",
                 entry->basename);
 
   i = 0;
-  if (entry->categories != NULL)
+  if (desktop_entry->categories != NULL)
     {
-      for (; entry->categories[i]; i++);
+      for (; desktop_entry->categories[i]; i++);
     }
 
   categories = g_new0 (GQuark, i + 2);
 
   i = 0;
-  if (entry->categories != NULL)
+  if (desktop_entry->categories != NULL)
     {
-      for (; entry->categories[i]; i++)
-        categories[i] = entry->categories[i];
+      for (; desktop_entry->categories[i]; i++)
+        categories[i] = desktop_entry->categories[i];
     }
 
   categories[i] = g_quark_from_string ("Legacy");
 
-  g_free (entry->categories);
-  entry->categories = categories;
+  g_free (desktop_entry->categories);
+  desktop_entry->categories = categories;
 }
 
 /*
