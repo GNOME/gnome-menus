@@ -1,7 +1,7 @@
 lib_LTLIBRARIES = libgnome-menu.la
 
 AM_CPPFLAGS =				\
-	$(GLIB_CFLAGS)			\
+	$(GIO_UNIX_CFLAGS)		\
 	-DGMENU_I_KNOW_THIS_IS_UNSTABLE	\
 	$(DISABLE_DEPRECATED_CFLAGS)	\
 	$(DEBUG_CFLAGS)
@@ -32,7 +32,7 @@ libgnome_menu_la_SOURCES =		\
 	menu-util.h
 
 libgnome_menu_la_LIBADD = 		\
-	$(GLIB_LIBS)
+	$(GIO_UNIX_LIBS)
 
 libgnome_menu_la_LDFLAGS =			\
 	-version-info $(LIB_MENU_LT_VERSION)	\
@@ -59,7 +59,7 @@ if HAVE_INTROSPECTION
 introspection_sources = $(libgnome_menu_include_HEADERS)
 
 GMenu-2.0.gir: libgnome-menu.la
-GMenu_2_0_gir_INCLUDES = GObject-2.0
+GMenu_2_0_gir_INCLUDES = Gio-2.0
 GMenu_2_0_gir_CFLAGS = $(AM_CPPFLAGS)
 GMenu_2_0_gir_LIBS = libgnome-menu.la
 GMenu_2_0_gir_SCANNERFLAGS = --identifier-prefix=GMenu --symbol-prefix=gmenu --pkg-export=libgnome-menu

@@ -20,7 +20,7 @@
 #ifndef __DESKTOP_ENTRIES_H__
 #define __DESKTOP_ENTRIES_H__
 
-#include <glib.h>
+#include <gio/gdesktopappinfo.h>
 
 G_BEGIN_DECLS
 
@@ -43,20 +43,16 @@ void          desktop_entry_unref  (DesktopEntry *entry);
 DesktopEntryType  desktop_entry_get_type     (DesktopEntry *entry);
 const char       *desktop_entry_get_path     (DesktopEntry *entry);
 const char       *desktop_entry_get_basename (DesktopEntry *entry);
+const char       *desktop_entry_get_name  (DesktopEntry *entry);
+const char       *desktop_entry_get_comment  (DesktopEntry *entry);
+gboolean          desktop_entry_get_no_display (DesktopEntry *entry);
+gboolean          desktop_entry_get_hidden (DesktopEntry *entry);
 
-const char *desktop_entry_get_name               (DesktopEntry *entry);
-const char *desktop_entry_get_generic_name       (DesktopEntry *entry);
-const char *desktop_entry_get_full_name          (DesktopEntry *entry);
-const char *desktop_entry_get_comment            (DesktopEntry *entry);
-const char *desktop_entry_get_icon               (DesktopEntry *entry);
-const char *desktop_entry_get_exec               (DesktopEntry *entry);
-gboolean    desktop_entry_get_launch_in_terminal (DesktopEntry *entry);
+/* Only valid for DESKTOP_ENTRY_DIRECTORY */
+const char * desktop_entry_desktop_get_icon (DesktopEntry *entry);
 
-gboolean desktop_entry_get_hidden         (DesktopEntry *entry);
-gboolean desktop_entry_get_no_display     (DesktopEntry *entry);
-gboolean desktop_entry_get_show_in_gnome  (DesktopEntry *entry);
-gboolean desktop_entry_get_tryexec_failed (DesktopEntry *entry);
-
+/* Only valid for DESKTOP_ENTRY_DESKTOP */
+GDesktopAppInfo  *desktop_entry_get_app_info (DesktopEntry *entry);
 gboolean desktop_entry_has_categories (DesktopEntry *entry);
 gboolean desktop_entry_has_category   (DesktopEntry *entry,
                                        const char   *category);

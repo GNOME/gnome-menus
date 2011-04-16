@@ -1,7 +1,7 @@
 noinst_PROGRAMS = gnome-menu-spec-test
 
 AM_CPPFLAGS =							\
-	$(GLIB_CFLAGS)						\
+	$(GIO_UNIX_CFLAGS)					\
 	-I$(srcdir)/../libmenu					\
 	-DGMENU_I_KNOW_THIS_IS_UNSTABLE				\
 	-DGNOMELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\"	\
@@ -14,7 +14,7 @@ gnome_menu_spec_test_SOURCES =		\
 	test-menu-spec.c
 
 gnome_menu_spec_test_LDADD =		\
-	$(GLIB_LIBS)			\
+	$(GIO_UNIX_LIBS)		\
 	../libmenu/libgnome-menu.la
 
 if HAVE_PYTHON

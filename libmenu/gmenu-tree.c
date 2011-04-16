@@ -1047,7 +1047,7 @@ gmenu_tree_directory_get_icon (GMenuTreeDirectory *directory)
   if (!directory->directory_entry)
     return NULL;
 
-  return desktop_entry_get_icon (directory->directory_entry);
+  return desktop_entry_desktop_get_icon (directory->directory_entry);
 }
 
 const char *
@@ -1148,66 +1148,12 @@ gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
   return g_string_free (path, FALSE);
 }
 
-const char *
-gmenu_tree_entry_get_name (GMenuTreeEntry *entry)
+GDesktopAppInfo *
+gmenu_tree_entry_get_app_info (GMenuTreeEntry *entry)
 {
   g_return_val_if_fail (entry != NULL, NULL);
 
-  return desktop_entry_get_name (entry->desktop_entry);
-}
-
-const char *
-gmenu_tree_entry_get_generic_name (GMenuTreeEntry *entry)
-{
-  g_return_val_if_fail (entry != NULL, NULL);
-
-  return desktop_entry_get_generic_name (entry->desktop_entry);
-}
-
-const char *
-gmenu_tree_entry_get_display_name (GMenuTreeEntry *entry)
-{
-  const char *display_name;
-
-  g_return_val_if_fail (entry != NULL, NULL);
-
-  display_name = desktop_entry_get_full_name (entry->desktop_entry);
-  if (!display_name || display_name[0] == '\0')
-    display_name = desktop_entry_get_name (entry->desktop_entry);
-
-  return display_name;
-}
-
-const char *
-gmenu_tree_entry_get_comment (GMenuTreeEntry *entry)
-{
-  g_return_val_if_fail (entry != NULL, NULL);
-
-  return desktop_entry_get_comment (entry->desktop_entry);
-}
-
-const char *
-gmenu_tree_entry_get_icon (GMenuTreeEntry *entry)
-{
-  g_return_val_if_fail (entry != NULL, NULL);
-
-  return desktop_entry_get_icon (entry->desktop_entry);
-}
-
-const char *
-gmenu_tree_entry_get_exec (GMenuTreeEntry *entry)
-{
-  g_return_val_if_fail (entry != NULL, NULL);
-
-  return desktop_entry_get_exec (entry->desktop_entry);
-}
-
-gboolean
-gmenu_tree_entry_get_launch_in_terminal (GMenuTreeEntry *entry)
-{
-  g_return_val_if_fail (entry != NULL, FALSE);
-
-  return desktop_entry_get_launch_in_terminal (entry->desktop_entry);
+  return desktop_entry_get_app_info (entry->desktop_entry);
 }
 
 const char *
@@ -1232,14 +1178,6 @@ gmenu_tree_entry_get_is_excluded (GMenuTreeEntry *entry)
   g_return_val_if_fail (entry != NULL, FALSE);
 
   return entry->is_excluded;
-}
-
-gboolean
-gmenu_tree_entry_get_is_nodisplay (GMenuTreeEntry *entry)
-{
-  g_return_val_if_fail (entry != NULL, FALSE);
-
-  return entry->is_nodisplay;
 }
 
 GMenuTreeDirectory *
@@ -1614,7 +1552,7 @@ gmenu_tree_item_compare_get_name_helper (GMenuTreeItem    *item,
 	  name = desktop_entry_get_name (GMENU_TREE_ENTRY (item)->desktop_entry);
 	  break;
 	case GMENU_TREE_SORT_DISPLAY_NAME:
-	  name = gmenu_tree_entry_get_display_name (GMENU_TREE_ENTRY (item));
+	  name = g_app_info_get_display_name (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (item))));
 	  break;
 	default:
 	  g_assert_not_reached ();
@@ -3465,12 +3403,6 @@ process_layout (GMenuTree          *tree,
             }
         }
 
-      if (!desktop_entry_get_show_in_gnome (directory->directory_entry))
-        {
-          menu_verbose ("Not showing menu %s because OnlyShowIn!=GNOME or NotShowIn=GNOME\n",
-                        desktop_entry_get_name (directory->directory_entry));
-          deleted = TRUE;
-        }
     }
 
   if (deleted)
@@ -3523,20 +3455,6 @@ process_layout (GMenuTree          *tree,
           desktop_entry_get_no_display (entry->desktop_entry))
         {
           menu_verbose ("Deleting %s because NoDisplay=true\n",
-                        desktop_entry_get_name (entry->desktop_entry));
-          delete = TRUE;
-        }
-
-      if (!desktop_entry_get_show_in_gnome (entry->desktop_entry))
-        {
-          menu_verbose ("Deleting %s because OnlyShowIn!=GNOME or NotShowIn=GNOME\n",
-                        desktop_entry_get_name (entry->desktop_entry));
-          delete = TRUE;
-        }
-
-      if (desktop_entry_get_tryexec_failed (entry->desktop_entry))
-        {
-          menu_verbose ("Deleting %s because TryExec failed\n",
                         desktop_entry_get_name (entry->desktop_entry));
           delete = TRUE;
         }

@@ -619,7 +619,7 @@ pygmenu_tree_entry_get_name (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  name = gmenu_tree_entry_get_name (GMENU_TREE_ENTRY (entry->item));
+  name = g_app_info_get_name (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (entry->item))));
   if (name == NULL)
     {
       Py_INCREF (Py_None);
@@ -644,7 +644,7 @@ pygmenu_tree_entry_get_generic_name (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  generic_name = gmenu_tree_entry_get_generic_name (GMENU_TREE_ENTRY (entry->item));
+  generic_name = g_desktop_app_info_get_generic_name (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (entry->item)));
   if (generic_name == NULL)
     {
       Py_INCREF (Py_None);
@@ -669,7 +669,7 @@ pygmenu_tree_entry_get_display_name (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  display_name = gmenu_tree_entry_get_display_name (GMENU_TREE_ENTRY (entry->item));
+  display_name = g_app_info_get_display_name (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (entry->item))));
   if (display_name == NULL)
     {
       Py_INCREF (Py_None);
@@ -694,7 +694,7 @@ pygmenu_tree_entry_get_comment (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  comment = gmenu_tree_entry_get_comment (GMENU_TREE_ENTRY (entry->item));
+  comment = g_app_info_get_description (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (entry->item))));
   if (comment == NULL)
     {
       Py_INCREF (Py_None);
@@ -709,7 +709,8 @@ pygmenu_tree_entry_get_icon (PyObject *self,
 			     PyObject *args)
 {
   PyGMenuTreeEntry *entry;
-  const char       *icon;
+  GIcon *icon;
+  const char *const *names;
 
   if (args != NULL)
     {
@@ -719,14 +720,20 @@ pygmenu_tree_entry_get_icon (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  icon = gmenu_tree_entry_get_icon (GMENU_TREE_ENTRY (entry->item));
-  if (icon == NULL)
+  icon = g_app_info_get_icon (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (entry->item))));
+  if (icon == NULL || !G_IS_THEMED_ICON (icon))
+    {
+      Py_INCREF (Py_None);
+      return Py_None;
+    }
+  names = g_themed_icon_get_names (G_THEMED_ICON (icon));
+  if (names == NULL || names[0] == NULL)
     {
       Py_INCREF (Py_None);
       return Py_None;
     }
 
-  return PyString_FromString (icon);
+  return PyString_FromString (names[0]);
 }
 
 static PyObject *
@@ -744,7 +751,7 @@ pygmenu_tree_entry_get_exec (PyObject *self,
 
   entry = (PyGMenuTreeEntry *) self;
 
-  exec = gmenu_tree_entry_get_exec (GMENU_TREE_ENTRY (entry->item));
+  exec = g_app_info_get_executable (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (entry->item))));
   if (exec == NULL)
     {
       Py_INCREF (Py_None);
