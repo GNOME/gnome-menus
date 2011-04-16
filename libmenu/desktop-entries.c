@@ -28,16 +28,10 @@
 #define DESKTOP_ENTRY_GROUP     "Desktop Entry"
 #define KDE_DESKTOP_ENTRY_GROUP "KDE Desktop Entry"
 
-enum
-{
-  DESKTOP_ENTRY_NO_DISPLAY     = 1 << 0,
-  DESKTOP_ENTRY_HIDDEN         = 1 << 1,
-  DESKTOP_ENTRY_SHOW_IN_GNOME  = 1 << 2,
-  DESKTOP_ENTRY_TRYEXEC_FAILED = 1 << 3
-};
-
 struct DesktopEntry
 {
+  guint refcount;
+
   char *path;
   const char *basename;
 
@@ -49,11 +43,16 @@ struct DesktopEntry
   char     *comment;
   char     *icon;
   char     *exec;
-  gboolean terminal;
+  char     *try_exec;
 
-  guint type : 2;
-  guint flags : 4;
-  guint refcount : 24;
+  guint    type              : 2;
+  guint    terminal          : 1;
+  guint    tryexec_evaluated : 1;
+  guint    tryexec_failed    : 1;
+  guint    show_in_gnome     : 1;
+  guint    nodisplay         : 1;
+  guint    hidden            : 1;
+  guint    reserved          : 24;
 };
 
 struct DesktopEntrySet
@@ -82,45 +81,14 @@ unix_basename_from_path (const char *path)
     return path;
 }
 
-
-static guint
-get_flags_from_key_file (DesktopEntry *entry,
-                         GKeyFile     *key_file,
-                         const char   *desktop_entry_group)
+static gboolean
+key_file_get_show_in_gnome (GKeyFile  *key_file,
+			    const char  *desktop_entry_group)
 {
-  GError    *error;
-  char     **strv;
-  gboolean   no_display;
-  gboolean   hidden;
-  gboolean   show_in_gnome;
-  gboolean   tryexec_failed;
-  char      *tryexec;
-  guint      flags;
-  int        i;
+  gchar **strv;
+  gboolean show_in_gnome = TRUE;
+  int i;
 
-  error = NULL;
-  no_display = g_key_file_get_boolean (key_file,
-                                       desktop_entry_group,
-                                       "NoDisplay",
-                                       &error);
-  if (error)
-    {
-      no_display = FALSE;
-      g_error_free (error);
-    }
-
-  error = NULL;
-  hidden = g_key_file_get_boolean (key_file,
-                                   desktop_entry_group,
-                                   "Hidden",
-                                   &error);
-  if (error)
-    {
-      hidden = FALSE;
-      g_error_free (error);
-    }
-
-  show_in_gnome = TRUE;
   strv = g_key_file_get_string_list (key_file,
                                      desktop_entry_group,
                                      "OnlyShowIn",
@@ -158,35 +126,8 @@ get_flags_from_key_file (DesktopEntry *entry,
         }
     }
   g_strfreev (strv);
-
-  tryexec_failed = FALSE;
-  tryexec = g_key_file_get_string (key_file,
-                                   desktop_entry_group,
-                                   "TryExec",
-                                   NULL);
-  if (tryexec)
-    {
-      char *path;
-
-      path = g_find_program_in_path (g_strstrip (tryexec));
-
-      tryexec_failed = (path == NULL);
-
-      g_free (path);
-      g_free (tryexec);
-    }
-
-  flags = 0;
-  if (no_display)
-    flags |= DESKTOP_ENTRY_NO_DISPLAY;
-  if (hidden)
-    flags |= DESKTOP_ENTRY_HIDDEN;
-  if (show_in_gnome)
-    flags |= DESKTOP_ENTRY_SHOW_IN_GNOME;
-  if (tryexec_failed)
-    flags |= DESKTOP_ENTRY_TRYEXEC_FAILED;
-
-  return flags;
+  
+  return show_in_gnome;
 }
 
 static GQuark *
@@ -307,28 +248,43 @@ desktop_entry_load (DesktopEntry *entry)
   retval->full_name    = GET_LOCALE_STRING ("X-GNOME-FullName");
   retval->comment      = GET_LOCALE_STRING ("Comment");
   retval->icon         = GET_LOCALE_STRING ("Icon");
-  retval->flags        = get_flags_from_key_file (retval, key_file, desktop_entry_group);
   retval->categories   = get_categories_from_key_file (retval, key_file, desktop_entry_group);
+
+  retval->nodisplay = g_key_file_get_boolean (key_file,
+					      desktop_entry_group,
+					      "NoDisplay",
+					      NULL);
+  retval->hidden = g_key_file_get_boolean (key_file,
+					   desktop_entry_group,
+					   "Hidden",
+					   NULL);
+  retval->show_in_gnome = key_file_get_show_in_gnome (key_file, desktop_entry_group);
 
   if (entry->type == DESKTOP_ENTRY_DESKTOP)
     {
       retval->exec = g_key_file_get_string (key_file, desktop_entry_group, "Exec", NULL);
+      retval->try_exec = g_key_file_get_string (key_file,
+						desktop_entry_group,
+						"TryExec",
+						NULL);
+      /* why are we stripping tryexec but not exec? */
+      if (retval->try_exec != NULL)
+	retval->try_exec = g_strstrip (retval->try_exec);
       retval->terminal = g_key_file_get_boolean (key_file, desktop_entry_group, "Terminal", NULL);
     }
   
 #undef GET_LOCALE_STRING
 
-  menu_verbose ("Desktop entry \"%s\" (%s, %s, %s, %s, %s) flags: NoDisplay=%s, Hidden=%s, ShowInGNOME=%s, TryExecFailed=%s\n",
+  menu_verbose ("Desktop entry \"%s\" (%s, %s, %s, %s, %s) flags: NoDisplay=%s, Hidden=%s, ShowInGNOME=%s\n",
                 retval->basename,
                 retval->name,
                 retval->generic_name ? retval->generic_name : "(null)",
                 retval->full_name ? retval->full_name : "(null)",
                 retval->comment ? retval->comment : "(null)",
                 retval->icon ? retval->icon : "(null)",
-                retval->flags & DESKTOP_ENTRY_NO_DISPLAY     ? "(true)" : "(false)",
-                retval->flags & DESKTOP_ENTRY_HIDDEN         ? "(true)" : "(false)",
-                retval->flags & DESKTOP_ENTRY_SHOW_IN_GNOME  ? "(true)" : "(false)",
-                retval->flags & DESKTOP_ENTRY_TRYEXEC_FAILED ? "(true)" : "(false)");
+                retval->nodisplay ? "(true)" : "(false)",
+                retval->hidden ? "(true)" : "(false)",
+                retval->show_in_gnome ? "(true)" : "(false)");
 
  out:
   g_key_file_free (key_file);
@@ -401,7 +357,6 @@ desktop_entry_reload (DesktopEntry *entry)
   entry->exec = NULL;
 
   entry->terminal = 0;
-  entry->flags = 0;
 
   return desktop_entry_load (entry);
 }
@@ -438,8 +393,14 @@ desktop_entry_copy (DesktopEntry *entry)
   retval->comment      = g_strdup (entry->comment);
   retval->icon         = g_strdup (entry->icon);
   retval->exec         = g_strdup (entry->exec);
-  retval->terminal     = entry->terminal;
-  retval->flags        = entry->flags;
+  retval->try_exec     = g_strdup (entry->try_exec);
+
+  retval->terminal          = entry->terminal;
+  retval->tryexec_evaluated = entry->tryexec_evaluated;
+  retval->tryexec_failed    = entry->tryexec_failed;
+  retval->show_in_gnome     = entry->show_in_gnome; 
+  retval->nodisplay         = entry->nodisplay;
+  retval->hidden            = entry->hidden;
 
   i = 0;
   if (entry->categories != NULL)
@@ -488,6 +449,9 @@ desktop_entry_unref (DesktopEntry *entry)
 
       g_free (entry->exec);
       entry->exec = NULL;
+
+      g_free (entry->try_exec);
+      entry->try_exec = NULL;
 
       g_free (entry->path);
       entry->path = NULL;
@@ -559,25 +523,40 @@ desktop_entry_get_launch_in_terminal (DesktopEntry *entry)
 gboolean
 desktop_entry_get_hidden (DesktopEntry *entry)
 {
-  return (entry->flags & DESKTOP_ENTRY_HIDDEN) != 0;
+  return entry->hidden;
 }
 
 gboolean
 desktop_entry_get_no_display (DesktopEntry *entry)
 {
-  return (entry->flags & DESKTOP_ENTRY_NO_DISPLAY) != 0;
+  return entry->nodisplay;
 }
 
 gboolean
 desktop_entry_get_show_in_gnome (DesktopEntry *entry)
 {
-  return (entry->flags & DESKTOP_ENTRY_SHOW_IN_GNOME) != 0;
+  return entry->show_in_gnome;
 }
 
 gboolean
 desktop_entry_get_tryexec_failed (DesktopEntry *entry)
 {
-  return (entry->flags & DESKTOP_ENTRY_TRYEXEC_FAILED) != 0;
+  if (entry->try_exec == NULL)
+    return FALSE;
+  if (!entry->tryexec_evaluated)
+    {
+      char *path;
+
+      entry->tryexec_evaluated = TRUE;
+
+      path = g_find_program_in_path (entry->try_exec);
+
+      entry->tryexec_failed = (path == NULL);
+
+      g_free (path);
+    }
+
+  return entry->tryexec_failed;
 }
 
 gboolean
