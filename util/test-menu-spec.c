@@ -123,7 +123,7 @@ print_directory (GMenuTreeDirectory *directory)
     {
       GMenuTreeItem *item = tmp->data;
 
-      switch (gmenu_tree_item_get_type (item))
+      switch (gmenu_tree_item_get_item_type (item))
 	{
 	case GMENU_TREE_ITEM_ENTRY:
 	  print_entry (GMENU_TREE_ENTRY (item), path);
@@ -142,7 +142,7 @@ print_directory (GMenuTreeDirectory *directory)
 	    GMenuTreeItem *aliased_item;
 
 	    aliased_item = gmenu_tree_alias_get_item (GMENU_TREE_ALIAS (item));
-	    if (gmenu_tree_item_get_type (aliased_item) == GMENU_TREE_ITEM_ENTRY)
+	    if (gmenu_tree_item_get_item_type (aliased_item) == GMENU_TREE_ITEM_ENTRY)
 	      print_entry (GMENU_TREE_ENTRY (aliased_item), path);
 	  }
 	  break;

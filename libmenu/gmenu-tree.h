@@ -97,7 +97,7 @@ void     gmenu_tree_item_set_user_data (GMenuTreeItem   *item,
 					GDestroyNotify  dnotify);
 gpointer gmenu_tree_item_get_user_data (GMenuTreeItem   *item);
 
-GMenuTreeItemType   gmenu_tree_item_get_type   (GMenuTreeItem *item);
+GMenuTreeItemType   gmenu_tree_item_get_item_type   (GMenuTreeItem *item);
 GMenuTreeDirectory *gmenu_tree_item_get_parent (GMenuTreeItem *item);
 
 

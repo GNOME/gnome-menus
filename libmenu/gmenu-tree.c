@@ -623,7 +623,7 @@ find_path (GMenuTreeDirectory *directory,
     {
       GMenuTreeItem *item = tmp->data;
 
-      if (gmenu_tree_item_get_type (item) != GMENU_TREE_ITEM_DIRECTORY)
+      if (gmenu_tree_item_get_item_type (item) != GMENU_TREE_ITEM_DIRECTORY)
         {
           tmp = tmp->next;
           continue;
@@ -677,7 +677,7 @@ gmenu_tree_invoke_monitors (GMenuTree *tree)
 }
 
 GMenuTreeItemType
-gmenu_tree_item_get_type (GMenuTreeItem *item)
+gmenu_tree_item_get_item_type (GMenuTreeItem *item)
 {
   g_return_val_if_fail (item != NULL, 0);
 
@@ -3868,7 +3868,7 @@ merge_subdirs_and_entries (GMenuTree          *tree,
       GMenuTreeItem     *item = tmp->data;
       GMenuTreeItemType  type;
 
-      type = gmenu_tree_item_get_type (item);
+      type = gmenu_tree_item_get_item_type (item);
 
       if (type == GMENU_TREE_ITEM_ALIAS)
         {
