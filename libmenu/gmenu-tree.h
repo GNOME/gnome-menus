@@ -98,11 +98,9 @@ GMenuTreeDirectory *gmenu_tree_get_directory_from_path (GMenuTree  *tree,
 
 gpointer gmenu_tree_item_ref   (gpointer item);
 void     gmenu_tree_item_unref (gpointer item);
-
 GMenuTreeItemType   gmenu_tree_item_get_item_type   (GMenuTreeItem *item);
-GMenuTreeDirectory *gmenu_tree_item_get_parent (GMenuTreeItem *item);
 
-
+GMenuTreeDirectory *gmenu_tree_directory_get_parent    (GMenuTreeDirectory *directory);
 GSList     *gmenu_tree_directory_get_contents          (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_name              (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_comment           (GMenuTreeDirectory *directory);

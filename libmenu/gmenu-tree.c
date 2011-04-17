@@ -682,8 +682,9 @@ gmenu_tree_item_get_item_type (GMenuTreeItem *item)
 }
 
 GMenuTreeDirectory *
-gmenu_tree_item_get_parent (GMenuTreeItem *item)
+gmenu_tree_directory_get_parent (GMenuTreeDirectory *directory)
 {
+  GMenuTreeItem *item = (GMenuTreeItem*)directory;
   g_return_val_if_fail (item != NULL, NULL);
 
   return item->parent ? gmenu_tree_item_ref (item->parent) : NULL;

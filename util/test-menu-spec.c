@@ -49,7 +49,7 @@ append_directory_path (GMenuTreeDirectory *directory,
 {
   GMenuTreeDirectory *parent;
 
-  parent = gmenu_tree_item_get_parent (GMENU_TREE_ITEM (directory));
+  parent = gmenu_tree_directory_get_parent (directory);
 
   if (!parent)
     {
