@@ -22,6 +22,7 @@
 #include "gmenu-tree.h"
 
 #include <string.h>
+#include <stdlib.h>
 
 /* This is only a test program, so we don't need translations. Still keep the
  * infrastructure in place in case we suddenly decide we want to localize this
@@ -166,8 +167,16 @@ static void
 handle_tree_changed (GMenuTree *tree)
 {
   GMenuTreeDirectory *root;
+  GError *error = NULL;
 
   g_print (_("\n\n\n==== Menu changed, reloading ====\n\n\n"));
+
+  if (!gmenu_tree_load_sync (tree, &error))
+    {
+      g_printerr ("Failed to load tree: %s\n", error->message);
+      g_clear_error (&error);
+      return;
+    }
 
   root = gmenu_tree_get_root_directory (tree);
   if (root == NULL)
@@ -187,6 +196,7 @@ main (int argc, char **argv)
   GMenuTree          *tree;
   GMenuTreeDirectory *root;
   GMenuTreeFlags      flags;
+  GError             *error = NULL;
 
   g_type_init ();
 
@@ -210,6 +220,12 @@ main (int argc, char **argv)
 
   tree = gmenu_tree_new (menu_file ? menu_file : "applications.menu", flags);
   g_assert (tree != NULL);
+
+  if (!gmenu_tree_load_sync (tree, &error))
+    {
+      g_printerr ("Failed to load tree: %s\n", error->message);
+      exit (1);
+    }
 
   root = gmenu_tree_get_root_directory (tree);
   if (root != NULL)

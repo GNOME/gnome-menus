@@ -59,7 +59,10 @@ struct _GMenuTree
   MenuLayoutNode *layout;
   GMenuTreeDirectory *root;
 
+  GError *load_error;
+
   guint canonical : 1;
+  guint loaded    : 1;
 };
 
 G_DEFINE_TYPE (GMenuTree, gmenu_tree, G_TYPE_OBJECT)
@@ -138,7 +141,7 @@ struct GMenuTreeAlias
 
 static void      gmenu_tree_load_layout          (GMenuTree       *tree);
 static void      gmenu_tree_force_reload         (GMenuTree       *tree);
-static void      gmenu_tree_build_from_layout    (GMenuTree       *tree);
+static gboolean  gmenu_tree_build_from_layout    (GMenuTree       *tree, GError **error);
 static void      gmenu_tree_force_rebuild        (GMenuTree       *tree);
 static void      gmenu_tree_resolve_files        (GMenuTree       *tree,
 						  GHashTable      *loaded_menu_files,
@@ -489,6 +492,8 @@ gmenu_tree_finalize (GObject *object)
     g_free (tree->canonical_path);
   tree->canonical_path = NULL;
 
+  g_clear_error (&(tree->load_error));
+
   G_OBJECT_CLASS (gmenu_tree_parent_class)->finalize (object);
 }
 
@@ -572,18 +577,50 @@ gmenu_tree_get_menu_file (GMenuTree *tree)
   return ugly_result_cache;
 }
 
+/**
+ * gmenu_tree_load_sync:
+ * @tree: a #GMenuTree
+ * @error: a #GError
+ *
+ * Synchronously load the menu contents.  This function
+ * performs a significant amount of blocking I/O if the
+ * tree has not been loaded yet.
+ * 
+ * Returns: %TRUE on success, %FALSE on error
+ */
+gboolean
+gmenu_tree_load_sync (GMenuTree   *tree,
+		      GError     **error)
+{
+  if (!tree->loaded)
+    {
+      g_clear_error (&tree->load_error);
+      gmenu_tree_build_from_layout (tree, &tree->load_error);
+      tree->loaded = TRUE;
+    }
+
+  if (tree->load_error)
+    {
+      g_propagate_error (error, tree->load_error);
+      return FALSE;
+    }
+  return TRUE;
+}
+
+/**
+ * gmenu_tree_get_root_directory:
+ * @tree: a #GMenuTree
+ *
+ * Get the root directory; you must have loaded the tree first (at
+ * least once) via gmenu_tree_load_sync() or a variant thereof.
+ * 
+ * Returns: (transfer full): Root of the tree
+ */
 GMenuTreeDirectory *
 gmenu_tree_get_root_directory (GMenuTree *tree)
 {
   g_return_val_if_fail (tree != NULL, NULL);
-
-  if (!tree->root)
-    {
-      gmenu_tree_build_from_layout (tree);
-
-      if (!tree->root)
-        return NULL;
-    }
+  g_return_val_if_fail (tree->loaded, NULL);
 
   return gmenu_tree_item_ref (tree->root);
 }
@@ -4085,17 +4122,24 @@ handle_entries_changed (MenuLayoutNode *layout,
     }
 }
 
-static void
-gmenu_tree_build_from_layout (GMenuTree *tree)
+static gboolean
+gmenu_tree_build_from_layout (GMenuTree *tree,
+			      GError   **error)
 {
   DesktopEntrySet *allocated;
 
   if (tree->root)
-    return;
+    return TRUE;
 
   gmenu_tree_load_layout (tree);
   if (!tree->layout)
-    return;
+    {
+      g_set_error (error,
+		   G_IO_ERROR,
+		   G_IO_ERROR_FAILED,
+		   "Failed to load layout");
+      return FALSE;
+    }
 
   menu_verbose ("Building menu tree from layout\n");
 
@@ -4125,6 +4169,8 @@ gmenu_tree_build_from_layout (GMenuTree *tree)
     }
 
   desktop_entry_set_unref (allocated);
+  
+  return TRUE;
 }
 
 static void
@@ -4135,6 +4181,8 @@ gmenu_tree_force_rebuild (GMenuTree *tree)
       gmenu_tree_directory_set_tree (tree->root, NULL);
       gmenu_tree_item_unref (tree->root);
       tree->root = NULL;
+      g_clear_error (&tree->load_error);
+      tree->loaded = FALSE;
 
       g_assert (tree->layout != NULL);
 
