@@ -110,7 +110,6 @@ const char *gmenu_tree_directory_get_comment           (GMenuTreeDirectory *dire
 const char *gmenu_tree_directory_get_icon              (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_desktop_file_path (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_menu_id           (GMenuTreeDirectory *directory);
-GMenuTree  *gmenu_tree_directory_get_tree              (GMenuTreeDirectory *directory);
 
 gboolean gmenu_tree_directory_get_is_nodisplay (GMenuTreeDirectory *directory);
 

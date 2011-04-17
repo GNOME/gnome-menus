@@ -105,7 +105,7 @@ typedef struct
 {
   GMenuTreeDirectory directory;
 
-  GMenuTree *tree;
+  /* nothing yet */
 } GMenuTreeDirectoryRoot;
 
 struct GMenuTreeEntry
@@ -811,41 +811,6 @@ gmenu_tree_directory_get_menu_id (GMenuTreeDirectory *directory)
   g_return_val_if_fail (directory != NULL, NULL);
 
   return directory->name;
-}
-
-static void
-gmenu_tree_directory_set_tree (GMenuTreeDirectory *directory,
-			       GMenuTree          *tree)
-{
-  GMenuTreeDirectoryRoot *root;
-
-  g_assert (directory != NULL);
-  g_assert (directory->is_root);
-
-  root = (GMenuTreeDirectoryRoot *) directory;
-
-  root->tree = tree;
-}
-
-GMenuTree *
-gmenu_tree_directory_get_tree (GMenuTreeDirectory *directory)
-{
-  GMenuTreeDirectoryRoot *root;
-
-  g_return_val_if_fail (directory != NULL, NULL);
-
-  while (GMENU_TREE_ITEM (directory)->parent != NULL)
-    directory = GMENU_TREE_DIRECTORY (GMENU_TREE_ITEM (directory)->parent);
-
-  if (!directory->is_root)
-    return NULL;
-
-  root = (GMenuTreeDirectoryRoot *) directory;
-
-  if (root->tree)
-    g_object_ref (root->tree);
-
-  return root->tree;
 }
 
 gboolean
@@ -4158,8 +4123,6 @@ gmenu_tree_build_from_layout (GMenuTree *tree,
                                allocated);
   if (tree->root)
     {
-      gmenu_tree_directory_set_tree (tree->root, tree);
-
       process_only_unallocated (tree, tree->root, allocated);
 
       /* process the layout info part that can move/remove items:
@@ -4184,7 +4147,6 @@ gmenu_tree_force_rebuild (GMenuTree *tree)
 {
   if (tree->root)
     {
-      gmenu_tree_directory_set_tree (tree->root, NULL);
       gmenu_tree_item_unref (tree->root);
       tree->root = NULL;
       g_clear_error (&tree->load_error);
