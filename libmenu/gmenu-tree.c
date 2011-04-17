@@ -39,6 +39,7 @@ enum {
 /* Signals */
 enum
 {
+  CHANGED,
   LAST_SIGNAL
 };
 
@@ -62,12 +63,6 @@ struct _GMenuTree
 };
 
 G_DEFINE_TYPE (GMenuTree, gmenu_tree, G_TYPE_OBJECT)
-
-typedef struct
-{
-  GMenuTreeChangedFunc callback;
-  gpointer             user_data;
-} GMenuTreeMonitor;
 
 struct GMenuTreeItem
 {
@@ -537,6 +532,21 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
 						       GMENU_TREE_FLAGS_NONE,
 						       G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
 
+  /**
+   * GMenuTree:changed
+   *
+   * This signal is emitted when applications are added, removed, or
+   * upgraded.  But note the new data will only be visible after
+   * gmenu_tree_load_sync() or a variant thereof is invoked.
+   */
+  gmenu_tree_signals[CHANGED] =
+      g_signal_new ("changed",
+                    G_TYPE_FROM_CLASS (klass),
+                    G_SIGNAL_RUN_LAST,
+                    0,
+                    NULL, NULL,
+                    g_cclosure_marshal_VOID__VOID,
+                    G_TYPE_NONE, 0);
 }
 
 
@@ -660,82 +670,10 @@ gmenu_tree_get_directory_from_path (GMenuTree  *tree,
   return directory ? gmenu_tree_item_ref (directory) : NULL;
 }
 
-void
-gmenu_tree_add_monitor (GMenuTree            *tree,
-                       GMenuTreeChangedFunc   callback,
-                       gpointer               user_data)
-{
-  GMenuTreeMonitor *monitor;
-  GSList           *tmp;
-
-  g_return_if_fail (tree != NULL);
-  g_return_if_fail (callback != NULL);
-
-  tmp = tree->monitors;
-  while (tmp != NULL)
-    {
-      monitor = tmp->data;
-
-      if (monitor->callback  == callback &&
-          monitor->user_data == user_data)
-        break;
-
-      tmp = tmp->next;
-    }
-
-  if (tmp == NULL)
-    {
-      monitor = g_new0 (GMenuTreeMonitor, 1);
-
-      monitor->callback  = callback;
-      monitor->user_data = user_data;
-
-      tree->monitors = g_slist_append (tree->monitors, monitor);
-    }
-}
-
-void
-gmenu_tree_remove_monitor (GMenuTree            *tree,
-			   GMenuTreeChangedFunc  callback,
-			   gpointer              user_data)
-{
-  GSList *tmp;
-
-  g_return_if_fail (tree != NULL);
-  g_return_if_fail (callback != NULL);
-
-  tmp = tree->monitors;
-  while (tmp != NULL)
-    {
-      GMenuTreeMonitor *monitor = tmp->data;
-      GSList          *next = tmp->next;
-
-      if (monitor->callback  == callback &&
-          monitor->user_data == user_data)
-        {
-          tree->monitors = g_slist_delete_link (tree->monitors, tmp);
-          g_free (monitor);
-        }
-
-      tmp = next;
-    }
-}
-
 static void
 gmenu_tree_invoke_monitors (GMenuTree *tree)
 {
-  GSList *tmp;
-
-  tmp = tree->monitors;
-  while (tmp != NULL)
-    {
-      GMenuTreeMonitor *monitor = tmp->data;
-      GSList           *next    = tmp->next;
-
-      monitor->callback (tree, monitor->user_data);
-
-      tmp = next;
-    }
+  g_signal_emit (tree, gmenu_tree_signals[CHANGED], 0);
 }
 
 GMenuTreeItemType

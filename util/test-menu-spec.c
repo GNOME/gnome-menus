@@ -226,18 +226,11 @@ main (int argc, char **argv)
     {
       GMainLoop *main_loop;
 
-      gmenu_tree_add_monitor (tree,
-			      (GMenuTreeChangedFunc) handle_tree_changed,
-			      NULL);
+      g_signal_connect (tree, "changed", G_CALLBACK (handle_tree_changed), NULL);
 
       main_loop = g_main_loop_new (NULL, FALSE);
       g_main_loop_run (main_loop);
       g_main_loop_unref (main_loop);
-
-      gmenu_tree_remove_monitor (tree,
-				 (GMenuTreeChangedFunc) handle_tree_changed,
-				 NULL);
-
     }
 
   g_object_unref (tree);

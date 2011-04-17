@@ -52,9 +52,6 @@ typedef struct GMenuTreeSeparator GMenuTreeSeparator;
 typedef struct GMenuTreeHeader    GMenuTreeHeader;
 typedef struct GMenuTreeAlias     GMenuTreeAlias;
 
-typedef void (*GMenuTreeChangedFunc) (GMenuTree *tree,
-				      gpointer  user_data);
-
 typedef enum
 {
   GMENU_TREE_ITEM_INVALID = 0,
@@ -130,13 +127,6 @@ GMenuTreeDirectory *gmenu_tree_header_get_directory (GMenuTreeHeader *header);
 
 GMenuTreeDirectory *gmenu_tree_alias_get_directory (GMenuTreeAlias *alias);
 GMenuTreeItem      *gmenu_tree_alias_get_item      (GMenuTreeAlias *alias);
-
-void gmenu_tree_add_monitor    (GMenuTree            *tree,
-				GMenuTreeChangedFunc  callback,
-				gpointer             user_data);
-void gmenu_tree_remove_monitor (GMenuTree            *tree,
-				GMenuTreeChangedFunc  callback,
-				gpointer             user_data);
 
 G_END_DECLS
 
