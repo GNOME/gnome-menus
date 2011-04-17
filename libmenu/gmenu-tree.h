@@ -69,6 +69,13 @@ typedef enum
 #define GMENU_TREE_HEADER(i)    ((GMenuTreeHeader *)(i))
 #define GMENU_TREE_ALIAS(i)     ((GMenuTreeAlias *)(i))
 
+/* Explicitly skip item, it's a "hidden" base class */
+GType gmenu_tree_directory_get_type (void);
+GType gmenu_tree_entry_get_type (void);
+GType gmenu_tree_separator_get_type (void);
+GType gmenu_tree_header_get_type (void);
+GType gmenu_tree_alias_get_type (void);
+
 typedef enum
 {
   GMENU_TREE_FLAGS_NONE                = 0,
@@ -91,11 +98,6 @@ GMenuTreeDirectory *gmenu_tree_get_directory_from_path (GMenuTree  *tree,
 
 gpointer gmenu_tree_item_ref   (gpointer item);
 void     gmenu_tree_item_unref (gpointer item);
-
-void     gmenu_tree_item_set_user_data (GMenuTreeItem   *item,
-					gpointer        user_data,
-					GDestroyNotify  dnotify);
-gpointer gmenu_tree_item_get_user_data (GMenuTreeItem   *item);
 
 GMenuTreeItemType   gmenu_tree_item_get_item_type   (GMenuTreeItem *item);
 GMenuTreeDirectory *gmenu_tree_item_get_parent (GMenuTreeItem *item);

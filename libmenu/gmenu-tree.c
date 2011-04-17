@@ -70,10 +70,7 @@ struct GMenuTreeItem
 
   GMenuTreeDirectory *parent;
   
-  gpointer       user_data;
-  GDestroyNotify dnotify;
-
-  guint refcount;
+  gint refcount;
 };
 
 struct GMenuTreeDirectory
@@ -1145,7 +1142,7 @@ gmenu_tree_item_ref (gpointer itemp)
   g_return_val_if_fail (item != NULL, NULL);
   g_return_val_if_fail (item->refcount > 0, NULL);
 
-  item->refcount++;
+  g_atomic_int_inc (&item->refcount);
 
   return item;
 }
@@ -1160,7 +1157,7 @@ gmenu_tree_item_unref (gpointer itemp)
   g_return_if_fail (item != NULL);
   g_return_if_fail (item->refcount > 0);
 
-  if (--item->refcount == 0)
+  if (g_atomic_int_dec_and_test (&(item->refcount)))
     {
       switch (item->type)
 	{
@@ -1188,11 +1185,6 @@ gmenu_tree_item_unref (gpointer itemp)
 	  break;
 	}
 
-      if (item->dnotify)
-	item->dnotify (item->user_data);
-      item->user_data = NULL;
-      item->dnotify   = NULL;
-
       item->parent = NULL;
 
       g_free (item);
@@ -1210,28 +1202,6 @@ gmenu_tree_item_unref_and_unset_parent (gpointer itemp)
 
   gmenu_tree_item_set_parent (item, NULL);
   gmenu_tree_item_unref (item);
-}
-
-void
-gmenu_tree_item_set_user_data (GMenuTreeItem  *item,
-			       gpointer        user_data,
-			       GDestroyNotify  dnotify)
-{
-  g_return_if_fail (item != NULL);
-
-  if (item->dnotify != NULL)
-    item->dnotify (item->user_data);
-
-  item->dnotify   = dnotify;
-  item->user_data = user_data;
-}
-
-gpointer
-gmenu_tree_item_get_user_data (GMenuTreeItem *item)
-{
-  g_return_val_if_fail (item != NULL, NULL);
-
-  return item->user_data;
 }
 
 static inline const char *
@@ -4171,6 +4141,71 @@ gmenu_tree_force_rebuild (GMenuTree *tree)
                                                     (MenuLayoutNodeEntriesChangedFunc) handle_entries_changed,
                                                     tree);
     }
+}
+
+GType
+gmenu_tree_directory_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("GMenuTreeDirectory",
+          (GBoxedCopyFunc)gmenu_tree_item_ref,
+          (GBoxedFreeFunc)gmenu_tree_item_unref);
+    }
+  return gtype;
+}
+
+GType
+gmenu_tree_entry_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("GMenuTreeEntry",
+          (GBoxedCopyFunc)gmenu_tree_item_ref,
+          (GBoxedFreeFunc)gmenu_tree_item_unref);
+    }
+  return gtype;
+}
+
+GType
+gmenu_tree_separator_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("GMenuTreeSeparator",
+          (GBoxedCopyFunc)gmenu_tree_item_ref,
+          (GBoxedFreeFunc)gmenu_tree_item_unref);
+    }
+  return gtype;
+}
+
+GType
+gmenu_tree_header_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("GMenuTreeHeader",
+          (GBoxedCopyFunc)gmenu_tree_item_ref,
+          (GBoxedFreeFunc)gmenu_tree_item_unref);
+    }
+  return gtype;
+}
+
+GType
+gmenu_tree_alias_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("GMenuTreeAlias",
+          (GBoxedCopyFunc)gmenu_tree_item_ref,
+          (GBoxedFreeFunc)gmenu_tree_item_unref);
+    }
+  return gtype;
 }
 
 GType
