@@ -227,6 +227,8 @@ main (int argc, char **argv)
       exit (1);
     }
 
+  g_print ("Loaded menu from %s\n", gmenu_tree_get_menu_path (tree));
+
   root = gmenu_tree_get_root_directory (tree);
   if (root != NULL)
     {

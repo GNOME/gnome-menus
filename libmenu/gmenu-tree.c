@@ -562,29 +562,22 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
 }
 
 
+/**
+ * gmenu_tree_get_menu_path:
+ * @tree: a #GMenuTree
+ *
+ * This function is only available if the tree has been loaded via
+ * gmenu_tree_load_sync() or a variant thereof.
+ * 
+ * Returns: The absolute path to the loaded menu file
+ */
 const char *
-gmenu_tree_get_menu_file (GMenuTree *tree)
+gmenu_tree_get_menu_path (GMenuTree *tree)
 {
-  /* FIXME: this is horribly ugly. But it's done to keep the API. Would be bad
-   * to break the API only for a "const char *" => "char *" change. The other
-   * alternative is to leak the memory, which is bad too. */
-  static char *ugly_result_cache = NULL;
+  g_return_val_if_fail (GMENU_IS_TREE (tree), NULL);
+  g_return_val_if_fail (tree->loaded, NULL);
 
-  g_return_val_if_fail (tree != NULL, NULL);
-
-  /* we need to canonicalize the path so we actually find out the real menu
-   * file that is being used -- and take into account XDG_MENU_PREFIX */
-  if (!gmenu_tree_canonicalize_path (tree, NULL))
-    return NULL;
-
-  if (ugly_result_cache != NULL)
-    {
-      g_free (ugly_result_cache);
-      ugly_result_cache = NULL;
-    }
-
-  ugly_result_cache = g_path_get_basename (tree->canonical_path);
-  return ugly_result_cache;
+  return tree->canonical_path;
 }
 
 /**

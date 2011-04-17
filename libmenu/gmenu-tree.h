@@ -94,7 +94,7 @@ GMenuTree *gmenu_tree_new (const char     *menu_file,
 gboolean   gmenu_tree_load_sync (GMenuTree   *tree,
 				 GError     **error);
 
-const char         *gmenu_tree_get_menu_file           (GMenuTree  *tree);
+const char         *gmenu_tree_get_menu_path           (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_root_directory      (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_directory_from_path (GMenuTree  *tree,
 							const char *path);
