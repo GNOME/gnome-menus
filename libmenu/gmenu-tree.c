@@ -225,7 +225,7 @@ gmenu_tree_add_menu_file_monitor (GMenuTree           *tree,
 {
   MenuFileMonitor *monitor;
 
-  monitor = g_new0 (MenuFileMonitor, 1);
+  monitor = g_slice_new0 (MenuFileMonitor);
 
   monitor->type = type;
 
@@ -300,7 +300,7 @@ remove_menu_file_monitor (MenuFileMonitor *monitor,
 
   monitor->type = MENU_FILE_MONITOR_INVALID;
 
-  g_free (monitor);
+  g_slice_free (MenuFileMonitor, monitor);
 }
 
 static void
@@ -957,7 +957,7 @@ gmenu_tree_directory_new (GMenuTreeDirectory *parent,
 
   if (!is_root)
     {
-      retval = g_new0 (GMenuTreeDirectory, 1);
+      retval = g_slice_new0 (GMenuTreeDirectory);
     }
   else
     {
@@ -1039,6 +1039,11 @@ gmenu_tree_directory_finalize (GMenuTreeDirectory *directory)
 
   g_free (directory->name);
   directory->name = NULL;
+
+  if (directory->is_root)
+    g_free (directory);
+  else
+    g_slice_free (GMenuTreeDirectory, directory);
 }
 
 static GMenuTreeSeparator *
@@ -1046,7 +1051,7 @@ gmenu_tree_separator_new (GMenuTreeDirectory *parent)
 {
   GMenuTreeSeparator *retval;
 
-  retval = g_new0 (GMenuTreeSeparator, 1);
+  retval = g_slice_new0 (GMenuTreeSeparator);
 
   retval->item.type     = GMENU_TREE_ITEM_SEPARATOR;
   retval->item.parent   = parent;
@@ -1055,13 +1060,21 @@ gmenu_tree_separator_new (GMenuTreeDirectory *parent)
   return retval;
 }
 
+static void
+gmenu_tree_separator_finalize (GMenuTreeSeparator *separator)
+{
+  g_assert (separator->item.refcount == 0);
+
+  g_slice_free (GMenuTreeSeparator, separator);
+}
+
 static GMenuTreeHeader *
 gmenu_tree_header_new (GMenuTreeDirectory *parent,
 		       GMenuTreeDirectory *directory)
 {
   GMenuTreeHeader *retval;
 
-  retval = g_new0 (GMenuTreeHeader, 1);
+  retval = g_slice_new0 (GMenuTreeHeader);
 
   retval->item.type     = GMENU_TREE_ITEM_HEADER;
   retval->item.parent   = parent;
@@ -1082,6 +1095,7 @@ gmenu_tree_header_finalize (GMenuTreeHeader *header)
   if (header->directory != NULL)
     gmenu_tree_item_unref (header->directory);
   header->directory = NULL;
+  g_slice_free (GMenuTreeHeader, header);
 }
 
 static GMenuTreeAlias *
@@ -1091,7 +1105,7 @@ gmenu_tree_alias_new (GMenuTreeDirectory *parent,
 {
   GMenuTreeAlias *retval;
 
-  retval = g_new0 (GMenuTreeAlias, 1);
+  retval = g_slice_new0 (GMenuTreeAlias);
 
   retval->item.type     = GMENU_TREE_ITEM_ALIAS;
   retval->item.parent   = parent;
@@ -1121,6 +1135,7 @@ gmenu_tree_alias_finalize (GMenuTreeAlias *alias)
   if (alias->aliased_item != NULL)
     gmenu_tree_item_unref (alias->aliased_item);
   alias->aliased_item = NULL;
+  g_slice_free (GMenuTreeAlias, alias);
 }
 
 static GMenuTreeEntry *
@@ -1132,7 +1147,7 @@ gmenu_tree_entry_new (GMenuTreeDirectory *parent,
 {
   GMenuTreeEntry *retval;
 
-  retval = g_new0 (GMenuTreeEntry, 1);
+  retval = g_slice_new0 (GMenuTreeEntry);
 
   retval->item.type     = GMENU_TREE_ITEM_ENTRY;
   retval->item.parent   = parent;
@@ -1157,6 +1172,7 @@ gmenu_tree_entry_finalize (GMenuTreeEntry *entry)
   if (entry->desktop_entry)
     desktop_entry_unref (entry->desktop_entry);
   entry->desktop_entry = NULL;
+  g_slice_free (GMenuTreeEntry, entry);
 }
 
 static int
@@ -1211,6 +1227,7 @@ gmenu_tree_item_unref (gpointer itemp)
 	  break;
 
 	case GMENU_TREE_ITEM_SEPARATOR:
+	  gmenu_tree_separator_finalize (GMENU_TREE_SEPARATOR (item));
 	  break;
 
 	case GMENU_TREE_ITEM_HEADER:
@@ -1225,10 +1242,6 @@ gmenu_tree_item_unref (gpointer itemp)
 	  g_assert_not_reached ();
 	  break;
 	}
-
-      item->parent = NULL;
-
-      g_free (item);
     }
 }
 
