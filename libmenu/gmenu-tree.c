@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2003, 2004 Red Hat, Inc.
+ * Copyright (C) 2003, 2004, 2011 Red Hat, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -51,7 +51,6 @@ struct GMenuTree
   char *canonical_path;
 
   GMenuTreeFlags flags;
-  GMenuTreeSortKey sort_key;
 
   GSList *menu_file_monitors;
 
@@ -618,8 +617,6 @@ gmenu_tree_lookup (const char     *menu_file,
 
   g_return_val_if_fail (menu_file != NULL, NULL);
 
-  flags &= GMENU_TREE_FLAGS_MASK;
-
   if (g_path_is_absolute (menu_file))
     retval = gmenu_tree_lookup_absolute (menu_file, flags);
   else
@@ -643,8 +640,6 @@ gmenu_tree_new (GMenuTreeType   type,
   tree->type     = type;
   tree->flags    = flags;
   tree->refcount = 1;
-
-  tree->sort_key = GMENU_TREE_SORT_NAME;
 
   if (tree->type == GMENU_TREE_BASENAME)
     {
@@ -865,31 +860,6 @@ gmenu_tree_get_directory_from_path (GMenuTree  *tree,
   gmenu_tree_item_unref (root);
 
   return directory ? gmenu_tree_item_ref (directory) : NULL;
-}
-
-GMenuTreeSortKey
-gmenu_tree_get_sort_key (GMenuTree *tree)
-{
-  g_return_val_if_fail (tree != NULL, GMENU_TREE_SORT_NAME);
-  g_return_val_if_fail (tree->refcount > 0, GMENU_TREE_SORT_NAME);
-
-  return tree->sort_key;
-}
-
-void
-gmenu_tree_set_sort_key (GMenuTree        *tree,
-			 GMenuTreeSortKey  sort_key)
-{
-  g_return_if_fail (tree != NULL);
-  g_return_if_fail (tree->refcount > 0);
-  g_return_if_fail (sort_key >= GMENU_TREE_SORT_FIRST);
-  g_return_if_fail (sort_key <= GMENU_TREE_SORT_LAST);
-
-  if (sort_key == tree->sort_key)
-    return;
-
-  tree->sort_key = sort_key;
-  gmenu_tree_force_rebuild (tree);
 }
 
 void
@@ -1530,7 +1500,7 @@ gmenu_tree_item_get_user_data (GMenuTreeItem *item)
 
 static inline const char *
 gmenu_tree_item_compare_get_name_helper (GMenuTreeItem    *item,
-					 GMenuTreeSortKey  sort_key)
+					 GMenuTreeFlags    flags)
 {
   const char *name;
 
@@ -1546,25 +1516,17 @@ gmenu_tree_item_compare_get_name_helper (GMenuTreeItem    *item,
       break;
 
     case GMENU_TREE_ITEM_ENTRY:
-      switch (sort_key)
-	{
-	case GMENU_TREE_SORT_NAME:
-	  name = desktop_entry_get_name (GMENU_TREE_ENTRY (item)->desktop_entry);
-	  break;
-	case GMENU_TREE_SORT_DISPLAY_NAME:
-	  name = g_app_info_get_display_name (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (item))));
-	  break;
-	default:
-	  g_assert_not_reached ();
-	  break;
-	}
+      if (flags & GMENU_TREE_FLAGS_SORT_DISPLAY_NAME)
+	name = g_app_info_get_display_name (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (item))));
+      else
+	name = desktop_entry_get_name (GMENU_TREE_ENTRY (item)->desktop_entry);
       break;
 
     case GMENU_TREE_ITEM_ALIAS:
       {
         GMenuTreeItem *dir;
         dir = GMENU_TREE_ITEM (GMENU_TREE_ALIAS (item)->directory);
-        name = gmenu_tree_item_compare_get_name_helper (dir, sort_key);
+        name = gmenu_tree_item_compare_get_name_helper (dir, flags);
       }
       break;
 
@@ -1581,16 +1543,16 @@ gmenu_tree_item_compare_get_name_helper (GMenuTreeItem    *item,
 static int
 gmenu_tree_item_compare (GMenuTreeItem *a,
 			 GMenuTreeItem *b,
-			 gpointer       sort_key_p)
+			 gpointer       flags_p)
 {
   const char       *name_a;
   const char       *name_b;
-  GMenuTreeSortKey  sort_key;
+  GMenuTreeFlags    flags;
 
-  sort_key = GPOINTER_TO_INT (sort_key_p);
+  flags = GPOINTER_TO_INT (flags_p);
 
-  name_a = gmenu_tree_item_compare_get_name_helper (a, sort_key);
-  name_b = gmenu_tree_item_compare_get_name_helper (b, sort_key);
+  name_a = gmenu_tree_item_compare_get_name_helper (a, flags);
+  name_b = gmenu_tree_item_compare_get_name_helper (b, flags);
 
   return g_utf8_collate (name_a, name_b);
 }
@@ -4069,7 +4031,7 @@ merge_subdirs (GMenuTree          *tree,
 
   subdirs = g_slist_sort_with_data (subdirs,
 				    (GCompareDataFunc) gmenu_tree_item_compare,
-				     GINT_TO_POINTER (GMENU_TREE_SORT_NAME));
+				    0);
 
   tmp = subdirs;
   while (tmp != NULL)
@@ -4114,7 +4076,7 @@ merge_entries (GMenuTree          *tree,
 
   entries = g_slist_sort_with_data (entries,
 				    (GCompareDataFunc) gmenu_tree_item_compare,
-				    GINT_TO_POINTER (tree->sort_key));
+				    GINT_TO_POINTER (tree->flags));
 
   tmp = entries;
   while (tmp != NULL)
@@ -4163,7 +4125,7 @@ merge_subdirs_and_entries (GMenuTree          *tree,
 
   items = g_slist_sort_with_data (items,
 				  (GCompareDataFunc) gmenu_tree_item_compare,
-				  GINT_TO_POINTER (tree->sort_key));
+				  GINT_TO_POINTER (tree->flags));
 
   tmp = items;
   while (tmp != NULL)

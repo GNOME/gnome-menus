@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004 Red Hat, Inc.
+ * Copyright (C) 2004,2011 Red Hat, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -63,16 +63,8 @@ typedef enum
   GMENU_TREE_FLAGS_SHOW_EMPTY          = 1 << 1,
   GMENU_TREE_FLAGS_INCLUDE_NODISPLAY   = 1 << 2,
   GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS = 1 << 3,
-  GMENU_TREE_FLAGS_MASK                = 0x0f
+  GMENU_TREE_FLAGS_SORT_DISPLAY_NAME   = 1 << 4
 } GMenuTreeFlags;
-
-typedef enum
-{
-  #define GMENU_TREE_SORT_FIRST GMENU_TREE_SORT_NAME
-  GMENU_TREE_SORT_NAME = 0,
-  GMENU_TREE_SORT_DISPLAY_NAME
-  #define GMENU_TREE_SORT_LAST GMENU_TREE_SORT_DISPLAY_NAME
-} GMenuTreeSortKey;
 
 GMenuTree *gmenu_tree_lookup (const char     *menu_file,
 			      GMenuTreeFlags  flags);
@@ -89,12 +81,6 @@ const char         *gmenu_tree_get_menu_file           (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_root_directory      (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_directory_from_path (GMenuTree  *tree,
 							const char *path);
-
-GMenuTreeSortKey     gmenu_tree_get_sort_key (GMenuTree        *tree);
-void                 gmenu_tree_set_sort_key (GMenuTree        *tree,
-					      GMenuTreeSortKey  sort_key);
-
-
 
 gpointer gmenu_tree_item_ref   (gpointer item);
 void     gmenu_tree_item_unref (gpointer item);
