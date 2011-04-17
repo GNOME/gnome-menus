@@ -139,9 +139,11 @@ struct GMenuTreeAlias
   GMenuTreeItem      *aliased_item;
 };
 
-static void      gmenu_tree_load_layout          (GMenuTree       *tree);
+static gboolean  gmenu_tree_load_layout          (GMenuTree       *tree,
+						  GError         **error);
 static void      gmenu_tree_force_reload         (GMenuTree       *tree);
-static gboolean  gmenu_tree_build_from_layout    (GMenuTree       *tree, GError **error);
+static gboolean  gmenu_tree_build_from_layout    (GMenuTree       *tree,
+						  GError         **error);
 static void      gmenu_tree_force_rebuild        (GMenuTree       *tree);
 static void      gmenu_tree_resolve_files        (GMenuTree       *tree,
 						  GHashTable      *loaded_menu_files,
@@ -369,7 +371,8 @@ canonicalize_basename (GMenuTree  *tree,
 }
 
 static gboolean
-gmenu_tree_canonicalize_path (GMenuTree *tree)
+gmenu_tree_canonicalize_path (GMenuTree *tree,
+			      GError   **error)
 {
   if (tree->canonical)
     return TRUE;
@@ -393,13 +396,20 @@ gmenu_tree_canonicalize_path (GMenuTree *tree)
     canonicalize_basename (tree, tree->basename);
   
   if (tree->canonical)
-    menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
-		  tree->basename, tree->canonical_path);
+    {
+      menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
+		    tree->basename, tree->canonical_path);
+      return TRUE;
+    }
   else
-    menu_verbose ("Failed to look up menu_file for \"%s\"\n",
-		  tree->basename);
-
-  return tree->canonical;
+    {
+      g_set_error (error,
+		   G_IO_ERROR,
+		   G_IO_ERROR_FAILED,
+		   "Failed to look up menu_file for \"%s\"\n",
+		   tree->basename);
+      return FALSE;
+    }
 }
 
 static void
@@ -564,7 +574,7 @@ gmenu_tree_get_menu_file (GMenuTree *tree)
 
   /* we need to canonicalize the path so we actually find out the real menu
    * file that is being used -- and take into account XDG_MENU_PREFIX */
-  if (!gmenu_tree_canonicalize_path (tree))
+  if (!gmenu_tree_canonicalize_path (tree, NULL))
     return NULL;
 
   if (ugly_result_cache != NULL)
@@ -2553,17 +2563,17 @@ gmenu_tree_execute_moves (GMenuTree      *tree,
     gmenu_tree_strip_duplicate_children (tree, layout);
 }
 
-static void
-gmenu_tree_load_layout (GMenuTree *tree)
+static gboolean
+gmenu_tree_load_layout (GMenuTree *tree,
+			GError   **error)
 {
   GHashTable *loaded_menu_files;
-  GError     *error;
 
   if (tree->layout)
-    return;
+    return TRUE;
 
-  if (!gmenu_tree_canonicalize_path (tree))
-    return;
+  if (!gmenu_tree_canonicalize_path (tree, error))
+    return FALSE;
 
   menu_verbose ("Loading menu layout from \"%s\"\n",
                 tree->canonical_path);
@@ -2571,14 +2581,9 @@ gmenu_tree_load_layout (GMenuTree *tree)
   error = NULL;
   tree->layout = menu_layout_load (tree->canonical_path,
 				   tree->basename,
-                                   &error);
-  if (tree->layout == NULL)
-    {
-      g_warning ("Error loading menu layout from \"%s\": %s",
-                 tree->canonical_path, error->message);
-      g_error_free (error);
-      return;
-    }
+                                   error);
+  if (!tree->layout)
+    return FALSE;
 
   loaded_menu_files = g_hash_table_new (g_str_hash, g_str_equal);
   g_hash_table_insert (loaded_menu_files, tree->canonical_path, GUINT_TO_POINTER (TRUE));
@@ -2587,6 +2592,8 @@ gmenu_tree_load_layout (GMenuTree *tree)
 
   gmenu_tree_strip_duplicate_children (tree, tree->layout);
   gmenu_tree_execute_moves (tree, tree->layout, NULL);
+
+  return TRUE;
 }
 
 static void
@@ -4131,15 +4138,8 @@ gmenu_tree_build_from_layout (GMenuTree *tree,
   if (tree->root)
     return TRUE;
 
-  gmenu_tree_load_layout (tree);
-  if (!tree->layout)
-    {
-      g_set_error (error,
-		   G_IO_ERROR,
-		   G_IO_ERROR_FAILED,
-		   "Failed to load layout");
-      return FALSE;
-    }
+  if (!gmenu_tree_load_layout (tree, error))
+    return FALSE;
 
   menu_verbose ("Building menu tree from layout\n");
 
