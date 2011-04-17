@@ -29,25 +29,11 @@
 #include "menu-util.h"
 #include "canonicalize.h"
 
-/*
- * FIXME: it might be useful to be able to construct a menu
- * tree from a traditional directory based menu hierarchy
- * too.
- */
-
-typedef enum
-{
-  GMENU_TREE_ABSOLUTE = 0,
-  GMENU_TREE_BASENAME = 1
-} GMenuTreeType;
-
 struct GMenuTree
 {
-  GMenuTreeType type;
   guint         refcount;
 
   char *basename;
-  char *absolute_path;
   char *canonical_path;
 
   GMenuTreeFlags flags;
@@ -146,10 +132,6 @@ struct GMenuTreeAlias
   GMenuTreeItem      *aliased_item;
 };
 
-static GMenuTree *gmenu_tree_new                 (GMenuTreeType    type,
-						  const char      *menu_file,
-						  gboolean         canonical,
-						  GMenuTreeFlags   flags);
 static void      gmenu_tree_load_layout          (GMenuTree       *tree);
 static void      gmenu_tree_force_reload         (GMenuTree       *tree);
 static void      gmenu_tree_build_from_layout    (GMenuTree       *tree);
@@ -161,106 +143,6 @@ static void      gmenu_tree_force_recanonicalize (GMenuTree       *tree);
 static void      gmenu_tree_invoke_monitors      (GMenuTree       *tree);
      
 static void gmenu_tree_item_unref_and_unset_parent (gpointer itemp);
-
-/*
- * The idea is that we cache the menu tree for either a given
- * menu basename or an absolute menu path.
- * If no files exist in $XDG_DATA_DIRS for the basename or the
- * absolute path doesn't exist we just return (and cache) the
- * empty menu tree.
- * We also add a file monitor for the basename in each dir in
- * $XDG_DATA_DIRS, or the absolute path to the menu file, and
- * re-compute if there are any changes.
- */
-
-static GHashTable *gmenu_tree_cache = NULL;
-
-static inline char *
-get_cache_key (GMenuTree      *tree,
-	       GMenuTreeFlags  flags)
-{
-  const char *tree_name;
-
-  switch (tree->type)
-    {
-    case GMENU_TREE_ABSOLUTE:
-      tree_name = tree->canonical ? tree->canonical_path : tree->absolute_path;
-      break;
-
-    case GMENU_TREE_BASENAME:
-      tree_name = tree->basename;
-      break;
-
-    default:
-      g_assert_not_reached ();
-      break;
-    }
-
-  return g_strdup_printf ("%s:0x%x", tree_name, flags);
-}
-
-static void
-gmenu_tree_add_to_cache (GMenuTree      *tree,
-			 GMenuTreeFlags  flags)
-{
-  char *cache_key;
-
-  if (gmenu_tree_cache == NULL)
-    {
-      gmenu_tree_cache =
-        g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
-    }
-
-  cache_key = get_cache_key (tree, flags);
-
-  menu_verbose ("Adding menu tree to cache: %s\n", cache_key);
-
-  g_hash_table_replace (gmenu_tree_cache, cache_key, tree);
-}
-
-static void
-gmenu_tree_remove_from_cache (GMenuTree      *tree,
-			      GMenuTreeFlags  flags)
-{
-  char *cache_key;
-
-  cache_key = get_cache_key (tree, flags);
-
-  menu_verbose ("Removing menu tree from cache: %s\n", cache_key);
-
-  g_hash_table_remove (gmenu_tree_cache, cache_key);
-
-  g_free (cache_key);
-
-  if (g_hash_table_size (gmenu_tree_cache) == 0)
-    {
-      g_hash_table_destroy (gmenu_tree_cache);
-      gmenu_tree_cache = NULL;
-
-      _entry_directory_list_empty_desktop_cache ();
-    }
-}
-
-static GMenuTree *
-gmenu_tree_lookup_from_cache (const char    *tree_name,
-			      GMenuTreeFlags  flags)
-{
-  GMenuTree *retval;
-  char     *cache_key;
-
-  if (gmenu_tree_cache == NULL)
-    return NULL;
-
-  cache_key = g_strdup_printf ("%s:0x%x", tree_name, flags);
-
-  menu_verbose ("Looking up '%s' from menu cache\n", cache_key);
-
-  retval = g_hash_table_lookup (gmenu_tree_cache, cache_key);
-
-  g_free (cache_key);
-
-  return retval ? gmenu_tree_ref (retval) : NULL;
-}
 
 typedef enum
 {
@@ -424,54 +306,6 @@ gmenu_tree_remove_menu_file_monitors (GMenuTree *tree)
   tree->menu_file_monitors = NULL;
 }
 
-static GMenuTree *
-gmenu_tree_lookup_absolute (const char    *absolute,
-			    GMenuTreeFlags  flags)
-{
-  GMenuTree  *tree;
-  gboolean    canonical;
-  const char *canonical_path;
-  char       *freeme;
-
-  menu_verbose ("Looking up absolute path in tree cache: \"%s\"\n", absolute);
-
-  if ((tree = gmenu_tree_lookup_from_cache (absolute, flags)) != NULL)
-    return tree;
-
-  canonical = TRUE;
-  canonical_path = freeme = menu_canonicalize_file_name (absolute, FALSE);
-  if (canonical_path == NULL)
-    {
-      menu_verbose ("Failed to canonicalize absolute menu path \"%s\": %s\n",
-                    absolute, g_strerror (errno));
-      canonical = FALSE;
-      canonical_path = absolute;
-    }
-
-  if ((tree = gmenu_tree_lookup_from_cache (canonical_path, flags)) != NULL)
-    return tree;
-
-  tree = gmenu_tree_new (GMENU_TREE_ABSOLUTE, canonical_path, canonical, flags);
-
-  g_free (freeme);
-
-  return tree;
-}
-
-static GMenuTree *
-gmenu_tree_lookup_basename (const char    *basename,
-			    GMenuTreeFlags  flags)
-{
-  GMenuTree *tree;
-
-  menu_verbose ("Looking up menu file in tree cache: \"%s\"\n", basename);
-
-  if ((tree = gmenu_tree_lookup_from_cache (basename, flags)) != NULL)
-    return tree;
-
-  return gmenu_tree_new (GMENU_TREE_BASENAME, basename, FALSE, flags);
-}
-
 static gboolean
 canonicalize_basename_with_config_dir (GMenuTree   *tree,
                                        const char *basename,
@@ -535,60 +369,28 @@ gmenu_tree_canonicalize_path (GMenuTree *tree)
 
   g_assert (tree->canonical_path == NULL);
 
-  if (tree->type == GMENU_TREE_BASENAME)
+  gmenu_tree_remove_menu_file_monitors (tree);
+  
+  if (strcmp (tree->basename, "applications.menu") == 0 &&
+      g_getenv ("XDG_MENU_PREFIX"))
     {
-      gmenu_tree_remove_menu_file_monitors (tree);
-
-      if (strcmp (tree->basename, "applications.menu") == 0 &&
-          g_getenv ("XDG_MENU_PREFIX"))
-        {
-          char *prefixed_basename;
-          prefixed_basename = g_strdup_printf ("%s%s",
-                                               g_getenv ("XDG_MENU_PREFIX"),
-                                               tree->basename);
-          canonicalize_basename (tree, prefixed_basename);
-          g_free (prefixed_basename);
-        }
-
-      if (!tree->canonical)
-        canonicalize_basename (tree, tree->basename);
-
-      if (tree->canonical)
-        menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
-                      tree->basename, tree->canonical_path);
-      else
-        menu_verbose ("Failed to look up menu_file for \"%s\"\n",
-                      tree->basename);
+      char *prefixed_basename;
+      prefixed_basename = g_strdup_printf ("%s%s",
+					   g_getenv ("XDG_MENU_PREFIX"),
+					   tree->basename);
+      canonicalize_basename (tree, prefixed_basename);
+      g_free (prefixed_basename);
     }
-  else /* if (tree->type == GMENU_TREE_ABSOLUTE) */
-    {
-      tree->canonical_path =
-        menu_canonicalize_file_name (tree->absolute_path, FALSE);
-      if (tree->canonical_path != NULL)
-        {
-          menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
-                        tree->absolute_path, tree->canonical_path);
-
-	  /*
-	   * Replace the cache entry with the canonicalized version
-	   */
-          gmenu_tree_remove_from_cache (tree, tree->flags);
-
-          gmenu_tree_remove_menu_file_monitors (tree);
-          gmenu_tree_add_menu_file_monitor (tree,
-					    tree->canonical_path,
-					    MENU_FILE_MONITOR_FILE);
-
-          tree->canonical = TRUE;
-
-          gmenu_tree_add_to_cache (tree, tree->flags);
-        }
-      else
-        {
-          menu_verbose ("Failed to look up menu_file for \"%s\"\n",
-                        tree->absolute_path);
-        }
-    }
+  
+  if (!tree->canonical)
+    canonicalize_basename (tree, tree->basename);
+  
+  if (tree->canonical)
+    menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
+		  tree->basename, tree->canonical_path);
+  else
+    menu_verbose ("Failed to look up menu_file for \"%s\"\n",
+		  tree->basename);
 
   return tree->canonical;
 }
@@ -609,64 +411,25 @@ gmenu_tree_force_recanonicalize (GMenuTree *tree)
     }
 }
 
+/**
+ * gmenu_tree_new:
+ * @menu_file: Basename of menu file
+ * @flags: Flags controlling menu content
+ *
+ * Returns: (transfer full): A new #GMenuTree instance
+ */
 GMenuTree *
-gmenu_tree_lookup (const char     *menu_file,
-		   GMenuTreeFlags  flags)
-{
-  GMenuTree *retval;
-
-  g_return_val_if_fail (menu_file != NULL, NULL);
-
-  if (g_path_is_absolute (menu_file))
-    retval = gmenu_tree_lookup_absolute (menu_file, flags);
-  else
-    retval = gmenu_tree_lookup_basename (menu_file, flags);
-
-  g_assert (retval != NULL);
-
-  return retval;
-}
-
-static GMenuTree *
-gmenu_tree_new (GMenuTreeType   type,
-		const char     *menu_file,
-		gboolean        canonical,
+gmenu_tree_new (const char     *menu_file,
 		GMenuTreeFlags  flags)
 {
   GMenuTree *tree;
 
-  tree = g_new0 (GMenuTree, 1);
+  g_return_val_if_fail (menu_file != NULL, NULL);
 
-  tree->type     = type;
+  tree = g_new0 (GMenuTree, 1);
   tree->flags    = flags;
   tree->refcount = 1;
-
-  if (tree->type == GMENU_TREE_BASENAME)
-    {
-      g_assert (canonical == FALSE);
-      tree->basename = g_strdup (menu_file);
-    }
-  else
-    {
-      tree->canonical     = canonical != FALSE;
-      tree->absolute_path = g_strdup (menu_file);
-
-      if (tree->canonical)
-	{
-	  tree->canonical_path = g_strdup (menu_file);
-	  gmenu_tree_add_menu_file_monitor (tree,
-					    tree->canonical_path,
-					    MENU_FILE_MONITOR_FILE);
-	}
-      else
-	{
-	  gmenu_tree_add_menu_file_monitor (tree,
-					    tree->absolute_path,
-					    MENU_FILE_MONITOR_NONEXISTENT_FILE);
-	}
-    }
-
-  gmenu_tree_add_to_cache (tree, tree->flags);
+  tree->basename = g_strdup (menu_file);
 
   return tree;
 }
@@ -696,17 +459,15 @@ gmenu_tree_unref (GMenuTree *tree)
   tree->user_data = NULL;
   tree->dnotify   = NULL;
 
-  gmenu_tree_remove_from_cache (tree, tree->flags);
-
   gmenu_tree_force_recanonicalize (tree);
 
   if (tree->basename != NULL)
     g_free (tree->basename);
   tree->basename = NULL;
 
-  if (tree->absolute_path != NULL)
-    g_free (tree->absolute_path);
-  tree->absolute_path = NULL;
+  if (tree->canonical_path != NULL)
+    g_free (tree->canonical_path);
+  tree->canonical_path = NULL;
 
   g_slist_foreach (tree->monitors, (GFunc) g_free, NULL);
   g_slist_free (tree->monitors);
@@ -758,13 +519,8 @@ gmenu_tree_get_menu_file (GMenuTree *tree)
       ugly_result_cache = NULL;
     }
 
-  if (tree->type == GMENU_TREE_BASENAME)
-    {
-      ugly_result_cache = g_path_get_basename (tree->canonical_path);
-      return ugly_result_cache;
-    }
-  else
-    return tree->absolute_path;
+  ugly_result_cache = g_path_get_basename (tree->canonical_path);
+  return ugly_result_cache;
 }
 
 GMenuTreeDirectory *
@@ -2826,8 +2582,7 @@ gmenu_tree_load_layout (GMenuTree *tree)
 
   error = NULL;
   tree->layout = menu_layout_load (tree->canonical_path,
-                                   tree->type == GMENU_TREE_BASENAME ?
-                                        tree->basename : NULL,
+				   tree->basename,
                                    &error);
   if (tree->layout == NULL)
     {

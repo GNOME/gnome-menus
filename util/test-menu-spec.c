@@ -206,7 +206,7 @@ main (int argc, char **argv)
   if (include_nodisplay)
     flags |= GMENU_TREE_FLAGS_INCLUDE_NODISPLAY;
 
-  tree = gmenu_tree_lookup (menu_file ? menu_file : "applications.menu", flags);
+  tree = gmenu_tree_new (menu_file ? menu_file : "applications.menu", flags);
   g_assert (tree != NULL);
 
   root = gmenu_tree_get_root_directory (tree);

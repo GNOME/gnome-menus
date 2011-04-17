@@ -68,8 +68,8 @@ typedef enum
 GType gmenu_tree_flags_get_type (void);
 #define GMENU_TYPE_TREE_FLAGS (gmenu_tree_flags_get_type ())
 
-GMenuTree *gmenu_tree_lookup (const char     *menu_file,
-			      GMenuTreeFlags  flags);
+GMenuTree *gmenu_tree_new (const char     *menu_file,
+			   GMenuTreeFlags  flags);
 
 GMenuTree *gmenu_tree_ref   (GMenuTree *tree);
 void       gmenu_tree_unref (GMenuTree *tree);

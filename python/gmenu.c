@@ -1815,7 +1815,7 @@ pygmenu_lookup_tree (PyObject *self,
   if (!PyArg_ParseTuple (args, "s|i:gmenu.lookup_tree", &menu_file, &flags))
     return NULL;
 
-  if (!(tree = gmenu_tree_lookup (menu_file, flags)))
+  if (!(tree = gmenu_tree_new (menu_file, flags)))
     {
       Py_INCREF (Py_None);
       return Py_None;
