@@ -28,7 +28,23 @@
 
 G_BEGIN_DECLS
 
-typedef struct GMenuTree          GMenuTree;
+#define GMENU_TYPE_TREE         (gmenu_tree_get_type ())
+#define GMENU_TREE(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), GMENU_TYPE_TREE, GMenuTree))
+#define GMENU_TREE_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), GMENU_TYPE_TREE, GMenuTreeClass))
+#define GMENU_IS_TREE(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), GMENU_TYPE_TREE))
+#define GMENU_IS_TREE_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), GMENU_TYPE_TREE))
+#define GMENU_TREE_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), G_TYPE_DESKTOP_APP_INFO, GMenuTreeClass))
+
+typedef struct _GMenuTree        GMenuTree;
+typedef struct _GMenuTreeClass   GMenuTreeClass;
+
+struct _GMenuTreeClass
+{
+  GObjectClass parent_class;
+};
+
+GType            gmenu_tree_get_type          (void) G_GNUC_CONST;
+
 typedef struct GMenuTreeItem      GMenuTreeItem;
 typedef struct GMenuTreeDirectory GMenuTreeDirectory;
 typedef struct GMenuTreeEntry     GMenuTreeEntry;
@@ -70,14 +86,6 @@ GType gmenu_tree_flags_get_type (void);
 
 GMenuTree *gmenu_tree_new (const char     *menu_file,
 			   GMenuTreeFlags  flags);
-
-GMenuTree *gmenu_tree_ref   (GMenuTree *tree);
-void       gmenu_tree_unref (GMenuTree *tree);
-
-void     gmenu_tree_set_user_data (GMenuTree       *tree,
-				   gpointer        user_data,
-				   GDestroyNotify  dnotify);
-gpointer gmenu_tree_get_user_data (GMenuTree       *tree);
 
 const char         *gmenu_tree_get_menu_file           (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_root_directory      (GMenuTree  *tree);

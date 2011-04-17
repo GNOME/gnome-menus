@@ -1,12 +1,10 @@
 SUBDIRS = libmenu desktop-directories layout util po
 
-if HAVE_PYTHON
-SUBDIRS += python simple-editor
-endif
+SUBDIRS += simple-editor
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-DISTCHECK_CONFIGURE_FLAGS = --enable-introspection --enable-python
+DISTCHECK_CONFIGURE_FLAGS = --enable-introspection
 
 EXTRA_DIST = 			\
 	HACKING			\

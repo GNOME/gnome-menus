@@ -72,39 +72,8 @@ else
 fi
 AC_SUBST(DEBUG_CFLAGS)
 
-AC_ARG_ENABLE(python,
-              [AC_HELP_STRING([--enable-python],
-                              [build python bindings @<:@default=auto@:>@])],
-              [enable_deprecations=$enableval],
-              [enable_deprecations=auto])
-
-# Detect if we can build Python bindings (need python and python headers)
-if test "x$enable_python" = "xno" ; then
-  have_python=no
-else
-  AC_MSG_NOTICE([Checking to see if we can build Python bindings])
-  have_python=no
-  AM_PATH_PYTHON(2.3)
-
-  if test "x$PYTHON" = "x" ; then
-    AC_MSG_WARN([Python not found])
-  else
-    AM_CHECK_PYTHON_HEADERS(have_python_headers=yes, have_python_headers=no)
-    if test "x$have_python_headers" = "xyes" ; then
-      have_python=yes
-    fi
-  fi
-
-  if test "x$have_python" = "xno" ; then
-    if test "x$enable_python" = "xyes" ; then
-      AC_MSG_ERROR([Building python explicitly requested, but can't build python bindings])
-    else
-      AC_MSG_WARN([Couldn't find the Python headers, not building Python bindings])
-    fi
-  fi
-fi
-
-AM_CONDITIONAL(HAVE_PYTHON, test x$have_python = xyes)
+AM_PATH_PYTHON(2.3)
+AM_CONDITIONAL(HAVE_PYTHON, test x$PYTHON != xyes)
 
 # Because of the way Python implements polymorphism, we get the following warning:
 # "warning: dereferencing type-punned pointer will break strict-aliasing rules"
@@ -136,7 +105,6 @@ libmenu/libgnome-menu-uninstalled.pc
 layout/Makefile
 desktop-directories/Makefile
 util/Makefile
-python/Makefile
 simple-editor/Makefile
 simple-editor/GMenuSimpleEditor/Makefile
 po/Makefile.in
@@ -165,7 +133,6 @@ echo "
         Use *_DISABLE_DEPRECATED:     ${enable_deprecation_flags}
 
         Turn on debugging:            ${enable_debug}
-        Build python bindings:        ${have_python}
         Build introspection support:  ${found_introspection}
 
 "

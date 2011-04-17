@@ -203,17 +203,8 @@ static MenuMonitor *
 register_monitor (const char *path,
 		  gboolean    is_directory)
 {
-  static gboolean  initted = FALSE;
   MenuMonitor     *retval;
   GFile           *file;
-
-  if (!initted)
-    {
-      /* This is the only place where we're using GObject and the app can't
-       * know we're using it, so we need to init the type system ourselves. */
-      g_type_init ();
-      initted = TRUE;
-    }
 
   retval = g_new0 (MenuMonitor, 1);
 

@@ -29,9 +29,24 @@
 #include "menu-util.h"
 #include "canonicalize.h"
 
-struct GMenuTree
+enum {
+  PROP_0,
+
+  PROP_NAME,
+  PROP_FLAGS
+};
+
+/* Signals */
+enum
 {
-  guint         refcount;
+  LAST_SIGNAL
+};
+
+static guint gmenu_tree_signals [LAST_SIGNAL] = { 0 };
+
+struct _GMenuTree
+{
+  GObject       parent_instance;
 
   char *basename;
   char *canonical_path;
@@ -43,13 +58,10 @@ struct GMenuTree
   MenuLayoutNode *layout;
   GMenuTreeDirectory *root;
 
-  GSList *monitors;
-
-  gpointer       user_data;
-  GDestroyNotify dnotify;
-
   guint canonical : 1;
 };
+
+G_DEFINE_TYPE (GMenuTree, gmenu_tree, G_TYPE_OBJECT)
 
 typedef struct
 {
@@ -419,45 +431,61 @@ gmenu_tree_force_recanonicalize (GMenuTree *tree)
  * Returns: (transfer full): A new #GMenuTree instance
  */
 GMenuTree *
-gmenu_tree_new (const char     *menu_file,
+gmenu_tree_new (const char     *name,
 		GMenuTreeFlags  flags)
 {
-  GMenuTree *tree;
+  g_return_val_if_fail (name != NULL, NULL);
 
-  g_return_val_if_fail (menu_file != NULL, NULL);
-
-  tree = g_new0 (GMenuTree, 1);
-  tree->flags    = flags;
-  tree->refcount = 1;
-  tree->basename = g_strdup (menu_file);
-
-  return tree;
+  return g_object_new (GMENU_TYPE_TREE, "name", name, "flags", flags, NULL);
 }
 
-GMenuTree *
-gmenu_tree_ref (GMenuTree *tree)
+static void
+gmenu_tree_set_property(GObject         *object,
+			guint            prop_id,
+			const GValue    *value,
+			GParamSpec      *pspec)
 {
-  g_return_val_if_fail (tree != NULL, NULL);
-  g_return_val_if_fail (tree->refcount > 0, NULL);
+  GMenuTree *self = GMENU_TREE (object);
 
-  tree->refcount++;
+  switch (prop_id)
+    {
+    case PROP_NAME:
+      self->basename = g_value_dup_string (value);
+      break;
 
-  return tree;
+    case PROP_FLAGS:
+      self->flags = g_value_get_flags (value);
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
 }
 
-void
-gmenu_tree_unref (GMenuTree *tree)
+static void
+gmenu_tree_get_property(GObject         *object,
+			guint            prop_id,
+			GValue          *value,
+			GParamSpec      *pspec)
 {
-  g_return_if_fail (tree != NULL);
-  g_return_if_fail (tree->refcount >= 1);
+  GMenuTree *self = GMENU_TREE (object);
 
-  if (--tree->refcount > 0)
-    return;
+  switch (prop_id)
+    {
+    case PROP_NAME:
+      g_value_set_string (value, self->basename);
+      break;
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
+    }
+}
 
-  if (tree->dnotify)
-    tree->dnotify (tree->user_data);
-  tree->user_data = NULL;
-  tree->dnotify   = NULL;
+static void
+gmenu_tree_finalize (GObject *object)
+{
+  GMenuTree *tree = GMENU_TREE (object);
 
   gmenu_tree_force_recanonicalize (tree);
 
@@ -469,34 +497,48 @@ gmenu_tree_unref (GMenuTree *tree)
     g_free (tree->canonical_path);
   tree->canonical_path = NULL;
 
-  g_slist_foreach (tree->monitors, (GFunc) g_free, NULL);
-  g_slist_free (tree->monitors);
-  tree->monitors = NULL;
-
-  g_free (tree);
+  G_OBJECT_CLASS (gmenu_tree_parent_class)->finalize (object);
 }
 
-void
-gmenu_tree_set_user_data (GMenuTree       *tree,
-			  gpointer        user_data,
-			  GDestroyNotify  dnotify)
+static void
+gmenu_tree_init (GMenuTree *self)
 {
-  g_return_if_fail (tree != NULL);
-
-  if (tree->dnotify != NULL)
-    tree->dnotify (tree->user_data);
-
-  tree->dnotify   = dnotify;
-  tree->user_data = user_data;
 }
 
-gpointer
-gmenu_tree_get_user_data (GMenuTree *tree)
+static void
+gmenu_tree_class_init (GMenuTreeClass *klass)
 {
-  g_return_val_if_fail (tree != NULL, NULL);
+  GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
-  return tree->user_data;
+  gobject_class->get_property = gmenu_tree_get_property;
+  gobject_class->set_property = gmenu_tree_set_property;
+  gobject_class->finalize = gmenu_tree_finalize;
+
+  /**
+   * GMenuTree:name
+   *
+   * The name of the menu file; must be a relative path.  See
+   * the Desktop Menu specification.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_NAME,
+                                   g_param_spec_string ("name", "", "",
+							NULL,
+                                                        G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
+  /**
+   * GMenuTree:flags
+   *
+   * Flags controlling the content of the menu.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_FLAGS,
+                                   g_param_spec_flags ("flags", "", "",
+						       GMENU_TYPE_TREE_FLAGS,
+						       GMENU_TREE_FLAGS_NONE,
+						       G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
+
 }
+
 
 const char *
 gmenu_tree_get_menu_file (GMenuTree *tree)
@@ -825,7 +867,7 @@ gmenu_tree_directory_get_tree (GMenuTreeDirectory *directory)
   root = (GMenuTreeDirectoryRoot *) directory;
 
   if (root->tree)
-    gmenu_tree_ref (root->tree);
+    g_object_ref (root->tree);
 
   return root->tree;
 }

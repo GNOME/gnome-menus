@@ -23,7 +23,7 @@
 import optparse
 import sys
 
-import gmenu
+import gi.GMenu
 
 def print_entry(entry, path):
     if entry.get_is_excluded():

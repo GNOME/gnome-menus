@@ -188,6 +188,8 @@ main (int argc, char **argv)
   GMenuTreeDirectory *root;
   GMenuTreeFlags      flags;
 
+  g_type_init ();
+
 #if 0
   /* See comment when defining _() at the top of this file. */
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
@@ -238,7 +240,7 @@ main (int argc, char **argv)
 
     }
 
-  gmenu_tree_unref (tree);
+  g_object_unref (tree);
 
   return 0;
 }
