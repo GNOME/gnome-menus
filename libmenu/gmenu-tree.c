@@ -4437,3 +4437,23 @@ gmenu_tree_force_rebuild (GMenuTree *tree)
                                                     tree);
     }
 }
+
+GType
+gmenu_tree_flags_get_type (void)
+{
+  static GType enum_type_id = 0;
+  if (G_UNLIKELY (!enum_type_id))
+    {
+      static const GFlagsValue values[] = {
+        { GMENU_TREE_FLAGS_NONE, "GMENU_TREE_FLAGS_NONE", "none" },
+        { GMENU_TREE_FLAGS_INCLUDE_EXCLUDED, "GMENU_TREE_FLAGS_INCLUDE_EXCLUDED", "include-excluded" },
+        { GMENU_TREE_FLAGS_SHOW_EMPTY, "GMENU_TREE_FLAGS_SHOW_EMPTY", "show-empty" },
+        { GMENU_TREE_FLAGS_INCLUDE_NODISPLAY, "GMENU_TREE_FLAGS_INCLUDE_NODISPLAY", "include-nodisplay" },
+        { GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS, "GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS", "show-all-separators" },
+        { GMENU_TREE_FLAGS_SORT_DISPLAY_NAME, "GMENU_TREE_FLAGS_SORT_DISPLAY_NAME", "sort-display-name" },
+        { 0, NULL, NULL }
+      };
+      enum_type_id = g_flags_register_static ("GMenuTreeFlags", values);
+    }
+  return enum_type_id;
+}

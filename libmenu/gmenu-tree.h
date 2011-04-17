@@ -65,6 +65,8 @@ typedef enum
   GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS = 1 << 3,
   GMENU_TREE_FLAGS_SORT_DISPLAY_NAME   = 1 << 4
 } GMenuTreeFlags;
+GType gmenu_tree_flags_get_type (void);
+#define GMENU_TYPE_TREE_FLAGS (gmenu_tree_flags_get_type ())
 
 GMenuTree *gmenu_tree_lookup (const char     *menu_file,
 			      GMenuTreeFlags  flags);
