@@ -721,6 +721,12 @@ gmenu_tree_item_get_item_type (GMenuTreeItem *item)
   return item->type;
 }
 
+/**
+ * gmenu_tree_directory_get_parent:
+ * @entry: a #GMenuTreeDirectory
+ *
+ * Returns: (transfer full): The parent directory, or %NULL if none
+ */
 GMenuTreeDirectory *
 gmenu_tree_directory_get_parent (GMenuTreeDirectory *directory)
 {
@@ -730,6 +736,12 @@ gmenu_tree_directory_get_parent (GMenuTreeDirectory *directory)
   return item->parent ? gmenu_tree_item_ref (item->parent) : NULL;
 }
 
+/**
+ * gmenu_tree_entry_get_parent:
+ * @entry: a #GMenuTreeEntry
+ *
+ * Returns: (transfer full): The parent directory, or %NULL if none
+ */
 GMenuTreeDirectory *
 gmenu_tree_entry_get_parent (GMenuTreeEntry *entry)
 {
@@ -866,6 +878,12 @@ gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
   return g_string_free (path, FALSE);
 }
 
+/**
+ * gmenu_tree_entry_get_app_info:
+ * @entry: a #GMenuTreeEntry
+ *
+ * Returns: (transfer none): The #GDesktopAppInfo for this entry
+ */
 GDesktopAppInfo *
 gmenu_tree_entry_get_app_info (GMenuTreeEntry *entry)
 {
