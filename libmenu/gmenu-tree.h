@@ -118,6 +118,7 @@ char *gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
 
 
 GDesktopAppInfo *gmenu_tree_entry_get_app_info       (GMenuTreeEntry *entry);
+GMenuTreeDirectory *gmenu_tree_entry_get_parent      (GMenuTreeEntry *entry);
 
 const char *gmenu_tree_entry_get_desktop_file_path (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_desktop_file_id   (GMenuTreeEntry *entry);

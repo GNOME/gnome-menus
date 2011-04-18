@@ -730,6 +730,15 @@ gmenu_tree_directory_get_parent (GMenuTreeDirectory *directory)
   return item->parent ? gmenu_tree_item_ref (item->parent) : NULL;
 }
 
+GMenuTreeDirectory *
+gmenu_tree_entry_get_parent (GMenuTreeEntry *entry)
+{
+  GMenuTreeItem *item = (GMenuTreeItem*)entry;
+  g_return_val_if_fail (item != NULL, NULL);
+
+  return item->parent ? gmenu_tree_item_ref (item->parent) : NULL;
+}
+
 static void
 gmenu_tree_item_set_parent (GMenuTreeItem      *item,
 			    GMenuTreeDirectory *parent)
