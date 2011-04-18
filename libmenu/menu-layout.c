@@ -64,8 +64,10 @@ struct MenuLayoutNodeRoot
   char *basedir;
   char *name;
 
+  GMainContext *main_context;
+
   GSList *monitors;
-  guint   monitors_idle_handler;
+  GSource *monitors_idle_handler;
 };
 
 struct MenuLayoutNodeMenu
@@ -141,7 +143,7 @@ menu_layout_invoke_monitors (MenuLayoutNodeRoot *nr)
 
   g_assert (nr->node.type == MENU_LAYOUT_NODE_ROOT);
 
-  nr->monitors_idle_handler = 0;
+  nr->monitors_idle_handler = NULL;
 
   tmp = nr->monitors;
   while (tmp != NULL)
@@ -167,9 +169,13 @@ handle_entry_directory_changed (EntryDirectory *dir,
 
   nr = (MenuLayoutNodeRoot *) menu_layout_node_get_root (node);
 
-  if (nr->monitors_idle_handler == 0)
+  if (nr->monitors_idle_handler == NULL)
     {
-      nr->monitors_idle_handler = g_idle_add ((GSourceFunc) menu_layout_invoke_monitors, nr);
+      nr->monitors_idle_handler = g_idle_source_new ();
+      g_source_set_callback (nr->monitors_idle_handler,
+			     (GSourceFunc) menu_layout_invoke_monitors, nr, NULL);
+      g_source_attach (nr->monitors_idle_handler, nr->main_context);
+      g_source_unref (nr->monitors_idle_handler);
     }
 }
 
@@ -241,9 +247,13 @@ menu_layout_node_unref (MenuLayoutNode *node)
           g_slist_foreach (nr->monitors, (GFunc) g_free, NULL);
           g_slist_free (nr->monitors);
 
-          if (nr->monitors_idle_handler != 0)
-            g_source_remove (nr->monitors_idle_handler);
-          nr->monitors_idle_handler = 0;
+	  if (nr->main_context != NULL)
+	    g_main_context_unref (nr->main_context);
+	  nr->main_context = NULL;
+
+          if (nr->monitors_idle_handler != NULL)
+	    g_source_destroy (nr->monitors_idle_handler);
+	  nr->monitors_idle_handler = NULL;
 
           g_free (nr->basedir);
           g_free (nr->name);
@@ -2287,6 +2297,7 @@ menu_layout_load (const char  *filename,
                   const char  *non_prefixed_basename,
                   GError     **err)
 {
+  GMainContext        *main_context;
   GMarkupParseContext *context;
   MenuLayoutNodeRoot  *root;
   MenuLayoutNode      *retval;
@@ -2301,6 +2312,8 @@ menu_layout_load (const char  *filename,
   length = 0;
   retval = NULL;
   context = NULL;
+
+  main_context = g_main_context_get_thread_default ();
 
   menu_verbose ("Loading \"%s\" from disk\n", filename);
 
@@ -2348,6 +2361,8 @@ menu_layout_load (const char  *filename,
 
   error = NULL;
   g_markup_parse_context_end_parse (context, &error);
+
+  root->main_context = main_context ? g_main_context_ref (main_context) : NULL;
 
  out:
   if (context)
