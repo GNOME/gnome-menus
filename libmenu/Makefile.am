@@ -55,8 +55,7 @@ INTROSPECTION_SCANNER_ARGS = --warn-all --add-include-path=$(srcdir)
 INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
 
 if HAVE_INTROSPECTION
-# Note: we only include the headers here so far because there's no gtk-doc at all anyway
-introspection_sources = $(libgnome_menu_include_HEADERS)
+introspection_sources = $(libgnome_menu_include_HEADERS) gmenu-tree.c
 
 GMenu-2.0.gir: libgnome-menu.la
 GMenu_2_0_gir_INCLUDES = Gio-2.0
