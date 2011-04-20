@@ -106,8 +106,7 @@ print_entry (GMenuTreeEntry *entry,
 static void
 print_directory (GMenuTreeDirectory *directory)
 {
-  GSList     *items;
-  GSList     *tmp;
+  GMenuTreeIter *iter;
   const char *path;
   char       *freeme;
 
@@ -117,34 +116,42 @@ print_directory (GMenuTreeDirectory *directory)
   else
     path = freeme + 1;
 
-  items = gmenu_tree_directory_get_contents (directory);
+  iter = gmenu_tree_directory_iter (directory);
 
-  tmp = items;
-  while (tmp != NULL)
+  while (TRUE)
     {
-      GMenuTreeItem *item = tmp->data;
+      gpointer item;
 
-      switch (gmenu_tree_item_get_item_type (item))
+      switch (gmenu_tree_iter_next (iter))
 	{
+	case GMENU_TREE_ITEM_INVALID:
+	  goto done;
+
 	case GMENU_TREE_ITEM_ENTRY:
-	  print_entry (GMENU_TREE_ENTRY (item), path);
+	  item = gmenu_tree_iter_get_entry (iter);
+	  print_entry ((GMenuTreeEntry*)item, path);
 	  break;
 
 	case GMENU_TREE_ITEM_DIRECTORY:
-	  print_directory (GMENU_TREE_DIRECTORY (item));
+	  item = gmenu_tree_iter_get_directory (iter);
+	  print_directory ((GMenuTreeDirectory*)item);
 	  break;
 
 	case GMENU_TREE_ITEM_HEADER:
 	case GMENU_TREE_ITEM_SEPARATOR:
+	  item = NULL;
 	  break;
 
 	case GMENU_TREE_ITEM_ALIAS:
 	  {
-	    GMenuTreeItem *aliased_item;
+	    item = gmenu_tree_iter_get_alias (iter);
 
-	    aliased_item = gmenu_tree_alias_get_item (GMENU_TREE_ALIAS (item));
-	    if (gmenu_tree_item_get_item_type (aliased_item) == GMENU_TREE_ITEM_ENTRY)
-	      print_entry (GMENU_TREE_ENTRY (aliased_item), path);
+	    if (gmenu_tree_alias_get_item_type (item) == GMENU_TREE_ITEM_ENTRY)
+	      {
+		GMenuTreeEntry *entry = gmenu_tree_alias_get_aliased_entry (item);
+		print_entry (entry, path);
+		gmenu_tree_item_unref (entry);
+	      }
 	  }
 	  break;
 
@@ -153,12 +160,13 @@ print_directory (GMenuTreeDirectory *directory)
 	  break;
 	}
 
-      gmenu_tree_item_unref (tmp->data);
-
-      tmp = tmp->next;
+      gmenu_tree_item_unref (item);
+      continue;
+    done:
+      break;
     }
 
-  g_slist_free (items);
+  gmenu_tree_iter_unref (iter);
 
   g_free (freeme);
 }

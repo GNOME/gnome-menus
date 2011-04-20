@@ -29,6 +29,15 @@
 #include "menu-util.h"
 #include "canonicalize.h"
 
+/* private */
+typedef struct GMenuTreeItem GMenuTreeItem;
+#define GMENU_TREE_ITEM(i)      ((GMenuTreeItem *)(i))
+#define GMENU_TREE_DIRECTORY(i) ((GMenuTreeDirectory *)(i))
+#define GMENU_TREE_ENTRY(i)     ((GMenuTreeEntry *)(i))
+#define GMENU_TREE_SEPARATOR(i) ((GMenuTreeSeparator *)(i))
+#define GMENU_TREE_HEADER(i)    ((GMenuTreeHeader *)(i))
+#define GMENU_TREE_ALIAS(i)     ((GMenuTreeAlias *)(i))
+
 enum {
   PROP_0,
 
@@ -74,6 +83,17 @@ struct GMenuTreeItem
   GMenuTreeDirectory *parent;
   
   gint refcount;
+};
+
+struct GMenuTreeIter
+{
+  gint refcount;
+
+  gint tree_serial;
+
+  GMenuTreeItem *item;
+  GSList *contents;
+  GSList *contents_iter;
 };
 
 struct GMenuTreeDirectory
@@ -660,7 +680,7 @@ find_path (GMenuTreeDirectory *directory,
     {
       GMenuTreeItem *item = tmp->data;
 
-      if (gmenu_tree_item_get_item_type (item) != GMENU_TREE_ITEM_DIRECTORY)
+      if (item->type != GMENU_TREE_ITEM_DIRECTORY)
         {
           tmp = tmp->next;
           continue;
@@ -713,14 +733,6 @@ gmenu_tree_invoke_monitors (GMenuTree *tree)
   g_signal_emit (tree, gmenu_tree_signals[CHANGED], 0);
 }
 
-GMenuTreeItemType
-gmenu_tree_item_get_item_type (GMenuTreeItem *item)
-{
-  g_return_val_if_fail (item != NULL, 0);
-
-  return item->type;
-}
-
 /**
  * gmenu_tree_directory_get_parent:
  * @entry: a #GMenuTreeDirectory
@@ -760,26 +772,158 @@ gmenu_tree_item_set_parent (GMenuTreeItem      *item,
   item->parent = parent;
 }
 
-GSList *
-gmenu_tree_directory_get_contents (GMenuTreeDirectory *directory)
+/**
+ * gmenu_tree_iter_ref: (skip)
+ * @iter: iter
+ *
+ * Increment the reference count of @iter
+ */
+GMenuTreeIter *
+gmenu_tree_iter_ref     (GMenuTreeIter *iter)
 {
-  GSList *retval;
-  GSList *tmp;
+  g_atomic_int_inc (&iter->refcount);
+  return iter;
+}
+
+/**
+ * gmenu_tree_iter_unref: (skip)
+ * @iter: iter
+ *
+ * Decrement the reference count of @iter
+ */
+void
+gmenu_tree_iter_unref   (GMenuTreeIter *iter)
+{
+  if (!g_atomic_int_dec_and_test (&iter->refcount))
+    return;
+
+  g_slist_foreach (iter->contents, (GFunc)gmenu_tree_item_unref, NULL);
+  g_slist_free (iter->contents);
+
+  g_slice_free (GMenuTreeIter, iter);
+}
+
+/**
+ * gmenu_tree_directory_iter:
+ * @directory: directory
+ *
+ * Returns: (transfer full): A new iterator over the directory contents
+ */
+GMenuTreeIter *
+gmenu_tree_directory_iter (GMenuTreeDirectory *directory)
+{
+  GMenuTreeIter *iter;
 
   g_return_val_if_fail (directory != NULL, NULL);
 
-  retval = NULL;
+  iter = g_slice_new0 (GMenuTreeIter);
+  iter->refcount = 1;
 
-  tmp = directory->contents;
-  while (tmp != NULL)
+  iter->contents = g_slist_copy (directory->contents);
+  iter->contents_iter = iter->contents;
+  g_slist_foreach (iter->contents, (GFunc) gmenu_tree_item_ref, NULL);
+
+  return iter;
+}
+
+/**
+ * gmenu_tree_iter_next:
+ * @iter: iter
+ *
+ * Change the iterator to the next item, and return its type.  If
+ * there are no more items, %GMENU_TREE_ITEM_INVALID is returned.
+ *
+ * Returns: The type of the next item that can be retrived from the iterator
+ */
+GMenuTreeItemType
+gmenu_tree_iter_next (GMenuTreeIter   *iter)
+{
+  g_return_val_if_fail (iter != NULL, GMENU_TREE_ITEM_INVALID);
+
+  if (iter->contents_iter)
     {
-      retval = g_slist_prepend (retval,
-                                gmenu_tree_item_ref (tmp->data));
-
-      tmp = tmp->next;
+      iter->item = iter->contents_iter->data;
+      iter->contents_iter = iter->contents_iter->next;
+      return iter->item->type;
     }
+  else
+    return GMENU_TREE_ITEM_INVALID;
+}
 
-  return g_slist_reverse (retval);
+/**
+ * gmenu_tree_iter_get_directory:
+ * @iter: iter
+ *
+ * This method may only be called if gmenu_tree_iter_get_next_type()
+ * returned GMENU_TREE_ITEM_DIRECTORY.
+ *
+ * Returns: (transfer full): A directory
+ */
+GMenuTreeDirectory *
+gmenu_tree_iter_get_directory (GMenuTreeIter   *iter)
+{
+  g_return_val_if_fail (iter != NULL, NULL);
+  g_return_val_if_fail (iter->item != NULL, NULL);
+  g_return_val_if_fail (iter->item->type == GMENU_TREE_ITEM_DIRECTORY, NULL);
+ 
+  return (GMenuTreeDirectory*)gmenu_tree_item_ref (iter->item);
+}
+
+/**
+ * gmenu_tree_iter_get_entry:
+ * @iter: iter
+ *
+ * This method may only be called if gmenu_tree_iter_get_next_type()
+ * returned GMENU_TREE_ITEM_ENTRY.
+ *
+ * Returns: (transfer full): An entry
+ */
+GMenuTreeEntry *
+gmenu_tree_iter_get_entry (GMenuTreeIter   *iter)
+{
+  g_return_val_if_fail (iter != NULL, NULL);
+  g_return_val_if_fail (iter->item != NULL, NULL);
+  g_return_val_if_fail (iter->item->type == GMENU_TREE_ITEM_ENTRY, NULL);
+ 
+  return (GMenuTreeEntry*)gmenu_tree_item_ref (iter->item);
+}
+
+/**
+ * gmenu_tree_iter_get_header:
+ * @iter: iter
+ *
+ * This method may only be called if gmenu_tree_iter_get_next_type()
+ * returned GMENU_TREE_ITEM_HEADER.
+ *
+ * Returns: (transfer full): A header
+ */
+GMenuTreeHeader *
+gmenu_tree_iter_get_header (GMenuTreeIter   *iter)
+{
+  g_return_val_if_fail (iter != NULL, NULL);
+  g_return_val_if_fail (iter->item != NULL, NULL);
+  g_return_val_if_fail (iter->item->type == GMENU_TREE_ITEM_HEADER, NULL);
+ 
+  return (GMenuTreeHeader*)gmenu_tree_item_ref (iter->item);
+}
+
+/**
+ * gmenu_tree_iter_get_alias:
+ * @iter: iter
+ *
+ * This method may only be called if gmenu_tree_iter_get_next_type()
+ * returned GMENU_TREE_ITEM_ALIAS.
+ *
+ * Returns: (transfer full): An alias
+ */
+GMenuTreeAlias *
+gmenu_tree_iter_get_alias (GMenuTreeIter   *iter)
+{
+  g_return_val_if_fail (iter != NULL, NULL);
+  g_return_val_if_fail (iter->item != NULL, NULL);
+  g_return_val_if_fail (iter->item->type == GMENU_TREE_ITEM_ALIAS, NULL);
+ 
+  return (GMenuTreeAlias*)gmenu_tree_item_ref (iter->item);
 }
 
 const char *
@@ -924,6 +1068,16 @@ gmenu_tree_header_get_directory (GMenuTreeHeader *header)
   return gmenu_tree_item_ref (header->directory);
 }
 
+GMenuTreeItemType
+gmenu_tree_alias_get_item_type (GMenuTreeAlias *alias)
+{
+  g_return_val_if_fail (alias != NULL, GMENU_TREE_ITEM_INVALID);
+
+  g_assert (alias->aliased_item != NULL);
+  return alias->aliased_item->type;
+}
+
+
 GMenuTreeDirectory *
 gmenu_tree_alias_get_directory (GMenuTreeAlias *alias)
 {
@@ -932,12 +1086,34 @@ gmenu_tree_alias_get_directory (GMenuTreeAlias *alias)
   return gmenu_tree_item_ref (alias->directory);
 }
 
-GMenuTreeItem *
-gmenu_tree_alias_get_item (GMenuTreeAlias *alias)
+/**
+ * gmenu_tree_alias_get_aliased_directory:
+ * @alias: alias
+ *
+ * Returns: (transfer full): The aliased directory entry
+ */
+GMenuTreeDirectory *
+gmenu_tree_alias_get_aliased_directory (GMenuTreeAlias *alias)
 {
   g_return_val_if_fail (alias != NULL, NULL);
+  g_return_val_if_fail (((GMenuTreeItem*)alias->aliased_item)->type == GMENU_TREE_ITEM_DIRECTORY, NULL);
 
-  return gmenu_tree_item_ref (alias->aliased_item);
+  return (GMenuTreeDirectory*)gmenu_tree_item_ref (alias->aliased_item);
+}
+/**
+
+ * gmenu_tree_alias_get_aliased_entry:
+ * @alias: alias
+ *
+ * Returns: (transfer full): The aliased entry
+ */
+GMenuTreeEntry *
+gmenu_tree_alias_get_aliased_entry (GMenuTreeAlias *alias)
+{
+  g_return_val_if_fail (alias != NULL, NULL);
+  g_return_val_if_fail (((GMenuTreeItem*)alias->aliased_item)->type == GMENU_TREE_ITEM_ENTRY, NULL);
+
+  return (GMenuTreeEntry*)gmenu_tree_item_ref (alias->aliased_item);
 }
 
 static GMenuTreeDirectory *
@@ -1107,7 +1283,10 @@ gmenu_tree_alias_new (GMenuTreeDirectory *parent,
   if (item->type != GMENU_TREE_ITEM_ALIAS)
     retval->aliased_item = gmenu_tree_item_ref (item);
   else
-    retval->aliased_item = gmenu_tree_item_ref (gmenu_tree_alias_get_item (GMENU_TREE_ALIAS (item)));
+    {
+      GMenuTreeAlias *alias = GMENU_TREE_ALIAS (item);
+      retval->aliased_item = gmenu_tree_item_ref (alias->aliased_item);
+    }
 
   gmenu_tree_item_set_parent (GMENU_TREE_ITEM (retval->directory), NULL);
   gmenu_tree_item_set_parent (retval->aliased_item, NULL);
@@ -3881,7 +4060,7 @@ merge_subdirs_and_entries (GMenuTree          *tree,
       GMenuTreeItem     *item = tmp->data;
       GMenuTreeItemType  type;
 
-      type = gmenu_tree_item_get_item_type (item);
+      type = item->type;
 
       if (type == GMENU_TREE_ITEM_ALIAS)
         {
@@ -4185,6 +4364,19 @@ gmenu_tree_force_rebuild (GMenuTree *tree)
                                                     (MenuLayoutNodeEntriesChangedFunc) handle_entries_changed,
                                                     tree);
     }
+}
+
+GType
+gmenu_tree_iter_get_type (void)
+{
+  static GType gtype = G_TYPE_INVALID;
+  if (gtype == G_TYPE_INVALID)
+    {
+      gtype = g_boxed_type_register_static ("GMenuTreeIter",
+          (GBoxedCopyFunc)gmenu_tree_iter_ref,
+          (GBoxedFreeFunc)gmenu_tree_iter_unref);
+    }
+  return gtype;
 }
 
 GType

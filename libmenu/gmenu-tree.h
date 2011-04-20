@@ -45,7 +45,7 @@ struct _GMenuTreeClass
 
 GType            gmenu_tree_get_type          (void) G_GNUC_CONST;
 
-typedef struct GMenuTreeItem      GMenuTreeItem;
+typedef struct GMenuTreeIter      GMenuTreeIter;
 typedef struct GMenuTreeDirectory GMenuTreeDirectory;
 typedef struct GMenuTreeEntry     GMenuTreeEntry;
 typedef struct GMenuTreeSeparator GMenuTreeSeparator;
@@ -62,12 +62,7 @@ typedef enum
   GMENU_TREE_ITEM_ALIAS
 } GMenuTreeItemType;
 
-#define GMENU_TREE_ITEM(i)      ((GMenuTreeItem *)(i))
-#define GMENU_TREE_DIRECTORY(i) ((GMenuTreeDirectory *)(i))
-#define GMENU_TREE_ENTRY(i)     ((GMenuTreeEntry *)(i))
-#define GMENU_TREE_SEPARATOR(i) ((GMenuTreeSeparator *)(i))
-#define GMENU_TREE_HEADER(i)    ((GMenuTreeHeader *)(i))
-#define GMENU_TREE_ALIAS(i)     ((GMenuTreeAlias *)(i))
+GType gmenu_tree_iter_get_type (void);
 
 /* Explicitly skip item, it's a "hidden" base class */
 GType gmenu_tree_directory_get_type (void);
@@ -101,10 +96,8 @@ GMenuTreeDirectory *gmenu_tree_get_directory_from_path (GMenuTree  *tree,
 
 gpointer gmenu_tree_item_ref   (gpointer item);
 void     gmenu_tree_item_unref (gpointer item);
-GMenuTreeItemType   gmenu_tree_item_get_item_type   (GMenuTreeItem *item);
 
 GMenuTreeDirectory *gmenu_tree_directory_get_parent    (GMenuTreeDirectory *directory);
-GSList     *gmenu_tree_directory_get_contents          (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_name              (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_comment           (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_icon              (GMenuTreeDirectory *directory);
@@ -113,12 +106,23 @@ const char *gmenu_tree_directory_get_menu_id           (GMenuTreeDirectory *dire
 
 gboolean gmenu_tree_directory_get_is_nodisplay (GMenuTreeDirectory *directory);
 
+GMenuTreeIter *gmenu_tree_directory_iter               (GMenuTreeDirectory *directory);
+
+GMenuTreeIter *gmenu_tree_iter_ref     (GMenuTreeIter *iter);
+void           gmenu_tree_iter_unref   (GMenuTreeIter *iter);
+
+GMenuTreeItemType   gmenu_tree_iter_next                 (GMenuTreeIter   *iter); 
+GMenuTreeDirectory *gmenu_tree_iter_get_directory        (GMenuTreeIter   *iter); 
+GMenuTreeEntry     *gmenu_tree_iter_get_entry            (GMenuTreeIter   *iter); 
+GMenuTreeHeader    *gmenu_tree_iter_get_header           (GMenuTreeIter   *iter); 
+GMenuTreeAlias     *gmenu_tree_iter_get_alias            (GMenuTreeIter   *iter); 
+
 char *gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
 				      GMenuTreeEntry     *entry);
 
 
-GDesktopAppInfo *gmenu_tree_entry_get_app_info       (GMenuTreeEntry *entry);
-GMenuTreeDirectory *gmenu_tree_entry_get_parent      (GMenuTreeEntry *entry);
+GDesktopAppInfo    *gmenu_tree_entry_get_app_info       (GMenuTreeEntry *entry);
+GMenuTreeDirectory *gmenu_tree_entry_get_parent         (GMenuTreeEntry *entry);
 
 const char *gmenu_tree_entry_get_desktop_file_path (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_desktop_file_id   (GMenuTreeEntry *entry);
@@ -128,8 +132,10 @@ gboolean gmenu_tree_entry_get_is_nodisplay (GMenuTreeEntry *entry);
 
 GMenuTreeDirectory *gmenu_tree_header_get_directory (GMenuTreeHeader *header);
 
-GMenuTreeDirectory *gmenu_tree_alias_get_directory (GMenuTreeAlias *alias);
-GMenuTreeItem      *gmenu_tree_alias_get_item      (GMenuTreeAlias *alias);
+GMenuTreeDirectory *gmenu_tree_alias_get_directory         (GMenuTreeAlias *alias);
+GMenuTreeItemType   gmenu_tree_alias_get_item_type         (GMenuTreeAlias *alias);
+GMenuTreeDirectory *gmenu_tree_alias_get_aliased_directory (GMenuTreeAlias *alias);
+GMenuTreeEntry     *gmenu_tree_alias_get_aliased_entry     (GMenuTreeAlias *alias);
 
 G_END_DECLS
 
