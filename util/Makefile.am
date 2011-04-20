@@ -17,14 +17,6 @@ gnome_menu_spec_test_LDADD =		\
 	$(GIO_UNIX_LIBS)		\
 	../libmenu/libgnome-menu.la
 
-if HAVE_PYTHON
-pyexampledir = $(pkgdatadir)/examples
-pyexample_DATA = gnome-menus-ls.py
-else
-pyexampledir =
-pyexample_DATA =
-endif
-
-EXTRA_DIST = $(pyexample_DATA)
+EXTRA_DIST = gnome-menus-ls.js
 
 -include $(top_srcdir)/git.mk
