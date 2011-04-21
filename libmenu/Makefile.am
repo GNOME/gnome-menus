@@ -57,13 +57,13 @@ INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
 if HAVE_INTROSPECTION
 introspection_sources = $(libgnome_menu_include_HEADERS) gmenu-tree.c
 
-GMenu-2.0.gir: libgnome-menu.la
-GMenu_2_0_gir_INCLUDES = Gio-2.0
-GMenu_2_0_gir_CFLAGS = $(AM_CPPFLAGS)
-GMenu_2_0_gir_LIBS = libgnome-menu.la
-GMenu_2_0_gir_SCANNERFLAGS = --identifier-prefix=GMenu --symbol-prefix=gmenu --pkg-export=libgnome-menu
-GMenu_2_0_gir_FILES = $(addprefix $(srcdir)/,$(introspection_sources))
-INTROSPECTION_GIRS += GMenu-2.0.gir
+GMenu-4.0.gir: libgnome-menu.la
+GMenu_4_0_gir_INCLUDES = Gio-2.0
+GMenu_4_0_gir_CFLAGS = $(AM_CPPFLAGS)
+GMenu_4_0_gir_LIBS = libgnome-menu.la
+GMenu_4_0_gir_SCANNERFLAGS = --identifier-prefix=GMenu --symbol-prefix=gmenu --pkg-export=libgnome-menu
+GMenu_4_0_gir_FILES = $(addprefix $(srcdir)/,$(introspection_sources))
+INTROSPECTION_GIRS += GMenu-4.0.gir
 
 girdir = $(INTROSPECTION_GIRDIR)
 gir_DATA = $(INTROSPECTION_GIRS)
