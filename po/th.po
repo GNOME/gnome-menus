@@ -1,7 +1,7 @@
 # Thai translation of gnome-menus.
-# Copyright (C) 2004-2009 Free Software Foundation, Inc.
+# Copyright (C) 2004-2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
-# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2004-2007.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2004-2011.
 #
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-menus 2.9.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-07-23 15:10+0700\n"
-"PO-Revision-Date: 2009-07-23 15:13+0700\n"
+"PO-Revision-Date: 2011-04-25 08:40+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -135,11 +135,11 @@ msgstr "ตั้งค่าและเฝ้าดูระบบ"
 
 #: desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "สิ่งอำนวยความสะดวก"
+msgstr "การเข้าถึงหลากหลาย"
 
 #: desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "ตั้งค่าสิ่งอำนวยความสะดวก"
+msgstr "ตั้งค่าการเข้าถึงหลากหลาย"
 
 #: desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -266,7 +266,7 @@ msgid "- test GNOME's implementation of the Desktop Menu Specification"
 msgstr "- ทดสอบการทำงานของระบบเมนู GNOME ตามข้อกำหนดเมนูเดสก์ท็อป"
 
 #~ msgid "Universal access related preferences"
-#~ msgstr "การปรับแต่งเกี่ยวกับสิ่งอำนวยความสะดวก"
+#~ msgstr "การปรับแต่งเกี่ยวกับการเข้าถึงหลากหลาย"
 
 #~ msgid "Personal preferences and settings"
 #~ msgstr "ปรับแต่งและตั้งค่าพื้นโต๊ะส่วนตัว"
