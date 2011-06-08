@@ -735,7 +735,7 @@ gmenu_tree_invoke_monitors (GMenuTree *tree)
 
 /**
  * gmenu_tree_directory_get_parent:
- * @entry: a #GMenuTreeDirectory
+ * @directory: a #GMenuTreeDirectory
  *
  * Returns: (transfer full): The parent directory, or %NULL if none
  */
@@ -1360,6 +1360,12 @@ gmenu_tree_entry_compare_by_id (GMenuTreeItem *a,
                  GMENU_TREE_ENTRY (b)->desktop_file_id);
 }
 
+/**
+ * gmenu_tree_item_ref:
+ * @item: a #GMenuTreeItem
+ *
+ * Returns: (transfer full): The same @item, or %NULL if @item is not a valid #GMenuTreeItem
+ */
 gpointer
 gmenu_tree_item_ref (gpointer itemp)
 {
