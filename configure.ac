@@ -73,7 +73,6 @@ fi
 AC_SUBST(DEBUG_CFLAGS)
 
 AM_PATH_PYTHON(2.3)
-AM_CONDITIONAL(HAVE_PYTHON, test x$PYTHON != xyes)
 
 # Because of the way Python implements polymorphism, we get the following warning:
 # "warning: dereferencing type-punned pointer will break strict-aliasing rules"
