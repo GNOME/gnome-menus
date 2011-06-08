@@ -22,7 +22,6 @@
 #include "gmenu-tree.h"
 
 #include <string.h>
-#include <stdlib.h>
 
 /* This is only a test program, so we don't need translations. Still keep the
  * infrastructure in place in case we suddenly decide we want to localize this
@@ -232,7 +231,7 @@ main (int argc, char **argv)
   if (!gmenu_tree_load_sync (tree, &error))
     {
       g_printerr ("Failed to load tree: %s\n", error->message);
-      exit (1);
+      return 1;
     }
 
   g_print ("Loaded menu from %s\n", gmenu_tree_get_menu_path (tree));
