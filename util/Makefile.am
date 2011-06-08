@@ -15,7 +15,7 @@ gnome_menu_spec_test_SOURCES =		\
 
 gnome_menu_spec_test_LDADD =		\
 	$(GIO_UNIX_LIBS)		\
-	../libmenu/libgnome-menu.la
+	../libmenu/libgnome-menu-3.la
 
 EXTRA_DIST = gnome-menus-ls.js
 

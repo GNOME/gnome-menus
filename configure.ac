@@ -20,10 +20,10 @@ GNOME_MAINTAINER_MODE_DEFINES
 #   change to C+1:0:0
 # - If the interface is the same as the previous version, change to C:R+1:A
 
-LIB_MENU_LT_VERSION=7:0:0
+LIB_MENU_LT_VERSION=0:0:0
 AC_SUBST(LIB_MENU_LT_VERSION)
 
-GETTEXT_PACKAGE=gnome-menus
+GETTEXT_PACKAGE=gnome-menus-3.0
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Name of default gettext domain])
 AC_SUBST(GETTEXT_PACKAGE)
 
@@ -99,8 +99,8 @@ GOBJECT_INTROSPECTION_CHECK([0.9.5])
 AC_OUTPUT([
 Makefile
 libmenu/Makefile
-libmenu/libgnome-menu.pc
-libmenu/libgnome-menu-uninstalled.pc
+libmenu/libgnome-menu-3.0.pc
+libmenu/libgnome-menu-3.0-uninstalled.pc
 layout/Makefile
 desktop-directories/Makefile
 util/Makefile
