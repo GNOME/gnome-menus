@@ -183,10 +183,6 @@ desktop_entry_load_directory (DesktopEntry  *entry,
 static gboolean
 desktop_entry_load (DesktopEntry *entry)
 {
-  GKeyFile *key_file;
-  GError   *error = NULL;
-  gboolean  retval = FALSE;
-
   if (entry->type == DESKTOP_ENTRY_DESKTOP)
     {
       DesktopEntryDesktop *entry_desktop = (DesktopEntryDesktop*)entry;
@@ -218,6 +214,10 @@ desktop_entry_load (DesktopEntry *entry)
     }
   else if (entry->type == DESKTOP_ENTRY_DIRECTORY)
     {
+      GKeyFile *key_file = NULL;
+      GError   *error = NULL;
+      gboolean  retval = FALSE;
+
       key_file = g_key_file_new ();
 
       if (!g_key_file_load_from_file (key_file, entry->path, 0, &error))
@@ -226,13 +226,28 @@ desktop_entry_load (DesktopEntry *entry)
       if (!desktop_entry_load_directory (entry, key_file, &error))
         goto out;
 
+      retval = TRUE;
+
+    out:
       g_key_file_free (key_file);
+
+      if (!retval)
+        {
+          if (error)
+            {
+              menu_verbose ("Failed to load \"%s\": %s\n", entry->path, error->message);
+              g_error_free (error);
+            }
+          else
+            menu_verbose ("Failed to load \"%s\"\n", entry->path);
+        }
+
+      return retval;
     }
   else
     g_assert_not_reached ();
-  
- out:
-  return retval;
+
+  return FALSE;
 }
 
 DesktopEntry *
