@@ -1069,7 +1069,7 @@ gmenu_tree_header_get_directory (GMenuTreeHeader *header)
 }
 
 GMenuTreeItemType
-gmenu_tree_alias_get_item_type (GMenuTreeAlias *alias)
+gmenu_tree_alias_get_aliased_item_type (GMenuTreeAlias *alias)
 {
   g_return_val_if_fail (alias != NULL, GMENU_TREE_ITEM_INVALID);
 

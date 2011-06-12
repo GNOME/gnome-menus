@@ -132,7 +132,7 @@ gboolean gmenu_tree_entry_get_is_excluded  (GMenuTreeEntry *entry);
 GMenuTreeDirectory *gmenu_tree_header_get_directory (GMenuTreeHeader *header);
 
 GMenuTreeDirectory *gmenu_tree_alias_get_directory         (GMenuTreeAlias *alias);
-GMenuTreeItemType   gmenu_tree_alias_get_item_type         (GMenuTreeAlias *alias);
+GMenuTreeItemType   gmenu_tree_alias_get_aliased_item_type (GMenuTreeAlias *alias);
 GMenuTreeDirectory *gmenu_tree_alias_get_aliased_directory (GMenuTreeAlias *alias);
 GMenuTreeEntry     *gmenu_tree_alias_get_aliased_entry     (GMenuTreeAlias *alias);
 
