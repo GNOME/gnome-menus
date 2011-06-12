@@ -854,7 +854,7 @@ gmenu_tree_iter_next (GMenuTreeIter *iter)
  * gmenu_tree_iter_get_directory:
  * @iter: iter
  *
- * This method may only be called if gmenu_tree_iter_get_next_type()
+ * This method may only be called if gmenu_tree_iter_next()
  * returned GMENU_TREE_ITEM_DIRECTORY.
  *
  * Returns: (transfer full): A directory
@@ -873,7 +873,7 @@ gmenu_tree_iter_get_directory (GMenuTreeIter *iter)
  * gmenu_tree_iter_get_entry:
  * @iter: iter
  *
- * This method may only be called if gmenu_tree_iter_get_next_type()
+ * This method may only be called if gmenu_tree_iter_next()
  * returned GMENU_TREE_ITEM_ENTRY.
  *
  * Returns: (transfer full): An entry
@@ -892,7 +892,7 @@ gmenu_tree_iter_get_entry (GMenuTreeIter *iter)
  * gmenu_tree_iter_get_header:
  * @iter: iter
  *
- * This method may only be called if gmenu_tree_iter_get_next_type()
+ * This method may only be called if gmenu_tree_iter_next()
  * returned GMENU_TREE_ITEM_HEADER.
  *
  * Returns: (transfer full): A header
@@ -911,7 +911,7 @@ gmenu_tree_iter_get_header (GMenuTreeIter *iter)
  * gmenu_tree_iter_get_alias:
  * @iter: iter
  *
- * This method may only be called if gmenu_tree_iter_get_next_type()
+ * This method may only be called if gmenu_tree_iter_next()
  * returned GMENU_TREE_ITEM_ALIAS.
  *
  * Returns: (transfer full): An alias
