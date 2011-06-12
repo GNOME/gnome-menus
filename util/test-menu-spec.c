@@ -145,7 +145,7 @@ print_directory (GMenuTreeDirectory *directory)
 	  {
 	    item = gmenu_tree_iter_get_alias (iter);
 
-	    if (gmenu_tree_alias_get_item_type (item) == GMENU_TREE_ITEM_ENTRY)
+	    if (gmenu_tree_alias_get_aliased_item_type (item) == GMENU_TREE_ITEM_ENTRY)
 	      {
 		GMenuTreeEntry *entry = gmenu_tree_alias_get_aliased_entry (item);
 		print_entry (entry, path);
