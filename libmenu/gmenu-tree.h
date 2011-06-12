@@ -128,7 +128,6 @@ const char *gmenu_tree_entry_get_desktop_file_path (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_desktop_file_id   (GMenuTreeEntry *entry);
 
 gboolean gmenu_tree_entry_get_is_excluded  (GMenuTreeEntry *entry);
-gboolean gmenu_tree_entry_get_is_nodisplay (GMenuTreeEntry *entry);
 
 GMenuTreeDirectory *gmenu_tree_header_get_directory (GMenuTreeHeader *header);
 
