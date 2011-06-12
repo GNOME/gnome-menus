@@ -455,7 +455,7 @@ desktop_entry_get_comment (DesktopEntry *entry)
 }
 
 const char *
-desktop_entry_desktop_get_icon (DesktopEntry *entry)
+desktop_entry_get_icon (DesktopEntry *entry)
 {
   g_return_val_if_fail (entry->type == DESKTOP_ENTRY_DIRECTORY, NULL);
   return ((DesktopEntryDirectory*)entry)->icon;

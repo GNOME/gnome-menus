@@ -956,7 +956,7 @@ gmenu_tree_directory_get_icon (GMenuTreeDirectory *directory)
   if (!directory->directory_entry)
     return NULL;
 
-  return desktop_entry_desktop_get_icon (directory->directory_entry);
+  return desktop_entry_get_icon (directory->directory_entry);
 }
 
 const char *

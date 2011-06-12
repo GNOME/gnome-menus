@@ -49,7 +49,7 @@ gboolean          desktop_entry_get_hidden   (DesktopEntry *entry);
 gboolean          desktop_entry_get_no_display (DesktopEntry *entry);
 
 /* Only valid for DESKTOP_ENTRY_DIRECTORY */
-const char       *desktop_entry_desktop_get_icon (DesktopEntry *entry);
+const char       *desktop_entry_get_icon     (DesktopEntry *entry);
 
 /* Only valid for DESKTOP_ENTRY_DESKTOP */
 GDesktopAppInfo  *desktop_entry_get_app_info (DesktopEntry *entry);
