@@ -499,6 +499,9 @@ gmenu_tree_get_property (GObject         *object,
     case PROP_NAME:
       g_value_set_string (value, self->basename);
       break;
+    case PROP_FLAGS:
+      g_value_set_flags (value, self->flags);
+      break;
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
       break;
