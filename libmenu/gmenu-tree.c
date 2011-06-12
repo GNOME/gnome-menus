@@ -3963,7 +3963,7 @@ merge_subdirs (GMenuTree          *tree,
 
   subdirs = g_slist_sort_with_data (subdirs,
 				    (GCompareDataFunc) gmenu_tree_item_compare,
-                                    0);
+                                    GINT_TO_POINTER (GMENU_TREE_FLAGS_NONE));
 
   tmp = subdirs;
   while (tmp != NULL)
