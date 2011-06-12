@@ -27,7 +27,6 @@
 #include "menu-util.h"
 
 #define DESKTOP_ENTRY_GROUP     "Desktop Entry"
-#define KDE_DESKTOP_ENTRY_GROUP "KDE Desktop Entry"
 
 struct DesktopEntry
 {
@@ -87,15 +86,14 @@ unix_basename_from_path (const char *path)
 }
 
 static gboolean
-key_file_get_show_in_gnome (GKeyFile   *key_file,
-                            const char *desktop_entry_group)
+key_file_get_show_in_gnome (GKeyFile *key_file)
 {
   gchar **strv;
   gboolean show_in_gnome = TRUE;
   int i;
 
   strv = g_key_file_get_string_list (key_file,
-                                     desktop_entry_group,
+                                     DESKTOP_ENTRY_GROUP,
                                      "OnlyShowIn",
                                      NULL,
                                      NULL);
@@ -114,7 +112,7 @@ key_file_get_show_in_gnome (GKeyFile   *key_file,
   else
     {
       strv = g_key_file_get_string_list (key_file,
-                                         desktop_entry_group,
+                                         DESKTOP_ENTRY_GROUP,
                                          "NotShowIn",
                                          NULL,
                                          NULL);
@@ -138,13 +136,12 @@ key_file_get_show_in_gnome (GKeyFile   *key_file,
 static gboolean
 desktop_entry_load_directory (DesktopEntry  *entry,
                               GKeyFile      *key_file,
-                              const char    *desktop_entry_group,
                               GError       **error)
 {
   DesktopEntryDirectory *entry_directory = (DesktopEntryDirectory*)entry;
   char *type_str;
 
-  type_str = g_key_file_get_string (key_file, desktop_entry_group, "Type", error);
+  type_str = g_key_file_get_string (key_file, DESKTOP_ENTRY_GROUP, "Type", error);
   if (!type_str)
     return FALSE;
 
@@ -161,21 +158,21 @@ desktop_entry_load_directory (DesktopEntry  *entry,
   g_free (type_str);
 
   /* Just skip stuff that's not GNOME */
-  if (!key_file_get_show_in_gnome (key_file, desktop_entry_group))
+  if (!key_file_get_show_in_gnome (key_file))
     return FALSE;
 
-  entry_directory->name = g_key_file_get_locale_string (key_file, desktop_entry_group, "Name", NULL, error);
+  entry_directory->name = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "Name", NULL, error);
   if (entry_directory->name == NULL)
     return FALSE;
 
-  entry_directory->comment      = g_key_file_get_locale_string (key_file, desktop_entry_group, "Comment", NULL, NULL);
-  entry_directory->icon         = g_key_file_get_locale_string (key_file, desktop_entry_group, "Icon", NULL, NULL);
+  entry_directory->comment      = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "Comment", NULL, NULL);
+  entry_directory->icon         = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "Icon", NULL, NULL);
   entry_directory->nodisplay    = g_key_file_get_boolean (key_file,
-                                                          desktop_entry_group,
+                                                          DESKTOP_ENTRY_GROUP,
                                                           "NoDisplay",
                                                           NULL);
   entry_directory->hidden       = g_key_file_get_boolean (key_file,
-                                                          desktop_entry_group,
+                                                          DESKTOP_ENTRY_GROUP,
                                                           "Hidden",
                                                           NULL);
   return TRUE;
@@ -184,10 +181,9 @@ desktop_entry_load_directory (DesktopEntry  *entry,
 static gboolean
 desktop_entry_load (DesktopEntry *entry)
 {
-  GKeyFile         *key_file;
-  GError           *error = NULL;
-  gboolean          retval = FALSE;
-  const char       *desktop_entry_group;
+  GKeyFile *key_file;
+  GError   *error = NULL;
+  gboolean  retval = FALSE;
 
   if (entry->type == DESKTOP_ENTRY_DESKTOP)
     {
@@ -225,23 +221,7 @@ desktop_entry_load (DesktopEntry *entry)
       if (!g_key_file_load_from_file (key_file, entry->path, 0, &error))
         goto out;
 
-      if (g_key_file_has_group (key_file, DESKTOP_ENTRY_GROUP))
-        desktop_entry_group = DESKTOP_ENTRY_GROUP;
-      else
-        {
-          if (g_key_file_has_group (key_file, KDE_DESKTOP_ENTRY_GROUP))
-            desktop_entry_group = KDE_DESKTOP_ENTRY_GROUP;
-          else
-            {
-              g_set_error (&error,
-                           G_KEY_FILE_ERROR,
-                           G_KEY_FILE_ERROR_INVALID_VALUE,
-                           "Desktop file does not have Desktop group");
-              goto out;
-            }
-        }
-
-      if (!desktop_entry_load_directory (entry, key_file, desktop_entry_group, &error))
+      if (!desktop_entry_load_directory (entry, key_file, &error))
         goto out;
 
       g_key_file_free (key_file);
