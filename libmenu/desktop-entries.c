@@ -346,7 +346,6 @@ DesktopEntry *
 desktop_entry_copy (DesktopEntry *entry)
 {
   DesktopEntry *retval;
-  int           i;
 
   menu_verbose ("Copying desktop entry \"%s\"\n",
                 entry->basename);
@@ -367,23 +366,23 @@ desktop_entry_copy (DesktopEntry *entry)
     {
       DesktopEntryDesktop *desktop_entry = (DesktopEntryDesktop*) entry;
       DesktopEntryDesktop *retval_desktop_entry = (DesktopEntryDesktop*) retval;
+      int i;
 
       retval_desktop_entry->appinfo = g_object_ref (desktop_entry->appinfo);
 
-      i = 0;
       if (desktop_entry->categories != NULL)
         {
+          i = 0;
           for (; desktop_entry->categories[i]; i++);
-        }
 
-      retval_desktop_entry->categories = g_new0 (GQuark, i + 1);
+          retval_desktop_entry->categories = g_new0 (GQuark, i + 1);
 
-      i = 0;
-      if (desktop_entry->categories != NULL)
-        {
+          i = 0;
           for (; desktop_entry->categories[i]; i++)
             retval_desktop_entry->categories[i] = desktop_entry->categories[i];
         }
+      else
+        retval_desktop_entry->categories = NULL;
     }
   else if (entry->type == DESKTOP_ENTRY_DIRECTORY)
     {
@@ -565,19 +564,21 @@ desktop_entry_add_legacy_category (DesktopEntry *entry)
   menu_verbose ("Adding Legacy category to \"%s\"\n",
                 entry->basename);
 
-  i = 0;
   if (desktop_entry->categories != NULL)
     {
+      i = 0;
       for (; desktop_entry->categories[i]; i++);
-    }
 
-  categories = g_new0 (GQuark, i + 2);
+      categories = g_new0 (GQuark, i + 2);
 
-  i = 0;
-  if (desktop_entry->categories != NULL)
-    {
+      i = 0;
       for (; desktop_entry->categories[i]; i++)
         categories[i] = desktop_entry->categories[i];
+    }
+  else
+    {
+      categories = g_new0 (GQuark, 2);
+      i = 0;
     }
 
   categories[i] = g_quark_from_string ("Legacy");
