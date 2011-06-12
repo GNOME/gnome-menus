@@ -938,6 +938,17 @@ gmenu_tree_directory_get_name (GMenuTreeDirectory *directory)
 }
 
 const char *
+gmenu_tree_directory_get_generic_name (GMenuTreeDirectory *directory)
+{
+  g_return_val_if_fail (directory != NULL, NULL);
+
+  if (!directory->directory_entry)
+    return NULL;
+
+  return desktop_entry_get_generic_name (directory->directory_entry);
+}
+
+const char *
 gmenu_tree_directory_get_comment (GMenuTreeDirectory *directory)
 {
   g_return_val_if_fail (directory != NULL, NULL);

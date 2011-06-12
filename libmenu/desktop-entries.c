@@ -52,6 +52,7 @@ typedef struct
   DesktopEntry base;
 
   char     *name;
+  char     *generic_name;
   char     *comment;
   char     *icon;
 
@@ -165,6 +166,7 @@ desktop_entry_load_directory (DesktopEntry  *entry,
   if (entry_directory->name == NULL)
     return FALSE;
 
+  entry_directory->generic_name = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "GenericName", NULL, NULL);
   entry_directory->comment      = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "Comment", NULL, NULL);
   entry_directory->icon         = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "Icon", NULL, NULL);
   entry_directory->nodisplay    = g_key_file_get_boolean (key_file,
@@ -446,6 +448,14 @@ desktop_entry_get_name (DesktopEntry *entry)
   if (entry->type == DESKTOP_ENTRY_DESKTOP)
     return g_app_info_get_name (G_APP_INFO (((DesktopEntryDesktop*)entry)->appinfo));
   return ((DesktopEntryDirectory*)entry)->name;
+}
+
+const char *
+desktop_entry_get_generic_name (DesktopEntry *entry)
+{
+  if (entry->type == DESKTOP_ENTRY_DESKTOP)
+    return g_desktop_app_info_get_generic_name (((DesktopEntryDesktop*)entry)->appinfo);
+  return ((DesktopEntryDirectory*)entry)->generic_name;
 }
 
 const char *
