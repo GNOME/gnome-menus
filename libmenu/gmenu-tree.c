@@ -1095,7 +1095,7 @@ GMenuTreeDirectory *
 gmenu_tree_alias_get_aliased_directory (GMenuTreeAlias *alias)
 {
   g_return_val_if_fail (alias != NULL, NULL);
-  g_return_val_if_fail (((GMenuTreeItem*)alias->aliased_item)->type == GMENU_TREE_ITEM_DIRECTORY, NULL);
+  g_return_val_if_fail (alias->aliased_item->type == GMENU_TREE_ITEM_DIRECTORY, NULL);
 
   return (GMenuTreeDirectory *) gmenu_tree_item_ref (alias->aliased_item);
 }
@@ -1110,7 +1110,7 @@ GMenuTreeEntry *
 gmenu_tree_alias_get_aliased_entry (GMenuTreeAlias *alias)
 {
   g_return_val_if_fail (alias != NULL, NULL);
-  g_return_val_if_fail (((GMenuTreeItem*)alias->aliased_item)->type == GMENU_TREE_ITEM_ENTRY, NULL);
+  g_return_val_if_fail (alias->aliased_item->type == GMENU_TREE_ITEM_ENTRY, NULL);
 
   return (GMenuTreeEntry *) gmenu_tree_item_ref (alias->aliased_item);
 }
