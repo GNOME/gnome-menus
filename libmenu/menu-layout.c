@@ -173,7 +173,7 @@ handle_entry_directory_changed (EntryDirectory *dir,
     {
       nr->monitors_idle_handler = g_idle_source_new ();
       g_source_set_callback (nr->monitors_idle_handler,
-			     (GSourceFunc) menu_layout_invoke_monitors, nr, NULL);
+                             (GSourceFunc) menu_layout_invoke_monitors, nr, NULL);
       g_source_attach (nr->monitors_idle_handler, nr->main_context);
       g_source_unref (nr->monitors_idle_handler);
     }
@@ -247,13 +247,13 @@ menu_layout_node_unref (MenuLayoutNode *node)
           g_slist_foreach (nr->monitors, (GFunc) g_free, NULL);
           g_slist_free (nr->monitors);
 
-	  if (nr->main_context != NULL)
-	    g_main_context_unref (nr->main_context);
-	  nr->main_context = NULL;
+          if (nr->main_context != NULL)
+            g_main_context_unref (nr->main_context);
+          nr->main_context = NULL;
 
           if (nr->monitors_idle_handler != NULL)
-	    g_source_destroy (nr->monitors_idle_handler);
-	  nr->monitors_idle_handler = NULL;
+            g_source_destroy (nr->monitors_idle_handler);
+          nr->monitors_idle_handler = NULL;
 
           g_free (nr->basedir);
           g_free (nr->name);

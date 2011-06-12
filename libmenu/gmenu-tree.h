@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004,2011 Red Hat, Inc.
+ * Copyright (C) 2004, 2011 Red Hat, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -43,7 +43,7 @@ struct _GMenuTreeClass
   GObjectClass parent_class;
 };
 
-GType            gmenu_tree_get_type          (void) G_GNUC_CONST;
+GType gmenu_tree_get_type (void) G_GNUC_CONST;
 
 typedef struct GMenuTreeIter      GMenuTreeIter;
 typedef struct GMenuTreeDirectory GMenuTreeDirectory;
@@ -84,10 +84,10 @@ GType gmenu_tree_flags_get_type (void);
 #define GMENU_TYPE_TREE_FLAGS (gmenu_tree_flags_get_type ())
 
 GMenuTree *gmenu_tree_new (const char     *menu_file,
-			   GMenuTreeFlags  flags);
+                           GMenuTreeFlags  flags);
 
-gboolean   gmenu_tree_load_sync (GMenuTree   *tree,
-				 GError     **error);
+gboolean   gmenu_tree_load_sync (GMenuTree  *tree,
+                                 GError    **error);
 
 const char         *gmenu_tree_get_menu_path           (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_root_directory      (GMenuTree  *tree);
@@ -106,16 +106,16 @@ const char *gmenu_tree_directory_get_menu_id           (GMenuTreeDirectory *dire
 
 gboolean gmenu_tree_directory_get_is_nodisplay (GMenuTreeDirectory *directory);
 
-GMenuTreeIter *gmenu_tree_directory_iter               (GMenuTreeDirectory *directory);
+GMenuTreeIter      *gmenu_tree_directory_iter            (GMenuTreeDirectory *directory);
 
-GMenuTreeIter *gmenu_tree_iter_ref     (GMenuTreeIter *iter);
-void           gmenu_tree_iter_unref   (GMenuTreeIter *iter);
+GMenuTreeIter      *gmenu_tree_iter_ref                  (GMenuTreeIter *iter);
+void                gmenu_tree_iter_unref                (GMenuTreeIter *iter);
 
-GMenuTreeItemType   gmenu_tree_iter_next                 (GMenuTreeIter   *iter); 
-GMenuTreeDirectory *gmenu_tree_iter_get_directory        (GMenuTreeIter   *iter); 
-GMenuTreeEntry     *gmenu_tree_iter_get_entry            (GMenuTreeIter   *iter); 
-GMenuTreeHeader    *gmenu_tree_iter_get_header           (GMenuTreeIter   *iter); 
-GMenuTreeAlias     *gmenu_tree_iter_get_alias            (GMenuTreeIter   *iter); 
+GMenuTreeItemType   gmenu_tree_iter_next                 (GMenuTreeIter *iter);
+GMenuTreeDirectory *gmenu_tree_iter_get_directory        (GMenuTreeIter *iter);
+GMenuTreeEntry     *gmenu_tree_iter_get_entry            (GMenuTreeIter *iter);
+GMenuTreeHeader    *gmenu_tree_iter_get_header           (GMenuTreeIter *iter);
+GMenuTreeAlias     *gmenu_tree_iter_get_alias            (GMenuTreeIter *iter);
 
 char *gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
 				      GMenuTreeEntry     *entry);

@@ -78,22 +78,20 @@ G_DEFINE_TYPE (GMenuTree, gmenu_tree, G_TYPE_OBJECT)
 
 struct GMenuTreeItem
 {
+  gint refcount;
+
   GMenuTreeItemType type;
 
   GMenuTreeDirectory *parent;
-  
-  gint refcount;
 };
 
 struct GMenuTreeIter
 {
   gint refcount;
 
-  gint tree_serial;
-
   GMenuTreeItem *item;
-  GSList *contents;
-  GSList *contents_iter;
+  GSList        *contents;
+  GSList        *contents_iter;
 };
 
 struct GMenuTreeDirectory
@@ -160,10 +158,10 @@ struct GMenuTreeAlias
 };
 
 static gboolean  gmenu_tree_load_layout          (GMenuTree       *tree,
-						  GError         **error);
+                                                  GError         **error);
 static void      gmenu_tree_force_reload         (GMenuTree       *tree);
 static gboolean  gmenu_tree_build_from_layout    (GMenuTree       *tree,
-						  GError         **error);
+                                                  GError         **error);
 static void      gmenu_tree_force_rebuild        (GMenuTree       *tree);
 static void      gmenu_tree_resolve_files        (GMenuTree       *tree,
 						  GHashTable      *loaded_menu_files,
@@ -392,7 +390,7 @@ canonicalize_basename (GMenuTree  *tree,
 
 static gboolean
 gmenu_tree_canonicalize_path (GMenuTree *tree,
-			      GError   **error)
+                              GError   **error)
 {
   if (tree->canonical)
     return TRUE;
@@ -400,34 +398,34 @@ gmenu_tree_canonicalize_path (GMenuTree *tree,
   g_assert (tree->canonical_path == NULL);
 
   gmenu_tree_remove_menu_file_monitors (tree);
-  
+
   if (strcmp (tree->basename, "applications.menu") == 0 &&
       g_getenv ("XDG_MENU_PREFIX"))
     {
       char *prefixed_basename;
       prefixed_basename = g_strdup_printf ("%s%s",
-					   g_getenv ("XDG_MENU_PREFIX"),
-					   tree->basename);
+                                           g_getenv ("XDG_MENU_PREFIX"),
+                                           tree->basename);
       canonicalize_basename (tree, prefixed_basename);
       g_free (prefixed_basename);
     }
-  
+
   if (!tree->canonical)
     canonicalize_basename (tree, tree->basename);
-  
+
   if (tree->canonical)
     {
       menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
-		    tree->basename, tree->canonical_path);
+                    tree->basename, tree->canonical_path);
       return TRUE;
     }
   else
     {
       g_set_error (error,
-		   G_IO_ERROR,
-		   G_IO_ERROR_FAILED,
-		   "Failed to look up menu_file for \"%s\"\n",
-		   tree->basename);
+                   G_IO_ERROR,
+                   G_IO_ERROR_FAILED,
+                   "Failed to look up menu_file for \"%s\"\n",
+                   tree->basename);
       return FALSE;
     }
 }
@@ -457,7 +455,7 @@ gmenu_tree_force_recanonicalize (GMenuTree *tree)
  */
 GMenuTree *
 gmenu_tree_new (const char     *name,
-		GMenuTreeFlags  flags)
+                GMenuTreeFlags  flags)
 {
   g_return_val_if_fail (name != NULL, NULL);
 
@@ -465,10 +463,10 @@ gmenu_tree_new (const char     *name,
 }
 
 static void
-gmenu_tree_set_property(GObject         *object,
-			guint            prop_id,
-			const GValue    *value,
-			GParamSpec      *pspec)
+gmenu_tree_set_property (GObject         *object,
+                         guint            prop_id,
+                         const GValue    *value,
+                         GParamSpec      *pspec)
 {
   GMenuTree *self = GMENU_TREE (object);
 
@@ -489,10 +487,10 @@ gmenu_tree_set_property(GObject         *object,
 }
 
 static void
-gmenu_tree_get_property(GObject         *object,
-			guint            prop_id,
-			GValue          *value,
-			GParamSpec      *pspec)
+gmenu_tree_get_property (GObject         *object,
+                         guint            prop_id,
+                         GValue          *value,
+                         GParamSpec      *pspec)
 {
   GMenuTree *self = GMENU_TREE (object);
 
@@ -550,7 +548,7 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
   g_object_class_install_property (gobject_class,
                                    PROP_NAME,
                                    g_param_spec_string ("name", "", "",
-							NULL,
+                                                        NULL,
                                                         G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
   /**
    * GMenuTree:flags
@@ -560,9 +558,9 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
   g_object_class_install_property (gobject_class,
                                    PROP_FLAGS,
                                    g_param_spec_flags ("flags", "", "",
-						       GMENU_TYPE_TREE_FLAGS,
-						       GMENU_TREE_FLAGS_NONE,
-						       G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
+                                                       GMENU_TYPE_TREE_FLAGS,
+                                                       GMENU_TREE_FLAGS_NONE,
+                                                       G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
 
   /**
    * GMenuTree:changed
@@ -581,14 +579,13 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
                     G_TYPE_NONE, 0);
 }
 
-
 /**
  * gmenu_tree_get_menu_path:
  * @tree: a #GMenuTree
  *
  * This function is only available if the tree has been loaded via
  * gmenu_tree_load_sync() or a variant thereof.
- * 
+ *
  * Returns: The absolute path to the loaded menu file
  */
 const char *
@@ -608,12 +605,12 @@ gmenu_tree_get_menu_path (GMenuTree *tree)
  * Synchronously load the menu contents.  This function
  * performs a significant amount of blocking I/O if the
  * tree has not been loaded yet.
- * 
+ *
  * Returns: %TRUE on success, %FALSE on error
  */
 gboolean
-gmenu_tree_load_sync (GMenuTree   *tree,
-		      GError     **error)
+gmenu_tree_load_sync (GMenuTree  *tree,
+                      GError    **error)
 {
   if (!tree->loaded)
     {
@@ -636,7 +633,7 @@ gmenu_tree_load_sync (GMenuTree   *tree,
  *
  * Get the root directory; you must have loaded the tree first (at
  * least once) via gmenu_tree_load_sync() or a variant thereof.
- * 
+ *
  * Returns: (transfer full): Root of the tree
  */
 GMenuTreeDirectory *
@@ -779,7 +776,7 @@ gmenu_tree_item_set_parent (GMenuTreeItem      *item,
  * Increment the reference count of @iter
  */
 GMenuTreeIter *
-gmenu_tree_iter_ref     (GMenuTreeIter *iter)
+gmenu_tree_iter_ref (GMenuTreeIter *iter)
 {
   g_atomic_int_inc (&iter->refcount);
   return iter;
@@ -792,7 +789,7 @@ gmenu_tree_iter_ref     (GMenuTreeIter *iter)
  * Decrement the reference count of @iter
  */
 void
-gmenu_tree_iter_unref   (GMenuTreeIter *iter)
+gmenu_tree_iter_unref (GMenuTreeIter *iter)
 {
   if (!g_atomic_int_dec_and_test (&iter->refcount))
     return;
@@ -836,7 +833,7 @@ gmenu_tree_directory_iter (GMenuTreeDirectory *directory)
  * Returns: The type of the next item that can be retrived from the iterator
  */
 GMenuTreeItemType
-gmenu_tree_iter_next (GMenuTreeIter   *iter)
+gmenu_tree_iter_next (GMenuTreeIter *iter)
 {
   g_return_val_if_fail (iter != NULL, GMENU_TREE_ITEM_INVALID);
 
@@ -860,12 +857,12 @@ gmenu_tree_iter_next (GMenuTreeIter   *iter)
  * Returns: (transfer full): A directory
  */
 GMenuTreeDirectory *
-gmenu_tree_iter_get_directory (GMenuTreeIter   *iter)
+gmenu_tree_iter_get_directory (GMenuTreeIter *iter)
 {
   g_return_val_if_fail (iter != NULL, NULL);
   g_return_val_if_fail (iter->item != NULL, NULL);
   g_return_val_if_fail (iter->item->type == GMENU_TREE_ITEM_DIRECTORY, NULL);
- 
+
   return (GMenuTreeDirectory*)gmenu_tree_item_ref (iter->item);
 }
 
@@ -879,12 +876,12 @@ gmenu_tree_iter_get_directory (GMenuTreeIter   *iter)
  * Returns: (transfer full): An entry
  */
 GMenuTreeEntry *
-gmenu_tree_iter_get_entry (GMenuTreeIter   *iter)
+gmenu_tree_iter_get_entry (GMenuTreeIter *iter)
 {
   g_return_val_if_fail (iter != NULL, NULL);
   g_return_val_if_fail (iter->item != NULL, NULL);
   g_return_val_if_fail (iter->item->type == GMENU_TREE_ITEM_ENTRY, NULL);
- 
+
   return (GMenuTreeEntry*)gmenu_tree_item_ref (iter->item);
 }
 
@@ -898,12 +895,12 @@ gmenu_tree_iter_get_entry (GMenuTreeIter   *iter)
  * Returns: (transfer full): A header
  */
 GMenuTreeHeader *
-gmenu_tree_iter_get_header (GMenuTreeIter   *iter)
+gmenu_tree_iter_get_header (GMenuTreeIter *iter)
 {
   g_return_val_if_fail (iter != NULL, NULL);
   g_return_val_if_fail (iter->item != NULL, NULL);
   g_return_val_if_fail (iter->item->type == GMENU_TREE_ITEM_HEADER, NULL);
- 
+
   return (GMenuTreeHeader*)gmenu_tree_item_ref (iter->item);
 }
 
@@ -917,12 +914,12 @@ gmenu_tree_iter_get_header (GMenuTreeIter   *iter)
  * Returns: (transfer full): An alias
  */
 GMenuTreeAlias *
-gmenu_tree_iter_get_alias (GMenuTreeIter   *iter)
+gmenu_tree_iter_get_alias (GMenuTreeIter *iter)
 {
   g_return_val_if_fail (iter != NULL, NULL);
   g_return_val_if_fail (iter->item != NULL, NULL);
   g_return_val_if_fail (iter->item->type == GMENU_TREE_ITEM_ALIAS, NULL);
- 
+
   return (GMenuTreeAlias*)gmenu_tree_item_ref (iter->item);
 }
 
@@ -1077,7 +1074,6 @@ gmenu_tree_alias_get_item_type (GMenuTreeAlias *alias)
   return alias->aliased_item->type;
 }
 
-
 GMenuTreeDirectory *
 gmenu_tree_alias_get_directory (GMenuTreeAlias *alias)
 {
@@ -1098,10 +1094,10 @@ gmenu_tree_alias_get_aliased_directory (GMenuTreeAlias *alias)
   g_return_val_if_fail (alias != NULL, NULL);
   g_return_val_if_fail (((GMenuTreeItem*)alias->aliased_item)->type == GMENU_TREE_ITEM_DIRECTORY, NULL);
 
-  return (GMenuTreeDirectory*)gmenu_tree_item_ref (alias->aliased_item);
+  return (GMenuTreeDirectory *) gmenu_tree_item_ref (alias->aliased_item);
 }
-/**
 
+/**
  * gmenu_tree_alias_get_aliased_entry:
  * @alias: alias
  *
@@ -1113,7 +1109,7 @@ gmenu_tree_alias_get_aliased_entry (GMenuTreeAlias *alias)
   g_return_val_if_fail (alias != NULL, NULL);
   g_return_val_if_fail (((GMenuTreeItem*)alias->aliased_item)->type == GMENU_TREE_ITEM_ENTRY, NULL);
 
-  return (GMenuTreeEntry*)gmenu_tree_item_ref (alias->aliased_item);
+  return (GMenuTreeEntry *) gmenu_tree_item_ref (alias->aliased_item);
 }
 
 static GMenuTreeDirectory *
@@ -1263,6 +1259,7 @@ gmenu_tree_header_finalize (GMenuTreeHeader *header)
   if (header->directory != NULL)
     gmenu_tree_item_unref (header->directory);
   header->directory = NULL;
+
   g_slice_free (GMenuTreeHeader, header);
 }
 
@@ -1306,6 +1303,7 @@ gmenu_tree_alias_finalize (GMenuTreeAlias *alias)
   if (alias->aliased_item != NULL)
     gmenu_tree_item_unref (alias->aliased_item);
   alias->aliased_item = NULL;
+
   g_slice_free (GMenuTreeAlias, alias);
 }
 
@@ -1343,6 +1341,7 @@ gmenu_tree_entry_finalize (GMenuTreeEntry *entry)
   if (entry->desktop_entry)
     desktop_entry_unref (entry->desktop_entry);
   entry->desktop_entry = NULL;
+
   g_slice_free (GMenuTreeEntry, entry);
 }
 
@@ -1454,9 +1453,9 @@ gmenu_tree_item_compare_get_name_helper (GMenuTreeItem    *item,
 
     case GMENU_TREE_ITEM_ENTRY:
       if (flags & GMENU_TREE_FLAGS_SORT_DISPLAY_NAME)
-	name = g_app_info_get_display_name (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (item))));
+        name = g_app_info_get_display_name (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (item))));
       else
-	name = desktop_entry_get_name (GMENU_TREE_ENTRY (item)->desktop_entry);
+        name = desktop_entry_get_name (GMENU_TREE_ENTRY (item)->desktop_entry);
       break;
 
     case GMENU_TREE_ITEM_ALIAS:
@@ -2747,8 +2746,8 @@ gmenu_tree_execute_moves (GMenuTree      *tree,
 }
 
 static gboolean
-gmenu_tree_load_layout (GMenuTree *tree,
-			GError   **error)
+gmenu_tree_load_layout (GMenuTree  *tree,
+                        GError    **error)
 {
   GHashTable *loaded_menu_files;
 
@@ -2763,7 +2762,7 @@ gmenu_tree_load_layout (GMenuTree *tree,
 
   error = NULL;
   tree->layout = menu_layout_load (tree->canonical_path,
-				   tree->basename,
+                                   tree->basename,
                                    error);
   if (!tree->layout)
     return FALSE;
@@ -3964,7 +3963,7 @@ merge_subdirs (GMenuTree          *tree,
 
   subdirs = g_slist_sort_with_data (subdirs,
 				    (GCompareDataFunc) gmenu_tree_item_compare,
-				    0);
+                                    0);
 
   tmp = subdirs;
   while (tmp != NULL)
@@ -4009,7 +4008,7 @@ merge_entries (GMenuTree          *tree,
 
   entries = g_slist_sort_with_data (entries,
 				    (GCompareDataFunc) gmenu_tree_item_compare,
-				    GINT_TO_POINTER (tree->flags));
+                                    GINT_TO_POINTER (tree->flags));
 
   tmp = entries;
   while (tmp != NULL)
@@ -4058,7 +4057,7 @@ merge_subdirs_and_entries (GMenuTree          *tree,
 
   items = g_slist_sort_with_data (items,
 				  (GCompareDataFunc) gmenu_tree_item_compare,
-				  GINT_TO_POINTER (tree->flags));
+                                  GINT_TO_POINTER (tree->flags));
 
   tmp = items;
   while (tmp != NULL)
@@ -4313,8 +4312,8 @@ handle_entries_changed (MenuLayoutNode *layout,
 }
 
 static gboolean
-gmenu_tree_build_from_layout (GMenuTree *tree,
-			      GError   **error)
+gmenu_tree_build_from_layout (GMenuTree  *tree,
+                              GError    **error)
 {
   DesktopEntrySet *allocated;
 
@@ -4350,7 +4349,7 @@ gmenu_tree_build_from_layout (GMenuTree *tree,
     }
 
   desktop_entry_set_unref (allocated);
-  
+
   return TRUE;
 }
 
