@@ -351,6 +351,8 @@ desktop_entry_copy (DesktopEntry *entry)
       DesktopEntryDesktop *desktop_entry = (DesktopEntryDesktop*) entry;
       DesktopEntryDesktop *retval_desktop_entry = (DesktopEntryDesktop*) retval;
 
+      retval_desktop_entry->appinfo = g_object_ref (desktop_entry->appinfo);
+
       i = 0;
       if (desktop_entry->categories != NULL)
         {
