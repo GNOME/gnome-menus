@@ -78,7 +78,7 @@ G_DEFINE_TYPE (GMenuTree, gmenu_tree, G_TYPE_OBJECT)
 
 struct GMenuTreeItem
 {
-  gint refcount;
+  volatile gint refcount;
 
   GMenuTreeItemType type;
 
@@ -87,7 +87,7 @@ struct GMenuTreeItem
 
 struct GMenuTreeIter
 {
-  gint refcount;
+  volatile gint refcount;
 
   GMenuTreeItem *item;
   GSList        *contents;
