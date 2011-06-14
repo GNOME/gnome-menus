@@ -247,13 +247,13 @@ menu_layout_node_unref (MenuLayoutNode *node)
           g_slist_foreach (nr->monitors, (GFunc) g_free, NULL);
           g_slist_free (nr->monitors);
 
-          if (nr->main_context != NULL)
-            g_main_context_unref (nr->main_context);
-          nr->main_context = NULL;
-
           if (nr->monitors_idle_handler != NULL)
             g_source_destroy (nr->monitors_idle_handler);
           nr->monitors_idle_handler = NULL;
+
+          if (nr->main_context != NULL)
+            g_main_context_unref (nr->main_context);
+          nr->main_context = NULL;
 
           g_free (nr->basedir);
           g_free (nr->name);
