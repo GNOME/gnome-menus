@@ -491,7 +491,7 @@ gboolean
 desktop_entry_get_no_display (DesktopEntry *entry)
 {
   if (entry->type == DESKTOP_ENTRY_DESKTOP)
-    return g_desktop_app_info_get_is_hidden (((DesktopEntryDesktop*)entry)->appinfo);
+    return g_desktop_app_info_get_nodisplay (((DesktopEntryDesktop*)entry)->appinfo);
   return ((DesktopEntryDirectory*)entry)->nodisplay;
 }
 
