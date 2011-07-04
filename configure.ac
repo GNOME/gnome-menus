@@ -74,26 +74,6 @@ AC_SUBST(DEBUG_CFLAGS)
 
 AM_PATH_PYTHON(2.3)
 
-# Because of the way Python implements polymorphism, we get the following warning:
-# "warning: dereferencing type-punned pointer will break strict-aliasing rules"
-# -fno-strict-aliasing (as used in Python build) switches warnings off
-NO_STRICT_ALIASING_CFLAGS=""
-if test "x$GCC" = "xyes" ; then
-  AC_MSG_CHECKING(whether $CC accepts -fno-strict-aliasing)
-  ac_save_cc="$CC"
-  CC="$CC -fno-strict-aliasing"
-  AC_TRY_RUN([int main() { return 0; }],
-             ac_cv_no_strict_aliasing_ok=yes,
-             ac_cv_no_strict_aliasing_ok=no,
-             ac_cv_no_strict_aliasing_ok=no)
-  CC="$ac_save_cc"
-  AC_MSG_RESULT($ac_cv_no_strict_aliasing_ok)
-  if test "x$ac_cv_no_strict_aliasing_ok" = "xyes" ; then
-    NO_STRICT_ALIASING_CFLAGS="-fno-strict-aliasing"
-  fi
-fi
-AC_SUBST(NO_STRICT_ALIASING_CFLAGS)
-
 GOBJECT_INTROSPECTION_CHECK([0.9.5])
 
 AC_OUTPUT([
