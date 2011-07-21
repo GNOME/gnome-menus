@@ -75,10 +75,12 @@ typedef enum
 {
   GMENU_TREE_FLAGS_NONE                = 0,
   GMENU_TREE_FLAGS_INCLUDE_EXCLUDED    = 1 << 0,
-  GMENU_TREE_FLAGS_SHOW_EMPTY          = 1 << 1,
-  GMENU_TREE_FLAGS_INCLUDE_NODISPLAY   = 1 << 2,
-  GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS = 1 << 3,
-  GMENU_TREE_FLAGS_SORT_DISPLAY_NAME   = 1 << 4
+  GMENU_TREE_FLAGS_INCLUDE_NODISPLAY   = 1 << 1,
+  /* leave some space for more include flags */
+  GMENU_TREE_FLAGS_SHOW_EMPTY          = 1 << 8,
+  GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS = 1 << 9,
+  /* leave some space for more show flags */
+  GMENU_TREE_FLAGS_SORT_DISPLAY_NAME   = 1 << 16
 } GMenuTreeFlags;
 GType gmenu_tree_flags_get_type (void);
 #define GMENU_TYPE_TREE_FLAGS (gmenu_tree_flags_get_type ())
