@@ -19,9 +19,10 @@
 import os
 import os.path
 import gobject
+from gi.repository import Gio
 from gi.repository import Gtk
 from gi.repository import GdkPixbuf
-import gmenu
+from gi.repository import GMenu
 
 def lookup_system_menu_file (menu_file):
     conf_dirs = None
@@ -37,55 +38,6 @@ def lookup_system_menu_file (menu_file):
     
     return None
 
-def load_icon_from_path (icon_path):
-    if os.path.isfile (icon_path):
-        try:
-            return GdkPixbuf.new_from_file_at_size (icon_path, 24, 24)
-        except:
-            pass
-    return None
-
-def load_icon_from_data_dirs (icon_value):
-    data_dirs = None
-    if os.environ.has_key ("XDG_DATA_DIRS"):
-        data_dirs = os.environ["XDG_DATA_DIRS"]
-    if not data_dirs:
-        data_dirs = "/usr/local/share/:/usr/share/"
-
-    for data_dir in data_dirs.split (":"):
-        retval = load_icon_from_path (os.path.join (data_dir, "pixmaps", icon_value))
-        if retval:
-            return retval
-        retval = load_icon_from_path (os.path.join (data_dir, "icons", icon_value))
-        if retval:
-            return retval
-    
-    return None
-
-def load_icon (icon_theme, icon_value):
-    if not icon_value:
-        return
-
-    if os.path.isabs (icon_value):
-        icon = load_icon_from_path (icon_value)
-        if icon:
-            return icon
-        icon_name = os.path.basename (icon_value)
-    else:
-        icon_name = icon_value
-    
-    if icon_name.endswith (".png"):
-        icon_name = icon_name[:-len (".png")]
-    elif icon_name.endswith (".xpm"):
-        icon_name = icon_name[:-len (".xpm")]
-    elif icon_name.endswith (".svg"):
-        icon_name = icon_name[:-len (".svg")]
-    
-    try:
-        return icon_theme.load_icon (icon_name, 24, 0)
-    except:
-        return load_icon_from_data_dirs (icon_value)
-
 class MenuTreeModel (Gtk.TreeStore):
     (
         COLUMN_IS_ENTRY,
@@ -98,12 +50,10 @@ class MenuTreeModel (Gtk.TreeStore):
     ) = range (7)
 
     def __init__ (self, menu_files):
-        Gtk.TreeStore.__init__ (self, bool, str, str, GdkPixbuf.Pixbuf, str, bool, bool)
+        Gtk.TreeStore.__init__ (self, bool, str, str, Gio.Icon, str, bool, bool)
 
         self.entries_list_iter = None
         
-        self.icon_theme = Gtk.IconTheme.get_default ()
-
         if (len (menu_files) < 1):
             menu_files = ["applications.menu", "settings.menu"]
 
@@ -111,15 +61,17 @@ class MenuTreeModel (Gtk.TreeStore):
             if menu_file == "applications.menu" and os.environ.has_key ("XDG_MENU_PREFIX"):
                 menu_file = os.environ["XDG_MENU_PREFIX"] + menu_file
 
-            tree = gmenu.lookup_tree (menu_file, gmenu.FLAGS_INCLUDE_EXCLUDED)
-            tree.sort_key = gmenu.SORT_DISPLAY_NAME
-            self.__append_directory (tree.root, None, False, menu_file)
+            tree = gobject.new (GMenu.Tree, menu_basename = menu_file, flags = GMenu.TreeFlags.INCLUDE_EXCLUDED|GMenu.TreeFlags.SORT_DISPLAY_NAME)
+            tree.load_sync ()
+
+            self.__append_directory (tree.get_root_directory (), None, False, menu_file)
 
             system_file = lookup_system_menu_file (menu_file)
             if system_file:
-                system_tree = gmenu.lookup_tree (system_file, gmenu.FLAGS_INCLUDE_EXCLUDED)
-                system_tree.sort_key = gmenu.SORT_DISPLAY_NAME
-                self.__append_directory (system_tree.root, None, True, menu_file)
+                system_tree = gobject.new (GMenu.Tree, menu_path = system_file, flags = GMenu.TreeFlags.INCLUDE_EXCLUDED|GMenu.TreeFlags.SORT_DISPLAY_NAME)
+                system_tree.load_sync ()
+
+                self.__append_directory (system_tree.get_root_directory (), None, True, menu_file)
 
     def __append_directory (self, directory, parent_iter, system, menu_file):
         if not directory:
@@ -127,12 +79,12 @@ class MenuTreeModel (Gtk.TreeStore):
         
         iter = self.iter_children (parent_iter)
         while iter is not None:
-            if self.get_value(iter, self.COLUMN_ID) == directory.menu_id:
+            if self.get_value(iter, self.COLUMN_ID) == directory.get_menu_id ():
                 break
             iter = self.iter_next (iter)
 
         if iter is None:
-            row = (False, directory.menu_id, directory.name, load_icon (self.icon_theme, directory.icon), menu_file, False, False)
+            row = (False, directory.get_menu_id (), directory.get_name (), directory.get_icon (), menu_file, False, False)
             iter = self.append (parent_iter, row)
 
         if system:
@@ -140,26 +92,34 @@ class MenuTreeModel (Gtk.TreeStore):
         else:
             self.set_value (iter, self.COLUMN_USER_VISIBLE, True)
 
-        for child_item in directory.contents:
-            if isinstance (child_item, gmenu.Directory):
+        dir_iter = directory.iter ()
+        next_type = dir_iter.next ()
+        while next_type != GMenu.TreeItemType.INVALID:
+            current_type = next_type
+            next_type = dir_iter.next ()
+
+            if current_type == GMenu.TreeItemType.DIRECTORY:
+                child_item = dir_iter.get_directory ()
                 self.__append_directory (child_item, iter, system, None)
                 
-            if not isinstance (child_item, gmenu.Entry):
+            if current_type != GMenu.TreeItemType.ENTRY:
                 continue
             
+            child_item = dir_iter.get_entry ()
+
             child_iter = self.iter_children (iter)
             while child_iter is not None:
-                if child_item.type == gmenu.TYPE_ENTRY and \
-                   self.get_value(child_iter, self.COLUMN_IS_ENTRY) and \
-                   self.get_value(child_iter, self.COLUMN_ID) == child_item.desktop_file_id:
+                if self.get_value(child_iter, self.COLUMN_IS_ENTRY) and \
+                   self.get_value(child_iter, self.COLUMN_ID) == child_item.get_desktop_file_id ():
                         break
                 child_iter = self.iter_next (child_iter)
 
             if child_iter is None:
-                row = (True, child_item.desktop_file_id, child_item.display_name, load_icon (self.icon_theme, child_item.icon), None, False, False)
+                app_info = child_item.get_app_info ()
+                row = (True, child_item.get_desktop_file_id (), app_info.get_display_name (), app_info.get_icon (), None, False, False)
                 child_iter = self.append (iter, row)
 
             if system:
-                self.set_value (child_iter, self.COLUMN_SYSTEM_VISIBLE, not child_item.is_excluded,)
+                self.set_value (child_iter, self.COLUMN_SYSTEM_VISIBLE, not child_item.get_is_excluded (),)
             else:
-                self.set_value (child_iter, self.COLUMN_USER_VISIBLE, not child_item.is_excluded,)
+                self.set_value (child_iter, self.COLUMN_USER_VISIBLE, not child_item.get_is_excluded (),)

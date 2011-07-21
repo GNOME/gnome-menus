@@ -99,7 +99,7 @@ class MenuEditorDialog:
 
         cell = Gtk.CellRendererPixbuf ()
         column.pack_start (cell, False)
-        column.add_attribute (cell, 'pixbuf', self.menu_tree_model.COLUMN_ICON)
+        column.add_attribute (cell, 'gicon', self.menu_tree_model.COLUMN_ICON)
 
         cell = Gtk.CellRendererText ()
         column.pack_start (cell, True)
@@ -127,7 +127,7 @@ class MenuEditorDialog:
 
         cell = Gtk.CellRendererPixbuf ()
         column.pack_start (cell, False)
-        column.add_attribute (cell, 'pixbuf', self.menu_tree_model.COLUMN_ICON)
+        column.add_attribute (cell, 'gicon', self.menu_tree_model.COLUMN_ICON)
 
         cell = Gtk.CellRendererText ()
         column.pack_start (cell, True)
