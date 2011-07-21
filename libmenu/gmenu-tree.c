@@ -110,7 +110,6 @@ struct GMenuTreeDirectory
   GSList           *contents;
 
   guint only_unallocated : 1;
-  guint is_root : 1;
   guint is_nodisplay : 1;
   guint layout_pending_separator : 1;
   guint preprocessed : 1;
@@ -118,13 +117,6 @@ struct GMenuTreeDirectory
   /* 16 bits should be more than enough; G_MAXUINT16 means no inline header */
   guint will_inline_header : 16;
 };
-
-typedef struct
-{
-  GMenuTreeDirectory directory;
-
-  /* nothing yet */
-} GMenuTreeDirectoryRoot;
 
 struct GMenuTreeEntry
 {
@@ -1136,26 +1128,11 @@ gmenu_tree_alias_get_aliased_entry (GMenuTreeAlias *alias)
 
 static GMenuTreeDirectory *
 gmenu_tree_directory_new (GMenuTreeDirectory *parent,
-			  const char         *name,
-			  gboolean            is_root)
+			  const char         *name)
 {
   GMenuTreeDirectory *retval;
 
-  if (!is_root)
-    {
-      retval = g_slice_new0 (GMenuTreeDirectory);
-    }
-  else
-    {
-      GMenuTreeDirectoryRoot *root;
-
-      root = g_new0 (GMenuTreeDirectoryRoot, 1);
-
-      retval = GMENU_TREE_DIRECTORY (root);
-
-      retval->is_root = TRUE;
-    }
-
+  retval = g_slice_new0 (GMenuTreeDirectory);
 
   retval->item.type     = GMENU_TREE_ITEM_DIRECTORY;
   retval->item.parent   = parent;
@@ -1226,10 +1203,7 @@ gmenu_tree_directory_finalize (GMenuTreeDirectory *directory)
   g_free (directory->name);
   directory->name = NULL;
 
-  if (directory->is_root)
-    g_free (directory);
-  else
-    g_slice_free (GMenuTreeDirectory, directory);
+  g_slice_free (GMenuTreeDirectory, directory);
 }
 
 static GMenuTreeSeparator *
@@ -3114,8 +3088,7 @@ process_layout (GMenuTree          *tree,
   g_assert (menu_layout_node_menu_get_name (layout) != NULL);
 
   directory = gmenu_tree_directory_new (parent,
-					menu_layout_node_menu_get_name (layout),
-					parent == NULL);
+					menu_layout_node_menu_get_name (layout));
 
   menu_verbose ("=== Menu name = %s ===\n", directory->name);
 
