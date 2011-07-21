@@ -21,7 +21,7 @@
 
 var GMenu = imports.gi.GMenu;
 
-var tree = new GMenu.Tree({ name: "applications.menu", flags: 0 });
+var tree = new GMenu.Tree({ menu_basename: "applications.menu", flags: 0 });
 
 tree.load_sync();
 

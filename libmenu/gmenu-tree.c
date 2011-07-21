@@ -41,7 +41,7 @@ typedef struct GMenuTreeItem GMenuTreeItem;
 enum {
   PROP_0,
 
-  PROP_NAME,
+  PROP_MENU_BASENAME,
   PROP_FLAGS
 };
 
@@ -438,18 +438,21 @@ gmenu_tree_force_recanonicalize (GMenuTree *tree)
 
 /**
  * gmenu_tree_new:
- * @menu_file: Basename of menu file
+ * @menu_basename: Basename of menu file
  * @flags: Flags controlling menu content
  *
  * Returns: (transfer full): A new #GMenuTree instance
  */
 GMenuTree *
-gmenu_tree_new (const char     *name,
+gmenu_tree_new (const char     *menu_basename,
                 GMenuTreeFlags  flags)
 {
-  g_return_val_if_fail (name != NULL, NULL);
+  g_return_val_if_fail (menu_basename != NULL, NULL);
 
-  return g_object_new (GMENU_TYPE_TREE, "name", name, "flags", flags, NULL);
+  return g_object_new (GMENU_TYPE_TREE,
+                       "menu-basename", menu_basename,
+                       "flags", flags,
+                       NULL);
 }
 
 static void
@@ -462,7 +465,7 @@ gmenu_tree_set_property (GObject         *object,
 
   switch (prop_id)
     {
-    case PROP_NAME:
+    case PROP_MENU_BASENAME:
       self->basename = g_value_dup_string (value);
       break;
 
@@ -486,7 +489,7 @@ gmenu_tree_get_property (GObject         *object,
 
   switch (prop_id)
     {
-    case PROP_NAME:
+    case PROP_MENU_BASENAME:
       g_value_set_string (value, self->basename);
       break;
     case PROP_FLAGS:
@@ -531,14 +534,15 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
   gobject_class->finalize = gmenu_tree_finalize;
 
   /**
-   * GMenuTree:name
+   * GMenuTree:menu-basename
    *
-   * The name of the menu file; must be a relative path.  See
-   * the Desktop Menu specification.
+   * The name of the menu file; must be a basename or a relative path. The file
+   * will be looked up in $XDG_CONFIG_DIRS/menus/. See the Desktop Menu
+   * specification.
    */
   g_object_class_install_property (gobject_class,
-                                   PROP_NAME,
-                                   g_param_spec_string ("name", "", "",
+                                   PROP_MENU_BASENAME,
+                                   g_param_spec_string ("menu-basename", "", "",
                                                         "applications.menu",
                                                         G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
   /**

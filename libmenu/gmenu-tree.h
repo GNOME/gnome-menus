@@ -83,7 +83,7 @@ typedef enum
 GType gmenu_tree_flags_get_type (void);
 #define GMENU_TYPE_TREE_FLAGS (gmenu_tree_flags_get_type ())
 
-GMenuTree *gmenu_tree_new (const char     *menu_file,
+GMenuTree *gmenu_tree_new (const char     *menu_basename,
                            GMenuTreeFlags  flags);
 
 gboolean   gmenu_tree_load_sync (GMenuTree  *tree,
