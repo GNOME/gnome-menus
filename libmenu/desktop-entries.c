@@ -54,7 +54,7 @@ typedef struct
   char     *name;
   char     *generic_name;
   char     *comment;
-  char     *icon;
+  GIcon    *icon;
 
   guint     nodisplay   : 1;
   guint     hidden      : 1;
@@ -85,6 +85,41 @@ unix_basename_from_path (const char *path)
     return basename + 1;
   else
     return path;
+}
+
+static GIcon *
+key_file_get_icon (GKeyFile *key_file)
+{
+  GIcon *icon = NULL;
+  gchar *icon_name;
+
+  icon_name = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP,
+                                            "Icon", NULL, NULL);
+  if (!icon_name)
+    return NULL;
+
+  if (g_path_is_absolute (icon_name)) {
+    GFile *file;
+
+    file = g_file_new_for_path (icon_name);
+    icon = g_file_icon_new (file);
+    g_object_unref (file);
+  } else {
+    char *p;
+
+    /* Work around a common mistake in desktop files */
+    if ((p = strrchr (icon_name, '.')) != NULL &&
+        (strcmp (p, ".png") == 0 ||
+         strcmp (p, ".xpm") == 0 ||
+         strcmp (p, ".svg") == 0))
+      *p = 0;
+
+    icon = g_themed_icon_new (icon_name);
+  }
+
+  g_free (icon_name);
+
+  return icon;
 }
 
 static gboolean
@@ -165,7 +200,7 @@ desktop_entry_load_directory (DesktopEntry  *entry,
 
   entry_directory->generic_name = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "GenericName", NULL, NULL);
   entry_directory->comment      = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "Comment", NULL, NULL);
-  entry_directory->icon         = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "Icon", NULL, NULL);
+  entry_directory->icon         = key_file_get_icon (key_file);
   entry_directory->nodisplay    = g_key_file_get_boolean (key_file,
                                                           DESKTOP_ENTRY_GROUP,
                                                           "NoDisplay",
@@ -315,7 +350,7 @@ desktop_entry_reload (DesktopEntry *entry)
       g_free (entry_directory->comment);
       entry_directory->comment = NULL;
 
-      g_free (entry_directory->icon);
+      g_object_unref (entry_directory->icon);
       entry_directory->icon = NULL;
     }
   else
@@ -390,7 +425,7 @@ desktop_entry_copy (DesktopEntry *entry)
 
       retval_directory->name         = g_strdup (entry_directory->name);
       retval_directory->comment      = g_strdup (entry_directory->comment);
-      retval_directory->icon         = g_strdup (entry_directory->icon);
+      retval_directory->icon         = g_object_ref (entry_directory->icon);
       retval_directory->nodisplay    = entry_directory->nodisplay;
       retval_directory->hidden       = entry_directory->hidden;
       retval_directory->showin       = entry_directory->showin;
@@ -429,7 +464,7 @@ desktop_entry_unref (DesktopEntry *entry)
       g_free (entry_directory->comment);
       entry_directory->comment = NULL;
 
-      g_free (entry_directory->icon);
+      g_object_unref (entry_directory->icon);
       entry_directory->icon = NULL;
     }
   else
@@ -480,10 +515,11 @@ desktop_entry_get_comment (DesktopEntry *entry)
   return ((DesktopEntryDirectory*)entry)->comment;
 }
 
-const char *
+GIcon *
 desktop_entry_get_icon (DesktopEntry *entry)
 {
-  g_return_val_if_fail (entry->type == DESKTOP_ENTRY_DIRECTORY, NULL);
+  if (entry->type == DESKTOP_ENTRY_DESKTOP)
+    return g_app_info_get_icon (G_APP_INFO (((DesktopEntryDesktop*)entry)->appinfo));
   return ((DesktopEntryDirectory*)entry)->icon;
 }
 

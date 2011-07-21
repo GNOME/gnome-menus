@@ -959,7 +959,15 @@ gmenu_tree_directory_get_comment (GMenuTreeDirectory *directory)
   return desktop_entry_get_comment (directory->directory_entry);
 }
 
-const char *
+/**
+ * gmenu_tree_directory_get_icon:
+ * @directory: a #GMenuTreeDirectory
+ *
+ * Gets the icon for the directory.
+ *
+ * Returns: (transfer none): The #GIcon for this directory
+ */
+GIcon *
 gmenu_tree_directory_get_icon (GMenuTreeDirectory *directory)
 {
   g_return_val_if_fail (directory != NULL, NULL);

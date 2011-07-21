@@ -101,7 +101,7 @@ GMenuTreeDirectory *gmenu_tree_directory_get_parent    (GMenuTreeDirectory *dire
 const char *gmenu_tree_directory_get_name              (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_generic_name      (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_comment           (GMenuTreeDirectory *directory);
-const char *gmenu_tree_directory_get_icon              (GMenuTreeDirectory *directory);
+GIcon      *gmenu_tree_directory_get_icon              (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_desktop_file_path (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_menu_id           (GMenuTreeDirectory *directory);
 

@@ -46,12 +46,10 @@ const char       *desktop_entry_get_basename (DesktopEntry *entry);
 const char       *desktop_entry_get_name     (DesktopEntry *entry);
 const char       *desktop_entry_get_generic_name (DesktopEntry *entry);
 const char       *desktop_entry_get_comment  (DesktopEntry *entry);
+GIcon            *desktop_entry_get_icon     (DesktopEntry *entry);
 gboolean          desktop_entry_get_hidden   (DesktopEntry *entry);
 gboolean          desktop_entry_get_no_display (DesktopEntry *entry);
 gboolean          desktop_entry_get_show_in  (DesktopEntry *entry);
-
-/* Only valid for DESKTOP_ENTRY_DIRECTORY */
-const char       *desktop_entry_get_icon     (DesktopEntry *entry);
 
 /* Only valid for DESKTOP_ENTRY_DESKTOP */
 GDesktopAppInfo  *desktop_entry_get_app_info (DesktopEntry *entry);
