@@ -42,6 +42,7 @@ enum {
   PROP_0,
 
   PROP_MENU_BASENAME,
+  PROP_MENU_PATH,
   PROP_FLAGS
 };
 
@@ -59,6 +60,7 @@ struct _GMenuTree
   GObject       parent_instance;
 
   char *basename;
+  char *path;
   char *canonical_path;
 
   GMenuTreeFlags flags;
@@ -324,14 +326,9 @@ gmenu_tree_remove_menu_file_monitors (GMenuTree *tree)
 }
 
 static gboolean
-canonicalize_basename_with_config_dir (GMenuTree   *tree,
-                                       const char *basename,
-                                       const char *config_dir)
+canonicalize_path (GMenuTree  *tree,
+                   const char *path)
 {
-  char *path;
-
-  path = g_build_filename (config_dir, "menus",  basename,  NULL);
-
   tree->canonical_path = menu_canonicalize_file_name (path, FALSE);
   if (tree->canonical_path)
     {
@@ -347,9 +344,22 @@ canonicalize_basename_with_config_dir (GMenuTree   *tree,
 					MENU_FILE_MONITOR_NONEXISTENT_FILE);
     }
 
+  return tree->canonical;
+}
+
+static gboolean
+canonicalize_basename_with_config_dir (GMenuTree   *tree,
+                                       const char *basename,
+                                       const char *config_dir)
+{
+  gboolean  ret;
+  char     *path;
+
+  path = g_build_filename (config_dir, "menus",  basename,  NULL);
+  ret = canonicalize_path (tree, path);
   g_free (path);
 
-  return tree->canonical;
+  return ret;
 }
 
 static void
@@ -382,6 +392,8 @@ static gboolean
 gmenu_tree_canonicalize_path (GMenuTree *tree,
                               GError   **error)
 {
+  const char *menu_file = NULL;
+
   if (tree->canonical)
     return TRUE;
 
@@ -389,24 +401,34 @@ gmenu_tree_canonicalize_path (GMenuTree *tree,
 
   gmenu_tree_remove_menu_file_monitors (tree);
 
-  if (strcmp (tree->basename, "applications.menu") == 0 &&
-      g_getenv ("XDG_MENU_PREFIX"))
+  if (tree->path)
     {
-      char *prefixed_basename;
-      prefixed_basename = g_strdup_printf ("%s%s",
-                                           g_getenv ("XDG_MENU_PREFIX"),
-                                           tree->basename);
-      canonicalize_basename (tree, prefixed_basename);
-      g_free (prefixed_basename);
+      menu_file = tree->path;
+      canonicalize_path (tree, tree->path);
     }
+  else
+    {
+      menu_file = tree->basename;
 
-  if (!tree->canonical)
-    canonicalize_basename (tree, tree->basename);
+      if (strcmp (tree->basename, "applications.menu") == 0 &&
+          g_getenv ("XDG_MENU_PREFIX"))
+        {
+          char *prefixed_basename;
+          prefixed_basename = g_strdup_printf ("%s%s",
+                                               g_getenv ("XDG_MENU_PREFIX"),
+                                               tree->basename);
+          canonicalize_basename (tree, prefixed_basename);
+          g_free (prefixed_basename);
+        }
+
+      if (!tree->canonical)
+        canonicalize_basename (tree, tree->basename);
+    }
 
   if (tree->canonical)
     {
       menu_verbose ("Successfully looked up menu_file for \"%s\": %s\n",
-                    tree->basename, tree->canonical_path);
+                    menu_file, tree->canonical_path);
       return TRUE;
     }
   else
@@ -415,7 +437,7 @@ gmenu_tree_canonicalize_path (GMenuTree *tree,
                    G_IO_ERROR,
                    G_IO_ERROR_FAILED,
                    "Failed to look up menu_file for \"%s\"\n",
-                   tree->basename);
+                   menu_file);
       return FALSE;
     }
 }
@@ -455,6 +477,25 @@ gmenu_tree_new (const char     *menu_basename,
                        NULL);
 }
 
+/**
+ * gmenu_tree_new_fo_path:
+ * @menu_path: Path of menu file
+ * @flags: Flags controlling menu content
+ *
+ * Returns: (transfer full): A new #GMenuTree instance
+ */
+GMenuTree *
+gmenu_tree_new_for_path (const char     *menu_path,
+                         GMenuTreeFlags  flags)
+{
+  g_return_val_if_fail (menu_path != NULL, NULL);
+
+  return g_object_new (GMENU_TYPE_TREE,
+                       "menu-path", menu_path,
+                       "flags", flags,
+                       NULL);
+}
+
 static void
 gmenu_tree_set_property (GObject         *object,
                          guint            prop_id,
@@ -467,6 +508,10 @@ gmenu_tree_set_property (GObject         *object,
     {
     case PROP_MENU_BASENAME:
       self->basename = g_value_dup_string (value);
+      break;
+
+    case PROP_MENU_PATH:
+      self->path = g_value_dup_string (value);
       break;
 
     case PROP_FLAGS:
@@ -492,6 +537,9 @@ gmenu_tree_get_property (GObject         *object,
     case PROP_MENU_BASENAME:
       g_value_set_string (value, self->basename);
       break;
+    case PROP_MENU_PATH:
+      g_value_set_string (value, self->path);
+      break;
     case PROP_FLAGS:
       g_value_set_flags (value, self->flags);
       break;
@@ -511,6 +559,10 @@ gmenu_tree_finalize (GObject *object)
   if (tree->basename != NULL)
     g_free (tree->basename);
   tree->basename = NULL;
+
+  if (tree->path != NULL)
+    g_free (tree->path);
+  tree->path = NULL;
 
   if (tree->canonical_path != NULL)
     g_free (tree->canonical_path);
@@ -544,6 +596,17 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
                                    PROP_MENU_BASENAME,
                                    g_param_spec_string ("menu-basename", "", "",
                                                         "applications.menu",
+                                                        G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
+  /**
+   * GMenuTree:menu-path
+   *
+   * The full path of the menu file. If set, GMenuTree:menu-basename will get
+   * ignored.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_MENU_PATH,
+                                   g_param_spec_string ("menu-path", "", "",
+                                                        NULL,
                                                         G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
   /**
    * GMenuTree:flags
@@ -2760,7 +2823,7 @@ gmenu_tree_load_layout (GMenuTree  *tree,
 
   error = NULL;
   tree->layout = menu_layout_load (tree->canonical_path,
-                                   tree->basename,
+                                   tree->path ? NULL : tree->basename,
                                    error);
   if (!tree->layout)
     return FALSE;

@@ -86,6 +86,9 @@ GType gmenu_tree_flags_get_type (void);
 GMenuTree *gmenu_tree_new (const char     *menu_basename,
                            GMenuTreeFlags  flags);
 
+GMenuTree *gmenu_tree_new_for_path (const char     *menu_path,
+                                    GMenuTreeFlags  flags);
+
 gboolean   gmenu_tree_load_sync (GMenuTree  *tree,
                                  GError    **error);
 
