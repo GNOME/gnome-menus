@@ -68,8 +68,6 @@ struct _GMenuTree
   MenuLayoutNode *layout;
   GMenuTreeDirectory *root;
 
-  GError *load_error;
-
   guint canonical : 1;
   guint loaded    : 1;
 };
@@ -515,8 +513,6 @@ gmenu_tree_finalize (GObject *object)
     g_free (tree->canonical_path);
   tree->canonical_path = NULL;
 
-  g_clear_error (&(tree->load_error));
-
   G_OBJECT_CLASS (gmenu_tree_parent_class)->finalize (object);
 }
 
@@ -607,18 +603,21 @@ gboolean
 gmenu_tree_load_sync (GMenuTree  *tree,
                       GError    **error)
 {
-  if (!tree->loaded)
-    {
-      g_clear_error (&tree->load_error);
-      gmenu_tree_build_from_layout (tree, &tree->load_error);
-      tree->loaded = TRUE;
-    }
+  GError *local_error = NULL;
 
-  if (tree->load_error)
+  if (tree->loaded)
+    return TRUE;
+
+  gmenu_tree_build_from_layout (tree, &local_error);
+
+  if (local_error)
     {
-      g_propagate_error (error, tree->load_error);
+      g_propagate_error (error, local_error);
       return FALSE;
     }
+
+  tree->loaded = TRUE;
+
   return TRUE;
 }
 
@@ -4371,7 +4370,6 @@ gmenu_tree_force_rebuild (GMenuTree *tree)
     {
       gmenu_tree_item_unref (tree->root);
       tree->root = NULL;
-      g_clear_error (&tree->load_error);
       tree->loaded = FALSE;
 
       g_assert (tree->layout != NULL);
