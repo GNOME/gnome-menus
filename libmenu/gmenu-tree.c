@@ -608,11 +608,10 @@ gmenu_tree_load_sync (GMenuTree  *tree,
   if (tree->loaded)
     return TRUE;
 
-  gmenu_tree_build_from_layout (tree, &local_error);
-
-  if (local_error)
+  if (!gmenu_tree_build_from_layout (tree, &local_error))
     {
-      g_propagate_error (error, local_error);
+      if (local_error)
+        g_propagate_error (error, local_error);
       return FALSE;
     }
 
