@@ -539,7 +539,7 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
   g_object_class_install_property (gobject_class,
                                    PROP_NAME,
                                    g_param_spec_string ("name", "", "",
-                                                        NULL,
+                                                        "applications.menu",
                                                         G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
   /**
    * GMenuTree:flags
