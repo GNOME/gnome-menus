@@ -92,7 +92,7 @@ GMenuTree *gmenu_tree_new_for_path (const char     *menu_path,
 gboolean   gmenu_tree_load_sync (GMenuTree  *tree,
                                  GError    **error);
 
-const char         *gmenu_tree_get_menu_path           (GMenuTree  *tree);
+const char         *gmenu_tree_get_canonical_menu_path (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_root_directory      (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_directory_from_path (GMenuTree  *tree,
 							const char *path);

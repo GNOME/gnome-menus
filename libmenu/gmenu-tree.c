@@ -638,16 +638,16 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
 }
 
 /**
- * gmenu_tree_get_menu_path:
+ * gmenu_tree_get_canonical_menu_path:
  * @tree: a #GMenuTree
  *
  * This function is only available if the tree has been loaded via
  * gmenu_tree_load_sync() or a variant thereof.
  *
- * Returns: The absolute path to the loaded menu file
+ * Returns: The absolute and canonicalized path to the loaded menu file
  */
 const char *
-gmenu_tree_get_menu_path (GMenuTree *tree)
+gmenu_tree_get_canonical_menu_path (GMenuTree *tree)
 {
   g_return_val_if_fail (GMENU_IS_TREE (tree), NULL);
   g_return_val_if_fail (tree->loaded, NULL);
