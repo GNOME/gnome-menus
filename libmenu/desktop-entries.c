@@ -58,6 +58,7 @@ typedef struct
 
   guint     nodisplay   : 1;
   guint     hidden      : 1;
+  guint     showin      : 1;
 } DesktopEntryDirectory;
 
 struct DesktopEntrySet
@@ -158,10 +159,6 @@ desktop_entry_load_directory (DesktopEntry  *entry,
 
   g_free (type_str);
 
-  /* Just skip stuff that's not GNOME */
-  if (!key_file_get_show_in_gnome (key_file))
-    return FALSE;
-
   entry_directory->name = g_key_file_get_locale_string (key_file, DESKTOP_ENTRY_GROUP, "Name", NULL, error);
   if (entry_directory->name == NULL)
     return FALSE;
@@ -177,6 +174,8 @@ desktop_entry_load_directory (DesktopEntry  *entry,
                                                           DESKTOP_ENTRY_GROUP,
                                                           "Hidden",
                                                           NULL);
+  entry_directory->showin       = key_file_get_show_in_gnome (key_file);
+
   return TRUE;
 }
 
@@ -394,6 +393,7 @@ desktop_entry_copy (DesktopEntry *entry)
       retval_directory->icon         = g_strdup (entry_directory->icon);
       retval_directory->nodisplay    = entry_directory->nodisplay;
       retval_directory->hidden       = entry_directory->hidden;
+      retval_directory->showin       = entry_directory->showin;
     }
 
   return retval;
@@ -501,6 +501,14 @@ desktop_entry_get_hidden (DesktopEntry *entry)
   if (entry->type == DESKTOP_ENTRY_DESKTOP)
     return g_desktop_app_info_get_is_hidden (((DesktopEntryDesktop*)entry)->appinfo);
   return ((DesktopEntryDirectory*)entry)->hidden;
+}
+
+gboolean
+desktop_entry_get_show_in (DesktopEntry *entry)
+{
+  if (entry->type == DESKTOP_ENTRY_DESKTOP)
+    return g_desktop_app_info_get_show_in (((DesktopEntryDesktop*)entry)->appinfo, "GNOME");
+  return ((DesktopEntryDirectory*)entry)->showin;
 }
 
 

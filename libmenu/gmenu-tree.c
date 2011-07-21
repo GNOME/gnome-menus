@@ -3311,6 +3311,12 @@ process_layout (GMenuTree          *tree,
             }
         }
 
+      if (!desktop_entry_get_show_in (directory->directory_entry))
+        {
+          menu_verbose ("Not showing menu %s because OnlyShowIn!=$DESKTOP or NotShowIn=$DESKTOP (with $DESKTOP=${XDG_CURRENT_DESKTOP:-GNOME})\n",
+                        desktop_entry_get_name (directory->directory_entry));
+          deleted = TRUE;
+        }
     }
 
   if (deleted)
@@ -3366,6 +3372,16 @@ process_layout (GMenuTree          *tree,
                         desktop_entry_get_name (entry->desktop_entry));
           delete = TRUE;
         }
+
+      if (!desktop_entry_get_show_in (entry->desktop_entry))
+        {
+          menu_verbose ("Deleting %s because OnlyShowIn!=$DESKTOP or NotShowIn=$DESKTOP (with $DESKTOP=${XDG_CURRENT_DESKTOP:-GNOME})\n",
+                        desktop_entry_get_name (entry->desktop_entry));
+          delete = TRUE;
+        }
+
+      /* No need to filter out based on TryExec since GDesktopAppInfo cannot
+       * deal with .desktop files with a failed TryExec. */
 
       if (delete)
         {
