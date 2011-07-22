@@ -496,6 +496,31 @@ gmenu_tree_new_for_path (const char     *menu_path,
                        NULL);
 }
 
+static GObject *
+gmenu_tree_constructor (GType                  type,
+                        guint                  n_construct_properties,
+                        GObjectConstructParam *construct_properties)
+{
+	GObject   *obj;
+	GMenuTree *self;
+
+	obj = G_OBJECT_CLASS (gmenu_tree_parent_class)->constructor (type,
+                                                                     n_construct_properties,
+                                                                     construct_properties);
+
+        /* If GMenuTree:menu-path is set, then we should make sure that
+         * GMenuTree:menu-basename is unset (especially as it has a default
+         * value). This has to be done here, in the constructor, since the
+         * properties are construct-only. */
+
+	self = GMENU_TREE (obj);
+
+        if (self->path != NULL)
+          g_object_set (self, "menu-basename", NULL, NULL);
+
+	return obj;
+}
+
 static void
 gmenu_tree_set_property (GObject         *object,
                          guint            prop_id,
@@ -581,6 +606,7 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
+  gobject_class->constructor = gmenu_tree_constructor;
   gobject_class->get_property = gmenu_tree_get_property;
   gobject_class->set_property = gmenu_tree_set_property;
   gobject_class->finalize = gmenu_tree_finalize;
