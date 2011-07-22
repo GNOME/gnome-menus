@@ -55,7 +55,7 @@ class MenuTreeModel (Gtk.TreeStore):
         self.entries_list_iter = None
         
         if (len (menu_files) < 1):
-            menu_files = ["applications.menu", "settings.menu"]
+            menu_files = ["applications.menu"]
 
         for menu_file in menu_files:
             if menu_file == "applications.menu" and os.environ.has_key ("XDG_MENU_PREFIX"):
