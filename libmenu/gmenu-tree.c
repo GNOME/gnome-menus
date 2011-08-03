@@ -1,4 +1,4 @@
-/*
+/* -*- mode:c; c-file-style: "gnu"; indent-tabs-mode: nil -*-
  * Copyright (C) 2003, 2004, 2011 Red Hat, Inc.
  *
  * This library is free software; you can redistribute it and/or
@@ -69,6 +69,7 @@ struct _GMenuTree
 
   MenuLayoutNode *layout;
   GMenuTreeDirectory *root;
+  GHashTable *entries_by_id;
 
   guint canonical : 1;
   guint loaded    : 1;
@@ -593,12 +594,16 @@ gmenu_tree_finalize (GObject *object)
     g_free (tree->canonical_path);
   tree->canonical_path = NULL;
 
+  g_hash_table_destroy (tree->entries_by_id);
+  tree->entries_by_id = NULL;
+
   G_OBJECT_CLASS (gmenu_tree_parent_class)->finalize (object);
 }
 
 static void
 gmenu_tree_init (GMenuTree *self)
 {
+  self->entries_by_id = g_hash_table_new (g_str_hash, g_str_equal);
 }
 
 static void
@@ -808,6 +813,30 @@ gmenu_tree_get_directory_from_path (GMenuTree  *tree,
   gmenu_tree_item_unref (root);
 
   return directory ? gmenu_tree_item_ref (directory) : NULL;
+}
+
+/**
+ * gmenu_tree_get_entry_by_id:
+ * @tree: a #GMenuTree
+ * @id: a desktop file ID
+ * 
+ * Look up the entry corresponding to the given "desktop file id".
+ *
+ * Returns: (transfer full): A newly referenced #GMenuTreeEntry, or %NULL if none
+ */
+GMenuTreeEntry     *
+gmenu_tree_get_entry_by_id (GMenuTree  *tree,
+			    const char *id)
+{
+  GMenuTreeEntry *entry;
+
+  g_return_val_if_fail (tree->loaded, NULL);
+
+  entry = g_hash_table_lookup (tree->entries_by_id, id);
+  if (entry != NULL)
+    gmenu_tree_item_ref (entry);
+
+  return entry;
 }
 
 static void
@@ -4413,6 +4442,45 @@ handle_entries_changed (MenuLayoutNode *layout,
     }
 }
 
+static void
+update_entry_index (GMenuTree           *tree,
+		    GMenuTreeDirectory  *dir)
+{
+  GMenuTreeIter *iter = gmenu_tree_directory_iter (dir);
+  GMenuTreeItemType next_type;
+
+  while ((next_type = gmenu_tree_iter_next (iter)) != GMENU_TREE_ITEM_INVALID)
+    {
+      gpointer item = NULL;
+
+      switch (next_type)
+        {
+        case GMENU_TREE_ITEM_ENTRY:
+          {
+	    const char *id;
+	    
+            item = gmenu_tree_iter_get_entry (iter);
+            id = gmenu_tree_entry_get_desktop_file_id (item);
+            if (id != NULL)
+              g_hash_table_insert (tree->entries_by_id, (char*)id, item);
+          }
+          break;
+        case GMENU_TREE_ITEM_DIRECTORY:
+          {
+            item = gmenu_tree_iter_get_directory (iter);
+            update_entry_index (tree, (GMenuTreeDirectory*)item);
+          }
+          break;
+        default:
+          break;
+        }
+      if (item != NULL)
+        gmenu_tree_item_unref (item);
+    }
+
+  gmenu_tree_iter_unref (iter);
+}
+
 static gboolean
 gmenu_tree_build_from_layout (GMenuTree  *tree,
                               GError    **error)
@@ -4445,6 +4513,8 @@ gmenu_tree_build_from_layout (GMenuTree  *tree,
        * according to the layout info */
       process_layout_info (tree, tree->root);
 
+      update_entry_index (tree, tree->root);
+
       menu_layout_node_root_add_entries_monitor (tree->layout,
                                                  (MenuLayoutNodeEntriesChangedFunc) handle_entries_changed,
                                                  tree);
@@ -4460,6 +4530,7 @@ gmenu_tree_force_rebuild (GMenuTree *tree)
 {
   if (tree->root)
     {
+      g_hash_table_remove_all (tree->entries_by_id);
       gmenu_tree_item_unref (tree->root);
       tree->root = NULL;
       tree->loaded = FALSE;

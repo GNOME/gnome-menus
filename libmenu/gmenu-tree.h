@@ -98,6 +98,8 @@ const char         *gmenu_tree_get_canonical_menu_path (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_root_directory      (GMenuTree  *tree);
 GMenuTreeDirectory *gmenu_tree_get_directory_from_path (GMenuTree  *tree,
 							const char *path);
+GMenuTreeEntry     *gmenu_tree_get_entry_by_id         (GMenuTree  *tree,
+							const char *id);
 
 gpointer gmenu_tree_item_ref   (gpointer item);
 void     gmenu_tree_item_unref (gpointer item);
