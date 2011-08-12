@@ -87,6 +87,34 @@ unix_basename_from_path (const char *path)
     return path;
 }
 
+static const char *
+get_current_desktop (void)
+{
+  static char *current_desktop = NULL;
+
+  /* Support XDG_CURRENT_DESKTOP environment variable; this can be used
+   * to abuse gnome-menus in non-GNOME desktops. */
+  if (!current_desktop)
+    {
+      const char *desktop;
+
+      desktop = g_getenv ("XDG_CURRENT_DESKTOP");
+
+      /* Note: if XDG_CURRENT_DESKTOP is set but empty, do as if it
+       * was not set */
+      if (!desktop || desktop[0] == '\0')
+        current_desktop = g_strdup ("GNOME");
+      else
+        current_desktop = g_strdup (desktop);
+    }
+
+  /* Using "*" means skipping desktop-related checks */
+  if (g_strcmp0 (current_desktop, "*") == 0)
+    return NULL;
+
+  return current_desktop;
+}
+
 static GIcon *
 key_file_get_icon (GKeyFile *key_file)
 {
@@ -123,11 +151,16 @@ key_file_get_icon (GKeyFile *key_file)
 }
 
 static gboolean
-key_file_get_show_in_gnome (GKeyFile *key_file)
+key_file_get_show_in (GKeyFile *key_file)
 {
+  const gchar *current_desktop;
   gchar **strv;
-  gboolean show_in_gnome = TRUE;
+  gboolean show_in = TRUE;
   int i;
+
+  current_desktop = get_current_desktop ();
+  if (!current_desktop)
+    return TRUE;
 
   strv = g_key_file_get_string_list (key_file,
                                      DESKTOP_ENTRY_GROUP,
@@ -136,12 +169,12 @@ key_file_get_show_in_gnome (GKeyFile *key_file)
                                      NULL);
   if (strv)
     {
-      show_in_gnome = FALSE;
+      show_in = FALSE;
       for (i = 0; strv[i]; i++)
         {
-          if (!strcmp (strv[i], "GNOME"))
+          if (!strcmp (strv[i], current_desktop))
             {
-              show_in_gnome = TRUE;
+              show_in = TRUE;
               break;
             }
         }
@@ -155,19 +188,19 @@ key_file_get_show_in_gnome (GKeyFile *key_file)
                                          NULL);
       if (strv)
         {
-          show_in_gnome = TRUE;
+          show_in = TRUE;
           for (i = 0; strv[i]; i++)
             {
-              if (!strcmp (strv[i], "GNOME"))
+              if (!strcmp (strv[i], current_desktop))
                 {
-                  show_in_gnome = FALSE;
+                  show_in = FALSE;
                 }
             }
         }
     }
   g_strfreev (strv);
 
-  return show_in_gnome;
+  return show_in;
 }
 
 static gboolean
@@ -209,7 +242,7 @@ desktop_entry_load_directory (DesktopEntry  *entry,
                                                           DESKTOP_ENTRY_GROUP,
                                                           "Hidden",
                                                           NULL);
-  entry_directory->showin       = key_file_get_show_in_gnome (key_file);
+  entry_directory->showin       = key_file_get_show_in (key_file);
 
   return TRUE;
 }
@@ -543,7 +576,14 @@ gboolean
 desktop_entry_get_show_in (DesktopEntry *entry)
 {
   if (entry->type == DESKTOP_ENTRY_DESKTOP)
-    return g_desktop_app_info_get_show_in (((DesktopEntryDesktop*)entry)->appinfo, "GNOME");
+    {
+      const char *current_desktop = get_current_desktop ();
+
+      if (current_desktop == NULL)
+        return TRUE;
+      else
+        return g_desktop_app_info_get_show_in (((DesktopEntryDesktop*)entry)->appinfo, current_desktop);
+    }
   return ((DesktopEntryDirectory*)entry)->showin;
 }
 
