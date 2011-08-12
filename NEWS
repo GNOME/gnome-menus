@@ -1,4 +1,57 @@
 =============
+Version 3.1.5
+=============
+
+This version of gnome-menus comes with a significant API and ABI break, to
+modernize the code. As a result, the name of the library and the pkg-config
+filename have changed, so that this new version is parallel-installable with
+previous ones.
+
+As of now, there is no guide to migrate to the new API, but it is rather
+straight-forward as changes were mostly done to improve the experience for
+introspection-based bindings. The examples shipped in util/ are a good basis.
+
+  libmenu
+
+	* Rebase internal representation of .desktop files on top of
+	  GDesktopAppInfo (Colin Walters)
+	* Make GMenuTree a GObject (Colin Walters)
+	* Use GSlice for various data (Colin Walters)
+	* Use thread-default main context for callbacks for future flexibility
+	  for thread support (Colin Walters)
+	* Many API changes, see new headers for changes. The most visible one
+	  is that gmenu_tree_load_sync() should explicitly be used to load the
+	  menu now. (Colin Walters, Vincent)
+	* Drop support for "KDE Desktop Entry" group (Vincent)
+	* Return GIcon instead of char * for icon-related API (Vincent)
+	* Various fixes and cleanups to merge Colin's branch (Vincent, Colin
+	  Walters)
+	* Add gmenu_tree_get_entry_by_id() API (Colin Walters)
+	* Support XDG_CURRENT_DESKTOP (Vincent)
+
+  Menu Editor
+
+	* Port to introspection-based bindings (Vincent)
+	* Stop editing settings.menu (Vincent)
+
+  Python
+
+	* Drop static python bindings; introspection-based ones should be used
+	  now (Colin Walters)
+
+  Misc
+
+	* Replace example of python code with javascript code (Colin Walters)
+	* Change library name, header directory, pkg-config filename (Vincent)
+	* Require glib 2.29.15 for new API (Vincent)
+
+  Translators
+
+	* Ігар Грачышка (be)
+	* Gil Forcada (ca@valencia)
+	* Priscilla Mahlangu (zu)
+
+=============
 Version 3.0.1
 =============
 
