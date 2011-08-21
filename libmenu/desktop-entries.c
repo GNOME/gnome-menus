@@ -497,8 +497,11 @@ desktop_entry_unref (DesktopEntry *entry)
       g_free (entry_directory->comment);
       entry_directory->comment = NULL;
 
-      g_object_unref (entry_directory->icon);
-      entry_directory->icon = NULL;
+      if (entry_directory->icon != NULL)
+        {
+          g_object_unref (entry_directory->icon);
+          entry_directory->icon = NULL;
+        }
     }
   else
     g_assert_not_reached ();
