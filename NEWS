@@ -1,3 +1,11 @@
+==============
+Version 3.1.90
+==============
+
+  libmenu
+
+        * Don't try to unref potentially NULL pointers (Jasper St. Pierre)
+
 =============
 Version 3.1.5
 =============
