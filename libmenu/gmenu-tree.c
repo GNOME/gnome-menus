@@ -3675,7 +3675,7 @@ preprocess_layout_info_subdir_helper (GMenuTree          *tree,
 
           menu_verbose ("Inline aliasing '%s' to '%s'\n",
                         item->type == GMENU_TREE_ITEM_ENTRY ?
-                          gmenu_tree_entry_get_name (GMENU_TREE_ENTRY (item)) :
+                          g_app_info_get_name (G_APP_INFO (gmenu_tree_entry_get_app_info (GMENU_TREE_ENTRY (item)))) :
                           (item->type == GMENU_TREE_ITEM_DIRECTORY ?
                              gmenu_tree_directory_get_name (GMENU_TREE_DIRECTORY (item)) :
                              gmenu_tree_directory_get_name (GMENU_TREE_ALIAS (item)->directory)),
