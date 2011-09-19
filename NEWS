@@ -1,4 +1,18 @@
 ==============
+Version 3.1.92
+==============
+
+  libmenu
+
+	* Fix build failure with --enable-debug (Vincent)
+
+  Translators
+
+	* Ігар Грачышка (be)
+	* Daniel Mustieles (es)
+	* Jiro Matsuzawa (ja)
+
+==============
 Version 3.1.90
 ==============
 
