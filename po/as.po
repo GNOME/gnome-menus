@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2009-06-21 17:35+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-08-06 14:07+0000\n"
 "PO-Revision-Date: 2009-09-21 09:40+0530\n"
 "Last-Translator: \n"
 "Language-Team: Assamese <>\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Multimedia menu"
-msgstr "মাল্টি-মিডিয়া তালিকা"
+msgstr "বহুমাধ্যম মেনু"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
-msgstr "শব্দ ও ভিডিও"
+msgstr "শব্দ আৰু ভিডিঅ'"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -32,19 +32,19 @@ msgstr "প্ৰোগ্ৰামিং"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "চালনাজ্ঞান উন্নয়নৰ সামগ্ৰী"
+msgstr "চফ্টৱেৰ উন্নয়নৰ বাবে সঁজুলিসমূহ"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
-msgstr "শিক্ষাবিষয়ক বস্তু"
+msgstr "শিক্ষা"
 
 #: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
-msgstr "খেলা"
+msgstr "খেলসমূহ"
 
 #: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "খেলা ও বিনোদন"
+msgstr "খেল আৰু বিনোদন"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -52,31 +52,15 @@ msgstr "গ্ৰাফিক্স"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "চাত্ৰাঙ্কিত অনুপ্ৰয়োগ"
+msgstr "গ্ৰাফিক্স অনুপ্ৰয়োগসমূহ"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
-msgstr "যান্ত্ৰিক সামগ্ৰী"
+msgstr "হাৰ্ডৱেৰ"
 
 #: ../desktop-directories/Hardware.directory.in.h:2
 msgid "Settings for several hardware devices"
-msgstr "বিবিধ যন্ত্ৰৰ সামগ্ৰীৰ সংক্ৰান্ত বৈশিষ্ট্য"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "ইন্টাৰনেট ও নেটৱৰ্ক"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "নেটৱৰ্ক সংক্ৰান্ত বৈশিষ্ট্য"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "চেহেৰা ছবি"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "ডেস্কটপৰ চেহেৰা ও আচৰণ নিয়ন্ত্ৰণকাৰী বৈশিষ্ট্য"
+msgstr "বহুতো হাৰ্ডৱেৰ ডিভাইচৰ বাবে সংহতিসমূহ"
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
@@ -84,7 +68,7 @@ msgstr "ইন্টাৰনেট"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "ইন্টাৰনেট ব্যবহাৰৰ অনুপ্ৰয়োগ যেনে ওৱেব আৰু ই-মেইল অনুপ্ৰয়োগ"
+msgstr "ইন্টাৰনেট অভিগম যেনে ৱেব আৰু ই-মেইলৰ বাবে প্ৰগ্ৰামসমূহ"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -92,77 +76,56 @@ msgstr "কাৰ্যালয়"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "কাৰ্যালয়ৰ অনুপ্ৰয়োগ"
+msgstr "কাৰ্যালয়ৰ অনুপ্ৰয়োগসমূহ"
 
-#: ../desktop-directories/Personal.directory.in.h:1
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal"
 msgstr "ব্যক্তিগত"
 
-#: ../desktop-directories/Personal.directory.in.h:2
+#: ../desktop-directories/Personal.directory.in.h:3
 msgid "Personal settings"
-msgstr "ব্যক্তিগত বৈশিষ্ট্য"
-
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "প্ৰশাসনিক বৈশিষ্ট্য"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr ""
-"সম্পূৰ্ণ ব্যৱস্থাপ্ৰণালী ব্যাপী বৈশিষ্ট্য পৰিবৰ্তন কৰক (সকলো ব্যৱহাৰকৰোঁতা প্ৰভাবিত হ'ব)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "ব্যক্তিগত পছন্দ"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "পছন্দ"
+msgstr "ব্যক্তিগত সংহতিসমূহ"
 
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
-msgstr "ব্যৱস্থাপ্ৰণালী"
+msgstr "চিস্টেম"
 
 #: ../desktop-directories/System.directory.in.h:2
 msgid "System settings"
-msgstr "ব্যৱস্থাপ্ৰণালী সংক্ৰান্ত বৈশিষ্ট্য"
+msgstr "চিস্টেম সংহতিসমূহ"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "ব্যৱস্থাপ্ৰণালীৰ বিভিন্ন সৰঞ্জাম"
+msgstr "চিস্টেম সঁজুলিসমূহ"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "ব্যৱস্থাপ্ৰণালীৰ বৈশিষ্ট্যৰ বিন্যাস এবং নিৰীক্ষণ"
+msgstr "চিস্টেমৰ সংৰূপ আৰু নিৰীক্ষণ"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "সাৰ্বজনীন ব্যবহাৰাধিকাৰ"
+msgstr "সাৰ্বভৈমক অভিগম"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "সাৰ্বজনীন ব্যবহাৰাধিকাৰ সংক্ৰান্ত সম্পৰ্কিত বৈশিষ্ট্য"
+msgstr "সাৰ্বভৈমক অভিগম সংহতিসমূহ"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
-msgstr "আনুষঙ্গিক"
+msgstr "সৰঞ্জামসমূহ"
 
 #: ../desktop-directories/Utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "ডেস্কটপৰ ব্যৱহৃত আনুষঙ্গিক বস্তু"
+msgstr "ডেস্কটপৰ সৰঞ্জামসমূহ"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
-msgstr "অনুপ্ৰয়োগ"
-
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "ব্যক্তিগত পছন্দ ও প্ৰশাসনিক বৈশিষ্ট্য"
+msgstr "অনুপ্ৰয়োগসমূহ"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Applications that did not fit in other categories"
-msgstr "অন্যান্য শ্ৰেণীত অন্তৰ্গত নকৰা অনুপ্ৰয়োগ"
+msgstr "অন্যান্য বিভাগত খাপ নখোৱা অনুপ্ৰয়োগসমূহ"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Other"
@@ -170,108 +133,122 @@ msgstr "অন্যান্য"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "তালিকা সম্পাদক"
+msgstr "মেনু সম্পাদক"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
-msgstr "তালিকা সম্পাদন কৰক"
+msgstr "মেনু সম্পাদনা কৰক"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Applications:"
-msgstr "অনুপ্ৰয়োগ :(_A)"
+msgstr "অনুপ্ৰয়োগসমূহ :(_A)"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
-msgstr "অবিকল্পিত মান(_D)"
+msgstr "অবিকল্পিতসমূহ (_D)"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Menus:"
-msgstr "তালিকা:(_M)"
+msgstr "মেনুসমূহ: (_M)"
 
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#: ../simple-editor/GMenuSimpleEditor/main.py:47
 #, python-format
-#| msgid "Menu Editor"
 msgid "Simple Menu Editor %s"
-msgstr "%s তালিকা সম্পাদক"
+msgstr "সাধাৰন মেনু সম্পাদক %s"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
 msgid "Name"
 msgstr "নাম"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
 msgid "Show"
 msgstr "দেখুৱাওক"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"ব্যক্তিগত পঞ্জিকাৰ সন।ধান পোৱা ন'গ'ল: /etc/passwd নথিপত্ৰত উল্লেখ নাই আৰু পৰিবেশৰ "
-"$HOME চলকৰ মান অনুপস্থিত"
+"ঘৰ ডাইৰেকটৰি পোৱা ন'গ'ল: /etc/passwd নথিপত্ৰত সংহতি কৰা নাই আৰু পৰিৱেশত $HOME -"
+"ৰ বাবে কোনো মান নাই"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "তালিকাৰ নথিপত্ৰ"
+#~ msgid "Internet and Network"
+#~ msgstr "ইন্টাৰনেট ও নেটৱৰ্ক"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "MENU_FILE"
+#~ msgid "Network-related settings"
+#~ msgstr "নেটৱৰ্ক সংক্ৰান্ত বৈশিষ্ট্য"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "তালিকা পৰিবৰ্তণৰ নিৰীক্ষণ ব্যৱস্থা"
+#~ msgid "Look and Feel"
+#~ msgstr "চেহেৰা ছবি"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "<Exclude> কৰা নিবেশ অন্তৰ্ভুক্ত কৰা হ'ব"
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "ডেস্কটপৰ চেহেৰা ও আচৰণ নিয়ন্ত্ৰণকাৰী বৈশিষ্ট্য"
 
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "NoDisplay=true নিবেশসমূহ অন্তৰ্ভুক্ত কৰা হ'ব"
+#~ msgid "Administration"
+#~ msgstr "প্ৰশাসনিক বৈশিষ্ট্য"
 
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "ডেস্কটপ নথিপত্ৰৰ ID বৈধ নহয়"
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr ""
+#~ "সম্পূৰ্ণ চিস্টেম ব্যাপী বৈশিষ্ট্য পৰিবৰ্তন কৰক (সকলো ব্যৱহাৰকৰোঁতা প্ৰভাবিত হ'ব)"
 
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[অবৈধ নথিপত্ৰৰ নাম]"
+#~ msgid "Personal preferences"
+#~ msgstr "ব্যক্তিগত পছন্দ"
 
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr " <excluded>"
+#~ msgid "Preferences"
+#~ msgstr "পছন্দ"
 
-#: ../util/test-menu-spec.c:164
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"==== তালিকা পৰিবৰ্তিত হৈছে, পুনঃ তুলি লোৱা হৈছে ====\n"
-"\n"
-"\n"
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "ব্যক্তিগত পছন্দ ও প্ৰশাসনিক বৈশিষ্ট্য"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "তালিকা-ট্ৰি বৰ্তমানে ৰিক্ত"
+#~ msgid "Menu file"
+#~ msgstr "তালিকাৰ নথিপত্ৰ"
 
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- GNOME'ৰ ডেস্কটপ তালিকাৰ বৈশিষ্ট্যাবলী প্ৰয়োগৰ পৰীক্ষা কৰক"
+#~ msgid "MENU_FILE"
+#~ msgstr "MENU_FILE"
+
+#~ msgid "Monitor for menu changes"
+#~ msgstr "তালিকা পৰিবৰ্তণৰ নিৰীক্ষণ ব্যৱস্থা"
+
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "<Exclude> কৰা নিবেশ অন্তৰ্ভুক্ত কৰা হ'ব"
+
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "NoDisplay=true নিবেশসমূহ অন্তৰ্ভুক্ত কৰা হ'ব"
+
+#~ msgid "Invalid desktop file ID"
+#~ msgstr "ডেস্কটপ নথিপত্ৰৰ ID বৈধ নহয়"
+
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[অবৈধ নথিপত্ৰৰ নাম]"
+
+#~ msgid " <excluded>"
+#~ msgstr " <excluded>"
+
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== তালিকা পৰিবৰ্তিত হৈছে, পুনঃ তুলি লোৱা হৈছে ====\n"
+#~ "\n"
+#~ "\n"
+
+#~ msgid "Menu tree is empty"
+#~ msgstr "তালিকা-ট্ৰি বৰ্তমানে ৰিক্ত"
+
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr "- GNOME'ৰ ডেস্কটপ তালিকাৰ বৈশিষ্ট্যাবলী প্ৰয়োগৰ পৰীক্ষা কৰক"
 
 #~ msgid "Universal access related preferences"
-#~ msgstr "সাৰ্বজনীন ব্যৱহাৰধিকাৰ সামগ্ৰী সম্পৰ্কিত পছন্দ"
+#~ msgstr "সাৰ্বভৈমক ব্যৱহাৰধিকাৰ সামগ্ৰী সম্পৰ্কিত পছন্দ"
 
 #~ msgid "Personal preferences and settings"
 #~ msgstr "ব্যক্তিগত পছন্দ এবং বৈশিষ্ট্যাবলী"
-
