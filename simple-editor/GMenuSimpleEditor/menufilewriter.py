@@ -19,7 +19,7 @@
 import os
 import errno
 import pwd
-import gobject
+from gi.repository import GObject
 from gi.repository import Gtk
 
 import menutreemodel
@@ -86,7 +86,7 @@ class MenuFileWriter:
 
     def __del__ (self):
         for (path, id) in self.sync_idle_handlers.items():
-            gobject.source_remove (id)
+            GObject.source_remove (id)
 
     def __append_menu (self, contents, indent, iter, system_menu_file = None):
         has_changes = False
@@ -192,5 +192,5 @@ class MenuFileWriter:
         if self.sync_idle_handlers.has_key (menu_file_path):
             return
 
-        id = gobject.idle_add (self.__sync_idle_handler_func, menu_file_path)
+        id = GObject.idle_add (self.__sync_idle_handler_func, menu_file_path)
         self.sync_idle_handlers[menu_file_path] = id

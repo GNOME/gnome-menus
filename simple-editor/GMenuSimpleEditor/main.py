@@ -17,11 +17,12 @@
 #
 
 def main (args):
+    import optparse
+
     import locale
     import gettext
 
-    import gobject
-    from gobject.option import OptionParser, make_option
+    from gi.repository import GObject
 
     from gi.repository import Gtk
 
@@ -31,18 +32,14 @@ def main (args):
     locale.setlocale (locale.LC_ALL, "")
     gettext.install (config.PACKAGE, config.LOCALEDIR)
 
-    parser = OptionParser (
-            option_list = [
-		    # FIXME: remove this when we can get all the default
-		    # options
-                    make_option ("--version",
-                                 action="store_true",
-                                 dest="version",
-                                 help=config.VERSION),
-                ])
-    parser.parse_args (args)
+    parser = optparse.OptionParser()
+    parser.add_option('--version', dest='version',
+                      action='store_true', default=False,
+                      help=config.VERSION)
 
-    if parser.values.version:
+    (options, args) = parser.parse_args()
+
+    if options.version:
         # Translators: %s is the version number 
         print _("Simple Menu Editor %s") % (config.VERSION)
     else:

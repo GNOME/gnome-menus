@@ -18,7 +18,7 @@
 
 import os
 import os.path
-import gobject
+from gi.repository import GObject
 from gi.repository import Gio
 from gi.repository import Gtk
 from gi.repository import GdkPixbuf
@@ -61,14 +61,14 @@ class MenuTreeModel (Gtk.TreeStore):
             if menu_file == "applications.menu" and os.environ.has_key ("XDG_MENU_PREFIX"):
                 menu_file = os.environ["XDG_MENU_PREFIX"] + menu_file
 
-            tree = gobject.new (GMenu.Tree, menu_basename = menu_file, flags = GMenu.TreeFlags.INCLUDE_EXCLUDED|GMenu.TreeFlags.SORT_DISPLAY_NAME)
+            tree = GObject.new (GMenu.Tree, menu_basename = menu_file, flags = GMenu.TreeFlags.INCLUDE_EXCLUDED|GMenu.TreeFlags.SORT_DISPLAY_NAME)
             tree.load_sync ()
 
             self.__append_directory (tree.get_root_directory (), None, False, menu_file)
 
             system_file = lookup_system_menu_file (menu_file)
             if system_file:
-                system_tree = gobject.new (GMenu.Tree, menu_path = system_file, flags = GMenu.TreeFlags.INCLUDE_EXCLUDED|GMenu.TreeFlags.SORT_DISPLAY_NAME)
+                system_tree = GObject.new (GMenu.Tree, menu_path = system_file, flags = GMenu.TreeFlags.INCLUDE_EXCLUDED|GMenu.TreeFlags.SORT_DISPLAY_NAME)
                 system_tree.load_sync ()
 
                 self.__append_directory (system_tree.get_root_directory (), None, True, menu_file)
