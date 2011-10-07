@@ -151,4 +151,10 @@
     </Include>
   </Menu> <!-- End Other -->
 
+   <Layout>
+     <Merge type="menus" />
+     <Menuname>Other</Menuname>
+     <Merge type="files" />
+   </Layout>
+
 </Menu> <!-- End Applications -->
