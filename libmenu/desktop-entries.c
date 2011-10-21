@@ -256,7 +256,9 @@ desktop_entry_load (DesktopEntry *entry)
       const char *categories_str;
 
       entry_desktop->appinfo = g_desktop_app_info_new_from_filename (entry->path);
-      if (!entry_desktop->appinfo)
+      if (!entry_desktop->appinfo ||
+          !g_app_info_get_name (G_APP_INFO (entry_desktop->appinfo)) ||
+          !g_app_info_get_executable (G_APP_INFO (entry_desktop->appinfo)))
         {
           menu_verbose ("Failed to load \"%s\"\n", entry->path);
           return FALSE;
