@@ -1,6 +1,6 @@
 AC_PREREQ(2.62)
 
-AC_INIT([gnome-menus], [3.2.1],
+AC_INIT([gnome-menus], [3.3.1],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus])
 AC_CONFIG_SRCDIR(libmenu/gmenu-tree.h)
 
@@ -20,7 +20,7 @@ GNOME_MAINTAINER_MODE_DEFINES
 #   change to C+1:0:0
 # - If the interface is the same as the previous version, change to C:R+1:A
 
-LIB_MENU_LT_VERSION=0:0:0
+LIB_MENU_LT_VERSION=0:1:0
 AC_SUBST(LIB_MENU_LT_VERSION)
 
 GETTEXT_PACKAGE=gnome-menus-3.0

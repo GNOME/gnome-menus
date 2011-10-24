@@ -1,3 +1,15 @@
+=============
+Version 3.3.1
+=============
+
+  libmenu
+
+	* Ignore desktop entries with no Name or Exec key (Florian Müllner)
+
+  Layout
+
+	* Put the Other menu at the end (Vincent)
+
 ===============
 Version 3.2.0.1
 ===============
