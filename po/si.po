@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-29 03:37+0100\n"
-"PO-Revision-Date: 2012-02-01 16:07+0530\n"
+"PO-Revision-Date: 2012-02-01 17:28+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr "උපාංග"
 
 #: ../desktop-directories/Accessories.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "මූලික තිරය උපාංග"
+msgstr "වැඩතල උපාංග"
 
 #: ../desktop-directories/Applications.directory.in.h:1
 msgid "Applications"
@@ -188,7 +188,7 @@ msgstr "මෙනු වෙනස්කරන්න"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:2
 msgid "_Applications:"
-msgstr "යෙදුම්: (_A)"
+msgstr "යෙදුම් (_A):"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:3
 msgid "_Defaults"
@@ -196,7 +196,7 @@ msgstr "සාමාන්‍ය (_D)"
 
 #: ../simple-editor/gmenu-simple-editor.glade.h:4
 msgid "_Menus:"
-msgstr "මෙනු: (_M)"
+msgstr "මෙනු (_M):"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
