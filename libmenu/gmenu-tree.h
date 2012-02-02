@@ -76,6 +76,7 @@ typedef enum
   GMENU_TREE_FLAGS_NONE                = 0,
   GMENU_TREE_FLAGS_INCLUDE_EXCLUDED    = 1 << 0,
   GMENU_TREE_FLAGS_INCLUDE_NODISPLAY   = 1 << 1,
+  GMENU_TREE_FLAGS_INCLUDE_UNALLOCATED = 1 << 2,
   /* leave some space for more include flags */
   GMENU_TREE_FLAGS_SHOW_EMPTY          = 1 << 8,
   GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS = 1 << 9,
@@ -136,6 +137,7 @@ const char *gmenu_tree_entry_get_desktop_file_path (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_desktop_file_id   (GMenuTreeEntry *entry);
 
 gboolean gmenu_tree_entry_get_is_excluded  (GMenuTreeEntry *entry);
+gboolean gmenu_tree_entry_get_is_unallocated  (GMenuTreeEntry *entry);
 
 GMenuTreeDirectory *gmenu_tree_header_get_directory (GMenuTreeHeader *header);
 

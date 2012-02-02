@@ -128,6 +128,7 @@ struct GMenuTreeEntry
 
   guint is_excluded : 1;
   guint is_nodisplay : 1;
+  guint is_unallocated : 1;
 };
 
 struct GMenuTreeSeparator
@@ -1191,6 +1192,14 @@ gmenu_tree_entry_get_is_excluded (GMenuTreeEntry *entry)
   return entry->is_excluded;
 }
 
+gboolean
+gmenu_tree_entry_get_is_unallocated (GMenuTreeEntry *entry)
+{
+  g_return_val_if_fail (entry != NULL, FALSE);
+
+  return entry->is_unallocated;
+}
+
 GMenuTreeDirectory *
 gmenu_tree_header_get_directory (GMenuTreeHeader *header)
 {
@@ -1428,7 +1437,8 @@ gmenu_tree_entry_new (GMenuTreeDirectory *parent,
 		      DesktopEntry       *desktop_entry,
 		      const char         *desktop_file_id,
 		      gboolean            is_excluded,
-                      gboolean            is_nodisplay)
+                      gboolean            is_nodisplay,
+                      gboolean            is_unallocated)
 {
   GMenuTreeEntry *retval;
 
@@ -1442,6 +1452,7 @@ gmenu_tree_entry_new (GMenuTreeDirectory *parent,
   retval->desktop_file_id = g_strdup (desktop_file_id);
   retval->is_excluded     = is_excluded != FALSE;
   retval->is_nodisplay    = is_nodisplay != FALSE;
+  retval->is_unallocated  = is_unallocated != FALSE;
 
   return retval;
 }
@@ -3143,7 +3154,8 @@ entries_listify_foreach (const char         *desktop_file_id,
                                            desktop_entry,
                                            desktop_file_id,
                                            FALSE,
-                                           desktop_entry_get_no_display (desktop_entry)));
+                                           desktop_entry_get_no_display (desktop_entry),
+                                           FALSE));
 }
 
 static void
@@ -3157,7 +3169,23 @@ excluded_entries_listify_foreach (const char         *desktop_file_id,
 					   desktop_entry,
 					   desktop_file_id,
 					   TRUE,
-                                           desktop_entry_get_no_display (desktop_entry)));
+                                           desktop_entry_get_no_display (desktop_entry),
+                                           FALSE));
+}
+
+static void
+unallocated_entries_listify_foreach (const char         *desktop_file_id,
+                                     DesktopEntry       *desktop_entry,
+                                     GMenuTreeDirectory *directory)
+{
+  directory->entries =
+    g_slist_prepend (directory->entries,
+		     gmenu_tree_entry_new (directory,
+                                           desktop_entry,
+                                           desktop_file_id,
+                                           FALSE,
+                                           desktop_entry_get_no_display (desktop_entry),
+                                           TRUE));
 }
 
 static void
@@ -3459,6 +3487,9 @@ process_layout (GMenuTree          *tree,
       GSList         *next  = tmp->next;
       gboolean        delete = FALSE;
 
+      /* If adding a new condition to delete here, it has to be added to
+       * get_still_unallocated_foreach() too */
+
       if (desktop_entry_get_hidden (entry->desktop_entry))
         {
           menu_verbose ("Deleting %s because Hidden=true\n",
@@ -3502,7 +3533,8 @@ process_layout (GMenuTree          *tree,
 static void
 process_only_unallocated (GMenuTree          *tree,
 			  GMenuTreeDirectory *directory,
-			  DesktopEntrySet    *allocated)
+			  DesktopEntrySet    *allocated,
+			  DesktopEntrySet    *unallocated_used)
 {
   GSList *tmp;
 
@@ -3524,6 +3556,10 @@ process_only_unallocated (GMenuTree          *tree,
                                                         tmp);
               gmenu_tree_item_unref_and_unset_parent (entry);
             }
+          else
+            {
+              desktop_entry_set_add_entry (unallocated_used, entry->desktop_entry, entry->desktop_file_id);
+            }
 
           tmp = next;
         }
@@ -3534,10 +3570,43 @@ process_only_unallocated (GMenuTree          *tree,
     {
       GMenuTreeDirectory *subdir = tmp->data;
 
-      process_only_unallocated (tree, subdir, allocated);
+      process_only_unallocated (tree, subdir, allocated, unallocated_used);
 
       tmp = tmp->next;
    }
+}
+
+typedef struct
+{
+  GMenuTree *tree;
+  DesktopEntrySet *allocated;
+  DesktopEntrySet *unallocated_used;
+  DesktopEntrySet *still_unallocated;
+} GetStillUnallocatedForeachData;
+
+static void
+get_still_unallocated_foreach (const char                     *file_id,
+                               DesktopEntry                   *entry,
+                               GetStillUnallocatedForeachData *data)
+{
+  if (desktop_entry_set_lookup (data->allocated, file_id))
+    return;
+
+  if (desktop_entry_set_lookup (data->unallocated_used, file_id))
+    return;
+
+  /* Same rules than at the end of process_layout() */
+  if (desktop_entry_get_hidden (entry))
+    return;
+
+  if (!(data->tree->flags & GMENU_TREE_FLAGS_INCLUDE_NODISPLAY) &&
+      desktop_entry_get_no_display (entry))
+    return;
+
+  if (!desktop_entry_get_show_in (entry))
+    return;
+
+  desktop_entry_set_add_entry (data->still_unallocated, entry, file_id);
 }
 
 static void preprocess_layout_info (GMenuTree          *tree,
@@ -4504,7 +4573,39 @@ gmenu_tree_build_from_layout (GMenuTree  *tree,
                                allocated);
   if (tree->root)
     {
-      process_only_unallocated (tree, tree->root, allocated);
+      DesktopEntrySet *unallocated_used;
+
+      unallocated_used = desktop_entry_set_new ();
+
+      process_only_unallocated (tree, tree->root, allocated, unallocated_used);
+      if (tree->flags & GMENU_TREE_FLAGS_INCLUDE_UNALLOCATED)
+        {
+          DesktopEntrySet *entry_pool;
+          DesktopEntrySet *still_unallocated;
+          GetStillUnallocatedForeachData data;
+
+          entry_pool = _entry_directory_list_get_all_desktops (menu_layout_node_menu_get_app_dirs (find_menu_child (tree->layout)));
+          still_unallocated = desktop_entry_set_new ();
+
+          data.tree = tree;
+          data.allocated = allocated;
+          data.unallocated_used = unallocated_used;
+          data.still_unallocated = still_unallocated;
+
+          desktop_entry_set_foreach (entry_pool,
+                                     (DesktopEntrySetForeachFunc) get_still_unallocated_foreach,
+                                     &data);
+
+          desktop_entry_set_unref (entry_pool);
+
+          desktop_entry_set_foreach (still_unallocated,
+                                     (DesktopEntrySetForeachFunc) unallocated_entries_listify_foreach,
+                                     tree->root);
+
+          desktop_entry_set_unref (still_unallocated);
+        }
+
+      desktop_entry_set_unref (unallocated_used);
 
       /* process the layout info part that can move/remove items:
        * inline, show_empty, etc. */
@@ -4634,6 +4735,7 @@ gmenu_tree_flags_get_type (void)
         { GMENU_TREE_FLAGS_INCLUDE_NODISPLAY, "GMENU_TREE_FLAGS_INCLUDE_NODISPLAY", "include-nodisplay" },
         { GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS, "GMENU_TREE_FLAGS_SHOW_ALL_SEPARATORS", "show-all-separators" },
         { GMENU_TREE_FLAGS_SORT_DISPLAY_NAME, "GMENU_TREE_FLAGS_SORT_DISPLAY_NAME", "sort-display-name" },
+        { GMENU_TREE_FLAGS_INCLUDE_UNALLOCATED, "GMENU_TREE_FLAGS_INCLUDE_UNALLOCATED,", "include-unallocated" },
         { 0, NULL, NULL }
       };
       enum_type_id = g_flags_register_static ("GMenuTreeFlags", values);
