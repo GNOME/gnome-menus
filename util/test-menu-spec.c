@@ -34,12 +34,14 @@ static char     *menu_file = NULL;
 static gboolean  monitor = FALSE;
 static gboolean  include_excluded = FALSE;
 static gboolean  include_nodisplay = FALSE;
+static gboolean  include_unallocated = FALSE;
 
 static GOptionEntry options[] = {
-  { "file",              'f', 0, G_OPTION_ARG_STRING, &menu_file,         N_("Menu file"),                      N_("MENU_FILE") },
-  { "monitor",           'm', 0, G_OPTION_ARG_NONE,   &monitor,           N_("Monitor for menu changes"),       NULL },
-  { "include-excluded",  'i', 0, G_OPTION_ARG_NONE,   &include_excluded,  N_("Include <Exclude>d entries"),     NULL },
-  { "include-nodisplay", 'n', 0, G_OPTION_ARG_NONE,   &include_nodisplay, N_("Include NoDisplay=true entries"), NULL },
+  { "file",                'f', 0, G_OPTION_ARG_STRING, &menu_file,           N_("Menu file"),                      N_("MENU_FILE") },
+  { "monitor",             'm', 0, G_OPTION_ARG_NONE,   &monitor,             N_("Monitor for menu changes"),       NULL },
+  { "include-excluded",    'i', 0, G_OPTION_ARG_NONE,   &include_excluded,    N_("Include <Exclude>d entries"),     NULL },
+  { "include-nodisplay",   'n', 0, G_OPTION_ARG_NONE,   &include_nodisplay,   N_("Include NoDisplay=true entries"), NULL },
+  { "include-unallocated", 'u', 0, G_OPTION_ARG_NONE,   &include_unallocated, N_("Include unallocated entries"), NULL },
   { NULL }
 };
 
@@ -224,6 +226,8 @@ main (int argc, char **argv)
     flags |= GMENU_TREE_FLAGS_INCLUDE_EXCLUDED;
   if (include_nodisplay)
     flags |= GMENU_TREE_FLAGS_INCLUDE_NODISPLAY;
+  if (include_unallocated)
+    flags |= GMENU_TREE_FLAGS_INCLUDE_UNALLOCATED;
 
   tree = gmenu_tree_new (menu_file ? menu_file : "applications.menu", flags);
   g_assert (tree != NULL);
