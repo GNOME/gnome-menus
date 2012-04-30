@@ -15,6 +15,7 @@ desktop-directories/Utility-Accessibility.directory.in
 desktop-directories/Utility.directory.in
 desktop-directories/X-GNOME-Menu-Applications.directory.in
 desktop-directories/X-GNOME-Other.directory.in
+desktop-directories/X-GNOME-WebApplications.directory.in
 simple-editor/gmenu-simple-editor.desktop.in
 [type: gettext/glade]simple-editor/gmenu-simple-editor.ui
 simple-editor/GMenuSimpleEditor/main.py

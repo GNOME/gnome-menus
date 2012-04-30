@@ -99,9 +99,24 @@
     <Include>
       <And>
         <Category>Network</Category>
+	<Not>
+	  <Category>X-GNOME-WebApplication</Category>
+	</Not>
       </And>
     </Include>
   </Menu>   <!-- End Internet -->
+
+  <!-- Web Applications -->
+  <Menu>
+    <Name>Web Applications</Name>
+    <Directory>X-GNOME-WebApplications.directory</Directory>
+    <Include>
+      <And>
+	<Category>Network</Category>
+	<Category>X-GNOME-WebApplication</Category>
+      </And>
+    </Include>
+  </Menu>
 
   <!-- Multimedia -->
   <Menu>

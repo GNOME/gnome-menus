@@ -19,6 +19,7 @@ directory_in_files =				\
 	Utility-Accessibility.directory.in	\
 	X-GNOME-Other.directory.in		\
 	X-GNOME-Menu-Applications.directory.in	\
+	X-GNOME-WebApplications.directory.in 	\
 	$(directory_in_controlcenterfiles)
 
 directory_DATA = $(directory_in_files:.directory.in=.directory)
