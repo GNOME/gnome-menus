@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus 3.3.x\n"
+"Project-Id-Version: gnome-menus 3.5.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-25 14:47+0100\n"
-"PO-Revision-Date: 2012-01-25 14:47+0100\n"
+"POT-Creation-Date: 2012-05-30 14:05+0200\n"
+"PO-Revision-Date: 2012-05-30 14:06+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -129,6 +129,14 @@ msgstr "Annet"
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "Programmer som ikke passer i andre kategorier"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "Nettleserprogrammer"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Programmer og nettsteder lagret fra nettleseren"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
