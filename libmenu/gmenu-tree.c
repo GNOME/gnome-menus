@@ -84,6 +84,7 @@ struct GMenuTreeItem
   GMenuTreeItemType type;
 
   GMenuTreeDirectory *parent;
+  GMenuTree *tree;
 };
 
 struct GMenuTreeIter
@@ -1137,6 +1138,22 @@ gmenu_tree_directory_get_is_nodisplay (GMenuTreeDirectory *directory)
   return directory->is_nodisplay;
 }
 
+/**
+ * gmenu_tree_directory_get_tree:
+ * @directory: A #GMenuTreeDirectory
+ *
+ * Grab the tree associated with a #GMenuTreeItem.
+ *
+ * Returns: (transfer full): The #GMenuTree
+ */
+GMenuTree *
+gmenu_tree_directory_get_tree (GMenuTreeDirectory *directory)
+{
+  g_return_val_if_fail (directory != NULL, NULL);
+
+  return g_object_ref (directory->item.tree);
+}
+
 static void
 append_directory_path (GMenuTreeDirectory *directory,
 		       GString            *path)
@@ -1219,12 +1236,44 @@ gmenu_tree_entry_get_is_unallocated (GMenuTreeEntry *entry)
   return entry->is_unallocated;
 }
 
+/**
+ * gmenu_tree_entry_get_tree:
+ * @entry: A #GMenuTreeEntry
+ *
+ * Grab the tree associated with a #GMenuTreeEntry.
+ *
+ * Returns: (transfer full): The #GMenuTree
+ */
+GMenuTree *
+gmenu_tree_entry_get_tree (GMenuTreeEntry *entry)
+{
+  g_return_val_if_fail (entry != NULL, NULL);
+
+  return g_object_ref (entry->item.tree);
+}
+
 GMenuTreeDirectory *
 gmenu_tree_header_get_directory (GMenuTreeHeader *header)
 {
   g_return_val_if_fail (header != NULL, NULL);
 
   return gmenu_tree_item_ref (header->directory);
+}
+
+/**
+ * gmenu_tree_header_get_tree:
+ * @header: A #GMenuTreeHeader
+ *
+ * Grab the tree associated with a #GMenuTreeHeader.
+ *
+ * Returns: (transfer full): The #GMenuTree
+ */
+GMenuTree *
+gmenu_tree_header_get_tree (GMenuTreeHeader *header)
+{
+  g_return_val_if_fail (header != NULL, NULL);
+
+  return g_object_ref (header->item.tree);
 }
 
 GMenuTreeItemType
@@ -1242,6 +1291,38 @@ gmenu_tree_alias_get_directory (GMenuTreeAlias *alias)
   g_return_val_if_fail (alias != NULL, NULL);
 
   return gmenu_tree_item_ref (alias->directory);
+}
+
+/**
+ * gmenu_tree_alias_get_tree:
+ * @alias: A #GMenuTreeAlias
+ *
+ * Grab the tree associated with a #GMenuTreeAlias.
+ *
+ * Returns: (transfer full): The #GMenuTree
+ */
+GMenuTree *
+gmenu_tree_alias_get_tree (GMenuTreeAlias *alias)
+{
+  g_return_val_if_fail (alias != NULL, NULL);
+
+  return g_object_ref (alias->item.tree);
+}
+
+/**
+ * gmenu_tree_separator_get_tree:
+ * @separator: A #GMenuTreeSeparator
+ *
+ * Grab the tree associated with a #GMenuTreeSeparator.
+ *
+ * Returns: (transfer full): The #GMenuTree
+ */
+GMenuTree *
+gmenu_tree_separator_get_tree (GMenuTreeSeparator *separator)
+{
+  g_return_val_if_fail (separator != NULL, NULL);
+
+  return g_object_ref (separator->item.tree);
 }
 
 /**
@@ -1275,7 +1356,8 @@ gmenu_tree_alias_get_aliased_entry (GMenuTreeAlias *alias)
 }
 
 static GMenuTreeDirectory *
-gmenu_tree_directory_new (GMenuTreeDirectory *parent,
+gmenu_tree_directory_new (GMenuTree          *tree,
+                          GMenuTreeDirectory *parent,
 			  const char         *name)
 {
   GMenuTreeDirectory *retval;
@@ -1285,6 +1367,7 @@ gmenu_tree_directory_new (GMenuTreeDirectory *parent,
   retval->item.type     = GMENU_TREE_ITEM_DIRECTORY;
   retval->item.parent   = parent;
   retval->item.refcount = 1;
+  retval->item.tree     = tree;
 
   retval->name                = g_strdup (name);
   retval->directory_entry     = NULL;
@@ -1364,6 +1447,7 @@ gmenu_tree_separator_new (GMenuTreeDirectory *parent)
   retval->item.type     = GMENU_TREE_ITEM_SEPARATOR;
   retval->item.parent   = parent;
   retval->item.refcount = 1;
+  retval->item.tree     = parent->item.tree;
 
   return retval;
 }
@@ -1387,6 +1471,7 @@ gmenu_tree_header_new (GMenuTreeDirectory *parent,
   retval->item.type     = GMENU_TREE_ITEM_HEADER;
   retval->item.parent   = parent;
   retval->item.refcount = 1;
+  retval->item.tree     = parent->item.tree;
 
   retval->directory = gmenu_tree_item_ref (directory);
 
@@ -1419,6 +1504,7 @@ gmenu_tree_alias_new (GMenuTreeDirectory *parent,
   retval->item.type     = GMENU_TREE_ITEM_ALIAS;
   retval->item.parent   = parent;
   retval->item.refcount = 1;
+  retval->item.tree     = parent->item.tree;
 
   retval->directory    = gmenu_tree_item_ref (directory);
   if (item->type != GMENU_TREE_ITEM_ALIAS)
@@ -1466,6 +1552,7 @@ gmenu_tree_entry_new (GMenuTreeDirectory *parent,
   retval->item.type     = GMENU_TREE_ITEM_ENTRY;
   retval->item.parent   = parent;
   retval->item.refcount = 1;
+  retval->item.tree     = parent->item.tree;
 
   retval->desktop_entry   = desktop_entry_ref (desktop_entry);
   retval->desktop_file_id = g_strdup (desktop_file_id);
@@ -3254,7 +3341,7 @@ process_layout (GMenuTree          *tree,
   g_assert (menu_layout_node_get_type (layout) == MENU_LAYOUT_NODE_MENU);
   g_assert (menu_layout_node_menu_get_name (layout) != NULL);
 
-  directory = gmenu_tree_directory_new (parent,
+  directory = gmenu_tree_directory_new (tree, parent,
 					menu_layout_node_menu_get_name (layout));
 
   menu_verbose ("=== Menu name = %s ===\n", directory->name);

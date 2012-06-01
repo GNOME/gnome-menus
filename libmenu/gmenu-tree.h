@@ -112,6 +112,7 @@ const char *gmenu_tree_directory_get_comment           (GMenuTreeDirectory *dire
 GIcon      *gmenu_tree_directory_get_icon              (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_desktop_file_path (GMenuTreeDirectory *directory);
 const char *gmenu_tree_directory_get_menu_id           (GMenuTreeDirectory *directory);
+GMenuTree  *gmenu_tree_directory_get_tree              (GMenuTreeDirectory *directory);
 
 gboolean gmenu_tree_directory_get_is_nodisplay (GMenuTreeDirectory *directory);
 
@@ -133,6 +134,7 @@ char *gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
 
 GDesktopAppInfo    *gmenu_tree_entry_get_app_info       (GMenuTreeEntry *entry);
 GMenuTreeDirectory *gmenu_tree_entry_get_parent         (GMenuTreeEntry *entry);
+GMenuTree          *gmenu_tree_entry_get_tree           (GMenuTreeEntry *entry);
 
 const char *gmenu_tree_entry_get_desktop_file_path (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_desktop_file_id   (GMenuTreeEntry *entry);
@@ -141,11 +143,15 @@ gboolean gmenu_tree_entry_get_is_excluded  (GMenuTreeEntry *entry);
 gboolean gmenu_tree_entry_get_is_unallocated  (GMenuTreeEntry *entry);
 
 GMenuTreeDirectory *gmenu_tree_header_get_directory (GMenuTreeHeader *header);
+GMenuTree          *gmenu_tree_header_get_tree      (GMenuTreeHeader *header);
 
 GMenuTreeDirectory *gmenu_tree_alias_get_directory         (GMenuTreeAlias *alias);
 GMenuTreeItemType   gmenu_tree_alias_get_aliased_item_type (GMenuTreeAlias *alias);
 GMenuTreeDirectory *gmenu_tree_alias_get_aliased_directory (GMenuTreeAlias *alias);
 GMenuTreeEntry     *gmenu_tree_alias_get_aliased_entry     (GMenuTreeAlias *alias);
+GMenuTree          *gmenu_tree_alias_get_tree              (GMenuTreeAlias *alias);
+
+GMenuTree          *gmenu_tree_separator_get_tree (GMenuTreeSeparator *separator);
 
 G_END_DECLS
 
