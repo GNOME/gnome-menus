@@ -1039,6 +1039,25 @@ gmenu_tree_iter_get_alias (GMenuTreeIter *iter)
   return (GMenuTreeAlias*)gmenu_tree_item_ref (iter->item);
 }
 
+/**
+ * gmenu_tree_iter_get_separator:
+ * @iter: iter
+ *
+ * This method may only be called if gmenu_tree_iter_next()
+ * returned #GMENU_TREE_ITEM_SEPARATOR.
+ *
+ * Returns: (transfer full): A separator
+ */
+GMenuTreeSeparator *
+gmenu_tree_iter_get_separator (GMenuTreeIter *iter)
+{
+  g_return_val_if_fail (iter != NULL, NULL);
+  g_return_val_if_fail (iter->item != NULL, NULL);
+  g_return_val_if_fail (iter->item->type == GMENU_TREE_ITEM_SEPARATOR, NULL);
+
+  return (GMenuTreeSeparator*)gmenu_tree_item_ref (iter->item);
+}
+
 const char *
 gmenu_tree_directory_get_name (GMenuTreeDirectory *directory)
 {

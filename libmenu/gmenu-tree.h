@@ -125,6 +125,7 @@ GMenuTreeDirectory *gmenu_tree_iter_get_directory        (GMenuTreeIter *iter);
 GMenuTreeEntry     *gmenu_tree_iter_get_entry            (GMenuTreeIter *iter);
 GMenuTreeHeader    *gmenu_tree_iter_get_header           (GMenuTreeIter *iter);
 GMenuTreeAlias     *gmenu_tree_iter_get_alias            (GMenuTreeIter *iter);
+GMenuTreeSeparator *gmenu_tree_iter_get_separator        (GMenuTreeIter *iter);
 
 char *gmenu_tree_directory_make_path (GMenuTreeDirectory *directory,
 				      GMenuTreeEntry     *entry);
