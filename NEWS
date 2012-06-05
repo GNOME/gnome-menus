@@ -1,4 +1,27 @@
 =============
+Version 3.5.2
+=============
+
+Layout
+
+        * Add a separate category for Web Applications (Giovanni Campagna)
+
+libmenu
+
+        * Add a new GMENU_TREE_FLAGS_INCLUDE_UNALLOCATED flag (Vincent Untz)
+
+Translations
+
+        * Bulgarian
+        * Kashubian
+        * Spanish
+        * Galician
+        * Slovenian
+        * Hebrew
+        * Russian
+        * Norwegian bokmål
+
+=============
 Version 3.4.0
 =============
 
