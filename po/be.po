@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-18 18:22+0300\n"
-"PO-Revision-Date: 2011-09-18 18:22+0300\n"
+"POT-Creation-Date: 2012-06-08 18:54+0300\n"
+"PO-Revision-Date: 2012-06-08 18:54+0300\n"
 "Last-Translator: Ігар Грачышка <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
@@ -15,12 +15,12 @@ msgstr ""
 "X-Generator: Pootle 2.1.6\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Меню мультымедыяў"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Гук і відэа"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Меню мультымедыяў"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -120,12 +120,20 @@ msgid "Applications"
 msgstr "Праграмы"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "Іншыя праграмы"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "Праграмы, якія не трапілі ў іншыя катэгорыі"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
-msgid "Other"
-msgstr "Іншыя праграмы"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "Сеціўныя праграмы"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Праграмы і пляцоўкі, захаваныя з Сеціва"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -136,19 +144,19 @@ msgid "Edit Menus"
 msgstr "Рэдагаванне меню"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "_Праграмы:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Прадвызначана"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "_Меню:"
 
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "_Праграмы:"
+
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:47
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
 msgid "Simple Menu Editor %s"
 msgstr "Просты рэдактар меню %s"
