@@ -618,7 +618,7 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
   gobject_class->finalize = gmenu_tree_finalize;
 
   /**
-   * GMenuTree:menu-basename
+   * GMenuTree:menu-basename:
    *
    * The name of the menu file; must be a basename or a relative path. The file
    * will be looked up in $XDG_CONFIG_DIRS/menus/. See the Desktop Menu
@@ -630,7 +630,7 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
                                                         "applications.menu",
                                                         G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
   /**
-   * GMenuTree:menu-path
+   * GMenuTree:menu-path:
    *
    * The full path of the menu file. If set, GMenuTree:menu-basename will get
    * ignored.
@@ -641,7 +641,7 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
                                                         NULL,
                                                         G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
   /**
-   * GMenuTree:flags
+   * GMenuTree:flags:
    *
    * Flags controlling the content of the menu.
    */
@@ -653,7 +653,7 @@ gmenu_tree_class_init (GMenuTreeClass *klass)
                                                        G_PARAM_READWRITE | G_PARAM_CONSTRUCT_ONLY));
 
   /**
-   * GMenuTree:changed
+   * GMenuTree:changed:
    *
    * This signal is emitted when applications are added, removed, or
    * upgraded.  But note the new data will only be visible after
