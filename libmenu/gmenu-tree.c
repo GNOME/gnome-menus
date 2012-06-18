@@ -128,7 +128,6 @@ struct GMenuTreeEntry
   char         *desktop_file_id;
 
   guint is_excluded : 1;
-  guint is_nodisplay : 1;
   guint is_unallocated : 1;
 };
 
@@ -1221,6 +1220,31 @@ gmenu_tree_entry_get_desktop_file_id (GMenuTreeEntry *entry)
 }
 
 gboolean
+gmenu_tree_entry_get_is_nodisplay_recurse (GMenuTreeEntry *entry)
+{
+  GMenuTreeDirectory *directory;
+  GDesktopAppInfo *app_info;
+
+  g_return_val_if_fail (entry != NULL, FALSE);
+
+  app_info = gmenu_tree_entry_get_app_info (entry);
+
+  if (g_desktop_app_info_get_nodisplay (app_info))
+    return TRUE;
+
+  directory = entry->item.parent;
+  while (directory != NULL)
+    {
+      if (directory->is_nodisplay)
+        return TRUE;
+
+      directory = directory->item.parent;
+    }
+
+  return FALSE;
+}
+
+gboolean
 gmenu_tree_entry_get_is_excluded (GMenuTreeEntry *entry)
 {
   g_return_val_if_fail (entry != NULL, FALSE);
@@ -1542,7 +1566,6 @@ gmenu_tree_entry_new (GMenuTreeDirectory *parent,
 		      DesktopEntry       *desktop_entry,
 		      const char         *desktop_file_id,
 		      gboolean            is_excluded,
-                      gboolean            is_nodisplay,
                       gboolean            is_unallocated)
 {
   GMenuTreeEntry *retval;
@@ -1557,7 +1580,6 @@ gmenu_tree_entry_new (GMenuTreeDirectory *parent,
   retval->desktop_entry   = desktop_entry_ref (desktop_entry);
   retval->desktop_file_id = g_strdup (desktop_file_id);
   retval->is_excluded     = is_excluded != FALSE;
-  retval->is_nodisplay    = is_nodisplay != FALSE;
   retval->is_unallocated  = is_unallocated != FALSE;
 
   return retval;
@@ -3260,7 +3282,6 @@ entries_listify_foreach (const char         *desktop_file_id,
                                            desktop_entry,
                                            desktop_file_id,
                                            FALSE,
-                                           desktop_entry_get_no_display (desktop_entry),
                                            FALSE));
 }
 
@@ -3275,7 +3296,6 @@ excluded_entries_listify_foreach (const char         *desktop_file_id,
 					   desktop_entry,
 					   desktop_file_id,
 					   TRUE,
-                                           desktop_entry_get_no_display (desktop_entry),
                                            FALSE));
 }
 
@@ -3290,7 +3310,6 @@ unallocated_entries_listify_foreach (const char         *desktop_file_id,
                                            desktop_entry,
                                            desktop_file_id,
                                            FALSE,
-                                           desktop_entry_get_no_display (desktop_entry),
                                            TRUE));
 }
 

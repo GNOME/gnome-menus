@@ -139,6 +139,7 @@ GMenuTree          *gmenu_tree_entry_get_tree           (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_desktop_file_path (GMenuTreeEntry *entry);
 const char *gmenu_tree_entry_get_desktop_file_id   (GMenuTreeEntry *entry);
 
+gboolean gmenu_tree_entry_get_is_nodisplay_recurse  (GMenuTreeEntry *entry);
 gboolean gmenu_tree_entry_get_is_excluded  (GMenuTreeEntry *entry);
 gboolean gmenu_tree_entry_get_is_unallocated  (GMenuTreeEntry *entry);
 
