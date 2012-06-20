@@ -145,14 +145,17 @@ gboolean gmenu_tree_entry_get_is_unallocated  (GMenuTreeEntry *entry);
 
 GMenuTreeDirectory *gmenu_tree_header_get_directory (GMenuTreeHeader *header);
 GMenuTree          *gmenu_tree_header_get_tree      (GMenuTreeHeader *header);
+GMenuTreeDirectory *gmenu_tree_header_get_parent    (GMenuTreeHeader *header);
 
 GMenuTreeDirectory *gmenu_tree_alias_get_directory         (GMenuTreeAlias *alias);
 GMenuTreeItemType   gmenu_tree_alias_get_aliased_item_type (GMenuTreeAlias *alias);
 GMenuTreeDirectory *gmenu_tree_alias_get_aliased_directory (GMenuTreeAlias *alias);
 GMenuTreeEntry     *gmenu_tree_alias_get_aliased_entry     (GMenuTreeAlias *alias);
 GMenuTree          *gmenu_tree_alias_get_tree              (GMenuTreeAlias *alias);
+GMenuTreeDirectory *gmenu_tree_alias_get_parent            (GMenuTreeAlias *alias);
 
 GMenuTree          *gmenu_tree_separator_get_tree (GMenuTreeSeparator *separator);
+GMenuTreeDirectory *gmenu_tree_separator_get_parent (GMenuTreeSeparator *separator);
 
 G_END_DECLS
 

@@ -846,6 +846,13 @@ gmenu_tree_invoke_monitors (GMenuTree *tree)
   g_signal_emit (tree, gmenu_tree_signals[CHANGED], 0);
 }
 
+static GMenuTreeDirectory *
+get_parent (GMenuTreeItem *item)
+{
+  g_return_val_if_fail (item != NULL, NULL);
+  return item->parent ? gmenu_tree_item_ref (item->parent) : NULL;
+}
+
 /**
  * gmenu_tree_directory_get_parent:
  * @directory: a #GMenuTreeDirectory
@@ -855,10 +862,7 @@ gmenu_tree_invoke_monitors (GMenuTree *tree)
 GMenuTreeDirectory *
 gmenu_tree_directory_get_parent (GMenuTreeDirectory *directory)
 {
-  GMenuTreeItem *item = (GMenuTreeItem*)directory;
-  g_return_val_if_fail (item != NULL, NULL);
-
-  return item->parent ? gmenu_tree_item_ref (item->parent) : NULL;
+  return get_parent ((GMenuTreeItem *)directory);
 }
 
 /**
@@ -870,10 +874,43 @@ gmenu_tree_directory_get_parent (GMenuTreeDirectory *directory)
 GMenuTreeDirectory *
 gmenu_tree_entry_get_parent (GMenuTreeEntry *entry)
 {
-  GMenuTreeItem *item = (GMenuTreeItem*)entry;
-  g_return_val_if_fail (item != NULL, NULL);
+  return get_parent ((GMenuTreeItem *)entry);
+}
 
-  return item->parent ? gmenu_tree_item_ref (item->parent) : NULL;
+/**
+ * gmenu_tree_alias_get_parent:
+ * @alias: a #GMenuTreeAlias
+ *
+ * Returns: (transfer full): The parent directory, or %NULL if none
+ */
+GMenuTreeDirectory *
+gmenu_tree_alias_get_parent (GMenuTreeAlias *alias)
+{
+  return get_parent ((GMenuTreeItem *)alias);
+}
+
+/**
+ * gmenu_tree_header_get_parent:
+ * @header: a #GMenuTreeHeader
+ *
+ * Returns: (transfer full): The parent directory, or %NULL if none
+ */
+GMenuTreeDirectory *
+gmenu_tree_header_get_parent (GMenuTreeHeader *header)
+{
+  return get_parent ((GMenuTreeItem *)header);
+}
+
+/**
+ * gmenu_tree_separator_get_parent:
+ * @separator: a #GMenuTreeSeparator
+ *
+ * Returns: (transfer full): The parent directory, or %NULL if none
+ */
+GMenuTreeDirectory *
+gmenu_tree_separator_get_parent (GMenuTreeSeparator *separator)
+{
+  return get_parent ((GMenuTreeItem *)separator);
 }
 
 static void
