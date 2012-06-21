@@ -1,20 +1,22 @@
 # translation of gnome-menus.master.te.po to Telugu
 # Telugu translation of gnome-menus
 # Copyright (C) 2011 Gnome Telugu Contributors
+# Copyright (C) 2005, 2007, 2012 Swecha Telugu Localisation Team <localization@swecha.net>
 # This file is distributed under the same license as the gnome-menus package.
 #
 # Y.Kiran Chandra <kiran@gnu.org.in>, 2005.
 # Bharat Kumar <jonnalagaddabharat@gmail.com>, 2007.
 # Krishna Babu K <kkrothap@redhat.com>, 2009.
-# Praveen Illa <mail2ipn@gmail.com>, 2011.
-#
+# Praveen Illa <mail2ipn@gmail.com>, 2011, 2012.
+# Sasi Bhushan Boddepalli <sasi@swecha.net>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master.te\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?\n"
-"POT-Creation-Date: 2011-02-02 00:22+0000\n"
-"PO-Revision-Date: 2011-09-23 16:23+0530\n"
-"Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-05-14 13:29+0000\n"
+"PO-Revision-Date: 2012-06-21 14:23+0530\n"
+"Last-Translator: Sasi Bhushan Boddepalli <sasi@swecha.net>\n"
 "Language-Team: తెలుగు <indlinux-telugu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,12 +24,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "బహుళమాధ్యమాల మెను"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "ధ్వని మరియు దృశ్యం"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "బహుళమాధ్యమాల మెను"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -127,12 +129,21 @@ msgid "Applications"
 msgstr "అనువర్తనాలు"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "ఇతర"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "ఇతర విభాగాలలో  ఇమడని అనువర్తనాలు"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
-msgid "Other"
-msgstr "ఇతర"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#| msgid "Applications"
+msgid "Web Applications"
+msgstr "వెబ్ అనువర్తనాలు"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "వెబ్ నుండి దాయబడిన  అనువర్తనాలు మరియు సైట్లు "
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -143,19 +154,19 @@ msgid "Edit Menus"
 msgstr "మెనూలను సవరించు"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "అనువర్తనాలు (_A):"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "అప్రమేయాలు (_D)"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "మెనూలు (_M)"
 
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "అనువర్తనాలు (_A):"
+
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:47
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
 msgid "Simple Menu Editor %s"
 msgstr "సులభ మెనూ కూర్పకం %s"
@@ -170,6 +181,9 @@ msgid "Show"
 msgstr "చూపించు"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "నివాస చిరునామాను కనిపెట్టలేదు: /etc/passwd లో అమర్చబడలేదు మరియు పరిసరములో $HOME కు విలువ కనుగొనబడలేదు"
-
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"నివాస చిరునామాను కనిపెట్టలేదు: /etc/passwd లో అమర్చబడలేదు మరియు పరిసరములో $HOME కు విలువ "
+"కనుగొనబడలేదు"
