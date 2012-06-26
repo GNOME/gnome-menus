@@ -1,4 +1,23 @@
 =============
+Version 3.5.3
+=============
+
+libmenu
+
+        * Fix scanner warnings (Colin Walters)
+        * Add gmenu_tree_iter_get_separator (Jasper St. Pierre)
+        * Add a recursive NoDisplay getter (Jasper St. Pierre)
+        * Add a way to get a GMenuTree from a GMenuTreeItem (Jasper St. Pierre)
+        * Add a way to get the parent item for a GMenuTreeItem (Jasper St. Pierre)
+
+Translations Updates
+
+        * Belarusian (Ihar Hrachyshka)
+        * Greek (Tom Tryfonidis)
+        * Assamese (Nilamdyuti Goswami)
+        * Telugu (Sasi Bhushan Boddepalli)
+
+=============
 Version 3.5.2
 =============
 
