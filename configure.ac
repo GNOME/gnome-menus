@@ -1,6 +1,6 @@
 AC_PREREQ(2.62)
 
-AC_INIT([gnome-menus], [3.5.4],
+AC_INIT([gnome-menus], [3.5.5],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus])
 AC_CONFIG_SRCDIR(libmenu/gmenu-tree.h)
 
