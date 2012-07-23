@@ -5,26 +5,31 @@
 # Hendrik Richter <hendrikr@gnome.org>, 2006, 2007.
 # Mario Blättermann <mariobl@gnome.org>, 2009.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2010.
+# Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-31 20:08+0200\n"
-"PO-Revision-Date: 2010-03-31 20:09+0200\n"
-"Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-07-17 07:01+0000\n"
+"PO-Revision-Date: 2012-07-19 18:41+0400\n"
+"Last-Translator: Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.5\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Multimedia-Menü"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Multimedia"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Multimedia-Menü"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -62,22 +67,6 @@ msgstr "Hardware"
 msgid "Settings for several hardware devices"
 msgstr "Einstellungen für Hardware"
 
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "Internet und Netzwerk"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "Netzwerkbezogene Einstellungen"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "Darstellung"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Einstellungen für das Aussehen und das Verhalten der Arbeitsoberfläche"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -103,24 +92,7 @@ msgstr "Persönlich"
 msgid "Personal settings"
 msgstr "Persönliche Vorlieben und Einstellungen"
 
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "Systemverwaltung"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "Systemweite Einstellungen ändern (dies betrifft alle Benutzer)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "Persönliche Einstellungen"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Einstellungen"
-
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
 msgstr "System"
 
@@ -156,17 +128,22 @@ msgstr "Desktop-Zubehör"
 msgid "Applications"
 msgstr "Anwendungen"
 
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Persönliche Anpassungen und Administratoreinstellungen"
-
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Anwendungen welche in keine andere Kategorie eingeordnet werden können"
-
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Other"
 msgstr "Sonstige"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Applications that did not fit in other categories"
+msgstr ""
+"Anwendungen, welche in keine andere Kategorie eingeordnet werden können"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "Internetanwendungen"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Anwendungen und Webseiten, welche aus dem Internet stammen"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -177,33 +154,33 @@ msgid "Edit Menus"
 msgstr "Menüs bearbeiten"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "_Anwendungen:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Vorgaben"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "_Menüs:"
 
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "_Anwendungen:"
+
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
 msgid "Simple Menu Editor %s"
 msgstr "Einfacher Menüeditor %s"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
 msgid "Name"
 msgstr "Name"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
 msgid "Show"
 msgstr "Anzeigen"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -211,6 +188,34 @@ msgstr ""
 "Das Heimatverzeichnis des Benutzers konnte nicht gefunden werden: es ist "
 "weder in /etc/passwd angegeben, noch gibt es einen Wert für die "
 "Umgebungsvariable $HOME"
+
+#~ msgid "Internet and Network"
+#~ msgstr "Internet und Netzwerk"
+
+#~ msgid "Network-related settings"
+#~ msgstr "Netzwerkbezogene Einstellungen"
+
+#~ msgid "Look and Feel"
+#~ msgstr "Darstellung"
+
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr ""
+#~ "Einstellungen für das Aussehen und das Verhalten der Arbeitsoberfläche"
+
+#~ msgid "Administration"
+#~ msgstr "Systemverwaltung"
+
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr "Systemweite Einstellungen ändern (dies betrifft alle Benutzer)"
+
+#~ msgid "Personal preferences"
+#~ msgstr "Persönliche Einstellungen"
+
+#~ msgid "Preferences"
+#~ msgstr "Einstellungen"
+
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "Persönliche Anpassungen und Administratoreinstellungen"
 
 #~ msgid "Menu file"
 #~ msgstr "Menüdatei"
