@@ -3,13 +3,13 @@
 #
 # Moldabekov Margulan <moldabekov@gmail.com>, 2008
 # Erzhan Shaniev <erzhan.jktl@gmail.com>, 2008
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010-2012
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus trunk\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2010-07-02 11:40+0000\n"
-"PO-Revision-Date: 2010-09-15 12:55+0600\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-05-14 13:29+0000\n"
+"PO-Revision-Date: 2012-07-26 09:05+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,12 @@ msgstr ""
 "X-Poedit-Country: KAZAKHSTAN\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Мультимедиа"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Аудио және видео"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Мультимедиа"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -63,22 +63,6 @@ msgstr "Құрылғылар"
 msgid "Settings for several hardware devices"
 msgstr "Құрылғылардың баптаулары"
 
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "Интернет пен желі"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "Желілік баптаулар"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "Сыртқы түрі"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Жұмыс үстелін көркейтетін баптаулар"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Интернет"
@@ -104,24 +88,7 @@ msgstr "Жеке"
 msgid "Personal settings"
 msgstr "Жеке баптаулар"
 
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "Әкімшілік"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "Жүйелік баптауларды өзгерту (барлық пайдаланушылар үшін)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "Жеке баптаулар"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Баптаулар"
-
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
 msgstr "Жүйелік"
 
@@ -157,17 +124,22 @@ msgstr "Қалыпты қолданбалар"
 msgid "Applications"
 msgstr "Қолданбалар"
 
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Жеке мен әкімшілік баптаулар"
-
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Ешқандай санатқа жатпайтын қолданбалар"
-
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Other"
 msgstr "Басқалар"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Applications that did not fit in other categories"
+msgstr "Басқа санаттарға жатпайтын қолданбалар"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#| msgid "Applications"
+msgid "Web Applications"
+msgstr "Веб қолданбалары"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Вебтен сақталған қолданбалар мен сайттар"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -178,36 +150,62 @@ msgid "Edit Menus"
 msgstr "Мәзірді түзету"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "Қ_олданбалар:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Бастапқы қалпы"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "_Мәзірлер:"
 
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "Қ_олданбалар:"
+
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
-#| msgid "Menu Editor"
 msgid "Simple Menu Editor %s"
 msgstr "Қарапайым мәзір түзетушісі %s"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
 msgid "Name"
 msgstr "Аты"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
 msgid "Show"
 msgstr "Көрсету"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
 msgstr "Үй бумасы табылмады: /etc/passwd ішінде жоқ және $HOME айнымалысы орнатылмаған"
+
+#~ msgid "Internet and Network"
+#~ msgstr "Интернет пен желі"
+
+#~ msgid "Network-related settings"
+#~ msgstr "Желілік баптаулар"
+
+#~ msgid "Look and Feel"
+#~ msgstr "Сыртқы түрі"
+
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "Жұмыс үстелін көркейтетін баптаулар"
+
+#~ msgid "Administration"
+#~ msgstr "Әкімшілік"
+
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr "Жүйелік баптауларды өзгерту (барлық пайдаланушылар үшін)"
+
+#~ msgid "Personal preferences"
+#~ msgstr "Жеке баптаулар"
+
+#~ msgid "Preferences"
+#~ msgstr "Баптаулар"
+
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "Жеке мен әкімшілік баптаулар"
 
 #~ msgid "Menu file"
 #~ msgstr "Мәзір файлы"
