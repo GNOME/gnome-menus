@@ -53,7 +53,7 @@ msgstr "গ্ৰাফিক্স"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "গ্ৰাফিক্স অনুপ্ৰয়োগ"
+msgstr "গ্ৰাফিক্স এপ্লিকেচন"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -69,7 +69,7 @@ msgstr "ইন্টাৰনেট"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "ইন্টাৰনেট ব্যবহাৰৰ অনুপ্ৰয়োগ যেনে ৱেব আৰু ই-মেইল অনুপ্ৰয়োগ"
+msgstr "ইন্টাৰনেট ব্যবহাৰৰ এপ্লিকেচন যেনে ৱেব আৰু ই-মেইল এপ্লিকেচন"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -77,7 +77,7 @@ msgstr "কাৰ্যালয়"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "কাৰ্যালয়ৰ অনুপ্ৰয়োগসমূহ"
+msgstr "কাৰ্যালয়ৰ এপ্লিকেচনসমূহ"
 
 #. Translators: this is Personal as in "Personal settings"
 #: ../desktop-directories/Personal.directory.in.h:2
@@ -122,7 +122,7 @@ msgstr "ডেস্কটপৰ ব্যৱহৃত আনুষঙ্গি�
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
-msgstr "অনুপ্ৰয়োগসমূহ"
+msgstr "এপ্লিকেচনসমূহ"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Other"
@@ -130,15 +130,15 @@ msgstr "অন্য"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "অন্য বিভাগক খাপ নখোৱা অনুপ্ৰয়োগসমূহ"
+msgstr "অন্য বিভাগক খাপ নখোৱা এপ্লিকেচনসমূহ"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
-msgstr "ৱেব অনুপ্ৰয়োগসমূহ"
+msgstr "ৱেব এপ্লিকেচনসমূহ"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
-msgstr "অনুপ্ৰয়োগসমূহ আৰু ৱেবৰ পৰা সংৰক্ষণ কৰা ছাইটসমূহ"
+msgstr "এপ্লিকেচনসমূহ আৰু ৱেবৰ পৰা সংৰক্ষণ কৰা ছাইটসমূহ"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -158,7 +158,7 @@ msgstr "মেনু (_M):"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Applications:"
-msgstr "অনুপ্ৰয়োগ (_A):"
+msgstr "এপ্লিকেচন (_A):"
 
 #. Translators: %s is the version number
 #: ../simple-editor/GMenuSimpleEditor/main.py:44
@@ -180,7 +180,7 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"ঘৰ ডাইৰেকটৰিৰ সন্ধান পোৱা নগল: /etc/passwd নথিপত্ৰত উল্লেখ নাই আৰু পৰিবেশত $HOME "
+"ঘৰ ডাইৰেকটৰিৰ সন্ধান পোৱা নগল: /etc/passwd ফাইলত উল্লেখ নাই আৰু পৰিবেশত $HOME "
 "ৰ কোনো মান নাই"
 
 #~ msgid "Internet and Network"
@@ -212,7 +212,7 @@ msgstr ""
 #~ msgstr "ব্যক্তিগত পছন্দ আৰু প্ৰশাসনিক বৈশিষ্ট্য"
 
 #~ msgid "Menu file"
-#~ msgstr "মেনুৰ নথিপত্ৰ"
+#~ msgstr "মেনুৰ ফাইল"
 
 #~ msgid "MENU_FILE"
 #~ msgstr "MENU_FILE"
@@ -227,10 +227,10 @@ msgstr ""
 #~ msgstr "NoDisplay=true নিবেশসমূহ অন্তৰ্ভুক্ত কৰা হ'ব"
 
 #~ msgid "Invalid desktop file ID"
-#~ msgstr "ডেস্কটপ নথিপত্ৰৰ ID বৈধ নহয়"
+#~ msgstr "ডেস্কটপ ফাইলৰ ID বৈধ নহয়"
 
 #~ msgid "[Invalid Filename]"
-#~ msgstr "[অবৈধ নথিপত্ৰৰ নাম]"
+#~ msgstr "[অবৈধ ফাইলৰ নাম]"
 
 #~ msgid " <excluded>"
 #~ msgstr " <excluded>"
