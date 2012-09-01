@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the gnome-menus package.
 # Trinh Minh Thanh <tmthanh@yahoo.com>, 2004.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2007.
+# Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
@@ -10,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-05-14 13:29+0000\n"
-"PO-Revision-Date: 2012-09-01 22:01+0700\n"
-"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
+"PO-Revision-Date: 2012-09-01 22:04+0700\n"
+"Last-Translator: Nguyễn Thái Ngọc Duy <pclouds@gmail.com>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,11 +116,11 @@ msgstr "Thiết lập Hỗ trợ truy cập"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
-msgstr "Tiện ích bổ trợ"
+msgstr "Tiện ích"
 
 #: ../desktop-directories/Utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Công cụ bổ trợ cho Bàn làm việc"
+msgstr "Công cụ tiện ích"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
@@ -134,14 +135,13 @@ msgid "Applications that did not fit in other categories"
 msgstr "Những ứng dụng không thuộc các nhóm khác"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
-#, fuzzy
 #| msgid "Applications"
 msgid "Web Applications"
-msgstr "Ứng dụng"
+msgstr "Ứng dụng Web"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
-msgstr ""
+msgstr "Ứng dụng lưu từ Web hoặc các trang Web"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
