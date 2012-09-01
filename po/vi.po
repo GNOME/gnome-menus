@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.19.4\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&component=general\n"
-"POT-Creation-Date: 2011-02-04 11:05+0000\n"
-"PO-Revision-Date: 2011-04-02 10:31+0700\n"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-05-14 13:29+0000\n"
+"PO-Revision-Date: 2012-09-01 22:01+0700\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,12 @@ msgstr ""
 "X-Generator: LocFactoryEditor 1.6.4a3\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Trình đơn Đa phương tiện"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Âm thanh và Ảnh động"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Trình đơn Đa phương tiện"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -126,12 +126,22 @@ msgid "Applications"
 msgstr "Ứng dụng"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "Khác"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "Những ứng dụng không thuộc các nhóm khác"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
-msgid "Other"
-msgstr "Khác"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#, fuzzy
+#| msgid "Applications"
+msgid "Web Applications"
+msgstr "Ứng dụng"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr ""
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -142,21 +152,20 @@ msgid "Edit Menus"
 msgstr "Sửa trình đơn"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "Ứ_ng dụng:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Mặc định"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "_Trình đơn:"
 
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "Ứ_ng dụng:"
+
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:47
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
-#| msgid "Menu Editor"
 msgid "Simple Menu Editor %s"
 msgstr "Bộ hiệu chỉnh trình đơn %s"
 
