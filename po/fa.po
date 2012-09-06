@@ -4,30 +4,31 @@
 # Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2005.
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
 # Roozbeh Pournader <roozbeh@gmail.com>, 2005, 2008.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2008.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2008, 2012.
 # Elnaz Sarbar <elnaz.s@gmail.com>, 2008.
-#Mostafa  <info@mostafadaneshvar.com>, 2008.
-#Mahyar Moghimi <mahyar.moqimi@gmail.com> 2010.
+# Mostafa  <info@mostafadaneshvar.com>, 2008.
+# Mahyar Moghimi <mahyar.moqimi@gmail.com> 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2010-11-13 21:20+0000\n"
-"PO-Revision-Date: 2010-11-19 16:08+0330\n"
-"Last-Translator: Mahyar Moghimi <mahyar.moqimi@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-05-14 13:29+0000\n"
+"PO-Revision-Date: 2012-09-06 21:02+0330\n"
+"Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "منوی چندرسانه‌ای"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "صدا و تصویر"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "منوی چندرسانه‌ای"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -65,22 +66,6 @@ msgstr "سخت‌افزار"
 msgid "Settings for several hardware devices"
 msgstr "تنظیمات دستگاه‌های مختلف سخت‌افزاری"
 
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "اینترنت و شبکه"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "تنظیمات مربوط به شبکه"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "شکل و رفتار"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "تنظیماتی که ظاهر و رفتار رومیزی را کنترل می‌کنند"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "اینترنت"
@@ -106,24 +91,7 @@ msgstr "شخصی"
 msgid "Personal settings"
 msgstr "تنظیمات شخصی"
 
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "مدیریت"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "تغییر تنظیمات کل سیستم (همه‌ی کاربران متأثر می‌شوند)‏"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "ترجیحات شخصی"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "ترجیحات"
-
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
 msgstr "سیستم"
 
@@ -159,17 +127,22 @@ msgstr "لوازم رومیزی"
 msgid "Applications"
 msgstr "برنامه‌ها"
 
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "ترجیحات شخصی و تنظیمات مدیریتی"
-
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "غیره"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "برنامه‌هایی که در مقولات دیگر جا نمی‌گیرند"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
-msgid "Other"
-msgstr "غیره"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#| msgid "Applications"
+msgid "Web Applications"
+msgstr "برنامه‌های وب"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "برنامه‌ها و پایگاه‌هایی که از طریق وب ذخیره شده‌اند"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -180,19 +153,19 @@ msgid "Edit Menus"
 msgstr "ویرایش منوها"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "_برنامه‌ها:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_پیش‌فرض‌ها"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "_منوها:"
 
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "_برنامه‌ها:"
+
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:47
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
 msgid "Simple Menu Editor %s"
 msgstr "ویرایشگر منو ساده %s"
@@ -207,25 +180,64 @@ msgid "Show"
 msgstr "نشان دادن"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "شاخه‌ی آغازه پیدا نمی‌شود: در ‎/etc/passwd تنظیم نشده و ‎$HOME نیز در محیط مقدار ندارد"
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"شاخه‌ی آغازه پیدا نمی‌شود: در ‎/etc/passwd تنظیم نشده و ‎$HOME نیز در محیط مقدار "
+"ندارد"
+
+#~ msgid "Internet and Network"
+#~ msgstr "اینترنت و شبکه"
+
+#~ msgid "Network-related settings"
+#~ msgstr "تنظیمات مربوط به شبکه"
+
+#~ msgid "Look and Feel"
+#~ msgstr "شکل و رفتار"
+
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "تنظیماتی که ظاهر و رفتار رومیزی را کنترل می‌کنند"
+
+#~ msgid "Administration"
+#~ msgstr "مدیریت"
+
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr "تغییر تنظیمات کل سیستم (همه‌ی کاربران متأثر می‌شوند)‏"
+
+#~ msgid "Personal preferences"
+#~ msgstr "ترجیحات شخصی"
+
+#~ msgid "Preferences"
+#~ msgstr "ترجیحات"
+
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "ترجیحات شخصی و تنظیمات مدیریتی"
 
 #~ msgid "Menu file"
 #~ msgstr "پرونده‌ی منو"
+
 #~ msgid "MENU_FILE"
 #~ msgstr "MENU_FILE"
+
 #~ msgid "Monitor for menu changes"
 #~ msgstr "پایشگر تغییرات منو"
+
 #~ msgid "Include <Exclude>d entries"
 #~ msgstr "شامل کردن مدخل‌های <Exclude>شده‏"
+
 #~ msgid "Include NoDisplay=true entries"
 #~ msgstr "شامل کردن مدخل‌های NoDisplay=درست"
+
 #~ msgid "Invalid desktop file ID"
 #~ msgstr "شناسه‌ی نامعتبر برای پرونده‌ی رومیزی"
+
 #~ msgid "[Invalid Filename]"
 #~ msgstr "[پرونده‌ی نامعتبر]"
+
 #~ msgid " <excluded>"
 #~ msgstr " <کنار گذاشته شده>"
+
 #~ msgid ""
 #~ "\n"
 #~ "\n"
@@ -240,14 +252,18 @@ msgstr "شاخه‌ی آغازه پیدا نمی‌شود: در ‎/etc/passwd �
 #~ "==== منو تغییر کرد، مجدداً بارگیری می‌شود  ====\n"
 #~ "\n"
 #~ "\n"
+
 #~ msgid "Menu tree is empty"
 #~ msgstr "درخت منو خالی است"
+
 #~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
 #~ msgstr "- آزمایش پیاده‌سازی گنوم از توصیف منوی رومیزی"
+
 #~ msgid "Accessibility"
 #~ msgstr "دسترسی‌پذیری"
+
 #~ msgid "Desktop"
 #~ msgstr "رومیزی"
+
 #~ msgid "Accessibility related preferences"
 #~ msgstr "ترجیحات مربوط به دسترسی‌پذیری"
-
