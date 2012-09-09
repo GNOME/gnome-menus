@@ -2,15 +2,18 @@
 # Copyright (C) 2004, 2005, 2007, 2008, 2009 the author(s) of gnome-menus.
 # Copyright (C) 2004, 2005 Miloslav Trmac <mitr@volny.cz>.
 # This file is distributed under the same license as the gnome-menus package.
+#
 # Miloslav Trmac <mitr@volny.cz>, 2004, 2005.
 # Petr Tomeš <ptomes@gmail.com>, 2006.
 # Jakub Friedl <jfriedl@suse.cz>, 2007.
 # Petr Kovar <pknbe@volny.cz>, 2007, 2009.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-21 04:22+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-05-14 13:29+0000\n"
 "PO-Revision-Date: 2009-09-21 04:17+0200\n"
 "Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -20,12 +23,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Nabídka multimédií"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Zvuk a video"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Nabídka multimédií"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -63,22 +66,6 @@ msgstr "Hardware"
 msgid "Settings for several hardware devices"
 msgstr "Nastavení různých hardwarových zařízení"
 
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "Internet a síť"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "Nastavení související se sítí"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "Vzhled a chování"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Nastavení ovládající vzhled a chování pracovního prostředí"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -95,32 +82,16 @@ msgstr "Kancelář"
 msgid "Office Applications"
 msgstr "Kancelářské aplikace"
 
-#: ../desktop-directories/Personal.directory.in.h:1
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal"
 msgstr "Osobní"
 
-#: ../desktop-directories/Personal.directory.in.h:2
+#: ../desktop-directories/Personal.directory.in.h:3
 msgid "Personal settings"
 msgstr "Osobní nastavení"
 
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "Správa"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "Změnit nastavení pro celý systém (ovlivní všechny uživatele)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "Osobní volby"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Volby"
-
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
 msgstr "Systém"
 
@@ -156,17 +127,21 @@ msgstr "Příslušenství prostředí pracovní plochy"
 msgid "Applications"
 msgstr "Aplikace"
 
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Osobní volby a nastavení správy"
-
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "Ostatní"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "Aplikace nepatřící do jiných kategorií"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
-msgid "Other"
-msgstr "Ostatní"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "Webové aplikace"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Aplikace a stránky uložené z webu"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -177,93 +152,36 @@ msgid "Edit Menus"
 msgstr "Upravit nabídky"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "_Aplikace:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "Vý_chozí"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "Na_bídky:"
 
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "_Aplikace:"
+
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
 msgid "Simple Menu Editor %s"
 msgstr "Jednoduchý editor nabídek %s"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
 msgid "Name"
 msgstr "Název"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
 msgid "Show"
 msgstr "Zobrazit"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Nelze najít domovský adresář: nenastaveno v /etc/passwd a žádná hodnota "
-"$HOME v prostředí"
-
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "Soubor nabídky"
-
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "SOUBOR_NABÍDKY"
-
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "Sleduje změny nabídky"
-
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "Zahrne položky \"<Exclude>\""
-
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "Zahrne položky s \"NoDisplay=true\""
-
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "Neplatné ID souboru desktop"
-
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[Neplatný název souboru]"
-
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr " <excluded>"
-
-#: ../util/test-menu-spec.c:164
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"==== Nabídka změněna, načítá se znovu ====\n"
-"\n"
-"\n"
-
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "Strom nabídky je prázdný"
-
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- otestuje implementaci \"Desktop Menu Specification\" v GNOME"
+"Nelze najít domovskou složku: není nenastaveno v /etc/passwd a není žádná "
+"hodnota $HOME v proměnných prostředí"
