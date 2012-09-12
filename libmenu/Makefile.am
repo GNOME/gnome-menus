@@ -61,7 +61,7 @@ GMenu-3.0.gir: libgnome-menu-3.la
 GMenu_3_0_gir_INCLUDES = Gio-2.0
 GMenu_3_0_gir_CFLAGS = $(AM_CPPFLAGS)
 GMenu_3_0_gir_LIBS = libgnome-menu-3.la
-GMenu_3_0_gir_SCANNERFLAGS = --identifier-prefix=GMenu --symbol-prefix=gmenu --pkg-export=libgnome-menu-3.0
+GMenu_3_0_gir_SCANNERFLAGS = --identifier-prefix=GMenu --symbol-prefix=gmenu --pkg-export=libgnome-menu-3.0 --c-include=gmenu-tree.h
 GMenu_3_0_gir_FILES = $(addprefix $(srcdir)/,$(introspection_sources))
 INTROSPECTION_GIRS += GMenu-3.0.gir
 
