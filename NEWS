@@ -1,3 +1,37 @@
+==============
+Version 3.5.92
+==============
+
+  libmenu
+
+	* Add proper header reference to GMenu-3.0.gir (Rico Tzschichholz)
+
+  Translators
+
+	* Nilamdyuti Goswami (as)
+	* Petr Kovar (cs)
+	* Peter Bach (da)
+	* Bruce Cowan (en_GB)
+	* Arash Mousavi (fa)
+	* Jiri Grönroos (fi)
+	* Claude Paroz (fr)
+	* Leandro Regueiro (gl)
+	* Gabor Kelemen (hu)
+	* Dirgita (id)
+	* Milo Casagrande (it)
+	* Changwoo Ryu (ko)
+	* Aurimas Černius (lt)
+	* Sandeep Shedmake (mr)
+	* A S Alam (pa)
+	* Piotr Drąg (pl)
+	* Duarte Loreto (pt)
+	* Daniel Nylander (sv)
+	* Dr.T.Vasudevan (ta)
+	* Theppitak Karoonboonyanan (th)
+	* Muhammet Kara (tr)
+	* Nguyễn Thái Ngọc Duy (vi)
+	* Chrovex Fan (zh_CN)
+
 =============
 Version 3.5.5
 =============
