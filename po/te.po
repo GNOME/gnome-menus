@@ -7,21 +7,23 @@
 # Y.Kiran Chandra <kiran@gnu.org.in>, 2005.
 # Bharat Kumar <jonnalagaddabharat@gmail.com>, 2007.
 # Krishna Babu K <kkrothap@redhat.com>, 2009.
-# Praveen Illa <mail2ipn@gmail.com>, 2011, 2012.
 # Sasi Bhushan Boddepalli <sasi@swecha.net>, 2012
+# Praveen Illa <mail2ipn@gmail.com>, 2011, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master.te\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-05-14 13:29+0000\n"
-"PO-Revision-Date: 2012-06-21 14:23+0530\n"
-"Last-Translator: Sasi Bhushan Boddepalli <sasi@swecha.net>\n"
-"Language-Team: తెలుగు <indlinux-telugu@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2012-09-19 22:07+0530\n"
+"Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
+"Language-Team: Telugu <indlinux-telugu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 2.91.5\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -37,7 +39,7 @@ msgstr "ప్రోగ్రామింగ్"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "సాఫ్ట్‍వేర్ అభివృద్ధిచేయుటకు సాధనాలు"
+msgstr "సాఫ్ట్‍వేర్ అభివృద్ధిచేయుటకు పనిముట్లు"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
@@ -53,11 +55,11 @@ msgstr "ఆటలు మరియు వినోదకాలు"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "గ్రాఫిక్స్"
+msgstr "రేఖాచిత్రాలు"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "గ్రాఫిక్స్ అనువర్తనాలు"
+msgstr "రేఖాచిత్రాల అనువర్తనాలు"
 
 #: ../desktop-directories/Hardware.directory.in.h:1
 msgid "Hardware"
@@ -73,7 +75,7 @@ msgstr "అంతర్జాలం"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "అంతర్జాల సౌలభ్యత కొరకు వెబ్ మరియు ఈమెయిల్ వంటి వాటికోసం ప్రోగ్రాములు"
+msgstr "అంతర్జాల ప్రాప్తి కొరకు జాలం మరియు ఈమెయిల్ వంటి వాటికోసం కార్యక్రమాలు"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -110,11 +112,11 @@ msgstr "వ్యవస్థ స్వరూపణం మరియు పర్
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "సార్వత్రిక సౌలభ్యత"
+msgstr "సార్వత్రిక ప్రాప్తి"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "సార్వత్రిక సౌలభ్యత అమరికలు "
+msgstr "సార్వత్రిక ప్రాప్తి అమరికలు"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -139,15 +141,15 @@ msgstr "ఇతర విభాగాలలో  ఇమడని అనువర�
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 #| msgid "Applications"
 msgid "Web Applications"
-msgstr "వెబ్ అనువర్తనాలు"
+msgstr "జాల అనువర్తనాలు"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
-msgstr "వెబ్ నుండి దాయబడిన  అనువర్తనాలు మరియు సైట్లు "
+msgstr "జాలం నుండి దాయబడిన అనువర్తనాలు మరియు సైట్లు"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "మెను కూర్పరి"
+msgstr "మెను కూర్పకం"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
