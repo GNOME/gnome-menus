@@ -5,33 +5,37 @@
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004.
 # Rajesh Ranjan <rranjan@redhat.com>, 2005, 2006, 2008, 2009.
 # Rajesh Ranjan <rajesh672@gmail.com>, 2009.
+# rajesh <rajeshkajha@yahoo.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&component=general\n"
-"POT-Creation-Date: 2009-06-21 17:35+0000\n"
-"PO-Revision-Date: 2009-09-16 13:46+0530\n"
-"Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-05-14 13:29+0000\n"
+"PO-Revision-Date: 2012-09-21 14:19+0530\n"
+"Last-Translator: rajesh <rajeshkajha@yahoo.com>\n"
 "Language-Team: Hindi <hindi.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 "\n"
 "\n"
 "\n"
 "\n"
 "\n"
+"\n"
+"Language: hi\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "मल्टीमीडिया मेनू"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "ध्वनि व वीडियो"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "मल्टीमीडिया मेनू"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -69,22 +73,6 @@ msgstr "हार्डवेयर"
 msgid "Settings for several hardware devices"
 msgstr "कई हार्डवेयर युक्तियों के लिए सेटिंग"
 
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "इंटरनेट व संजाल"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "संजाल संबंधित सेटिंग"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "रूप-रंग"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "डेस्कटॉप रूपाकार व व्यवहार का नियंत्रण करने वाले सेटिंग"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "इंटरनेट"
@@ -101,32 +89,16 @@ msgstr "कार्यालय"
 msgid "Office Applications"
 msgstr "कार्यालय अनुप्रयोग"
 
-#: ../desktop-directories/Personal.directory.in.h:1
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
 msgid "Personal"
 msgstr "निजी"
 
-#: ../desktop-directories/Personal.directory.in.h:2
+#: ../desktop-directories/Personal.directory.in.h:3
 msgid "Personal settings"
 msgstr "निजी सेटिंग"
 
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "प्रशासन"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "तंत्र स्तरीय सेटिंग बदलें (सभी उपयोक्ता प्रभावित होते हैं)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "निजी वरीयता"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "वरीयता"
-
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
 msgstr "तंत्र"
 
@@ -162,17 +134,22 @@ msgstr "डेस्कटॉप उपसाधन"
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "निजी वरीयता व प्रशासन सेटिंग"
-
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "अन्य"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "अनुप्रयोग जो अन्य श्रेणी में सटीक नहीं बैठा"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
-msgid "Other"
-msgstr "अन्य"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#| msgid "Applications"
+msgid "Web Applications"
+msgstr "वेब अनुप्रयोग"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "वेब से सहेजा अनुप्रयोग और साइट"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -183,95 +160,109 @@ msgid "Edit Menus"
 msgstr "मेन्यू संपादित करें"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "अनुप्रयोग (_A)"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "तयशुदा (_D)"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "मेन्यू (_M):"
 
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "अनुप्रयोग (_A)"
+
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
-#| msgid "Menu Editor"
 msgid "Simple Menu Editor %s"
 msgstr "सरल मेन्यू संपादक %s"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
 msgid "Name"
 msgstr "नाम"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
 msgid "Show"
 msgstr "दिखाएँ"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"घर निर्देशिका नहीं पा सकता है: /etc/passwd में सेट नहीं है और $HOME के लिये वातावरण में "
+"घर निर्देशिका नहीं पा सकता है: /etc/passwd में सेट नहीं है और $HOME के लिये "
+"वातावरण में "
 "कोई मान नहीं है"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "मेन्यू फ़ाइल"
+#~ msgid "Internet and Network"
+#~ msgstr "इंटरनेट व संजाल"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "MENU_FILE"
+#~ msgid "Network-related settings"
+#~ msgstr "संजाल संबंधित सेटिंग"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "मेन्यू परिवर्तन के लिए मॉनिटर"
+#~ msgid "Look and Feel"
+#~ msgstr "रूप-रंग"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "<निकाली> गई प्रविष्टि शामिल करें"
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "डेस्कटॉप रूपाकार व व्यवहार का नियंत्रण करने वाले सेटिंग"
 
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "NoDisplay=true प्रविष्टि शामिल करें"
+#~ msgid "Administration"
+#~ msgstr "प्रशासन"
 
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "अवैध डेस्कटॉप फ़ाइल आईडी"
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr "तंत्र स्तरीय सेटिंग बदलें (सभी उपयोक्ता प्रभावित होते हैं)"
 
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[अवैध फ़ाइलनाम]"
+#~ msgid "Personal preferences"
+#~ msgstr "निजी वरीयता"
 
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr " <निकाली गई>"
+#~ msgid "Preferences"
+#~ msgstr "वरीयता"
 
-#: ../util/test-menu-spec.c:164
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"==== मेन्यू परिवर्तित, फिर लोड कर रहा है ====\n"
-"\n"
-"\n"
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "निजी वरीयता व प्रशासन सेटिंग"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "मेन्यू तरू रिक्त है"
+#~ msgid "Menu file"
+#~ msgstr "मेन्यू फ़ाइल"
 
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- डेस्कटॉप मेन्यू विनिर्दिष्टता के ग्नोम कार्यान्वयन की जाँच करें"
+#~ msgid "MENU_FILE"
+#~ msgstr "MENU_FILE"
 
+#~ msgid "Monitor for menu changes"
+#~ msgstr "मेन्यू परिवर्तन के लिए मॉनिटर"
+
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "<निकाली> गई प्रविष्टि शामिल करें"
+
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "NoDisplay=true प्रविष्टि शामिल करें"
+
+#~ msgid "Invalid desktop file ID"
+#~ msgstr "अवैध डेस्कटॉप फ़ाइल आईडी"
+
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[अवैध फ़ाइलनाम]"
+
+#~ msgid " <excluded>"
+#~ msgstr " <निकाली गई>"
+
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== मेन्यू परिवर्तित, फिर लोड कर रहा है ====\n"
+#~ "\n"
+#~ "\n"
+
+#~ msgid "Menu tree is empty"
+#~ msgstr "मेन्यू तरू रिक्त है"
+
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr "- डेस्कटॉप मेन्यू विनिर्दिष्टता के ग्नोम कार्यान्वयन की जाँच करें"
