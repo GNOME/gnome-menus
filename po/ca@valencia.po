@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-29 18:26+0200\n"
+"POT-Creation-Date: 2012-09-26 01:31+0200\n"
 "PO-Revision-Date: 2011-04-04 00:14+0200\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
-"Language: ca\n"
+"Language: ca-XV\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Menú multimèdia"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "So i vídeo"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Menú multimèdia"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -123,12 +123,20 @@ msgid "Applications"
 msgstr "Aplicacions"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "Altres"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "Aplicacions que no encaixaven en d'altres categories"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
-msgid "Other"
-msgstr "Altres"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "Aplicacions web"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Aplicacions i llocs alçats del Web"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -139,19 +147,19 @@ msgid "Edit Menus"
 msgstr "Edita els menús"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "_Aplicacions:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Predeterminats"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "_Menús:"
 
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "_Aplicacions:"
+
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:47
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
 msgid "Simple Menu Editor %s"
 msgstr "Editor del menú (versió %s)"
