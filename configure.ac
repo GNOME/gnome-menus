@@ -84,8 +84,6 @@ libmenu/libgnome-menu-3.0-uninstalled.pc
 layout/Makefile
 desktop-directories/Makefile
 util/Makefile
-simple-editor/Makefile
-simple-editor/GMenuSimpleEditor/Makefile
 po/Makefile.in
 ])
 

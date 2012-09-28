@@ -1,7 +1,5 @@
 SUBDIRS = libmenu desktop-directories layout util po
 
-SUBDIRS += simple-editor
-
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-introspection
