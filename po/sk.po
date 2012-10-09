@@ -1,31 +1,32 @@
 # Slovak translation for gnome-menus.
-# Copyright (C) 2004, 2005, 2007, 2010, 2011 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005, 2007, 2010-2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Marcel Telka <marcel@telka.sk>, 2004, 2005.
 # Peter Tuharsky <tuharsky@misbb.sk>, 2007.
-# Pavol Klačanský <pavol@klacansky.com>, 2010, 2011.
+# Pavol Klačanský <pavol@klacansky.com>, 2010-2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&component=general\n"
-"POT-Creation-Date: 2010-10-29 00:15+0000\n"
-"PO-Revision-Date: 2011-02-02 09:03+0100\n"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-09-28 22:55+0000\n"
+"PO-Revision-Date: 2012-10-05 19:07+0100\n"
 "Last-Translator: Pavol Klačanský <pavol@klacansky.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Ponuka multimédií"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Zvuk a video"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Ponuka multimédií"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -63,22 +64,6 @@ msgstr "Hardvér"
 msgid "Settings for several hardware devices"
 msgstr "Nastavenia pre niektoré hardvérové zariadenia"
 
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "Internet a sieť"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "Nastavenia súvisiace so sieťou"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "Vzhľad a dojem"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Nastavenia ovládajúce vzhľad a správanie pracovnej plochy"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -104,24 +89,7 @@ msgstr "Osobné"
 msgid "Personal settings"
 msgstr "Osobné nastavenia"
 
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "Správa"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "Zmeniť nastavenia pre celý systém (ovplyvní všetkých používateľov)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "Osobné nastavenia"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Nastavenia"
-
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
 msgstr "Systém"
 
@@ -157,17 +125,21 @@ msgstr "Príslušenstvo pracovnej plochy"
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Osobné a správcovské nastavenia"
-
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "Ostatné"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "Aplikácie, ktoré nezapadajú do ostatných kategórií"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
-msgid "Other"
-msgstr "Ostatné"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "Webové aplikácie"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Aplikácie a stránky uložené z webu"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -178,19 +150,19 @@ msgid "Edit Menus"
 msgstr "Upraviť ponuky"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "_Aplikácie:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Predvolené"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "_Ponuky:"
 
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "_Aplikácie:"
+
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:47
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
 msgid "Simple Menu Editor %s"
 msgstr "Jednoduchý editor ponúk %s"
@@ -211,3 +183,30 @@ msgid ""
 msgstr ""
 "Nepodarilo sa nájsť domovský priečinok: nie je nastavený v /etc/passwd a nie "
 "je nastavená hodnota $HOME v prostredí"
+
+#~ msgid "Internet and Network"
+#~ msgstr "Internet a sieť"
+
+#~ msgid "Network-related settings"
+#~ msgstr "Nastavenia súvisiace so sieťou"
+
+#~ msgid "Look and Feel"
+#~ msgstr "Vzhľad a dojem"
+
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "Nastavenia ovládajúce vzhľad a správanie pracovnej plochy"
+
+#~ msgid "Administration"
+#~ msgstr "Správa"
+
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr "Zmeniť nastavenia pre celý systém (ovplyvní všetkých používateľov)"
+
+#~ msgid "Personal preferences"
+#~ msgstr "Osobné nastavenia"
+
+#~ msgid "Preferences"
+#~ msgstr "Nastavenia"
+
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "Osobné a správcovské nastavenia"
