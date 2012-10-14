@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-02-06 11:27+0000\n"
-"PO-Revision-Date: 2012-10-14 12:59-0500\n"
+"POT-Creation-Date: 2012-10-14 17:05+0000\n"
+"PO-Revision-Date: 2012-10-14 13:41-0500\n"
 "Last-Translator: Bahodir Mansurov <6ahodir@gmail.com>\n"
 "Language-Team: Uzbek@cyrillic\n"
 "Language: uz\n"
@@ -20,12 +20,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Мультимедия менюси"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Овоз ва Видео"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Мультимедия менюси"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -125,12 +125,20 @@ msgid "Applications"
 msgstr "Дастурлар"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "Бошқа"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "Бошқа тоифага кирмаган дастурлар"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
-msgid "Other"
-msgstr "Бошқа"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "Web дастурлари"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Webдан сақлаб олинган дастур ва сайтлар"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
@@ -141,16 +149,16 @@ msgid "Edit Menus"
 msgstr "Менюларни тахрирлаш"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "_Дастурлар:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Defaults"
 msgstr "_Асл қийматлар"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
 msgstr "_Менюлар:"
+
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "_Дастурлар:"
 
 #. Translators: %s is the version number
 #: ../simple-editor/GMenuSimpleEditor/main.py:44
