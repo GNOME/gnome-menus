@@ -4,14 +4,13 @@
 #
 # Nurali Abdurahmonov <mavnur@gmail.com>, 2007.
 # Bahodir Mansurov <6ahodir@gmail.com>, 2012.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-02-06 11:27+0000\n"
-"PO-Revision-Date: 2012-02-24 21:06-0400\n"
+"PO-Revision-Date: 2012-10-14 12:59-0500\n"
 "Last-Translator: Bahodir Mansurov <6ahodir@gmail.com>\n"
 "Language-Team: Uzbek@cyrillic\n"
 "Language: uz\n"
@@ -169,7 +168,9 @@ msgid "Show"
 msgstr "Кўрсатиш"
 
 #: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
 msgstr ""
 "Уй директорияси топилмади: /etc/passwd файлида белгиланмаган ва муҳитда "
 "$HOME нинг қиймати йўқ"
