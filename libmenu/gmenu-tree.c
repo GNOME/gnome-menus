@@ -60,6 +60,7 @@ struct _GMenuTree
   GObject       parent_instance;
 
   char *basename;
+  char *non_prefixed_basename;
   char *path;
   char *canonical_path;
 
@@ -410,16 +411,34 @@ gmenu_tree_canonicalize_path (GMenuTree *tree,
     }
   else
     {
-      menu_file = tree->basename;
+      const gchar *xdg_menu_prefix;
 
-      if (strcmp (tree->basename, "applications.menu") == 0 &&
-          g_getenv ("XDG_MENU_PREFIX"))
+      menu_file = tree->basename;
+      xdg_menu_prefix = g_getenv ("XDG_MENU_PREFIX");
+
+      if (xdg_menu_prefix != NULL)
         {
-          char *prefixed_basename;
-          prefixed_basename = g_strdup_printf ("%s%s",
-                                               g_getenv ("XDG_MENU_PREFIX"),
-                                               tree->basename);
-          canonicalize_basename (tree, prefixed_basename);
+          gchar *prefixed_basename;
+
+          prefixed_basename = g_strdup_printf ("%sapplications.menu",
+                                               xdg_menu_prefix);
+
+          /* Some gnome-menus using applications just use "applications.menu"
+           * as the basename and expect gnome-menus to prefix it. Others (e.g.
+           * Alacarte) explicitly use "${XDG_MENU_PREFIX}applications.menu" as
+           * the basename, because they want to save changes to the right files
+           * in ~. In both cases, we want to use "applications-merged" as the
+           * merge directory (as required by the fd.o menu spec), so we save
+           * the non-prefixed basename and use it later when calling
+           * menu_layout_load().
+           */
+          if (!g_strcmp0 (tree->basename, "applications.menu") ||
+              !g_strcmp0 (tree->basename, prefixed_basename))
+            {
+              canonicalize_basename (tree, prefixed_basename);
+              g_free (tree->non_prefixed_basename);
+              tree->non_prefixed_basename = g_strdup ("applications.menu");
+            }
           g_free (prefixed_basename);
         }
 
@@ -586,6 +605,9 @@ gmenu_tree_finalize (GObject *object)
   if (tree->basename != NULL)
     g_free (tree->basename);
   tree->basename = NULL;
+
+  g_free (tree->non_prefixed_basename);
+  tree->non_prefixed_basename = NULL;
 
   if (tree->path != NULL)
     g_free (tree->path);
@@ -1896,7 +1918,7 @@ load_merge_file (GMenuTree      *tree,
 
   menu_verbose ("Merging file \"%s\"\n", canonical);
 
-  to_merge = menu_layout_load (canonical, NULL, NULL);
+  to_merge = menu_layout_load (canonical, tree->non_prefixed_basename, NULL);
   if (to_merge == NULL)
     {
       menu_verbose ("No menu for file \"%s\" found when merging\n",
@@ -3054,7 +3076,7 @@ gmenu_tree_load_layout (GMenuTree  *tree,
 
   error = NULL;
   tree->layout = menu_layout_load (tree->canonical_path,
-                                   tree->path ? NULL : tree->basename,
+                                   tree->non_prefixed_basename,
                                    error);
   if (!tree->layout)
     return FALSE;
