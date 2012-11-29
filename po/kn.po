@@ -1,538 +1,248 @@
+# translation of gnome-menus.master.kn.po to Kannada
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Shankar Prasad <svenkate@redhat.com>, 2012.
+# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: gnome-menus.master.kn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"online-accounts&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-11-07 14:04+0000\n"
-"PO-Revision-Date: 2012-11-29 14:12+0530\n"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-04-26 17:19+0000\n"
+"PO-Revision-Date: 2010-03-24 17:49+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
-"Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
-"Language: kn\n"
+"Language-Team: kn-IN <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#. shut up -Wunused-but-set-variable
-#: ../src/daemon/goadaemon.c:211
-msgid "Online Accounts"
-msgstr "ಆನ್‌ಲೈನ್‌ ಖಾತೆಗಳು"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Sound & Video"
+msgstr "ಧ್ವನಿ ಹಾಗು ದೃಶ್ಯ"
 
-#. TODO: more specific
-#: ../src/daemon/goadaemon.c:801 ../src/daemon/goadaemon.c:1146
-#, c-format
-msgid "Failed to find a provider for: %s"
-msgstr "ಇದಕ್ಕಾಗಿ ಒದಗಿಸುವವರು ಕಂಡುಬಂದಿಲ್ಲ: %s"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "ಮಲ್ಟಿಮೀಡಿಯಾ ಅಂಶಪಟ್ಟಿ"
 
-#: ../src/daemon/goadaemon.c:990
-msgid "An online account needs attention"
-msgstr "ಒಂದು ಆನ್‌ಲೈನ್ ಖಾತೆಗೆ ಗಮನದ ಅಗತ್ಯವಿದೆ"
+#: ../desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "ಪ್ರೊಗ್ರಾಮಿಂಗ್"
 
-#: ../src/daemon/goadaemon.c:997
-msgid "Open Online Accounts..."
-msgstr "ಆನ್‌ಲೈನ್‌ ಖಾತೆಗಳನ್ನು ತೆರೆ..."
+#: ../desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "ತಂತ್ರಾಂಶ ವಿಕಸನೆಗಾಗಿನ ಉಪಕರಣಗಳು"
 
-#. TODO: more specific
-#: ../src/daemon/goadaemon.c:1134
-msgid "ProviderType property is not set for account"
-msgstr "ಖಾತೆಗಾಗಿ ProviderType ಗುಣವನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ"
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "ಶಿಕ್ಷಣ"
 
-#. TODO: more specific
-#: ../src/goabackend/goaewsclient.c:204 ../src/goabackend/goahttpclient.c:147
-#, c-format
-msgid "Code: %u - Unexpected response from server"
-msgstr "ಸಂಕೇತ: %u - ಪೂರೈಕೆಗಣಕದಿಂದ ಅನಿರೀಕ್ಷಿತವಾದ ಪ್ರತಿಕ್ರಿಯೆ ಬಂದಿದೆ"
+#: ../desktop-directories/Game.directory.in.h:1
+msgid "Games"
+msgstr "ಆಟಗಳು"
 
-#. TODO: more specific
-#: ../src/goabackend/goaewsclient.c:220
-#, c-format
-msgid "Failed to parse autodiscover response XML"
-msgstr "ಸ್ವಯಂಪತ್ತೆ ಪ್ರತಿಕ್ರಿಯೆ XML ಅನ್ನು ಪಾರ್ಸ್ ಮಾಡುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+#: ../desktop-directories/Game.directory.in.h:2
+msgid "Games and amusements"
+msgstr "ಆಟಗಳು ಹಾಗು ರಂಜನೆಗಳು"
 
-#. TODO: more specific
-#: ../src/goabackend/goaewsclient.c:230
-#, c-format
-msgid "Failed to find Autodiscover element"
-msgstr "ಸ್ವಯಂಪತ್ತೆ ಘಟಕವನ್ನು ಪತ್ತೆ ಮಾಡುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+#: ../desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "ಗ್ರಾಫಿಕ್ಸ್"
 
-#. TODO: more specific
-#: ../src/goabackend/goaewsclient.c:244
-#, c-format
-msgid "Failed to find Response element"
-msgstr "ಪ್ರತಿಕ್ರಿಯೆಯ ಘಟಕವನ್ನು ಪತ್ತೆ ಮಾಡುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+#: ../desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "ಗ್ರಾಫಿಕ್ಸ್ ಅನ್ವಯಗಳು"
 
-#. TODO: more specific
-#: ../src/goabackend/goaewsclient.c:258
-#, c-format
-msgid "Failed to find Account element"
-msgstr "ಖಾತೆಯ ಘಟಕವನ್ನು ಪತ್ತೆ ಮಾಡುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
+#: ../desktop-directories/Hardware.directory.in.h:1
+msgid "Hardware"
+msgstr "ಯಂತ್ರಾಂಶ"
 
-#. TODO: more specific
-#: ../src/goabackend/goaewsclient.c:275
-#, c-format
-msgid "Failed to find ASUrl and OABUrl in autodiscover response"
-msgstr ""
-"ASUrl ಮತ್ತು OABUrl ಅನ್ನು ಸ್ವಯಂಪತ್ತೆ ಪ್ರತಿಕ್ರಿಯೆಯಲ್ಲಿ ಪತ್ತೆಮಾಡಲು ವಿಫಲಗೊಂಡಿದೆ"
+#: ../desktop-directories/Hardware.directory.in.h:2
+msgid "Settings for several hardware devices"
+msgstr "ಹಲವಾರು ಯಂತ್ರಾಂಶ ಸಾಧನಗಳಿಗಾಗಿನ ಸಿದ್ಧತೆಗಳು"
 
-#: ../src/goabackend/goaexchangeprovider.c:78
-msgid "Microsoft Exchange"
-msgstr "Microsoft Exchange"
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "ಅಂತರಜಾಲ"
 
-#: ../src/goabackend/goaexchangeprovider.c:279
-#: ../src/goabackend/goagoogleprovider.c:651
-#: ../src/goabackend/goaoauth2provider.c:1443
-#: ../src/goabackend/goaoauthprovider.c:1545
-#, c-format
-msgid "Credentials not found in keyring (%s, %d): "
-msgstr "ಕೀಲಿಗೊಂಚಲಿನಲ್ಲಿ ರುಜುವಾತುಗಳು ಕಂಡುಬಂದಿಲ್ಲ (%s, %d): "
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "ಜಾಲ ಹಾಗು ಇಮೈಲಿನಂತಹ ಅಂತರಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
 
-#. TODO: more specific
-#: ../src/goabackend/goaexchangeprovider.c:297
-#: ../src/goabackend/goaexchangeprovider.c:943
-#: ../src/goabackend/goagoogleprovider.c:670
-#: ../src/goabackend/goagoogleprovider.c:849
-#, c-format
-msgid "Did not find password with username `%s' in credentials"
-msgstr "ರುಜುವಾತುಗಳಲ್ಲಿ `%s' ಬಳಕೆದಾರ ಹೆಸರಿಗೆ ಸಂಬಂಧಿಸಿದ ಗುಪ್ತಪದವನ್ನು ಕಂಡುಬಂದಿಲ್ಲ"
+#: ../desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "ಆಫೀಸ್"
 
-#. Translators: the first %s is the username
-#. * (eg., debarshi.ray@gmail.com or rishi), and the
-#. * (%s, %d) is the error domain and code.
-#.
-#: ../src/goabackend/goaexchangeprovider.c:323
-#: ../src/goabackend/goagoogleprovider.c:692
-#, c-format
-msgid "Invalid password with username `%s' (%s, %d): "
-msgstr "`%s' ಬಳಕೆದಾರ ಹೆಸರಿಗೆ ಸಂಬಂಧಿಸಿದ ಗುಪ್ತಪದವನ್ನು ಸರಿಯಾಗಿಲ್ಲ (%s, %d): "
+#: ../desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "ಆಫೀಸ್ ಅನ್ವಯಗಳು"
 
-#: ../src/goabackend/goaexchangeprovider.c:506
-msgid "_E-mail"
-msgstr "ವಿಅಂಚೆ (_E)"
+#. Translators: this is Personal as in "Personal settings"
+#: ../desktop-directories/Personal.directory.in.h:2
+msgid "Personal"
+msgstr "ವೈಯಕ್ತಿಕ"
 
-#: ../src/goabackend/goaexchangeprovider.c:507
-msgid "_Password"
-msgstr "ಗುಪ್ತಪದ(_P)"
+#: ../desktop-directories/Personal.directory.in.h:3
+msgid "Personal settings"
+msgstr "ವೈಯಕ್ತಿಕ ಸಿದ್ಧತೆಗಳು"
 
-#: ../src/goabackend/goaexchangeprovider.c:510
-msgid "_Custom"
-msgstr "ಕಸ್ಟಮ್ (_C)"
+#: ../desktop-directories/System.directory.in.h:1
+msgid "System"
+msgstr "ವ್ಯವಸ್ಥೆ"
 
-#: ../src/goabackend/goaexchangeprovider.c:529
-#: ../src/goabackend/goakerberosprovider.c:1117
-msgid "User_name"
-msgstr "ಬಳಕೆದಾರ ಹೆಸರು (_n)"
+#: ../desktop-directories/System.directory.in.h:2
+msgid "System settings"
+msgstr "ವ್ಯವಸ್ಥೆಯ ಸಿದ್ಧತೆಗಳು"
 
-#: ../src/goabackend/goaexchangeprovider.c:530
-msgid "_Server"
-msgstr "ಪರಿಚಾರಕ (_S)"
+#: ../desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "ವ್ಯವಸ್ಥೆಯ ಉಪಕರಣಗಳು"
 
-#: ../src/goabackend/goaexchangeprovider.c:614
-#: ../src/goabackend/goaexchangeprovider.c:780
-#: ../src/goabackend/goakerberosprovider.c:1510
-#: ../src/goabackend/goaoauth2provider.c:986
-#: ../src/goabackend/goaoauthprovider.c:1041
-#, c-format
-msgid "Dialog was dismissed"
-msgstr "ಸಂವಾದವನ್ನು ವಜಾಗೊಳಿಸಲಾಗಿದೆ"
+#: ../desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "ವ್ಯವಸ್ಥೆಯ ಸಂರಚನೆ ಹಾಗು ಪರಿವೀಕ್ಷಣೆ"
 
-#: ../src/goabackend/goaexchangeprovider.c:650
-#: ../src/goabackend/goaexchangeprovider.c:807
-msgid "Error connecting to Microsoft Exchange server"
-msgstr "Microsoft Exchange ಪೂರೈಕೆಗಣಕದೊಂದಿಗೆ ಸಂಪರ್ಕ ಹೊಂದುವಲ್ಲಿ ದೋಷ ಉಂಟಾಗಿದೆ"
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ"
 
-#: ../src/goabackend/goaexchangeprovider.c:657
-#: ../src/goabackend/goaexchangeprovider.c:815
-#: ../src/goabackend/goakerberosprovider.c:1616
-msgid "_Try Again"
-msgstr "ಇನ್ನೊಮ್ಮೆ  ಪ್ರಯತ್ನಿಸಿ (_T)"
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ ಸಿದ್ಧತೆಗಳು"
 
-#: ../src/goabackend/goaexchangeprovider.c:866
-#: ../src/goabackend/goafacebookprovider.c:389
-#: ../src/goabackend/goagoogleprovider.c:729
-#: ../src/goabackend/goakerberosprovider.c:1685
-#: ../src/goabackend/goawindowsliveprovider.c:403
-msgid "Use for"
-msgstr "ಇದಕ್ಕಾಗಿ ಬಳಸು"
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "ಸಲಕರಣೆಗಳು"
 
-#: ../src/goabackend/goaexchangeprovider.c:868
-#: ../src/goabackend/goagoogleprovider.c:731
-#| msgid "Mail"
-msgid "_Mail"
-msgstr "ಅಂಚೆ (_M)"
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "ಗಣಕತೆರೆಯ ಸಲಕರಣೆಗಳು"
 
-#: ../src/goabackend/goaexchangeprovider.c:873
-#: ../src/goabackend/goagoogleprovider.c:736
-#| msgid "Calendar"
-msgid "Cale_ndar"
-msgstr "ಕ್ಯಾಲೆಂಡರ್ (_n)"
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "ಅನ್ವಯಗಳು"
 
-#: ../src/goabackend/goaexchangeprovider.c:878
-#: ../src/goabackend/goagoogleprovider.c:741
-#| msgid "Contacts"
-msgid "_Contacts"
-msgstr "ಸಂಪರ್ಕಗಳು (_C)"
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "ಇತರೆ"
 
-#: ../src/goabackend/goafacebookprovider.c:79
-msgid "Facebook"
-msgstr "ಫೇಸ್‌ಬುಕ್‌"
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Applications that did not fit in other categories"
+msgstr "ಬೇರೆ ವರ್ಗಗಳಿಗೆ ಸೇರದೇ ಇರುವಂತಹ ಅನ್ವಯಗಳು"
 
-#: ../src/goabackend/goafacebookprovider.c:193
-#: ../src/goabackend/goagoogleprovider.c:216
-#: ../src/goabackend/goawindowsliveprovider.c:176
-#, c-format
-msgid "Expected status 200 when requesting guid, instead got status %d (%s)"
-msgstr ""
-"guid ಅನ್ನು ಮನವಿ ಮಾಡುವಾಗ 200 ಸ್ಥಿತಿಯನ್ನು ನಿರೀಕ್ಷಿಸಲಾಗಿತ್ತು, ಬದಲಿಗೆ %d ಸ್ಥಿತಿಯು "
-"ದೊರೆತಿದೆ (%s)"
+#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
+msgid "Menu Editor"
+msgstr "ಮೆನು ಸಂಪಾದಕ"
 
-#: ../src/goabackend/goafacebookprovider.c:205
-#: ../src/goabackend/goagoogleprovider.c:228
-#: ../src/goabackend/goaoauth2provider.c:586
-#: ../src/goabackend/goawindowsliveprovider.c:188
-msgid "Error parsing response as JSON: "
-msgstr "ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು JSON ಆಗಿ ಪಾರ್ಸ್ ಮಾಡುವಲ್ಲಿ ದೋಷ: "
+#: ../simple-editor/gmenu-simple-editor.ui.h:1
+msgid "Edit Menus"
+msgstr "ಮೆನುಗಳನ್ನು ಸಂಪಾದಿಸು"
 
-#: ../src/goabackend/goafacebookprovider.c:216
-#: ../src/goabackend/goawindowsliveprovider.c:199
-#, c-format
-msgid "Didn't find id member in JSON data"
-msgstr "JSON ದತ್ತಾಂಶದಲ್ಲಿ id ಸದಸ್ಯ ಕಂಡುಬಂದಿಲ್ಲ"
+#: ../simple-editor/gmenu-simple-editor.ui.h:2
+msgid "_Defaults"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ(_D)"
 
-#: ../src/goabackend/goafacebookprovider.c:225
-#: ../src/goabackend/goagoogleprovider.c:249
-#, c-format
-msgid "Didn't find email member in JSON data"
-msgstr "JSON ದತ್ತಾಂಶದಲ್ಲಿ ವಿಅಂಚೆ ಸದಸ್ಯ ಕಂಡುಬಂದಿಲ್ಲ"
+#: ../simple-editor/gmenu-simple-editor.ui.h:3
+msgid "_Menus:"
+msgstr "ಮೆನುಗಳು(_M):"
 
-#: ../src/goabackend/goafacebookprovider.c:391
-#: ../src/goabackend/goagoogleprovider.c:746
-#: ../src/goabackend/goawindowsliveprovider.c:405
-msgid "C_hat"
-msgstr "ಚಾಟ್ ಮಾಡು (_h)"
+#: ../simple-editor/gmenu-simple-editor.ui.h:4
+msgid "_Applications:"
+msgstr "ಅನ್ವಯಗಳು(_A):"
 
-#: ../src/goabackend/goagoogleprovider.c:82
-msgid "Google"
-msgstr "ಗೂಗಲ್"
+#. Translators: %s is the version number
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
+#, python-format
+msgid "Simple Menu Editor %s"
+msgstr "ಸರಳ ಮೆನು ಸಂಪಾದಕ %s"
 
-#: ../src/goabackend/goagoogleprovider.c:239
-#, c-format
-msgid "Didn't find data member in JSON data"
-msgstr "JSON ದತ್ತಾಂಶದಲ್ಲಿ ದತ್ತಾಂಶ ಸದಸ್ಯ ಕಂಡುಬಂದಿಲ್ಲ"
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
+msgid "Name"
+msgstr "ಹೆಸರು"
 
-#: ../src/goabackend/goagoogleprovider.c:380
-msgid "Your system time is invalid. Check your date and time settings."
-msgstr ""
-"ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯ ಸಮಯವು ಅಮಾನ್ಯವಾಗಿದೆ. ನಿಮ್ಮ ದಿನಾಂಕ ಮತ್ತು ಸಮಯದ ಸಿದ್ಧತೆಗಳನ್ನು "
-"ಪರಿಶೀಲಿಸಿ."
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
+msgid "Show"
+msgstr "ತೋರಿಸು"
 
-#: ../src/goabackend/goagoogleprovider.c:751
-#: ../src/goabackend/goawindowsliveprovider.c:410
-#| msgid "Documents"
-msgid "_Documents"
-msgstr "ದಸ್ತಾವೇಜುಗಳು (_D)"
-
-#: ../src/goabackend/goakerberosprovider.c:86
-msgid "Enterprise Login (Kerberos)"
-msgstr "ಎಂಟರ್ಪ್ರೈಸ್ ಪ್ರವೇಶ (ಕರ್ಬರೋಸ್)"
-
-#: ../src/goabackend/goakerberosprovider.c:441
-msgid "Identity service returned invalid key"
-msgstr "ಗುರುತಿನ ಸೇವೆಯು ಅಮಾನ್ಯವಾದ ಕೀಲಿಯನ್ನು ಒಳಗೊಂಡಿದೆ"
-
-#: ../src/goabackend/goakerberosprovider.c:707
-#, c-format
-msgid "Could not find saved credentials for principal `%s' in keyring"
-msgstr "ಕೀಲಿಗೊಂಚಲಿನಲ್ಲಿ ಪ್ರಮುಖ `%s' ಕ್ಕಾಗಿ ಉಳಿಸಲಾದ ರುಜುವಾತುಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
-
-#: ../src/goabackend/goakerberosprovider.c:717
-#, c-format
-msgid "Did not find password for principal `%s' in credentials"
-msgstr "ರುಜುವಾತುಗಳಲ್ಲಿ ಪ್ರಮುಖ `%s' ಕ್ಕಾಗಿ ಗುಪ್ತಪದವು ಕಂಡುಬಂದಿಲ್ಲ"
-
-#: ../src/goabackend/goakerberosprovider.c:1109
-msgid "_Domain"
-msgstr "ಕ್ಷೇತ್ರ (_D)"
-
-#: ../src/goabackend/goakerberosprovider.c:1110
-msgid "Enterprise domain or realm name"
-msgstr "ಎಂಟರ್ಪ್ರೈಸ್ ಡೊಮೈನ್ ಅಥವ ಕ್ಷೇತ್ರದ ಹೆಸರು"
-
-#: ../src/goabackend/goakerberosprovider.c:1321
-#: ../src/goaidentity/goaidentityservice.c:1082
-msgid "Log In to Realm"
-msgstr "ಕ್ಷೇತ್ರಕ್ಕೆ ಪ್ರವೇಶಿಸು"
-
-#: ../src/goabackend/goakerberosprovider.c:1322
-msgid "Please enter your password below."
-msgstr "ದಯವಿಟ್ಟು ಕೆಳಗೆ ನಿಮ್ಮ ಗುಪ್ತಪದವನ್ನು ನಮೂದಿಸಿ."
-
-#: ../src/goabackend/goakerberosprovider.c:1323
-msgid "Remember this password"
-msgstr "ಈ ಗುಪ್ತಪದವನ್ನು ನೆನಪಿನಲ್ಲಿಡು"
-
-#: ../src/goabackend/goakerberosprovider.c:1462
-#, c-format
-msgid "The domain is not valid"
-msgstr "ಡೊಮೈನ್ ಮಾನ್ಯವಾದುದಲ್ಲ"
-
-#: ../src/goabackend/goakerberosprovider.c:1611
-msgid "Error connecting to enterprise identity server"
-msgstr "ಎಂಟರ್ಪ್ರೈಸ್ ಗುರುತಿನ ಪೂರೈಕೆಗಣಕಕ್ಕೆ ಸಂಪರ್ಕಸಾಧಿಸುವಲ್ಲಿ ದೋಷ"
-
-#: ../src/goabackend/goakerberosprovider.c:1687
-msgid "Network _Resources"
-msgstr "ಜಾಲಬಂಧ ಸಂಪನ್ಮೂಲಗಳು (_R)"
-
-#. Translators: the %d is a HTTP status code and the %s is a textual description of it
-#: ../src/goabackend/goaoauth2provider.c:543
-#: ../src/goabackend/goaoauthprovider.c:586
-#, c-format
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
-"Expected status 200 when requesting access token, instead got status %d (%s)"
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
 msgstr ""
-"ನಿಲುಕು ಟೋಕನ್‌ಗಾಗಿ ಮನವಿ ಮಾಡುವಾಗ 200 ಸ್ಥಿತಿಯನ್ನು ನಿರೀಕ್ಷಿಸಲಾಗಿತ್ತು, ಬದಲಿಗೆ %d "
-"ಸ್ಥಿತಿಯು ದೊರೆತಿದೆ (%s)"
+"ನೆಲೆ ಕಡತಕೋಶವು ಕಂಡುಬಂದಿಲ್ಲ: /etc/passwd ನಲ್ಲಿ ಸಿದ್ಧಗೊಳಿಸಿಲ್ಲ ಹಾಗು ವಾತಾವರಣದಲ್ಲಿ "
+"$HOME ಗೆ ಯಾವುದೇ ಮೌಲ್ಯವಿಲ್ಲ"
 
-#: ../src/goabackend/goaoauth2provider.c:563
-#, c-format
-msgid "Didn't find access_token in non-JSON data"
-msgstr "JSON ಅಲ್ಲದ ದತ್ತಾಂಶದಲ್ಲಿ access_token ಕಂಡುಬಂದಿಲ್ಲ"
+#~ msgid "Internet and Network"
+#~ msgstr "ಅಂತರಜಾಲ ಹಾಗು ಜಾಲಬಂಧ"
 
-#: ../src/goabackend/goaoauth2provider.c:597
-#, c-format
-msgid "Didn't find access_token in JSON data"
-msgstr "JSON ದತ್ತಾಂಶದಲ್ಲಿ access_token ಕಂಡುಬಂದಿಲ್ಲ"
+#~ msgid "Network-related settings"
+#~ msgstr "ಜಾಲಬಂಧ-ಸಂಬಂಧಿತ ಸಿದ್ಧತೆಗಳು"
 
-#: ../src/goabackend/goaoauth2provider.c:776
-#: ../src/goabackend/goaoauth2provider.c:815
-#, c-format
-msgid "Authorization response was \"%s\""
-msgstr "ದೃಢೀಕರಣ ದೋಷವು \"%s\" ಆಗಿತ್ತು"
+#~ msgid "Look and Feel"
+#~ msgstr "ನೋಟ ಹಾಗು ಮಾಟ"
 
-#. Translators: The verb "Paste" is used when asking the user to paste a string from a web browser window
-#: ../src/goabackend/goaoauth2provider.c:920
-#, c-format
-msgid ""
-"Paste authorization code obtained from the <a href=\"%s\">authorization "
-"page</a>:"
-msgstr "<a href=\"%s\">ದೃಢೀಕರಣ ಪುಟ</a>ದಿಂದ ಪಡೆಯಲಾದ ದೃಢೀಕರಣ ಸಂಕೇತವನ್ನು ಅಂಟಿಸು:"
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "ಗಣಕತೆರೆಯ ಸ್ವರೂಪ ಹಾಗು ವರ್ತನೆಯನ್ನು ನಿಯಂತ್ರಿಸುವ ಸಿದ್ಧತೆಗಳು"
 
-#: ../src/goabackend/goaoauth2provider.c:1012
-#: ../src/goabackend/goaoauthprovider.c:1072
-msgid "Error getting an Access Token: "
-msgstr "ನಿಲುಕು ಟೋಕನ್ ಅನ್ನು ಪಡೆಯುವಲ್ಲಿ ದೋಷ ಉಂಟಾಗಿದೆ: "
+#~ msgid "Administration"
+#~ msgstr "ನಿರ್ವಹಣೆ"
 
-#: ../src/goabackend/goaoauth2provider.c:1027
-#: ../src/goabackend/goaoauthprovider.c:1085
-msgid "Error getting identity: "
-msgstr "ಗುರುತನ್ನು ಪಡೆಯುವಲ್ಲಿ ದೋಷ ಉಂಟಾಗಿದೆ: "
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr ""
+#~ "ವ್ಯವಸ್ಥೆಯಾದ್ಯಂತದ ಸಿದ್ಧತೆಗಳನ್ನು ಬದಲಾಯಿಸಿ (ಎಲ್ಲಾ ಬಳಕೆದಾರರ ಮೇಲೂ ಪರಿಣಾಮಬೀರುತ್ತದೆ)"
 
-#: ../src/goabackend/goaoauth2provider.c:1304
-#: ../src/goabackend/goaoauthprovider.c:1390
-#, c-format
-msgid "Was asked to login as %s, but logged in as %s"
-msgstr "%s ಆಗಿ ಪ್ರವೇಶಿಸುವಂತೆ ಕೋರಲಾಗಿತ್ತು, ಆದರೆ %s ಆಗಿ ಪ್ರವೇಶಿಸಲಾಗಿದೆ"
+#~ msgid "Personal preferences"
+#~ msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು"
 
-#: ../src/goabackend/goaoauth2provider.c:1470
-#, c-format
-msgid "Credentials do not contain access_token"
-msgstr "ರುಜುವಾತುಗಳು access_token ಅನ್ನು ಹೊಂದಿಲ್ಲ"
+#~ msgid "Preferences"
+#~ msgstr "ಆದ್ಯತೆಗಳು"
 
-#: ../src/goabackend/goaoauth2provider.c:1509
-#: ../src/goabackend/goaoauthprovider.c:1620
-#, c-format
-msgid "Failed to refresh access token (%s, %d): "
-msgstr "ನಿಲುಕು ಟೋಕನ್ ಅನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ (%s, %d): "
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು ಹಾಗು ನಿರ್ವಹಣಾ ಸಿದ್ಧತೆಗಳು"
 
-#: ../src/goabackend/goaoauth2provider.c:1544
-#: ../src/goabackend/goaoauthprovider.c:1652
-#, c-format
-msgid "Error storing credentials in keyring (%s, %d): "
-msgstr ""
-"ಈ ಕೀಲಿಗೊಂಚಲಿನಲ್ಲಿ ರುಜುವಾತುಗಳನ್ನು ಶೇಖರಿಸಿಡುವಲ್ಲಿ ದೋಷ ಉಂಟಾಗಿದೆ (%s, %d): "
+#~ msgid "Menu file"
+#~ msgstr "ಮೆನು ಕಡತ"
 
-#: ../src/goabackend/goaoauthprovider.c:609
-#, c-format
-msgid "Missing access_token or access_token_secret headers in response"
-msgstr ""
-"ಪ್ರತಿಕ್ರಿಯೆಯಲ್ಲಿ access_token ಅಥವ access_token_secret ಅನ್ನು ಕಂಡುಬಂದಿಲ್ಲ"
+#~ msgid "MENU_FILE"
+#~ msgstr "MENU_FILE"
 
-#: ../src/goabackend/goaoauthprovider.c:911
-msgid "Error getting a Request Token: "
-msgstr "ಮನವಿ ಟೋಕನ್ ಅನ್ನು ಪಡೆಯುವಲ್ಲಿ ದೋಷ ಉಂಟಾಗಿದೆ: "
+#~ msgid "Monitor for menu changes"
+#~ msgstr "ಮೆನು ಬದಲಾವಣೆಗಳ ಪರಿವೀಕ್ಷಕ"
 
-#. Translators: the %d is a HTTP status code and the %s is a textual description of it
-#: ../src/goabackend/goaoauthprovider.c:944
-#, c-format
-msgid ""
-"Expected status 200 for getting a Request Token, instead got status %d (%s)"
-msgstr ""
-"ಮನವಿ ಟೋಕನ್‌ ಅನ್ನು ಪಡೆಯುವಾಗ 200 ಸ್ಥಿತಿಯನ್ನು ನಿರೀಕ್ಷಿಸಲಾಗಿತ್ತು, ಬದಲಿಗೆ %d "
-"ಸ್ಥಿತಿಯು ದೊರೆತಿದೆ (%s)"
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "<Exclude>ಆದಂತಹ ನಮೂದುಗಳನ್ನು ಅಡಕಗೊಳಿಸು"
 
-#: ../src/goabackend/goaoauthprovider.c:961
-#, c-format
-msgid "Missing request_token or request_token_secret headers in response"
-msgstr ""
-"ಪ್ರತಿಕ್ರಿಯೆಯಲ್ಲಿ request_token or request_token_secret ಹೆಡರುಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "NoDisplay=true ನಮೂದನ್ನು ಅಡಕಗೊಳಿಸು"
 
-#. Translators: The verb "Paste" is used when asking the user to paste a string from a web browser window
-#: ../src/goabackend/goaoauthprovider.c:978
-#, c-format
-msgid "Paste token obtained from the <a href=\"%s\">authorization page</a>:"
-msgstr "<a href=\"%s\">ದೃಢೀಕರಣ ಪುಟ</a>ದಿಂದ ಪಡೆಯಲಾದ ಟೋಕನ್ ಅನ್ನು ಅಂಟಿಸು:"
+#~ msgid "Invalid desktop file ID"
+#~ msgstr "ಸಿಂಧುವಲ್ಲದ ಗಣಕತೆರೆ ಕಡತ ID"
 
-#: ../src/goabackend/goaoauthprovider.c:1576
-#, c-format
-msgid "Credentials do not contain access_token or access_token_secret"
-msgstr "ರುಜುವಾತುಗಳು access_token ಅಥವ access_token_secret ಅನ್ನು ಹೊಂದಿಲ್ಲ"
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[ಸಿಂಧುವಲ್ಲದ ಕಡತಹೆಸರು]"
 
-#: ../src/goabackend/goaprovider.c:548
-#, c-format
-msgid "ensure_credentials_sync is not implemented on type %s"
-msgstr "ensure_credentials_sync ಎನ್ನುವುದು %s ಬಗೆಯಲ್ಲಿ ಇನ್ನೂ ಸಹ ಅಳವಡಿಸಲಾಗಿಲ್ಲ"
+#~ msgid " <excluded>"
+#~ msgstr " <excluded>"
 
-#: ../src/goabackend/goautils.c:84
-#, c-format
-msgid "A %s account already exists for %s"
-msgstr "%s ಖಾತೆಯು %s ಗಾಗಿ ಈಗಾಗಲೆ ಪೂರೈಕೆಗಣಕದಲ್ಲಿ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ"
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== ಮೆನು ಬದಲಾಯಿಸಲ್ಪಟ್ಟಿದೆ, ಪುನಃ ಲೋಡ್ ಆಗುತ್ತಿದೆ ====\n"
+#~ "\n"
+#~ "\n"
 
-#. Translators: the %s is the name of the provider. eg., Google.
-#: ../src/goabackend/goautils.c:106
-#, c-format
-msgid "%s account"
-msgstr "%s ಖಾತೆ"
+#~ msgid "Menu tree is empty"
+#~ msgstr "ಮೆನು ವೃಕ್ಷವು(tree) ಖಾಲಿ ಇದೆ"
 
-#. TODO: more specific
-#: ../src/goabackend/goautils.c:147
-msgid "Failed to delete credentials from the keyring"
-msgstr "ರುಜುವಾತುಗಳನ್ನು ಕೀಲಿಗೊಂಚಲಿನಿಂದ ಅಳಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
-
-#. TODO: more specific
-#: ../src/goabackend/goautils.c:195
-msgid "Failed to retrieve credentials from the keyring"
-msgstr "ರುಜುವಾತುಗಳನ್ನು ಕೀಲಿಗೊಂಚಲಿನಿಂದ ಪಡೆಯುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
-
-#: ../src/goabackend/goautils.c:206
-msgid "Error parsing result obtained from the keyring: "
-msgstr "ಈ ಕೀಲಿಗೊಂಚಲಿನಿಂದ ಪಡೆಯಲಾದ ಫಲಿತಾಂಶವನ್ನು ಪಾರ್ಸ್ ಮಾಡುವಲ್ಲಿ ದೋಷ ಉಂಟಾಗಿದೆ: "
-
-#. Translators: The %s is the type of the provider, e.g. 'google' or 'facebook'
-#: ../src/goabackend/goautils.c:248
-#, c-format
-msgid "GOA %s credentials for identity %s"
-msgstr "GOA %s ರುಜುವಾತುಗಳು, %s ಗುರುತಿಗಾಗಿ"
-
-#. TODO: more specific
-#: ../src/goabackend/goautils.c:264
-msgid "Failed to store credentials in the keyring"
-msgstr "ರುಜುವಾತುಗಳನ್ನು ಕೀಲಿಗೊಂಚಲಿನಲ್ಲಿ ಶೇಖರಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
-
-#. translators: %s here is the address of the web page
-#: ../src/goabackend/goawebview.c:75
-#, c-format
-msgid "Loading “%s”…"
-msgstr "“%s” ಅನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ…"
-
-#: ../src/goabackend/goawindowsliveprovider.c:82
-msgid "Windows Live"
-msgstr "ವಿಂಡೋಸ್ ಲೈವ್"
-
-#: ../src/goabackend/goawindowsliveprovider.c:210
-#, c-format
-msgid "Didn't find account email member in JSON data"
-msgstr "JSON ದತ್ತಾಂಶದಲ್ಲಿ ಖಾತೆ ವಿಅಂಚೆ ಮಾಹಿತಿಯು ಕಂಡುಬಂದಿಲ್ಲ"
-
-#: ../src/goaidentity/goaalarm.c:245
-msgid "Time"
-msgstr "ಸಮಯ"
-
-#: ../src/goaidentity/goaalarm.c:246
-msgid "Time to fire"
-msgstr "ಫೈರ್ ಮಾಡುವ ಸಮಯ"
-
-#: ../src/goaidentity/goaidentityservice.c:375
-msgid "initial secret passed before secret key exchange"
-msgstr ""
-"ಸಿಕ್ರೆಟ್ ಕೀಲಿಯನ್ನು ವಿನಿಮಯ ಮಾಡಿಕೊಳ್ಳುವ ಮೊದಲು ಆರಂಭಿಕ ಸಿಕ್ರೆಟ್ ಅನ್ನು ರವಾನಿಸಲಾಗಿದೆ"
-
-#: ../src/goaidentity/goaidentityservice.c:567
-msgid "Initial secret key is invalid"
-msgstr "ಆರಂಭಿಕ ಸಿಕ್ರೆಟ್ ಕೀಲಿಯು ಅಮಾನ್ಯವಾಗಿದೆ"
-
-#: ../src/goaidentity/goaidentityservice.c:1087
-#, c-format
-msgid "The network realm %s needs some information to sign you in."
-msgstr ""
-"ಜಾಲಬಂಧ ಕ್ಷೇತ್ರವಾದ %s ಕ್ಕಾಗಿ ನಿಮ್ಮನ್ನು ಸೈನ್ ಇನ್ ಮಾಡಲು ಕೆಲವು ಮಾಹಿತಿಯ "
-"ಅಗತ್ಯವಿರುತ್ತದೆ."
-
-#: ../src/goaidentity/goakerberosidentity.c:271
-#: ../src/goaidentity/goakerberosidentity.c:280
-#: ../src/goaidentity/goakerberosidentity.c:607
-msgid "Could not find identity in credential cache: %k"
-msgstr "ರುಜುವಾತಿನ ಕ್ಯಾಶೆಯಲ್ಲಿ ಗುರುತು ಕಂಡುಬಂದಿಲ್ಲ: %k"
-
-#: ../src/goaidentity/goakerberosidentity.c:620
-msgid "Could not find identity credentials in cache: %k"
-msgstr "ರುಜುವಾತುಗಳ ಕ್ಯಾಶೆಯಲ್ಲಿ ಗುರುತು ಕಂಡುಬಂದಿಲ್ಲ: %k"
-
-#: ../src/goaidentity/goakerberosidentity.c:658
-msgid "Could not sift through identity credentials in cache: %k"
-msgstr "ಕ್ಯಾಶೆಯಲ್ಲಿನ ಗುರುತಿನ ರುಜುವಾತುಗಳ ಮುಖಾಂತರ ಸೂಕ್ಷ್ಮವಾಗಿ ಪರಿಶೀಲಸಲಾಗಿಲ್ಲ: %k"
-
-#: ../src/goaidentity/goakerberosidentity.c:675
-msgid "Could not finish up sifting through identity credentials in cache: %k"
-msgstr ""
-"ಕ್ಯಾಶೆಯಲ್ಲಿನ ಗುರುತಿನ ರುಜುವಾತುಗಳ ಮುಖಾಂತರ ಸೂಕ್ಷ್ಮವಾಗಿ ಪರಿಶೀಲಿಸುವಿಕೆಯನ್ನು "
-"ಪೂರ್ಣಗೊಳಿಸಲಾಗಿಲ್ಲ: %k"
-
-#: ../src/goaidentity/goakerberosidentity.c:1013
-#, c-format
-msgid "No associated identification found"
-msgstr "ಸಂಬಂಧಿಸಿದ ಯಾವುದೆ ಗುರುತು ಕಂಡುಬಂದಿಲ್ಲ"
-
-#: ../src/goaidentity/goakerberosidentity.c:1094
-msgid "Could not create credential cache: %k"
-msgstr "ರುಜುವಾತಿನ ಕ್ಯಾಶೆಯನ್ನು ರಚಿಸಲಾಗಿಲ್ಲ: %k"
-
-#: ../src/goaidentity/goakerberosidentity.c:1128
-msgid "Could not initialize credentials cache: %k"
-msgstr "ರುಜುವಾತುಗಳ ಕ್ಯಾಶೆಯನ್ನು ಆರಂಭಿಸಲಾಗಿಲ್ಲ: %k"
-
-#: ../src/goaidentity/goakerberosidentity.c:1147
-msgid "Could not store new credentials in credentials cache: %k"
-msgstr "ರುಜುವಾತುಗಳ ಕ್ಯಾಶೆಯಲ್ಲಿ ಹೊಸ ರುಜುವಾತನ್ನು ಶೇಖರಿಸಿಡಲಾಗಿಲ್ಲ: %k"
-
-#: ../src/goaidentity/goakerberosidentity.c:1424
-#, c-format
-msgid "Could not renew identity: Not signed in"
-msgstr "ಗುರುತನ್ನು ನವೀಕರಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ: ಸಹಿ ಮಾಡಲಾಗಿಲ್ಲ"
-
-#: ../src/goaidentity/goakerberosidentity.c:1436
-msgid "Could not renew identity: %k"
-msgstr "ಗುರುತನ್ನು ನವೀಕರಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ: %k"
-
-#: ../src/goaidentity/goakerberosidentity.c:1453
-msgid "Could not get new credentials to renew identity %s: %k"
-msgstr "%s ಗುರುತನ್ನು ನವೀಕರಣಗೊಳಿಸಲು ಹೊಸ ರುಜುವಾತುಗಳನ್ನು ಪಡೆಯಲಾಗಿಲ್ಲ: %k"
-
-#: ../src/goaidentity/goakerberosidentity.c:1493
-msgid "Could not erase identity: %k"
-msgstr "ಗುರುತನ್ನು ಅಳಿಸಲಾಗಿಲ್ಲ: %k"
-
-#: ../src/goaidentity/goakerberosidentitymanager.c:746
-msgid "Could not find identity"
-msgstr "ಗುರುತು ಕಂಡುಬಂದಿಲ್ಲ"
-
-#: ../src/goaidentity/goakerberosidentitymanager.c:823
-msgid "Could not create credential cache for identity"
-msgstr "ಗುರುತಿಗಾಗಿ ರುಜುವಾತಿನ ಕ್ಯಾಶೆಯನ್ನು ರಚಿಸಲಾಗಿಲ್ಲ"
-
-#~ msgid "Chat"
-#~ msgstr "ಸಂಭಾಷಣೆ"
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr "- ಗಣಕತೆರೆ ಮೆನು ಸೂಚನೆಗಳ GNOME ನ ಅನ್ವಯಿಸುವಿಕೆಯನ್ನು ಪರೀಕ್ಷಿಸುತ್ತದೆ"
