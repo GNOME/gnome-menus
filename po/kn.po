@@ -2,28 +2,30 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009, 2010.
+# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009, 2010, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master.kn\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-21 11:48+0530\n"
-"PO-Revision-Date: 2010-03-24 17:49+0530\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-11-29 08:51+0000\n"
+"PO-Revision-Date: 2012-11-29 14:25+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
-"Language-Team: kn-IN <>\n"
+"Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
+"Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "ಮಲ್ಟಿಮೀಡಿಯಾ ಅಂಶಪಟ್ಟಿ"
+msgid "Sound & Video"
+msgstr "ಧ್ವನಿ ಮತ್ತು ದೃಶ್ಯ"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
-msgid "Sound & Video"
-msgstr "ಧ್ವನಿ ಹಾಗು ದೃಶ್ಯ"
+msgid "Multimedia menu"
+msgstr "ಮಲ್ಟಿಮೀಡಿಯಾ ಅಂಶಪಟ್ಟಿ"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -61,29 +63,13 @@ msgstr "ಯಂತ್ರಾಂಶ"
 msgid "Settings for several hardware devices"
 msgstr "ಹಲವಾರು ಯಂತ್ರಾಂಶ ಸಾಧನಗಳಿಗಾಗಿನ ಸಿದ್ಧತೆಗಳು"
 
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "ಅಂತರಜಾಲ ಹಾಗು ಜಾಲಬಂಧ"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "ಜಾಲಬಂಧ-ಸಂಬಂಧಿತ ಸಿದ್ಧತೆಗಳು"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "ನೋಟ ಹಾಗು ಮಾಟ"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "ಗಣಕತೆರೆಯ ಸ್ವರೂಪ ಹಾಗು ವರ್ತನೆಯನ್ನು ನಿಯಂತ್ರಿಸುವ ಸಿದ್ಧತೆಗಳು"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "ಅಂತರಜಾಲ"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "ಜಾಲ ಹಾಗು ಇಮೈಲಿನಂತಹ ಅಂತರಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
+msgstr "ಜಾಲ ಹಾಗು ವಿಅಂಚೆಯಂತಹ ಅಂತರಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -102,24 +88,7 @@ msgstr "ವೈಯಕ್ತಿಕ"
 msgid "Personal settings"
 msgstr "ವೈಯಕ್ತಿಕ ಸಿದ್ಧತೆಗಳು"
 
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "ನಿರ್ವಹಣೆ"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "ವ್ಯವಸ್ಥೆಯಾದ್ಯಂತದ ಸಿದ್ಧತೆಗಳನ್ನು ಬದಲಾಯಿಸಿ (ಎಲ್ಲಾ ಬಳಕೆದಾರರ ಮೇಲೂ ಪರಿಣಾಮಬೀರುತ್ತದೆ)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "ಆದ್ಯತೆಗಳು"
-
 #: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
 msgid "System"
 msgstr "ವ್ಯವಸ್ಥೆ"
 
@@ -155,60 +124,93 @@ msgstr "ಗಣಕತೆರೆಯ ಸಲಕರಣೆಗಳು"
 msgid "Applications"
 msgstr "ಅನ್ವಯಗಳು"
 
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು ಹಾಗು ನಿರ್ವಹಣಾ ಸಿದ್ಧತೆಗಳು"
-
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "ಬೇರೆ ವರ್ಗಗಳಿಗೆ ಸೇರದೇ ಇರುವಂತಹ ಅನ್ವಯಗಳು"
-
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Other"
 msgstr "ಇತರೆ"
 
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Applications that did not fit in other categories"
+msgstr "ಬೇರೆ ವರ್ಗಗಳಿಗೆ ಸೇರದೇ ಇರುವಂತಹ ಅನ್ವಯಗಳು"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#| msgid "Applications"
+msgid "Web Applications"
+msgstr "ಜಾಲ ಅನ್ವಯಗಳು"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "ಜಾಲದಿಂದ ಉಳಿಸಲಾದ ಅನ್ವಯಗಳು ಮತ್ತು ತಾಣಗಳು"
+
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "ಮೆನು ಸಂಪಾದಕ"
+msgstr "ಪರಿವಿಡಿ ಸಂಪಾದಕ"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
-msgstr "ಮೆನುಗಳನ್ನು ಸಂಪಾದಿಸು"
+msgstr "ಪರಿವಿಡಿಗಳನ್ನು ಸಂಪಾದಿಸು"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "ಅನ್ವಯಗಳು(_A):"
+msgid "_Defaults"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ (_D)"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Defaults"
-msgstr "ಪೂರ್ವನಿಯೋಜಿತ(_D)"
+msgid "_Menus:"
+msgstr "ಪರಿವಿಡಿಗಳು (_M):"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Menus:"
-msgstr "ಮೆನುಗಳು(_M):"
+msgid "_Applications:"
+msgstr "ಅನ್ವಯಗಳು (_A):"
 
 #. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:49
+#: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
 msgid "Simple Menu Editor %s"
-msgstr "ಸರಳ ಮೆನು ಸಂಪಾದಕ %s"
+msgstr "ಸರಳ ಪರಿವಿಡಿ ಸಂಪಾದಕ %s"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
 msgid "Name"
 msgstr "ಹೆಸರು"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
+#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
 msgid "Show"
 msgstr "ತೋರಿಸು"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
+#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
 "ನೆಲೆ ಕಡತಕೋಶವು ಕಂಡುಬಂದಿಲ್ಲ: /etc/passwd ನಲ್ಲಿ ಸಿದ್ಧಗೊಳಿಸಿಲ್ಲ ಹಾಗು ವಾತಾವರಣದಲ್ಲಿ "
 "$HOME ಗೆ ಯಾವುದೇ ಮೌಲ್ಯವಿಲ್ಲ"
+
+#~ msgid "Internet and Network"
+#~ msgstr "ಅಂತರಜಾಲ ಹಾಗು ಜಾಲಬಂಧ"
+
+#~ msgid "Network-related settings"
+#~ msgstr "ಜಾಲಬಂಧ-ಸಂಬಂಧಿತ ಸಿದ್ಧತೆಗಳು"
+
+#~ msgid "Look and Feel"
+#~ msgstr "ನೋಟ ಹಾಗು ಮಾಟ"
+
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "ಗಣಕತೆರೆಯ ಸ್ವರೂಪ ಹಾಗು ವರ್ತನೆಯನ್ನು ನಿಯಂತ್ರಿಸುವ ಸಿದ್ಧತೆಗಳು"
+
+#~ msgid "Administration"
+#~ msgstr "ನಿರ್ವಹಣೆ"
+
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr ""
+#~ "ವ್ಯವಸ್ಥೆಯಾದ್ಯಂತದ ಸಿದ್ಧತೆಗಳನ್ನು ಬದಲಾಯಿಸಿ (ಎಲ್ಲಾ ಬಳಕೆದಾರರ ಮೇಲೂ ಪರಿಣಾಮಬೀರುತ್ತದೆ)"
+
+#~ msgid "Personal preferences"
+#~ msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು"
+
+#~ msgid "Preferences"
+#~ msgstr "ಆದ್ಯತೆಗಳು"
+
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು ಹಾಗು ನಿರ್ವಹಣಾ ಸಿದ್ಧತೆಗಳು"
 
 #~ msgid "Menu file"
 #~ msgstr "ಮೆನು ಕಡತ"
