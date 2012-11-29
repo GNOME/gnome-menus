@@ -2,25 +2,26 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009, 2010.
+# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009, 2010, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master.kn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-04-26 17:19+0000\n"
-"PO-Revision-Date: 2010-03-24 17:49+0530\n"
+"POT-Creation-Date: 2012-11-29 08:51+0000\n"
+"PO-Revision-Date: 2012-11-29 14:24+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
-"Language-Team: kn-IN <>\n"
+"Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
+"Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
-msgstr "ಧ್ವನಿ ಹಾಗು ದೃಶ್ಯ"
+msgstr "ಧ್ವನಿ ಮತ್ತು ದೃಶ್ಯ"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Multimedia menu"
@@ -68,7 +69,7 @@ msgstr "ಅಂತರಜಾಲ"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "ಜಾಲ ಹಾಗು ಇಮೈಲಿನಂತಹ ಅಂತರಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
+msgstr "ಜಾಲ ಹಾಗು ವಿಅಂಚೆಯಂತಹ ಅಂತರಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -131,31 +132,40 @@ msgstr "ಇತರೆ"
 msgid "Applications that did not fit in other categories"
 msgstr "ಬೇರೆ ವರ್ಗಗಳಿಗೆ ಸೇರದೇ ಇರುವಂತಹ ಅನ್ವಯಗಳು"
 
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#| msgid "Applications"
+msgid "Web Applications"
+msgstr "ಜಾಲ ಅನ್ವಯಗಳು"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "ಜಾಲದಿಂದ ಉಳಿಸಲಾದ ಅನ್ವಯಗಳು ಮತ್ತು ತಾಣಗಳು"
+
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
-msgstr "ಮೆನು ಸಂಪಾದಕ"
+msgstr "ಪರಿವಿಡಿ ಸಂಪಾದಕ"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:1
 msgid "Edit Menus"
-msgstr "ಮೆನುಗಳನ್ನು ಸಂಪಾದಿಸು"
+msgstr "ಪರಿವಿಡಿಗಳನ್ನು ಸಂಪಾದಿಸು"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:2
 msgid "_Defaults"
-msgstr "ಪೂರ್ವನಿಯೋಜಿತ(_D)"
+msgstr "ಪೂರ್ವನಿಯೋಜಿತ (_D)"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:3
 msgid "_Menus:"
-msgstr "ಮೆನುಗಳು(_M):"
+msgstr "ಪರಿವಿಡಿಗಳು (_M):"
 
 #: ../simple-editor/gmenu-simple-editor.ui.h:4
 msgid "_Applications:"
-msgstr "ಅನ್ವಯಗಳು(_A):"
+msgstr "ಅನ್ವಯಗಳು (_A):"
 
 #. Translators: %s is the version number
 #: ../simple-editor/GMenuSimpleEditor/main.py:44
 #, python-format
 msgid "Simple Menu Editor %s"
-msgstr "ಸರಳ ಮೆನು ಸಂಪಾದಕ %s"
+msgstr "ಸರಳ ಪರಿವಿಡಿ ಸಂಪಾದಕ %s"
 
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
 #: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
