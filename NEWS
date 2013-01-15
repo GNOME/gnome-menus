@@ -1,4 +1,11 @@
 =============
+Version 3.6.2
+=============
+
+* 688972 call menu_layout_load() with non_prefixed_name parameter
+* Translation updates (Arabic, Kannada, Uyghur)
+
+=============
 Version 3.6.1
 =============
 
