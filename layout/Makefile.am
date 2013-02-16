@@ -1,7 +1,7 @@
 menudir = $(sysconfdir)/xdg/menus
 
 menu_DATA =			\
-	applications.menu
+	gnome-applications.menu
 
 EXTRA_DIST= $(menu_DATA)
 
