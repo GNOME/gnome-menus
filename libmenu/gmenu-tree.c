@@ -3078,7 +3078,6 @@ gmenu_tree_load_layout (GMenuTree  *tree,
   menu_verbose ("Loading menu layout from \"%s\"\n",
                 tree->canonical_path);
 
-  error = NULL;
   tree->layout = menu_layout_load (tree->canonical_path,
                                    tree->non_prefixed_basename,
                                    error);
