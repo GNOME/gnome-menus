@@ -54,20 +54,17 @@ if test "x$enable_deprecation_flags" = "xyes"; then
    AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
 fi
 
-dnl --enable-debug=(yes|minimum|no)
 AC_ARG_ENABLE(debug,
-              [AC_HELP_STRING([--enable-debug],
-                              [turn on debugging @<:@default=minimum@:>@])],,
-              [enable_debug=minimum])
-if test "$enable_debug" = "yes"; then
+              [AS_HELP_STRING([--enable-debug=@<:@no/minimum/yes@:>@],
+                              [turn on debugging @<:@default=debug_default@:>@])],,
+              [enable_debug=debug_default])
+if test "x$enable_debug" = "xyes"; then
   DEBUG_CFLAGS="-DG_ENABLE_DEBUG"
 else
   if test "x$enable_debug" = "xno"; then
-    DEBUG_CFLAGS="-DG_DISABLE_ASSERT -DG_DISABLE_CHECKS"
+    DEBUG_CFLAGS="-DG_DISABLE_ASSERT -DG_DISABLE_CHECKS -DG_DISABLE_CAST_CHECKS"
   else
-    DEBUG_CFLAGS=""
-    # make sure we have the right string for the configure summary
-    enable_debug="minimum"
+    DEBUG_CFLAGS="-DG_ENABLE_DEBUG -DG_DISABLE_CAST_CHECKS"
   fi
 fi
 AC_SUBST(DEBUG_CFLAGS)
