@@ -38,6 +38,7 @@
         <Not><Filename>gnome-file-roller.desktop</Filename></Not>
         <Not><Filename>deja-dup-preferences.desktop</Filename></Not>
         <Not><Filename>gnome-calculator.desktop</Filename></Not>
+        <Not><Filename>gcalctool.desktop</Filename></Not>
         <Not><Filename>gucharmap.desktop</Filename></Not>
         <Not><Filename>gnome-gucharmap.desktop</Filename></Not>
         <Not><Filename>gnome-font-viewer.desktop</Filename></Not>
@@ -229,6 +230,7 @@
         <Not><Filename>gnome-eog.desktop</Filename></Not>
         <Not><Filename>gnome-file-roller.desktop</Filename></Not>
         <Not><Filename>gnome-gucharmap.desktop</Filename></Not>
+        <Not><Filename>gcalctool.desktop</Filename></Not>
       </And>
     </Include>
   </Menu> <!-- End Other -->
