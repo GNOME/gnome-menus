@@ -35,9 +35,11 @@
         <!-- Also exclude everything we put in the X-GNOME-Utilities
              whitelist -->
         <Not><Filename>file-roller.desktop</Filename></Not>
+        <Not><Filename>gnome-file-roller.desktop</Filename></Not>
         <Not><Filename>deja-dup-preferences.desktop</Filename></Not>
         <Not><Filename>gnome-calculator.desktop</Filename></Not>
         <Not><Filename>gucharmap.desktop</Filename></Not>
+        <Not><Filename>gnome-gucharmap.desktop</Filename></Not>
         <Not><Filename>gnome-font-viewer.desktop</Filename></Not>
         <Not><Filename>seahorse.desktop</Filename></Not>
         <Not><Filename>gnome-terminal.desktop</Filename></Not>
@@ -106,6 +108,7 @@
       <And>
         <Category>Graphics</Category>
         <Not><Filename>eog.desktop</Filename></Not>
+        <Not><Filename>gnome-eog.desktop</Filename></Not>
         <Not><Filename>evince.desktop</Filename></Not>
       </And>
     </Include>
@@ -221,6 +224,11 @@
       <And>
         <Not><Category>Core</Category></Not>
         <Not><Category>Screensaver</Category></Not>
+
+        <!-- Really Fedora ??? -->
+        <Not><Filename>gnome-eog.desktop</Filename></Not>
+        <Not><Filename>gnome-file-roller.desktop</Filename></Not>
+        <Not><Filename>gnome-gucharmap.desktop</Filename></Not>
       </And>
     </Include>
   </Menu> <!-- End Other -->
