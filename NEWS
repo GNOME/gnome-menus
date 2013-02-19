@@ -1,3 +1,22 @@
+==============
+Version 3.7.90
+==============
+
+Bugs Fixed:
+        * Fix error reporting
+        * Memory leak fixes (William John McCann)
+        * Remove the simple editor (William John McCann)
+        * New menu layout for gnome-shell tweaks (William John McCann,
+          Florian Muellner, Jasper St. Pierre)
+        * Remove old gnome-control-center files (Jasper St. Pierre)
+
+Translation updates:
+        * Alexandre Franke
+        * Fabio Tomat
+        * Inaki Larranaga Murgoitio
+        * Piotr Drąg
+        * William Jon McCann
+
 =============
 Version 3.6.2
 =============
