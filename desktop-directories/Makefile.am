@@ -13,6 +13,7 @@ directory_in_files =				\
 	Utility-Accessibility.directory.in	\
 	X-GNOME-Other.directory.in		\
 	X-GNOME-Menu-Applications.directory.in	\
+	X-GNOME-Sundry.directory.in 		\
 	X-GNOME-Utilities.directory.in 		\
 	X-GNOME-WebApplications.directory.in 	\
 	X-GNOME-SystemSettings.directory.in
