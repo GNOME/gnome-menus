@@ -198,12 +198,16 @@
       <Filename>itweb-settings.desktop</Filename>
       <Filename>jhbuild.desktop</Filename>
       <Filename>javaws.desktop</Filename>
+      <Filename>java-1.7.0-openjdk-jconsole.desktop</Filename>
+      <Filename>java-1.7.0-openjdk-policytool.desktop</Filename>
       <Filename>nm-connection-editor.desktop</Filename>
       <Filename>orca.desktop</Filename>
       <Filename>setroubleshoot.desktop</Filename>
       <Filename>authconfig.desktop</Filename>
       <Filename>system-config-date.desktop</Filename>
+      <Filename>system-config-firewall.desktop</Filename>
       <Filename>system-config-keyboard.desktop</Filename>
+      <Filename>system-config-language.desktop</Filename>
       <Filename>system-config-printer.desktop</Filename>
       <Filename>system-config-users.desktop</Filename>
       <Filename>vino-preferences.desktop</Filename>
