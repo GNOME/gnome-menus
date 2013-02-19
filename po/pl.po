@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-19 20:55+0100\n"
-"PO-Revision-Date: 2013-02-19 20:56+0100\n"
+"POT-Creation-Date: 2013-02-19 23:31+0100\n"
+"PO-Revision-Date: 2013-02-19 23:32+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -114,6 +114,10 @@ msgstr "Inne"
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "Programy niepasujące do innych kategorii"
+
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Różne"
 
 #: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
 msgid "Utilities"
