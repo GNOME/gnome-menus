@@ -12,5 +12,6 @@ desktop-directories/Utility-Accessibility.directory.in
 desktop-directories/Utility.directory.in
 desktop-directories/X-GNOME-Menu-Applications.directory.in
 desktop-directories/X-GNOME-Other.directory.in
+desktop-directories/X-GNOME-Sundry.directory.in
 desktop-directories/X-GNOME-Utilities.directory.in
 desktop-directories/X-GNOME-WebApplications.directory.in
