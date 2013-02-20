@@ -201,6 +201,8 @@
       <Filename>javaws.desktop</Filename>
       <Filename>java-1.7.0-openjdk-jconsole.desktop</Filename>
       <Filename>java-1.7.0-openjdk-policytool.desktop</Filename>
+      <Filename>log4j-chainsaw.desktop</Filename>
+      <Filename>log4j-logfactor5.desktop</Filename>
       <Filename>nm-connection-editor.desktop</Filename>
       <Filename>orca.desktop</Filename>
       <Filename>setroubleshoot.desktop</Filename>
