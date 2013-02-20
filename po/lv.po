@@ -4,21 +4,22 @@
 #
 # Raivis Dejus <orvils@gmail.com>, 2006, 2007, 2009.
 # Peteris Krisjanis <pecisk@gmail.com>, 2010.
-# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2012.
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2012, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-24 13:18+0300\n"
-"PO-Revision-Date: 2012-09-24 13:22+0300\n"
+"POT-Creation-Date: 2013-02-20 11:32+0200\n"
+"PO-Revision-Date: 2013-02-20 11:33+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
-"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"Language-Team: Latviešu <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"X-Generator: Gtranslator 2.91.5\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
@@ -57,14 +58,6 @@ msgstr "Grafika"
 msgid "Graphics applications"
 msgstr "Grafikas lietotnes"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Aparatūra"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Dažu aparatūras ierīču iestatījumi"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internets"
@@ -80,23 +73,6 @@ msgstr "Birojs"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Biroja lietotnes"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Personīgie"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Personīgie iestatījumi"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistēma"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Sistēmas iestatījumi"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -134,6 +110,18 @@ msgstr "Citas lietotnes"
 msgid "Applications that did not fit in other categories"
 msgstr "Lietotnes, kas neiederas nevienā citā kategorijā"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Dažādi"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Utilītas"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Mazi, bet noderīgi GNOME rīki"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Tīmekļa lietotnes"
@@ -142,48 +130,54 @@ msgstr "Tīmekļa lietotnes"
 msgid "Applications and sites saved from Web"
 msgstr "Lietotnes un vietnes, kas saglabātas no tīmekļa"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Izvēļņu redaktors"
+#~ msgid "Hardware"
+#~ msgstr "Aparatūra"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Rediģēt izvēlnes"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "Dažu aparatūras ierīču iestatījumi"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Noklusējuma"
+#~ msgid "Personal"
+#~ msgstr "Personīgie"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Izvēlnes:"
+#~ msgid "Personal settings"
+#~ msgstr "Personīgie iestatījumi"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Lietotnes:"
+#~ msgid "System"
+#~ msgstr "Sistēma"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Vienkāršs izvēļņu redaktors %s"
+#~ msgid "System settings"
+#~ msgstr "Sistēmas iestatījumi"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Nosaukums"
+#~ msgid "Menu Editor"
+#~ msgstr "Izvēļņu redaktors"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Rādīt"
+#~ msgid "Edit Menus"
+#~ msgstr "Rediģēt izvēlnes"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Neizdodas atrast mājas direktoriju — tā nav norādīta /etc/passwd un nav arī "
-"$HOME vides mainīgajā"
+#~ msgid "_Defaults"
+#~ msgstr "_Noklusējuma"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Izvēlnes:"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Lietotnes:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "Vienkāršs izvēļņu redaktors %s"
+
+#~ msgid "Name"
+#~ msgstr "Nosaukums"
+
+#~ msgid "Show"
+#~ msgstr "Rādīt"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Neizdodas atrast mājas direktoriju — tā nav norādīta /etc/passwd un nav "
+#~ "arī $HOME vides mainīgajā"
 
 #~ msgid "Internet and Network"
 #~ msgstr "Internets un tīkli"
