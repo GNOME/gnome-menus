@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.fr\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-19 19:45+0000\n"
-"PO-Revision-Date: 2013-02-19 21:55+0100\n"
+"POT-Creation-Date: 2013-02-20 09:33+0000\n"
+"PO-Revision-Date: 2013-02-20 21:14+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French team <gnomefr@traduc.org>\n"
 "Language: \n"
@@ -109,6 +109,10 @@ msgstr "Autre"
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "Les applications qui ne conviennent à aucune autre catégorie"
+
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Divers"
 
 #: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
 msgid "Utilities"
