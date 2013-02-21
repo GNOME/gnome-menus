@@ -5,22 +5,23 @@
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2005, 2006.
 # Claudio Saavedra <csaavedra@alumnos.utalca.cl>, 2007.
 # Jorge González <jorgegonz@svn.gnome.org>, 200, 2009.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-05-14 13:29+0000\n"
-"PO-Revision-Date: 2012-05-14 16:47+0200\n"
+"POT-Creation-Date: 2013-02-19 22:31+0000\n"
+"PO-Revision-Date: 2013-02-21 16:43+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -58,14 +59,6 @@ msgstr "Gráficos"
 msgid "Graphics applications"
 msgstr "Aplicaciones gráficas"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Hardware"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Propiedades para varios dispositivos de hardware"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -81,23 +74,6 @@ msgstr "Oficina"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Aplicaciones de oficina"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Personal"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Preferencias personales"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistema"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Preferencias del sistema"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -135,8 +111,19 @@ msgstr "Otras"
 msgid "Applications that did not fit in other categories"
 msgstr "Aplicaciones que no entran en otras categorías"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Varios"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Utilidades"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Herramientas de GNOME pequeñas pero útiles"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
-#| msgid "Applications"
 msgid "Web Applications"
 msgstr "Aplicaciones web"
 
@@ -144,48 +131,54 @@ msgstr "Aplicaciones web"
 msgid "Applications and sites saved from Web"
 msgstr "Aplicaciones y páginas web guardadas"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Editor del menú"
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Editar menús"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "Propiedades para varios dispositivos de hardware"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Predeterminados"
+#~ msgid "Personal"
+#~ msgstr "Personal"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Menús:"
+#~ msgid "Personal settings"
+#~ msgstr "Preferencias personales"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Aplicaciones:"
+#~ msgid "System"
+#~ msgstr "Sistema"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Editor simple del menú %s"
+#~ msgid "System settings"
+#~ msgstr "Preferencias del sistema"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Nombre"
+#~ msgid "Menu Editor"
+#~ msgstr "Editor del menú"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Mostrar"
+#~ msgid "Edit Menus"
+#~ msgstr "Editar menús"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"No se puede encontrar la carpeta personal: no está establecido en /etc/"
-"passwd y no hay ningún valor en la variable de entorno $HOME"
+#~ msgid "_Defaults"
+#~ msgstr "_Predeterminados"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Menús:"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Aplicaciones:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "Editor simple del menú %s"
+
+#~ msgid "Name"
+#~ msgstr "Nombre"
+
+#~ msgid "Show"
+#~ msgstr "Mostrar"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "No se puede encontrar la carpeta personal: no está establecido en /etc/"
+#~ "passwd y no hay ningún valor en la variable de entorno $HOME"
 
 #~ msgid "Internet and Network"
 #~ msgstr "Internet y red"
