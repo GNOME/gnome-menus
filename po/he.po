@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.gnome-2-10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-25 15:27+0300\n"
-"PO-Revision-Date: 2012-05-25 15:29+0200\n"
+"POT-Creation-Date: 2013-02-21 19:40+0200\n"
+"PO-Revision-Date: 2013-02-21 19:41+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team:  <he@li.org>\n"
 "Language: \n"
@@ -53,14 +53,6 @@ msgstr "גרפיקה"
 msgid "Graphics applications"
 msgstr "יישומים גרפיים"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "חומרה"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "הגדרות עבור מספר התקני חומרה"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "אינטרנט"
@@ -76,23 +68,6 @@ msgstr "משרד"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "יישומים משרדיים"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "אישי"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "הגדרות אישיות"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "מערכת"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "הגדרות מערכת"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -130,6 +105,18 @@ msgstr "אחר"
 msgid "Applications that did not fit in other categories"
 msgstr "יישומים שלא התאימו בקטגוריות אחרות"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "ייבוש בשמש"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "עזרים"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "כלים קטנים אך שימושיים עבור GNOME"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "יישומים מקוונים"
@@ -138,44 +125,54 @@ msgstr "יישומים מקוונים"
 msgid "Applications and sites saved from Web"
 msgstr "יישומים ואתרים שנשמרו מהאינטרנט"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "עורך התפריטים"
+#~ msgid "Hardware"
+#~ msgstr "חומרה"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "עריכת התפריטים"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "הגדרות עבור מספר התקני חומרה"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_בררות מחדל"
+#~ msgid "Personal"
+#~ msgstr "אישי"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_תפריטים:"
+#~ msgid "Personal settings"
+#~ msgstr "הגדרות אישיות"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_יישומים:"
+#~ msgid "System"
+#~ msgstr "מערכת"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "עורך תפריטים פשוט %s"
+#~ msgid "System settings"
+#~ msgstr "הגדרות מערכת"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "שם"
+#~ msgid "Menu Editor"
+#~ msgstr "עורך התפריטים"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "הצגה"
+#~ msgid "Edit Menus"
+#~ msgstr "עריכת התפריטים"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "לא ניתן למצוא את תיקיית הבית: לא הוגדר ב־etc/passwd/ ולא קיים ערך עבור המשתנה הסביבתי HOME$"
+#~ msgid "_Defaults"
+#~ msgstr "_בררות מחדל"
+
+#~ msgid "_Menus:"
+#~ msgstr "_תפריטים:"
+
+#~ msgid "_Applications:"
+#~ msgstr "_יישומים:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "עורך תפריטים פשוט %s"
+
+#~ msgid "Name"
+#~ msgstr "שם"
+
+#~ msgid "Show"
+#~ msgstr "הצגה"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "לא ניתן למצוא את תיקיית הבית: לא הוגדר ב־etc/passwd/ ולא קיים ערך עבור "
+#~ "המשתנה הסביבתי HOME$"
 
 #~ msgid "Internet and Network"
 #~ msgstr "אינטרט ורשת"
