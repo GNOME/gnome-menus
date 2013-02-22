@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome/menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-04 12:38+0000\n"
-"PO-Revision-Date: 2010-08-02 01:02+0600\n"
-"Last-Translator: Sahran <sahran@live.com>\n"
+"POT-Creation-Date: 2013-02-19 22:31+0000\n"
+"PO-Revision-Date: 2013-02-22 22:21+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -55,14 +55,6 @@ msgstr "گرافىك"
 msgid "Graphics applications"
 msgstr "گرافىك پروگراممىلىرى"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "قاتتىق دېتال"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "قاتتىق دېتاللار تەڭشىكى"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "ئىنتېرنېت"
@@ -78,23 +70,6 @@ msgstr "ئىشخانا"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "ئىشخانا پروگراممىلىرى"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "شەخسىي"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "شەخسىي تەڭشەكلەر"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "سىستېما"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "سىستېما تەڭشەكلىرى"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -132,6 +107,18 @@ msgstr "باشقا"
 msgid "Applications that did not fit in other categories"
 msgstr "باشقا تۈرلەرگە تەۋە بولمىغان پروگراممىلار"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "ھەر خىل"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "قوراللار"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "كىچىك بىراق ئەسقاتىدىغان گىنوم قوراللىرى"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "تور پروگراممىلىرى"
@@ -140,46 +127,54 @@ msgstr "تور پروگراممىلىرى"
 msgid "Applications and sites saved from Web"
 msgstr "تور ساقلىۋالغان پروگرامما ۋە تورتۇرالار"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "تىزىملىك تەھرىرلىگۈچ"
+#~ msgid "Hardware"
+#~ msgstr "قاتتىق دېتال"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "تىزىملىك تەھرىر"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "قاتتىق دېتاللار تەڭشىكى"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "كۆڭۈلدىكىلەر(_D)"
+#~ msgid "Personal"
+#~ msgstr "شەخسىي"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "تىزىملىكلەر(_M):"
+#~ msgid "Personal settings"
+#~ msgstr "شەخسىي تەڭشەكلەر"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "پروگراممىلار(_A):"
+#~ msgid "System"
+#~ msgstr "سىستېما"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "ئاددىي تىزىملىك تەھرىرلىگۈچ %s"
+#~ msgid "System settings"
+#~ msgstr "سىستېما تەڭشەكلىرى"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "ئاتى"
+#~ msgid "Menu Editor"
+#~ msgstr "تىزىملىك تەھرىرلىگۈچ"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "كۆرسەت"
+#~ msgid "Edit Menus"
+#~ msgstr "تىزىملىك تەھرىر"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr "ماكان مۇندەرىجىسى تېپىلمىدى: /etc/passwd دا بەلگىلەنمىگەن  ياكى  سىستېما مۇھىتىدا $HOME نىڭ قىممىتى يوق"
+#~ msgid "_Defaults"
+#~ msgstr "كۆڭۈلدىكىلەر(_D)"
+
+#~ msgid "_Menus:"
+#~ msgstr "تىزىملىكلەر(_M):"
+
+#~ msgid "_Applications:"
+#~ msgstr "پروگراممىلار(_A):"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "ئاددىي تىزىملىك تەھرىرلىگۈچ %s"
+
+#~ msgid "Name"
+#~ msgstr "ئاتى"
+
+#~ msgid "Show"
+#~ msgstr "كۆرسەت"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "ماكان مۇندەرىجىسى تېپىلمىدى: /etc/passwd دا بەلگىلەنمىگەن  ياكى  سىستېما "
+#~ "مۇھىتىدا $HOME نىڭ قىممىتى يوق"
 
 #~ msgid "Internet and Network"
 #~ msgstr "ئىنتېرنېت ۋە تور"
