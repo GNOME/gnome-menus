@@ -3,24 +3,24 @@
 # This file is distributed under the same license as the program package.
 #
 # Matic Žgur <mr.zgur@gmail.com>, 2006.
-# Matej Urbančič <mateju@svn.gnome.org>, 2005 - 2010.
+# Matej Urbančič <mateju@svn.gnome.org>, 2005 - 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-05-20 15:57+0000\n"
-"PO-Revision-Date: 2012-05-23 19:57+0100\n"
+"Project-Id-Version: gnome-menus master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-02-22 14:56+0000\n"
+"PO-Revision-Date: 2013-02-22 22:23+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
-"Language: \n"
+"Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
-"X-Poedit-Language: Slovenian\n"
-"X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -28,7 +28,7 @@ msgstr "Zvok in video"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Multimedia menu"
-msgstr "Večpredstavnostni meni"
+msgstr "Predstavni meni"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -58,21 +58,13 @@ msgstr "Grafika"
 msgid "Graphics applications"
 msgstr "Grafični programi"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Strojna oprema"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Nastavitve več strojnih naprav"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Splet"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programi za dostop do spleta, kot sta brskalnik in elektronska pošta"
+msgstr "Programi za dostop do spleta kot sta brskalnik in elektronska pošta"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -82,30 +74,13 @@ msgstr "Pisarna"
 msgid "Office Applications"
 msgstr "Pisarniški programi"
 
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Osebno"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Osebne nastavitve"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistem"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Sistemske nastavitve"
-
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "Sistemska orodja"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Nastavitve in nadziranje sistema"
+msgstr "Nastavitve in nadzor sistema"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
@@ -135,127 +110,22 @@ msgstr "Ostalo"
 msgid "Applications that did not fit in other categories"
 msgstr "Programi, ki ne sodijo v druge kategorije"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Drugo"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Pripomočki"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Uporabna orodja namizja GNOME"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Spletni programi"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
-msgstr "Programi in spletne strani shranjeni s spleta"
-
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Urejevalnik menijev"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Uredi menije"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Privzeto"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Meniji:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Programi:"
-
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Enostavni urejevalnik menijev %s"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Ime"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Pokaži"
-
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Ni mogoče najti domače mape: ni določila v /etc/passwd in ni vrednosti spremenljivke $HOME"
-
-#~ msgid "Internet and Network"
-#~ msgstr "Splet in omrežje"
-
-#~ msgid "Network-related settings"
-#~ msgstr "Nastavitve omrežja"
-
-#~ msgid "Look and Feel"
-#~ msgstr "Videz in občutek"
-
-#~ msgid "Settings controlling the desktop appearance and behavior"
-#~ msgstr "Nastavitve videza in obnašanja namizja"
-
-#~ msgid "Administration"
-#~ msgstr "Skrbništvo"
-
-#~ msgid "Change system-wide settings (affects all users)"
-#~ msgstr "Spremeni sistemske nastavitve (za vse uporabnike)"
-
-#~ msgid "Personal preferences"
-#~ msgstr "Osebne možnosti"
-
-#~ msgid "Preferences"
-#~ msgstr "Možnosti"
-
-#~ msgid "Personal preferences and administration settings"
-#~ msgstr "Osebne možnosti in skrbniške nastavitve"
-
-#~ msgid "Menu file"
-#~ msgstr "Datoteka menija"
-
-#~ msgid "MENU_FILE"
-#~ msgstr "MENU_FILE"
-
-#~ msgid "Monitor for menu changes"
-#~ msgstr "Spremljaj spremembe menija"
-
-#~ msgid "Include <Exclude>d entries"
-#~ msgstr "Vključi <izločene> vnose"
-
-#~ msgid "Include NoDisplay=true entries"
-#~ msgstr "Vključi vnose NoDisplay=true"
-
-#~ msgid "Invalid desktop file ID"
-#~ msgstr "Neveljaven ID datoteke namizja"
-
-#~ msgid "[Invalid Filename]"
-#~ msgstr "[Nepravilno ime datoteke]"
-
-#~ msgid " <excluded>"
-#~ msgstr " <izločeno>"
-
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ "==== Menu changed, reloading ====\n"
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ "==== Meni je spremenjen; ponovno bo naložen ====\n"
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Menu tree is empty"
-#~ msgstr "Drevesna zgradba menija je prazna"
-
-#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
-#~ msgstr "- preizkus GNOME orodja za določanje namiznega menija"
-
-#~ msgid "Universal access related preferences"
-#~ msgstr "Splošne možnosti dostopa"
-
-#~ msgid "Personal preferences and settings"
-#~ msgstr "Osebne možnosti in nastavitve"
+msgstr "Programi in spletne strani, shranjeni s spleta"
