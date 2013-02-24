@@ -1,22 +1,26 @@
 # Translation of gnome-menus to Greek
 # This file is distributed under the same license as the gnome-menus package.
 # Copyright (C) Free Software Foundation.
-#
 # Simos Xenitellis <simos@gnome.org>, 2004.
 # Nikos Charonitakis <charosn@her.forthnet.gr>, 2005.
 # Kostas Papadimas <pkst@gnome.org>, 2006.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-05-14 13:29+0000\n"
-"PO-Revision-Date: 2012-06-19 19:25+0200\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
-"Language-Team: Greek <team@gnome.gr>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-02-19 22:31+0000\n"
+"PO-Revision-Date: 2013-02-24 10:21+0300\n"
+"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"Language-Team: team@gnome.gr\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -54,21 +58,14 @@ msgstr "Γραφικά"
 msgid "Graphics applications"
 msgstr "Εφαρμογές γραφικών"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Υλικό"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Ρυθμίσεις για διάφορες συσκευές"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Διαδίκτυο"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
+msgstr ""
+"Προγράμματα πρόσβασης στο Διαδίκτυο όπως φυλλομετρητής και ηλεκ. αλληλογραφία"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -77,23 +74,6 @@ msgstr "Γραφείο"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Εφαρμογές γραφείου"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Προσωπικά"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Προσωπικές ρυθμίσεις"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Σύστημα"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Ρυθμίσεις συστήματος"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -131,8 +111,19 @@ msgstr "Άλλα"
 msgid "Applications that did not fit in other categories"
 msgstr "Εφαρμογές που δεν ταιριάζουν στις άλλες κατηγορίες"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Διάφορα"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Βοηθήματα"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Μικρά αλλά χρήσιμα εργαλεία GNOME"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
-#| msgid "Applications"
 msgid "Web Applications"
 msgstr "Εφαρμογές ιστού"
 
@@ -140,44 +131,54 @@ msgstr "Εφαρμογές ιστού"
 msgid "Applications and sites saved from Web"
 msgstr "Εφαρμογές και ιστοσελίδες που αποθηκεύτηκαν από τον Ιστό"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Επεξεργαστής μενού"
+#~ msgid "Hardware"
+#~ msgstr "Υλικό"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Επεξεργασία μενού"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "Ρυθμίσεις για διάφορες συσκευές"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Προεπιλεγμένα"
+#~ msgid "Personal"
+#~ msgstr "Προσωπικά"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Μενού:"
+#~ msgid "Personal settings"
+#~ msgstr "Προσωπικές ρυθμίσεις"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Εφαρμογές:"
+#~ msgid "System"
+#~ msgstr "Σύστημα"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Απλός Επεξεργαστής μενού %s"
+#~ msgid "System settings"
+#~ msgstr "Ρυθμίσεις συστήματος"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Όνομα"
+#~ msgid "Menu Editor"
+#~ msgstr "Επεξεργαστής μενού"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Εμφάνιση"
+#~ msgid "Edit Menus"
+#~ msgstr "Επεξεργασία μενού"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Αδυναμία εύρεσης αρχικού καταλόγου: δεν έχει ορισθεί τιμή στο /etc/passwd και στο$HOME στο περιβάλλον"
+#~ msgid "_Defaults"
+#~ msgstr "_Προεπιλεγμένα"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Μενού:"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Εφαρμογές:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "Απλός Επεξεργαστής μενού %s"
+
+#~ msgid "Name"
+#~ msgstr "Όνομα"
+
+#~ msgid "Show"
+#~ msgstr "Εμφάνιση"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Αδυναμία εύρεσης αρχικού καταλόγου: δεν έχει ορισθεί τιμή στο /etc/passwd "
+#~ "και στο$HOME στο περιβάλλον"
 
 #~ msgid "Internet and Network"
 #~ msgstr "Διαδίκτυο και δίκτυο"
