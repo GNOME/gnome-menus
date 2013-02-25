@@ -1,15 +1,15 @@
 # Norwegian bokmål translation of gnome-menus.
 # Copyright (C) 2004, 2005 Red Hat, Inc.
 # This file is distributed under the same license as the gnome-menus package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2004-2012.
+# Kjartan Maraas <kmaraas@gnome.org>, 2004-2013.
 # Terance Edward Sola <terance@lyse.net>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus 3.5.x\n"
+"Project-Id-Version: gnome-menus 3.7.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-30 14:05+0200\n"
-"PO-Revision-Date: 2012-05-30 14:06+0200\n"
+"POT-Creation-Date: 2013-02-25 19:17+0100\n"
+"PO-Revision-Date: 2013-02-25 19:18+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -53,14 +53,6 @@ msgstr "Grafikk"
 msgid "Graphics applications"
 msgstr "Grafiske programmer"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Maskinvare"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Innstillinger for forskjellige maskinvareenheter"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internett"
@@ -76,23 +68,6 @@ msgstr "Kontorstøtte"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Kontorstøtteprogrammer"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Personlig"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Personlige innstillinger"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "System"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Systeminnstillinger"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -130,6 +105,18 @@ msgstr "Annet"
 msgid "Applications that did not fit in other categories"
 msgstr "Programmer som ikke passer i andre kategorier"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Diverse"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Verktøy"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Små men nyttige verktøy for GNOME"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Nettleserprogrammer"
@@ -137,46 +124,3 @@ msgstr "Nettleserprogrammer"
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
 msgstr "Programmer og nettsteder lagret fra nettleseren"
-
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Menyredigering"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Rediger menyer"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Forvalg"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Menyer:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Programmer"
-
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Enkel menyredigering %s"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Navn"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Vis"
-
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Kan ikke finne hjemmekatalog: ikke satt i /etc/passwd og det finnes ingen "
-"verdi for $HOME i miljøet"
