@@ -1,17 +1,17 @@
 # Slovak translation for gnome-menus.
-# Copyright (C) 2004, 2005, 2007, 2010-2012 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005, 2007, 2010-2013 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Marcel Telka <marcel@telka.sk>, 2004, 2005.
 # Peter Tuharsky <tuharsky@misbb.sk>, 2007.
-# Pavol Klačanský <pavol@klacansky.com>, 2010-2012.
+# Pavol Klačanský <pavol@klacansky.com>, 2010-2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-09-28 22:55+0000\n"
-"PO-Revision-Date: 2012-10-05 19:07+0100\n"
+"POT-Creation-Date: 2013-02-20 20:15+0000\n"
+"PO-Revision-Date: 2013-02-20 21:00+0000\n"
 "Last-Translator: Pavol Klačanský <pavol@klacansky.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -56,14 +56,6 @@ msgstr "Grafika"
 msgid "Graphics applications"
 msgstr "Grafické aplikácie"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Hardvér"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Nastavenia pre niektoré hardvérové zariadenia"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -79,23 +71,6 @@ msgstr "Kancelária"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Kancelárske aplikácie"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Osobné"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Osobné nastavenia"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Systém"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Systémové nastavenia"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -133,6 +108,18 @@ msgstr "Ostatné"
 msgid "Applications that did not fit in other categories"
 msgstr "Aplikácie, ktoré nezapadajú do ostatných kategórií"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Rôzne"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Nástroje"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Drobné ale užitočné nástroje GNOME"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Webové aplikácie"
@@ -140,73 +127,3 @@ msgstr "Webové aplikácie"
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
 msgstr "Aplikácie a stránky uložené z webu"
-
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Editor ponúk"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Upraviť ponuky"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Predvolené"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Ponuky:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Aplikácie:"
-
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Jednoduchý editor ponúk %s"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Názov"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Zobraziť"
-
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Nepodarilo sa nájsť domovský priečinok: nie je nastavený v /etc/passwd a nie "
-"je nastavená hodnota $HOME v prostredí"
-
-#~ msgid "Internet and Network"
-#~ msgstr "Internet a sieť"
-
-#~ msgid "Network-related settings"
-#~ msgstr "Nastavenia súvisiace so sieťou"
-
-#~ msgid "Look and Feel"
-#~ msgstr "Vzhľad a dojem"
-
-#~ msgid "Settings controlling the desktop appearance and behavior"
-#~ msgstr "Nastavenia ovládajúce vzhľad a správanie pracovnej plochy"
-
-#~ msgid "Administration"
-#~ msgstr "Správa"
-
-#~ msgid "Change system-wide settings (affects all users)"
-#~ msgstr "Zmeniť nastavenia pre celý systém (ovplyvní všetkých používateľov)"
-
-#~ msgid "Personal preferences"
-#~ msgstr "Osobné nastavenia"
-
-#~ msgid "Preferences"
-#~ msgstr "Nastavenia"
-
-#~ msgid "Personal preferences and administration settings"
-#~ msgstr "Osobné a správcovské nastavenia"
