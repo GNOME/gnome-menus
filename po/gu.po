@@ -1,16 +1,17 @@
 # translation of gnome-menus.master.gu.po to Gujarati
 # Ankit Patel <ankit644@yahoo.com>, 2007.
 # Ankit Patel <ankit@redhat.com>, 2007.
-# Sweta Kothari <swkothar@redhat.com>, 2009, 2012.
+# Sweta Kothari <swkothar@redhat.com>, 2009, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master.gu\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
 "cgi?product=gnome-menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-05-14 13:29+0000\n"
-"PO-Revision-Date: 2012-07-30 13:54+0530\n"
+"POT-Creation-Date: 2013-02-19 22:31+0000\n"
+"PO-Revision-Date: 2013-02-27 13:58+0530\n"
 "Last-Translator: \n"
-"Language-Team: gu_IN <kde-i18n-doc@kde.org>\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +22,7 @@ msgstr ""
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
-msgstr "સાઉન્ડ & વીડિયો"
+msgstr "સાઉન્ડ & વિડિયો"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Multimedia menu"
@@ -55,14 +56,6 @@ msgstr "ગ્રાફિક્સ"
 msgid "Graphics applications"
 msgstr "ગ્રાફિક્સ કાર્યક્રમો"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "હાર્ડવેર"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "ઘણા હાર્ડવેર ઉપકરણો માટે સુયોજનો"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "ઈન્ટરનેટ"
@@ -78,23 +71,6 @@ msgstr "ઓફિસ"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "ઓફિસ કાર્યક્રમો"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "વ્યક્તિગત"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "વ્યક્તિગત સુયોજનો"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "સિસ્ટમ"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "સિસ્ટમ સુયોજનો"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -132,8 +108,19 @@ msgstr "અન્ય"
 msgid "Applications that did not fit in other categories"
 msgstr "કાર્યક્રમો કે જે અન્ય વર્ગોમાં નહિં બંધબેસે"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "પ્રકીર્ણ"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "ઉપયોગિતાઓ"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "નાનું પરંતુ ઉપયોગી GNOME સાધનો"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
-#| msgid "Applications"
 msgid "Web Applications"
 msgstr "વેબ કાર્યક્રમો"
 
@@ -141,48 +128,54 @@ msgstr "વેબ કાર્યક્રમો"
 msgid "Applications and sites saved from Web"
 msgstr "વેબમાંથી સંગ્રહેલ કાર્યક્રમો અને સાઇટ"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "મેનુ સંપાદક"
+#~ msgid "Hardware"
+#~ msgstr "હાર્ડવેર"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "ફેરફાર મેનુઓ"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "ઘણા હાર્ડવેર ઉપકરણો માટે સુયોજનો"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "મૂળભુતો (_D)"
+#~ msgid "Personal"
+#~ msgstr "વ્યક્તિગત"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "મેનુઓ (_M):"
+#~ msgid "Personal settings"
+#~ msgstr "વ્યક્તિગત સુયોજનો"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "કાર્યક્રમો (_A):"
+#~ msgid "System"
+#~ msgstr "સિસ્ટમ"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "સાદુ મેનુ સંપાદક %s"
+#~ msgid "System settings"
+#~ msgstr "સિસ્ટમ સુયોજનો"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "નામ"
+#~ msgid "Menu Editor"
+#~ msgstr "મેનુ સંપાદક"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "બતાવો"
+#~ msgid "Edit Menus"
+#~ msgstr "ફેરફાર મેનુઓ"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"ઘર ડિરેક્ટરી શોધી શકતા નથી: /etc/passwd માં સુયોજિત નથી અને પર્યાવરણમાં $HOME માટે "
-"કોઈ કિંમત નથી"
+#~ msgid "_Defaults"
+#~ msgstr "મૂળભુતો (_D)"
+
+#~ msgid "_Menus:"
+#~ msgstr "મેનુઓ (_M):"
+
+#~ msgid "_Applications:"
+#~ msgstr "કાર્યક્રમો (_A):"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "સાદુ મેનુ સંપાદક %s"
+
+#~ msgid "Name"
+#~ msgstr "નામ"
+
+#~ msgid "Show"
+#~ msgstr "બતાવો"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "ઘર ડિરેક્ટરી શોધી શકતા નથી: /etc/passwd માં સુયોજિત નથી અને પર્યાવરણમાં $HOME "
+#~ "માટે કોઈ કિંમત નથી"
 
 #~ msgid "Internet and Network"
 #~ msgstr "ઈન્ટરનેટ અને નેટવર્ક"
