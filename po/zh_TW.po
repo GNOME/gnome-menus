@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menu 2.28.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-17 15:01+0800\n"
-"PO-Revision-Date: 2012-07-16 12:03+0800\n"
+"POT-Creation-Date: 2013-02-27 22:50+0800\n"
+"PO-Revision-Date: 2013-02-27 21:21+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese/Traditional <zh-l10n@lists.linux.org.tw>\n"
 "Language: \n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -53,14 +54,6 @@ msgstr "美工繪圖"
 msgid "Graphics applications"
 msgstr "繪圖工具"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "硬體"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "多種硬體的設定"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "網際網路"
@@ -76,23 +69,6 @@ msgstr "辦公"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "辦公室軟體"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "個人"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "個人設定"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "系統"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "系統設定"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -130,6 +106,18 @@ msgstr "其他"
 msgid "Applications that did not fit in other categories"
 msgstr "不符合其它分類的軟體"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "各項"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "公用程式"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "小而有用的 GNOME 工具"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "網頁應用程式"
@@ -138,46 +126,52 @@ msgstr "網頁應用程式"
 msgid "Applications and sites saved from Web"
 msgstr "從 Web 儲存的應用程式和網站"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "選單編輯器"
+#~ msgid "Hardware"
+#~ msgstr "硬體"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "編輯選單"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "多種硬體的設定"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "預設(_D)"
+#~ msgid "Personal"
+#~ msgstr "個人"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "選單(_M)："
+#~ msgid "Personal settings"
+#~ msgstr "個人設定"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "應用程式(_A)："
+#~ msgid "System"
+#~ msgstr "系統"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "簡易選單編輯器 %s"
+#~ msgid "System settings"
+#~ msgstr "系統設定"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "名稱"
+#~ msgid "Menu Editor"
+#~ msgstr "選單編輯器"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "顯示"
+#~ msgid "Edit Menus"
+#~ msgstr "編輯選單"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr "找不到個人資料夾：沒有設定在 /etc/passwd 及環境變數 $HOME 中。"
+#~ msgid "_Defaults"
+#~ msgstr "預設(_D)"
+
+#~ msgid "_Menus:"
+#~ msgstr "選單(_M)："
+
+#~ msgid "_Applications:"
+#~ msgstr "應用程式(_A)："
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "簡易選單編輯器 %s"
+
+#~ msgid "Name"
+#~ msgstr "名稱"
+
+#~ msgid "Show"
+#~ msgstr "顯示"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr "找不到個人資料夾：沒有設定在 /etc/passwd 及環境變數 $HOME 中。"
 
 #~ msgid "Internet and Network"
 #~ msgstr "網際網路及網路"
