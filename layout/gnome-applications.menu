@@ -191,6 +191,7 @@
       <Filename>ibus-setup-libpinyin.desktop</Filename>
       <Filename>ibus-setup-m17n.desktop</Filename>
       <Filename>ibus-setup-typing-booster.desktop</Filename>
+      <Filename>im-chooser.desktop</Filename>
       <Filename>itweb-settings.desktop</Filename>
       <Filename>jhbuild.desktop</Filename>
       <Filename>javaws.desktop</Filename>
