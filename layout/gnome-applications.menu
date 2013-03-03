@@ -187,6 +187,8 @@
       <Filename>gnome-abrt.desktop</Filename>
       <Filename>fedora-abrt.desktop</Filename>
       <Filename>gnome-orca.desktop</Filename>
+      <Filename>gnome-power-statistics.desktop</Filename>
+      <Filename>gnome-user-share-properties.desktop</Filename>
       <Filename>ibus.desktop</Filename>
       <Filename>ibus-daemon.desktop</Filename>
       <Filename>ibus-setup-anthy.desktop</Filename>
