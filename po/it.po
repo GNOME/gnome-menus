@@ -2,16 +2,16 @@
 # Copyright (C) 2005, 2006, 2007, 2008, 2009, 2012 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Francesco Marletta <francesco.marletta @ tiscali.it>, 2005, 206, 2007, 2008, 2009.
-# Luca Ferretti <elle.uca@libero.it>, 2009
 # Milo Casagrande <milo@ubuntu.com>, 2012.
+# Luca Ferretti <lferrett@gnome.org> 2009, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-06 22:51+0200\n"
-"PO-Revision-Date: 2012-09-06 22:51+0200\n"
-"Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
+"POT-Creation-Date: 2013-03-03 01:17+0100\n"
+"PO-Revision-Date: 2013-03-03 01:19+0100\n"
+"Last-Translator: Luca Ferretti <lferrett@gnome.org>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -55,14 +55,6 @@ msgstr "Grafica"
 msgid "Graphics applications"
 msgstr "Applicazioni grafiche"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Hardware"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Impostazioni per parecchi dispositivi hardware"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -78,23 +70,6 @@ msgstr "Ufficio"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Applicazioni da ufficio"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Personale"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Impostazioni personali"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistema"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Impostazioni di sistema"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -132,6 +107,18 @@ msgstr "Altro"
 msgid "Applications that did not fit in other categories"
 msgstr "Applicazioni che non rientrano in altre categorie"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Varie"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Utilità"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Piccoli ma utili strumenti per GNOME"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Applicazioni Web"
@@ -140,45 +127,51 @@ msgstr "Applicazioni Web"
 msgid "Applications and sites saved from Web"
 msgstr "Applicazioni e pagine salvate dal Web"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Editor del menù"
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Modifica i menù"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "Impostazioni per parecchi dispositivi hardware"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "Pre_definite"
+#~ msgid "Personal"
+#~ msgstr "Personale"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Menù:"
+#~ msgid "Personal settings"
+#~ msgstr "Impostazioni personali"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Applicazioni:"
+#~ msgid "System"
+#~ msgstr "Sistema"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Editor dei menù semplice %s"
+#~ msgid "System settings"
+#~ msgstr "Impostazioni di sistema"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Nome"
+#~ msgid "Menu Editor"
+#~ msgstr "Editor del menù"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Mostra"
+#~ msgid "Edit Menus"
+#~ msgstr "Modifica i menù"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Impossibile trovare la directory home: non è impostata in /etc/passwd e la "
-"variabile d'ambiente $HOME non ha alcun valore"
+#~ msgid "_Defaults"
+#~ msgstr "Pre_definite"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Menù:"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Applicazioni:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "Editor dei menù semplice %s"
+
+#~ msgid "Name"
+#~ msgstr "Nome"
+
+#~ msgid "Show"
+#~ msgstr "Mostra"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Impossibile trovare la directory home: non è impostata in /etc/passwd e "
+#~ "la variabile d'ambiente $HOME non ha alcun valore"
