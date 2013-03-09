@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER, 2005.
 # Djihed Afifi <djihed@gmail.com>, 2006.
-# Khaled Hosny <khaledhosny@eglug.org>, 2006, 2007, 2008, 2009, 2012.
+# Khaled Hosny <khaledhosny@eglug.org>, 2006, 2007, 2008, 2009, 2012, 2013.
 # Anas Husseini <linux.anas@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-24 13:38+0200\n"
-"PO-Revision-Date: 2012-12-24 13:37+0200\n"
+"POT-Creation-Date: 2013-03-10 00:05+0200\n"
+"PO-Revision-Date: 2013-03-10 00:05+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
-msgstr "صوت و فيديو"
+msgstr "صوت و فيديو"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Multimedia menu"
@@ -47,7 +47,7 @@ msgstr "ألعاب"
 
 #: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "الألعاب و التسلية"
+msgstr "الألعاب و التسلية"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -57,21 +57,13 @@ msgstr "رسوميات"
 msgid "Graphics applications"
 msgstr "تطبيقات الرّسوميات"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "عتاد"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "إعدادات للعديد من أجهزة العتاد"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "إنترنت"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "برامج للنّفاذ إلى الإنترنت مثل الوب و البريد الإلكتروني"
+msgstr "برامج للنّفاذ إلى الإنترنت مثل الوب و البريد الإلكتروني"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -81,30 +73,13 @@ msgstr "مكتب"
 msgid "Office Applications"
 msgstr "التطبيقات المكتبيّة"
 
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "شخصي"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "الإعدادات الشخصيّة"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "نظام"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "إعدادات النظام"
-
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "أدوات النّظام"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "إعداد و مراقبة النّظام"
+msgstr "إعداد و مراقبة النّظام"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
@@ -134,6 +109,18 @@ msgstr "أخرى"
 msgid "Applications that did not fit in other categories"
 msgstr "تطبيقات لا تندرج تحت الفئات الأخرى"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "مختلف"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "أدوات"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "أدوات صغيرة لكن مفيدة من جنوم"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "تطبيقات الوب"
@@ -142,48 +129,54 @@ msgstr "تطبيقات الوب"
 msgid "Applications and sites saved from Web"
 msgstr "التطبيقات والمواقع المحفوظة من الوب"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "محرر القوائم"
+#~ msgid "Hardware"
+#~ msgstr "عتاد"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "حرّر القوائم"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "إعدادات للعديد من أجهزة العتاد"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "ال_مبدئيات"
+#~ msgid "Personal"
+#~ msgstr "شخصي"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "ال_قوائم:"
+#~ msgid "Personal settings"
+#~ msgstr "الإعدادات الشخصيّة"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "ال_تطبيقات:"
+#~ msgid "System"
+#~ msgstr "نظام"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "محرر القوائم البسيط %s"
+#~ msgid "System settings"
+#~ msgstr "إعدادات النظام"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "الاسم"
+#~ msgid "Menu Editor"
+#~ msgstr "محرر القوائم"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "اعرض"
+#~ msgid "Edit Menus"
+#~ msgstr "حرّر القوائم"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"لا يمكن العثور على الدليل المنزلي: غير مضبوط في ‎/etc/passwd ‏ولا قيمة لمتغيّر "
-"البيئة ‎$HOME"
+#~ msgid "_Defaults"
+#~ msgstr "ال_مبدئيات"
+
+#~ msgid "_Menus:"
+#~ msgstr "ال_قوائم:"
+
+#~ msgid "_Applications:"
+#~ msgstr "ال_تطبيقات:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "محرر القوائم البسيط %s"
+
+#~ msgid "Name"
+#~ msgstr "الاسم"
+
+#~ msgid "Show"
+#~ msgstr "اعرض"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "لا يمكن العثور على الدليل المنزلي: غير مضبوط في ‎/etc/passwd ‏ولا قيمة "
+#~ "لمتغيّر البيئة ‎$HOME"
 
 #~ msgid "Internet and Network"
 #~ msgstr "الإنترنت والشبكة"
