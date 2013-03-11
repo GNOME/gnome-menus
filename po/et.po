@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-09-21 13:55+0000\n"
-"PO-Revision-Date: 2012-09-23 09:41+0300\n"
+"POT-Creation-Date: 2013-03-11 05:39+0000\n"
+"PO-Revision-Date: 2013-03-11 14:26+0300\n"
 "Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "Language: et\n"
@@ -50,12 +50,6 @@ msgstr "Graafika"
 msgid "Graphics applications"
 msgstr "Graafikatöötlusprogrammid"
 
-msgid "Hardware"
-msgstr "Riistvara"
-
-msgid "Settings for several hardware devices"
-msgstr "Mõnede riistvaraliste seadmete sätted"
-
 msgid "Internet"
 msgstr "Internet"
 
@@ -67,19 +61,6 @@ msgstr "Kontor"
 
 msgid "Office Applications"
 msgstr "Kontoritarkvara"
-
-#. Translators: this is Personal as in "Personal settings"
-msgid "Personal"
-msgstr "Isiklik"
-
-msgid "Personal settings"
-msgstr "Isiklikud sätted"
-
-msgid "System"
-msgstr "Süsteem"
-
-msgid "System settings"
-msgstr "Süsteemi sätted"
 
 msgid "System Tools"
 msgstr "Süsteemi tööriistad"
@@ -108,41 +89,17 @@ msgstr "Muu"
 msgid "Applications that did not fit in other categories"
 msgstr "Rakendused, mis ei sobinud teistesse kategooriatesse"
 
+msgid "Sundry"
+msgstr "Erinevad"
+
+msgid "Utilities"
+msgstr "Vahendid"
+
+msgid "Small but useful GNOME tools"
+msgstr "Väikesed, kuid kasulikud GNOME tööriistad"
+
 msgid "Web Applications"
 msgstr "Veebirakendused"
 
 msgid "Applications and sites saved from Web"
 msgstr "Veebist salvestatud rakendused ja saidid"
-
-msgid "Menu Editor"
-msgstr "Menüüredaktor"
-
-msgid "Edit Menus"
-msgstr "Menüüde redigeermine"
-
-msgid "_Defaults"
-msgstr "_Vaikimisi"
-
-msgid "_Menus:"
-msgstr "_Menüüd:"
-
-msgid "_Applications:"
-msgstr "_Rakendused:"
-
-#. Translators: %s is the version number
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Lihtne menüüredaktor %s"
-
-msgid "Name"
-msgstr "Nimi"
-
-msgid "Show"
-msgstr "Vaade"
-
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Kodukausta pole võimalik leida: seda pole määratud ei /etc/passwd failis ega "
-"$HOME keskkonnamuutujas"
