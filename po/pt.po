@@ -1,14 +1,14 @@
 # gnome-menus' Portuguese translation.
-# Copyright © 2004, 2005, 2006, 2007, 2009, 2012 gnome-menus
+# Copyright © 2004, 2005, 2006, 2007, 2009, 2012, 2013 gnome-menus
 # This file is distributed under the same license as the gnome-menus package.
-# Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006, 2007, 2009, 2012.
+# Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006, 2007, 2009, 2012, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 3.6\n"
+"Project-Id-Version: 3.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-01 01:16+0100\n"
-"PO-Revision-Date: 2012-09-01 01:20+0000\n"
+"POT-Creation-Date: 2013-03-12 13:02+0000\n"
+"PO-Revision-Date: 2013-03-12 13:10+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "Language: pt\n"
@@ -52,14 +52,6 @@ msgstr "Gráficos"
 msgid "Graphics applications"
 msgstr "Aplicações gráficas"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Equipamento"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Definições para vários dispositivos de equipamento"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -75,23 +67,6 @@ msgstr "Produtividade"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Aplicações de Produtividade"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Pessoal"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Definições pessoais"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistema"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Definições de sistema"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -129,6 +104,18 @@ msgstr "Outras"
 msgid "Applications that did not fit in other categories"
 msgstr "Aplicações que não se enquadravam em nenhuma outra categoria"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Miscelânea"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Utilitários"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Pequenas mas úteis ferramentas GNOME"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Aplicações Web"
@@ -137,48 +124,54 @@ msgstr "Aplicações Web"
 msgid "Applications and sites saved from Web"
 msgstr "Aplicações e páginas gravadas da Web"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Editor de Menus"
+#~ msgid "Hardware"
+#~ msgstr "Equipamento"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Editar os Menus"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "Definições para vários dispositivos de equipamento"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Omissões"
+#~ msgid "Personal"
+#~ msgstr "Pessoal"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Menus:"
+#~ msgid "Personal settings"
+#~ msgstr "Definições pessoais"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Aplicações:"
+#~ msgid "System"
+#~ msgstr "Sistema"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Editor de Menus %s"
+#~ msgid "System settings"
+#~ msgstr "Definições de sistema"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Nome"
+#~ msgid "Menu Editor"
+#~ msgstr "Editor de Menus"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Apresentar"
+#~ msgid "Edit Menus"
+#~ msgstr "Editar os Menus"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Incapaz de encontrar o directório pessoal: não se encontra definido em /etc/"
-"passwd e a variável de ambiente $HOME não possui nenhum valor"
+#~ msgid "_Defaults"
+#~ msgstr "_Omissões"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Menus:"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Aplicações:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "Editor de Menus %s"
+
+#~ msgid "Name"
+#~ msgstr "Nome"
+
+#~ msgid "Show"
+#~ msgstr "Apresentar"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Incapaz de encontrar o diretório pessoal: não se encontra definido em /"
+#~ "etc/passwd e a variável de ambiente $HOME não possui nenhum valor"
 
 #~ msgid "Internet and Network"
 #~ msgstr "Internet e Rede"
@@ -198,7 +191,7 @@ msgstr ""
 #~ msgstr "Administração"
 
 #~ msgid "Change system-wide settings (affects all users)"
-#~ msgstr "Alterar definições de sistema (afecta todos os utilizadores)"
+#~ msgstr "Alterar definições de sistema (afeta todos os utilizadores)"
 
 #~ msgid "Personal preferences"
 #~ msgstr "Preferências pessoais"
