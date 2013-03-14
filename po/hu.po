@@ -4,21 +4,22 @@
 #
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2004, 2005, 2006, 2007, 2008, 2009, 2012.
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2005.
+# Balázs Úr <urbalazs at gmail dot com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-05-14 13:29+0000\n"
-"PO-Revision-Date: 2012-09-04 13:30+0200\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"POT-Creation-Date: 2013-02-19 22:31+0000\n"
+"PO-Revision-Date: 2013-03-14 22:14+0100\n"
+"Last-Translator: Balázs Úr <urbalazs at gmail dot com>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"Language: hu\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -56,14 +57,6 @@ msgstr "Grafika"
 msgid "Graphics applications"
 msgstr "Grafikai alkalmazások"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Hardver"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Különböző hardvereszközök beállításai"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -79,23 +72,6 @@ msgstr "Iroda"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Irodai alkalmazások"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Személyes"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Személyes beállítások"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Rendszer"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Rendszerbeállítások"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -133,8 +109,19 @@ msgstr "Egyéb"
 msgid "Applications that did not fit in other categories"
 msgstr "Más kategóriákba be nem sorolható alkalmazások"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Sundry"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Segédprogramok"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Kicsi, de hasznos GNOME eszközök"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
-#| msgid "Applications"
 msgid "Web Applications"
 msgstr "Webalkalmazások"
 
@@ -142,48 +129,54 @@ msgstr "Webalkalmazások"
 msgid "Applications and sites saved from Web"
 msgstr "A webről mentett alkalmazások és oldalak"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Menüszerkesztő"
+#~ msgid "Hardware"
+#~ msgstr "Hardver"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Menük szerkesztése"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "Különböző hardvereszközök beállításai"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "Ala_pértelmezések"
+#~ msgid "Personal"
+#~ msgstr "Személyes"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Menük:"
+#~ msgid "Personal settings"
+#~ msgstr "Személyes beállítások"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Alkalmazások:"
+#~ msgid "System"
+#~ msgstr "Rendszer"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Egyszerű menüszerkesztő %s"
+#~ msgid "System settings"
+#~ msgstr "Rendszerbeállítások"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Név"
+#~ msgid "Menu Editor"
+#~ msgstr "Menüszerkesztő"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Megjelenítés"
+#~ msgid "Edit Menus"
+#~ msgstr "Menük szerkesztése"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Nem található a saját könyvtár: nincs beállítva az /etc/passwd fájlban és a "
-"$HOME környezeti változónak nincs értéke"
+#~ msgid "_Defaults"
+#~ msgstr "Ala_pértelmezések"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Menük:"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Alkalmazások:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "Egyszerű menüszerkesztő %s"
+
+#~ msgid "Name"
+#~ msgstr "Név"
+
+#~ msgid "Show"
+#~ msgstr "Megjelenítés"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Nem található a saját könyvtár: nincs beállítva az /etc/passwd fájlban és "
+#~ "a $HOME környezeti változónak nincs értéke"
 
 #~ msgid "Internet and Network"
 #~ msgstr "Internet és hálózat"
