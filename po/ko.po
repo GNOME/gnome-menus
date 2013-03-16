@@ -4,7 +4,7 @@
 # Sung-Hyun Nam <namsh@kldp.org>, 2000.
 # Young-Ho Cha <ganadist@chollian.net>, 2000,2001,2003, 2007.
 # Eunju Kim <eukim@redhat.com>, 2007.
-# Changwoo Ryu <cwryu@debian.org>, 1998, 2002, 2003, 2008-2012.
+# Changwoo Ryu <cwryu@debian.org>, 1998, 2002, 2003, 2008-2013.
 #
 # 주의:
 # - 웹 애플리케이션의 경우는 프로그램이 아니라 애플리케이션이라 표시
@@ -14,10 +14,11 @@ msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-05-14 13:29+0000\n"
-"PO-Revision-Date: 2012-09-15 16:55+0900\n"
+"POT-Creation-Date: 2013-02-19 22:31+0000\n"
+"PO-Revision-Date: 2013-03-16 22:25+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -58,14 +59,6 @@ msgstr "그래픽"
 msgid "Graphics applications"
 msgstr "그래픽 응용프로그램"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "하드웨어"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "하드웨어 장치를 설정합니다"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "인터넷"
@@ -81,23 +74,6 @@ msgstr "오피스"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "오피스 응용프로그램"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "개인"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "개인 설정"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "시스템"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "시스템 설정"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -135,6 +111,18 @@ msgstr "기타"
 msgid "Applications that did not fit in other categories"
 msgstr "어떤 범주에도 해당되지 않는 프로그램"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "잡다"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "유틸리티"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "작지만 쓸모 있는 그놈 프로그램"
+
 # 웹 애플리케이션의 경우는 프로그램이 아니라 애플리케이션이라 표시
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
@@ -144,46 +132,3 @@ msgstr "웹 애플리케이션"
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
 msgstr "웹에서 저자한 애플리케이션 및 사이트"
-
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "메뉴 편집기"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "메뉴 편집"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "기본값(_D)"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "메뉴(_M):"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "프로그램(_A):"
-
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "간단한 메뉴 편집기 %s"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "이름"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "보이기"
-
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"홈 디렉터리를 찾을 수 없습니다: /etc/passwd와 $HOME 환경변수가 설정이 되어 있"
-"지 않습니다"
