@@ -2,20 +2,21 @@
 # Copyright © 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Jordi Mallach <jordi@sindominio.net>, 2004, 2005, 2006, 2007.
-# Gil Forcada <gilforcada@guifi.net>, 2008, 2009.
+# Gil Forcada <gilforcada@guifi.net>, 2008, 2009, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-26 01:31+0200\n"
-"PO-Revision-Date: 2011-04-04 00:14+0200\n"
+"POT-Creation-Date: 2013-03-17 19:51+0100\n"
+"PO-Revision-Date: 2013-03-02 19:22+0100\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca-XV\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -53,14 +54,6 @@ msgstr "Gràfics"
 msgid "Graphics applications"
 msgstr "Aplicacions de gràfics"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Maquinari"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Paràmetres per a diferents dispositius de maquinari"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
@@ -76,23 +69,6 @@ msgstr "Ofimàtica"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Aplicacions ofimàtiques"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Personal"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Paràmetres personals"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Sistema"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Paràmetres del sistema"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -130,56 +106,74 @@ msgstr "Altres"
 msgid "Applications that did not fit in other categories"
 msgstr "Aplicacions que no encaixaven en d'altres categories"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Diversos"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Utilitats"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Eines petites, però útils, del GNOME"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Aplicacions web"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
-msgstr "Aplicacions i llocs alçats del Web"
+msgstr "Aplicacions i llocs guardats del Web"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Editor del menú"
+#~ msgid "Hardware"
+#~ msgstr "Maquinari"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Edita els menús"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "Paràmetres per a diferents dispositius de maquinari"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Predeterminats"
+#~ msgid "Personal"
+#~ msgstr "Personal"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Menús:"
+#~ msgid "Personal settings"
+#~ msgstr "Paràmetres personals"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Aplicacions:"
+#~ msgid "System"
+#~ msgstr "Sistema"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Editor del menú (versió %s)"
+#~ msgid "System settings"
+#~ msgstr "Paràmetres del sistema"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Nom"
+#~ msgid "Menu Editor"
+#~ msgstr "Editor del menú"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Mostra"
+#~ msgid "Edit Menus"
+#~ msgstr "Edita els menús"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"No s'ha trobat el directori d'inici: no està establit al fitxer /etc/passwd "
-"i no hi ha cap valor per a $HOME a l'entorn"
+#~ msgid "_Defaults"
+#~ msgstr "_Predeterminats"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Menús:"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Aplicacions:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "Editor del menú (versió %s)"
+
+#~ msgid "Name"
+#~ msgstr "Nom"
+
+#~ msgid "Show"
+#~ msgstr "Mostra"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "No s'ha trobat el directori d'inici: no està establert al fitxer /etc/"
+#~ "passwd i no hi ha cap valor per a $HOME a l'entorn"
 
 #~ msgid "Internet and Network"
 #~ msgstr "Internet i xarxa"
