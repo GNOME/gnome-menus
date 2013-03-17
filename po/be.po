@@ -1,8 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-08 18:54+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-02-19 22:31+0000\n"
 "PO-Revision-Date: 2012-06-08 18:54+0300\n"
 "Last-Translator: Ігар Грачышка <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
@@ -50,14 +51,6 @@ msgstr "Графіка"
 msgid "Graphics applications"
 msgstr "Праграмы для працы з графікай"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Абсталяванне"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Настройка прыстасаванняў"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Інтэрнэт"
@@ -73,23 +66,6 @@ msgstr "Офісныя праграмы"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Офісныя праграмы"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Асабістыя настройкі"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Асабістыя настройкі"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Сістэмныя настройкі"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Сістэмныя настройкі"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -127,6 +103,18 @@ msgstr "Іншыя праграмы"
 msgid "Applications that did not fit in other categories"
 msgstr "Праграмы, якія не трапілі ў іншыя катэгорыі"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Усякае"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Прылады"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Дробныя, але карысныя прылады для GNOME"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Сеціўныя праграмы"
@@ -135,45 +123,3 @@ msgstr "Сеціўныя праграмы"
 msgid "Applications and sites saved from Web"
 msgstr "Праграмы і пляцоўкі, захаваныя з Сеціва"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Рэдактар меню"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Рэдагаванне меню"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Прадвызначана"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Меню:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Праграмы:"
-
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Просты рэдактар меню %s"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Назва"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Паказаць"
-
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Не ўдалося адшукаць хатні каталог: ён не вызначаны ні ў файле /etc/passwd, "
-"ні ў працоўным асяроддзі (зменная $HOME)"
