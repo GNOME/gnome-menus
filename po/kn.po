@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009, 2010, 2012.
+# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009, 2010, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master.kn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-11-29 08:51+0000\n"
-"PO-Revision-Date: 2012-11-29 14:24+0530\n"
+"POT-Creation-Date: 2013-02-19 22:31+0000\n"
+"PO-Revision-Date: 2013-03-18 16:02+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
 "Language: kn\n"
@@ -21,15 +21,15 @@ msgstr ""
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
-msgstr "ಧ್ವನಿ ಮತ್ತು ದೃಶ್ಯ"
+msgstr "ಧ್ವನಿ ಮತ್ತು ವೀಡಿಯೊ"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Multimedia menu"
-msgstr "ಮಲ್ಟಿಮೀಡಿಯಾ ಅಂಶಪಟ್ಟಿ"
+msgstr "ಬಹುಮಾಧ್ಯಮ ಅಂಶಪಟ್ಟಿ"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
-msgstr "ಪ್ರೊಗ್ರಾಮಿಂಗ್"
+msgstr "ಕ್ರಮವಿಧಿ"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
@@ -49,19 +49,11 @@ msgstr "ಆಟಗಳು ಹಾಗು ರಂಜನೆಗಳು"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
-msgstr "ಗ್ರಾಫಿಕ್ಸ್"
+msgstr "ಚಿತ್ರ ಸಂಬಂಧಿ"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "ಗ್ರಾಫಿಕ್ಸ್ ಅನ್ವಯಗಳು"
-
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "ಯಂತ್ರಾಂಶ"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "ಹಲವಾರು ಯಂತ್ರಾಂಶ ಸಾಧನಗಳಿಗಾಗಿನ ಸಿದ್ಧತೆಗಳು"
+msgstr "ಚಿತ್ರ ಸಂಬಂಧಿ ಅನ್ವಯಗಳು"
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
@@ -69,32 +61,15 @@ msgstr "ಅಂತರಜಾಲ"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "ಜಾಲ ಹಾಗು ವಿಅಂಚೆಯಂತಹ ಅಂತರಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಪ್ರೊಗ್ರಾಂಗಳು"
+msgstr "ಜಾಲ ಹಾಗು ವಿಅಂಚೆಯಂತಹ ಅಂತರಜಾಲವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳುವ ಕ್ರಮವಿಧಿಗಳು"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
-msgstr "ಆಫೀಸ್"
+msgstr "ಕಛೇರಿ"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "ಆಫೀಸ್ ಅನ್ವಯಗಳು"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "ವೈಯಕ್ತಿಕ"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "ವೈಯಕ್ತಿಕ ಸಿದ್ಧತೆಗಳು"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "ವ್ಯವಸ್ಥೆ"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "ವ್ಯವಸ್ಥೆಯ ಸಿದ್ಧತೆಗಳು"
+msgstr "ಕಛೇರಿ ಅನ್ವಯಗಳು"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -102,15 +77,15 @@ msgstr "ವ್ಯವಸ್ಥೆಯ ಉಪಕರಣಗಳು"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "ವ್ಯವಸ್ಥೆಯ ಸಂರಚನೆ ಹಾಗು ಪರಿವೀಕ್ಷಣೆ"
+msgstr "ವ್ಯವಸ್ಥೆಯ ಸಂರಚನೆ ಹಾಗು ಮೇಲ್ವಿಚಾರಣೆ"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ"
+msgstr "ಜಾಗತಿಕ ನಿಲುಕು"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ ಸಿದ್ಧತೆಗಳು"
+msgstr "ಜಾಗತಿಕ ನಿಲುಕು ಸಿದ್ಧತೆಗಳು"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -132,8 +107,19 @@ msgstr "ಇತರೆ"
 msgid "Applications that did not fit in other categories"
 msgstr "ಬೇರೆ ವರ್ಗಗಳಿಗೆ ಸೇರದೇ ಇರುವಂತಹ ಅನ್ವಯಗಳು"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "ಸಣ್ಣಪುಟ್ಟ"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "ಸೌಲಭ್ಯಗಳು"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "ಚಿಕ್ಕವಾಗಿದ್ದರೂ ಉಪಯುಕ್ತವಾದ GNOME ಉಪಕರಣಗಳು"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
-#| msgid "Applications"
 msgid "Web Applications"
 msgstr "ಜಾಲ ಅನ್ವಯಗಳು"
 
@@ -141,48 +127,54 @@ msgstr "ಜಾಲ ಅನ್ವಯಗಳು"
 msgid "Applications and sites saved from Web"
 msgstr "ಜಾಲದಿಂದ ಉಳಿಸಲಾದ ಅನ್ವಯಗಳು ಮತ್ತು ತಾಣಗಳು"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "ಪರಿವಿಡಿ ಸಂಪಾದಕ"
+#~ msgid "Hardware"
+#~ msgstr "ಯಂತ್ರಾಂಶ"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "ಪರಿವಿಡಿಗಳನ್ನು ಸಂಪಾದಿಸು"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "ಹಲವಾರು ಯಂತ್ರಾಂಶ ಸಾಧನಗಳಿಗಾಗಿನ ಸಿದ್ಧತೆಗಳು"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "ಪೂರ್ವನಿಯೋಜಿತ (_D)"
+#~ msgid "Personal"
+#~ msgstr "ವೈಯಕ್ತಿಕ"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "ಪರಿವಿಡಿಗಳು (_M):"
+#~ msgid "Personal settings"
+#~ msgstr "ವೈಯಕ್ತಿಕ ಸಿದ್ಧತೆಗಳು"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "ಅನ್ವಯಗಳು (_A):"
+#~ msgid "System"
+#~ msgstr "ವ್ಯವಸ್ಥೆ"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "ಸರಳ ಪರಿವಿಡಿ ಸಂಪಾದಕ %s"
+#~ msgid "System settings"
+#~ msgstr "ವ್ಯವಸ್ಥೆಯ ಸಿದ್ಧತೆಗಳು"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "ಹೆಸರು"
+#~ msgid "Menu Editor"
+#~ msgstr "ಪರಿವಿಡಿ ಸಂಪಾದಕ"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "ತೋರಿಸು"
+#~ msgid "Edit Menus"
+#~ msgstr "ಪರಿವಿಡಿಗಳನ್ನು ಸಂಪಾದಿಸು"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"ನೆಲೆ ಕಡತಕೋಶವು ಕಂಡುಬಂದಿಲ್ಲ: /etc/passwd ನಲ್ಲಿ ಸಿದ್ಧಗೊಳಿಸಿಲ್ಲ ಹಾಗು ವಾತಾವರಣದಲ್ಲಿ "
-"$HOME ಗೆ ಯಾವುದೇ ಮೌಲ್ಯವಿಲ್ಲ"
+#~ msgid "_Defaults"
+#~ msgstr "ಪೂರ್ವನಿಯೋಜಿತ (_D)"
+
+#~ msgid "_Menus:"
+#~ msgstr "ಪರಿವಿಡಿಗಳು (_M):"
+
+#~ msgid "_Applications:"
+#~ msgstr "ಅನ್ವಯಗಳು (_A):"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "ಸರಳ ಪರಿವಿಡಿ ಸಂಪಾದಕ %s"
+
+#~ msgid "Name"
+#~ msgstr "ಹೆಸರು"
+
+#~ msgid "Show"
+#~ msgstr "ತೋರಿಸು"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "ನೆಲೆ ಕಡತಕೋಶವು ಕಂಡುಬಂದಿಲ್ಲ: /etc/passwd ನಲ್ಲಿ ಸಿದ್ಧಗೊಳಿಸಿಲ್ಲ ಹಾಗು ವಾತಾವರಣದಲ್ಲಿ "
+#~ "$HOME ಗೆ ಯಾವುದೇ ಮೌಲ್ಯವಿಲ್ಲ"
 
 #~ msgid "Internet and Network"
 #~ msgstr "ಅಂತರಜಾಲ ಹಾಗು ಜಾಲಬಂಧ"
