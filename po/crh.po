@@ -1,29 +1,30 @@
 # translation of gnome-menus to Qırımtatarca
 # This file is distributed under the same license as the gnome-menus package.
+# Reşat SABIQ <tilde.birlik@gmail.com>, 2009, 2010, 2013.
 #
-# Reşat SABIQ <tilde.birlik@gmail.com>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus TRUNK\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-21 00:24-0500\n"
-"PO-Revision-Date: 2010-03-30 00:46-0500\n"
+"POT-Creation-Date: 2013-03-24 01:47-0500\n"
+"PO-Revision-Date: 2013-03-24 13:23-0500\n"
 "Last-Translator: Reşat SABIQ <tilde.birlik@gmail.com>\n"
-"Language-Team: QIRIMTATARCA (Qırım Türkçesi) <tilde-birlik-tercime@lists."
+"Language-Team: QIRIMTATARCA (Qırım Türkçesi) <tilde-birlik-meydan@lists."
 "sourceforge.net>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: UTF-8\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Çoqlu-vasat menüsi"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "Davuş & Video"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Çoqlu-vasat menüsi"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -53,30 +54,6 @@ msgstr "Grafikler"
 msgid "Graphics applications"
 msgstr "Grafikiy uyğulamalar"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Donanım"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Bir qaç donanım cihazı içün tesbitler"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "İnternet ve Ağ"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "Ağ-alâqalı tesbitler"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "Körüniş ve Seziliş"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Masaüstü körüniş ve sezilişini muraqabe etken tesbitler"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "İnternet"
@@ -93,41 +70,6 @@ msgstr "Ofis"
 msgid "Office Applications"
 msgstr "Ofis Uyğulamaları"
 
-#: ../desktop-directories/Personal.directory.in.h:1
-msgid "Personal"
-msgstr "Şahsiy"
-
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal settings"
-msgstr "Şahsiy ayarlar"
-
-# tüylü
-#: ../desktop-directories/Settings-System.directory.in.h:1
-msgid "Administration"
-msgstr "Memuriyet"
-
-#: ../desktop-directories/Settings-System.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr ""
-"Bütün-sistem tesbitlerini deñiştir (qullanıcılarnıñ episine tesir eter)"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences"
-msgstr "Şahsiy tercihler"
-
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Tercihler"
-
-#: ../desktop-directories/System.directory.in.h:1
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:2
-msgid "System"
-msgstr "Sistem"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Sistem tesbitleri"
-
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
 msgstr "Sistem Aletleri"
@@ -138,7 +80,7 @@ msgstr "Sistem ayarlaması ve közetimi"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Alemiy İrişim"
+msgstr "Cihanşümul İrişim"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
@@ -157,115 +99,155 @@ msgstr "Masaüstü donantıları"
 msgid "Applications"
 msgstr "Uyğulamalar"
 
-#: ../desktop-directories/X-GNOME-Menu-System.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Şahsiy tercihler ve idare tesbitleri"
-
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Diger ulamlarğa yaraşmağan uyğulamalar"
-
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Other"
 msgstr "Diger"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Menü Muarriri"
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Applications that did not fit in other categories"
+msgstr "Diger ulamlarğa yaraşmağan uyğulamalar"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Menülerni Tarir Et"
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Müteferriqa"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "_Uyğulamalar:"
+# tüklü
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Qullanmalıqlar"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Defaults"
-msgstr "_Ög-belgilemeler"
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Kiçik amma qullanışlı GNOME aletleri"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Menus:"
-msgstr "_Menüler:"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "Ağ Uyğulamaları"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:49
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Basit Menü Muarriri %s"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Ağdan saqlanğan uyğulamalar ve saytlar"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:94
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:121
-msgid "Name"
-msgstr "İsim"
+#~ msgid "Hardware"
+#~ msgstr "Donanım"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:113
-msgid "Show"
-msgstr "Köster"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "Bir qaç donanım cihazı içün tesbitler"
 
-# tüylü
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:42
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Ev fihristini tapamayım: /etc/passwd içinde tesbit etilgen degil ve çevrede "
-"$HOME içün bir qıymet yoq"
+#~ msgid "Internet and Network"
+#~ msgstr "İnternet ve Ağ"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "Menü dosyesi"
+#~ msgid "Network-related settings"
+#~ msgstr "Ağ-alâqalı tesbitler"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "MENU_FILE"
+#~ msgid "Look and Feel"
+#~ msgstr "Körüniş ve Seziliş"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "Menü deñişmeleri içün közet"
+#~ msgid "Settings controlling the desktop appearance and behavior"
+#~ msgstr "Masaüstü körüniş ve sezilişini muraqabe etken tesbitler"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "Müstesna (<Exclude>) etilgen kirdilerni kirset"
+#~ msgid "Personal"
+#~ msgstr "Şahsiy"
 
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "NoDisplay=true kirdilerini kirset"
+#~ msgid "Personal settings"
+#~ msgstr "Şahsiy ayarlar"
 
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "Keçersiz masaüstü dosye kimligi"
+# tüklü
+#~ msgid "Administration"
+#~ msgstr "Memuriyet"
 
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[Keçersiz Dosye-adı]"
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr ""
+#~ "Bütün-sistem ayarlarını deñiştir (qullanıcılarnıñ hepsine tesir eter)"
 
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr " <excluded>"
+#~ msgid "Personal preferences"
+#~ msgstr "Şahsiy tercihler"
 
-#: ../util/test-menu-spec.c:164
-#, c-format
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"==== Menü deñişti, kene yüklene ====\n"
-"\n"
-"\n"
+#~ msgid "Preferences"
+#~ msgstr "Tercihler"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "Menü teregi boştır"
+#~ msgid "System"
+#~ msgstr "Sistem"
 
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "- Masaüstü Menü Belirtiminiñ GNOME tarafından edasını sına"
+#~ msgid "System settings"
+#~ msgstr "Sistem tesbitleri"
+
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "Şahsiy tercihler ve idare tesbitleri"
+
+#~ msgid "Menu Editor"
+#~ msgstr "Menü Muharriri"
+
+#~ msgid "Edit Menus"
+#~ msgstr "Menülerni Tahrir Et"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Uyğulamalar:"
+
+#~ msgid "_Defaults"
+#~ msgstr "_Ög-belgilemeler"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Menüler:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "Basit Menü Muharriri %s"
+
+#~ msgid "Name"
+#~ msgstr "İsim"
+
+#~ msgid "Show"
+#~ msgstr "Köster"
+
+# tüklü
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Ev cilbentini tapalmayım: /etc/passwd içinde tesbit etilgen degil ve "
+#~ "çevrede $HOME içün bir qıymet yoq"
+
+#~ msgid "Menu file"
+#~ msgstr "Menü dosyesi"
+
+#~ msgid "MENU_FILE"
+#~ msgstr "MENU_FILE"
+
+#~ msgid "Monitor for menu changes"
+#~ msgstr "Menü deñişmeleri içün közet"
+
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "Müstesna (<Exclude>) etilgen kirdilerni kirset"
+
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "NoDisplay=true kirdilerini kirset"
+
+#~ msgid "Invalid desktop file ID"
+#~ msgstr "Keçersiz masaüstü dosye kimligi"
+
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[Keçersiz Dosye-adı]"
+
+#~ msgid " <excluded>"
+#~ msgstr " <excluded>"
+
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menü deñişti, kene yüklene ====\n"
+#~ "\n"
+#~ "\n"
+
+#~ msgid "Menu tree is empty"
+#~ msgstr "Menü teregi boştır"
+
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr "- Masaüstü Menü Belirtiminiñ GNOME tarafından edasını sına"
