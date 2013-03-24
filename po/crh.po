@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: gnome-menus TRUNK\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-24 01:47-0500\n"
-"PO-Revision-Date: 2013-03-24 13:23-0500\n"
+"PO-Revision-Date: 2013-03-24 13:25-0500\n"
 "Last-Translator: Reşat SABIQ <tilde.birlik@gmail.com>\n"
 "Language-Team: QIRIMTATARCA (Qırım Türkçesi) <tilde-birlik-meydan@lists."
 "sourceforge.net>\n"
@@ -80,7 +80,7 @@ msgstr "Sistem ayarlaması ve közetimi"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Cihanşümul İrişim"
+msgstr "Cihanşümul İrişim"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
