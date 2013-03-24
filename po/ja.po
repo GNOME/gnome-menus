@@ -4,16 +4,16 @@
 # Satoru SATOH <ss@gnome.gr.jp>, 2004.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2005-2007.
 # Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2009-2010.
-# Jiro Matsuzawa <jmatsuzawa@src.gnome.org>, 2011.
+# Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2011, 2013.
 # Noriko Mizumoto <noriko@fedoraproject.org>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-09-18 00:30+0000\n"
-"PO-Revision-Date: 2012-09-18 10:25+0000\n"
-"Last-Translator: Noriko Mizumoto <noriko@fedoraproject.org>\n"
+"POT-Creation-Date: 2013-02-19 22:31+0000\n"
+"PO-Revision-Date: 2013-03-25 02:23+0900\n"
+"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <trans-ja@lists.fedoraproject.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -57,14 +57,6 @@ msgstr "グラフィックス"
 msgid "Graphics applications"
 msgstr "グラフィックス関連のアプリケーションです"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "ハードウェア"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "使用するハードウェアデバイスを設定します"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "インターネット"
@@ -80,23 +72,6 @@ msgstr "オフィス"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "オフィスアプリケーションです"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "ユーザー向け"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "ユーザー向けの設定を変更します"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "システム"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "システム規模の設定を変更します"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -134,6 +109,18 @@ msgstr "その他"
 msgid "Applications that did not fit in other categories"
 msgstr "他のカテゴリにあてはまらないアプリケーション"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "諸ツール"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "ユーティリティ"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "ちょっとした GNOME の便利ツール"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Web アプリケーション"
@@ -142,44 +129,50 @@ msgstr "Web アプリケーション"
 msgid "Applications and sites saved from Web"
 msgstr "Web から保存したアプリケーションやサイト"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "メニューエディター"
+#~ msgid "Hardware"
+#~ msgstr "ハードウェア"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "メニューの編集"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "使用するハードウェアデバイスを設定します"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "デフォルト(_D)"
+#~ msgid "Personal"
+#~ msgstr "ユーザー向け"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "メニュー(_M):"
+#~ msgid "Personal settings"
+#~ msgstr "ユーザー向けの設定を変更します"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "アプリケーション(_A):"
+#~ msgid "System"
+#~ msgstr "システム"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "シンプルメニューエディター %s"
+#~ msgid "System settings"
+#~ msgstr "システム規模の設定を変更します"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "名前"
+#~ msgid "Menu Editor"
+#~ msgstr "メニューエディター"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "表示"
+#~ msgid "Edit Menus"
+#~ msgstr "メニューの編集"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "ホームフォルダーが見つかりません: \"/etc/passwd\" に記述されておらず、かつ環境変数 $HOME の値が設定されていません"
+#~ msgid "_Defaults"
+#~ msgstr "デフォルト(_D)"
+
+#~ msgid "_Menus:"
+#~ msgstr "メニュー(_M):"
+
+#~ msgid "_Applications:"
+#~ msgstr "アプリケーション(_A):"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "シンプルメニューエディター %s"
+
+#~ msgid "Name"
+#~ msgstr "名前"
+
+#~ msgid "Show"
+#~ msgstr "表示"
+
+#~ msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+#~ msgstr "ホームフォルダーが見つかりません: \"/etc/passwd\" に記述されておらず、かつ環境変数 $HOME の値が設定されていません"
 
 #~ msgid "Internet and Network"
 #~ msgstr "インターネットとネットワーク"
