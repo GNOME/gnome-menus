@@ -1,3 +1,13 @@
+=============
+Version 3.8.0
+=============
+
+        * Add more java things to sundry
+        * Add im-chooser, power statistics and personal file
+          sharing to sundry
+        * Remove special-casing for Fedora vendor prefixdd
+        * Translation updates
+
 ==============
 Version 3.7.90
 ==============
