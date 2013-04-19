@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-02-19 22:31+0000\n"
-"PO-Revision-Date: 2013-01-21 13:58+0500\n"
+"PO-Revision-Date: 2013-04-19 10:34+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: \n"
 "Language: Tajik\n"
@@ -108,15 +108,15 @@ msgstr "Барномаҳое, ки дар категорияҳои дигар ё
 
 #: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
 msgid "Sundry"
-msgstr ""
+msgstr "Барномаҳои гуногун"
 
 #: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
 msgid "Utilities"
-msgstr ""
+msgstr "Барномаҳои дастгирӣ"
 
 #: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
 msgid "Small but useful GNOME tools"
-msgstr ""
+msgstr "Абзорҳои майдаи GNOME, вале фоиданок"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
