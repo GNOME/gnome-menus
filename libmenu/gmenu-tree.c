@@ -3456,8 +3456,8 @@ process_layout (GMenuTree          *tree,
                                         layout_iter,
                                         allocated);
             if (child_dir)
-              directory->subdirs = g_slist_append (directory->subdirs,
-                                                   child_dir);
+              directory->subdirs = g_slist_prepend (directory->subdirs,
+                                                    child_dir);
 
 	    menu_verbose ("Processed <Menu>\n");
           }
