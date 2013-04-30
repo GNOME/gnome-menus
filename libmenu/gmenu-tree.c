@@ -3413,6 +3413,7 @@ process_layout (GMenuTree          *tree,
   GMenuTreeDirectory *directory;
   DesktopEntrySet    *entry_pool;
   DesktopEntrySet    *entries;
+  DesktopEntrySet    *allocated_set;
   DesktopEntrySet    *excluded_set;
   gboolean            deleted;
   gboolean            only_unallocated;
@@ -3431,6 +3432,7 @@ process_layout (GMenuTree          *tree,
   only_unallocated = FALSE;
 
   entries = desktop_entry_set_new ();
+  allocated_set = desktop_entry_set_new ();
 
   if (tree->flags & GMENU_TREE_FLAGS_INCLUDE_EXCLUDED)
     excluded_set = desktop_entry_set_new ();
@@ -3483,6 +3485,7 @@ process_layout (GMenuTree          *tree,
                 if (rule_set != NULL)
                   {
                     desktop_entry_set_union (entries, rule_set);
+                    desktop_entry_set_union (allocated_set, rule_set);
 		    if (excluded_set != NULL)
 		      desktop_entry_set_subtract (excluded_set, rule_set);
                     desktop_entry_set_unref (rule_set);
@@ -3606,7 +3609,9 @@ process_layout (GMenuTree          *tree,
   directory->only_unallocated = only_unallocated;
 
   if (!directory->only_unallocated)
-    desktop_entry_set_union (allocated, entries);
+    desktop_entry_set_union (allocated, allocated_set);
+
+  desktop_entry_set_unref (allocated_set);
 
   if (directory->directory_entry)
     {
