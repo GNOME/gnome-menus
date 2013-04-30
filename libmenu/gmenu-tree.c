@@ -3605,7 +3605,8 @@ process_layout (GMenuTree          *tree,
 
   directory->only_unallocated = only_unallocated;
 
-  desktop_entry_set_union (allocated, entries);
+  if (!directory->only_unallocated)
+    desktop_entry_set_union (allocated, entries);
 
   if (directory->directory_entry)
     {
@@ -3731,8 +3732,7 @@ process_only_unallocated (GMenuTree          *tree,
           GMenuTreeEntry *entry = tmp->data;
           GSList         *next  = tmp->next;
 
-          if (desktop_entry_set_lookup (allocated, entry->desktop_file_id) &&
-              desktop_entry_set_lookup (unallocated_used, entry->desktop_file_id))
+          if (desktop_entry_set_lookup (allocated, entry->desktop_file_id))
             {
               directory->entries = g_slist_delete_link (directory->entries,
                                                         tmp);
