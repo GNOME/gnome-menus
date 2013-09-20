@@ -250,6 +250,7 @@
       <Filename>baobab.desktop</Filename>
       <Filename>gnome-system-log.desktop</Filename>
       <Filename>gnome-system-monitor.desktop</Filename>
+      <Filename>gnome-terminal.desktop</Filename>
 
       <!-- Sundry exclusions -->
       <Filename>dconf-editor.desktop</Filename>
