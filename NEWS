@@ -1,3 +1,25 @@
+==============
+Version 3.10.0
+==============
+
+        * Correct name of gnome-calculator
+        * Fix issues with apps incorrectly showing up in Other
+
+Translation updates:
+
+        * Cheng-Chia Tseng
+        * Daniel Șerbănescu
+        * Friedel Wolff
+        * Nik Kalach
+        * Ozan Çağlayan
+        * Ryan Lortie
+        * Seán de Búrca
+        * Trần Ngọc Quân
+        * Victor Ibragimov
+        * Wojciech Szczęsny
+        * Wylmer Wang
+        * Yaron Shahrabani
+
 =============
 Version 3.8.0
 =============
