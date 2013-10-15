@@ -1,4 +1,11 @@
 ==============
+Version 3.10.1
+==============
+
+	* Don't put gnome-control-center in Utilities (707037)
+	* Exclude gnome-terminal from System Tools (708467)
+
+==============
 Version 3.10.0
 ==============
 
