@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-02-20 09:33+0000\n"
-"PO-Revision-Date: 2013-02-20 21:14+0100\n"
+"PO-Revision-Date: 2013-10-23 16:35+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French team <gnomefr@traduc.org>\n"
 "Language: \n"
@@ -72,7 +72,7 @@ msgstr "Bureautique"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Autres applications"
+msgstr "Applications de bureautique"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
