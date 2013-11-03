@@ -5,14 +5,15 @@
 # Ani Peter <peter.ani@gmail.com>, 2006.
 # Praveen|പ്രവീണ്‍ A|എ <pravi.a@gmail.com>, 2007,2008.
 # Ani Peter <apeter@redhat.com>, 2007, 2012, 2013.
+# Akhilan <akhilkrishnans@gmail.com, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master.ml\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-18 10:33+0000\n"
-"PO-Revision-Date: 2013-03-25 19:17+0530\n"
-"Last-Translator: Ani Peter <peter.ani@gmail.com>\n"
+"POT-Creation-Date: 2013-10-23 14:43+0000\n"
+"PO-Revision-Date: 2013-11-03 14:28+0530\n"
+"Last-Translator: Akhilan <akhilkrishnans@gmail.com>\n"
 "Language-Team: Malayalam <discuss@lists.smc.org.in>\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +28,7 @@ msgstr "ശബ്ദവും ചലച്ചിത്രവും"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Multimedia menu"
-msgstr "മള്‍ട്ടീമീഡിയ മെനു"
+msgstr "മള്‍ട്ടീമീഡിയ ഐച്ഛികം"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -95,7 +96,7 @@ msgstr "ഉപകരണങ്ങള്‍"
 
 #: ../desktop-directories/Utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "പണിയിടോപകരണങ്ങള്‍"
+msgstr "പണിയിട ഉപകരണങ്ങള്‍"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
