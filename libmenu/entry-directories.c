@@ -40,12 +40,12 @@ struct EntryDirectory
 
   guint entry_type : 2;
   guint is_legacy : 1;
-  volatile gint refcount;
+  guint refcount : 24;
 };
 
 struct EntryDirectoryList
 {
-  volatile int refcount;
+  int    refcount;
   int    length;
   GList *dirs;
 };
@@ -64,10 +64,7 @@ struct CachedDir
   guint have_read_entries : 1;
   guint deleted : 1;
 
-  GFunc    notify;
-  gpointer notify_data;
-
-  volatile gint references;
+  guint references : 28;
 };
 
 struct CachedDirMonitor
@@ -82,12 +79,6 @@ static void     cached_dir_remove_reference       (CachedDir *dir);
 static void     cached_dir_free                   (CachedDir  *dir);
 static gboolean cached_dir_load_entries_recursive (CachedDir  *dir,
                                                    const char *dirname);
-static void     cached_dir_unref                  (CachedDir *dir);
-static CachedDir * cached_dir_add_subdir          (CachedDir  *dir,
-                                                   const char *basename,
-                                                   const char *path);
-static gboolean cached_dir_remove_subdir          (CachedDir  *dir,
-                                                   const char *basename);
 
 static void handle_cached_dir_changed (MenuMonitor      *monitor,
 				       MenuMonitorEvent  event,
@@ -100,35 +91,14 @@ static void handle_cached_dir_changed (MenuMonitor      *monitor,
 
 static CachedDir *dir_cache = NULL;
 
-static void
-clear_cache (CachedDir *dir,
-             gpointer  *cache)
-{
-  *cache = NULL;
-}
-
 static CachedDir *
 cached_dir_new (const char *name)
 {
   CachedDir *dir;
 
   dir = g_new0 (CachedDir, 1);
+
   dir->name = g_strdup (name);
-
-  return dir;
-}
-
-static CachedDir *
-cached_dir_new_full (const char *name,
-                     GFunc       notify,
-                     gpointer    notify_data)
-{
-  CachedDir *dir;
-
-  dir = cached_dir_new (name);
-
-  dir->notify = notify;
-  dir->notify_data = notify_data;
 
   return dir;
 }
@@ -156,43 +126,13 @@ cached_dir_free (CachedDir *dir)
   dir->entries = NULL;
 
   g_slist_foreach (dir->subdirs,
-                   (GFunc) cached_dir_unref,
+                   (GFunc) cached_dir_free,
                    NULL);
   g_slist_free (dir->subdirs);
   dir->subdirs = NULL;
 
   g_free (dir->name);
   g_free (dir);
-}
-
-static CachedDir *
-cached_dir_ref (CachedDir *dir)
-{
-  g_atomic_int_inc (&dir->references);
-
-  return dir;
-}
-
-static void
-cached_dir_unref (CachedDir *dir)
-{
-  gboolean is_zero;
-
-  is_zero = g_atomic_int_dec_and_test (&dir->references);
-  if (is_zero)
-    {
-      CachedDir *parent;
-
-      parent = dir->parent;
-
-      if (parent != NULL)
-        cached_dir_remove_subdir (parent, dir->name);
-
-      if (dir->notify)
-        dir->notify (dir, dir->notify_data);
-
-      cached_dir_free (dir);
-    }
 }
 
 static inline CachedDir *
@@ -224,13 +164,8 @@ find_entry (CachedDir  *dir,
   tmp = dir->entries;
   while (tmp != NULL)
     {
-      const char *entry_basename;
-
-      entry_basename = desktop_entry_get_basename (tmp->data);
-      if (strcmp (entry_basename, basename) == 0)
-        {
-          return tmp->data;
-        }
+      if (strcmp (desktop_entry_get_basename (tmp->data), basename) == 0)
+        return tmp->data;
 
       tmp = tmp->next;
     }
@@ -278,9 +213,7 @@ cached_dir_lookup (const char *canonical)
   int         i;
 
   if (dir_cache == NULL)
-    dir_cache = cached_dir_new_full ("/",
-                                     (GFunc) clear_cache,
-                                     &dir_cache);
+    dir_cache = cached_dir_new ("/");
   dir = dir_cache;
 
   g_assert (canonical != NULL && canonical[0] == G_DIR_SEPARATOR);
@@ -294,7 +227,12 @@ cached_dir_lookup (const char *canonical)
     {
       CachedDir *subdir;
 
-      subdir = cached_dir_add_subdir (dir, split[i], NULL);
+      if ((subdir = find_subdir (dir, split[i])) == NULL)
+        {
+          subdir = cached_dir_new (split[i]);
+          dir->subdirs = g_slist_prepend (dir->subdirs, subdir);
+          subdir->parent = dir;
+        }
 
       dir = subdir;
 
@@ -334,9 +272,7 @@ cached_dir_update_entry (CachedDir  *dir,
   tmp = dir->entries;
   while (tmp != NULL)
     {
-      const char *entry_basename;
-      entry_basename = desktop_entry_get_basename (tmp->data);
-      if (strcmp (entry_basename, basename) == 0)
+      if (strcmp (desktop_entry_get_basename (tmp->data), basename) == 0)
         {
           if (!desktop_entry_reload (tmp->data))
 	    {
@@ -361,10 +297,7 @@ cached_dir_remove_entry (CachedDir  *dir,
   tmp = dir->entries;
   while (tmp != NULL)
     {
-      const char *entry_basename;
-      entry_basename = desktop_entry_get_basename (tmp->data);
-
-      if (strcmp (entry_basename, basename) == 0)
+      if (strcmp (desktop_entry_get_basename (tmp->data), basename) == 0)
         {
           desktop_entry_unref (tmp->data);
           dir->entries = g_slist_delete_link (dir->entries, tmp);
@@ -377,7 +310,7 @@ cached_dir_remove_entry (CachedDir  *dir,
   return FALSE;
 }
 
-static CachedDir *
+static gboolean
 cached_dir_add_subdir (CachedDir  *dir,
                        const char *basename,
                        const char *path)
@@ -389,23 +322,23 @@ cached_dir_add_subdir (CachedDir  *dir,
   if (subdir != NULL)
     {
       subdir->deleted = FALSE;
-      return subdir;
+      return TRUE;
     }
 
   subdir = cached_dir_new (basename);
 
-  if (path != NULL && !cached_dir_load_entries_recursive (subdir, path))
+  if (!cached_dir_load_entries_recursive (subdir, path))
     {
       cached_dir_free (subdir);
-      return NULL;
+      return FALSE;
     }
 
   menu_verbose ("Caching dir \"%s\"\n", basename);
 
   subdir->parent = dir;
-  dir->subdirs = g_slist_prepend (dir->subdirs, cached_dir_ref (subdir));
+  dir->subdirs = g_slist_prepend (dir->subdirs, subdir);
 
-  return subdir;
+  return TRUE;
 }
 
 static gboolean
@@ -422,7 +355,7 @@ cached_dir_remove_subdir (CachedDir  *dir,
 
       if (subdir->references == 0)
         {
-          cached_dir_unref (subdir);
+          cached_dir_free (subdir);
           dir->subdirs = g_slist_remove (dir->subdirs, subdir);
         }
 
@@ -563,7 +496,7 @@ handle_cached_dir_changed (MenuMonitor      *monitor,
       switch (event)
         {
         case MENU_MONITOR_EVENT_CREATED:
-          handled = cached_dir_add_subdir (dir, basename, path) != NULL;
+          handled = cached_dir_add_subdir (dir, basename, path);
           break;
 
         case MENU_MONITOR_EVENT_CHANGED:
@@ -735,7 +668,7 @@ cached_dir_remove_monitor (CachedDir                 *dir,
 static void
 cached_dir_add_reference (CachedDir *dir)
 {
-  cached_dir_ref (dir);
+  dir->references++;
 
   if (dir->parent != NULL)
     {
@@ -750,7 +683,29 @@ cached_dir_remove_reference (CachedDir *dir)
 
   parent = dir->parent;
 
-  cached_dir_unref (dir);
+  if (--dir->references == 0 && dir->deleted)
+    {
+      if (dir->parent != NULL)
+	{
+	  GSList *tmp;
+
+	  tmp = parent->subdirs;
+	  while (tmp != NULL)
+	    {
+	      CachedDir *subdir = tmp->data;
+
+	      if (!strcmp (subdir->name, dir->name))
+		{
+		  parent->subdirs = g_slist_delete_link (parent->subdirs, tmp);
+		  break;
+		}
+
+	      tmp = tmp->next;
+	    }
+	}
+
+      cached_dir_free (dir);
+    }
 
   if (parent != NULL)
     {
@@ -822,7 +777,7 @@ entry_directory_ref (EntryDirectory *ed)
   g_return_val_if_fail (ed != NULL, NULL);
   g_return_val_if_fail (ed->refcount > 0, NULL);
 
-  g_atomic_int_inc (&ed->refcount);
+  ed->refcount++;
 
   return ed;
 }
@@ -830,13 +785,10 @@ entry_directory_ref (EntryDirectory *ed)
 void
 entry_directory_unref (EntryDirectory *ed)
 {
-  gboolean is_zero;
-
   g_return_if_fail (ed != NULL);
   g_return_if_fail (ed->refcount > 0);
 
-  is_zero = g_atomic_int_dec_and_test (&ed->refcount);
-  if (is_zero)
+  if (--ed->refcount == 0)
     {
       cached_dir_remove_reference (ed->dir);
 
@@ -952,12 +904,11 @@ entry_directory_foreach_recursive (EntryDirectory            *ed,
 
       if (desktop_entry_get_type (entry) == ed->entry_type)
         {
-          gboolean    ret;
-          char       *file_id;
-          const char *basename;
+          gboolean  ret;
+          char     *file_id;
 
-          basename = desktop_entry_get_basename (entry);
-          g_string_append (relative_path, basename);
+          g_string_append (relative_path,
+                           desktop_entry_get_basename (entry));
 
 	  file_id = get_desktop_file_id_from_path (ed,
 						   ed->entry_type,
@@ -1037,7 +988,7 @@ entry_directory_get_flat_contents (EntryDirectory   *ed,
       DesktopEntry *entry = tmp->data;
       const char   *basename;
 
-      basename = desktop_entry_get_path (entry);
+      basename = desktop_entry_get_basename (entry);
 
       if (desktop_entries &&
           desktop_entry_get_type (entry) == DESKTOP_ENTRY_DESKTOP)
@@ -1110,7 +1061,7 @@ entry_directory_list_ref (EntryDirectoryList *list)
   g_return_val_if_fail (list != NULL, NULL);
   g_return_val_if_fail (list->refcount > 0, NULL);
 
-  g_atomic_int_inc (&list->refcount);
+  list->refcount += 1;
 
   return list;
 }
@@ -1118,13 +1069,11 @@ entry_directory_list_ref (EntryDirectoryList *list)
 void
 entry_directory_list_unref (EntryDirectoryList *list)
 {
-  gboolean is_zero;
-
   g_return_if_fail (list != NULL);
   g_return_if_fail (list->refcount > 0);
 
-  is_zero = g_atomic_int_dec_and_test (&list->refcount);
-  if (is_zero)
+  list->refcount -= 1;
+  if (list->refcount == 0)
     {
       g_list_foreach (list->dirs, (GFunc) entry_directory_unref, NULL);
       g_list_free (list->dirs);
