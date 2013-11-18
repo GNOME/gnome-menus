@@ -207,8 +207,6 @@ main (int argc, char **argv)
   GMenuTreeFlags      flags;
   GError             *error = NULL;
 
-  g_type_init ();
-
 #if 0
   /* See comment when defining _() at the top of this file. */
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
