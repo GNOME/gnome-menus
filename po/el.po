@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-19 22:31+0000\n"
-"PO-Revision-Date: 2013-02-24 10:21+0300\n"
+"POT-Creation-Date: 2013-12-18 20:58+0000\n"
+"PO-Revision-Date: 2013-12-23 08:45+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
-"Language-Team: team@gnome.gr\n"
+"Language-Team: team@lists.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Virtaal 0.7.0\n"
 "X-Project-Style: gnome\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
@@ -117,7 +117,7 @@ msgstr "Διάφορα"
 
 #: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
 msgid "Utilities"
-msgstr "Βοηθήματα"
+msgstr "Βοηθητικά προγράμματα"
 
 #: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
 msgid "Small but useful GNOME tools"
