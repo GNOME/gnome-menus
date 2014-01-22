@@ -1,0 +1,274 @@
+# Gaelic; Scottish translation for gnome-menus
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the gnome-menus package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-08-26 14:17+0000\n"
+"PO-Revision-Date: 2013-09-17 11:39+0100\n"
+"Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
+"Language-Team: Gaelic; Scottish <gd@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-09-15 06:16+0000\n"
+"X-Generator: Launchpad (build 16761)\n"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Sound & Video"
+msgstr "Fuaim ⁊ video"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Clàr-taice nan ioma-mheadhanan"
+
+#: ../desktop-directories/Development.directory.in.h:1
+msgid "Programming"
+msgstr "Prògramachadh"
+
+#: ../desktop-directories/Development.directory.in.h:2
+msgid "Tools for software development"
+msgstr "Innealan airson leasachadh bathair-bhog"
+
+#: ../desktop-directories/Education.directory.in.h:1
+msgid "Education"
+msgstr "Foghlam"
+
+#: ../desktop-directories/Game.directory.in.h:1
+msgid "Games"
+msgstr "Geamannan"
+
+#: ../desktop-directories/Game.directory.in.h:2
+msgid "Games and amusements"
+msgstr "Geamannan ⁊ fealla-dhà"
+
+#: ../desktop-directories/Graphics.directory.in.h:1
+msgid "Graphics"
+msgstr "Grafaigeachd"
+
+#: ../desktop-directories/Graphics.directory.in.h:2
+msgid "Graphics applications"
+msgstr "Prògraman grafaigeachd"
+
+#: ../desktop-directories/Network.directory.in.h:1
+msgid "Internet"
+msgstr "An t-eadar-lìon"
+
+#: ../desktop-directories/Network.directory.in.h:2
+msgid "Programs for Internet access such as web and email"
+msgstr "Prògraman leis am faighear cothrom air an eadar-lìon, can brabhsairean is prògraman puist-d"
+
+#: ../desktop-directories/Office.directory.in.h:1
+msgid "Office"
+msgstr "Oifis"
+
+#: ../desktop-directories/Office.directory.in.h:2
+msgid "Office Applications"
+msgstr "Prògaman oifise"
+
+#: ../desktop-directories/System-Tools.directory.in.h:1
+msgid "System Tools"
+msgstr "Innealan siostaim"
+
+#: ../desktop-directories/System-Tools.directory.in.h:2
+msgid "System configuration and monitoring"
+msgstr "Rèiteachadh an t-siostaim agus marasgladh"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "Inntrigeadh uile-choitcheann"
+
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "Roghainnean an inntrigidh uile-choitchinn"
+
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "Trealaich"
+
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Trealaich an deasga"
+
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Aplacaidean"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "Feadhainn eile"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Applications that did not fit in other categories"
+msgstr "Aplacaidean aig nach eil roinn-seòrsa iomchaidh eile"
+
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "An corr"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Goireasachdan"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Innealan GNOME a tha beag ach feumail"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "Aplacaidean-lìn"
+
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Aplacaidean is làraichean a chaidh a shàbhaladh on lìon"
+
+#~ msgid "Action"
+#~ msgstr "Action"
+
+#~ msgid "Action games"
+#~ msgstr "Geamannan action"
+
+#~ msgid "Adventure"
+#~ msgstr "Driod-fhortan"
+
+#~ msgid "Adventure style games"
+#~ msgstr "Geamannan driod-fhortain"
+
+#~ msgid "Arcade"
+#~ msgstr "Arcade"
+
+#~ msgid "Arcade style games"
+#~ msgstr "Geamannan arcade"
+
+#~ msgid "Falling blocks"
+#~ msgstr "Blocaichean a' tuiteam"
+
+#~ msgid "Falling blocks games"
+#~ msgstr "Geamannan sa bheil blocaichean a' tuiteam"
+
+#~ msgid "Board"
+#~ msgstr "Bòrd"
+
+#~ msgid "Board games"
+#~ msgstr "Geamannan-bùird"
+
+#~ msgid "Cards"
+#~ msgstr "Cairtean"
+
+#~ msgid "Card games"
+#~ msgstr "Geamannan chairtean"
+
+#~ msgid "Debian"
+#~ msgstr "Debian"
+
+#~ msgid "The Debian menu"
+#~ msgstr "Clàr-taice Debian"
+
+#~ msgid "Science"
+#~ msgstr "Saidheans"
+
+#~ msgid "Scientific applications"
+#~ msgstr "Aplacaidean saidheansail"
+
+#~ msgid "Kids"
+#~ msgstr "Clann"
+
+#~ msgid "Games for kids"
+#~ msgstr "Geamannan cloinne"
+
+#~ msgid "Logic"
+#~ msgstr "Loidig"
+
+#~ msgid "Logic and puzzle games"
+#~ msgstr "Geamannan loidig ⁊ tòimhseachain"
+
+#~ msgid "Role playing"
+#~ msgstr "Cluich mas fhìor"
+
+#~ msgid "Role playing games"
+#~ msgstr "Geamannan cluich mas fhìor"
+
+#~ msgid "Administration"
+#~ msgstr "Rianachd"
+
+#~ msgid "Change system-wide settings (affects all users)"
+#~ msgstr ""
+#~ "Atharraich roghainnean aig am bi buaidh air feadh an t-siostaim (air gach "
+#~ "cleachdaiche)"
+
+#~ msgid "Preferences"
+#~ msgstr "Roghainnean"
+
+#~ msgid "Personal preferences"
+#~ msgstr "Roghainnean pearsanta"
+
+#~ msgid "Simulation"
+#~ msgstr "Samhlachadh"
+
+#~ msgid "Simulation games"
+#~ msgstr "Geamannan samhlachaidh"
+
+#~ msgid "Sports"
+#~ msgstr "Spòrs"
+
+#~ msgid "Sports games"
+#~ msgstr "Geamannan spòrs"
+
+#~ msgid "Strategy"
+#~ msgstr "Ro-innleachd"
+
+#~ msgid "Strategy games"
+#~ msgstr "Geamannan ro-innleachdail"
+
+#~ msgid "Name"
+#~ msgstr "Ainm"
+
+#~ msgid "Hardware"
+#~ msgstr "Bathar Cruaidh"
+
+#~ msgid "Personal"
+#~ msgstr "Pearsanta"
+
+#~ msgid "System"
+#~ msgstr "Siostam"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Prògraman:"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Clàr-iùilean:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "Deasaiche clar-taic simplidh %s"
+
+#~ msgid "Personal settings"
+#~ msgstr "Suidheachaidhean pearsanta"
+
+#~ msgid "System settings"
+#~ msgstr "Suidheachaidhean siostam"
+
+#~ msgid "Edit Menus"
+#~ msgstr "Deasaich clàr-iùilean"
+
+#~ msgid "Menu Editor"
+#~ msgstr "Deasaiche clàr-iùil"
+
+#~ msgid "_Defaults"
+#~ msgstr "_Bunaitean"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Cha b'urrainn faighinn lorg air am phasgan dhachaigh: neo-stèidheachd an /"
+#~ "etc/passwd agus gun luach airson $HOME anns a àrainneachd"
+
+#~ msgid "Show"
+#~ msgstr "Seall"
+
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "Suidheachaidhean iomadaidh innleachd bathar cruaidh"
