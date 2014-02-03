@@ -1,7 +1,7 @@
 # translation of gnome-menus.master.kn.po to Kannada
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009, 2010, 2012, 2013.
 msgid ""
 msgstr ""
@@ -9,15 +9,15 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-02-19 22:31+0000\n"
-"PO-Revision-Date: 2013-03-18 16:02+0530\n"
+"PO-Revision-Date: 2013-03-18 06:32-0400\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
-"Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Language: kn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.2.3\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -126,125 +126,3 @@ msgstr "ಜಾಲ ಅನ್ವಯಗಳು"
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
 msgstr "ಜಾಲದಿಂದ ಉಳಿಸಲಾದ ಅನ್ವಯಗಳು ಮತ್ತು ತಾಣಗಳು"
-
-#~ msgid "Hardware"
-#~ msgstr "ಯಂತ್ರಾಂಶ"
-
-#~ msgid "Settings for several hardware devices"
-#~ msgstr "ಹಲವಾರು ಯಂತ್ರಾಂಶ ಸಾಧನಗಳಿಗಾಗಿನ ಸಿದ್ಧತೆಗಳು"
-
-#~ msgid "Personal"
-#~ msgstr "ವೈಯಕ್ತಿಕ"
-
-#~ msgid "Personal settings"
-#~ msgstr "ವೈಯಕ್ತಿಕ ಸಿದ್ಧತೆಗಳು"
-
-#~ msgid "System"
-#~ msgstr "ವ್ಯವಸ್ಥೆ"
-
-#~ msgid "System settings"
-#~ msgstr "ವ್ಯವಸ್ಥೆಯ ಸಿದ್ಧತೆಗಳು"
-
-#~ msgid "Menu Editor"
-#~ msgstr "ಪರಿವಿಡಿ ಸಂಪಾದಕ"
-
-#~ msgid "Edit Menus"
-#~ msgstr "ಪರಿವಿಡಿಗಳನ್ನು ಸಂಪಾದಿಸು"
-
-#~ msgid "_Defaults"
-#~ msgstr "ಪೂರ್ವನಿಯೋಜಿತ (_D)"
-
-#~ msgid "_Menus:"
-#~ msgstr "ಪರಿವಿಡಿಗಳು (_M):"
-
-#~ msgid "_Applications:"
-#~ msgstr "ಅನ್ವಯಗಳು (_A):"
-
-#~ msgid "Simple Menu Editor %s"
-#~ msgstr "ಸರಳ ಪರಿವಿಡಿ ಸಂಪಾದಕ %s"
-
-#~ msgid "Name"
-#~ msgstr "ಹೆಸರು"
-
-#~ msgid "Show"
-#~ msgstr "ತೋರಿಸು"
-
-#~ msgid ""
-#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
-#~ "in environment"
-#~ msgstr ""
-#~ "ನೆಲೆ ಕಡತಕೋಶವು ಕಂಡುಬಂದಿಲ್ಲ: /etc/passwd ನಲ್ಲಿ ಸಿದ್ಧಗೊಳಿಸಿಲ್ಲ ಹಾಗು ವಾತಾವರಣದಲ್ಲಿ "
-#~ "$HOME ಗೆ ಯಾವುದೇ ಮೌಲ್ಯವಿಲ್ಲ"
-
-#~ msgid "Internet and Network"
-#~ msgstr "ಅಂತರಜಾಲ ಹಾಗು ಜಾಲಬಂಧ"
-
-#~ msgid "Network-related settings"
-#~ msgstr "ಜಾಲಬಂಧ-ಸಂಬಂಧಿತ ಸಿದ್ಧತೆಗಳು"
-
-#~ msgid "Look and Feel"
-#~ msgstr "ನೋಟ ಹಾಗು ಮಾಟ"
-
-#~ msgid "Settings controlling the desktop appearance and behavior"
-#~ msgstr "ಗಣಕತೆರೆಯ ಸ್ವರೂಪ ಹಾಗು ವರ್ತನೆಯನ್ನು ನಿಯಂತ್ರಿಸುವ ಸಿದ್ಧತೆಗಳು"
-
-#~ msgid "Administration"
-#~ msgstr "ನಿರ್ವಹಣೆ"
-
-#~ msgid "Change system-wide settings (affects all users)"
-#~ msgstr ""
-#~ "ವ್ಯವಸ್ಥೆಯಾದ್ಯಂತದ ಸಿದ್ಧತೆಗಳನ್ನು ಬದಲಾಯಿಸಿ (ಎಲ್ಲಾ ಬಳಕೆದಾರರ ಮೇಲೂ ಪರಿಣಾಮಬೀರುತ್ತದೆ)"
-
-#~ msgid "Personal preferences"
-#~ msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು"
-
-#~ msgid "Preferences"
-#~ msgstr "ಆದ್ಯತೆಗಳು"
-
-#~ msgid "Personal preferences and administration settings"
-#~ msgstr "ವೈಯಕ್ತಿಕ ಆದ್ಯತೆಗಳು ಹಾಗು ನಿರ್ವಹಣಾ ಸಿದ್ಧತೆಗಳು"
-
-#~ msgid "Menu file"
-#~ msgstr "ಮೆನು ಕಡತ"
-
-#~ msgid "MENU_FILE"
-#~ msgstr "MENU_FILE"
-
-#~ msgid "Monitor for menu changes"
-#~ msgstr "ಮೆನು ಬದಲಾವಣೆಗಳ ಪರಿವೀಕ್ಷಕ"
-
-#~ msgid "Include <Exclude>d entries"
-#~ msgstr "<Exclude>ಆದಂತಹ ನಮೂದುಗಳನ್ನು ಅಡಕಗೊಳಿಸು"
-
-#~ msgid "Include NoDisplay=true entries"
-#~ msgstr "NoDisplay=true ನಮೂದನ್ನು ಅಡಕಗೊಳಿಸು"
-
-#~ msgid "Invalid desktop file ID"
-#~ msgstr "ಸಿಂಧುವಲ್ಲದ ಗಣಕತೆರೆ ಕಡತ ID"
-
-#~ msgid "[Invalid Filename]"
-#~ msgstr "[ಸಿಂಧುವಲ್ಲದ ಕಡತಹೆಸರು]"
-
-#~ msgid " <excluded>"
-#~ msgstr " <excluded>"
-
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ "==== Menu changed, reloading ====\n"
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ "==== ಮೆನು ಬದಲಾಯಿಸಲ್ಪಟ್ಟಿದೆ, ಪುನಃ ಲೋಡ್ ಆಗುತ್ತಿದೆ ====\n"
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Menu tree is empty"
-#~ msgstr "ಮೆನು ವೃಕ್ಷವು(tree) ಖಾಲಿ ಇದೆ"
-
-#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
-#~ msgstr "- ಗಣಕತೆರೆ ಮೆನು ಸೂಚನೆಗಳ GNOME ನ ಅನ್ವಯಿಸುವಿಕೆಯನ್ನು ಪರೀಕ್ಷಿಸುತ್ತದೆ"
