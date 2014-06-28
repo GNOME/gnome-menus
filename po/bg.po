@@ -1,16 +1,17 @@
 # Bulgarian translation of gnome-menus po-file.
 # Copyright (C) 2004, 2005, 2007, 2008, 2009 Free Software Foundation
+# Copyright (C) 2014 Free Software Foundation
 # This file is distributed under the same license as the gnome-menus package.
 # Vladimir "Kaladan" Petkov <vpetkov@i-space.org>, 2004, 2005, 2007.
 # Rostislav "zbrox" Raykov <zbrox@i-space.org>, 2005.
-# Alexander Shopov <ash@kambanaria.org>, 2008, 2009.
+# Alexander Shopov <ash@kambanaria.org>, 2008, 2009, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-04 07:16+0300\n"
-"PO-Revision-Date: 2012-07-04 07:16+0300\n"
+"POT-Creation-Date: 2014-06-28 07:48+0300\n"
+"PO-Revision-Date: 2014-06-28 07:47+0300\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -55,14 +56,6 @@ msgstr "Графика"
 msgid "Graphics applications"
 msgstr "Програми за работа с графика"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Хардуер"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Настройки за много хардуерни устройства"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Интернет"
@@ -78,23 +71,6 @@ msgstr "Офис"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Офисни програми"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Лични"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Лични настройки"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Система"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Системни настройки"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -132,6 +108,18 @@ msgstr "Други"
 msgid "Applications that did not fit in other categories"
 msgstr "Програми, които не принадлежат към друга категория"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Разни"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Инструменти"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Малки, но полезни програми-инструменти от GNOME"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Програми от уеб"
@@ -139,46 +127,3 @@ msgstr "Програми от уеб"
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
 msgstr "Програми и сайтове запазени от уеб"
-
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Редактор на менюта"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Редакция на менютата"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Стандартни"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Менюта:"
-
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Програми:"
-
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Лесен редактор на менюта %s"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Име"
-
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Показване"
-
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Домашната папка не може да бъде намерена: не е зададена в /etc/passwd и няма "
-"стойност за $HOME в средата"
