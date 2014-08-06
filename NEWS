@@ -1,4 +1,26 @@
 ==============
+Version 3.13.3
+==============
+
+        * Fix some crashes
+        * Fix some refcounting bugs
+        * Fix some leaks
+        * Add some small effiencies to our notify handlers
+
+Translation updates:
+
+        * Alexander Shopov
+        * Anders Jonsson
+        * Anish A
+        * Claude Paroz
+        * Dimitris Spingos
+        * GunChleoc
+        * Khoem Sokhem
+        * Shankar Prasad
+        * Theppitak Karoonboonyanan
+        * Tom Tryfonidis
+
+==============
 Version 3.10.1
 ==============
 
