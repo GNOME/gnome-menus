@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-10-14 17:05+0000\n"
-"PO-Revision-Date: 2012-10-14 13:41-0500\n"
+"POT-Creation-Date: 2014-10-06 19:03+0000\n"
+"PO-Revision-Date: 2014-10-19 22:13-0500\n"
 "Last-Translator: Bahodir Mansurov <6ahodir@gmail.com>\n"
 "Language-Team: Uzbek@cyrillic\n"
 "Language: uz\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.6.9\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -55,21 +56,13 @@ msgstr "Тасвир"
 msgid "Graphics applications"
 msgstr "Тасвирий дастурлар"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Жиҳоз"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Бир неча жиҳоз ускуналари учун параметрлар"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Интернет"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Интернетга чиқадиган тўр ва имейлга ухшаган дастурлар"
+msgstr "Интернетга чиқадиган тўр ва электрон почтага ўхшаган дастурлар"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -78,23 +71,6 @@ msgstr "Офис"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "Офис дастурлари"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "Шахсий"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "Шахсий параметрлар"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Система"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Система параметрлари"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -106,11 +82,11 @@ msgstr "Системани мослаш ва кузатиш"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Универсал рухсат"
+msgstr "Махсус имкониятлар"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Универсал рухсат параметрлари"
+msgstr "Махсус имкониятлар параметрлари"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -132,6 +108,18 @@ msgstr "Бошқа"
 msgid "Applications that did not fit in other categories"
 msgstr "Бошқа тоифага кирмаган дастурлар"
 
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Турли хил"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Воситалар"
+
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Кичик лекин фойдали GNOME ускуналари"
+
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
 msgstr "Web дастурлари"
@@ -140,45 +128,51 @@ msgstr "Web дастурлари"
 msgid "Applications and sites saved from Web"
 msgstr "Webдан сақлаб олинган дастур ва сайтлар"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Меню редактори"
+#~ msgid "Hardware"
+#~ msgstr "Жиҳоз"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "Менюларни тахрирлаш"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "Бир неча жиҳоз ускуналари учун параметрлар"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Defaults"
-msgstr "_Асл қийматлар"
+#~ msgid "Personal"
+#~ msgstr "Шахсий"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Menus:"
-msgstr "_Менюлар:"
+#~ msgid "Personal settings"
+#~ msgstr "Шахсий параметрлар"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Applications:"
-msgstr "_Дастурлар:"
+#~ msgid "System"
+#~ msgstr "Система"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:44
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "Оддий меню редактори %s"
+#~ msgid "System settings"
+#~ msgstr "Система параметрлари"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "Номи"
+#~ msgid "Menu Editor"
+#~ msgstr "Меню редактори"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "Кўрсатиш"
+#~ msgid "Edit Menus"
+#~ msgstr "Менюларни тахрирлаш"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Уй директорияси топилмади: /etc/passwd файлида белгиланмаган ва муҳитда "
-"$HOME нинг қиймати йўқ"
+#~ msgid "_Defaults"
+#~ msgstr "_Асл қийматлар"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Менюлар:"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Дастурлар:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "Оддий меню редактори %s"
+
+#~ msgid "Name"
+#~ msgstr "Номи"
+
+#~ msgid "Show"
+#~ msgstr "Кўрсатиш"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Уй директорияси топилмади: /etc/passwd файлида белгиланмаган ва муҳитда "
+#~ "$HOME нинг қиймати йўқ"
