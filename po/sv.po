@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-04-10 07:23+0000\n"
+"POT-Creation-Date: 2014-10-06 19:03+0000\n"
 "PO-Revision-Date: 2014-04-10 17:46+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -83,11 +83,11 @@ msgstr "Systemkonfiguration och systemövervakning"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Allmän åtkomst"
+msgstr "Hjälpmedel"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Inställningar för allmän åtkomst"
+msgstr "Inställningar för hjälpmedel"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
