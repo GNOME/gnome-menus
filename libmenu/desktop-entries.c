@@ -97,7 +97,7 @@ get_current_desktops (void)
 
       desktops = g_getenv ("XDG_CURRENT_DESKTOP");
 
-      if (desktops)
+      if (!desktops)
         desktops = "";
 
       tmp = g_strsplit (desktops, ":", 0);
