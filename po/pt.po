@@ -2,19 +2,24 @@
 # Copyright © 2004, 2005, 2006, 2007, 2009, 2012, 2013 gnome-menus
 # This file is distributed under the same license as the gnome-menus package.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006, 2007, 2009, 2012, 2013.
+# 
+# Pedro Albuquerque <palbuquerque73@openmailbox.com>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.8\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-12 13:02+0000\n"
-"PO-Revision-Date: 2013-03-12 13:10+0000\n"
-"Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
-"Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-06-07 19:20+0000\n"
+"PO-Revision-Date: 2015-06-08 07:33+0100\n"
+"Last-Translator: Pedro Albuquerque <palbuquerque73@openmailbox.com>\n"
+"Language-Team: Português <palbuquerque73@openmailbox.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -66,11 +71,11 @@ msgstr "Produtividade"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Aplicações de Produtividade"
+msgstr "Aplicações de produtividade"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Ferramentas de Sistema"
+msgstr "Ferramentas de sistema"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
@@ -78,11 +83,11 @@ msgstr "Configuração de sistema e monitorização"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
-msgstr "Acesso Universal"
+msgstr "Acesso universal"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:2
 msgid "Universal Access Settings"
-msgstr "Definições de Acesso Universal"
+msgstr "Definições de acesso universal"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
@@ -90,7 +95,7 @@ msgstr "Acessórios"
 
 #: ../desktop-directories/Utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Acessórios de área de trabalho"
+msgstr "Acessórios da área de trabalho"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
@@ -102,7 +107,7 @@ msgstr "Outras"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "Aplicações que não se enquadravam em nenhuma outra categoria"
+msgstr "Aplicações que não se enquadram em nenhuma outra categoria"
 
 #: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
 msgid "Sundry"
