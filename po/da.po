@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-17 14:44+0100\n"
+"POT-Creation-Date: 2016-03-20 23:13+0100\n"
 "PO-Revision-Date: 2013-03-16 18:11+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -62,7 +62,7 @@ msgstr "Internet"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Programmer til internetadgang, såsom web og e-post"
+msgstr "Programmer til internetadgang, såsom web og e-mail"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
