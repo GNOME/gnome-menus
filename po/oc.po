@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the gnome-menu package.
 # Cédric Valmary <cvalmary@yahoo.fr>, 2015.
 # Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>, 2015.
+# Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.HEAD.fr\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-10-26 09:20+0000\n"
-"PO-Revision-Date: 2015-10-31 09:20+0200\n"
-"Last-Translator: Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>\n"
-"Language-Team: Tot en òc (totenoc.eu)\n"
+"POT-Creation-Date: 2015-10-31 21:19+0000\n"
+"PO-Revision-Date: 2016-05-05 21:47+0200\n"
+"Last-Translator: Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>\n"
+"Language-Team: Tot En Òc\n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -107,7 +108,7 @@ msgstr "Autre"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
-msgstr "Las aplicacionss que convenon pas a cap de categoria mai"
+msgstr "Las aplicacions que convenon pas a cap de categoria mai"
 
 #: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
 msgid "Sundry"
@@ -243,15 +244,15 @@ msgstr "Aplicacions e sites enregistrats dempuèi lo Web"
 #~ msgstr "Preferéncias e paramètres personals"
 
 #~ msgid "Simple Menu Editor %s"
-#~ msgstr "Editor simple de menus %s"
+#~ msgstr "Editor simple de menús %s"
 
 #~ msgid "Look and Feel"
-#~ msgstr "Apparence"
+#~ msgstr "Aparéncia"
 
 #~ msgid "Settings controlling the desktop appearance and behavior"
-#~ msgstr "Paramètres contrôlant l'apparence e lo comportement del burèu"
+#~ msgstr "Paramètres que contraròtlan l'aparéncia e lo comportament del burèu"
 
 #~ msgid "Change system-wide settings (affects all users)"
 #~ msgstr ""
-#~ "Modifica globalement los paramètres del sistèma (affecte totes los "
+#~ "Modifica globalament los paramètres del sistèma (afècta totes los "
 #~ "utilizaires)"
