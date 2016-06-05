@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-26 19:29+0200\n"
-"PO-Revision-Date: 2012-07-26 16:33+0000\n"
+"POT-Creation-Date: 2012-07-26 17:41+0000\n"
+"PO-Revision-Date: 2012-08-08 12:46+0100\n"
 "Last-Translator: Przemysław Buczkowski <przemub@yahoo.pl>\n"
 "Language-Team: Silesian <szl@li.org>\n"
 "Language: szl\n"
@@ -130,13 +130,12 @@ msgid "Applications that did not fit in other categories"
 msgstr "Softwar kery niy wkludza siã dlŏ inkszych kategoryji"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
-#, fuzzy
 msgid "Web Applications"
 msgstr "Softwar"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
 msgid "Applications and sites saved from Web"
-msgstr ""
+msgstr "Softwar a zajty spamiyntane z neca"
 
 #: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
 msgid "Menu Editor"
