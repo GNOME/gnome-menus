@@ -9,22 +9,24 @@
 # Suso Baleato <suso.baleato@xunta.es>,2009.
 # Anton Meixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@ubuntu.com>, 2010, 2011.
-# Fran Dieguez <frandieguez@gnome.org>, 2009, 2012, 2013.
+# Fran Dieguez <frandieguez@gnome.org>, 2009, 2012, 2013, 2017.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-20 10:37+0100\n"
-"PO-Revision-Date: 2013-02-20 10:38+0200\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-04-08 14:34+0000\n"
+"PO-Revision-Date: 2017-08-10 11:40+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: gnome-l10n-gl@gnome.org\n"
+"Language-Team: Galician\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
 msgid "Sound & Video"
@@ -116,7 +118,7 @@ msgstr "Aplicativos que non se axustan a outras categorías"
 
 #: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
 msgid "Sundry"
-msgstr "Diversos"
+msgstr "Varios"
 
 #: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
 msgid "Utilities"
@@ -124,7 +126,7 @@ msgstr "Utilidades"
 
 #: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
 msgid "Small but useful GNOME tools"
-msgstr "Ferramentas de GNOME pequenas pero útils"
+msgstr "Ferramentas de GNOME pequenas pero útiles"
 
 #: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
 msgid "Web Applications"
