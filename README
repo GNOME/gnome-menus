@@ -7,16 +7,16 @@ files for the GNOME menu, as well as a simple menu editor.
 The libgnome-menu library implements the "Desktop Menu Specification"
 from freedesktop.org:
 
-  http://freedesktop.org/wiki/Specifications/menu-spec
-  http://specifications.freedesktop.org/menu-spec/menu-spec-latest.html
+  https://freedesktop.org/wiki/Specifications/menu-spec
+  https://specifications.freedesktop.org/menu-spec/menu-spec-latest.html
 
 You may download updates to the package from:
 
-   http://download.gnome.org/sources/gnome-menus/
+   https://download.gnome.org/sources/gnome-menus/
 
 To discuss gnome-menus, you may use the desktop-devel-list mailing list:
 
-  http://mail.gnome.org/mailman/listinfo/desktop-devel-list
+  https://mail.gnome.org/mailman/listinfo/desktop-devel-list
 
 
 Installation
