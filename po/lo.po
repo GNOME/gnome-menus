@@ -8,24 +8,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.gnome-2-30.lo\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-19 12:47+0300\n"
-"PO-Revision-Date: 2010-11-18 08:51+0700\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2018-06-10 16:58+0000\n"
+"PO-Revision-Date: 2018-09-11 10:29+0700\n"
 "Last-Translator: Anousak Souphavanh <anousak@gmail.com>\n"
 "Language-Team: Lao <lo@li.org>\n"
 "Language: lo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #: ../desktop-directories/AudioVideo.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "ລາຍການສືປະສົມ"
-
-#: ../desktop-directories/AudioVideo.directory.in.h:2
 msgid "Sound & Video"
 msgstr "ສຽງ ເເລະ ວີດີໂອ"
+
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "ລາຍການສືປະສົມ"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -55,14 +55,6 @@ msgstr "ຮູບພາບ"
 msgid "Graphics applications"
 msgstr "ໂປຣແກຣມຮູບພາບ"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "ຮາດແວຣ໌"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "ຕັ້ງຄ່າອຸປະກອນຮາດແວຣ໌ຕ່າງໆ"
-
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "ອິນເຕີເນັດ"
@@ -78,23 +70,6 @@ msgstr "ໂປຣເເກຣມຫ້ອງການ"
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
 msgstr "ໂປຣມແກຣມສຳລັບຫ້ອງການ"
-
-#. Translators: this is Personal as in "Personal settings"
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal"
-msgstr "ສ່ວນຕົວ"
-
-#: ../desktop-directories/Personal.directory.in.h:3
-msgid "Personal settings"
-msgstr "ຕັ້ງຄ່າສ່ວນຕົວ"
-
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "ລະບົບ"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "ຕັ້ງຄ່າລະບົບ"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -125,55 +100,77 @@ msgid "Applications"
 msgstr "ໂປຣເເກຣມທົວໄປ"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "ອື່ນໆ"
+
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
 msgstr "ໂປຣເເກຣມ ບໍ່ຢູ່ໃນໝວດອື່ນໆ"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
-msgid "Other"
-msgstr "ອື່ນ ໆ"
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "ອື່ນໆ"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "ຕົວແກ້ໄຂ ລາຍການ"
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "ເຄື່ອງມື"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:1
-msgid "Edit Menus"
-msgstr "ແກ້ໄຂ ລາຍການ"
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "ນ້ອຍ ແຕ່ວ່າເປັນເຄື່ອງມືທີ່ເປັນປະໂຫຍດຂອງ GNOME"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:2
-msgid "_Applications:"
-msgstr "ໂ_ປຣເເກຣມ:"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "ເວັບແອັບພລິເຄຊັນ"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:3
-msgid "_Defaults"
-msgstr "ຄ່າ_ເດີມ"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "ແອັບພລິເຄຊັນ ແລະ ເວັບທີ່ໄດ້ບັນທຶກໄວ້ຈາກເວັບຕ່າງໆ"
 
-#: ../simple-editor/gmenu-simple-editor.ui.h:4
-msgid "_Menus:"
-msgstr "_ລາຍການ:"
+#~ msgid "Hardware"
+#~ msgstr "ຮາດແວຣ໌"
 
-#. Translators: %s is the version number
-#: ../simple-editor/GMenuSimpleEditor/main.py:47
-#, python-format
-msgid "Simple Menu Editor %s"
-msgstr "ເຄື່ອງມືແກ້ໄຂລາຍການແບບງ່າຍ%s"
+#~ msgid "Settings for several hardware devices"
+#~ msgstr "ຕັ້ງຄ່າອຸປະກອນຮາດແວຣ໌ຕ່າງໆ"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:97
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:124
-msgid "Name"
-msgstr "ຊື່"
+#~ msgid "Personal"
+#~ msgstr "ສ່ວນຕົວ"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:116
-msgid "Show"
-msgstr "ສະແດງ"
+#~ msgid "Personal settings"
+#~ msgstr "ຕັ້ງຄ່າສ່ວນຕົວ"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"ຫາດາຍເລັກໂຕລີທີ່ບ້ານບໍ່ພໍ້: ບໍ່ໄດ້ຕັ້ງຄ່າໄວ້ໃນ /etc/passwd ເເລະ ບໍ່ໄດ້ກໍານົດຄ່າສະເພາະ $HOME ໃນ "
-"ເເວດລ້ອມ"
+#~ msgid "System"
+#~ msgstr "ລະບົບ"
+
+#~ msgid "System settings"
+#~ msgstr "ຕັ້ງຄ່າລະບົບ"
+
+#~ msgid "Menu Editor"
+#~ msgstr "ຕົວແກ້ໄຂ ລາຍການ"
+
+#~ msgid "Edit Menus"
+#~ msgstr "ແກ້ໄຂ ລາຍການ"
+
+#~ msgid "_Applications:"
+#~ msgstr "ໂ_ປຣເເກຣມ:"
+
+#~ msgid "_Defaults"
+#~ msgstr "ຄ່າ_ເດີມ"
+
+#~ msgid "_Menus:"
+#~ msgstr "_ລາຍການ:"
+
+#~ msgid "Simple Menu Editor %s"
+#~ msgstr "ເຄື່ອງມືແກ້ໄຂລາຍການແບບງ່າຍ%s"
+
+#~ msgid "Name"
+#~ msgstr "ຊື່"
+
+#~ msgid "Show"
+#~ msgstr "ສະແດງ"
+
+#~ msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+#~ msgstr "ຫາດາຍເລັກໂຕລີທີ່ບ້ານບໍ່ພໍ້: ບໍ່ໄດ້ຕັ້ງຄ່າໄວ້ໃນ /etc/passwd ເເລະ ບໍ່ໄດ້ກໍານົດຄ່າສະເພາະ $HOME ໃນ ເເວດລ້ອມ"
 
 #~ msgid "Internet and Network"
 #~ msgstr "ອິນເຕີເນັດ ແລະ ເຄືອຂ່າຍ"
