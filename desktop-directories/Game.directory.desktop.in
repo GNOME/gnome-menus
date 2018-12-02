@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Games
+Comment=Games and amusements
+# TRANSLATORS: Don't translate this text (this is icon name)
+Icon=applications-games
+Type=Directory

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Applications
+Comment=Applications
+# TRANSLATORS: Don't translate this text (this is icon name)
+Icon=applications-other
+Type=Directory

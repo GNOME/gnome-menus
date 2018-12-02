@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Office
+Comment=Office Applications
+# TRANSLATORS: Don't translate this text (this is icon name)
+Icon=applications-office
+Type=Directory

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Other
+Comment=Applications that did not fit in other categories
+# TRANSLATORS: Don't translate this text (this is icon name)
+Icon=applications-other
+Type=Directory
