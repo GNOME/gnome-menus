@@ -1,4 +1,5 @@
 [Desktop Entry]
-_Name=Education
+Name=Education
+# TRANSLATORS: Don't translate this text (this is icon name)
 Icon=applications-science
 Type=Directory

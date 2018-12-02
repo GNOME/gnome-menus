@@ -1,5 +1,6 @@
 [Desktop Entry]
-_Name=Graphics
-_Comment=Graphics applications
+Name=Graphics
+Comment=Graphics applications
+# TRANSLATORS: Don't translate this text (this is icon name)
 Icon=applications-graphics
 Type=Directory

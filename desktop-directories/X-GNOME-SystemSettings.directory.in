@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=System Settings
+# TRANSLATORS: Don't translate this text (this is icon name)
 Icon=gnome-settings
 Type=Directory
 NoDisplay=true

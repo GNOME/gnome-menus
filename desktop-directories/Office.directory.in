@@ -1,5 +1,6 @@
 [Desktop Entry]
-_Name=Office
-_Comment=Office Applications
+Name=Office
+Comment=Office Applications
+# TRANSLATORS: Don't translate this text (this is icon name)
 Icon=applications-office
 Type=Directory

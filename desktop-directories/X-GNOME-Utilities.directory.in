@@ -1,5 +1,6 @@
 [Desktop Entry]
-_Name=Utilities
-_Comment=Small but useful GNOME tools
+Name=Utilities
+Comment=Small but useful GNOME tools
+# TRANSLATORS: Don't translate this text (this is icon name)
 Icon=applications-accessories
 Type=Directory

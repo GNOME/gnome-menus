@@ -1,5 +1,6 @@
 [Desktop Entry]
-_Name=Web Applications
-_Comment=Applications and sites saved from Web
+Name=Web Applications
+Comment=Applications and sites saved from Web
+# TRANSLATORS: Don't translate this text (this is icon name)
 Icon=applications-internet
 Type=Directory

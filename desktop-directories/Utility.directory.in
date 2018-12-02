@@ -1,5 +1,6 @@
 [Desktop Entry]
-_Name=Accessories
-_Comment=Desktop accessories
+Name=Accessories
+Comment=Desktop accessories
+# TRANSLATORS: Don't translate this text (this is icon name)
 Icon=applications-accessories
 Type=Directory
