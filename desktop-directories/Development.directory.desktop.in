@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Programming
+Comment=Tools for software development
+# TRANSLATORS: Don't translate this text (this is icon name)
+Icon=applications-development
+Type=Directory

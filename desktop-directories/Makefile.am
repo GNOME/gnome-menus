@@ -1,26 +1,28 @@
 directorydir = $(datadir)/desktop-directories
 
 directory_in_files =				\
-	AudioVideo.directory.in			\
-	Development.directory.in		\
-	Education.directory.in			\
-	Game.directory.in			\
-	Graphics.directory.in			\
-	Network.directory.in			\
-	Office.directory.in			\
-	System-Tools.directory.in		\
-	Utility.directory.in			\
-	Utility-Accessibility.directory.in	\
-	X-GNOME-Other.directory.in		\
-	X-GNOME-Menu-Applications.directory.in	\
-	X-GNOME-Sundry.directory.in 		\
-	X-GNOME-Utilities.directory.in 		\
-	X-GNOME-WebApplications.directory.in 	\
-	X-GNOME-SystemSettings.directory.in
+	AudioVideo.directory.desktop.in			\
+	Development.directory.desktop.in		\
+	Education.directory.desktop.in			\
+	Game.directory.desktop.in			\
+	Graphics.directory.desktop.in			\
+	Network.directory.desktop.in			\
+	Office.directory.desktop.in			\
+	System-Tools.directory.desktop.in		\
+	Utility.directory.desktop.in			\
+	Utility-Accessibility.directory.desktop.in	\
+	X-GNOME-Other.directory.desktop.in		\
+	X-GNOME-Menu-Applications.directory.desktop.in	\
+	X-GNOME-Sundry.directory.desktop.in 		\
+	X-GNOME-Utilities.directory.desktop.in 		\
+	X-GNOME-WebApplications.directory.desktop.in 	\
+	X-GNOME-SystemSettings.directory.desktop.in
 
-directory_DATA = $(directory_in_files:.directory.in=.directory)
+directory_DATA = $(directory_in_files:.directory.desktop.in=.directory)
 
-@INTLTOOL_DIRECTORY_RULE@
+%.directory: %.directory.desktop.in
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -o $@-t \
+		-d $(top_srcdir)/po && mv $@-t $@
 
 EXTRA_DIST= $(directory_in_files)
 
