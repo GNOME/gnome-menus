@@ -299,10 +299,6 @@
         <Not><Category>Core</Category></Not>
         <Not><Category>Screensaver</Category></Not>
 
-        <!-- Really Fedora ??? -->
-        <Not><Filename>gnome-eog.desktop</Filename></Not>
-        <Not><Filename>gnome-file-roller.desktop</Filename></Not>
-        <Not><Filename>gnome-gucharmap.desktop</Filename></Not>
       </And>
     </Include>
   </Menu> <!-- End Other -->
