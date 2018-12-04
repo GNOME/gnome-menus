@@ -68,7 +68,6 @@
 
     <Exclude>
       <!-- Sundry exclusions -->
-      <Filename>orca.desktop</Filename>
     </Exclude>
   </Menu> <!-- End Accessibility -->
 
@@ -213,7 +212,6 @@
       <Filename>log4j-chainsaw.desktop</Filename>
       <Filename>log4j-logfactor5.desktop</Filename>
       <Filename>nm-connection-editor.desktop</Filename>
-      <Filename>orca.desktop</Filename>
       <Filename>org.gnome.PowerStats.desktop</Filename>
       <Filename>setroubleshoot.desktop</Filename>
       <Filename>system-config-date.desktop</Filename>
