@@ -33,18 +33,18 @@
       <!-- Exclude everything we put in the X-GNOME-Utilities whitelist.
 
            Please keep the list alphabetically sorted! -->
-      <Filename>deja-dup-preferences.desktop</Filename>
       <Filename>eog.desktop</Filename>
-      <Filename>evince.desktop</Filename>
-      <Filename>file-roller.desktop</Filename>
-      <Filename>gcalctool.desktop</Filename>
-      <Filename>gnome-dictionary.desktop</Filename>
-      <Filename>gnome-disks.desktop</Filename>
-      <Filename>gnome-font-viewer.desktop</Filename>
-      <Filename>gnome-screenshot.desktop</Filename>
-      <Filename>gnome-terminal.desktop</Filename>
-      <Filename>gnome-tweak-tool.desktop</Filename>
       <Filename>gucharmap.desktop</Filename>
+      <Filename>org.gnome.Calculator.desktop</Filename>
+      <Filename>org.gnome.DejaDup.desktop</Filename>
+      <Filename>org.gnome.Dictionary.desktop</Filename>
+      <Filename>org.gnome.DiskUtility.desktop</Filename>
+      <Filename>org.gnome.Evince.desktop</Filename>
+      <Filename>org.gnome.FileRoller.desktop</Filename>
+      <Filename>org.gnome.font-viewer.desktop</Filename>
+      <Filename>org.gnome.Screenshot.desktop</Filename>
+      <Filename>org.gnome.Terminal.desktop</Filename>
+      <Filename>org.gnome.tweaks.desktop</Filename>
       <Filename>seahorse.desktop</Filename>
       <Filename>vinagre.desktop</Filename>
       <Filename>yelp.desktop</Filename>
@@ -123,8 +123,7 @@
       <And>
         <Category>Graphics</Category>
         <Not><Filename>eog.desktop</Filename></Not>
-        <Not><Filename>gnome-eog.desktop</Filename></Not>
-        <Not><Filename>evince.desktop</Filename></Not>
+        <Not><Filename>org.gnome.Evince.desktop</Filename></Not>
       </And>
     </Include>
   </Menu> <!-- End Graphics -->
@@ -179,8 +178,8 @@
     <Include>
       <And>
         <Category>Office</Category>
-        <Not><Filename>evince.desktop</Filename></Not>
-        <Not><Filename>gnome-dictionary.desktop</Filename></Not>
+        <Not><Filename>org.gnome.Dictionary.desktop</Filename></Not>
+        <Not><Filename>org.gnome.Evince.desktop</Filename></Not>
       </And>
     </Include>
   </Menu> <!-- End Office -->
@@ -192,13 +191,12 @@
     <Include>
       <Filename>alacarte.desktop</Filename>
       <Filename>authconfig.desktop</Filename>
-      <Filename>dconf-editor.desktop</Filename>
+      <Filename>ca.desrt.dconf-editor.desktop</Filename>
       <Filename>fedora-release-notes.desktop</Filename>
       <Filename>firewall-config.desktop</Filename>
       <Filename>flash-player-properties.desktop</Filename>
       <Filename>gconf-editor.desktop</Filename>
       <Filename>gnome-abrt.desktop</Filename>
-      <Filename>gnome-power-statistics.desktop</Filename>
       <Filename>ibus-setup-anthy.desktop</Filename>
       <Filename>ibus-setup.desktop</Filename>
       <Filename>ibus-setup-hangul.desktop</Filename>
@@ -216,6 +214,7 @@
       <Filename>log4j-logfactor5.desktop</Filename>
       <Filename>nm-connection-editor.desktop</Filename>
       <Filename>orca.desktop</Filename>
+      <Filename>org.gnome.PowerStats.desktop</Filename>
       <Filename>setroubleshoot.desktop</Filename>
       <Filename>system-config-date.desktop</Filename>
       <Filename>system-config-firewall.desktop</Filename>
@@ -241,18 +240,17 @@
 
     <Exclude>
       <!-- Utilities exclusions -->
-      <Filename>baobab.desktop</Filename>
       <Filename>gnome-system-log.desktop</Filename>
       <Filename>gnome-system-monitor.desktop</Filename>
-      <Filename>gnome-terminal.desktop</Filename>
+      <Filename>org.gnome.baobab.desktop</Filename>
+      <Filename>org.gnome.Terminal.desktop</Filename>
 
       <!-- Sundry exclusions -->
-      <Filename>dconf-editor.desktop</Filename>
+      <Filename>ca.desrt.dconf-editor.desktop</Filename>
       <Filename>fedora-release-notes.desktop</Filename>
       <Filename>gconf-editor.desktop</Filename>
       <Filename>gnome-abrt.desktop</Filename>
-      <Filename>gnome-power-statistics.desktop</Filename>
-      <Filename>dconf-editor.desktop</Filename>
+      <Filename>org.gnome.PowerStats.desktop</Filename>
       <Filename>setroubleshoot.desktop</Filename>
     </Exclude>
   </Menu>   <!-- End System Tools -->
@@ -272,21 +270,21 @@
     <Directory>X-GNOME-Utilities.directory</Directory>
     <Include>
       <Category>X-GNOME-Utilities</Category>
-      <Filename>baobab.desktop</Filename>
-      <Filename>deja-dup-preferences.desktop</Filename>
       <Filename>eog.desktop</Filename>
-      <Filename>evince.desktop</Filename>
-      <Filename>file-roller.desktop</Filename>
-      <Filename>gcalctool.desktop</Filename>
-      <Filename>gnome-dictionary.desktop</Filename>
-      <Filename>gnome-disks.desktop</Filename>
-      <Filename>gnome-font-viewer.desktop</Filename>
-      <Filename>gnome-screenshot.desktop</Filename>
       <Filename>gnome-system-log.desktop</Filename>
       <Filename>gnome-system-monitor.desktop</Filename>
-      <Filename>gnome-terminal.desktop</Filename>
-      <Filename>gnome-tweak-tool.desktop</Filename>
       <Filename>gucharmap.desktop</Filename>
+      <Filename>org.gnome.baobab.desktop</Filename>
+      <Filename>org.gnome.Calculator.desktop</Filename>
+      <Filename>org.gnome.DejaDup.desktop</Filename>
+      <Filename>org.gnome.Dictionary.desktop</Filename>
+      <Filename>org.gnome.DiskUtility.desktop</Filename>
+      <Filename>org.gnome.Evince.desktop</Filename>
+      <Filename>org.gnome.FileRoller.desktop</Filename>
+      <Filename>org.gnome.fonts.desktop</Filename>
+      <Filename>org.gnome.Screenshot.desktop</Filename>
+      <Filename>org.gnome.Terminal.desktop</Filename>
+      <Filename>org.gnome.tweaks.desktop</Filename>
       <Filename>seahorse.desktop</Filename>
       <Filename>vinagre.desktop</Filename>
       <Filename>yelp.desktop</Filename>
