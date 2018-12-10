@@ -1,4 +1,18 @@
 ==============
+Version 3.31.3
+==============
+
+* desktop-entries: support multiple desktops in XDG_CURRENT_DESKTOP (Alberts)
+* libmenu: Remove support for legacy-dirs (Florian)
+* layout: Update .desktop filenames (Jeremy)
+* layout: Drop obsolete Fedora special case .desktop filenames (Jeremy)
+* miscellaneous fixes (Andre, Josselin)
+
+Contributors:
+ Jeremy Bicha, Andre Klapper, Josselin Mouette, Alberts Muktupāvels
+ Florian Müllner
+
+==============
 Version 3.13.3
 ==============
 
