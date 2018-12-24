@@ -13,7 +13,6 @@ libgnome_menu_3_include_HEADERS =		\
 	gmenu-tree.h
 
 libgnome_menu_3_sources =			\
-	canonicalize.c			\
 	desktop-entries.c		\
 	entry-directories.c		\
 	gmenu-tree.c			\
@@ -23,7 +22,6 @@ libgnome_menu_3_sources =			\
 
 libgnome_menu_3_la_SOURCES =		\
 	$(libgnome_menu_3_sources)	\
-	canonicalize.h			\
 	desktop-entries.h		\
 	entry-directories.h		\
 	gmenu-tree.h			\
