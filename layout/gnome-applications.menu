@@ -49,8 +49,6 @@
       <Filename>vinagre.desktop</Filename>
       <Filename>yelp.desktop</Filename>
 
-      <!-- Exclude Sundry items -->
-      <Filename>alacarte.desktop</Filename>
     </Exclude>
   </Menu> <!-- End Accessories -->
 
@@ -65,10 +63,6 @@
         <Not><Category>Settings</Category></Not>
       </And>
     </Include>
-
-    <Exclude>
-      <!-- Sundry exclusions -->
-    </Exclude>
   </Menu> <!-- End Accessibility -->
 
   <!-- Development Tools -->
@@ -81,15 +75,6 @@
       </And>
       <Filename>emacs.desktop</Filename>
     </Include>
-
-    <Exclude>
-      <!-- Sundry exclusions -->
-      <Filename>jhbuild.desktop</Filename>
-      <Filename>java-1.7.0-openjdk-jconsole.desktop</Filename>
-      <Filename>java-1.7.0-openjdk-policytool.desktop</Filename>
-      <Filename>log4j-chainsaw.desktop</Filename>
-      <Filename>log4j-logfactor5.desktop</Filename>
-    </Exclude>
   </Menu> <!-- End Development Tools -->
 
   <!-- Education -->
@@ -141,10 +126,6 @@
     <Exclude>
       <!-- Utilities exclusions -->
       <Filename>vinagre.desktop</Filename>
-
-      <!-- Sundry exclusions -->
-      <Filename>javaws.desktop</Filename>
-    </Exclude>
   </Menu>   <!-- End Internet -->
 
   <!-- Web Applications -->
@@ -183,47 +164,6 @@
     </Include>
   </Menu> <!-- End Office -->
 
-  <!-- Sundry -->
-  <Menu>
-    <Name>Sundry</Name>
-    <Directory>X-GNOME-Sundry.directory</Directory>
-    <Include>
-      <Filename>alacarte.desktop</Filename>
-      <Filename>authconfig.desktop</Filename>
-      <Filename>ca.desrt.dconf-editor.desktop</Filename>
-      <Filename>fedora-release-notes.desktop</Filename>
-      <Filename>firewall-config.desktop</Filename>
-      <Filename>flash-player-properties.desktop</Filename>
-      <Filename>gconf-editor.desktop</Filename>
-      <Filename>gnome-abrt.desktop</Filename>
-      <Filename>ibus-setup-anthy.desktop</Filename>
-      <Filename>ibus-setup.desktop</Filename>
-      <Filename>ibus-setup-hangul.desktop</Filename>
-      <Filename>ibus-setup-libbopomofo.desktop</Filename>
-      <Filename>ibus-setup-libpinyin.desktop</Filename>
-      <Filename>ibus-setup-m17n.desktop</Filename>
-      <Filename>ibus-setup-typing-booster.desktop</Filename>
-      <Filename>im-chooser.desktop</Filename>
-      <Filename>itweb-settings.desktop</Filename>
-      <Filename>jhbuild.desktop</Filename>
-      <Filename>javaws.desktop</Filename>
-      <Filename>java-1.7.0-openjdk-jconsole.desktop</Filename>
-      <Filename>java-1.7.0-openjdk-policytool.desktop</Filename>
-      <Filename>log4j-chainsaw.desktop</Filename>
-      <Filename>log4j-logfactor5.desktop</Filename>
-      <Filename>nm-connection-editor.desktop</Filename>
-      <Filename>org.gnome.PowerStats.desktop</Filename>
-      <Filename>setroubleshoot.desktop</Filename>
-      <Filename>system-config-date.desktop</Filename>
-      <Filename>system-config-firewall.desktop</Filename>
-      <Filename>system-config-keyboard.desktop</Filename>
-      <Filename>system-config-language.desktop</Filename>
-      <Filename>system-config-printer.desktop</Filename>
-      <Filename>system-config-users.desktop</Filename>
-      <Filename>vino-preferences.desktop</Filename>
-    </Include>
-  </Menu>
-
   <!-- System Tools-->
   <Menu>
     <Name>System</Name>
@@ -242,14 +182,6 @@
       <Filename>gnome-system-monitor.desktop</Filename>
       <Filename>org.gnome.baobab.desktop</Filename>
       <Filename>org.gnome.Terminal.desktop</Filename>
-
-      <!-- Sundry exclusions -->
-      <Filename>ca.desrt.dconf-editor.desktop</Filename>
-      <Filename>fedora-release-notes.desktop</Filename>
-      <Filename>gconf-editor.desktop</Filename>
-      <Filename>gnome-abrt.desktop</Filename>
-      <Filename>org.gnome.PowerStats.desktop</Filename>
-      <Filename>setroubleshoot.desktop</Filename>
     </Exclude>
   </Menu>   <!-- End System Tools -->
 
