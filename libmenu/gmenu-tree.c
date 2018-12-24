@@ -21,11 +21,11 @@
 
 #include <string.h>
 #include <errno.h>
+#include <stdlib.h>
 
 #include "menu-layout.h"
 #include "menu-monitor.h"
 #include "menu-util.h"
-#include "canonicalize.h"
 
 /* private */
 typedef struct GMenuTreeItem GMenuTreeItem;
@@ -330,7 +330,7 @@ static gboolean
 canonicalize_path (GMenuTree  *tree,
                    const char *path)
 {
-  tree->canonical_path = menu_canonicalize_file_name (path, FALSE);
+  tree->canonical_path = realpath (path, NULL);
   if (tree->canonical_path)
     {
       tree->canonical = TRUE;
@@ -1888,7 +1888,7 @@ load_merge_file (GMenuTree      *tree,
 
   if (!is_canonical)
     {
-      canonical = freeme = menu_canonicalize_file_name (filename, FALSE);
+      canonical = freeme = realpath (filename, NULL);
       if (canonical == NULL)
         {
 	  if (add_monitor)
@@ -1983,7 +1983,7 @@ compare_basedir_to_config_dir (const char *canonical_basedir,
 
   retval = FALSE;
 
-  canonical_menus_dir = menu_canonicalize_file_name (dirname, FALSE);
+  canonical_menus_dir = realpath (dirname, NULL);
   if (canonical_menus_dir != NULL &&
       strcmp (canonical_basedir, canonical_menus_dir) == 0)
     {
@@ -2060,7 +2060,7 @@ load_parent_merge_file (GMenuTree      *tree,
   basedir   = menu_layout_node_root_get_basedir (root);
   menu_name = menu_layout_node_root_get_name (root);
 
-  canonical_basedir = menu_canonicalize_file_name (basedir, FALSE);
+  canonical_basedir = realpath (basedir, NULL);
   if (canonical_basedir == NULL)
     {
       menu_verbose ("Menu basedir '%s' no longer exists, not merging parent\n",
