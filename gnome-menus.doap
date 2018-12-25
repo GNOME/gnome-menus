@@ -6,6 +6,11 @@
 
   <name xml:lang="en">Menu Library</name>
   <shortdesc xml:lang="en">Library for the Desktop Menu fd.o specification</shortdesc>
+  <description>GNOME Menuss contains the libgnome-menu library, the layout configuration
+  files for the GNOME menu, as well as a simple menu editor.
+  The libgnome-menu library implements the "Desktop Menu Specification"
+  from freedesktop.org.</description>
+
   <!--
   <homepage rdf:resource="http://www.gnome.org/" />
   -->
