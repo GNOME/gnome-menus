@@ -12,9 +12,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-25 19:57+0000\n"
-"PO-Revision-Date: 2013-03-05 10:15-0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2019-01-07 18:28+0000\n"
+"PO-Revision-Date: 2019-01-07 19:05-0200\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -22,131 +22,191 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 2.1.1\n"
 
 # Traduzir "Sound & Video" como "Multimídia" é o resultado de uma padronização do menu Aplicativos do GNOME com os seus equivalentes no KDE e no XFCE.
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
 msgstr "Multimídia"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:4
 msgid "Multimedia menu"
 msgstr "Menu multimídia"
+
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/AudioVideo.directory.desktop.in:6
+msgid "applications-multimedia"
+msgstr "applications-multimedia"
 
 # Traduzir "Programming" como "Desenvolvimento" é o resultado de uma
 # padronização do menu Aplicativos do GNOME com os seus equivalentes
 # em outros ambientes de trabalho, mais precisamente KDE e XFCE.
-#: ../desktop-directories/Development.directory.in.h:1
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "Desenvolvimento"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:4
 msgid "Tools for software development"
 msgstr "Ferramentas para desenvolvimento de software"
+
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Development.directory.desktop.in:6
+msgid "applications-development"
+msgstr "applications-development"
 
 # Traduzir "Education" como "Educativo" é o resultado de uma padronização do
 # menu Aplicativos do GNOME com os seus equivalentes em outros ambientes de
 # trabalho, mais precisamente KDE e XFCE.
-#: ../desktop-directories/Education.directory.in.h:1
+#: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "Educativo"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Education.directory.desktop.in:5
+msgid "applications-science"
+msgstr "applications-science"
+
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
 msgstr "Jogos"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:4
 msgid "Games and amusements"
 msgstr "Jogos e diversões"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Game.directory.desktop.in:6
+msgid "applications-games"
+msgstr "applications-games"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "Gráficos"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
 msgstr "Aplicativos gráficos"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Graphics.directory.desktop.in:6
+msgid "applications-graphics"
+msgstr "applications-graphics"
+
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
 msgstr "Internet"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
 msgstr "Programas para acesso à Internet tais como web e e-mail"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Network.directory.desktop.in:6
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
+msgid "applications-internet"
+msgstr "applications-internet"
+
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "Escritório"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
 msgstr "Aplicativos de escritório"
+
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Office.directory.desktop.in:6
+msgid "applications-office"
+msgstr "applications-office"
 
 # Essa alteração, Ferramentas do Sistema → Sistema, não foi discutida mas
 # acredito que todos vão aprovar. Assim jogamos esse submenu para o fim da
 # lista, facilitando para a maioria dos usuários o acesso aos aplicativos
 # mais cotidianos.
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
-msgstr "Sistema"
+msgstr "Ferramentas de sistema"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
 msgstr "Configuração e monitoramento do sistema"
+
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/System-Tools.directory.desktop.in:6
+msgid "applications-system"
+msgstr "applications-system"
 
 # Traduzir "Universal Access" como "Acessibilidade" é o resultado de uma
 # padronização do menu Aplicativos do GNOME com os seus equivalentes
 # em outros ambientes de trabalho, mais precisamente KDE e XFCE.
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "Acessibilidade"
 
 # Traduzir "Universal Access" como "Acessibilidade" é o resultado de uma
 # padronização do menu Aplicativos do GNOME com os seus equivalentes
 # em outros ambientes de trabalho, mais precisamente KDE e XFCE.
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "Configurações de acessibilidade"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:7
+msgid "preferences-desktop-accessibility"
+msgstr "preferences-desktop-accessibility"
+
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
 msgstr "Acessórios"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:4
 msgid "Desktop accessories"
 msgstr "Acessórios da área de trabalho"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Utility.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
+msgid "applications-accessories"
+msgstr "applications-accessories"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "Aplicativos"
 
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
+msgid "applications-other"
+msgstr "applications-other"
+
 # Outros aplicativos
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
 msgstr "Outros"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Aplicativos que não se encaixam em outras categorias"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
 msgid "Sundry"
 msgstr "Diversos"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
 msgstr "Utilitários"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
 msgid "Small but useful GNOME tools"
 msgstr "Pequenas ferramentas do GNOME, mas muitos úteis"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
 msgstr "Aplicativos web"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Aplicativos e sites salvos da internet"
 
