@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Universal Access
+Comment=Universal Access Settings
+Type=Directory
+# TRANSLATORS: Don't translate this text (this is icon name)
+Icon=preferences-desktop-accessibility

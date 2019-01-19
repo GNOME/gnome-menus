@@ -1,17 +1,17 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-desktop-directories/AudioVideo.directory.in
-desktop-directories/Development.directory.in
-desktop-directories/Education.directory.in
-desktop-directories/Game.directory.in
-desktop-directories/Graphics.directory.in
-desktop-directories/Network.directory.in
-desktop-directories/Office.directory.in
-desktop-directories/System-Tools.directory.in
-desktop-directories/Utility-Accessibility.directory.in
-desktop-directories/Utility.directory.in
-desktop-directories/X-GNOME-Menu-Applications.directory.in
-desktop-directories/X-GNOME-Other.directory.in
-desktop-directories/X-GNOME-Sundry.directory.in
-desktop-directories/X-GNOME-Utilities.directory.in
-desktop-directories/X-GNOME-WebApplications.directory.in
+desktop-directories/AudioVideo.directory.desktop.in
+desktop-directories/Development.directory.desktop.in
+desktop-directories/Education.directory.desktop.in
+desktop-directories/Game.directory.desktop.in
+desktop-directories/Graphics.directory.desktop.in
+desktop-directories/Network.directory.desktop.in
+desktop-directories/Office.directory.desktop.in
+desktop-directories/System-Tools.directory.desktop.in
+desktop-directories/Utility-Accessibility.directory.desktop.in
+desktop-directories/Utility.directory.desktop.in
+desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in
+desktop-directories/X-GNOME-Other.directory.desktop.in
+desktop-directories/X-GNOME-Sundry.directory.desktop.in
+desktop-directories/X-GNOME-Utilities.directory.desktop.in
+desktop-directories/X-GNOME-WebApplications.directory.desktop.in
