@@ -1,4 +1,16 @@
 ==============
+Version 3.31.4
+==============
+
+* Remove the Sundry category (Jeremy)
+* Switch to modern realpath (Pino)
+* Stop using intltool (Alberts)
+* Translation updates
+
+Contributors:
+ Jeremy Bicha, Alberts Muktupāvels, Pino Toscano
+
+==============
 Version 3.31.3
 ==============
 
