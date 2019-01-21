@@ -8,129 +8,196 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-07-07 06:58+0000\n"
-"PO-Revision-Date: 2014-07-07 13:07+0200\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2019-01-18 16:51+0000\n"
+"PO-Revision-Date: 2019-01-21 23:42+0200\n"
+"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
 "Language-Team: team@lists.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Project-Style: gnome\n"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
 msgstr "Ήχος και βίντεο"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:4
 msgid "Multimedia menu"
 msgstr "Μενού πολυμέσων"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/AudioVideo.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-multimedia"
+msgstr "applications-multimedia"
+
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "Προγραμματισμός"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:4
 msgid "Tools for software development"
 msgstr "Εργαλεία για ανάπτυξη λογισμικού"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Development.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-development"
+msgstr "applications-development"
+
+#: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "Εκπαίδευση"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Education.directory.desktop.in:5
+#| msgid "Applications"
+msgid "applications-science"
+msgstr "applications-science"
+
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
 msgstr "Παιχνίδια"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:4
 msgid "Games and amusements"
 msgstr "Παιχνίδια και διασκέδαση"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Game.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-games"
+msgstr "applications-games"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "Γραφικά"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
 msgstr "Εφαρμογές γραφικών"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Graphics.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-graphics"
+msgstr "applications-graphics"
+
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
 msgstr "Διαδίκτυο"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
 msgstr ""
 "Προγράμματα για πρόσβαση στο διαδίκτυο όπως φυλλομετρητής και ηλεκ. "
 "αλληλογραφία"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Network.directory.desktop.in:6
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-internet"
+msgstr "applications-internet"
+
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "Γραφείο"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
 msgstr "Εφαρμογές γραφείου"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Office.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-office"
+msgstr "applications-office"
+
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
 msgstr "Εργαλεία συστήματος"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
 msgstr "Ρύθμιση και έλεγχος συστήματος"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/System-Tools.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-system"
+msgstr "applications-system"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "Γενική πρόσβαση"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "Ρυθμίσεις γενικής πρόσβασης"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:7
+msgid "preferences-desktop-accessibility"
+msgstr "preferences-desktop-accessibility"
+
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
 msgstr "Βοηθήματα"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:4
 msgid "Desktop accessories"
 msgstr "Βοηθήματα επιφάνειας εργασίας"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Utility.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-accessories"
+msgstr "applications-accessories"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "Εφαρμογές"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-other"
+msgstr "applications-other"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
 msgstr "Άλλα"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Εφαρμογές που δεν ταιριάζουν στις άλλες κατηγορίες"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
-msgid "Sundry"
-msgstr "Διάφορα"
-
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
 msgstr "Εργαλεία"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
 msgid "Small but useful GNOME tools"
 msgstr "Μικρά αλλά χρήσιμα εργαλεία GNOME"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
 msgstr "Εφαρμογές ιστού"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Εφαρμογές και ιστοσελίδες που αποθηκεύτηκαν από τον Ιστό"
+
+#~ msgid "Sundry"
+#~ msgstr "Διάφορα"
 
 #~ msgid "Hardware"
 #~ msgstr "Υλικό"
