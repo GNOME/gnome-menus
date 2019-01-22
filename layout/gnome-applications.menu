@@ -178,6 +178,7 @@
 
     <Exclude>
       <!-- Utilities exclusions -->
+      <Filename>gnome-abrt.desktop</Filename>
       <Filename>gnome-system-log.desktop</Filename>
       <Filename>gnome-system-monitor.desktop</Filename>
       <Filename>org.gnome.baobab.desktop</Filename>
@@ -201,6 +202,7 @@
     <Include>
       <Category>X-GNOME-Utilities</Category>
       <Filename>eog.desktop</Filename>
+      <Filename>gnome-abrt.desktop</Filename>
       <Filename>gnome-system-log.desktop</Filename>
       <Filename>gnome-system-monitor.desktop</Filename>
       <Filename>gucharmap.desktop</Filename>
