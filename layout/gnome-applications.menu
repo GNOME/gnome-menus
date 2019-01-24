@@ -126,6 +126,7 @@
     <Exclude>
       <!-- Utilities exclusions -->
       <Filename>vinagre.desktop</Filename>
+    </Exclude>
   </Menu>   <!-- End Internet -->
 
   <!-- Web Applications -->
