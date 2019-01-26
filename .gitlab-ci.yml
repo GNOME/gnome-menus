@@ -1,0 +1,12 @@
+validate-menu:
+  image: 'registry.gitlab.gnome.org/gnome/gnome-runtime-images/base:latest'
+  # libxml2 doesn't support https yet but the spec is only available via https
+  # https://bugzilla.gnome.org/791220
+  # https://gitlab.freedesktop.org/freedesktop/freedesktop/issues/114
+  # We shouldn't add the dtd to our git repo because it doesn't have
+  # a clearly distributable license
+  before_script:
+    - dnf install -y wget
+  script:
+    - wget https://standards.freedesktop.org/menu-spec/menu-latest.dtd
+    - xmllint --noblanks --noout --path menu-latest.dtd layout/gnome-applications.menu
