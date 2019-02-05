@@ -1,3 +1,16 @@
+===============
+Version 3.31.90
+===============
+
+* Fix missing close tag that broke traditional menu users (Jeremy)
+* Add CI to check the validity of our menu file so we don't make
+  that mistake as easily next time (Jeremy)
+* Add gnome-abrt to the Utilities category (Kalev)
+* Translation updates
+
+Contributors:
+ Jeremy Bicha, Kalev Lember
+
 ==============
 Version 3.31.4
 ==============

@@ -1,7 +1,7 @@
 AC_PREREQ(2.62)
 
-AC_INIT([gnome-menus], [3.31.4],
-        [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus])
+AC_INIT([gnome-menus], [3.31.90],
+        [https://gitlab.gnome.org/GNOME/gnome-menus/issues])
 AC_CONFIG_SRCDIR(libmenu/gmenu-tree.h)
 
 AM_INIT_AUTOMAKE([1.11 foreign no-dist-gzip dist-xz])
