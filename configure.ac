@@ -10,7 +10,6 @@ AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS(config.h)
 
 AM_MAINTAINER_MODE
-GNOME_MAINTAINER_MODE_DEFINES
 
 # Before making a release, the LT_VERSION string should be modified.
 # The string is of the form C:R:A.
@@ -40,8 +39,6 @@ AM_PROG_LIBTOOL
 PKG_CHECK_MODULES(GIO_UNIX, gio-unix-2.0 >= 2.29.15)
 AC_SUBST(GIO_UNIX_CFLAGS)
 AC_SUBST(GIO_UNIX_LIBS)
-
-GNOME_COMPILE_WARNINGS(yes)
 
 AC_ARG_ENABLE(deprecation_flags,
               [AC_HELP_STRING([--enable-deprecation-flags],
