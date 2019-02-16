@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-26 14:17+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2018-12-27 13:38+0000\n"
 "PO-Revision-Date: 2013-09-17 11:39+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Gaelic; Scottish <gd@li.org>\n"
@@ -52,15 +52,15 @@ msgstr "Grafaigeachd"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Prògraman grafaigeachd"
+msgstr "Aplacaidean grafaigeachd"
 
 #: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
-msgstr "An t-eadar-lìon"
+msgstr "Eadar-lìon"
 
 #: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Prògraman leis am faighear cothrom air an eadar-lìon, can brabhsairean is prògraman puist-d"
+msgstr "Prògraman leis am faighear inntrigeadh dhan eadar-lìon, can brabhsairean is post-d"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -68,7 +68,7 @@ msgstr "Oifis"
 
 #: ../desktop-directories/Office.directory.in.h:2
 msgid "Office Applications"
-msgstr "Prògaman oifise"
+msgstr "Aplacaidean oifise"
 
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
@@ -76,7 +76,7 @@ msgstr "Innealan siostaim"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Rèiteachadh an t-siostaim agus marasgladh"
+msgstr "Rèiteachadh ⁊ sgrùdadh an t-siostaim"
 
 #: ../desktop-directories/Utility-Accessibility.directory.in.h:1
 msgid "Universal Access"
@@ -88,11 +88,11 @@ msgstr "Roghainnean an inntrigidh uile-choitchinn"
 
 #: ../desktop-directories/Utility.directory.in.h:1
 msgid "Accessories"
-msgstr "Trealaich"
+msgstr "Co-innealan"
 
 #: ../desktop-directories/Utility.directory.in.h:2
 msgid "Desktop accessories"
-msgstr "Trealaich an deasga"
+msgstr "Co-innealan an deasga"
 
 #: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
 msgid "Applications"
@@ -100,7 +100,7 @@ msgstr "Aplacaidean"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:1
 msgid "Other"
-msgstr "Feadhainn eile"
+msgstr "Eile"
 
 #: ../desktop-directories/X-GNOME-Other.directory.in.h:2
 msgid "Applications that did not fit in other categories"
@@ -108,11 +108,11 @@ msgstr "Aplacaidean aig nach eil roinn-seòrsa iomchaidh eile"
 
 #: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
 msgid "Sundry"
-msgstr "An corr"
+msgstr "An còrr"
 
 #: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
 msgid "Utilities"
-msgstr "Goireasachdan"
+msgstr "Goireasan"
 
 #: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
 msgid "Small but useful GNOME tools"
@@ -197,6 +197,7 @@ msgstr "Aplacaidean is làraichean a chaidh a shàbhaladh on lìon"
 
 #~ msgid "Change system-wide settings (affects all users)"
 #~ msgstr ""
+
 #~ "Atharraich roghainnean aig am bi buaidh air feadh an t-siostaim (air gach "
 #~ "cleachdaiche)"
 
@@ -264,6 +265,7 @@ msgstr "Aplacaidean is làraichean a chaidh a shàbhaladh on lìon"
 #~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
 #~ "in environment"
 #~ msgstr ""
+
 #~ "Cha b'urrainn faighinn lorg air am phasgan dhachaigh: neo-stèidheachd an /"
 #~ "etc/passwd agus gun luach airson $HOME anns a àrainneachd"
 
