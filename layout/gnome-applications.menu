@@ -207,6 +207,7 @@
       <Filename>gnome-system-log.desktop</Filename>
       <Filename>gnome-system-monitor.desktop</Filename>
       <Filename>gucharmap.desktop</Filename>
+      <Filename>nm-connection-editor.desktop</Filename>
       <Filename>org.gnome.baobab.desktop</Filename>
       <Filename>org.gnome.Calculator.desktop</Filename>
       <Filename>org.gnome.DejaDup.desktop</Filename>
