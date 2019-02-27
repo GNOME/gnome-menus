@@ -1,177 +1,186 @@
 # Italian translation of gnome-menus.
-# Copyright (C) 2005, 2006, 2007, 2008, 2009, 2012 The Free Software Foundation, Inc.
+# Copyright (C) 2005, 2006, 2007, 2008, 2009, 2012, 2019 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menus package.
 # Francesco Marletta <francesco.marletta @ tiscali.it>, 2005, 206, 2007, 2008, 2009.
-# Milo Casagrande <milo@ubuntu.com>, 2012.
+# Milo Casagrande <milo@milo.name>, 2012, 2019.
 # Luca Ferretti <lferrett@gnome.org> 2009, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-03 01:17+0100\n"
-"PO-Revision-Date: 2013-03-03 01:19+0100\n"
-"Last-Translator: Luca Ferretti <lferrett@gnome.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2019-02-05 00:11+0000\n"
+"PO-Revision-Date: 2019-02-15 14:21+0100\n"
+"Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
 msgstr "Audio e video"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:4
 msgid "Multimedia menu"
 msgstr "Menù multimedia"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/AudioVideo.directory.desktop.in:6
+msgid "applications-multimedia"
+msgstr "applications-multimedia"
+
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "Programmazione"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:4
 msgid "Tools for software development"
 msgstr "Strumenti per lo sviluppo software"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Development.directory.desktop.in:6
+msgid "applications-development"
+msgstr "applications-development"
+
+#: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "Istruzione"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Education.directory.desktop.in:5
+msgid "applications-science"
+msgstr "applications-science"
+
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
 msgstr "Giochi"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:4
 msgid "Games and amusements"
 msgstr "Giochi e passatempi"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Game.directory.desktop.in:6
+msgid "applications-games"
+msgstr "applications-games"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "Grafica"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
 msgstr "Applicazioni grafiche"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Graphics.directory.desktop.in:6
+msgid "applications-graphics"
+msgstr "applications-graphics"
+
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
 msgstr "Internet"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
 msgstr "Programmi per l'accesso a Internet come web ed email"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Network.directory.desktop.in:6
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
+msgid "applications-internet"
+msgstr "applications-internet"
+
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "Ufficio"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
 msgstr "Applicazioni da ufficio"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Office.directory.desktop.in:6
+msgid "applications-office"
+msgstr "applications-office"
+
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
 msgstr "Strumenti di sistema"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
 msgstr "Configurazione e monitoraggio del sistema"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/System-Tools.directory.desktop.in:6
+msgid "applications-system"
+msgstr "applications-system"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "Accesso universale"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "Impostazioni accesso universale"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:7
+msgid "preferences-desktop-accessibility"
+msgstr "preferences-desktop-accessibility"
+
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
 msgstr "Accessori"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:4
 msgid "Desktop accessories"
 msgstr "Accessori del desktop"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Utility.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-accessories"
+msgstr "applications-accessories"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "Applicazioni"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-other"
+msgstr "applications-other"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
 msgstr "Altro"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Applicazioni che non rientrano in altre categorie"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
-msgid "Sundry"
-msgstr "Varie"
-
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
 msgstr "Utilità"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
 msgid "Small but useful GNOME tools"
 msgstr "Piccoli ma utili strumenti per GNOME"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
 msgstr "Applicazioni Web"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Applicazioni e pagine salvate dal Web"
-
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
-
-#~ msgid "Settings for several hardware devices"
-#~ msgstr "Impostazioni per parecchi dispositivi hardware"
-
-#~ msgid "Personal"
-#~ msgstr "Personale"
-
-#~ msgid "Personal settings"
-#~ msgstr "Impostazioni personali"
-
-#~ msgid "System"
-#~ msgstr "Sistema"
-
-#~ msgid "System settings"
-#~ msgstr "Impostazioni di sistema"
-
-#~ msgid "Menu Editor"
-#~ msgstr "Editor del menù"
-
-#~ msgid "Edit Menus"
-#~ msgstr "Modifica i menù"
-
-#~ msgid "_Defaults"
-#~ msgstr "Pre_definite"
-
-#~ msgid "_Menus:"
-#~ msgstr "_Menù:"
-
-#~ msgid "_Applications:"
-#~ msgstr "_Applicazioni:"
-
-#~ msgid "Simple Menu Editor %s"
-#~ msgstr "Editor dei menù semplice %s"
-
-#~ msgid "Name"
-#~ msgstr "Nome"
-
-#~ msgid "Show"
-#~ msgstr "Mostra"
-
-#~ msgid ""
-#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
-#~ "in environment"
-#~ msgstr ""
-#~ "Impossibile trovare la directory home: non è impostata in /etc/passwd e "
-#~ "la variabile d'ambiente $HOME non ha alcun valore"
