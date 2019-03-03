@@ -1,4 +1,18 @@
 ===============
+Version 3.31.92
+===============
+
+* Stop using gnome-common (Javier)
+* Add nm-connection-editor to the Utilities category (Kalev)
+* Restore minimal Sundry app folder for upgrades. Users can remove it
+  by running gsettings reset-recursively org.gnome.desktop.app-folders
+  and logging out and logging back in. (Jeremy)
+* Translation updates
+
+Contributors:
+ Jeremy Bicha, Javier Jardón, Kalev Lember
+
+===============
 Version 3.31.90
 ===============
 
