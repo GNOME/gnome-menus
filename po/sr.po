@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/"
 "issues\n"
-"POT-Creation-Date: 2019-01-18 16:51+0000\n"
-"PO-Revision-Date: 2019-02-28 14:11+0100\n"
+"POT-Creation-Date: 2019-03-04 13:49+0000\n"
+"PO-Revision-Date: 2019-03-04 21:53+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -159,6 +159,7 @@ msgstr "Програми"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
 msgid "applications-other"
 msgstr "applications-other"
 
@@ -169,6 +170,10 @@ msgstr "Остало"
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Програми који не припадају осталим категоријама"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Разно"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
@@ -185,6 +190,3 @@ msgstr "Веб програми"
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Програми и сајтови сачувани са Веба"
-
-#~ msgid "Sundry"
-#~ msgstr "Разно"
