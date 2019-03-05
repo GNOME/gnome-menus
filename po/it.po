@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-02-05 00:11+0000\n"
-"PO-Revision-Date: 2019-02-15 14:21+0100\n"
+"POT-Creation-Date: 2019-03-04 13:49+0000\n"
+"PO-Revision-Date: 2019-03-05 09:45+0100\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -145,7 +145,6 @@ msgstr "Accessori del desktop"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Utility.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-accessories"
 msgstr "applications-accessories"
 
@@ -157,7 +156,7 @@ msgstr "Applicazioni"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:6
-#| msgid "Applications"
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
 msgid "applications-other"
 msgstr "applications-other"
 
@@ -168,6 +167,10 @@ msgstr "Altro"
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Applicazioni che non rientrano in altre categorie"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Sundry"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
