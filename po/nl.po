@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-02-16 10:48+0000\n"
+"POT-Creation-Date: 2019-03-04 13:49+0000\n"
 "PO-Revision-Date: 2019-02-24 12:25+0100\n"
 "Last-Translator: Nathan Follens <nthn@unseen.is>\n"
 "Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
@@ -32,7 +32,6 @@ msgstr "Multimedia"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/AudioVideo.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-multimedia"
 msgstr "applications-multimedia"
 
@@ -46,7 +45,6 @@ msgstr "Gereedschap voor software-ontwikkeling"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Development.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-development"
 msgstr "applications-development"
 
@@ -57,7 +55,6 @@ msgstr "Educatie"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Education.directory.desktop.in:5
-#| msgid "Applications"
 msgid "applications-science"
 msgstr "applications-science"
 
@@ -71,7 +68,6 @@ msgstr "Spelletjes en amusement"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Game.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-games"
 msgstr "applications-games"
 
@@ -85,7 +81,6 @@ msgstr "Grafische toepassingen"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Graphics.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-graphics"
 msgstr "applications-graphics"
 
@@ -100,7 +95,6 @@ msgstr "Toepassingen voor internettoegang zoals web en e-mail"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Network.directory.desktop.in:6
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-internet"
 msgstr "applications-internet"
 
@@ -114,7 +108,6 @@ msgstr "Kantoortoepassingen"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Office.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-office"
 msgstr "applications-office"
 
@@ -129,7 +122,6 @@ msgstr "Systeemconfiguratie en -controle"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/System-Tools.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-system"
 msgstr "applications-system"
 
@@ -157,7 +149,6 @@ msgstr "Bureaubladaccessoires"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Utility.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-accessories"
 msgstr "applications-accessories"
 
@@ -169,7 +160,7 @@ msgstr "Toepassingen"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:6
-#| msgid "Applications"
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
 msgid "applications-other"
 msgstr "applications-other"
 
@@ -179,7 +170,12 @@ msgstr "Overig"
 
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
-msgstr "Toepassingen die niet in een andere categorie ondergebracht kunnen worden"
+msgstr ""
+"Toepassingen die niet in een andere categorie ondergebracht kunnen worden"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Allerhande"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
@@ -196,9 +192,6 @@ msgstr "Webtoepassingen"
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Toepassingen en sites op het web"
-
-#~ msgid "Sundry"
-#~ msgstr "Allerhande"
 
 #~ msgid "Hardware"
 #~ msgstr "Hardware"
@@ -269,8 +262,12 @@ msgstr "Toepassingen en sites op het web"
 #~ msgid "Show"
 #~ msgstr "Tonen"
 
-#~ msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-#~ msgstr "Kan de persoonlijke map niet vinden: niet ingesteld in /etc/passwd en geen waarde voor $HOME in de omgevingsvariabelen"
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Kan de persoonlijke map niet vinden: niet ingesteld in /etc/passwd en "
+#~ "geen waarde voor $HOME in de omgevingsvariabelen"
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "Toegangelijkheidsgerelateerde voorkeuren"
