@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-01-18 16:51+0000\n"
+"POT-Creation-Date: 2019-03-04 13:49+0000\n"
 "PO-Revision-Date: 2019-02-12 19:38+0100\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -31,7 +31,6 @@ msgstr "Multimedie-menu"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/AudioVideo.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-multimedia"
 msgstr "applications-multimedia"
 
@@ -45,7 +44,6 @@ msgstr "Værktøj til programudvikling"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Development.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-development"
 msgstr "applications-development"
 
@@ -55,7 +53,6 @@ msgstr "Læringsprogrammer"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Education.directory.desktop.in:5
-#| msgid "Applications"
 msgid "applications-science"
 msgstr "applications-science"
 
@@ -69,7 +66,6 @@ msgstr "Spil og underholdning"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Game.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-games"
 msgstr "applications-games"
 
@@ -83,7 +79,6 @@ msgstr "Grafikprogrammer"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Graphics.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-graphics"
 msgstr "applications-graphics"
 
@@ -98,7 +93,6 @@ msgstr "Programmer til internetadgang, såsom web og e-mail"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Network.directory.desktop.in:6
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-internet"
 msgstr "applications-internet"
 
@@ -112,7 +106,6 @@ msgstr "Kontorprogrammer"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Office.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-office"
 msgstr "applications-office"
 
@@ -126,7 +119,6 @@ msgstr "Systemkonfiguration og -overvågning"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/System-Tools.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-system"
 msgstr "applications-system"
 
@@ -154,7 +146,6 @@ msgstr "Skrivebordstilbehør"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Utility.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
-#| msgid "Applications"
 msgid "applications-accessories"
 msgstr "applications-accessories"
 
@@ -166,7 +157,7 @@ msgstr "Programmer"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:6
-#| msgid "Applications"
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
 msgid "applications-other"
 msgstr "applications-other"
 
@@ -177,6 +168,10 @@ msgstr "Andre"
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Programmer som ikke passer i andre katagorier"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Sundry"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
@@ -193,9 +188,6 @@ msgstr "Web-programmer"
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Programmer og steder gemt fra nettet"
-
-#~ msgid "Sundry"
-#~ msgstr "Sundry"
 
 #~ msgid "Hardware"
 #~ msgstr "Hardware"
@@ -239,8 +231,12 @@ msgstr "Programmer og steder gemt fra nettet"
 #~ msgid "Show"
 #~ msgstr "Vis"
 
-#~ msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-#~ msgstr "Kan ikke finde hjemmekataloget: det er ikke i /etc/passwd og der findes ingen værdi for $HOME i miljøet"
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Kan ikke finde hjemmekataloget: det er ikke i /etc/passwd og der findes "
+#~ "ingen værdi for $HOME i miljøet"
 
 #~ msgid "Internet and Network"
 #~ msgstr "Internet og netværk"
@@ -313,7 +309,8 @@ msgstr "Programmer og steder gemt fra nettet"
 #~ msgstr "Menutræ er tomt"
 
 #~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
-#~ msgstr "- test Gnomes implementering af specifikationen til skrivebordsmenuer"
+#~ msgstr ""
+#~ "- test Gnomes implementering af specifikationen til skrivebordsmenuer"
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "Indstillinger relateret til universel adgang"
