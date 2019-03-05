@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-01-18 16:51+0000\n"
-"PO-Revision-Date: 2019-02-06 12:15+0100\n"
+"POT-Creation-Date: 2019-03-04 13:49+0000\n"
+"PO-Revision-Date: 2019-03-05 07:03+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -160,6 +160,7 @@ msgstr "Aplikace"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
 msgid "applications-other"
 msgstr "applications-other"
 
@@ -170,6 +171,10 @@ msgstr "Ostatní"
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Aplikace nepatřící do jiných kategorií"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Různé"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
