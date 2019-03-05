@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus trunk\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-01-18 16:51+0000\n"
+"POT-Creation-Date: 2019-03-04 13:49+0000\n"
 "PO-Revision-Date: 2019-02-24 23:50+0300\n"
 "Last-Translator: Stas Solovey <whats_up@tut.by>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
@@ -158,6 +158,7 @@ msgstr "Приложения"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
 msgid "applications-other"
 msgstr "applications-other"
 
@@ -168,6 +169,10 @@ msgstr "Прочие"
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Приложения, не подпадающие ни под какие категории"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Разное"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
@@ -184,9 +189,6 @@ msgstr "Веб-приложения"
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Приложения и сайты, сохранённые из Интернета"
-
-#~ msgid "Sundry"
-#~ msgstr "Разное"
 
 #~ msgid "Hardware"
 #~ msgstr "Оборудование"
