@@ -8,10 +8,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus 2.19.4\n"
+"Project-Id-Version: gnome-menus master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-03-03 21:18+0000\n"
-"PO-Revision-Date: 2019-03-04 07:39+0700\n"
+"POT-Creation-Date: 2019-03-04 20:54+0000\n"
+"PO-Revision-Date: 2019-03-05 07:20+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
 "Language: vi\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
@@ -159,6 +159,7 @@ msgstr "Ứng dụng"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
 msgid "applications-other"
 msgstr "applications-other"
 
@@ -169,6 +170,10 @@ msgstr "Khác"
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Những ứng dụng không thuộc các nhóm khác"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Lặt vặt"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
@@ -185,9 +190,6 @@ msgstr "Ứng dụng Web"
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Ứng dụng và các địa chỉ đã được lưu từ Web"
-
-#~ msgid "Sundry"
-#~ msgstr "Úng dụng nhỏ"
 
 #~ msgid "Hardware"
 #~ msgstr "Phần cứng"
