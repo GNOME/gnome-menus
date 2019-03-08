@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-02-24 11:26+0000\n"
-"PO-Revision-Date: 2019-02-27 14:31+0900\n"
+"POT-Creation-Date: 2019-03-04 13:49+0000\n"
+"PO-Revision-Date: 2019-03-08 14:45+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -158,6 +158,7 @@ msgstr "프로그램"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
 msgid "applications-other"
 msgstr "applications-other"
 
@@ -168,6 +169,10 @@ msgstr "기타"
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "어떤 범주에도 해당되지 않는 프로그램"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "여러가지"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
