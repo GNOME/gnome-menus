@@ -8,7 +8,7 @@
 msgid ""
 msgstr "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-01-18 16:51+0000\n"
+"POT-Creation-Date: 2019-03-04 13:49+0000\n"
 "PO-Revision-Date: 2019-02-24 10:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
@@ -30,7 +30,7 @@ msgstr "Multimediaren menua"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/AudioVideo.directory.desktop.in:6
 msgid "applications-multimedia"
-msgstr "applications-multimedia"
+msgstr ""
 
 #: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
@@ -43,7 +43,7 @@ msgstr "Softwarea garatzeko tresnak"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Development.directory.desktop.in:6
 msgid "applications-development"
-msgstr "applications-development"
+msgstr ""
 
 #: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
@@ -52,7 +52,7 @@ msgstr "Hezkuntza"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Education.directory.desktop.in:5
 msgid "applications-science"
-msgstr "applications-science"
+msgstr ""
 
 #: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
@@ -65,7 +65,7 @@ msgstr "Jokoak eta denbora-pasak"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Game.directory.desktop.in:6
 msgid "applications-games"
-msgstr "applications-games"
+msgstr ""
 
 #: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
@@ -78,11 +78,11 @@ msgstr "Irudi aplikazioak"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Graphics.directory.desktop.in:6
 msgid "applications-graphics"
-msgstr "applications-graphics"
+msgstr ""
 
 #: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
-msgstr "Internet"
+msgstr ""
 
 #: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
@@ -92,7 +92,7 @@ msgstr "Interneteko programak (web arakatzaileak eta posta bezeroak adib.)"
 #: desktop-directories/Network.directory.desktop.in:6
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
 msgid "applications-internet"
-msgstr "applications-internet"
+msgstr ""
 
 #: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
@@ -105,7 +105,7 @@ msgstr "Bulegorako aplikazioak"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Office.directory.desktop.in:6
 msgid "applications-office"
-msgstr "applications-office"
+msgstr ""
 
 #: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
@@ -118,7 +118,7 @@ msgstr "Sistemaren konfigurazioa eta monitorizazioa"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/System-Tools.directory.desktop.in:6
 msgid "applications-system"
-msgstr "applications-system"
+msgstr ""
 
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
@@ -131,7 +131,7 @@ msgstr "Sarbide unibertsalaren ezarpenak"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:7
 msgid "preferences-desktop-accessibility"
-msgstr "preferences-desktop-accessibility"
+msgstr ""
 
 #: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
@@ -145,7 +145,7 @@ msgstr "Mahaigainaren gehigarriak"
 #: desktop-directories/Utility.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
 msgid "applications-accessories"
-msgstr "applications-accessories"
+msgstr ""
 
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
@@ -155,8 +155,9 @@ msgstr "Aplikazioak"
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
 msgid "applications-other"
-msgstr "applications-other"
+msgstr ""
 
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
@@ -165,6 +166,10 @@ msgstr "Bestelakoa"
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Sailkatu ezin diren aplikazioak"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Askotarikoak"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
