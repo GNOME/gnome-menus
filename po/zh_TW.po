@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menu 2.28.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-04 21:16+0800\n"
-"PO-Revision-Date: 2013-04-28 16:00+0800\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2019-03-04 13:49+0000\n"
+"PO-Revision-Date: 2019-03-31 22:56+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese/Traditional <zh-l10n@lists.linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -16,113 +16,183 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
 msgstr "影音"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:4
 msgid "Multimedia menu"
 msgstr "多媒體選單"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/AudioVideo.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-multimedia"
+msgstr "applications-multimedia"
+
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "軟體開發"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:4
 msgid "Tools for software development"
 msgstr "軟體開發工具"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Development.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-development"
+msgstr "applications-development"
+
+#: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "教育"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Education.directory.desktop.in:5
+#| msgid "Applications"
+msgid "applications-science"
+msgstr "applications-science"
+
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
 msgstr "遊戲"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:4
 msgid "Games and amusements"
-msgstr "遊戲及娛樂"
+msgstr "遊戲與娛樂"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Game.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-games"
+msgstr "applications-games"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
-msgstr "美工繪圖"
+msgstr "圖形美術"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
-msgstr "繪圖工具"
+msgstr "圖形美術類應用程式"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Graphics.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-graphics"
+msgstr "applications-graphics"
+
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
 msgstr "網際網路"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "如瀏覽網頁及收發電郵等網路軟體"
+msgstr "如瀏覽網頁及收發電郵等程式"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Network.directory.desktop.in:6
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-internet"
+msgstr "applications-internet"
+
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "辦公"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
-msgstr "辦公室軟體"
+msgstr "辦公類應用程式"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Office.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-office"
+msgstr "applications-office"
+
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
 msgstr "系統工具"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
-msgstr "系統配置及監察"
+msgstr "系統設定與監控等"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/System-Tools.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-system"
+msgstr "applications-system"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "無障礙功能"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "無障礙功能設定值"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:7
+msgid "preferences-desktop-accessibility"
+msgstr "preferences-desktop-accessibility"
+
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
 msgstr "附屬應用"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:4
 msgid "Desktop accessories"
 msgstr "桌面附屬應用程式"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/Utility.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
+#| msgid "Applications"
+msgid "applications-accessories"
+msgstr "applications-accessories"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "應用程式"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#. TRANSLATORS: Don't translate this text (this is icon name)
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
+#| msgid "Applications"
+msgid "applications-other"
+msgstr "applications-other"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
 msgstr "其他"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
-msgstr "不符合其它分類的軟體"
+msgstr "不符合其他分類的程式"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
 msgid "Sundry"
 msgstr "雜項"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
 msgstr "公用程式"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
 msgid "Small but useful GNOME tools"
 msgstr "小而有用的 GNOME 工具"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
-msgstr "網頁應用程式"
+msgstr "Web 應用程式"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "從 Web 儲存的應用程式和網站"
 
@@ -168,9 +238,7 @@ msgstr "從 Web 儲存的應用程式和網站"
 #~ msgid "Show"
 #~ msgstr "顯示"
 
-#~ msgid ""
-#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
-#~ "in environment"
+#~ msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
 #~ msgstr "找不到個人資料夾：沒有設定在 /etc/passwd 及環境變數 $HOME 中。"
 
 #~ msgid "Internet and Network"
