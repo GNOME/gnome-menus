@@ -13,125 +13,126 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-25 16:18+0000\n"
-"PO-Revision-Date: 2013-02-25 21:43+0330\n"
-"Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2019-04-19 15:44+0000\n"
+"PO-Revision-Date: 2019-08-17 15:59+0430\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bits\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
 msgstr "صدا و تصویر"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:4
 msgid "Multimedia menu"
-msgstr "منوی چندرسانه‌ای"
+msgstr "فهرست چندرسانه‌ای"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "برنامه‌سازی"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:4
 msgid "Tools for software development"
-msgstr "ابزارهای تولید نرم‌افزار"
+msgstr "ابزارهای توسعهٔ نرم‌افزار"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "آموزش"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
 msgstr "بازی‌ها"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:4
 msgid "Games and amusements"
 msgstr "بازی و سرگرمی"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "گرافیک"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
 msgstr "برنامه‌های گرافیکی"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
 msgstr "اینترنت"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "برنامه‌هایی برای دست‌یابی به اینترنت مثل وب و پست الکترونیکی"
+msgstr "برنامه‌هایی برای دسترسی اینترنتی مانند وب و رایانامه"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "اداری"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
 msgstr "برنامه‌های اداری"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
-msgstr "ابزارهای سیستم"
+msgstr "ابزارهای سامانه"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
-msgstr "پیکربندی و پایشگری سیستم"
+msgstr "پیکربندی و پایشگری سامانه"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "دسترسی همگانی"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "تنظیمات دسترسی همگانی"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
 msgstr "لوازم"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:4
 msgid "Desktop accessories"
 msgstr "لوازم رومیزی"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "برنامه‌ها"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
-msgstr "غیره"
+msgstr "موارد دیگر"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
-msgstr "برنامه‌هایی که در مقولات دیگر جا نمی‌گیرند"
+msgstr "برنامه‌هایی که در دسته‌های دیگر جا نگرفتند"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
 msgid "Sundry"
-msgstr "Sundry"
+msgstr "نامشخّص"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
 msgstr "ابزارها"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
 msgid "Small but useful GNOME tools"
 msgstr "ابزارهای کوچک ولی مفید گنوم"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
 msgstr "برنامه‌های وب"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
-msgstr "برنامه‌ها و پایگاه‌هایی که از طریق وب ذخیره شده‌اند"
+msgstr "برنامه‌ها و پایگاه‌هایی که از وب ذخیره شده‌اند"
 
 #~ msgid "Hardware"
 #~ msgstr "سخت‌افزار"
@@ -175,12 +176,8 @@ msgstr "برنامه‌ها و پایگاه‌هایی که از طریق وب �
 #~ msgid "Show"
 #~ msgstr "نشان دادن"
 
-#~ msgid ""
-#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
-#~ "in environment"
-#~ msgstr ""
-#~ "شاخه‌ی آغازه پیدا نمی‌شود: در ‎/etc/passwd تنظیم نشده و ‎$HOME نیز در محیط "
-#~ "مقدار ندارد"
+#~ msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+#~ msgstr "شاخه‌ی آغازه پیدا نمی‌شود: در ‎/etc/passwd تنظیم نشده و ‎$HOME نیز در محیط مقدار ندارد"
 
 #~ msgid "Internet and Network"
 #~ msgstr "اینترنت و شبکه"
