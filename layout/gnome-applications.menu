@@ -132,7 +132,7 @@
     </Exclude>
   </Menu>   <!-- End Internet -->
 
-  <!-- Web Applications -->
+  <!-- FIXME: BROKEN: Web Applications -->
   <Menu>
     <Name>Web Applications</Name>
     <Directory>X-GNOME-WebApplications.directory</Directory>
