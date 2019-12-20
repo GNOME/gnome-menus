@@ -43,9 +43,9 @@
       <Filename>org.gnome.FileRoller.desktop</Filename>
       <Filename>org.gnome.font-viewer.desktop</Filename>
       <Filename>org.gnome.Screenshot.desktop</Filename>
+      <Filename>org.gnome.seahorse.Application.desktop</Filename>
       <Filename>org.gnome.Terminal.desktop</Filename>
       <Filename>org.gnome.tweaks.desktop</Filename>
-      <Filename>seahorse.desktop</Filename>
       <Filename>vinagre.desktop</Filename>
       <Filename>yelp.desktop</Filename>
 
@@ -217,9 +217,9 @@
       <Filename>org.gnome.FileRoller.desktop</Filename>
       <Filename>org.gnome.fonts.desktop</Filename>
       <Filename>org.gnome.Screenshot.desktop</Filename>
+      <Filename>org.gnome.seahorse.Application.desktop</Filename>
       <Filename>org.gnome.Terminal.desktop</Filename>
       <Filename>org.gnome.tweaks.desktop</Filename>
-      <Filename>seahorse.desktop</Filename>
       <Filename>vinagre.desktop</Filename>
       <Filename>yelp.desktop</Filename>
     </Include>
