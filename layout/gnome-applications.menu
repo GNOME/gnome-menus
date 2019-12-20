@@ -46,7 +46,7 @@
       <Filename>org.gnome.seahorse.Application.desktop</Filename>
       <Filename>org.gnome.Terminal.desktop</Filename>
       <Filename>org.gnome.tweaks.desktop</Filename>
-      <Filename>org.gnome.Utilities.desktop</Filename>
+      <Filename>org.gnome.Usage.desktop</Filename>
       <Filename>simple-scan.desktop</Filename>
       <Filename>vinagre.desktop</Filename>
       <Filename>yelp.desktop</Filename>
@@ -187,7 +187,7 @@
       <Filename>gnome-system-monitor.desktop</Filename>
       <Filename>org.gnome.baobab.desktop</Filename>
       <Filename>org.gnome.Terminal.desktop</Filename>
-      <Filename>org.gnome.Utilities.desktop</Filename>
+      <Filename>org.gnome.Usage.desktop</Filename>
     </Exclude>
   </Menu>   <!-- End System Tools -->
 
@@ -224,7 +224,7 @@
       <Filename>org.gnome.seahorse.Application.desktop</Filename>
       <Filename>org.gnome.Terminal.desktop</Filename>
       <Filename>org.gnome.tweaks.desktop</Filename>
-      <Filename>org.gnome.Utilities.desktop</Filename>
+      <Filename>org.gnome.Usage.desktop</Filename>
       <Filename>simple-scan.desktop</Filename>
       <Filename>vinagre.desktop</Filename>
       <Filename>yelp.desktop</Filename>
