@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-01-18 16:51+0000\n"
-"PO-Revision-Date: 2019-01-26 23:21+0200\n"
+"POT-Creation-Date: 2019-12-09 09:31+0000\n"
+"PO-Revision-Date: 2019-12-25 04:52+0100\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician\n"
 "Language: gl\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Project-Style: gnome\n"
 
 #: desktop-directories/AudioVideo.directory.desktop.in:3
@@ -35,12 +35,6 @@ msgstr "Son e vídeo"
 msgid "Multimedia menu"
 msgstr "Menú multimedia"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/AudioVideo.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-multimedia"
-msgstr "applications-multimedia"
-
 #: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "Programación"
@@ -49,21 +43,9 @@ msgstr "Programación"
 msgid "Tools for software development"
 msgstr "Ferramentas para o desenvolvemento de software"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Development.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-development"
-msgstr "applications-development"
-
 #: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "Educación"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Education.directory.desktop.in:5
-#| msgid "Applications"
-msgid "applications-science"
-msgstr "applications-science"
 
 #: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
@@ -73,25 +55,13 @@ msgstr "Xogos"
 msgid "Games and amusements"
 msgstr "Xogos e pasatempos"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Game.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-games"
-msgstr "applications-games"
-
 #: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "Gráficos"
 
 #: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
-msgstr "Aplicativos gráficos"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Graphics.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-graphics"
-msgstr "applications-graphics"
+msgstr "Aplicacións gráficas"
 
 #: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
@@ -101,26 +71,13 @@ msgstr "Internet"
 msgid "Programs for Internet access such as web and email"
 msgstr "Programas para o acceso á Internet como a web e o correo electrónico"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Network.directory.desktop.in:6
-#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-internet"
-msgstr "applications-internet"
-
 #: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "Ofimática"
 
 #: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
-msgstr "Aplicativos de oficina"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Office.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-office"
-msgstr "applications-office"
+msgstr "Aplicacións de oficina"
 
 #: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
@@ -130,12 +87,6 @@ msgstr "Ferramentas do sistema"
 msgid "System configuration and monitoring"
 msgstr "Configuración e monitorización do sistema"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/System-Tools.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-system"
-msgstr "applications-system"
-
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "Acceso universal"
@@ -143,11 +94,6 @@ msgstr "Acceso universal"
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "Configuracións de acceso universal"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Utility-Accessibility.directory.desktop.in:7
-msgid "preferences-desktop-accessibility"
-msgstr "preferences-desktop-accessibility"
 
 #: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
@@ -157,24 +103,10 @@ msgstr "Accesorios"
 msgid "Desktop accessories"
 msgstr "Accesorios do escritorio"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Utility.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-accessories"
-msgstr "applications-accessories"
-
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
-msgstr "Aplicativos"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Other.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-other"
-msgstr "applications-other"
+msgstr "Aplicacións"
 
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
@@ -182,7 +114,11 @@ msgstr "Outras"
 
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
-msgstr "Aplicativos que non se axustan a outras categorías"
+msgstr "Aplicacións que non se axustan a outras categorías"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Varios"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
@@ -194,140 +130,8 @@ msgstr "Ferramentas de GNOME pequenas pero útiles"
 
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
-msgstr "Aplicativos web"
+msgstr "Aplicacións web"
 
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
-msgstr "Aplicativos e sitios gardados desde o Web"
-
-#~ msgid "Sundry"
-#~ msgstr "Varios"
-
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
-
-#~ msgid "Settings for several hardware devices"
-#~ msgstr "Configuracións para varios dispositivos de hardware"
-
-#~ msgid "Personal"
-#~ msgstr "Persoal"
-
-#~ msgid "Personal settings"
-#~ msgstr "Configuracións persoais"
-
-#~ msgid "System"
-#~ msgstr "Sistema"
-
-#~ msgid "System settings"
-#~ msgstr "Configuracións do sistema"
-
-#~ msgid "Menu Editor"
-#~ msgstr "Editor do menú"
-
-#~ msgid "Edit Menus"
-#~ msgstr "Editar os menús"
-
-#~ msgid "_Defaults"
-#~ msgstr "_Predeterminados"
-
-#~ msgid "_Menus:"
-#~ msgstr "_Menús:"
-
-#~ msgid "_Applications:"
-#~ msgstr "_Aplicativos:"
-
-#~ msgid "Simple Menu Editor %s"
-#~ msgstr "Editor sinxelo de menú %s"
-
-#~ msgid "Name"
-#~ msgstr "Nome"
-
-#~ msgid "Show"
-#~ msgstr "Mostrar"
-
-#~ msgid ""
-#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
-#~ "in environment"
-#~ msgstr ""
-#~ "Non foi posíbel atopar o cartafol persoal: non está estabelecido en /etc/"
-#~ "passwd e non hai ningún valor para $HOME no ambiente"
-
-#~ msgid "Internet and Network"
-#~ msgstr "Internet e redes"
-
-#~ msgid "Network-related settings"
-#~ msgstr "Configuracións relacionadas coa rede"
-
-#~ msgid "Look and Feel"
-#~ msgstr "Aparencia"
-
-#~ msgid "Settings controlling the desktop appearance and behavior"
-#~ msgstr "Axustes que controlan a aparencia e o comportamento do escritorio"
-
-#~ msgid "Administration"
-#~ msgstr "Administración"
-
-#~ msgid "Change system-wide settings (affects all users)"
-#~ msgstr ""
-#~ "Cambiar as configuracións globais do sistema (afecta a todos os usuarios)"
-
-#~ msgid "Personal preferences"
-#~ msgstr "Preferencias persoais"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferencias"
-
-#~ msgid "Personal preferences and administration settings"
-#~ msgstr "Preferencias persoais e configuracións de administración"
-
-#~ msgid "Menu file"
-#~ msgstr "Ficheiro de menú"
-
-#~ msgid "MENU_FILE"
-#~ msgstr "FICHEIRO_MENÚ"
-
-#~ msgid "Monitor for menu changes"
-#~ msgstr "Monitorizar os cambios no menú"
-
-#~ msgid "Include <Exclude>d entries"
-#~ msgstr "Incluír entradas <Exclude>"
-
-#~ msgid "Include NoDisplay=true entries"
-#~ msgstr "Incluír entradas NoDisplay=true"
-
-#~ msgid "Invalid desktop file ID"
-#~ msgstr "O ID do ficheiro de escritorio é incorrecto"
-
-#~ msgid "[Invalid Filename]"
-#~ msgstr "[Nome de ficheiro incorrecto]"
-
-#~ msgid " <excluded>"
-#~ msgstr " <excluded>"
-
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ "==== Menu changed, reloading ====\n"
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ "==== Modificouse o menú; recargando ====\n"
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Menu tree is empty"
-#~ msgstr "A árbore de menú está baleira"
-
-#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
-#~ msgstr ""
-#~ "- probar a implementación da Especificación de menú de escritorio de GNOME"
-
-#~ msgid "Universal access related preferences"
-#~ msgstr "Preferencias relacionadas co acceso universal"
-
-#~ msgid "Personal preferences and settings"
-#~ msgstr "Preferencias e configuracións persoais"
+msgstr "Aplicacións e sitios gardados desde o Web"
