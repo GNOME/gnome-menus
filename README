@@ -2,7 +2,9 @@ gnome-menus
 ===========
 
 gnome-menus contains the libgnome-menu library, the layout configuration
-files for the GNOME menu, as well as a simple menu editor.
+files for the GNOME menu, as well as a simple menu editor. The layout
+files control the menu layout for the GNOME Classic desktop. They are
+unused in normal GNOME sessions and have no effect outside GNOME Classic.
 
 The libgnome-menu library implements the "Desktop Menu Specification"
 from freedesktop.org:
@@ -30,15 +32,8 @@ first need to run './autogen.sh'.
 How to report bugs
 ==================
 
-Bugs should be reported to the GNOME bug tracking system:
+Bugs should be reported on GitLab:
 
-   https://gitlab.gnome.org/GNOME/gnome-menus/
+   https://gitlab.gnome.org/GNOME/gnome-menus/issues
 
-You will need to create an account for yourself.
-
-Please read the following page on how to prepare a useful bug report:
-
-   https://bugzilla.gnome.org/page.cgi?id=bug-writing.html
-
-Please read the HACKING file for information on where to send changes or
-bugfixes for this package.
+Please send changes or bugfixes as merge requests on GitLab.
