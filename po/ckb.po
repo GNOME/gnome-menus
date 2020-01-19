@@ -1,0 +1,128 @@
+# Kurdish Sorani translation for gnome-menus.
+# Copyright (C) 2020 gnome-menus's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-menus package.
+# jwtiyar <jwtiyar@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2020-01-04 14:47+0000\n"
+"PO-Revision-Date: 2020-01-16 12:48+0300\n"
+"Language-Team: Kurdish Sorani <ckb@li.org>\n"
+"Language: ckb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.2.4\n"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:3
+msgid "Sound & Video"
+msgstr "دەنگ و ڕەنگ"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:4
+msgid "Multimedia menu"
+msgstr "پیڕستی ڕەنگاڵه"
+
+#: desktop-directories/Development.directory.desktop.in:3
+msgid "Programming"
+msgstr "پرۆگرامسازی"
+
+#: desktop-directories/Development.directory.desktop.in:4
+msgid "Tools for software development"
+msgstr "ئامراز بۆ گەشەپێدانی نەرمەکاڵا"
+
+#: desktop-directories/Education.directory.desktop.in:3
+msgid "Education"
+msgstr "پەروەردە"
+
+#: desktop-directories/Game.directory.desktop.in:3
+msgid "Games"
+msgstr "یارییەکان"
+
+#: desktop-directories/Game.directory.desktop.in:4
+msgid "Games and amusements"
+msgstr "یاری و چیژبەخشی"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
+msgid "Graphics"
+msgstr "گرافیک"
+
+#: desktop-directories/Graphics.directory.desktop.in:4
+msgid "Graphics applications"
+msgstr "نەرمەواڵەی گرافیک"
+
+#: desktop-directories/Network.directory.desktop.in:3
+msgid "Internet"
+msgstr "ئینتەرنێت"
+
+#: desktop-directories/Network.directory.desktop.in:4
+msgid "Programs for Internet access such as web and email"
+msgstr "نەرمەواڵە بۆ چوونە ناو ئینتەرنێت وەک وێب و پۆستی ئەلکترۆنی"
+
+#: desktop-directories/Office.directory.desktop.in:3
+msgid "Office"
+msgstr "ئۆفیس"
+
+#: desktop-directories/Office.directory.desktop.in:4
+msgid "Office Applications"
+msgstr "نەرمەواڵەی ئۆفیس"
+
+#: desktop-directories/System-Tools.directory.desktop.in:3
+msgid "System Tools"
+msgstr "ئامرازەکانی سیستەم"
+
+#: desktop-directories/System-Tools.directory.desktop.in:4
+msgid "System configuration and monitoring"
+msgstr "ڕێکخستنەکانی سیستەم و چاودێریکردن"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
+msgid "Universal Access"
+msgstr "چوونەناوی گشتی"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
+msgid "Universal Access Settings"
+msgstr "ڕێکخستنی چوونەناوی گشتی"
+
+#: desktop-directories/Utility.directory.desktop.in:3
+msgid "Accessories"
+msgstr "یاریدەدەرییەکان"
+
+#: desktop-directories/Utility.directory.desktop.in:4
+msgid "Desktop accessories"
+msgstr "یاریدەریەکانی ڕوومێز"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
+msgid "Applications"
+msgstr "نەرمەواڵاکان"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
+msgid "Other"
+msgstr "هیتر"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
+msgid "Applications that did not fit in other categories"
+msgstr "ئەو نەرمەواڵانەی لە هاوپۆلەکان جێیان نیە"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "هەمەڕەنگ"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
+msgid "Utilities"
+msgstr "پێداویستییەکان"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
+msgid "Small but useful GNOME tools"
+msgstr "بچووک بەڵام ئامرازی بەسودی گنۆم"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
+msgid "Web Applications"
+msgstr "نەرمەواڵەی وێب"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
+msgid "Applications and sites saved from Web"
+msgstr "نەرمەواڵە و ماڵپەڕەکان کە پاشەکەوتکراون لە وێبەوە"
+
