@@ -26,7 +26,7 @@ Installation
 
 See the file 'INSTALL'. If you are not using a released version of
 gnome-menus (for example, if you checked out the code from git), you
-first need to run './autogen.sh'.
+first need to run './autogen.sh' to create the 'INSTALL' file.
 
 
 How to report bugs
