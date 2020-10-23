@@ -2,130 +2,130 @@
 # Copyright © 2004, 2005, 2006, 2007, 2009, 2012, 2013 gnome-menus
 # This file is distributed under the same license as the gnome-menus package.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006, 2007, 2009, 2012, 2013.
-# 
+#
 # Pedro Albuquerque <palbuquerque73@openmailbox.com>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.8\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-07-25 19:24+0000\n"
-"PO-Revision-Date: 2015-06-08 07:33+0100\n"
-"Last-Translator: Pedro Albuquerque <palbuquerque73@openmailbox.com>\n"
-"Language-Team: Português <palbuquerque73@openmailbox.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2020-05-30 11:44+0000\n"
+"PO-Revision-Date: 2020-10-23 15:39+0100\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: https://l10n.gnome.org/teams/pt/\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Poedit 2.4.1\n"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
-msgstr "Som & Vídeo"
+msgstr "Som e Vídeo"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:4
 msgid "Multimedia menu"
 msgstr "Menu de multimédia"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
-msgstr "Desenvolvimento"
+msgstr "Programação"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:4
 msgid "Tools for software development"
 msgstr "Ferramentas para o desenvolvimento de aplicações"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "Educação"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
 msgstr "Jogos"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:4
 msgid "Games and amusements"
 msgstr "Jogos e passatempos"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "Gráficos"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
 msgstr "Aplicações gráficas"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
 msgstr "Internet"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
 msgstr "Aplicações para o acesso à Internet tais como web e email"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "Produtividade"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
 msgstr "Aplicações de produtividade"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
-msgstr "Ferramentas de sistema"
+msgstr "Ferramentas do sistema"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
-msgstr "Configuração de sistema e monitorização"
+msgstr "Configuração e monitorização do sistema"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "Acesso universal"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "Definições de acesso universal"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
 msgstr "Acessórios"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:4
 msgid "Desktop accessories"
-msgstr "Acessórios da área de trabalho"
+msgstr "Acessórios do ambiente de trabalho"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "Aplicações"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
 msgstr "Outras"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Aplicações que não se enquadram em nenhuma outra categoria"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
 msgid "Sundry"
-msgstr "Miscelânea"
+msgstr "Diversos"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
 msgstr "Utilitários"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
 msgid "Small but useful GNOME tools"
 msgstr "Pequenas mas úteis ferramentas GNOME"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
 msgstr "Aplicações Web"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Aplicações e páginas gravadas da Web"
 
@@ -171,12 +171,8 @@ msgstr "Aplicações e páginas gravadas da Web"
 #~ msgid "Show"
 #~ msgstr "Apresentar"
 
-#~ msgid ""
-#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
-#~ "in environment"
-#~ msgstr ""
-#~ "Incapaz de encontrar o diretório pessoal: não se encontra definido em /"
-#~ "etc/passwd e a variável de ambiente $HOME não possui nenhum valor"
+#~ msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+#~ msgstr "Incapaz de encontrar o diretório pessoal: não se encontra definido em /etc/passwd e a variável de ambiente $HOME não possui nenhum valor"
 
 #~ msgid "Internet and Network"
 #~ msgstr "Internet e Rede"
@@ -188,9 +184,7 @@ msgstr "Aplicações e páginas gravadas da Web"
 #~ msgstr "Aparência e Comportamento"
 
 #~ msgid "Settings controlling the desktop appearance and behavior"
-#~ msgstr ""
-#~ "Definições que controlam a aparência e comportamento do ambiente de "
-#~ "trabalho"
+#~ msgstr "Definições que controlam a aparência e comportamento do ambiente de trabalho"
 
 #~ msgid "Administration"
 #~ msgstr "Administração"
@@ -250,9 +244,7 @@ msgstr "Aplicações e páginas gravadas da Web"
 #~ msgstr "Árvore de menu está vazia"
 
 #~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
-#~ msgstr ""
-#~ "- testar a implementação GNOME da Especificação de Menu de Área de "
-#~ "Trabalho"
+#~ msgstr "- testar a implementação GNOME da Especificação de Menu de Área de Trabalho"
 
 #~ msgid "Universal access related preferences"
 #~ msgstr "Preferências relacionadas com o acesso universal"
