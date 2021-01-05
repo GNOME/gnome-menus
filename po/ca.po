@@ -37,7 +37,7 @@ msgstr "Programació"
 
 #: desktop-directories/Development.directory.desktop.in:4
 msgid "Tools for software development"
-msgstr "Eines per desenvolupar programari"
+msgstr "Eines per a desenvolupar programari"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Development.directory.desktop.in:6
@@ -85,7 +85,7 @@ msgstr "Internet"
 
 #: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "Programes per accedir a Internet, com la web i el correu"
+msgstr "Programes per a accedir a Internet, com la web i el correu"
 
 #. TRANSLATORS: Don't translate this text (this is icon name)
 #: desktop-directories/Network.directory.desktop.in:6
