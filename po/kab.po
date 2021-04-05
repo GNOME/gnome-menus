@@ -7,120 +7,121 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2018-12-10 19:33+0000\n"
-"PO-Revision-Date: 2018-12-16 17:32+0100\n"
+"POT-Creation-Date: 2020-05-30 11:44+0000\n"
+"PO-Revision-Date: 2021-04-05 12:26+0200\n"
+"Last-Translator: Slimane Selyan Amiri <selyan.kab@protonmail.com>\n"
+"Language-Team: \n"
 "Language: kab\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.4.2\n"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
 msgstr "Imesli akked uvidyu"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:4
 msgid "Multimedia menu"
 msgstr "Umuɣ agetmidya"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "Asihel"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:4
 msgid "Tools for software development"
 msgstr "Ifecka i wesnefli n iseɣẓanen"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "Asegmi"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
 msgstr "Uraren"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:4
 msgid "Games and amusements"
 msgstr "Uraren akked usedhu"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "Asedlef"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
 msgstr "Isnasen udlifen"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
 msgstr "Internet"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
 msgstr "Ahilen i wenekcum ɣer Internet akka am Web neɣ imayl"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
-msgstr ""
+msgstr "Tanarit"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
-msgstr ""
+msgstr "Isnasen n tnarit"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
 msgstr "Ifecka n unagraw"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
 msgstr "Tawila akked tɛessast n unagraw"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "Aduf ameɣradan"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "Iɣewwaren n wadduf ameɣradan"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
 msgstr "Imerniyen"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:4
 msgid "Desktop accessories"
 msgstr "Ifecka n tnarit"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "Isnasen"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
 msgstr "Wayeḍ"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "Isnasen ur nwulem ara i taggayin-nniḍen"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
 msgid "Sundry"
-msgstr ""
+msgstr "Sundry"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
-msgstr ""
+msgstr "Ifecka"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
 msgid "Small but useful GNOME tools"
 msgstr "Ifecka n GNOME d imecṭaḥ maca nefɛen"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
 msgstr "Isnasen n Web"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Isnasen akked isemlen ittwaskelsen si Web"
