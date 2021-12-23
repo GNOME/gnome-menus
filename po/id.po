@@ -10,16 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-03-04 13:49+0000\n"
-"PO-Revision-Date: 2019-03-06 23:35+0700\n"
+"POT-Creation-Date: 2020-05-30 11:44+0000\n"
+"PO-Revision-Date: 2021-12-23 10:51+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
-"Plural-Forms: nplurals=2; plural= n!=1;\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
@@ -29,11 +29,6 @@ msgstr "Suara & Video"
 msgid "Multimedia menu"
 msgstr "Menu multimedia"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/AudioVideo.directory.desktop.in:6
-msgid "applications-multimedia"
-msgstr "applications-multimedia"
-
 #: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "Pemrograman"
@@ -42,19 +37,9 @@ msgstr "Pemrograman"
 msgid "Tools for software development"
 msgstr "Perkakas untuk pengembangan perangkat lunak"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Development.directory.desktop.in:6
-msgid "applications-development"
-msgstr "applications-development"
-
 #: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "Pendidikan"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Education.directory.desktop.in:5
-msgid "applications-science"
-msgstr "applications-science"
 
 #: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
@@ -64,11 +49,6 @@ msgstr "Permainan"
 msgid "Games and amusements"
 msgstr "Permainan dan hiburan"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Game.directory.desktop.in:6
-msgid "applications-games"
-msgstr "applications-games"
-
 #: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "Grafik"
@@ -76,11 +56,6 @@ msgstr "Grafik"
 #: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
 msgstr "Aplikasi grafik"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Graphics.directory.desktop.in:6
-msgid "applications-graphics"
-msgstr "applications-graphics"
 
 #: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
@@ -90,12 +65,6 @@ msgstr "Internet"
 msgid "Programs for Internet access such as web and email"
 msgstr "Program untuk mengakses internet, seperti web dan surel"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Network.directory.desktop.in:6
-#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
-msgid "applications-internet"
-msgstr "applications-internet"
-
 #: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "Perkantoran"
@@ -103,11 +72,6 @@ msgstr "Perkantoran"
 #: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
 msgstr "Aplikasi Perkantoran"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Office.directory.desktop.in:6
-msgid "applications-office"
-msgstr "applications-office"
 
 #: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
@@ -117,11 +81,6 @@ msgstr "Perkakas Sistem"
 msgid "System configuration and monitoring"
 msgstr "Konfigurasi serta pengawasan sistem"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/System-Tools.directory.desktop.in:6
-msgid "applications-system"
-msgstr "applications-system"
-
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "Akses Universal"
@@ -129,11 +88,6 @@ msgstr "Akses Universal"
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "Pengaturan Akses Universal"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Utility-Accessibility.directory.desktop.in:7
-msgid "preferences-desktop-accessibility"
-msgstr "preferences-desktop-accessibility"
 
 #: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
@@ -143,23 +97,10 @@ msgstr "Aksesoris"
 msgid "Desktop accessories"
 msgstr "Aksesoris desktop"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Utility.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
-msgid "applications-accessories"
-msgstr "applications-accessories"
-
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "Aplikasi"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Other.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
-msgid "applications-other"
-msgstr "applications-other"
 
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
@@ -188,3 +129,36 @@ msgstr "Aplikasi Web"
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Aplikasi dan situs yang disimpan dari Web"
+
+#~ msgid "applications-multimedia"
+#~ msgstr "applications-multimedia"
+
+#~ msgid "applications-development"
+#~ msgstr "applications-development"
+
+#~ msgid "applications-science"
+#~ msgstr "applications-science"
+
+#~ msgid "applications-games"
+#~ msgstr "applications-games"
+
+#~ msgid "applications-graphics"
+#~ msgstr "applications-graphics"
+
+#~ msgid "applications-internet"
+#~ msgstr "applications-internet"
+
+#~ msgid "applications-office"
+#~ msgstr "applications-office"
+
+#~ msgid "applications-system"
+#~ msgstr "applications-system"
+
+#~ msgid "preferences-desktop-accessibility"
+#~ msgstr "preferences-desktop-accessibility"
+
+#~ msgid "applications-accessories"
+#~ msgstr "applications-accessories"
+
+#~ msgid "applications-other"
+#~ msgstr "applications-other"
