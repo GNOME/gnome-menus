@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Нанба Наала <naala-nanba@rambler.ru>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2021-12-23 03:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Нанба Наала <naala-nanba@rambler.ru>, 2022"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:3
+msgid "Sound & Video"
+msgstr "Аудио насгьы авидео"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:4
+msgid "Multimedia menu"
+msgstr "Амультимедиа"
+
+#: desktop-directories/Development.directory.desktop.in:3
+msgid "Programming"
+msgstr "Апрограммаҩра"
+
+#: desktop-directories/Development.directory.desktop.in:4
+msgid "Tools for software development"
+msgstr "Амаругақәа апрограммақәа рырмазеиразы "
+
+#: desktop-directories/Education.directory.desktop.in:3
+msgid "Education"
+msgstr "Арҵаратә"
+
+#: desktop-directories/Game.directory.desktop.in:3
+msgid "Games"
+msgstr "Ахәмаррақәа"
+
+#: desktop-directories/Game.directory.desktop.in:4
+msgid "Games and amusements"
+msgstr "Ахәмаррақәеи агәырҿыхагақәеи"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
+msgid "Graphics"
+msgstr "Аграфика"
+
+#: desktop-directories/Graphics.directory.desktop.in:4
+msgid "Graphics applications"
+msgstr "Аграфиказы аԥшьқәа"
+
+#: desktop-directories/Network.directory.desktop.in:3
+msgid "Internet"
+msgstr "Аинтернет"
+
+#: desktop-directories/Network.directory.desktop.in:4
+msgid "Programs for Internet access such as web and email"
+msgstr "Аинтернет аус адуларазы апрограммақәа"
+
+#: desktop-directories/Office.directory.desktop.in:3
+msgid "Office"
+msgstr "Аофис"
+
+#: desktop-directories/Office.directory.desktop.in:4
+msgid "Office Applications"
+msgstr "Аофис иатәу аԥшьқәа"
+
+#: desktop-directories/System-Tools.directory.desktop.in:3
+msgid "System Tools"
+msgstr "Асистематә"
+
+#: desktop-directories/System-Tools.directory.desktop.in:4
+msgid "System configuration and monitoring"
+msgstr "Асистема аиҽкаареи ацклаԥшреи рзы ахархәагақәа"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
+msgid "Universal Access"
+msgstr "Чыдалатәи алшарақәа"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
+msgid "Universal Access Settings"
+msgstr "Чыдалатәи алшарақәа рхышәарақәа"
+
+#: desktop-directories/Utility.directory.desktop.in:3
+msgid "Accessories"
+msgstr "Истандарту"
+
+#: desktop-directories/Utility.directory.desktop.in:4
+msgid "Desktop accessories"
+msgstr "Истандарту аԥшьқәа"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
+msgid "Applications"
+msgstr "Аԥшькәа"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
+msgid "Other"
+msgstr "Егьырҭ"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
+msgid "Applications that did not fit in other categories"
+msgstr "Изеиԥшхкызаалак иақәымшәо аԥшьқәа."
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Еиуеиԥшым"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
+msgid "Utilities"
+msgstr "Утилитқәа"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
+msgid "Small but useful GNOME tools"
+msgstr "Хәарҭара злоу GNOME амаругақәа"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
+msgid "Web Applications"
+msgstr "Веб-аԥшьқәа"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
+msgid "Applications and sites saved from Web"
+msgstr "Аинтернет аҟынтә еиқәырхоу аԥшькәеи асаитқәеи "
