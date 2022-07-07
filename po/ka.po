@@ -1,239 +1,128 @@
-# Georgian translation for gnome-menus
-# Copyright (c) (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
-# This file is distributed under the same license as the gnome-menus package.
-# <>, 2005.
-# , fuzzy
-#  <>, 2006.
-# 
-# 
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-09 23:56+0100\n"
-"PO-Revision-Date: 2006-03-16 19:00+0100\n"
-"Last-Translator: Vladimer Sichinava <alinux@siena.linux.it>\n"
-"Language-Team: Georgian <http://geoubuntu.cjb.net/>\n"
+"Project-Id-Version: Gnome-menus\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2022-02-01 18:51+0000\n"
+"PO-Revision-Date: 2022-04-26 05:49+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: \n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "დამხმარე საშუალებები"
-
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "დამხმარე საშუალებათა პარამეტრები"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "აქსესუარები"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "სამუშაო მაგიდის აქსესუარები"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "პროგრამები"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "სამუშაო მაგიდა"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-msgid "Personal preferences and administration settings"
-msgstr "საკუთარი პარამეტრები და ადმინისტრაცია"
-
-#: ../desktop-directories/Development.directory.in.h:1
-msgid "Programming"
-msgstr "პროგრამირება"
-
-#: ../desktop-directories/Development.directory.in.h:2
-msgid "Tools for software development"
-msgstr "პროგრამირების ხელსაწყოები"
-
-#: ../desktop-directories/Education.directory.in.h:1
-msgid "Education"
-msgstr "განათლება"
-
-#: ../desktop-directories/Games.directory.in.h:1
-msgid "Games"
-msgstr "თამაშები"
-
-#: ../desktop-directories/Games.directory.in.h:2
-msgid "Games and amusements"
-msgstr "თამაშები და სხვა"
-
-#: ../desktop-directories/Graphics.directory.in.h:1
-msgid "Graphics"
-msgstr "გრაფიკა"
-
-#: ../desktop-directories/Graphics.directory.in.h:2
-msgid "Graphics applications"
-msgstr "გრაფიკული პროგრამები"
-
-#: ../desktop-directories/Internet.directory.in.h:1
-msgid "Internet"
-msgstr "ინტერნეტი"
-
-#: ../desktop-directories/Internet.directory.in.h:2
-msgid "Programs for Internet access such as web and email"
-msgstr "პროგრამები ინტერნეტისათვის, ვები და მეილი"
-
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "მულტიმედიის მენუ"
-
-#: ../desktop-directories/Multimedia.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
 msgstr "ხმა და ვიდეო"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:4
+msgid "Multimedia menu"
+msgstr "მულტიმედიის მენიუ"
+
+#: desktop-directories/Development.directory.desktop.in:3
+msgid "Programming"
+msgstr "პროგრამირება"
+
+#: desktop-directories/Development.directory.desktop.in:4
+msgid "Tools for software development"
+msgstr "ინსტრუმენტები პროგრამული უზრუნველყოფის განვითარებისთვის"
+
+#: desktop-directories/Education.directory.desktop.in:3
+msgid "Education"
+msgstr "განათლება"
+
+#: desktop-directories/Game.directory.desktop.in:3
+msgid "Games"
+msgstr "თამაშები"
+
+#: desktop-directories/Game.directory.desktop.in:4
+msgid "Games and amusements"
+msgstr "თამაშები და გასართობი"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
+msgid "Graphics"
+msgstr "გრაფიკა"
+
+#: desktop-directories/Graphics.directory.desktop.in:4
+msgid "Graphics applications"
+msgstr "გრაფიკული პროგრამები"
+
+#: desktop-directories/Network.directory.desktop.in:3
+msgid "Internet"
+msgstr "ინტერნეტი"
+
+#: desktop-directories/Network.directory.desktop.in:4
+msgid "Programs for Internet access such as web and email"
+msgstr "ინტერნეტთან სამუშაო პროგრამები, მაგ. ბრაუზერი და ელ-ფოსტის კლიენტი"
+
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "ოფისი"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
-msgstr "საოფისე პროგრამები"
+msgstr "ოფისის აპლიკაციები"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "პროგრამები რომლებიც არც ერთ კატეგორიაში არ შედიან"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "სხვა"
-
-#: ../desktop-directories/Preferences.directory.in.h:1
-msgid "Personal preferences"
-msgstr "პერსონალური პარამეტრები"
-
-#: ../desktop-directories/Preferences.directory.in.h:2
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "პარამეტრები"
-
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "სპეც შესაძლებლობების პარამეტრები"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "პერსონალური პარამეტრები"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "ადმინისტრაცია"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr "გლობალური სისტემური ცვლილებები (ვრცელდება ყველა მომხმარებელზე)"
-
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
 msgstr "სისტემური ხელსაწყოები"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
-msgstr "სისტემის კონფიგურაცია და მონიტორინგი"
+msgstr "სისტემის მორგება და მონიტორინგი"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "მენუს ედიტორი"
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
+msgid "Universal Access"
+msgstr "უნივერსალური წვდომა"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
-msgid "Edit Menus"
-msgstr "მენუს დამუშავება"
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
+msgid "Universal Access Settings"
+msgstr "უნივერსალური წვდომის მორგება"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
-msgid "_Applications:"
-msgstr "_პროგრამები:"
+#: desktop-directories/Utility.directory.desktop.in:3
+msgid "Accessories"
+msgstr "აქსესუარები"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
-msgid "_Defaults"
-msgstr "_ნაგულისხმევი პარამეტრები"
+#: desktop-directories/Utility.directory.desktop.in:4
+msgid "Desktop accessories"
+msgstr "სამუშაო მაგიდის აქსესუარები"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
-msgid "_Menus:"
-msgstr "_მენუ"
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
+msgid "Applications"
+msgstr "აპლიკაციები"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
-msgid "Name"
-msgstr "სახელი"
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
+msgid "Other"
+msgstr "სხვები"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Show"
-msgstr "ანახე"
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
+msgid "Applications that did not fit in other categories"
+msgstr "აპლიკაციები, რომლებიც ვერ მოხვდნენ სხვა კატეგორიებში"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr "ვერ ვპოულობ სახლის დირექტორიას: არ იქნება დაყენებული /etc/passwd-ში"
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "გამომშრალი"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "მენუ ფაილი"
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
+msgid "Utilities"
+msgstr "ხელსაწყოები"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "MENU_FILE"
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
+msgid "Small but useful GNOME tools"
+msgstr "პატარა, მაგრამ საჭირო ხელსაწყოები GNOME-სთვის"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "მენუში ცვლილებათა მონიტორინგი"
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
+msgid "Web Applications"
+msgstr "ვებ აპლიკაციები"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "<ჩაუმატებელი> ელემენტების ჩამატება"
-
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "ჩართე NoDisplay=true ელემენტები"
-
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "არასწორი ID დესკტოპ ფაილისა"
-
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[მცდარი ფაილსახელი]"
-
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr " <excluded>"
-
-#: ../util/test-menu-spec.c:164
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"↵\n"
-"↵\n"
-"↵\n"
-"==== მენუ შეიცვალა, გადათვირთვა ====↵\n"
-"↵\n"
-"↵\n"
-"\n"
-"\n"
-
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "მენუს ხე ცარიელია"
-
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "-·test·GNOME's·implementation·of·the·Desktop·Menu·Specification"
-
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
+msgid "Applications and sites saved from Web"
+msgstr "აპლიკაციები და ვებიდან დამახსოვრებული საიტები"
