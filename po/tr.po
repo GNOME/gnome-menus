@@ -1,5 +1,5 @@
-# Turkish translation of Gnome-menus.
-# Copyright (C) 2004 THE Gnome-menus'S COPYRIGHT HOLDER
+# Turkish translation of gnome-menus.
+# Copyright (C) 2004-2022 gnome-menus's COPYRIGHT HOLDER
 # This file is distributed under the same license as the Gnome-menus package.
 #
 # Onur Can Çakmak <onur.cakmak@gmail.com>, 2006.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2018-12-27 13:42+0000\n"
+"POT-Creation-Date: 2022-07-07 17:12+0000\n"
 "PO-Revision-Date: 2018-12-29 14:07+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -30,12 +30,6 @@ msgstr "Ses ve Video"
 msgid "Multimedia menu"
 msgstr "Çokluortam menüsü"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/AudioVideo.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-multimedia"
-msgstr "applications-multimedia"
-
 #: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "Programlama"
@@ -44,21 +38,9 @@ msgstr "Programlama"
 msgid "Tools for software development"
 msgstr "Yazılım geliştirme araçları"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Development.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-development"
-msgstr "applications-development"
-
 #: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "Eğitim"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Education.directory.desktop.in:5
-#| msgid "Applications"
-msgid "applications-science"
-msgstr "applications-science"
 
 #: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
@@ -68,12 +50,6 @@ msgstr "Oyunlar"
 msgid "Games and amusements"
 msgstr "Oyun ve eğlencelikler"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Game.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-games"
-msgstr "applications-games"
-
 #: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "Grafik"
@@ -81,12 +57,6 @@ msgstr "Grafik"
 #: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
 msgstr "Grafik uygulamaları"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Graphics.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-graphics"
-msgstr "applications-graphics"
 
 #: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
@@ -96,13 +66,6 @@ msgstr "İnternet"
 msgid "Programs for Internet access such as web and email"
 msgstr "Web ve e-posta gibi İnternete erişim amaçlı programlar"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Network.directory.desktop.in:6
-#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-internet"
-msgstr "applications-internet"
-
 #: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "Ofis"
@@ -110,12 +73,6 @@ msgstr "Ofis"
 #: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
 msgstr "Ofis Uygulamaları"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Office.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-office"
-msgstr "applications-office"
 
 #: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
@@ -125,12 +82,6 @@ msgstr "Sistem Araçları"
 msgid "System configuration and monitoring"
 msgstr "Sistem yapılandırma ve izleme"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/System-Tools.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-system"
-msgstr "applications-system"
-
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "Evrensel Erişim"
@@ -138,11 +89,6 @@ msgstr "Evrensel Erişim"
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "Evrensel Erişim Ayarları"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Utility-Accessibility.directory.desktop.in:7
-msgid "preferences-desktop-accessibility"
-msgstr "preferences-desktop-accessibility"
 
 #: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
@@ -152,25 +98,10 @@ msgstr "Donatılar"
 msgid "Desktop accessories"
 msgstr "Masaüstü donatıları"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Utility.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
-#| msgid "Applications"
-msgid "applications-accessories"
-msgstr "applications-accessories"
-
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "Uygulamalar"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Other.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
-#| msgid "Applications"
-msgid "applications-other"
-msgstr "applications-other"
 
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
@@ -199,130 +130,3 @@ msgstr "Web Uygulamaları"
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Webʼden kaydedilen siteler ve uygulamalar"
-
-#~ msgid "Hardware"
-#~ msgstr "Donanım"
-
-#~ msgid "Settings for several hardware devices"
-#~ msgstr "Bazı donanım aygıtları için ayarlar"
-
-#~ msgid "Personal"
-#~ msgstr "Kişisel"
-
-#~ msgid "Personal settings"
-#~ msgstr "Kişisel ayarlar"
-
-#~ msgid "System"
-#~ msgstr "Sistem"
-
-#~ msgid "System settings"
-#~ msgstr "Sistem ayarları"
-
-#~ msgid "Menu Editor"
-#~ msgstr "Menü Düzenleyicisi"
-
-#~ msgid "Edit Menus"
-#~ msgstr "Menüleri Düzenle"
-
-#~ msgid "_Defaults"
-#~ msgstr "Ö_ntanımlılar"
-
-#~ msgid "_Menus:"
-#~ msgstr "_Menüler:"
-
-#~ msgid "_Applications:"
-#~ msgstr "_Uygulamalar:"
-
-#~ msgid "Simple Menu Editor %s"
-#~ msgstr "Basit Menü Düzenleyicisi %s"
-
-#~ msgid "Name"
-#~ msgstr "Ad"
-
-#~ msgid "Show"
-#~ msgstr "Göster"
-
-#~ msgid ""
-#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
-#~ "in environment"
-#~ msgstr ""
-#~ "Başlangıç dizini bulunamadı: /etc/passwd içinde ayarlanmamış ve ortam "
-#~ "değişkeni $HOME içinde değer yok"
-
-#~ msgid "Internet and Network"
-#~ msgstr "İnternet ve Ağ"
-
-#~ msgid "Network-related settings"
-#~ msgstr "Ağ ile ilgili ayarlar"
-
-#~ msgid "Look and Feel"
-#~ msgstr "Görünüş ve İşleyiş"
-
-#~ msgid "Settings controlling the desktop appearance and behavior"
-#~ msgstr "Masaüstü görünüm ve işleyişini kontrol eden ayarlar"
-
-#~ msgid "Administration"
-#~ msgstr "Yönetim"
-
-#~ msgid "Change system-wide settings (affects all users)"
-#~ msgstr "Sistem geneli ayarları değiştir (tüm kullanıcıları etkiler)"
-
-#~ msgid "Personal preferences"
-#~ msgstr "Kişisel tercihler"
-
-#~ msgid "Preferences"
-#~ msgstr "Tercihler"
-
-#~ msgid "Personal preferences and administration settings"
-#~ msgstr "Kişisel tercihler ve yönetim ayarları"
-
-#~ msgid "Menu file"
-#~ msgstr "Menü dosyası"
-
-#~ msgid "MENU_FILE"
-#~ msgstr "MENU_DOSYASI"
-
-#~ msgid "Monitor for menu changes"
-#~ msgstr "Menü değişikliklerini izle"
-
-#~ msgid "Include <Exclude>d entries"
-#~ msgstr "<Exclude> edilmiş girişleri içer"
-
-#~ msgid "Include NoDisplay=true entries"
-#~ msgstr "NoDisplay=true girdileri içer"
-
-#~ msgid "Invalid desktop file ID"
-#~ msgstr "Geçersiz masaüstü dosya ID'si"
-
-#~ msgid "[Invalid Filename]"
-#~ msgstr "[Geçersiz Dosyaadı]"
-
-#~ msgid " <excluded>"
-#~ msgstr " <excluded>"
-
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ "==== Menu changed, reloading ====\n"
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ "==== Menü değişti, yeniden yükleniyor ====\n"
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Menu tree is empty"
-#~ msgstr "Menü ağacı boş"
-
-#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
-#~ msgstr "- GNOME'un Masaüstü Menü Belirtimleri uygulamasını sına"
-
-#~ msgid "Universal access related preferences"
-#~ msgstr "Evrensel erişim ile ilgili tercihler"
-
-#~ msgid "Personal preferences and settings"
-#~ msgstr "Kişisel tercih ve ayarlar"
