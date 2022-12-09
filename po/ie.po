@@ -1,0 +1,129 @@
+# Interlingue translation for gnome-menus
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the gnome-menus package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2022-12-09 18:09+0000\n"
+"PO-Revision-Date: 2022-12-10 01:16+0700\n"
+"Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
+"Language-Team: IE\n"
+"Language: ie\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Launchpad-Export-Date: 2010-07-07 10:48+0000\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:3
+msgid "Sound & Video"
+msgstr "Son e video"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:4
+msgid "Multimedia menu"
+msgstr "Menu de multimedia"
+
+#: desktop-directories/Development.directory.desktop.in:3
+msgid "Programming"
+msgstr "Programmation"
+
+#: desktop-directories/Development.directory.desktop.in:4
+msgid "Tools for software development"
+msgstr "Instrumentarium por developation de programmas"
+
+#: desktop-directories/Education.directory.desktop.in:3
+msgid "Education"
+msgstr "Education"
+
+#: desktop-directories/Game.directory.desktop.in:3
+msgid "Games"
+msgstr "Ludes"
+
+#: desktop-directories/Game.directory.desktop.in:4
+msgid "Games and amusements"
+msgstr "Ludes e amusamentes"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
+msgid "Graphics"
+msgstr "Graphica"
+
+#: desktop-directories/Graphics.directory.desktop.in:4
+msgid "Graphics applications"
+msgstr "Applicationes por grafica"
+
+#: desktop-directories/Network.directory.desktop.in:3
+msgid "Internet"
+msgstr "Internet"
+
+#: desktop-directories/Network.directory.desktop.in:4
+msgid "Programs for Internet access such as web and email"
+msgstr "Programmas por Internet quam navigatores e letores de postage"
+
+#: desktop-directories/Office.directory.desktop.in:3
+msgid "Office"
+msgstr "Oficie"
+
+#: desktop-directories/Office.directory.desktop.in:4
+msgid "Office Applications"
+msgstr "Applicationes de officie"
+
+#: desktop-directories/System-Tools.directory.desktop.in:3
+msgid "System Tools"
+msgstr "Utensiles del sistema"
+
+#: desktop-directories/System-Tools.directory.desktop.in:4
+msgid "System configuration and monitoring"
+msgstr "Configuration e supervision del sistema"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
+msgid "Universal Access"
+msgstr "Accesse universal"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
+msgid "Universal Access Settings"
+msgstr "Parametres de Accesse universal"
+
+#: desktop-directories/Utility.directory.desktop.in:3
+msgid "Accessories"
+msgstr "Accessories"
+
+#: desktop-directories/Utility.directory.desktop.in:4
+msgid "Desktop accessories"
+msgstr "Accessories de ambientie"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
+msgid "Applications"
+msgstr "Applicationes"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
+msgid "Other"
+msgstr "Altris"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
+msgid "Applications that did not fit in other categories"
+msgstr "Applicationes quel ne convene por li altri categories"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Diversages"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
+msgid "Utilities"
+msgstr "Utensiles"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
+msgid "Small but useful GNOME tools"
+msgstr "Micri ma util utensiles de GNOME"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
+msgid "Web Applications"
+msgstr "Applicationes de Web"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
+msgid "Applications and sites saved from Web"
+msgstr "Applicationes e sites salvat ex li Web"
