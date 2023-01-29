@@ -1,18 +1,17 @@
-# gnome-menus' Portuguese translation.
-# Copyright © 2004, 2005, 2006, 2007, 2009, 2012, 2013 gnome-menus
+# Portuguese translation for gnome-menus.
+# Copyright © 2004-2023 gnome-menus.
 # This file is distributed under the same license as the gnome-menus package.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2005, 2006, 2007, 2009, 2012, 2013.
-#
 # Pedro Albuquerque <palbuquerque73@openmailbox.com>, 2015.
 # José Vieira <jvieira33@sapo.pt>, 2021.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.8\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2021-04-05 11:29+0000\n"
-"PO-Revision-Date: 2021-06-02 16:07+0100\n"
+"POT-Creation-Date: 2023-01-25 19:05+0000\n"
+"PO-Revision-Date: 2023-01-29 21:14+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Português (https://l10n.gnome.org/teams/pt/)\n"
 "Language: pt\n"
@@ -20,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
@@ -28,7 +27,7 @@ msgstr "Som e Vídeo"
 
 #: desktop-directories/AudioVideo.directory.desktop.in:4
 msgid "Multimedia menu"
-msgstr "Menu de multimédia"
+msgstr "Menu multimédia"
 
 #: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
@@ -64,7 +63,7 @@ msgstr "Internet"
 
 #: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "Programas para acesso à Internet tais como navegadores e clientes de correio"
+msgstr "Programas para acesso à Internet tais como navegadores e correio eletrónico"
 
 #: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
@@ -76,7 +75,7 @@ msgstr "Aplicações de produtividade"
 
 #: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
-msgstr "Ferramentas de sistema"
+msgstr "Ferramentas do sistema"
 
 #: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
@@ -113,7 +112,7 @@ msgstr "Aplicações que não se enquadram em nenhuma outra categoria"
 
 #: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
 msgid "Sundry"
-msgstr "Diversas"
+msgstr "Diversos"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
@@ -121,7 +120,7 @@ msgstr "Utilitários"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
 msgid "Small but useful GNOME tools"
-msgstr "Pequenas mas úteis ferramentas GNOME"
+msgstr "Pequenas mas úteis ferramentas do GNOME"
 
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
