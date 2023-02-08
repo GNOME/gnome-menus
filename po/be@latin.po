@@ -1,52 +1,32 @@
-# Biełaruski pierakład gnome-menus.
-# Copyright (C) 2005 THE gnome-menus'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-menus package.
-# Alaksandar Navicki <zolak@lacinka.org>, 2006.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Harbuz Uladzislau <shadasviarus@gmail.com>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-06 00:40+0300\n"
-"PO-Revision-Date: 2007-05-06 00:41+0300\n"
-"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
-"Language-Team: Belarusian Latin <i18n@mova.org>\n"
-"Language: be@latin\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"menus&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-11-27 09:19+0000\n"
+"PO-Revision-Date: 2015-11-27 21:08+0100\n"
+"Last-Translator: Harbuz Uladzislau <shadasviarus@gmail.com>\n"
+"Language-Team: Belarusian <>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Belarsian Latin\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Universal Access"
-msgstr "Universalny dostup"
+#: ../desktop-directories/AudioVideo.directory.in.h:1
+msgid "Sound & Video"
+msgstr "Huk i videa"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Universal Access Settings"
-msgstr "Nałady ŭniversalnaha dostupu"
-
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "Aksesuary"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "Aksesuary stała"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "Aplikacyi"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Personal preferences and administration settings"
-msgstr "Asabistyja i administracyjnyja nałady"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-#: ../desktop-directories/System.directory.in.h:1
-msgid "System"
-msgstr "Systema"
+#: ../desktop-directories/AudioVideo.directory.in.h:2
+msgid "Multimedia menu"
+msgstr "Mieniu multymiedyja"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
@@ -54,19 +34,19 @@ msgstr "Prahramavańnie"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
-msgstr "Pryłady prahramavańnia"
+msgstr "Pryłady da razpracoŭki prahramnaga zabiespiačeńnia"
 
 #: ../desktop-directories/Education.directory.in.h:1
 msgid "Education"
 msgstr "Adukacyja"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: ../desktop-directories/Game.directory.in.h:1
 msgid "Games"
 msgstr "Hulni"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: ../desktop-directories/Game.directory.in.h:2
 msgid "Games and amusements"
-msgstr "Hulni j zabavy"
+msgstr "Hulni i zabavy"
 
 #: ../desktop-directories/Graphics.directory.in.h:1
 msgid "Graphics"
@@ -74,47 +54,15 @@ msgstr "Hrafika"
 
 #: ../desktop-directories/Graphics.directory.in.h:2
 msgid "Graphics applications"
-msgstr "Hrafičnyja aplikacyi"
+msgstr "Hrafičnyja prahramy"
 
-#: ../desktop-directories/Hardware.directory.in.h:1
-msgid "Hardware"
-msgstr "Aparatura"
-
-#: ../desktop-directories/Hardware.directory.in.h:2
-msgid "Settings for several hardware devices"
-msgstr "Niekatoryja aparaturnyja nałady"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:1
-msgid "Internet and Network"
-msgstr "Internet i sietka"
-
-#: ../desktop-directories/InternetAndNetwork.directory.in.h:2
-msgid "Network-related settings"
-msgstr "Sietkavyja nałady"
-
-#: ../desktop-directories/Internet.directory.in.h:1
+#: ../desktop-directories/Network.directory.in.h:1
 msgid "Internet"
 msgstr "Internet"
 
-#: ../desktop-directories/Internet.directory.in.h:2
+#: ../desktop-directories/Network.directory.in.h:2
 msgid "Programs for Internet access such as web and email"
-msgstr "Prahramy dla internetu"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:1
-msgid "Look and Feel"
-msgstr "Vyhlad"
-
-#: ../desktop-directories/LookAndFeel.directory.in.h:2
-msgid "Settings controlling the desktop appearance and behavior"
-msgstr "Nałady vyhladu j pavodzinaŭ"
-
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Multymedyi"
-
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "Aŭdyjo j videa"
+msgstr "Prahramy dla dałučennia da internetu takija jak web i email"
 
 #: ../desktop-directories/Office.directory.in.h:1
 msgid "Office"
@@ -124,153 +72,58 @@ msgstr "Ofis"
 msgid "Office Applications"
 msgstr "Ofisnyja prahramy"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Prahramy, jakija nie ŭvajšli ŭ inšyja kategoryi"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "Inšyja"
-
-#: ../desktop-directories/Personal.directory.in.h:1
-msgid "Personal"
-msgstr "Asabistaje"
-
-#: ../desktop-directories/Personal.directory.in.h:2
-msgid "Personal settings"
-msgstr "Asabistyja nałady"
-
-#: ../desktop-directories/Preferences.directory.in.h:1
-msgid "Personal preferences"
-msgstr "Asabistyja nałady"
-
-#: ../desktop-directories/Preferences.directory.in.h:2
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Nałady"
-
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Universal access related preferences"
-msgstr "Nałady dla ŭniversalnaha dostupu"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "Asabistyja nałady"
-
-#: ../desktop-directories/System.directory.in.h:2
-msgid "System settings"
-msgstr "Systemnyja nałady"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "Administravańnie"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change system-wide settings (affects all users)"
-msgstr "Źmiani systemnyja nałady (upłyvaje na ŭsich karystalnikaŭ)"
-
 #: ../desktop-directories/System-Tools.directory.in.h:1
 msgid "System Tools"
-msgstr "Systemnaje pryładździe"
+msgstr "Sistemnyja pryłady"
 
 #: ../desktop-directories/System-Tools.directory.in.h:2
 msgid "System configuration and monitoring"
-msgstr "Manitorynh i kanfihuracyja systemy"
+msgstr "Sistemnaja kanfihuracyja i manitaravańnie"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Redaktar menu"
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+msgid "Universal Access"
+msgstr "Univiersalny dostup"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
-msgid "Edit Menus"
-msgstr "Madyfikuje menu"
+#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+msgid "Universal Access Settings"
+msgstr "Nałady univiersalnaha dostupu"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
-msgid "_Applications:"
-msgstr "_Aplikacyi:"
+#: ../desktop-directories/Utility.directory.in.h:1
+msgid "Accessories"
+msgstr "Akcesuary"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
-msgid "_Defaults"
-msgstr "_Zmoŭčanaje"
+#: ../desktop-directories/Utility.directory.in.h:2
+msgid "Desktop accessories"
+msgstr "Akcesuary pracoŭnaha stału"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
-msgid "_Menus:"
-msgstr "_Menu:"
+#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+msgid "Applications"
+msgstr "Prahramy"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
-msgid "Name"
-msgstr "Nazva"
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+msgid "Other"
+msgstr "Inšyja"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Show"
-msgstr "Pakažy"
+#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+msgid "Applications that did not fit in other categories"
+msgstr "Prahramy jakija nie pasujuć da inšych katehoryj"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Niemahčyma znajści chatniaj tečki: jana nie akreślenaja ŭ /etc/passwd, a vartaść źmiennaj asiarodździa $HOME nia vyznačanaja"
+#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+msgid "Sundry"
+msgstr "Roznyja"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "Fajł menu"
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+msgid "Utilities"
+msgstr "Pryłady"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "FAJŁ_MENU"
+#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+msgid "Small but useful GNOME tools"
+msgstr "Małyja ale prydatnyja pryłady GNOME"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "Adsočka źmienaŭ menu"
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+msgid "Web Applications"
+msgstr "Web prahramy"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "Uklučna z <Vyklučanymi> elementami"
-
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "Uklučna ź nie pakazanymi elementami (NoDisplay=true)"
-
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "Niapravilny ID fajłu stała"
-
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[Niapravilnaja nazva fajłu]"
-
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr " <vyklučanaje>"
-
-#: ../util/test-menu-spec.c:164
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"==== Menu źmianiłasia, zahružajecca znoŭ ====\n"
-"\n"
-"\n"
-
-#: ../util/test-menu-spec.c:169
-#: ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "Dreva menu pustoje"
-
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr "– testuje zaimplementavanuju ŭ GNOME Specyfikacyju menu stała"
-
-#~ msgid "Accessibility"
-#~ msgstr "Dastupnaść"
-#~ msgid "Accessibility Settings"
-#~ msgstr "Nałady dastupnaści"
-#~ msgid "Desktop"
-#~ msgstr "Stoł"
-
+#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+msgid "Applications and sites saved from Web"
+msgstr "Prahramy i miesca zachavanyja z Web"
