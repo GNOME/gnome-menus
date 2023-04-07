@@ -30,7 +30,7 @@ msgstr "Меню за мултимедия"
 
 #: ../desktop-directories/Development.directory.in.h:1
 msgid "Programming"
-msgstr "Разработка"
+msgstr "Програмиране"
 
 #: ../desktop-directories/Development.directory.in.h:2
 msgid "Tools for software development"
