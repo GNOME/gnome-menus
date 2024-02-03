@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2023-11-26 13:50+0000\n"
+"PO-Revision-Date: 2024-02-01 15:54+0630\n"
+"Last-Translator: Zayar Lwin <zyl.pol.mm@zohomail.com>\n"
+"Language-Team: \n"
+"Language: my\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:3
+msgid "Sound & Video"
+msgstr "အသံနှင့်ဗွီဒီယို"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:4
+msgid "Multimedia menu"
+msgstr "မီဒီယာအစုံ မီနူး"
+
+#: desktop-directories/Development.directory.desktop.in:3
+msgid "Programming"
+msgstr "ပရိုဂရမ်ရေးသားခြင်း"
+
+#: desktop-directories/Development.directory.desktop.in:4
+msgid "Tools for software development"
+msgstr "ဆော့ဖ်ဝဲလ်ရေးသားခြင်းအတွက် ကိရိယာများ"
+
+#: desktop-directories/Education.directory.desktop.in:3
+msgid "Education"
+msgstr "ပညာရေး"
+
+#: desktop-directories/Game.directory.desktop.in:3
+msgid "Games"
+msgstr "ဂိမ်းများ"
+
+#: desktop-directories/Game.directory.desktop.in:4
+msgid "Games and amusements"
+msgstr "ဂိမ်းနှင့်အပန်းဖြေစရာများ"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
+msgid "Graphics"
+msgstr "ရုပ်ပြဆိုင်ရာ"
+
+#: desktop-directories/Graphics.directory.desktop.in:4
+msgid "Graphics applications"
+msgstr "ရုပ်ပြအပ္ပလီကေးရှင်းများ"
+
+#: desktop-directories/Network.directory.desktop.in:3
+msgid "Internet"
+msgstr "အင်တာနက်"
+
+#: desktop-directories/Network.directory.desktop.in:4
+msgid "Programs for Internet access such as web and email"
+msgstr "ဝက်ဘ်နှင့်အီးမေးလ် ကဲ့သို့ အင်တာနက်အသုံးပြုမှုများအတွက် ပရိုဂရမ်များ"
+
+#: desktop-directories/Office.directory.desktop.in:3
+msgid "Office"
+msgstr "ရုံးသုံး"
+
+#: desktop-directories/Office.directory.desktop.in:4
+msgid "Office Applications"
+msgstr "ရုံးသုံးအပ္ပလီကေးရှင်းများ"
+
+#: desktop-directories/System-Tools.directory.desktop.in:3
+msgid "System Tools"
+msgstr "စနစ်ကိရိယာများ"
+
+#: desktop-directories/System-Tools.directory.desktop.in:4
+msgid "System configuration and monitoring"
+msgstr "စနစ်ပြင်ဆင်ခြင်းနှင့်စောင့်ကြည့်ခြင်း"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
+msgid "Universal Access"
+msgstr "လူအားလုံးအလွယ်တကူသုံးစွဲမှု"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
+msgid "Universal Access Settings"
+msgstr "လူအားလုံးအလွယ်တကူသုံးစွဲမှုဆိုင်ရာသတ်မှတ်ချက်များ"
+
+#: desktop-directories/Utility.directory.desktop.in:3
+msgid "Accessories"
+msgstr "အပိုအသုံးအဆောင်များ"
+
+#: desktop-directories/Utility.directory.desktop.in:4
+msgid "Desktop accessories"
+msgstr "Desktopဆိုင်ရာအပိုအသုံးအဆောင်များ"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
+msgid "Applications"
+msgstr "အပ္ပလီကေးရှင်းများ"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
+msgid "Other"
+msgstr "အခြား"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
+msgid "Applications that did not fit in other categories"
+msgstr "အခြားအမျိုးအစားခွဲခြားမှုတွင် အံမကျသော အပ္ပလီကေးရှင်းများ"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "အထွေထွေ"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
+msgid "Utilities"
+msgstr "တိုလီမိုလီကိရိယာများ"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
+msgid "Small but useful GNOME tools"
+msgstr "အသုံးတည့်သော GNOME ကိရိယာများ"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
+msgid "Web Applications"
+msgstr "ဝက်ဘ်အပ္ပလီကေးရှင်းများ"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
+msgid "Applications and sites saved from Web"
+msgstr "ဝက်ဘ်မှသိမ်းဆည်းထားသောအပ္ပလီကေးရှင်းနှင့်ဆိုက်များ"
