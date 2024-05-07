@@ -6,21 +6,22 @@
 # Rajesh Ranjan <rranjan@redhat.com>, 2005, 2006, 2008, 2009.
 # Rajesh Ranjan <rajesh672@gmail.com>, 2009.
 # rajesh <rajeshkajha@yahoo.com>, 2012, 2013.
+# Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus.master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-18 10:33+0000\n"
-"PO-Revision-Date: 2013-03-22 12:20+0530\n"
-"Last-Translator: raj <raj>\n"
-"Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
+"POT-Creation-Date: 2022-07-07 17:12+0000\n"
+"PO-Revision-Date: 2024-04-19 20:12+0530\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 46.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "\n"
 "\n"
 "\n"
@@ -29,113 +30,114 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Sound & Video"
 msgstr "ध्वनि व वीडियो"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:4
 msgid "Multimedia menu"
 msgstr "मल्टीमीडिया मेनू"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "प्रोग्रामिंग"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:4
 msgid "Tools for software development"
 msgstr "सॉफ्टवेयर विकास के औज़ार"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "शिक्षा"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
 msgstr "खेल"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:4
 msgid "Games and amusements"
 msgstr "खेल व मनोरंजन"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "चित्रादि"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
 msgstr "चित्रादि अनुप्रयोग"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
 msgstr "इंटरनेट"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
 msgstr "इंटरनेट पहुँच के लिए वेब व ईमेल जैसे प्रोग्राम"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "कार्यालय"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
 msgstr "कार्यालय अनुप्रयोग"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
 msgstr "तंत्र औज़ार"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
 msgstr "तंत्र विन्यास व निरीक्षण"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "सार्वभौमिक पहुँच"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "सार्वभौमिक पहुँच सेटिंग"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
 msgstr "उपसाधन"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:4
 msgid "Desktop accessories"
 msgstr "डेस्कटॉप उपसाधन"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
 msgstr "अन्य"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "अनुप्रयोग जो अन्य श्रेणी में सटीक नहीं बैठा"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
 msgid "Sundry"
-msgstr "सनड्राइ"
+msgstr "विविध"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
 msgstr "उपयोगिताएँ"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
 msgid "Small but useful GNOME tools"
 msgstr "छोटा लेकिन उपयोगी GNOME औज़ार"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
 msgstr "वेब अनुप्रयोग"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
-msgstr "वेब से सहेजा अनुप्रयोग और साइट"
+msgstr "वेब से सहेजे गए अनुप्रयोग और साइटें"
 
 #~ msgid "Hardware"
 #~ msgstr "हार्डवेयर"
