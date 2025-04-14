@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-01-18 16:51+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues/\n"
+"POT-Creation-Date: 2025-04-11 00:32+0000\n"
 "PO-Revision-Date: 2013-03-25 02:23+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <trans-ja@lists.fedoraproject.org>\n"
@@ -29,11 +29,6 @@ msgstr "サウンドとビデオ"
 msgid "Multimedia menu"
 msgstr "マルチメディア関連のプログラムです"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/AudioVideo.directory.desktop.in:6
-msgid "applications-multimedia"
-msgstr ""
-
 #: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
 msgstr "プログラミング"
@@ -42,19 +37,9 @@ msgstr "プログラミング"
 msgid "Tools for software development"
 msgstr "ソフトウェア開発者向けのツールです"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Development.directory.desktop.in:6
-msgid "applications-development"
-msgstr ""
-
 #: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "教育・教養"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Education.directory.desktop.in:5
-msgid "applications-science"
-msgstr ""
 
 #: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
@@ -64,11 +49,6 @@ msgstr "ゲーム"
 msgid "Games and amusements"
 msgstr "気晴しにゲームをどうぞ"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Game.directory.desktop.in:6
-msgid "applications-games"
-msgstr ""
-
 #: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "グラフィックス"
@@ -76,11 +56,6 @@ msgstr "グラフィックス"
 #: desktop-directories/Graphics.directory.desktop.in:4
 msgid "Graphics applications"
 msgstr "グラフィックス関連のアプリケーションです"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Graphics.directory.desktop.in:6
-msgid "applications-graphics"
-msgstr ""
 
 #: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
@@ -90,12 +65,6 @@ msgstr "インターネット"
 msgid "Programs for Internet access such as web and email"
 msgstr "ウェブやメールなどインターネットにアクセスするためのプログラムです"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Network.directory.desktop.in:6
-#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
-msgid "applications-internet"
-msgstr ""
-
 #: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
 msgstr "オフィス"
@@ -103,11 +72,6 @@ msgstr "オフィス"
 #: desktop-directories/Office.directory.desktop.in:4
 msgid "Office Applications"
 msgstr "オフィスアプリケーションです"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Office.directory.desktop.in:6
-msgid "applications-office"
-msgstr ""
 
 #: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
@@ -117,11 +81,6 @@ msgstr "システムツール"
 msgid "System configuration and monitoring"
 msgstr "システムの設定と監視を行うプログラムです"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/System-Tools.directory.desktop.in:6
-msgid "applications-system"
-msgstr ""
-
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
 msgstr "ユニバーサルアクセス"
@@ -129,11 +88,6 @@ msgstr "ユニバーサルアクセス"
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:4
 msgid "Universal Access Settings"
 msgstr "ユニバーサルアクセスの設定を変更します"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Utility-Accessibility.directory.desktop.in:7
-msgid "preferences-desktop-accessibility"
-msgstr ""
 
 #: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
@@ -143,22 +97,10 @@ msgstr "アクセサリ"
 msgid "Desktop accessories"
 msgstr "デスクトップ用のアクセサリです"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Utility.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
-msgid "applications-accessories"
-msgstr ""
-
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "アプリケーション"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Other.directory.desktop.in:6
-msgid "applications-other"
-msgstr ""
 
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
@@ -167,6 +109,10 @@ msgstr "その他"
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:4
 msgid "Applications that did not fit in other categories"
 msgstr "他のカテゴリにあてはまらないアプリケーション"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "諸ツール"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Utilities"
@@ -183,9 +129,6 @@ msgstr "Web アプリケーション"
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
 msgstr "Web から保存したアプリケーションやサイト"
-
-#~ msgid "Sundry"
-#~ msgstr "諸ツール"
 
 #~ msgid "Hardware"
 #~ msgstr "ハードウェア"
