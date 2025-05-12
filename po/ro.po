@@ -5,22 +5,23 @@
 # Alexandru Szasz <alexxed@gmail.com>, 2007.
 # Adi Roiban <adi@roiban.ro>, 2008.
 # Răpițeanu Viorel-Cătălin <rapiteanu.catalin@gmail.com>, 2013.
+# Antonio Marin <gnmer.6qxyg@slmail.me>, 2025.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues\n"
-"POT-Creation-Date: 2019-03-04 13:49+0000\n"
-"PO-Revision-Date: 2019-01-27 01:35+0200\n"
-"Last-Translator: Florentina Mușat <florentina.musat.28 [at] gmail [dot] "
-"com>\n"
-"Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues/\n"
+"POT-Creation-Date: 2025-05-10 16:34+0000\n"
+"PO-Revision-Date: 2025-05-12 18:03+0200\n"
+"Last-Translator: Antonio Marin <gnmer.6qxyg@slmail.me>\n"
+"Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2);;\n"
-"X-Generator: Poedit 2.2.1\n"
+"20)) ? 1 : 2);\n"
+"X-Generator: Gtranslator 48.0\n"
 "X-Project-Style: gnome\n"
 
 #: desktop-directories/AudioVideo.directory.desktop.in:3
@@ -29,12 +30,7 @@ msgstr "Multimedia"
 
 #: desktop-directories/AudioVideo.directory.desktop.in:4
 msgid "Multimedia menu"
-msgstr "Meniu multimedia"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/AudioVideo.directory.desktop.in:6
-msgid "applications-multimedia"
-msgstr "applications-multimedia"
+msgstr "Opțiuni multimedia"
 
 #: desktop-directories/Development.directory.desktop.in:3
 msgid "Programming"
@@ -42,21 +38,11 @@ msgstr "Programare"
 
 #: desktop-directories/Development.directory.desktop.in:4
 msgid "Tools for software development"
-msgstr "Unelte pentru dezvoltare de software"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Development.directory.desktop.in:6
-msgid "applications-development"
-msgstr "applications-development"
+msgstr "Instrumente pentru programare"
 
 #: desktop-directories/Education.directory.desktop.in:3
 msgid "Education"
 msgstr "Educație"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Education.directory.desktop.in:5
-msgid "applications-science"
-msgstr "applications-science"
 
 #: desktop-directories/Game.directory.desktop.in:3
 msgid "Games"
@@ -66,11 +52,6 @@ msgstr "Jocuri"
 msgid "Games and amusements"
 msgstr "Jocuri și divertisment"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Game.directory.desktop.in:6
-msgid "applications-games"
-msgstr "applications-games"
-
 #: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics"
 msgstr "Grafică"
@@ -79,24 +60,13 @@ msgstr "Grafică"
 msgid "Graphics applications"
 msgstr "Aplicații pentru grafică"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Graphics.directory.desktop.in:6
-msgid "applications-graphics"
-msgstr "applications-graphics"
-
 #: desktop-directories/Network.directory.desktop.in:3
 msgid "Internet"
 msgstr "Internet"
 
 #: desktop-directories/Network.directory.desktop.in:4
 msgid "Programs for Internet access such as web and email"
-msgstr "Programe pentru acessul la Internet (navigare, mail etc.)"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Network.directory.desktop.in:6
-#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
-msgid "applications-internet"
-msgstr "applications-internet"
+msgstr "Programe pentru acessul la internet cum ar fi navigare și e-mail"
 
 #: desktop-directories/Office.directory.desktop.in:3
 msgid "Office"
@@ -106,23 +76,13 @@ msgstr "Birou"
 msgid "Office Applications"
 msgstr "Aplicații de birou"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Office.directory.desktop.in:6
-msgid "applications-office"
-msgstr "applications-office"
-
 #: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System Tools"
-msgstr "Utilitare de sistem"
+msgstr "Instrumente de sistem"
 
 #: desktop-directories/System-Tools.directory.desktop.in:4
 msgid "System configuration and monitoring"
 msgstr "Configurare și monitorizare a sistemului"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/System-Tools.directory.desktop.in:6
-msgid "applications-system"
-msgstr "applications-system"
 
 #: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access"
@@ -132,11 +92,6 @@ msgstr "Accesibilitate"
 msgid "Universal Access Settings"
 msgstr "Opțiuni de accesibilitate"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Utility-Accessibility.directory.desktop.in:7
-msgid "preferences-desktop-accessibility"
-msgstr "preferences-desktop-accessibility"
-
 #: desktop-directories/Utility.directory.desktop.in:3
 msgid "Accessories"
 msgstr "Accesorii"
@@ -145,23 +100,10 @@ msgstr "Accesorii"
 msgid "Desktop accessories"
 msgstr "Accesorii pentru desktop"
 
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/Utility.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
-msgid "applications-accessories"
-msgstr "applications-accessories"
-
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
 msgstr "Aplicații"
-
-#. TRANSLATORS: Don't translate this text (this is icon name)
-#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Other.directory.desktop.in:6
-#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
-msgid "applications-other"
-msgstr "applications-other"
 
 #: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Other"
@@ -181,133 +123,12 @@ msgstr "Utilitare"
 
 #: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
 msgid "Small but useful GNOME tools"
-msgstr "Unelte GNOME mici, dar utile"
+msgstr "Mici instrumente GNOME, dar utile"
 
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Web Applications"
-msgstr "Aplicații web"
+msgstr "Aplicații Web"
 
 #: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
 msgid "Applications and sites saved from Web"
-msgstr "Aplicații și site-uri salvate de pe web"
-
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
-
-#~ msgid "Settings for several hardware devices"
-#~ msgstr "Opțiuni hardware"
-
-#~ msgid "Internet and Network"
-#~ msgstr "Internet și rețea"
-
-#~ msgid "Network-related settings"
-#~ msgstr "Opțiuni de rețea"
-
-#~ msgid "Look and Feel"
-#~ msgstr "Aspect și comportament"
-
-#~ msgid "Settings controlling the desktop appearance and behavior"
-#~ msgstr "Opțiuni privind aspectul și comportamentul desktopului"
-
-#~ msgid "Personal"
-#~ msgstr "Personal"
-
-#~ msgid "Personal settings"
-#~ msgstr "Opțiuni personale"
-
-#~ msgid "Administration"
-#~ msgstr "Administrare"
-
-#~ msgid "Change system-wide settings (affects all users)"
-#~ msgstr "Configurarea sistemului (afectează toți utilizatorii)"
-
-#~ msgid "Personal preferences"
-#~ msgstr "Preferințe personale"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferințe"
-
-#~ msgid "System"
-#~ msgstr "Sistem"
-
-#~ msgid "System settings"
-#~ msgstr "Configurări de sistem"
-
-#~ msgid "Personal preferences and administration settings"
-#~ msgstr "Preferințe personale și configurări administrative"
-
-#~ msgid "Menu Editor"
-#~ msgstr "Editor meniu"
-
-#~ msgid "Edit Menus"
-#~ msgstr "Editare meniuri"
-
-#~ msgid "_Applications:"
-#~ msgstr "_Aplicații:"
-
-#~ msgid "_Defaults"
-#~ msgstr "_Opțiuni implicite"
-
-#~ msgid "_Menus:"
-#~ msgstr "_Meniuri:"
-
-#~ msgid "Simple Menu Editor %s"
-#~ msgstr "Editor simplu de meniu %s"
-
-#~ msgid "Name"
-#~ msgstr "Nume"
-
-#~ msgid "Show"
-#~ msgstr "Afișare"
-
-#~ msgid ""
-#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
-#~ "in environment"
-#~ msgstr ""
-#~ "Nu se găsește directorul „Acasă”: nu este setat în /etc/passwd și nu "
-#~ "există o valoare pentru variabila de mediu $HOME"
-
-#~ msgid "Menu file"
-#~ msgstr "Fișier meniu"
-
-#~ msgid "MENU_FILE"
-#~ msgstr "MENU_FILE"
-
-#~ msgid "Monitor for menu changes"
-#~ msgstr "Monitorizează schimbările din menu"
-
-#~ msgid "Include <Exclude>d entries"
-#~ msgstr "Include elementele cu eticheta <Exclude>"
-
-#~ msgid "Include NoDisplay=true entries"
-#~ msgstr "Include intrările cu „NoDisplay=true”"
-
-#~ msgid "Invalid desktop file ID"
-#~ msgstr "ID de fișier desktop invalid"
-
-#~ msgid "[Invalid Filename]"
-#~ msgstr "[Nume invalid de fișier]"
-
-#~ msgid " <excluded>"
-#~ msgstr " <exclus>"
-
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ "==== Menu changed, reloading ====\n"
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ "==== Meniu schimbat, se reîncarcă ====\n"
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Menu tree is empty"
-#~ msgstr "Arborele de meniuri este gol"
-
-#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
-#~ msgstr "- testare a implementării GNOME pentru „Desktop Menu Specification”"
+msgstr "Aplicații și situri salvate de pe Web"
