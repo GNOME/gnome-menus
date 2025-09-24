@@ -9,5 +9,5 @@ validate-menu:
     - apt-get update
     - apt-get -y install libxml2-utils wget
   script:
-    - wget https://standards.freedesktop.org/menu-spec/menu-latest.dtd
+    - wget https://specifications.freedesktop.org/menu-spec/menu-1.0.dtd
     - xmllint --noblanks --noout --path menu-latest.dtd layout/gnome-applications.menu
