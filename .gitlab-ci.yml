@@ -1,13 +1,96 @@
+include:
+  - project: 'Infrastructure/freedesktop-ci-templates'
+    ref: '707b49ef'
+    file:
+      - 'templates/debian.yml'
+
+stages:
+  - prepare
+  - check
+  - build
+
+# Common variables
+variables:
+  FDO_UPSTREAM_REPO: GNOME/gnome-menus
+  COMMON_MESON_FLAGS: "-Dwerror=true --prefix /usr"
+  MESON_TEST_TIMEOUT_MULTIPLIER: 3
+
+workflow:
+  rules:
+    # run merge request pipelines
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    # do not run branch pipelines if corresponding merge requests exist...
+    # (this avoids duplicate pipelines)
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    # ...but otherwise run branch pipelines
+    - if: $CI_COMMIT_BRANCH
+    # run tag pipelines
+    - if: $CI_COMMIT_TAG
+
+default:
+  retry:
+    max: 2
+    when:
+      - 'runner_system_failure'
+      - 'stuck_or_timeout_failure'
+      - 'scheduler_failure'
+      - 'api_failure'
+  interruptible: true
+
+.container.debian:
+  variables:
+    BASE_TAG: '2025-09-26.1'
+    FDO_DISTRIBUTION_VERSION: 'trixie'
+    FDO_DISTRIBUTION_TAG: "x86_64-${BASE_TAG}"
+    FDO_DISTRIBUTION_PACKAGES:
+      autoconf
+      automake
+      ca-certificates
+      gcc
+      gettext
+      git
+      gobject-introspection
+      libgirepository1.0-dev
+      libglib2.0-dev
+      libtool
+      libxml2-utils
+      python3
+      wget
+
+.distribution.debian:
+  extends:
+    - .fdo.distribution-image@debian
+    - .container.debian
+       
+container:debian:
+  extends:
+    - .container.debian
+    - .fdo.container-build@debian@x86_64
+  # DNS issues can cause this to fail
+  retry:
+    max: 2
+    exit_codes: 137
+  stage: prepare
+
+.build-debian-default:
+  extends:
+    - .distribution.debian
+  cache:
+    key: "$CI_JOB_NAME"
+    paths:
+      - _ccache/
+
 validate-menu:
-  image: debian:unstable-slim
+  extends:
+    - .build-debian-default
+  needs: ['container:debian']
+  stage: check
   # libxml2 doesn't support https yet but the spec is only available via https
   # https://bugzilla.gnome.org/791220
   # https://gitlab.freedesktop.org/freedesktop/freedesktop/issues/114
   # We shouldn't add the dtd to our git repo because it doesn't have
   # a clearly distributable license
-  before_script:
-    - apt-get update
-    - apt-get -y install libxml2-utils wget
   script:
     - wget https://specifications.freedesktop.org/menu-spec/menu-1.0.dtd
-    - xmllint --noblanks --noout --path menu-latest.dtd layout/gnome-applications.menu
+    - xmllint --noblanks --noout --path menu-1.0.dtd layout/gnome-applications.menu
