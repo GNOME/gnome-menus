@@ -89,6 +89,13 @@ container:debian:
     paths:
       - "${CI_PROJECT_DIR}/_build"
 
+.dist-runner:
+  artifacts:
+    name: "gnome-menus-${CI_COMMIT_REF_NAME}"
+    when: always
+    paths:
+      - "${CI_PROJECT_DIR}/public-dist"
+
 validate-menu:
   extends:
     - .build-debian-default
@@ -113,3 +120,17 @@ debian-x86_64:
     - mkdir _build && cd _build
     - ../autogen.sh --prefix /usr
     - make && make install
+
+release-build:
+  extends:
+    - .dist-runner
+    - .build-debian-default
+  needs: ['container:debian']
+  stage: build
+  script:
+    - mkdir _install && cd _install
+    - ../autogen.sh --prefix /usr
+    - make && make dist
+    - cd ..
+    - mkdir public-dist
+    - mv _install/gnome-menus-*.tar.xz public-dist/
