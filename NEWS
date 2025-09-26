@@ -1,4 +1,11 @@
 ==============
+Version 3.38.0
+==============
+
+* Add GioUnix-2.0 dependency to introspect libmenu
+* Translation updates
+
+==============
 Version 3.36.0
 ==============
 
