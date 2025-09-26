@@ -40,12 +40,13 @@ default:
 
 .container.debian:
   variables:
-    BASE_TAG: '2025-09-26.1'
+    BASE_TAG: '2025-09-26.2'
     FDO_DISTRIBUTION_VERSION: 'trixie'
     FDO_DISTRIBUTION_TAG: "x86_64-${BASE_TAG}"
     FDO_DISTRIBUTION_PACKAGES:
       autoconf
       automake
+      autopoint
       ca-certificates
       gcc
       gettext
@@ -81,6 +82,13 @@ container:debian:
     paths:
       - _ccache/
 
+.build-runner:
+  artifacts:
+    name: "gnome-menus-${CI_COMMIT_REF_NAME}"
+    when: always
+    paths:
+      - "${CI_PROJECT_DIR}/_build"
+
 validate-menu:
   extends:
     - .build-debian-default
@@ -94,3 +102,14 @@ validate-menu:
   script:
     - wget https://specifications.freedesktop.org/menu-spec/menu-1.0.dtd
     - xmllint --noblanks --noout --path menu-1.0.dtd layout/gnome-applications.menu
+
+debian-x86_64:
+  extends:
+    - .build-runner
+    - .build-debian-default
+  needs: ['container:debian']
+  stage: build
+  script:
+    - mkdir _build && cd _build
+    - ../autogen.sh --prefix /usr
+    - make && make install
