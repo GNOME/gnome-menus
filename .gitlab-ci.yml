@@ -3,6 +3,10 @@ include:
     ref: '707b49ef'
     file:
       - 'templates/debian.yml'
+  - component: "gitlab.gnome.org/GNOME/citemplates/release-service@master"
+    inputs:
+      job-stage: "build"
+      dist-job-name: "release-build"
 
 stages:
   - prepare
