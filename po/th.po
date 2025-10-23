@@ -7,124 +7,125 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus 2.9.2\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-07-19 06:56+0000\n"
-"PO-Revision-Date: 2014-07-19 15:55+0700\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues/\n"
+"POT-Creation-Date: 2025-10-10 21:29+0000\n"
+"PO-Revision-Date: 2025-10-23 16:37+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:2
 msgid "Sound & Video"
-msgstr "เสียงและวีดิทัศน์"
+msgstr "เสียงและวิดีโอ"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Multimedia menu"
-msgstr "เมนูระบบสื่อผสม"
+msgstr "เมนูมัลติมีเดีย"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#: desktop-directories/Development.directory.desktop.in:2
 msgid "Programming"
 msgstr "เขียนโปรแกรม"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Tools for software development"
 msgstr "เครื่องมือพัฒนาซอฟต์แวร์"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#: desktop-directories/Education.directory.desktop.in:2
 msgid "Education"
 msgstr "การศึกษา"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#: desktop-directories/Game.directory.desktop.in:2
 msgid "Games"
 msgstr "เกม"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games and amusements"
 msgstr "เกมและความบันเทิง"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#: desktop-directories/Graphics.directory.desktop.in:2
 msgid "Graphics"
 msgstr "รูปภาพ"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics applications"
-msgstr "โปรแกรมสำหรับรูปภาพ"
+msgstr "แอปพลิเคชันสำหรับรูปภาพ"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#: desktop-directories/Network.directory.desktop.in:2
 msgid "Internet"
 msgstr "อินเทอร์เน็ต"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Programs for Internet access such as web and email"
 msgstr "โปรแกรมสำหรับเข้าอินเทอร์เน็ต เช่น เว็บและเมล"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#: desktop-directories/Office.directory.desktop.in:2
 msgid "Office"
 msgstr "สำนักงาน"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office Applications"
-msgstr "โปรแกรมสำหรับสำนักงาน"
+msgstr "แอปพลิเคชันสำหรับสำนักงาน"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.desktop.in:2
 msgid "System Tools"
 msgstr "เครื่องมือระบบ"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System configuration and monitoring"
 msgstr "ตั้งค่าและเฝ้าดูระบบ"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:2
 msgid "Universal Access"
 msgstr "การเข้าถึงหลากหลาย"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access Settings"
 msgstr "ตั้งค่าการเข้าถึงหลากหลาย"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#: desktop-directories/Utility.directory.desktop.in:2
 msgid "Accessories"
 msgstr "เครื่องใช้ไม้สอย"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Desktop accessories"
-msgstr "โปรแกรมเครื่องใช้ไม้สอยบนเดสก์ท็อป"
+msgstr "เครื่องใช้ไม้สอยบนเดสก์ท็อป"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:2
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
 msgid "Applications"
-msgstr "โปรแกรม"
+msgstr "แอปพลิเคชัน"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:2
 msgid "Other"
-msgstr "อื่นๆ"
+msgstr "อื่น ๆ"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Applications that did not fit in other categories"
-msgstr "โปรแกรมที่ไม่อยู่ในหมวดอื่นๆ"
+msgstr "แอปพลิเคชันที่ไม่อยู่ในหมวดอื่น ๆ"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:2
 msgid "Sundry"
 msgstr "เบ็ดเตล็ด"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:2
 msgid "Utilities"
 msgstr "อรรถประโยชน์"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Small but useful GNOME tools"
-msgstr "เครื่องมือเล็กๆ แต่มีประโยชน์ของ GNOME"
+msgstr "เครื่องมือเล็ก ๆ แต่มีประโยชน์ของ GNOME"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:2
 msgid "Web Applications"
-msgstr "โปรแกรมเว็บ"
+msgstr "เว็บแอปพลิเคชัน"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Applications and sites saved from Web"
-msgstr "โปรแกรมและไซต์ต่างๆ ที่บันทึกจากเว็บ"
+msgstr "แอปพลิเคชันและไซต์ต่าง ๆ ที่บันทึกจากเว็บ"
 
 #~ msgid "Hardware"
 #~ msgstr "ฮาร์ดแวร์"
@@ -168,12 +169,8 @@ msgstr "โปรแกรมและไซต์ต่างๆ ที่บ�
 #~ msgid "Show"
 #~ msgstr "แสดง"
 
-#~ msgid ""
-#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
-#~ "in environment"
-#~ msgstr ""
-#~ "หาไดเรกทอรีบ้านไม่พบ: ไม่ได้ตั้งค่าไว้ใน /etc/passwd และไม่ได้กำหนดค่าตัวแปร $HOME ใน "
-#~ "environment"
+#~ msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+#~ msgstr "หาไดเรกทอรีบ้านไม่พบ: ไม่ได้ตั้งค่าไว้ใน /etc/passwd และไม่ได้กำหนดค่าตัวแปร $HOME ใน environment"
 
 #~ msgid "Internet and Network"
 #~ msgstr "อินเทอร์เน็ตและเครือข่าย"
