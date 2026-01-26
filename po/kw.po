@@ -1,0 +1,135 @@
+# Cornish translation for gnome-menus.
+# Copyright (C) 2026 gnome-menus's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-menus package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Flynn Peck <cirilla@tuta.io>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues/\n"
+"POT-Creation-Date: 2019-04-19 15:42+0000\n"
+"PO-Revision-Date: 2026-01-26 14:28+0000\n"
+"Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
+"Language-Team: kw\n"
+"Language: kw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-DL-VCS-Web: https://gitlab.gnome.org/GNOME/gnome-menus/\n"
+"X-DL-Lang: kw\n"
+"X-DL-Module: gnome-menus\n"
+"X-DL-Branch: master\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 49.0\n"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:2
+msgid "Sound & Video"
+msgstr "Son & Gwydhyow"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:3
+msgid "Multimedia menu"
+msgstr "Rol liesmedia"
+
+#: desktop-directories/Development.directory.desktop.in:2
+msgid "Programming"
+msgstr "Townlennans"
+
+#: desktop-directories/Development.directory.desktop.in:3
+msgid "Tools for software development"
+msgstr "Toulys rag ow gul medhelweyth"
+
+#: desktop-directories/Education.directory.desktop.in:2
+msgid "Education"
+msgstr "Adhyskans"
+
+#: desktop-directories/Game.directory.desktop.in:2
+msgid "Games"
+msgstr "Gwariow"
+
+#: desktop-directories/Game.directory.desktop.in:3
+msgid "Games and amusements"
+msgstr "Gwariow ha Didhenyow"
+
+#: desktop-directories/Graphics.directory.desktop.in:2
+msgid "Graphics"
+msgstr "Grafek"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
+msgid "Graphics applications"
+msgstr "Appys grafek"
+
+#: desktop-directories/Network.directory.desktop.in:2
+msgid "Internet"
+msgstr "Kesrosweyth"
+
+#: desktop-directories/Network.directory.desktop.in:3
+msgid "Programs for Internet access such as web and email"
+msgstr "Appys rag hedhas kesrosweyth kepar ha gwi hag ebost"
+
+#: desktop-directories/Office.directory.desktop.in:2
+msgid "Office"
+msgstr "Buro"
+
+#: desktop-directories/Office.directory.desktop.in:3
+msgid "Office Applications"
+msgstr "Appys rag Buro"
+
+#: desktop-directories/System-Tools.directory.desktop.in:2
+msgid "System Tools"
+msgstr "Toulys System"
+
+#: desktop-directories/System-Tools.directory.desktop.in:3
+msgid "System configuration and monitoring"
+msgstr "Selyans ha helerghyans system"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:2
+msgid "Universal Access"
+msgstr "Hedhas Ollvysel"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
+msgid "Universal Access Settings"
+msgstr "Settyansow Hedhas Ollvysel"
+
+#: desktop-directories/Utility.directory.desktop.in:2
+msgid "Accessories"
+msgstr "Gweresoryon"
+
+#: desktop-directories/Utility.directory.desktop.in:3
+msgid "Desktop accessories"
+msgstr "Gweresoryon desktop"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:2
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+msgid "Applications"
+msgstr "Appys"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:2
+msgid "Other"
+msgstr "Aral"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
+msgid "Applications that did not fit in other categories"
+msgstr "Appys na desedha yn klassys aral"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:2
+msgid "Sundry"
+msgstr "Sundry"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:2
+msgid "Utilities"
+msgstr "Lesow"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
+msgid "Small but useful GNOME tools"
+msgstr "Toulys GNOME byghan mes gwerek"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:2
+msgid "Web Applications"
+msgstr "Appys Gwi"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
+msgid "Applications and sites saved from Web"
+msgstr "Appys ha gwiasvaow sawys yn Gwi"
