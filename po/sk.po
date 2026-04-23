@@ -8,10 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-20 20:15+0000\n"
-"PO-Revision-Date: 2013-02-20 21:00+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues/\n"
+"POT-Creation-Date: 2019-04-19 15:42+0000\n"
+"PO-Revision-Date: 2026-04-23 21:46+0200\n"
 "Last-Translator: Pavol Klačanský <pavol@klacansky.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -20,110 +19,111 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:2
 msgid "Sound & Video"
 msgstr "Zvuk a video"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Multimedia menu"
 msgstr "Ponuka multimédií"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#: desktop-directories/Development.directory.desktop.in:2
 msgid "Programming"
 msgstr "Programovanie"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Tools for software development"
 msgstr "Nástroje pre vývoj softvéru"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#: desktop-directories/Education.directory.desktop.in:2
 msgid "Education"
 msgstr "Vzdelávanie"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#: desktop-directories/Game.directory.desktop.in:2
 msgid "Games"
 msgstr "Hry"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games and amusements"
 msgstr "Hry a zábava"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#: desktop-directories/Graphics.directory.desktop.in:2
 msgid "Graphics"
 msgstr "Grafika"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics applications"
 msgstr "Grafické aplikácie"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#: desktop-directories/Network.directory.desktop.in:2
 msgid "Internet"
 msgstr "Internet"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Programs for Internet access such as web and email"
 msgstr "Programy pre prístup k internetu, ako je www a e-mail"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#: desktop-directories/Office.directory.desktop.in:2
 msgid "Office"
 msgstr "Kancelária"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office Applications"
 msgstr "Kancelárske aplikácie"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.desktop.in:2
 msgid "System Tools"
 msgstr "Systémové nástroje"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System configuration and monitoring"
 msgstr "Systémová konfigurácia a sledovanie"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:2
 msgid "Universal Access"
 msgstr "Bezbariérový prístup"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access Settings"
 msgstr "Nastavenia bezbariérového prístupu"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#: desktop-directories/Utility.directory.desktop.in:2
 msgid "Accessories"
 msgstr "Príslušenstvo"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Desktop accessories"
 msgstr "Príslušenstvo pracovnej plochy"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:2
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:2
 msgid "Other"
 msgstr "Ostatné"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Applications that did not fit in other categories"
 msgstr "Aplikácie, ktoré nezapadajú do ostatných kategórií"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:2
 msgid "Sundry"
 msgstr "Rôzne"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:2
 msgid "Utilities"
 msgstr "Nástroje"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Small but useful GNOME tools"
-msgstr "Drobné ale užitočné nástroje GNOME"
+msgstr "Drobné, ale užitočné nástroje GNOME"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:2
 msgid "Web Applications"
 msgstr "Webové aplikácie"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Applications and sites saved from Web"
 msgstr "Aplikácie a stránky uložené z webu"
