@@ -3,126 +3,129 @@
 # This file is distributed under the same license as the gnome-menus package.
 # Funda Wang <fundawang@linux.net.cn>, 2004.
 # Chrovex Fan <pixelnecro@foxmail.com>, 2012.
+# lumingzh <lumingzh@qq.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"menus&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-04-04 22:35+0000\n"
-"PO-Revision-Date: 2013-04-08 15:26+0800\n"
-"Last-Translator: Wylmer Wang <wantinghard@gmail.com>\n"
-"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues/\n"
+"POT-Creation-Date: 2019-04-19 15:42+0000\n"
+"PO-Revision-Date: 2026-08-15 16:41+0800\n"
+"Last-Translator: lumingzh <lumingzh@qq.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 50.0\n"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:1
+#: desktop-directories/AudioVideo.directory.desktop.in:2
 msgid "Sound & Video"
 msgstr "影音"
 
-#: ../desktop-directories/AudioVideo.directory.in.h:2
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Multimedia menu"
 msgstr "多媒体菜单"
 
-#: ../desktop-directories/Development.directory.in.h:1
+#: desktop-directories/Development.directory.desktop.in:2
 msgid "Programming"
 msgstr "编程"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Tools for software development"
 msgstr "软件开发工具"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#: desktop-directories/Education.directory.desktop.in:2
 msgid "Education"
 msgstr "教育"
 
-#: ../desktop-directories/Game.directory.in.h:1
+#: desktop-directories/Game.directory.desktop.in:2
 msgid "Games"
 msgstr "游戏"
 
-#: ../desktop-directories/Game.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games and amusements"
 msgstr "游戏和娱乐"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#: desktop-directories/Graphics.directory.desktop.in:2
 msgid "Graphics"
 msgstr "图形"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics applications"
 msgstr "图形应用程序"
 
-#: ../desktop-directories/Network.directory.in.h:1
+#: desktop-directories/Network.directory.desktop.in:2
 msgid "Internet"
 msgstr "互联网"
 
-#: ../desktop-directories/Network.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Programs for Internet access such as web and email"
 msgstr "网络相关应用软件，如网络浏览和电子邮件管理"
 
-#: ../desktop-directories/Office.directory.in.h:1
+#: desktop-directories/Office.directory.desktop.in:2
 msgid "Office"
 msgstr "办公"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office Applications"
 msgstr "办公应用程序"
 
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.desktop.in:2
 msgid "System Tools"
 msgstr "系统工具"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System configuration and monitoring"
 msgstr "系统配置和监视"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:1
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:2
 msgid "Universal Access"
 msgstr "通用访问"
 
-#: ../desktop-directories/Utility-Accessibility.directory.in.h:2
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access Settings"
 msgstr "通用访问设置"
 
-#: ../desktop-directories/Utility.directory.in.h:1
+#: desktop-directories/Utility.directory.desktop.in:2
 msgid "Accessories"
 msgstr "附件"
 
-#: ../desktop-directories/Utility.directory.in.h:2
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Desktop accessories"
 msgstr "桌面附件"
 
-#: ../desktop-directories/X-GNOME-Menu-Applications.directory.in.h:1
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:2
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
 msgid "Applications"
 msgstr "应用程序"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:1
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:2
 msgid "Other"
-msgstr "其它"
+msgstr "其他"
 
-#: ../desktop-directories/X-GNOME-Other.directory.in.h:2
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Applications that did not fit in other categories"
-msgstr "无法分入其它类别的应用程序"
+msgstr "无法分入其他类别的应用程序"
 
-#: ../desktop-directories/X-GNOME-Sundry.directory.in.h:1
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:2
 msgid "Sundry"
 msgstr "杂项"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:1
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:2
 msgid "Utilities"
 msgstr "工具"
 
-#: ../desktop-directories/X-GNOME-Utilities.directory.in.h:2
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Small but useful GNOME tools"
 msgstr "有用的 GNOME 小工具"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:1
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:2
 msgid "Web Applications"
 msgstr "基于 Web 的应用"
 
-#: ../desktop-directories/X-GNOME-WebApplications.directory.in.h:2
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Applications and sites saved from Web"
 msgstr "保存的网站和 Web 应用程序"
 
