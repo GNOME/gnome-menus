@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center 2.9.4\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues/\n"
-"POT-Creation-Date: 2024-09-01 10:43+0000\n"
-"PO-Revision-Date: 2025-07-25 19:33+0200\n"
+"POT-Creation-Date: 2019-04-19 15:42+0000\n"
+"PO-Revision-Date: 2026-09-05 22:44+0200\n"
 "Last-Translator: Bjørn Mørkedal <gnome@morkedal.com>\n"
 "Language-Team: Norwegian Nynorsk\n"
 "Language: nn\n"
@@ -22,116 +22,116 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Poedit 3.9\n"
 
-#: desktop-directories/AudioVideo.directory.desktop.in:3
+#: desktop-directories/AudioVideo.directory.desktop.in:2
 msgid "Sound & Video"
 msgstr "Lyd og bilete"
 
-#: desktop-directories/AudioVideo.directory.desktop.in:4
+#: desktop-directories/AudioVideo.directory.desktop.in:3
 msgid "Multimedia menu"
 msgstr "Multimediameny"
 
-#: desktop-directories/Development.directory.desktop.in:3
+#: desktop-directories/Development.directory.desktop.in:2
 msgid "Programming"
-msgstr "Utvikling"
+msgstr "Programmering"
 
-#: desktop-directories/Development.directory.desktop.in:4
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Tools for software development"
 msgstr "Verktøy for programvareutvikling"
 
-#: desktop-directories/Education.directory.desktop.in:3
+#: desktop-directories/Education.directory.desktop.in:2
 msgid "Education"
 msgstr "Utdanning"
 
-#: desktop-directories/Game.directory.desktop.in:3
+#: desktop-directories/Game.directory.desktop.in:2
 msgid "Games"
 msgstr "Spel"
 
-#: desktop-directories/Game.directory.desktop.in:4
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games and amusements"
 msgstr "Spel og underhalding"
 
-#: desktop-directories/Graphics.directory.desktop.in:3
+#: desktop-directories/Graphics.directory.desktop.in:2
 msgid "Graphics"
 msgstr "Grafikk"
 
-#: desktop-directories/Graphics.directory.desktop.in:4
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics applications"
-msgstr "Grafikkprogram"
+msgstr "Grafikkappar"
 
-#: desktop-directories/Network.directory.desktop.in:3
+#: desktop-directories/Network.directory.desktop.in:2
 msgid "Internet"
 msgstr "Internett"
 
-#: desktop-directories/Network.directory.desktop.in:4
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Programs for Internet access such as web and email"
-msgstr "Program for bruk på Internett, som nettlesar og e-postklient"
+msgstr "Appar for bruk på Internett, som nettlesar og e-postklient"
 
-#: desktop-directories/Office.directory.desktop.in:3
+#: desktop-directories/Office.directory.desktop.in:2
 msgid "Office"
 msgstr "Kontor"
 
-#: desktop-directories/Office.directory.desktop.in:4
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office Applications"
-msgstr "Kontorprogram"
+msgstr "Kontorappar"
 
-#: desktop-directories/System-Tools.directory.desktop.in:3
+#: desktop-directories/System-Tools.directory.desktop.in:2
 msgid "System Tools"
 msgstr "Systemverktøy"
 
-#: desktop-directories/System-Tools.directory.desktop.in:4
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System configuration and monitoring"
 msgstr "Oppsett og overvaking av systemet"
 
-#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:2
 msgid "Universal Access"
 msgstr "Tilgjenge"
 
-#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
 msgid "Universal Access Settings"
 msgstr "Innstillingar for tilgjenge"
 
-#: desktop-directories/Utility.directory.desktop.in:3
+#: desktop-directories/Utility.directory.desktop.in:2
 msgid "Accessories"
-msgstr "Verktøy"
+msgstr "Skrivebordsverktøy"
 
-#: desktop-directories/Utility.directory.desktop.in:4
+#: desktop-directories/Utility.directory.desktop.in:3
 msgid "Desktop accessories"
 msgstr "Verktøy for skrivebordet"
 
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:2
 #: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
-#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
 msgid "Applications"
-msgstr "Program"
+msgstr "Appar"
 
-#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:2
 msgid "Other"
 msgstr "Anna"
 
-#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
 msgid "Applications that did not fit in other categories"
-msgstr "Program som ikkje passar i andre kategoriar"
+msgstr "Appar som ikkje passar i andre kategoriar"
 
-#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:2
 msgid "Sundry"
 msgstr "Ymse"
 
-#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:2
 msgid "Utilities"
 msgstr "Verktøy"
 
-#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
 msgid "Small but useful GNOME tools"
 msgstr "Små, men nyttige GNOME-verktøy"
 
-#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:2
 msgid "Web Applications"
-msgstr "Nettapplikasjonar"
+msgstr "Nettappar"
 
-#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
 msgid "Applications and sites saved from Web"
-msgstr "Appar og nettstader lagra fra nettet"
+msgstr "Appar og nettstader lagra frå nettet"
 
 #~ msgid "Hardware"
 #~ msgstr "Maskinvare"
@@ -149,8 +149,7 @@ msgstr "Appar og nettstader lagra fra nettet"
 #~ msgstr "Utsjåande"
 
 #~ msgid "Settings controlling the desktop appearance and behavior"
-#~ msgstr ""
-#~ "Innstillingar som kontrollerer utsjånaden og åtferda til skrivebordet"
+#~ msgstr "Innstillingar som kontrollerer utsjånaden og åtferda til skrivebordet"
 
 #~ msgid "Personal"
 #~ msgstr "Personleg"
@@ -204,12 +203,8 @@ msgstr "Appar og nettstader lagra fra nettet"
 #~ msgid "Show"
 #~ msgstr "Vis"
 
-#~ msgid ""
-#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
-#~ "in environment"
-#~ msgstr ""
-#~ "Klarte ikkje finna heimemappe: Ikkje seten i /etc/passwd og ingen verdi "
-#~ "for $HOME i miljøet"
+#~ msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+#~ msgstr "Klarte ikkje finna heimemappe: Ikkje seten i /etc/passwd og ingen verdi for $HOME i miljøet"
 
 #~ msgid "Menu file"
 #~ msgstr "Menyfil"
@@ -224,8 +219,7 @@ msgstr "Appar og nettstader lagra fra nettet"
 #~ msgstr "Inkluder oppføringar som har blitt ekskludert med <exclude>"
 
 #~ msgid "Include NoDisplay=true entries"
-#~ msgstr ""
-#~ "Inkluder oppføringar som er satt til å ikkje verta vist med NoDisplay=true"
+#~ msgstr "Inkluder oppføringar som er satt til å ikkje verta vist med NoDisplay=true"
 
 #~ msgid "Invalid desktop file ID"
 #~ msgstr "Ugyldig ID for desktop-fil"
