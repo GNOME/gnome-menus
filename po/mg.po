@@ -8,231 +8,228 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-menus HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-31 15:24+0300\n"
-"PO-Revision-Date: 2006-04-07 10:42+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-menus/issues/\n"
+"POT-Creation-Date: 2019-04-19 15:42+0000\n"
+"PO-Revision-Date: 2026-09-10 09:27+0300\n"
 "Last-Translator: Thierry Randrianiriana <randrianiriana@gmail.com>\n"
 "Language-Team: Malagasy <i18n-malagasy-gnome@gna.org>\n"
 "Language: mg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
 
-#: ../desktop-directories/Accessibility.directory.in.h:1
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:1
-msgid "Accessibility"
-msgstr "Fanamorana"
+#: desktop-directories/AudioVideo.directory.desktop.in:2
+msgid "Sound & Video"
+msgstr "Feo sy sarimihetsika"
 
-#: ../desktop-directories/Accessibility.directory.in.h:2
-msgid "Accessibility Settings"
-msgstr "Fandrindrana ny fanamorana"
+#: desktop-directories/AudioVideo.directory.desktop.in:3
+msgid "Multimedia menu"
+msgstr "Karazan-tsafidin'ny haino aman-jery"
 
-#: ../desktop-directories/Accessories.directory.in.h:1
-msgid "Accessories"
-msgstr "Fiasana"
-
-#: ../desktop-directories/Accessories.directory.in.h:2
-msgid "Desktop accessories"
-msgstr "Fiasan'ny desktop"
-
-#: ../desktop-directories/Applications.directory.in.h:1
-msgid "Applications"
-msgstr "Rindran'asa"
-
-#: ../desktop-directories/Desktop.directory.in.h:1
-msgid "Desktop"
-msgstr "Desktop"
-
-#: ../desktop-directories/Desktop.directory.in.h:2
-msgid "Personal preferences and administration settings"
-msgstr "Safidy manokana sy fandrindrana ny fomba fitantanana"
-
-#: ../desktop-directories/Development.directory.in.h:1
+#: desktop-directories/Development.directory.desktop.in:2
 msgid "Programming"
 msgstr "Famolavolavolana"
 
-#: ../desktop-directories/Development.directory.in.h:2
+#: desktop-directories/Development.directory.desktop.in:3
 msgid "Tools for software development"
 msgstr "Fitaovana ho an'ny mpamolavola rindran'asa"
 
-#: ../desktop-directories/Education.directory.in.h:1
+#: desktop-directories/Education.directory.desktop.in:2
 msgid "Education"
 msgstr "Fanabeazana"
 
-#: ../desktop-directories/Games.directory.in.h:1
+#: desktop-directories/Game.directory.desktop.in:2
 msgid "Games"
 msgstr "Lalao"
 
-#: ../desktop-directories/Games.directory.in.h:2
+#: desktop-directories/Game.directory.desktop.in:3
 msgid "Games and amusements"
-msgstr "lalao sy fialam-boly"
+msgstr "Lalao sy fialam-boly"
 
-#: ../desktop-directories/Graphics.directory.in.h:1
+#: desktop-directories/Graphics.directory.desktop.in:2
 msgid "Graphics"
 msgstr "Sary"
 
-#: ../desktop-directories/Graphics.directory.in.h:2
+#: desktop-directories/Graphics.directory.desktop.in:3
 msgid "Graphics applications"
 msgstr "Rindran'asa fanaovan-tsary"
 
-#: ../desktop-directories/Internet.directory.in.h:1
+#: desktop-directories/Network.directory.desktop.in:2
 msgid "Internet"
 msgstr "Internet"
 
-#: ../desktop-directories/Internet.directory.in.h:2
+#: desktop-directories/Network.directory.desktop.in:3
 msgid "Programs for Internet access such as web and email"
 msgstr ""
 "Rindran'asa ahafahana mifandray amin'ny Internet toy ny tranonkala sy ny "
 "mailaka"
 
-#: ../desktop-directories/Multimedia.directory.in.h:1
-msgid "Multimedia menu"
-msgstr "Karazan-tsafidin'ny haino aman-jery"
-
-#: ../desktop-directories/Multimedia.directory.in.h:2
-msgid "Sound & Video"
-msgstr "Feo sy sarimihetsika"
-
-#: ../desktop-directories/Office.directory.in.h:1
+#: desktop-directories/Office.directory.desktop.in:2
 msgid "Office"
 msgstr "Office"
 
-#: ../desktop-directories/Office.directory.in.h:2
+#: desktop-directories/Office.directory.desktop.in:3
 msgid "Office Applications"
 msgstr "Rindran'asa Office"
 
-#: ../desktop-directories/Other.directory.in.h:1
-msgid "Applications that did not fit in other categories"
-msgstr "Rindran'asa izay tsy tafiditra anaty sokajy hafa"
-
-#: ../desktop-directories/Other.directory.in.h:2
-msgid "Other"
-msgstr "Hafa"
-
-#: ../desktop-directories/Preferences.directory.in.h:1
-msgid "Personal preferences"
-msgstr "Safidy manokana"
-
-#: ../desktop-directories/Preferences.directory.in.h:2
-#: ../desktop-directories/Settings.directory.in.h:2
-msgid "Preferences"
-msgstr "Safidy"
-
-#: ../desktop-directories/Settings-Accessibility.directory.in.h:2
-msgid "Accessibility related preferences"
-msgstr "Safidy mifandraika amin'ny fanamorana"
-
-#: ../desktop-directories/Settings.directory.in.h:1
-msgid "Personal preferences and settings"
-msgstr "Safidy sy fandrindrana manokana"
-
-#: ../desktop-directories/System-Settings.directory.in.h:1
-msgid "Administration"
-msgstr "Fitantanana"
-
-#: ../desktop-directories/System-Settings.directory.in.h:2
-msgid "Change systemwide settings (affects all users)"
-msgstr ""
-"Hanova ny fandrindrana ny rafitra manontolo (mahakasika ny mpampiasa rehetra)"
-
-#: ../desktop-directories/System-Tools.directory.in.h:1
+#: desktop-directories/System-Tools.directory.desktop.in:2
 msgid "System Tools"
 msgstr "Fitaovan'ny rafitra"
 
-#: ../desktop-directories/System-Tools.directory.in.h:2
+#: desktop-directories/System-Tools.directory.desktop.in:3
 msgid "System configuration and monitoring"
 msgstr "Fanefena sy fanaraha-maso ny rafitra"
 
-#: ../simple-editor/gmenu-simple-editor.desktop.in.h:1
-msgid "Menu Editor"
-msgstr "Mpanova karazan-tsafidy"
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:2
+msgid "Universal Access"
+msgstr "Fanomezandalana Ankapobeny"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:1
-msgid "Edit Menus"
-msgstr "Hanova ny karazan-tsafidy"
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
+msgid "Universal Access Settings"
+msgstr "Fandrindrana Fanomezandalana Ankapobeny"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:2
-msgid "_Applications:"
-msgstr "_Rindran'asa"
+#: desktop-directories/Utility.directory.desktop.in:2
+msgid "Accessories"
+msgstr "Fiasana"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:3
-msgid "_Defaults"
-msgstr "_Fampiasa"
+#: desktop-directories/Utility.directory.desktop.in:3
+msgid "Desktop accessories"
+msgstr "Fiasan'ny desktop"
 
-#: ../simple-editor/gmenu-simple-editor.glade.h:4
-msgid "_Menus:"
-msgstr "_Karazan-tsafidy"
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:2
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+msgid "Applications"
+msgstr "Rindran'asa"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:96
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:123
-msgid "Name"
-msgstr "Anarana"
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:2
+msgid "Other"
+msgstr "Hafa"
 
-#: ../simple-editor/GMenuSimpleEditor/maindialog.py:115
-msgid "Show"
-msgstr "Asehoy"
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
+msgid "Applications that did not fit in other categories"
+msgstr "Rindran'asa izay tsy tafiditra anaty sokajy hafa"
 
-#: ../simple-editor/GMenuSimpleEditor/menufilewriter.py:44
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Tsy hita ny laha-tahirin'ny fandraisana: tsy voafaritra ao anatin'ny /etc/passwd "
-"ary tsy misy isa ho an'ny $HOME anatin'ny tontolo"
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:2
+msgid "Sundry"
+msgstr "Karazany"
 
-#: ../util/test-menu-spec.c:33
-msgid "Menu file"
-msgstr "Rakitra karazan-tsafidy"
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:2
+msgid "Utilities"
+msgstr "Ireo filana"
 
-#: ../util/test-menu-spec.c:33
-msgid "MENU_FILE"
-msgstr "RAKITRA_KARAZAN-TSAFIDY"
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
+msgid "Small but useful GNOME tools"
+msgstr "Kely nefa fitaovana hoan'ny GNOME tena ilaina"
 
-#: ../util/test-menu-spec.c:34
-msgid "Monitor for menu changes"
-msgstr "Mpandrindra ny fanovana ny karazan-tsafidy"
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:2
+msgid "Web Applications"
+msgstr "Rindran'asa Tranonkala"
 
-#: ../util/test-menu-spec.c:35
-msgid "Include <Exclude>d entries"
-msgstr "Ampidiro ao ireo fidirana <Exclude>d"
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
+msgid "Applications and sites saved from Web"
+msgstr "Rindra sy tranokala voatahiry avy tamin'ny Web"
 
-#: ../util/test-menu-spec.c:36
-msgid "Include NoDisplay=true entries"
-msgstr "Ampidiro ao ireo fidirana NoDisplay=true"
+#~ msgid "Accessibility"
+#~ msgstr "Fanamorana"
 
-#: ../util/test-menu-spec.c:91
-msgid "Invalid desktop file ID"
-msgstr "ID'ny rakitry ny desktop diso"
+#~ msgid "Desktop"
+#~ msgstr "Desktop"
 
-#: ../util/test-menu-spec.c:92
-msgid "[Invalid Filename]"
-msgstr "[Anaran-drakitra diso]"
+#~ msgid "Personal preferences and administration settings"
+#~ msgstr "Safidy manokana sy fandrindrana ny fomba fitantanana"
 
-#: ../util/test-menu-spec.c:93
-msgid " <excluded>"
-msgstr " <tsy tadiditra>"
+#~ msgid "Personal preferences"
+#~ msgstr "Safidy manokana"
 
-#: ../util/test-menu-spec.c:164
-msgid ""
-"\n"
-"\n"
-"\n"
-"==== Menu changed, reloading ====\n"
-"\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"\n"
-"==== Voaova ny karazan-tsafidy. Miverina manokatra ====\n"
-"\n"
-"\n"
+#~ msgid "Preferences"
+#~ msgstr "Safidy"
 
-#: ../util/test-menu-spec.c:169 ../util/test-menu-spec.c:211
-msgid "Menu tree is empty"
-msgstr "Foana ny hazon'ny karazan-tsafidy"
+#~ msgid "Accessibility related preferences"
+#~ msgstr "Safidy mifandraika amin'ny fanamorana"
 
-#: ../util/test-menu-spec.c:189
-msgid "- test GNOME's implementation of the Desktop Menu Specification"
-msgstr ""
-"- manandrana ny fampiharan'ny GNOME ny famaritana ny karazan-tsafidin'ny desktop"
+#~ msgid "Personal preferences and settings"
+#~ msgstr "Safidy sy fandrindrana manokana"
+
+#~ msgid "Administration"
+#~ msgstr "Fitantanana"
+
+#~ msgid "Change systemwide settings (affects all users)"
+#~ msgstr ""
+#~ "Hanova ny fandrindrana ny rafitra manontolo (mahakasika ny mpampiasa "
+#~ "rehetra)"
+
+#~ msgid "Menu Editor"
+#~ msgstr "Mpanova karazan-tsafidy"
+
+#~ msgid "Edit Menus"
+#~ msgstr "Hanova ny karazan-tsafidy"
+
+#~ msgid "_Applications:"
+#~ msgstr "_Rindran'asa"
+
+#~ msgid "_Defaults"
+#~ msgstr "_Fampiasa"
+
+#~ msgid "_Menus:"
+#~ msgstr "_Karazan-tsafidy"
+
+#~ msgid "Name"
+#~ msgstr "Anarana"
+
+#~ msgid "Show"
+#~ msgstr "Asehoy"
+
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Tsy hita ny laha-tahirin'ny fandraisana: tsy voafaritra ao anatin'ny /etc/"
+#~ "passwd ary tsy misy isa ho an'ny $HOME anatin'ny tontolo"
+
+#~ msgid "Menu file"
+#~ msgstr "Rakitra karazan-tsafidy"
+
+#~ msgid "MENU_FILE"
+#~ msgstr "RAKITRA_KARAZAN-TSAFIDY"
+
+#~ msgid "Monitor for menu changes"
+#~ msgstr "Mpandrindra ny fanovana ny karazan-tsafidy"
+
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "Ampidiro ao ireo fidirana <Exclude>d"
+
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "Ampidiro ao ireo fidirana NoDisplay=true"
+
+#~ msgid "Invalid desktop file ID"
+#~ msgstr "ID'ny rakitry ny desktop diso"
+
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[Anaran-drakitra diso]"
+
+#~ msgid " <excluded>"
+#~ msgstr " <tsy tadiditra>"
+
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Voaova ny karazan-tsafidy. Miverina manokatra ====\n"
+#~ "\n"
+#~ "\n"
+
+#~ msgid "Menu tree is empty"
+#~ msgstr "Foana ny hazon'ny karazan-tsafidy"
+
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr ""
+#~ "- manandrana ny fampiharan'ny GNOME ny famaritana ny karazan-tsafidin'ny "
+#~ "desktop"
