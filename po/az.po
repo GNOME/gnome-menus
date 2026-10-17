@@ -1,0 +1,175 @@
+# Azerbaijani translation for gnome-menus
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the gnome-menus package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-menus\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-03-10 18:46-0500\n"
+"PO-Revision-Date: 2026-10-06 17:17+0000\n"
+"Last-Translator: Nicat Məmmədov <n1c4t97@gmail.com>\n"
+"Language-Team: Azerbaijani <az@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2026-10-08 12:28+0000\n"
+"X-Generator: Launchpad (build 46555f0dd369ca8a82bcfb94913ea540133323f9)\n"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:3
+msgid "Sound & Video"
+msgstr "Səs və video"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:4
+msgid "Multimedia menu"
+msgstr "Multimediya menyusu"
+
+#: desktop-directories/AudioVideo.directory.desktop.in:6
+msgid "applications-multimedia"
+msgstr "tətbiqlər-multimedia"
+
+#: desktop-directories/Development.directory.desktop.in:3
+msgid "Programming"
+msgstr "Proqramlaşdırma"
+
+#: desktop-directories/Development.directory.desktop.in:4
+msgid "Tools for software development"
+msgstr "Proqram tərtibatı alətləri"
+
+#: desktop-directories/Development.directory.desktop.in:6
+msgid "applications-development"
+msgstr "tətbiqlər-tərtibatçılıq"
+
+#: desktop-directories/Education.directory.desktop.in:3
+msgid "Education"
+msgstr "Təhsil"
+
+#: desktop-directories/Education.directory.desktop.in:5
+msgid "applications-science"
+msgstr "tətbiqlər-elm"
+
+#: desktop-directories/Game.directory.desktop.in:3
+msgid "Games"
+msgstr "Oyunlar"
+
+#: desktop-directories/Game.directory.desktop.in:4
+msgid "Games and amusements"
+msgstr "Oyunlar və əyləncə"
+
+#: desktop-directories/Game.directory.desktop.in:6
+msgid "applications-games"
+msgstr "tətbiqlər-oyunlar"
+
+#: desktop-directories/Graphics.directory.desktop.in:3
+msgid "Graphics"
+msgstr "Qrafika"
+
+#: desktop-directories/Graphics.directory.desktop.in:4
+msgid "Graphics applications"
+msgstr "Qrafika tətbiqləri"
+
+#: desktop-directories/Graphics.directory.desktop.in:6
+msgid "applications-graphics"
+msgstr "tətbiqlər-qrafikalar"
+
+#: desktop-directories/Network.directory.desktop.in:3
+msgid "Internet"
+msgstr "İnternet"
+
+#: desktop-directories/Network.directory.desktop.in:4
+msgid "Programs for Internet access such as web and email"
+msgstr "İnternetlə işləmək üçün proqramlar (poçt və s.)"
+
+#: desktop-directories/Network.directory.desktop.in:6
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:6
+msgid "applications-internet"
+msgstr "tətbiqlər-internet"
+
+#: desktop-directories/Office.directory.desktop.in:3
+msgid "Office"
+msgstr "Ofis"
+
+#: desktop-directories/Office.directory.desktop.in:4
+msgid "Office Applications"
+msgstr "Ofis proqramları"
+
+#: desktop-directories/Office.directory.desktop.in:6
+msgid "applications-office"
+msgstr "tətbiqlər-ofis"
+
+#: desktop-directories/System-Tools.directory.desktop.in:3
+msgid "System Tools"
+msgstr "Sistem alətləri"
+
+#: desktop-directories/System-Tools.directory.desktop.in:4
+msgid "System configuration and monitoring"
+msgstr "Sistem quruluşu və izlənilməsi"
+
+#: desktop-directories/System-Tools.directory.desktop.in:6
+msgid "applications-system"
+msgstr "tətbiqlər-sistem"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:3
+msgid "Universal Access"
+msgstr "Universal əlçatımlılıq"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:4
+msgid "Universal Access Settings"
+msgstr "Universal əlçatımlılıq ayarları"
+
+#: desktop-directories/Utility-Accessibility.directory.desktop.in:7
+msgid "preferences-desktop-accessibility"
+msgstr "seçimlər-masaüstü-əlçatanlıq"
+
+#: desktop-directories/Utility.directory.desktop.in:3
+msgid "Accessories"
+msgstr "Ləvazimatlar"
+
+#: desktop-directories/Utility.directory.desktop.in:4
+msgid "Desktop accessories"
+msgstr "Masaüstü ləvazimatları"
+
+#: desktop-directories/Utility.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:6
+msgid "applications-accessories"
+msgstr "tətbiqlər-ləvazimatlar"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:3
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:4
+msgid "Applications"
+msgstr "Tətbiqlər"
+
+#: desktop-directories/X-GNOME-Menu-Applications.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:6
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:5
+msgid "applications-other"
+msgstr "tətbiqlər-digər"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:3
+msgid "Other"
+msgstr "Digər"
+
+#: desktop-directories/X-GNOME-Other.directory.desktop.in:4
+msgid "Applications that did not fit in other categories"
+msgstr "Heç bir kateqoriyaya uyğun olmayan proqramlar"
+
+#: desktop-directories/X-GNOME-Sundry.directory.desktop.in:3
+msgid "Sundry"
+msgstr "Müxtəlif"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:3
+msgid "Utilities"
+msgstr "Alətlər"
+
+#: desktop-directories/X-GNOME-Utilities.directory.desktop.in:4
+msgid "Small but useful GNOME tools"
+msgstr "Balaca, amma işəyarayan GNOME alətləri"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:3
+msgid "Web Applications"
+msgstr "Veb tətbiqlər"
+
+#: desktop-directories/X-GNOME-WebApplications.directory.desktop.in:4
+msgid "Applications and sites saved from Web"
+msgstr "Vebdən saxlanan tətbiqlər və saytlar"
